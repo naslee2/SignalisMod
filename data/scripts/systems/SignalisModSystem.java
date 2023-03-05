@@ -60,7 +60,6 @@ public class SignalisModSystem {
         buyan_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         sector.getEconomy().addMarket(buyan_market, false);
 
-        //Inner Jump Point
 
         //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
         PlanetAPI vineta = system.addPlanet("signalis_vineta", signalisStar, "Vineta", "water", 88f, 190f, 6000f, 360f);
@@ -104,6 +103,49 @@ public class SignalisModSystem {
         //shattered_moon.setCustomDescriptionId("signalis_shattered_moon");
 
         system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f, null, null);
+
+        //Inner Jump Point related to Vineta
+        JumpPointAPI innerJumpPoint = Global.getFactory().createJumpPoint("alatyr_jump_point", "Inner Jump P");
+        innerJumpPoint.setCircularOrbit(signalisStar, 266, 4200f, 296f);
+        innerJumpPoint.setRelatedPlanet(vineta);
+        system.addEntity(innerJumpPoint);
+
+
+        PlanetAPI kitezh = system.addPlanet("signalis_kitezh", signalisStar, "Kitezh", "arid", 310f, 120f, 8000f, 687f);
+        ProcgenUsedNames.notifyUsed("Kitezh");
+        kitezh.setFaction("signalis_eusan_nation");
+
+        MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 6);
+        kitezh_market.setPrimaryEntity(kitezh);
+        kitezh.setMarket(kitezh_market);
+        kitezh_market.setFactionId("signalis_eusan_nation");
+        kitezh_market.addCondition(Conditions.POPULATION_6);
+        kitezh_market.addCondition(Conditions.HABITABLE);
+        kitezh_market.addCondition(Conditions.FARMLAND_POOR);
+        kitezh_market.addCondition(Conditions.ORE_MODERATE);
+        kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
+        kitezh_market.addCondition(Conditions.LOW_GRAVITY);
+        kitezh_market.addIndustry(Industries.FARMING);
+        kitezh_market.addIndustry(Industries.MINING);
+        kitezh_market.addIndustry(Industries.REFINING);
+        kitezh_market.addIndustry(Industries.LIGHTINDUSTRY);
+        kitezh_market.addIndustry(Industries.POPULATION);
+        kitezh_market.addIndustry(Industries.WAYSTATION);
+        kitezh_market.addIndustry(Industries.SPACEPORT);
+        kitezh_market.addIndustry(Industries.PATROLHQ);
+        kitezh_market.addIndustry(Industries.GROUNDDEFENSES);
+        kitezh_market.addIndustry(Industries.BATTLESTATION);
+        kitezh_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
+        kitezh_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
+        kitezh_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
+        kitezh_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        sector.getEconomy().addMarket(kitezh_market, false);
+
+        //-AsteroidBelt- //starsector-core\graphics\planets
+        system.addAsteroidBelt(signalisStar, 1000, 10000f, 256f, 300f, 350f, Terrain.ASTEROID_BELT, "Asteroid Ring");
+        system.addRingBand(signalisStar, "misc", "rings_dust0", 256f, 0, Color.gray, 256f, 10200f, 400f);
+        system.addRingBand(signalisStar, "misc", "rings_asteroids0", 256f, 0, Color.gray, 256f, 10000f, 400f);
+        system.addRingBand(signalisStar, "misc", "rings_dust0", 256f, 2, Color.gray, 256f, 9800f, 400f);
 
         cleanup(system);
     }
