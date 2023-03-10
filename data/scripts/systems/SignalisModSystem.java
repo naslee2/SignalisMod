@@ -28,6 +28,17 @@ public class SignalisModSystem {
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initeStar( Unique starId, planettype from planets.json, radius, corona radius from star edge)
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
+        //Stable Location 1, 2 and 3
+        SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Relay 3NO", "comm_relay", "signalis_eusan_nation"); //3NO means 3 Note Oddity Number Stations
+        SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Array Six", "sensor_array_makeshift", "signalis_eusan_nation"); //6 is the magic number
+        SectorEntityToken loc3 = system.addCustomEntity("signalisStar_loc3", "Buoy 84-21-A", "nav_buoy", "signalis_eusan_nation"); //Date when Falke became ill
+
+        //Setting stable locations setCircularOrbitPointingDown(location/star/planet, angle, orbit raidus/range, orbit period)
+        relay_eusan.setCircularOrbitPointingDown(signalisStar, 40f, 5200f, 220f);
+        loc2.setCircularOrbitPointingDown(signalisStar, 310f, 8000f, 235f);
+        loc3.setCircularOrbitPointingDown(signalisStar, 178f, 16600f, 921f); 
+        
+        //-BUYAN - Toxic World-
         PlanetAPI buyan = system.addPlanet("signalis_buyan", signalisStar , "Buyan", "toxic", 30f, 170f, 2000f, 225f);
         ProcgenUsedNames.notifyUsed("Buyan");
         buyan.setFaction("signalis_eusan_nation");
@@ -59,7 +70,6 @@ public class SignalisModSystem {
         buyan_market.addSubmarket(Submarkets.GENERIC_MILITARY);
         buyan_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         sector.getEconomy().addMarket(buyan_market, false);
-
 
         //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
         PlanetAPI vineta = system.addPlanet("signalis_vineta", signalisStar, "Vineta", "water", 88f, 190f, 6000f, 360f);
