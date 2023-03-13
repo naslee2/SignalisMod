@@ -1,0 +1,20 @@
+{
+    "graphics":{
+        "planets":{
+            "gas_giant1":"graphics/planets/gas_giant1.png",
+            "gas+giant2":"graphics/planets/gas_giant2.png"
+        },
+        "hab_glows":{
+
+        },
+        "illustrations":{
+
+        },
+        "ui":{
+
+        },
+        "fx":{
+
+        }
+    }
+}

@@ -2,13 +2,17 @@ package data.scripts.systems;
 
 import java.awt.Color;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.*;
+import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.OrbitAPI;
+import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.SectorAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
-//import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
@@ -29,9 +33,9 @@ public class SignalisModSystem {
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
         //Stable Location 1, 2 and 3
-        SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Relay 3NO", "comm_relay", "signalis_eusan_nation"); //3NO means 3 Note Oddity Number Stations
-        SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Array Six", "sensor_array_makeshift", "signalis_eusan_nation"); //6 is the magic number
-        SectorEntityToken loc3 = system.addCustomEntity("signalisStar_loc3", "Buoy 84-21-A", "nav_buoy", "signalis_eusan_nation"); //Date when Falke became ill
+        SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Comm Relay 3NO", "comm_relay", "signalis_eusan_nation"); //3NO means 3 Note Oddity Number Stations
+        SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Sensor Array Six", "sensor_array_makeshift", "signalis_eusan_nation"); //6 is the magic number
+        SectorEntityToken loc3 = system.addCustomEntity("signalisStar_loc3", "Nav Buoy 84-21-A", "nav_buoy", "signalis_eusan_nation"); //Date when Falke became ill
 
         //Setting stable locations setCircularOrbitPointingDown(location/star/planet, angle, orbit raidus/range, orbit period)
         relay_eusan.setCircularOrbitPointingDown(signalisStar, 40f, 5200f, 220f);
@@ -161,11 +165,13 @@ public class SignalisModSystem {
 
         //-GAS GIANT 1, DUST RINGS AND ROTFRONT-
         PlanetAPI gas_giant1 = system.addPlanet("signalis_gas_giant1", signalisStar, "Jove", "gas_giant", 234f, 400f, 12500f, 4330f);
+        gas_giant1.getSpec().setTexture(Global.getSettings().getSpriteName("planets","gas_giant1"));
         gas_giant1.getMarket().addCondition(Conditions.DENSE_ATMOSPHERE);
         gas_giant1.getMarket().addCondition(Conditions.VOLATILES_TRACE);
         gas_giant1.getMarket().addCondition(Conditions.HIGH_GRAVITY);
+        gas_giant1.applySpecChanges();
         gas_giant1.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
-        //gas_giant1.setCustomDescriptionId("signalis_gas_giant1_planet");
+        gas_giant1.setCustomDescriptionId("signalis_gas_giant1_planet");
 
         PlanetAPI rotfront = system.addPlanet("signalis_rotfront", gas_giant1, "Rotfront", "tundra", 0f, 90f, 800f, 22f);
         rotfront.setFaction("signalis_eusan_nation");
@@ -203,11 +209,13 @@ public class SignalisModSystem {
         
         //-GAS GIANT 2, PRETTY RINGS AND HEIMAT-
         PlanetAPI gas_giant2 = system.addPlanet("signalis_gas_giant2", signalisStar, "Saturnus", "gas_giant", 90f, 370f, 14500f, 1076f);
+        gas_giant2.getSpec().setTexture(Global.getSettings().getSpriteName("planets","gas_giant2"));
         gas_giant2.getMarket().addCondition(Conditions.DENSE_ATMOSPHERE);
         gas_giant2.getMarket().addCondition(Conditions.VOLATILES_TRACE);
         gas_giant2.getMarket().addCondition(Conditions.HIGH_GRAVITY);
         gas_giant2.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
-        //gas_giant2.setCustomDescriptionId("signalis_gas_giant2_planet");
+        gas_giant2.applySpecChanges();
+        gas_giant2.setCustomDescriptionId("signalis_gas_giant2_planet");
 
         PlanetAPI heimat = system.addPlanet("signalis_heimat", gas_giant2, "Heimat", "toxic", 50f, 90f, 1100f, 56f);
         heimat.setFaction("signalis_eusan_nation");
