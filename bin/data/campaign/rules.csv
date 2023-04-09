@@ -1,0 +1,6 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_TRADEFLAVORTEXT,,,,,,
+flavorTextMarketBuyan,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == signalis_buyan score:1000","AddText"""" textGrayColor",,,
+flavorTextMarketVineta,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == signalis_vineta score:1000","AddText"""" textGrayColor",,,

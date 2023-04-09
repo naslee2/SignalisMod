@@ -1,4 +1,7 @@
 {
+    "ruleCommandPackages":[
+        
+    ],
     "graphics":{
         "planets":{
             "gas_giant1":"graphics/planets/gas_giant1.png",

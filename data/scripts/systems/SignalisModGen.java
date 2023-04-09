@@ -23,7 +23,6 @@ public class SignalisModGen  {
         
     }
 
-
     // public static void generateNew(){
     //     boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
     //     if (!haveNexerelin || SectorManager.getManager().isCorvusMode()){
