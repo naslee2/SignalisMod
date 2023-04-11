@@ -1,6 +1,14 @@
 id,trigger,conditions,script,text,options,notes
 #RULESET_TRADEFLAVORTEXT,,,,,,
 flavorTextMarketBuyan,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$id == signalis_buyan score:1000","AddText"""" textGrayColor",,,
+$id == buyan_market score:1000","AddText""Entering the station after docking you can see a large embelem of the Nation emblazoned prominently over the main entranceway. Numerous replika units are around greeting the visitors to the planet with several replikas roaming around with weaponry. Obviously this is a major security zone as most of the patrolling replikas are armed with shotguns and shields. "" textGrayColor",,,
 flavorTextMarketVineta,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$id == signalis_vineta score:1000","AddText"""" textGrayColor",,,
+$id == vineta_market score:1000","AddText"""" textGrayColor",,,
+flavorTextMarketKitezh,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == kitezh_market score:1000","AddText"""" textGrayColor",,,
+flavorTextMarketRotfront,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == rotfront_market score:1000","AddText"""" textGrayColor",,,
+flavorTextMarketHeimat,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == heimat_market score:1000","AddText"""" textGrayColor",,,
+flavorTextMarketLeng,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$id == leng_market score:1000","AddText"""" textGrayColor",,,
