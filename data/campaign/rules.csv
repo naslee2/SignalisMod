@@ -17,20 +17,20 @@ $id == signalis_leng","AddText""Cargo ships, frieght trams and workers are a com
 #RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
 relLevelNeutralSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == signalis_eusan_nation",,"You are not generally well known by $faction officials, for good or ill. Like any regular person they just don't care about you.",,
-relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == signalis_eusan_nation",,"The $faction authorities tend to view you favorably but not enough to give you much attention. At best, you might be sold some export grade surplus equipment or some low quality consumer goods if you are brave enough or dumb enough to purchase.",,
-relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == signalis_eusan_nation",,Your name is known to some mid-level of $theFaction. The mere mention of your name can cause some officals to break out in a sweat or fidgit nervously. ,,
-relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == signalis_eusan_nation",,"Your name is known to some mid-level of $theFaction. The mere mention of your name can cause some officals to break out in a sweat or fidgit nervously.",,
+relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == signalis_eusan_nation",,"You're relatively well-known within $theFaction, whether in person or by reputation. Low level officals will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word.",,
-relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == signalis_eusan_nation",,"You know some of the $faction leaders on a personal level. You may receive trade concessions and access to high-quality ships and munitions. Your tales and aid are legendary, and your influence and connections limitless within $faction.",,
-relLevelSuspiciousSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelSuspiciousSigNation,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == signalis_eusan_nation",,"$faction officials tend to view you with suspicion. Access to the port authority is granted only grudgingly, and you find yourself the subject of frequent investigations and harassment by Replika security units.",,
-relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == signalis_eusan_nation",,No shoot on sight orders have been given but @faction forces are on alert and encouraged to make your life miserable.,,
-relLevelHostileSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelHostileSigNation,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == signalis_eusan_nation",,"Your name is known to officials as a menace to society and top enemy of the people. $Faction commanders have authorization to engage your fleet on sight. However, there may still be a way for you to sneak into their markets to do some black-market trading. You might still recover good standing with $theFaction, but it's going to take some serious work or bribery to do so.",,
-relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == VENGFUL
 $faction.id == signalis_eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number 1, a sourge and something to be hated and destroyed.",,
 #RULESET_RELATIONSHIP_LEVEL_DESC_END,,,,,,
