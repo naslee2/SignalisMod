@@ -6,7 +6,9 @@
     "description": "Bare bones system of the star system featured in the game Signalis. Release v0.1 and works with Starsector 0.95.1a-RC6. Special Thanks to contributors:, StrixBerseria (art)",
     "gameVersion": "0.95.1a-RC6",
     "dependencies": [
-        {"id": "lw_lazylib","name": "LazyLib"}
+        {"id": "lw_lazylib", "name": "LazyLib"},
+		{"id": "MagicLib", "name": "MagicLib"},
+		{"id": "nexerelin", "name": "Nexerelin"}
     ],
     "jars":["jars/signalisMod.jar"],
 	"modPlugin":"data.scripts.SignalisModPlugin"

@@ -20,7 +20,7 @@ $faction.id == signalis_eusan_nation",,"You are not generally well known by $fac
 relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == signalis_eusan_nation",,"The $faction authorities tend to view you favorably but not enough to give you much attention. At best, you might be sold some export grade surplus equipment or some low quality consumer goods if you are brave enough or dumb enough to purchase.",,
 relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == signalis_eusan_nation",,"Your name is known to some mid-level of $theFaction. The mere mention of your name can cause some officals to break out in a sweat or fidgit nervously.",,
+$faction.id == signalis_eusan_nation",,Your name is known to some mid-level of $theFaction. The mere mention of your name can cause some officals to break out in a sweat or fidgit nervously.,,
 relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == signalis_eusan_nation",,"You're relatively well-known within $theFaction, whether in person or by reputation. Low level officals will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word.",,
 relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
@@ -34,3 +34,26 @@ $faction.id == signalis_eusan_nation",,"Your name is known to officials as a men
 relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == VENGFUL
 $faction.id == signalis_eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number 1, a sourge and something to be hated and destroyed.",,
 #RULESET_RELATIONSHIP_LEVEL_DESC_END,,,,,,
+,,,,,,
+#RULESET_BAR_DESCRIPTION_START,,,,,,
+bardescSigNation,BarPrintDesc,$faction.id== signalis_eusan_nation,,The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to descern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here. The ones are probably are high ranking officers or top level goverment officials.,,
+#RULESET_BAR_DESCRIPTION_END,,,,,,
+,,,,,,
+#RULESET_FLEET_GREETING_START,,,,,,
+greetingFriendlySigNation,OpenCommLink,"$faction.id == signalis_eusan_nation 
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions",Confirming Volksmarine NIS transponder and encryption code. Good to see you $playerName and have a good day.,,
+greetingNeutralSigNation,OpenCommLink,"$faction.id == signalis_eusan_nation
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Domain-type AIS Code verified. This is $personRank $personName of Eusan Nation. You are in our our self-defense zone and within weapons range. State your intentions, over.",,
+greetingHostileWeakerSigNation,OpenCommLink,"$faction.id == signalis_eusan_nation
+$entity.isHostile
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,Send word to HQ and request reinforcements! Our forces may be less powerful at the moment but the Nation will prevail!,cutCommLink:Cut the comm link,
+greetingHostileWeakerDefiantSigNation,OpenCommLink,"$faction.id == signalis_eusan_nation
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,We are the sword and shield of the Nation! The Volksmarine will not retreat without a fight!,cutCommLink:Cut the comm link,
+greetingHostileStrongerSigNation,OpenCommLink,"$faction.id == signalis_eusan_nation
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"Attention enemies of the Nation. You are outmatched, you are cornered, and you are at our mercy. Surrender now and face justice for your crimes against the Eusan people!",cutCommLink:Cut the comm link,
+#RULESET_FLEET_GREETING_END,,,,,,

@@ -10,6 +10,7 @@ MagicLib https://fractalsoftworks.com/forum/index.php?topic=25868.0
 Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0
 
 #CREDITS
+Cristiferbeast#2981 for being the public face of the Signalis modding community.
 C H E E K I B R E E K I#4004 for proofreading
-Swiftnicity#7031 for the Eusan Nation flag
-StrixBerseria for the Eusan Nation crest
+firebombpng#2396 for the Eusan Nation flag
+StrixBerseria and Swiftnicity#7031 for the Eusan Nation crests
