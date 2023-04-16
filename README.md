@@ -8,9 +8,11 @@ Get them:
 
 LazyLib https://fractalsoftworks.com/forum/index.php?topic=5444.0
 
-MagicLib https://fractalsoftworks.com/forum/index.php?topic=25868.0
+MagicLib https://fractalsoftworks.com/forum/index.php?topic=25868.0 
 
-Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0
+Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0 WARNING MAKE SURE NEXERLIN IS v0.10.6c OR LATER. WILL CRASH ON OLDER VERSIONS. 
+
+
 
 # CREDITS
 
