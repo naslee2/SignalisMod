@@ -5,7 +5,8 @@
     "graphics":{
         "planets":{
             "gas_giant1":"graphics/planets/gas_giant1.png",
-            "gas_giant2":"graphics/planets/gas_giant2.png"
+            "gas_giant2":"graphics/planets/gas_giant2.png",
+            "vineta_planet":"graphics/planets/vineta_test.png"
         },
         "hab_glows":{
 

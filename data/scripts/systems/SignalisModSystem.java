@@ -79,8 +79,10 @@ public class SignalisModSystem {
         PlanetAPI vineta = system.addPlanet("signalis_vineta", signalisStar, "Vineta", "water", 88f, 190f, 6000f, 360f);
         ProcgenUsedNames.notifyUsed("Vineta");
         vineta.setFaction("signalis_eusan_nation");
+        vineta.getSpec().setTexture(Global.getSettings().getSpriteName("planets","vineta_planet"));
         vineta.setCustomDescriptionId("signalis_vineta_planet");
         //vineta.setInteractionImage("illustrations", "");
+        vineta.applySpecChanges();
 
         MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 7);
         vineta_market.setPrimaryEntity(vineta);
