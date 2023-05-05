@@ -248,7 +248,7 @@ public class SignalisModSystem {
         heimat_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
-        heimat_market.addSubmarket(Submarkets.GENERIC_MILITARY);
+        heimat_market.addSubmarket("eusan_nation_volksmarine_market");
         heimat_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         sector.getEconomy().addMarket(heimat_market, true);
 
