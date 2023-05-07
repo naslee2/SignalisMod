@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.submarkets;
 
+import org.apache.log4j.Logger;
+
 import com.fs.starfarer.api.campaign.SubmarketPlugin;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
@@ -12,6 +14,8 @@ import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 
 public class signalis_eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
+
+    public static Logger log = Global.getLogger(signalis_eusan_nation_volksmarineSubMarket.class);
     
     @Override
     public void init(SubmarketAPI submarket) {
@@ -27,9 +31,10 @@ public class signalis_eusan_nation_volksmarineSubMarket extends BaseSubmarketPlu
         if (okToUpdateShipsAndWeapons()){
             sinceSWUpdate = 0f;
             pruneWeapons(0f);
-
-            addWeapons(4, 7, 3, submarket.getFaction().getId());
-            addFighters(2, 3, 3, submarket.getFaction().getId());
+            int weapons = 12 + Math.max(0, this.market.getSize() - 1) * 2;
+            int fighters = 2 + Math.max(0, this.market.getSize() - 3);
+            addWeapons(weapons, weapons + 2, 3, submarket.getFaction().getId());
+            addFighters(fighters, fighters + 2, 3, submarket.getFaction().getId());
             
             float stability = market.getStabilityValue();
             float sMult = Math.max(0.1f, stability/10f);
@@ -50,14 +55,6 @@ public class signalis_eusan_nation_volksmarineSubMarket extends BaseSubmarketPlu
         }
         getCargo().sort();
     }
-
-    @Override
-    public String getName() {
-		if (submarket.getFaction().getId().equals("signalis_eusan_nation")) {
-			return "Volksmarine";
-		}
-		return Misc.ucFirst(submarket.getFaction().getPersonNamePrefix()) + "\n" + "Military";
-	}
 
     @Override
     public boolean isHidden(){

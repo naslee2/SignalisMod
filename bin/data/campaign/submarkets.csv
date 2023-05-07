@@ -1,2 +1,2 @@
 id,name,faction,desc,script,icon,order
-eusan_nation_volksmarine_market,"Volksmarine",signalis_eusan_nation,"Allies of the Nation are welcome to purchase weapons and equipment. Surplus or newly manufactured military gear, supplies",com.fs.starfarer.api.impl.campaign.submarkets.signalis_eusan_nation_volksmarineSubMarket,,500,
+eusan_nation_volksmarine_market,"Volksmarine",signalis_eusan_nation,"Allies of the Nation are welcome to purchase weapons and equipment. Surplus or newly manufactured military gear, supplies are avaliable for purchase through the Volksmarine's market for authorized people. Certain specialized varients of standard gear can be purchased here as well",com.fs.starfarer.api.impl.campaign.submarkets.signalis_eusan_nation_volksmarineSubMarket,,500,
