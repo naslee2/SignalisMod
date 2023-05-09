@@ -1,6 +1,6 @@
 {
-    "id": "signalis_eusan_nation",
-    "name": "Signalis Eusan Nation",
+    "id": "eusan_nation",
+    "name": "Eusan Nation",
     "author": "homete",
     "version": "0.1.1b",
     "description": "Bare bones system of the star system featured in the game Signalis. Release v0.1 and works with Starsector 0.95.1a-RC6. Special Thanks to contributors:, StrixBerseria (art)",

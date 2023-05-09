@@ -33,9 +33,9 @@ public class SignalisModSystem {
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
         //Stable Location 1, 2 and 3
-        SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Comm Relay 3NO", "comm_relay", "signalis_eusan_nation"); //3NO means 3 Note Oddity Number Stations
-        SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Sensor Array Six", "sensor_array_makeshift", "signalis_eusan_nation"); //6 is the magic number
-        SectorEntityToken loc3 = system.addCustomEntity("signalisStar_loc3", "Nav Buoy 84-21-A", "nav_buoy", "signalis_eusan_nation"); //Date when Falke became ill
+        SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Comm Relay 3NO", "comm_relay", "eusan_nation"); //3NO means 3 Note Oddity Number Stations
+        SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Sensor Array Six", "sensor_array_makeshift", "eusan_nation"); //6 is the magic number
+        SectorEntityToken loc3 = system.addCustomEntity("signalisStar_loc3", "Nav Buoy 84-21-A", "nav_buoy", "eusan_nation"); //Date when Falke became ill
 
         //Setting stable locations setCircularOrbitPointingDown(location/star/planet, angle, orbit raidus/range, orbit period)
         relay_eusan.setCircularOrbitPointingDown(signalisStar, 40f, 5200f, 220f);
@@ -45,13 +45,13 @@ public class SignalisModSystem {
         //-BUYAN - Toxic World-
         PlanetAPI buyan = system.addPlanet("signalis_buyan", signalisStar , "Buyan", "toxic", 30f, 170f, 2000f, 225f);
         ProcgenUsedNames.notifyUsed("Buyan");
-        buyan.setFaction("signalis_eusan_nation");
+        buyan.setFaction("eusan_nation");
         buyan.setCustomDescriptionId("signalis_buyan_planet");
     
         MarketAPI buyan_market = Global.getFactory().createMarket("buyan_market", buyan.getName(), 5);
         buyan_market.setPrimaryEntity(buyan);
         buyan.setMarket(buyan_market);
-        buyan_market.setFactionId("signalis_eusan_nation");
+        buyan_market.setFactionId("eusan_nation");
         buyan_market.addCondition(Conditions.POPULATION_5);
         buyan_market.addCondition(Conditions.TOXIC_ATMOSPHERE);
         buyan_market.addCondition(Conditions.RARE_ORE_MODERATE);
@@ -78,7 +78,7 @@ public class SignalisModSystem {
         //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
         PlanetAPI vineta = system.addPlanet("signalis_vineta", signalisStar, "Vineta", "water", 88f, 190f, 6000f, 360f);
         ProcgenUsedNames.notifyUsed("Vineta");
-        vineta.setFaction("signalis_eusan_nation");
+        vineta.setFaction("eusan_nation");
         vineta.getSpec().setTexture(Global.getSettings().getSpriteName("planets","vineta_planet"));
         vineta.setCustomDescriptionId("signalis_vineta_planet");
         //vineta.setInteractionImage("illustrations", "");
@@ -87,7 +87,7 @@ public class SignalisModSystem {
         MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 7);
         vineta_market.setPrimaryEntity(vineta);
         vineta.setMarket(vineta_market);
-        vineta_market.setFactionId("signalis_eusan_nation");
+        vineta_market.setFactionId("eusan_nation");
         vineta_market.addCondition(Conditions.POPULATION_7);
         vineta_market.addCondition(Conditions.HABITABLE);
         vineta_market.addCondition(Conditions.MILD_CLIMATE);
@@ -129,14 +129,14 @@ public class SignalisModSystem {
         //-KITZEH - Arid World-
         PlanetAPI kitezh = system.addPlanet("signalis_kitezh", signalisStar, "Kitezh", "arid", 310f, 120f, 8000f, 687f);
         ProcgenUsedNames.notifyUsed("Kitezh");
-        kitezh.setFaction("signalis_eusan_nation");
+        kitezh.setFaction("eusan_nation");
         kitezh.setCustomDescriptionId("signalis_kitezh_planet");
         //kitezh.setInteractionImage("illustrations", "");
 
         MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 6);
         kitezh_market.setPrimaryEntity(kitezh);
         kitezh.setMarket(kitezh_market);
-        kitezh_market.setFactionId("signalis_eusan_nation");
+        kitezh_market.setFactionId("eusan_nation");
         kitezh_market.addCondition(Conditions.POPULATION_6);
         kitezh_market.addCondition(Conditions.HABITABLE);
         kitezh_market.addCondition(Conditions.FARMLAND_POOR);
@@ -176,14 +176,14 @@ public class SignalisModSystem {
         gas_giant1.setCustomDescriptionId("signalis_gas_giant1_planet");
 
         PlanetAPI rotfront = system.addPlanet("signalis_rotfront", gas_giant1, "Rotfront", "tundra", 0f, 90f, 800f, 22f);
-        rotfront.setFaction("signalis_eusan_nation");
+        rotfront.setFaction("eusan_nation");
         rotfront.setCustomDescriptionId("signalis_rotfront_planet");
         //rotfront.setInteractionImage("illustrations", "");
 
         MarketAPI rotfront_market = Global.getFactory().createMarket("rotfront_market", rotfront.getName(), 6);
         rotfront_market.setPrimaryEntity(rotfront);
         rotfront.setMarket(rotfront_market);
-        rotfront_market.setFactionId("signalis_eusan_nation");
+        rotfront_market.setFactionId("eusan_nation");
         rotfront_market.addCondition(Conditions.POPULATION_6);
         rotfront_market.addCondition(Conditions.HABITABLE);
         rotfront_market.addCondition(Conditions.COLD);
@@ -220,14 +220,14 @@ public class SignalisModSystem {
         gas_giant2.setCustomDescriptionId("signalis_gas_giant2_planet");
 
         PlanetAPI heimat = system.addPlanet("signalis_heimat", gas_giant2, "Heimat", "toxic", 50f, 90f, 1100f, 56f);
-        heimat.setFaction("signalis_eusan_nation");
+        heimat.setFaction("eusan_nation");
         heimat.setCustomDescriptionId("signalis_heimat_planet");
         //heimat.setInteractionImage("illustrations", "");
 
         MarketAPI heimat_market = Global.getFactory().createMarket("heimat_market", heimat.getName(), 6);
         heimat_market.setPrimaryEntity(heimat);
         heimat.setMarket(heimat_market);
-        heimat_market.setFactionId("signalis_eusan_nation");
+        heimat_market.setFactionId("eusan_nation");
         heimat_market.addCondition(Conditions.POPULATION_6);
         heimat_market.addCondition(Conditions.ORGANICS_PLENTIFUL);
         heimat_market.addCondition(Conditions.VOLATILES_DIFFUSE);
@@ -259,14 +259,14 @@ public class SignalisModSystem {
         //-LENG-
         PlanetAPI leng = system.addPlanet("signalis_leng", signalisStar, "Leng", "barren", 180, 80f, 16400f, 3050f);
         ProcgenUsedNames.notifyUsed("Leng");
-        leng.setFaction("signalis_eusan_nation");
+        leng.setFaction("eusan_nation");
         leng.setCustomDescriptionId("signalis_leng_planet");
         //leng.setInteractionImage("illustrations", "");
 
         MarketAPI leng_market = Global.getFactory().createMarket("leng_market", leng.getName(), 5);
         leng_market.setPrimaryEntity(leng);
         leng.setMarket(leng_market);
-        leng_market.setFactionId("signalis_eusan_nation");
+        leng_market.setFactionId("eusan_nation");
         leng_market.addCondition(Conditions.POPULATION_5);
         leng_market.addCondition(Conditions.COLD);
         leng_market.addCondition(Conditions.LOW_GRAVITY);

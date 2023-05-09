@@ -18,7 +18,7 @@ public class SignalisModGen  {
     
     public void generateNew(SectorAPI sector){
         new SignalisModSystem().generate(sector);
-        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("signalis_eusan_nation");
+        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
         SetFactionRelations(sector);
         
     }
@@ -33,7 +33,7 @@ public class SignalisModGen  {
     // }
 
     public static void SetFactionRelations(SectorAPI sector){
-        FactionAPI signalis_eusan_nation = sector.getFaction("signalis_eusan_nation");
+        FactionAPI eusan_nation = sector.getFaction("eusan_nation");
         FactionAPI player = sector.getFaction(Factions.PLAYER);
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
         FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
@@ -44,15 +44,15 @@ public class SignalisModGen  {
         FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
         FactionAPI persean = sector.getFaction(Factions.PERSEAN);
 
-        signalis_eusan_nation.setRelationship(player.getId(), 0.0f);
-        signalis_eusan_nation.setRelationship(diktat.getId(), 0.4f);
-        signalis_eusan_nation.setRelationship(hegemony.getId(), -0.5f);
-        signalis_eusan_nation.setRelationship(tritachyon.getId(), -0.5f);
-        signalis_eusan_nation.setRelationship(pirates.getId(), -0.2f);
-        signalis_eusan_nation.setRelationship(independent.getId(), -0.2f);
-        signalis_eusan_nation.setRelationship(church.getId(), -0.5f);
-        signalis_eusan_nation.setRelationship(path.getId(), -0.5f);
-        signalis_eusan_nation.setRelationship(persean.getId(), 0.3f);
+        eusan_nation.setRelationship(player.getId(), 0.0f);
+        eusan_nation.setRelationship(diktat.getId(), 0.4f);
+        eusan_nation.setRelationship(hegemony.getId(), -0.5f);
+        eusan_nation.setRelationship(tritachyon.getId(), -0.5f);
+        eusan_nation.setRelationship(pirates.getId(), -0.2f);
+        eusan_nation.setRelationship(independent.getId(), -0.2f);
+        eusan_nation.setRelationship(church.getId(), -0.5f);
+        eusan_nation.setRelationship(path.getId(), -0.5f);
+        eusan_nation.setRelationship(persean.getId(), 0.3f);
     }
 
 }
