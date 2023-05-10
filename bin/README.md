@@ -22,4 +22,6 @@ C H E E K I B R E E K I#4004 for proofreading
 
 firebombpng#2396 for the Eusan Nation flag
 
+Vineta Planetary Textures by Mallow/Akula Akura
+
 StrixBerseria and Swiftnicity#7031 for the Eusan Nation crests
