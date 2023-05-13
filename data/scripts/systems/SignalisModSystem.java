@@ -80,6 +80,8 @@ public class SignalisModSystem {
         ProcgenUsedNames.notifyUsed("Vineta");
         vineta.setFaction("eusan_nation");
         vineta.getSpec().setTexture(Global.getSettings().getSpriteName("planets","vineta_planet"));
+        vineta.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "vineta_habglows"));
+        vineta.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", "vineta_clouds"));
         vineta.setCustomDescriptionId("signalis_vineta_planet");
         //vineta.setInteractionImage("illustrations", "");
         vineta.applySpecChanges();

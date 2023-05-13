@@ -7,9 +7,13 @@
             "gas_giant1":"graphics/planets/gas_giant1.png",
             "gas_giant2":"graphics/planets/gas_giant2.png",
             "vineta_planet":"graphics/planets/vineta_test.png"
+            
         },
         "hab_glows":{
-
+            "vineta_habglows":"graphics/planets/vineta_habglows.png"
+        },      
+        "cloud_layer":{
+            "vineta_clouds":"graphics/planets/vineta_clouds.png"
         },
         "illustrations":{
 
