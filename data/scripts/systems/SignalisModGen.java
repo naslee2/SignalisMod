@@ -50,15 +50,15 @@ public class SignalisModGen  {
         //vanilla relations
         eusan_nation.setRelationship(player.getId(), 0.0f);
         eusan_nation.setRelationship(diktat.getId(), 0.6f);
-        eusan_nation.setRelationship(hegemony.getId(), -0.5f);
-        eusan_nation.setRelationship(tritachyon.getId(), -0.2f);
+        eusan_nation.setRelationship(hegemony.getId(), -0.4f);
+        eusan_nation.setRelationship(tritachyon.getId(), -0.1f);
         eusan_nation.setRelationship(pirates.getId(), -0.2f);
-        eusan_nation.setRelationship(independent.getId(), -0.1f);
+        eusan_nation.setRelationship(independent.getId(), 0.1f);
         eusan_nation.setRelationship(church.getId(), -0.5f);
         eusan_nation.setRelationship(path.getId(), -0.5f);
         eusan_nation.setRelationship(persean.getId(), 0.3f);
         eusan_nation.setRelationship(lionsguard.getId(), 0.6f);
-        eusan_nation.setRelationship(remnants.getId(), -0.2f);
+        eusan_nation.setRelationship(remnants.getId(), -0.1f);
 
         //mod faction relations
         
