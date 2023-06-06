@@ -124,7 +124,6 @@
 	},
 	"illegalCommodities":[
 		"drugs",
-		"organs",
 		"hand_weapons"	
 	],
 	"music":{
@@ -242,7 +241,7 @@
         "patrolMedium":"Grenzbrigade",
         "patrolLarge":"Grenzflottille",
 
-		"inspectionFleet":"Inspektionsflotte",
+		#"inspectionFleet":"Inspektionsflotte",
 		"taskForce":"Flottile",
 
         "foodReliefFleet":"Humanitarian Convoy",

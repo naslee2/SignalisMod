@@ -27,8 +27,6 @@
     ],
 
     "colonyExpeditionChance":1,
-
-    "morality":"good",
     
     "alignments":{
         "technocratic":0.3,
