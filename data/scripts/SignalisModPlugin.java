@@ -20,6 +20,9 @@ import exerelin.campaign.SectorManager;
 
 public class SignalisModPlugin extends BaseModPlugin {
     
+    static boolean lazyLibPresent = Global.getSettings().getModManager().isModEnabled("lw_lazylib");
+    static boolean nexerlinPresent = Global.getSettings().getModManager().isModEnabled("nexerelin");
+    
     @Override
     public void onNewGame(){
         initPluginChecks();
@@ -27,21 +30,21 @@ public class SignalisModPlugin extends BaseModPlugin {
     }
 
     private static void initModPlugin(){
-        boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
-        if (!haveNexerelin || SectorManager.getManager().isCorvusMode()){
+        //boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+        if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
             new SignalisModGen().generateNew(Global.getSector());
         }
     }
 
-    public static void initPluginChecks(){
-        boolean lazyLibPresent = Global.getSettings().getModManager().isModEnabled("lw_lazylib");
+    private static void initPluginChecks(){
+        //boolean lazyLibPresent = Global.getSettings().getModManager().isModEnabled("lw_lazylib");
         //boolean hasNexerlin = Global.getSettings().getModManager().isModEnabled("nexerelin");
         if (!lazyLibPresent){
             throw new RuntimeException("This mod requires LazyLib" + "\nGet it at http://fractalsoftworks.com/forum/index.php?topic=5444");
         }
-        // if (!hasNexerlin){
-        //     throw new RuntimeException("This mod requires Nexerelin");
-        // }
+        if (!nexerlinPresent){
+            throw new RuntimeException("This mod requires Nexerelin");
+        }
 
     }
 }
