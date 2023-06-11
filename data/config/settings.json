@@ -23,6 +23,11 @@
         },
         "fx":{
 
+        },
+        "industry":{
+            "leng_aeon_facility":"graphics/icons/industry/mining.png",
+            "generic_aeon_facility":"graphics/icons/industry/light_industry.png"
         }
+
     }
 }

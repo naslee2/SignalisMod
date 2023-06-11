@@ -57,3 +57,13 @@ greetingHostileStrongerSigNation,OpenCommLink,"$faction.id == eusan_nation
 $entity.isHostile
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"Attention enemies of the Nation. You are outmatched, you are cornered, and you are at our mercy. Surrender now and face justice for your crimes against the Eusan people!",cutCommLink:Cut the comm link,
 #RULESET_FLEET_GREETING_END,,,,,,
+,,,,,,
+#NEXERLIN_FACTION_INTRO_START,,,,,,
+eusan_nation_NGCStep3FactionStart,ExerelinNGCStep3,$playerFaction == eusan_nation,"AddText""Hello and thank you for choosing the Eusan Nation. This faction is based off the faction of the same name from Signalis, a horror game created by Barbara Wittmann and Yuri Stern of indie game studio, rose-engine. Many thanks to them for creating a wonderful game that no two people have the same idea of what the story is.""
+
+AddText""The Eusan Nation is a totalitarian nation in which in the setting of Starsector, have won their decades long struggle against the Eusan Empire. Now masters of their own star system, they must now contend with the aftermath of the war and the wider Persean Sector. They have been lucky so far with the major powers being rather unconcerned of the stuggles of the Eusan people. Now with the system finally under total control of the Nation, the stars are theirs for the taking.""
+
+AddText""The Nation is primarily a low-tech faction with lots of missile and ballistic weaponry strapped to rather primitive looking starships. What they lack in technology, they make up for it in soft advantages. Their fleet is rather heavy in frigates, destroyers, and cruisers.""
+
+AddText""As this mod is under a work in progress, new features will come online as things progress. I hope you enjoy this mod and thank you for chosing this faction to play.""",,,
+#NEXERLIN_FACTION_INTRO_END,,,,,,

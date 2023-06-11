@@ -59,7 +59,7 @@ $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"Attent
 #RULESET_FLEET_GREETING_END,,,,,,
 ,,,,,,
 #NEXERLIN_FACTION_INTRO_START,,,,,,
-,ExerelinNGCStep3,$playerFaction == eusan_nation,"AddText""Hello and thank you for choosing the Eusan Nation. This faction is based off the faction of the same name from Signalis, a horror game created by Barbara Wittmann and Yuri Stern of indie game studio, rose-engine. Many thanks to them for creating a wonderful game that no two people have the same idea of what the story is.""
+eusan_nation_NGCStep3FactionStart,ExerelinNGCStep3,$playerFaction == eusan_nation,"AddText""Hello and thank you for choosing the Eusan Nation. This faction is based off the faction of the same name from Signalis, a horror game created by Barbara Wittmann and Yuri Stern of indie game studio, rose-engine. Many thanks to them for creating a wonderful game that no two people have the same idea of what the story is.""
 
 AddText""The Eusan Nation is a totalitarian nation in which in the setting of Starsector, have won their decades long struggle against the Eusan Empire. Now masters of their own star system, they must now contend with the aftermath of the war and the wider Persean Sector. They have been lucky so far with the major powers being rather unconcerned of the stuggles of the Eusan people. Now with the system finally under total control of the Nation, the stars are theirs for the taking.""
 
