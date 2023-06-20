@@ -123,7 +123,7 @@ public class SignalisModSystem {
         system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f, null, null);
 
         //Inner Jump Point related to Vineta
-        JumpPointAPI innerJumpPoint = Global.getFactory().createJumpPoint("alatyr_jump_point", "Inner Jump P");
+        JumpPointAPI innerJumpPoint = Global.getFactory().createJumpPoint("alatyr_jump_point", "Inner Jump Point");
         innerJumpPoint.setCircularOrbit(signalisStar, 266, 4200f, 296f);
         innerJumpPoint.setRelatedPlanet(vineta);
         system.addEntity(innerJumpPoint);
