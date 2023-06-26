@@ -26,12 +26,12 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
         super.apply(true);
         int size = market.getSize();
 
-        demand(Commodities.SUPPLIES, size - 2);
-		demand(Commodities.CREW, size - 2);
+        demand(Commodities.SUPPLIES, size - 1);
+		demand(Commodities.CREW, size - 1);
 
 		//supply(Commodities.ORE, size - 1);
 		//supply(Commodities.ORGANICS, size - 2);
-		supply(Commodities.ORGANS, size - 2);
+		supply(Commodities.ORGANS, size);
 
 		//Pair<String, Integer> deficitSupplies = getMaxDeficit(Commodities.SUPPLIES);
 		Pair<String, Integer> deficitCrew = getMaxDeficit(Commodities.CREW);
