@@ -26,11 +26,12 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
         super.apply(true);
         int size = market.getSize();
 
-        demand(Commodities.SUPPLIES, size - 2);
-        demand(Commodities.HAND_WEAPONS, size - 2);
-		//demand(Commodities.CREW, size - 2);
+        demand(Commodities.SUPPLIES, size - 1);
+        demand(Commodities.HAND_WEAPONS, size - 1);
+		//demand(Commodities.HEAVY_MACHINERY, size -1);
 
-		supply(Commodities.MARINES, size - 2);
+		supply(Commodities.CREW, size);
+		supply(Commodities.MARINES, size);
 
 		Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
 		applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);

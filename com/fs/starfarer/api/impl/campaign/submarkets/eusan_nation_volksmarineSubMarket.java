@@ -6,6 +6,7 @@ import com.fs.starfarer.api.campaign.SubmarketPlugin;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
@@ -55,6 +56,33 @@ public class eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
         }
         getCargo().sort();
     }
+
+    
+    // protected boolean requiresCommission(RepLevel req){
+    //     if(!submarket.getFaction().getCustomBoolean(Factions.CUSTOM_OFFERS_COMMISSIONS)){
+    //         return false;
+    //     }
+
+    //     if(req.isAtWorst(RepLevel.COOPERATIVE)){
+    //         return true;
+    //     }
+    //     return false;
+    // }
+
+    // protected boolean hasCommission(){
+    //     return submarket.getFaction().getId().equals(Misc.getCommissionFactionId());
+    // }
+
+    @Override
+    public boolean isEnabled(CoreUIAPI ui){
+        if (ui.getTradeMode() == CoreUITradeMode.SNEAK){
+            return false;
+        } 
+        RepLevel level = submarket.getFaction().getRelationshipLevel(Global.getSector().getFaction(Factions.PLAYER));
+        return level.isAtWorst(RepLevel.COOPERATIVE);
+    }
+
+    
 
     @Override
     public boolean isHidden(){
