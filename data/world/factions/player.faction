@@ -2,13 +2,13 @@
     "flags":[
 
     ],
-    "portraits":[
+    "portraits":{
         "standard_male":[
 
         ],
         "standard_female":[
             
         ]
-    ]
 
+    }
 }
