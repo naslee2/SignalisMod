@@ -1,6 +1,4 @@
-package data.scripts;
-import data.scripts.systems.SignalisModGen;
-
+package data.scripts.plugins;
 import javax.management.RuntimeErrorException;
 
 import com.fs.starfarer.api.BaseModPlugin;

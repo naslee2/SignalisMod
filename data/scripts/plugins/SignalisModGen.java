@@ -1,4 +1,6 @@
-package data.scripts.systems;
+package data.scripts.plugins;
+
+//import data.scripts.plugins;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
@@ -6,6 +8,9 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.util.Misc;
+
+import data.scripts.systems.SignalisModSystem;
+
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.CoreScript;
@@ -21,17 +26,8 @@ public class SignalisModGen  {
         new SignalisModSystem().generate(sector);
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
         SetFactionRelations(sector);
-        
-    }
 
-    // public static void generateNew(){
-    //     boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
-    //     if (!haveNexerelin || SectorManager.getManager().isCorvusMode()){
-    //         SectorAPI sector = Global.getSector();
-    //         new SignalisGen().generate(sector);
-    //         SetFactionRelations(sector);
-    //     }
-    // }
+    }
 
     public static void SetFactionRelations(SectorAPI sector){
         FactionAPI eusan_nation = sector.getFaction("eusan_nation");
@@ -63,5 +59,4 @@ public class SignalisModGen  {
         //mod faction relations
         
     }
-
 }
