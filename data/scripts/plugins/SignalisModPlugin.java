@@ -1,18 +1,9 @@
 package data.scripts.plugins;
-import javax.management.RuntimeErrorException;
+//import javax.management.RuntimeErrorException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CampaignPlugin;
-import com.fs.starfarer.api.campaign.SectorAPI;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.CoreScript;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.util.Misc;
+
 
 import exerelin.campaign.SectorManager;
 
