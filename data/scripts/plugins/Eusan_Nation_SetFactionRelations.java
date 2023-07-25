@@ -19,6 +19,8 @@ public class Eusan_Nation_SetFactionRelations {
         FactionAPI persean = sector.getFaction(Factions.PERSEAN);
         FactionAPI lionsguard = sector.getFaction(Factions.LIONS_GUARD);
         FactionAPI remnants = sector.getFaction(Factions.REMNANTS);
+        FactionAPI derelicts = sector.getFaction(Factions.DERELICT);
+        FactionAPI knightsofLudd = sector.getFaction(Factions.KOL);
 
         //vanilla relations
         eusan_nation.setRelationship(player.getId(), 0.0f);
@@ -32,6 +34,8 @@ public class Eusan_Nation_SetFactionRelations {
         eusan_nation.setRelationship(persean.getId(), 0.3f);
         eusan_nation.setRelationship(lionsguard.getId(), 0.6f);
         eusan_nation.setRelationship(remnants.getId(), -0.1f);
+        eusan_nation.setRelationship(derelicts.getId(), -0.5f);
+        eusan_nation.setRelationship(knightsofLudd.getId(), -0.25f);
 
         //mod faction relations
         
