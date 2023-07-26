@@ -11,5 +11,5 @@
 		{"id": "nexerelin", "name": "Nexerelin"}
     ],
     "jars":["jars/signalisMod.jar"],
-	"modPlugin":"data.scripts.plugins.SignalisModPlugin"
+	"modPlugin":"data.scripts.plugins.Eusan_Nation_Plugin"
 }
