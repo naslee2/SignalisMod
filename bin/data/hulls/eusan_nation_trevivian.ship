@@ -1,0 +1,146 @@
+{
+  "hullName": "Trevivian",
+  "hullId": "eusan_nation_trevivian",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/eusan_nation_trevivian.png",
+  "style": "MIDLINE",
+  "coversColor": "180,180,180,255",
+  "height": 184,
+  "width": 104,
+  "center": [52, 75],
+  "collisionRadius": 124,
+  "shieldCenter": [13, -0],
+  "shieldRadius": 109,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-31, 13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 0,
+      "locations": [81, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 0,
+      "locations": [61, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 0,
+      "locations": [41, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 0,
+      "locations": [21, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 0,
+      "locations": [1, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 180,
+      "locations": [-60, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-66, 14],
+      "length": 50,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-66, -14],
+      "length": 50,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-65, 20],
+      "length": 28,
+      "width": 8,
+      "angle": -175,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-65, -20],
+      "length": 28,
+      "width": 8,
+      "angle": 175,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-65, 8],
+      "length": 28,
+      "width": 8,
+      "angle": 175,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-65, -8],
+      "length": 28,
+      "width": 8,
+      "angle": -175,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -73, -16,
+    -67, -31,
+    -25, -39,
+    5, -24,
+    96, -10,
+    107, -0,
+    96, 10,
+    5, 24,
+    -25, 39,
+    -67, 31,
+    -73, 16
+  ]
+}
