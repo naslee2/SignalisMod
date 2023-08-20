@@ -2,7 +2,7 @@
   "hullName": "Wachtel",
   "hullId": "eusan_nation_wachtel",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/hulls/eusan_nation_wachtel.png",
+  "spriteName": "graphics/ships/eusan_nation_wachtel.png",
   "style": "MIDLINE",
   "coversColor": "180,180,180,255",
   "height": 124,
