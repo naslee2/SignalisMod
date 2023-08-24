@@ -6,8 +6,8 @@ Copthorne,eusan_nation_copthorne,Escort Frigate,Eusan Tech,damper,6,2200,400,200
 Pelikan,eusan_nation_pelikan,Cargo Shuttle,Eusan Tech,flarelauncher,3,900,150,1100,,80,20,,140,150,80,45,85,120,OMNI,,150,0.5,0.7,,,6,80,30,15,1,15,9,4200,5,20,180,0.25,2,2,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.7,2,2,,217
 #Destroyer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Tremore,eusan_nation_tremore,Missile Destroyer,Eusan Tech,fastmissileracks,12,5000,450,5000,,200,90,,80,50,50,30,50,400,OMNI,,150,0.4,0.8,,,35,60,100,50,2,25,9,40000,5,12,380,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.4,2,3,,303
-Cantor,eusan_nation_cantor,Destroyer,Eusan Tech,flarelauncher_active,10,5000,500,4200,,250,100,,80,60,40,30,60,400,FRONT,,300,0.4,0.8,,,35,70,110,60,2,30,8,38000,5,12,360,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.6,2,3,,300
-Trevivian,eusan_nation_trevivian,Destroyer,Eusan Tech,damper,12,3500,350,6000,,400,100,,80,80,60,40,70,300,FRONT,,300,0.5,0.7,,,35,50,50,40,2,20,9,55000,5,20,300,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.7,2,3,,309
+Cantor,eusan_nation_cantor,Fleet Destroyer,Eusan Tech,flarelauncher_active,10,5000,500,4200,,250,100,,80,60,40,30,60,400,FRONT,,300,0.4,0.8,,,35,70,110,60,2,30,8,38000,5,12,360,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.6,2,3,,300
+Trevivian,eusan_nation_trevivian,Fleet Destroyer,Eusan Tech,damper,12,3500,350,6000,,400,100,,80,80,60,40,70,300,FRONT,,300,0.5,0.7,,,35,50,50,40,2,20,9,55000,5,20,300,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.7,2,3,,309
 #Cruiser,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Comoros,eusan_nation_comoros,Cruiser,Eusan Tech,burndrive,14,7000,900,12000,,850,150,,65,50,30,20,30,1200,OMNI,,200,0.5,0.7,,,110,200,150,100,3,33,8,110000,3,12,400,0.25,20,20,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.5,2,3,,401
 Engollan,eusan_nation_engollan,Missile Cruiser,Eusan Tech,fastmissileracks,14,7000,800,5500,,200,150,,60,45,40,15,20,1200,FRONT,,270,0.5,0.8,,,100,180,120,80,3,27,8,110000,3,12,480,0.25,20,20,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.5,2,3,,408

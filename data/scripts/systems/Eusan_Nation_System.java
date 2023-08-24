@@ -82,11 +82,11 @@ public class Eusan_Nation_System {
         //vineta.setInteractionImage("illustrations", "");
         vineta.applySpecChanges();
 
-        MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 7);
+        MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 6);
         vineta_market.setPrimaryEntity(vineta);
         vineta.setMarket(vineta_market);
         vineta_market.setFactionId("eusan_nation");
-        vineta_market.addCondition(Conditions.POPULATION_7);
+        vineta_market.addCondition(Conditions.POPULATION_6);
         vineta_market.addCondition(Conditions.HABITABLE);
         vineta_market.addCondition(Conditions.MILD_CLIMATE);
         vineta_market.addCondition(Conditions.RUINS_EXTENSIVE);
@@ -131,11 +131,11 @@ public class Eusan_Nation_System {
         kitezh.setCustomDescriptionId("eusan_nation_kitezh_planet");
         //kitezh.setInteractionImage("illustrations", "");
 
-        MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 6);
+        MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 5);
         kitezh_market.setPrimaryEntity(kitezh);
         kitezh.setMarket(kitezh_market);
         kitezh_market.setFactionId("eusan_nation");
-        kitezh_market.addCondition(Conditions.POPULATION_6);
+        kitezh_market.addCondition(Conditions.POPULATION_5);
         kitezh_market.addCondition(Conditions.HABITABLE);
         kitezh_market.addCondition(Conditions.FARMLAND_POOR);
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
@@ -144,7 +144,7 @@ public class Eusan_Nation_System {
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
-        kitezh_market.addIndustry(Industries.LIGHTINDUSTRY);
+        //kitezh_market.addIndustry(Industries.LIGHTINDUSTRY);
         kitezh_market.addIndustry(Industries.POPULATION);
         kitezh_market.addIndustry(Industries.WAYSTATION);
         kitezh_market.addIndustry(Industries.SPACEPORT);
