@@ -43,7 +43,7 @@ public class Eusan_Nation_People {
             officer_yeong.setPortraitSprite("graphics/portraits/eusan_nation_officer_yeong.png");
             officer_yeong.addTag(Tags.CONTACT_MILITARY);
             officer_yeong.setVoice(Voices.SOLDIER);
-            market.getCommDirectory().addPerson(officer_yeong, 6);
+            market.getCommDirectory().addPerson(officer_yeong, 1);
             market.getCommDirectory().getEntryForPerson(officer_yeong).setHidden(false);
             market.addPerson(officer_yeong);
             importantpeople_heimat.addPerson(officer_yeong);

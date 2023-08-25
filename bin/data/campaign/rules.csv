@@ -73,8 +73,83 @@ AddText""As this mod is under a work in progress, new features will come online 
 # EUSAN_NATION_NPC_DIALOUGE,,,,,,
 ,,,,,,
 # EUSAN_NATION_OFFICER_YEONG_INTRO,,,,,,
-EUSAN_NATION_OFFICER_YEONG_INTRO,,,,,,
-NEW RULE,,,,,,
+EUSAN_NATION_OFFICER_YEONG_INTRO_COMMISIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == false","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions","Hello there. What do you want.",,
+EUSAN_NATION_OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+",,"INVALID CREDENTIALS. PLEASE SEE CENTRAL AUTHORITY FOR PERMISSIONS. THIS COMMUNICATIONS LINK WILL NOW END.
+OR
+Hello who is this. Your security credentials isn't valid so I am going to cut this convo short.
+OR
+Don't bother me.
+OR
+Who is this. Identify yourself...
+OR
+Don't know you, don't care.",,
+EUSAN_NATION_OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true","ShowPersonVisual
+FireAll PopulateOptions","Hello there. What do you want?
+OR
+Welcome back $playerName, what can I do for you?
+OR
+Hello hello. Got any smokes I can ask of you?
+OR
+Calling me again? What do you want this time?
+OR
+Well well well if it isn't $playerName. What do you need this time?",,
+EUSAN_NATION_OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
+$id ==  ""eusan_nation_officer_yeong"" score: 100
+",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
+OR
+COMMUNICATIONS TERMINATED. IF THIS HAS BEEN IN ERROR, PLEASE SEE CENTRAL AUTHORITY.
+OR
+ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
+EUSAN_NATION_OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat",
+EUSAN_NATION_OFFICER_YEONG_OPTIONS_COMPLIMENT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == false",,,"officeryeongComplement:Compliment
+",
+EUSAN_NATION_OFFICER_YEONG_OPTIONS_COMPLIMENT1,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == true","SetEnabled officeryeongComplement false
+SetTooltip officeryeongComplement ""You recently done this. Wait for a few days.""",,"officeryeongComplement:Compliment
+",
+EUSAN_NATION_OFFICER_YEONG_OPTIONS_INSULTS,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == false",,,"officeryeongInsult:Insult",
+EUSAN_NATION_OFFICER_YEONG_OPTIONS_INSULTS1,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == true","SetEnabled officeryeongInsult false
+SetTooltip officeryeongInsult ""You recently done this. Wait for a few days.""",,"officeryeongInsult:Insult",
+EUSAN_NATION_OFFICER_YEONG_CHAT,DialogOptionSelected,"$option == officeryeongChat",,"I hate my life did you know that
+OR
+Smoking kills. Thats why I smoke.
+OR
+Rotfront at this time of year rains very hard. It always rains on Rotfront
+OR
+I got stationed at Leng once. Hated it. Transfered to Heimat.
+OR
+I used to paint. Stopped because work was taking up too much of my time.
+OR
+The Penrose Program...a lot of drum banging for something that most people don't see. Gigantic waste of time to be honest. Dont tell the Protektors I said that ok?
+",,
+EUSAN_NATION_OFFICER_YEONG_COMPLIMENT,DialogOptionSelected,"$option == officeryeongComplement","AdjustRepActivePerson WELCOMING 1
+$player.officeryeongreptalk = true 3
+FireAll PopulateOptions","Flattery is nice
+OR
+Thank you but your not my type
+OR
+Why thank you for the nice words. You just made my dad slightly brighter than normal
+OR
+Do you mean it?",,
+EUSAN_NATION_OFFICER_YEONG_INSULT,DialogOptionSelected,"$option == officeryeongInsult","AdjustRepActivePerson SUSPICIOUS -1
+$player.officeryeongreptalk = true 3
+FireAll PopulateOptions","That is not nice...
+OR
+Aye go away then...
+OR
+Uh huh...right then...
+OR
+Insulting me right here right now? Wow...",,
 "#END EUSAN_NATION_OFFICER_YEONG_INTRO",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 
