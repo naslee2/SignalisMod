@@ -172,7 +172,7 @@
 	},
 	"ranks":{
 		"ranks":{
-			"factionLeader":{"name":"Vorsitzender"},
+			"factionLeader":{"name":"Great Revolutionary"},
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
@@ -180,7 +180,8 @@
 			"stcr":{"name":"Protektor Security Leader"},
 			"adlr":{"name":"Facility Administrator"},
 			"kncr":{"name":"Blockwart"},	
-			"gestaltVMOfficer":{"name":"Gestalt Officer"},	
+			"gestaltVMFlightOfficer":{"name":"Gestalt Flight Officer"},
+			"gestaltOfficer":{"name":"Gestalt Officer"}
 		},
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
@@ -198,6 +199,7 @@
 			"star":{"name":"Protektor Security Technician"},
 			"stcr":{"name":"Protektor Security Leader"},
 			"kncr":{"name":"Blockwart"},
+			"gestaltInvestigator":{"name":"Investigator"}
 		},
 	},
 	"voices":{

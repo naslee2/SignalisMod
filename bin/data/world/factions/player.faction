@@ -7,7 +7,8 @@
 
         ],
         "standard_female":[
-            "graphics/portraits/eusan_nation_ariane.png"
+            "graphics/portraits/eusan_nation_ariane.png",
+            "graphics/portraits/eusan_nation_officer_yeong.png",
         ]
 
     }

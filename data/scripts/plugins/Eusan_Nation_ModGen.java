@@ -24,7 +24,7 @@ public class Eusan_Nation_ModGen  {
         new Eusan_Nation_System().generate(sector);
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
         new Eusan_Nation_SetFactionRelations().SetFactionRelations(sector);
-
+        new Eusan_Nation_People().create();
     }
 
 }
