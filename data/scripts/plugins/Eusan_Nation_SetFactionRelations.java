@@ -1,39 +1,12 @@
-package data.scripts.systems;
+package data.scripts.plugins;
 
-import com.fs.starfarer.api.BaseModPlugin;
-import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.SectorAPI;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.CoreScript;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.util.Misc;
 
-import exerelin.campaign.SectorManager;
-import exerelin.campaign.intel.missions.remnant.RemnantM1;
-
-public class SignalisModGen  {
+public class Eusan_Nation_SetFactionRelations {
     
-    public void generateNew(SectorAPI sector){
-        new SignalisModSystem().generate(sector);
-        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
-        SetFactionRelations(sector);
-        
-    }
-
-    // public static void generateNew(){
-    //     boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
-    //     if (!haveNexerelin || SectorManager.getManager().isCorvusMode()){
-    //         SectorAPI sector = Global.getSector();
-    //         new SignalisGen().generate(sector);
-    //         SetFactionRelations(sector);
-    //     }
-    // }
-
-    public static void SetFactionRelations(SectorAPI sector){
+    public void SetFactionRelations(SectorAPI sector){
         FactionAPI eusan_nation = sector.getFaction("eusan_nation");
         FactionAPI player = sector.getFaction(Factions.PLAYER);
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
@@ -46,6 +19,8 @@ public class SignalisModGen  {
         FactionAPI persean = sector.getFaction(Factions.PERSEAN);
         FactionAPI lionsguard = sector.getFaction(Factions.LIONS_GUARD);
         FactionAPI remnants = sector.getFaction(Factions.REMNANTS);
+        FactionAPI derelicts = sector.getFaction(Factions.DERELICT);
+        FactionAPI knightsofLudd = sector.getFaction(Factions.KOL);
 
         //vanilla relations
         eusan_nation.setRelationship(player.getId(), 0.0f);
@@ -59,9 +34,10 @@ public class SignalisModGen  {
         eusan_nation.setRelationship(persean.getId(), 0.3f);
         eusan_nation.setRelationship(lionsguard.getId(), 0.6f);
         eusan_nation.setRelationship(remnants.getId(), -0.1f);
+        eusan_nation.setRelationship(derelicts.getId(), -0.5f);
+        eusan_nation.setRelationship(knightsofLudd.getId(), -0.25f);
 
         //mod faction relations
         
     }
-
 }

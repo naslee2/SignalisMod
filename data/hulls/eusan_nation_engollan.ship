@@ -1,0 +1,186 @@
+{
+  "hullName": "Engollan",
+  "hullId": "eusan_nation_engollan",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/eusan_nation_engollan.png",
+  "style": "MIDLINE",
+  "coversColor": "180,180,180,255",
+  "height": 208,
+  "width": 140,
+  "center": [70, 96],
+  "collisionRadius": 118,
+  "shieldCenter": [4, -0],
+  "shieldRadius": 112,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missleracks"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-21, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 45,
+      "locations": [-18, 48]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [-18, -48]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [64, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 55,
+      "locations": [37, 12]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -55,
+      "locations": [37, -12]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 45,
+      "locations": [-5, 22]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -45,
+      "locations": [-5, -22]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 130,
+      "locations": [-41, 39],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -130,
+      "locations": [-41, -39],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 180,
+      "locations": [-79, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-80, 29],
+      "length": 51,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-80, -29],
+      "length": 51,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-77, 37],
+      "length": 23,
+      "width": 5,
+      "angle": -175.5,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-77, -37],
+      "length": 23,
+      "width": 5,
+      "angle": 175.5,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78, 22],
+      "length": 28.489103,
+      "width": 8.335722,
+      "angle": 175,
+      "contrailSize": 8.335722,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78, -22],
+      "length": 28.489103,
+      "width": 8.335722,
+      "angle": -175,
+      "contrailSize": 8.335722,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -93, -13,
+    -78, -41,
+    -65, -42,
+    -25, -65,
+    7, -43,
+    92, -20,
+    105, -0,
+    92, 20,
+    7, 43,
+    -25, 65,
+    -65, 42,
+    -78, 41,
+    -93, 13
+  ]
+}

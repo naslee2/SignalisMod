@@ -3,15 +3,20 @@ package com.fs.starfarer.api.impl.campaign.submarkets;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.campaign.SubmarketPlugin;
+import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin;
 import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
+import com.fs.starfarer.api.combat.CombatFleetManagerAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 
 public class eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
@@ -57,21 +62,27 @@ public class eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
         getCargo().sort();
     }
 
-    
-    // protected boolean requiresCommission(RepLevel req){
-    //     if(!submarket.getFaction().getCustomBoolean(Factions.CUSTOM_OFFERS_COMMISSIONS)){
-    //         return false;
-    //     }
 
-    //     if(req.isAtWorst(RepLevel.COOPERATIVE)){
-    //         return true;
-    //     }
-    //     return false;
-    // }
+    protected boolean requiresCommission(RepLevel req){
+        if(!submarket.getFaction().getCustomBoolean(Factions.CUSTOM_OFFERS_COMMISSIONS)){
+            return false;
+        }
 
-    // protected boolean hasCommission(){
-    //     return submarket.getFaction().getId().equals(Misc.getCommissionFactionId());
-    // }
+        if(req.isAtWorst(RepLevel.COOPERATIVE)){
+            return true;
+        }
+        return false;
+    }
+
+    protected boolean hasCommission(){
+        return submarket.getFaction().getId().equals(Misc.getCommissionFactionId());
+    }
+
+    @Override
+    public boolean shouldHaveCommodity(CommodityOnMarketAPI com) {
+		if (Commodities.CREW.equals(com.getId())) return true;
+		return com.getCommodity().hasTag(Commodities.TAG_MILITARY);
+	}
 
     @Override
     public boolean isEnabled(CoreUIAPI ui){
@@ -82,7 +93,28 @@ public class eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
         return level.isAtWorst(RepLevel.COOPERATIVE);
     }
 
-    
+    @Override
+    public String getTooltipAppendix(CoreUIAPI ui) {
+		if (!isEnabled(ui)) {
+			return "Requires: " + submarket.getFaction().getDisplayName() + " - " + RepLevel.COOPERATIVE.getDisplayName().toLowerCase();
+		}
+		if (ui.getTradeMode() == CoreUITradeMode.SNEAK) {
+			return "Requires: proper docking authorization";
+		}
+		return null;
+	}
+
+    @Override
+    public Highlights getTooltipAppendixHighlights(CoreUIAPI ui) {
+		String appendix = getTooltipAppendix(ui);
+		if (appendix == null) return null;
+		
+		Highlights h = new Highlights();
+		h.setText(appendix);
+		h.setColors(Misc.getNegativeHighlightColor());
+		return h;
+	}
+
 
     @Override
     public boolean isHidden(){

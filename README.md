@@ -16,6 +16,8 @@ Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0 WARNING MAKE 
 
 # CREDITS
 
+Sikair for the ship sprites, hull and ship data.
+
 Cristiferbeast#2981 for being the public face of the Signalis modding community.
 
 C H E E K I B R E E K I#4004 for proofreading

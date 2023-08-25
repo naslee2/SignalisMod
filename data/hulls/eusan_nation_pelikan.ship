@@ -1,0 +1,95 @@
+{
+  "hullName": "Pelikan",
+  "hullId": "eusan_nation_pelikan",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/eusan_nation_pelikan.png",
+  "style": "MIDLINE",
+  "coversColor": "180,180,180,255",
+  "height": 98,
+  "width": 100,
+  "center": [50, 45],
+  "collisionRadius": 68,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 66.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-9, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 9,
+      "angle": 45,
+      "locations": [-13, 23]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 9,
+      "angle": -45,
+      "locations": [-13, -23]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-30, 9],
+      "length": 36,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-30, -9],
+      "length": 36,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-26, 16],
+      "length": 27,
+      "width": 6,
+      "angle": -166,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-26, -16],
+      "length": 27,
+      "width": 6,
+      "angle": 166,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-29.5, -0],
+      "length": 23,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -35, -24,
+    -16, -28,
+    39, -10,
+    46, -0,
+    39, 10,
+    -16, 28,
+    -35, 24
+  ]
+}

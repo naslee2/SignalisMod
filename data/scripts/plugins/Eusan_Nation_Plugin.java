@@ -1,24 +1,12 @@
-package data.scripts;
-import data.scripts.systems.SignalisModGen;
-
-import javax.management.RuntimeErrorException;
+package data.scripts.plugins;
+//import javax.management.RuntimeErrorException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CampaignPlugin;
-import com.fs.starfarer.api.campaign.SectorAPI;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.CoreScript;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.util.Misc;
 
 import exerelin.campaign.SectorManager;
 
-public class SignalisModPlugin extends BaseModPlugin {
+public class Eusan_Nation_Plugin extends BaseModPlugin {
     
     static boolean lazyLibPresent = Global.getSettings().getModManager().isModEnabled("lw_lazylib");
     static boolean nexerlinPresent = Global.getSettings().getModManager().isModEnabled("nexerelin");
@@ -32,7 +20,7 @@ public class SignalisModPlugin extends BaseModPlugin {
     private static void initModPlugin(){
         //boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
         if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
-            new SignalisModGen().generateNew(Global.getSector());
+            new Eusan_Nation_ModGen().generateNew(Global.getSector());
         }
     }
 

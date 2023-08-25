@@ -1,0 +1,68 @@
+{
+  "hullName": "Penrose",
+  "hullId": "eusan_nation_penrose",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/eusan_nation_penrose.png",
+  "style": "MIDLINE",
+  "coversColor": "180,180,180,255",
+  "height": 144,
+  "width": 82,
+  "center": [41, 63],
+  "collisionRadius": 90.5,
+  "shieldCenter": [9, 0],
+  "shieldRadius": 80.5,
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "engineSlots": [
+    {
+      "location": [-57, -0],
+      "length": 63.281914,
+      "width": 18.319332,
+      "angle": 180,
+      "contrailSize": 18.319332,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58, 14],
+      "length": 35,
+      "width": 12,
+      "angle": -167,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58, -14],
+      "length": 35,
+      "width": 12,
+      "angle": 167,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-56, 8],
+      "length": 25.953516,
+      "width": 7.723992,
+      "angle": -174,
+      "contrailSize": 7.723992,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-56, -8],
+      "length": 25.953516,
+      "width": 7.723992,
+      "angle": 174,
+      "contrailSize": 7.723992,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -61, -12,
+    -55, -23,
+    -16, -25,
+    63, -5,
+    63, 5,
+    -16, 25,
+    -55, 23,
+    -61, 12
+  ]
+}
