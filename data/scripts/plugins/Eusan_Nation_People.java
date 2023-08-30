@@ -8,8 +8,7 @@ import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Voices;
-import com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+
 
 public class Eusan_Nation_People {
     public static String EUSAN_NATION = "eusan_nation";
