@@ -9,12 +9,6 @@ import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.util.Misc;
 
-// import com.fs.starfarer.api.campaign.FactionAPI;
-// import com.fs.starfarer.api.impl.campaign.ids.Factions;
-// import com.fs.starfarer.api.impl.campaign.CoreScript;
-// import com.fs.starfarer.api.campaign.StarSystemAPI;
-//import com.fs.starfarer.api.util.Misc;
-
 import exerelin.campaign.SectorManager;
 import exerelin.campaign.intel.missions.remnant.RemnantM1;
 
