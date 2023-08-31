@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_penrose_standard",
+  "hullId": "eusan_nation_penrose",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

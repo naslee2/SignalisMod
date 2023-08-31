@@ -129,7 +129,11 @@ public class Eusan_Nation_System {
         ProcgenUsedNames.notifyUsed("Kitezh");
         kitezh.setFaction("eusan_nation");
         kitezh.setCustomDescriptionId("eusan_nation_kitezh_planet");
+        kitezh.getSpec().setTexture(Global.getSettings().getSpriteName("planets","kitezh_planet"));
+        //kitezh.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", ""));
+        //kitezh.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", ""));
         //kitezh.setInteractionImage("illustrations", "");
+        kitezh.applySpecChanges();
 
         MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 5);
         kitezh_market.setPrimaryEntity(kitezh);
