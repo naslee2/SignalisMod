@@ -32,19 +32,21 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
+			"eusan_nation_standard_bp":0.9
 		},
 		"hulls":{
-			"buffalo2":0, # just say no
+			"eusan_nation_penrose":0
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":[],
+		"tags":["eusan_nation_standard_bp"],
 		"hulls":[],
 	},
 	"knownShips":{
-		"tags":["base_bp","lowtech_bp", "midline_bp"],
+		"tags":["eusan_nation_standard_ship_bp","base_bp","lowtech_bp", "midline_bp"],
 		"hulls":[
+			"eusan_nation_penrose",
 			"atlas",
 			"monitor",
 			"prometheus",

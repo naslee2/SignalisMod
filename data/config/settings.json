@@ -26,6 +26,7 @@
 
         },
         "blueprint_packages":{
+            "eusan_nation_standard_package":"graphics/icons/cargo/bp_eusan_nation_standard.png"
         },
         "industry":{
             "leng_aeon_facility":"graphics/icons/industry/mining.png",
