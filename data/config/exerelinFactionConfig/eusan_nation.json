@@ -25,9 +25,8 @@
         {"ids":["orbitalstation", "battlestation", "starfortress"],"weight":0.5}
 
     ],
-
     "colonyExpeditionChance":1,
-    
+
     "alignments":{
         "technocratic":0.3,
         "militarist":0.2,
@@ -35,7 +34,12 @@
     },
     "diplomacyTraits":["stalwart", "likes_ai", "lowprofile", "selfrighteous", "law_and_order", "envious"],
 
-    "freeMarket":false
+    "freeMarket":false,
+
+    "startSpecialItems":[
+        [["eusan_nation_standard_package", ""]]
+    ]
+
 
 
 

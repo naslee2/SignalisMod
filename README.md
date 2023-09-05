@@ -26,6 +26,7 @@ firebombpng#2396 for the Eusan Nation flag
 
 Vineta Planetary Textures and cloud layer by Mallow/ @AkulaAkura 
 
-StrixBerseria and Swiftnicity#7031 for the Eusan Nation crests
+StrixBerseria, Swiftnicity#7031 and firebombpng
+#2396 for the Eusan Nation crests
 
 Terraformed Mars as Kitezh Planetary Textures by Daniel Michel aka Dizzy Crow. From OpenGameArt.org
