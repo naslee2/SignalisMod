@@ -14,7 +14,7 @@ Trevivian,eusan_nation_trevivian,Fleet Destroyer,Eusan Tech,damper,12,3500,350,6
 Comoros,eusan_nation_comoros,Cruiser,Eusan Tech,burndrive,14,7000,900,12000,,850,150,,65,50,30,20,30,1200,OMNI,,200,0.5,0.7,,,110,200,150,100,3,33,8,110000,3,12,400,0.25,20,20,,,,,,,"RENDER_ENGINES_BELOW_HULL",,,0.5,2,3,,401
 Engollan,eusan_nation_engollan,Missile Cruiser,Eusan Tech,fastmissileracks,14,7000,800,5500,,200,150,,60,45,40,15,20,1200,FRONT,,270,0.5,0.8,,,100,180,120,80,3,27,8,110000,3,12,480,0.25,20,20,,,,,,,"RENDER_ENGINES_BELOW_HULL",,,0.5,2,3,,408
 #Capital,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Revolution,eusan_nation_revolution,Missile Battleship,Eusan Tech,flarelauncher_active,30,20000,1400,16000,,500,350,,40,40,30,10,20,3000,OMNI,,270,0.6,0.8,,,320,450,400,260,10,26,7,440000,4,12,660,0.25,50,50,,,,,,,"RENDER_ENGINES_BELOW_HULL",eusan_nation_advanced_ship_bp,,0.5,2,4,,512
-Admiral,eusan_nation_admiral,Battleship,Eusan Tech,burndrive,30,22000,1500,20000,,1200,300,,45,40,25,10,15,3200,OMNI,,200,0.7,0.7,,,340,500,300,300,10,30,8,480000,3,15,600,0.25,50,50,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.5,2,4,,513
+Revolution,eusan_nation_revolution,Missile Battleship,Eusan Tech,flarelauncher_active,30,20000,1400,16000,,500,350,,40,40,30,10,20,3000,OMNI,,270,0.6,0.8,,,320,450,400,260,10,26,7,440000,4,12,660,0.25,50,50,,,,,,,"RENDER_ENGINES_BELOW_HULL",,,0.5,2,4,,512
+Admiral,eusan_nation_admiral,Battleship,Eusan Tech,burndrive,30,22000,1500,20000,,1200,300,,45,40,25,10,15,3200,OMNI,,200,0.7,0.7,,,340,500,300,300,10,30,8,480000,3,15,600,0.25,50,50,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,4,,513
 #Empire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Jagd,eusan_nation_jagd,Destroyer,Eusan Tech,displacer,12,3200,350,6400,,600,100,,85,80,60,45,70,300,FRONT,,270,0.5,0.8,,,50,60,50,40,2,20,9,51000,5,20,300,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.6,2,3,,310

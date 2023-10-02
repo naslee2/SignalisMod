@@ -33,7 +33,7 @@
 	"hullFrequency":{
 		"tags":{
 			"eusan_nation_standard_bp":0.9,
-			"eusan_nation_advanced_ship_bp":0.1
+			"eusan_nation_advanced_bp":0.9
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
@@ -42,13 +42,14 @@
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["eusan_nation_standard_bp"],
+		"tags":["eusan_nation_standard_bp","eusan_nation_advanced_bp"],
 		"hulls":[],
 	},
 	"knownShips":{
-		"tags":["eusan_nation_standard_ship_bp","base_bp","lowtech_bp", "midline_bp"],
+		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp","base_bp","lowtech_bp", "midline_bp"],
 		"hulls":[
 			"eusan_nation_penrose",
+			"eusan_nation_admiral",
 			"atlas",
 			"monitor",
 			"prometheus",
