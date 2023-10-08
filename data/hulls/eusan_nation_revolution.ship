@@ -2,7 +2,7 @@
   "hullName": "Revolution",
   "hullId": "eusan_nation_revolution",
   "hullSize": "CAPITAL_SHIP",
-  "spriteName": "graphics/ships/eusan_nation_revolution.png",
+  "spriteName": "graphics/ships/eusan_nation_revolution2.png",
   "style": "MIDLINE",
   "coversColor": "180,180,180,255",
   "height": 432,

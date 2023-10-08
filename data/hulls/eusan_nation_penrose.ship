@@ -12,6 +12,10 @@
   "shieldCenter": [9, 0],
   "shieldRadius": 80.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "hiressensors",
+    "surveying_equipment"
+  ],
   "weaponSlots": [],
   "engineSlots": [
     {

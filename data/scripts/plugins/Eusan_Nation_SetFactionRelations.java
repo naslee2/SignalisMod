@@ -27,7 +27,7 @@ public class Eusan_Nation_SetFactionRelations {
         eusan_nation.setRelationship(diktat.getId(), 0.6f);
         eusan_nation.setRelationship(hegemony.getId(), -0.4f);
         eusan_nation.setRelationship(tritachyon.getId(), -0.1f);
-        eusan_nation.setRelationship(pirates.getId(), -0.2f);
+        eusan_nation.setRelationship(pirates.getId(), -0.9f);
         eusan_nation.setRelationship(independent.getId(), 0.1f);
         eusan_nation.setRelationship(church.getId(), -0.5f);
         eusan_nation.setRelationship(path.getId(), -0.5f);

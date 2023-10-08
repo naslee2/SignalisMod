@@ -1,0 +1,127 @@
+{
+  "hullName": "Jagd",
+  "hullId": "eusan_nation_jagd",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/eusan_nation_jagd.png",
+  "style": "MIDLINE",
+  "height": 206,
+  "width": 100,
+  "center": [50, 97],
+  "collisionRadius": 131.5,
+  "shieldCenter": [6, 0],
+  "shieldRadius": 123.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [80, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 60,
+      "locations": [30, 13]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -60,
+      "locations": [30, -13]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 60,
+      "locations": [-2, 16]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -60,
+      "locations": [-2, -16]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 180,
+      "locations": [-72, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-37, 42]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-37, -42]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-85, -0],
+      "length": 55,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-80, 26.5],
+      "length": 33,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-80, -26.5],
+      "length": 33,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "COBRA_BOMBER"
+    }
+  ],
+  "bounds": [
+    -86, -33,
+    -73, -34,
+    -45, -47,
+    -15, -28,
+    90, -16,
+    90, 16,
+    -15, 28,
+    -45, 48,
+    -53, 38,
+    -82, 33,
+    -92, -0
+  ]
+}
