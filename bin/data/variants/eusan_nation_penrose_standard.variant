@@ -1,7 +1,7 @@
 {
   "variantId": "eusan_nation_penrose_standard",
   "hullId": "eusan_nation_penrose",
-  "displayName": "Standard",
+  "displayName": "Standard",
   "goalVariant": false,
   "fluxCapacitors": 10,
   "fluxVents": 10,

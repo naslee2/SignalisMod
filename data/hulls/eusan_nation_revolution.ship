@@ -13,7 +13,7 @@
   "shieldRadius": 236.5,
   "viewOffset": 0,
   "builtInMods": [
-    "missleracks"
+    "missleracks",
   ],
   "builtInWeapons": {
     "DECO1": "eusan_nation_revolution_deco1",
