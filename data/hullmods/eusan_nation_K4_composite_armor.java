@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.listeners.*;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -22,6 +23,14 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
     private float FRAG_damage_reduction = 0.3f;
     private float HE_damage_reduction = 0.6f;
     private float KINETIC_damage_reduction = 0.6f;
+
+    static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+    static String eusan_nation_k4_composite_armor1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText1");
+    static String eusan_nation_k4_composite_armor2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText2");
+    static String eusan_nation_k4_composite_armor3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText3");
+    static String eusan_nation_k4_composite_armor4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText4");
+    static String eusan_nation_k4_composite_armor5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText5");
+    static String eusan_nation_k4_composite_armor6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText6");
 
 
     public void applyEffectsBeforeShipCreation (HullSize hullSize, MutableShipStatsAPI stats, String id){
@@ -52,5 +61,13 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
         final Color green = new Color(55,245,65,255);
 		final Color red = new Color(245,55,65,255);
 		final Color flavor = new Color(110,110,110,255);
+
+        tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
+        tooltip.addPara(eusan_nation_k4_composite_armor1, 10.0f, Misc.getHighlightColor(), "10%");
+        tooltip.addPara(eusan_nation_k4_composite_armor2, 10.0f, Misc.getHighlightColor(), "70%");
+        tooltip.addPara(eusan_nation_k4_composite_armor3, 10.0f, Misc.getHighlightColor(), "40%");
+        tooltip.addPara(eusan_nation_k4_composite_armor4, 10.0f, Misc.getHighlightColor(), "40%");
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor5).italicize();
+        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor6);
     }
 }

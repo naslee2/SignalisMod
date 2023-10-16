@@ -1,0 +1,12 @@
+{
+    "eusan_nation_strings": {
+        "eusan_nation_hullmodDetails": "Details",
+        
+        "eusan_nation_k4_composite_armorText1":"Decreases Energy Damage taken: %s",
+        "eusan_nation_k4_composite_armorText2":"Decreases Fragmentation Damage Taken: %s",
+        "eusan_nation_k4_composite_armorText3":"Decreases High Explosive Damage Taken: %s",
+        "eusan_nation_k4_composite_armorText4":"Decreases Kinetic Damage taken: %s",
+        "eusan_nation_k4_composite_armorText5":"I don't think the engineers fully appreciate how dreadfully difficult to service these armor arrays when it takes a hit. So much bolting and unbolting...",
+        "eusan_nation_k4_composite_armorText6":"         \u2014 Unknown Maintenance Tech"
+    }
+}
