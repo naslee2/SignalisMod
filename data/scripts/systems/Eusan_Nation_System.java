@@ -16,6 +16,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.impl.MusicPlayerPluginImpl;
 
 
 public class Eusan_Nation_System {
@@ -28,6 +29,8 @@ public class Eusan_Nation_System {
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initeStar( Unique starId, planettype from planets.json, radius, corona radius from star edge)
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
+        system.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY,"music_campaign_alpha_site");
+        
         //Stable Location 1, 2 and 3
         SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Comm Relay 3NO", "comm_relay", "eusan_nation"); //3NO means 3 Note Oddity Number Stations
         SectorEntityToken loc2 = system.addCustomEntity("signalisStar_loc2", "Sensor Array Six", "sensor_array_makeshift", "eusan_nation"); //6 is the magic number
@@ -308,6 +311,7 @@ public class Eusan_Nation_System {
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius * 0.5f, 0, 360f);
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius, 0, 360f, 0.25f);
     }
+
 
 
 }
