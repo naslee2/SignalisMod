@@ -16,7 +16,30 @@
     "hiressensors",
     "surveying_equipment"
   ],
-  "weaponSlots": [],
+  "builtInWeapons": {
+    "WS0001": "blinker_red",
+    "WS0002": "blinker_green"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-54, 38.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-54, -38.5]
+    }
+  ],
   "engineSlots": [
     {
       "location": [-57, -0],
