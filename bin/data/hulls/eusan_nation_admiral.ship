@@ -14,6 +14,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_K4_composite_armor",
+    "eusan_nation_advanced_flag_facilities"
   ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_admiral_builtin2",
