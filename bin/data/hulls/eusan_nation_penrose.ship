@@ -13,7 +13,6 @@
   "shieldRadius": 80.5,
   "viewOffset": 0,
   "builtInMods": [
-    "hiressensors",
     "surveying_equipment"
   ],
   "builtInWeapons": {

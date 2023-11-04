@@ -1,12 +1,16 @@
 {
     "eusan_nation_strings": {
         "eusan_nation_hullmodDetails": "Details",
-        
         "eusan_nation_k4_composite_armorText1":"Decreases Energy Damage taken: %s",
         "eusan_nation_k4_composite_armorText2":"Decreases Fragmentation Damage Taken: %s",
         "eusan_nation_k4_composite_armorText3":"Decreases High Explosive Damage Taken: %s",
         "eusan_nation_k4_composite_armorText4":"Decreases Kinetic Damage taken: %s",
         "eusan_nation_k4_composite_armorText5":"I don't think the engineers fully appreciate how dreadfully difficult to service these armor arrays when it takes a hit. So much bolting and unbolting...",
-        "eusan_nation_k4_composite_armorText6":"         \u2014 Unknown Maintenance Tech"
+        "eusan_nation_k4_composite_armorText6":"         \u2014 Unknown Maintenance Tech",
+        "eusan_nation_electronic_warfare_suiteText1":"Reduces the chance for missiles launched by the ship to be affected by electronic counter-measures and flares by %s",
+        "eusan_nation_electronic_warfare_suiteText2":"Improved electronics increases missile maneuverability by %s, as well as significantly improving the guidance algorithm.",
+        "eusan_nation_electronic_warfare_suiteText3":"Also reduces the weapon range reduction due to superior enemy Electronic Warfare by %s.",
+        "eusan_nation_electronic_warfare_suiteText4":"The system processor periodically performs a background built-in-test(B-BIT), to check the status and calibration of the system. The system processor software is updated or reprogrammed as required from a memory loader verifier (MLV). The system processor uses two major software programs. The operational flight program (OFP) manages the receiver and transmitter functions, signal processing, and techniques generation. The mission data generator (MDG) contains the threat EID tables and the jamming techniques matrix for these threats.",
+        "eusan_nation_electronic_warfare_suiteText5":"         \u2014 Electronic Warfare Fundamentals 5th Edition"
     }
 }
