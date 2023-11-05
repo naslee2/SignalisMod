@@ -13,7 +13,8 @@
   "shieldRadius": 80.5,
   "viewOffset": 0,
   "builtInMods": [
-    "surveying_equipment"
+    "surveying_equipment",
+    "eusan_nation_operation_penrose"
   ],
   "builtInWeapons": {
     "WS0001": "blinker_red",
