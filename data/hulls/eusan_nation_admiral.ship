@@ -12,6 +12,11 @@
   "shieldCenter": [26, 0],
   "shieldRadius": 288,
   "viewOffset": 0,
+  "builtInMods": [
+    "eusan_nation_K4_composite_armor",
+    "eusan_nation_advanced_flag_facilities",
+    "eusan_nation_electronic_warfare_suite"
+  ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_admiral_builtin2",
     "WS0002": "eusan_nation_admiral_builtin1"
