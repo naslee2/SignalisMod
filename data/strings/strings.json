@@ -18,7 +18,11 @@
         "eusan_nation_replika_cadreText4":"Reduces repair time to %s",
         "eusan_nation_replika_cadreText5":"Reduces overload duration by %s.",
         "eusan_nation_replika_cadreText6":"Yes the replika cadre onboard have been working nonstop to repair the damage. Just yesterday we found out that the wiring for the porside comparments between frame 140 and 142 portside got severed but it did not show up on the diagnotstics because rerouting systems kicked in. The LSTR units had to spend several hours crawling through the spaces to test, diagnose and repair it. They got banged up in the process so guess who has to fix them...",
-        "eusan_nation_replika_cadreText7":"         \u2014 Unknown Replika Technician"
+        "eusan_nation_replika_cadreText7":"         \u2014 Unknown Replika Technician",
+        "eusan_nation_penrose_survey_equipmentText1":"",
+        "eusan_nation_penrose_survey_equipmentText2":"",
+        "eusan_nation_penrose_survey_equipmentText3":"",
+        "eusan_nation_penrose_survey_equipmentText4":""
     }
 }
     

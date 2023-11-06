@@ -191,7 +191,7 @@
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
-			"fleetCommander":{"name":"Konteradmiral"},
+			"fleetCommander":{"name":"Admiral"},
 			"baseCommander":{"name":"Kapitän zur See"},
 			"adlr":{"name":"Facility Administrator"},
 			"arar":{"name":"Low Cost Repair Worker"},
