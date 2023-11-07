@@ -16,7 +16,7 @@
         "eusan_nation_replika_cadreText2":"Increases the combat readiness recovery and repair rates by %s. The per-day supply consumption for CR recovery is increased to account for the increased recovery rate, but the total supply cost remains the same.",
         "eusan_nation_replika_cadreText3":"Reduces maintenance cost, fuel use, and minimum crew requirement by a further %s.",
         "eusan_nation_replika_cadreText4":"Reduces repair time to %s",
-        "eusan_nation_replika_cadreText5":"Reduces overload duration by %s.",
+        "eusan_nation_replika_cadreText5":"Reduces ovvvvvvvvverload duration by %s.",
         "eusan_nation_replika_cadreText6":"Yes the replika cadre onboard have been working nonstop to repair the damage. Just yesterday we found out that the wiring for the porside comparments between frame 140 and 142 portside got severed but it did not show up on the diagnotstics because rerouting systems kicked in. The LSTR units had to spend several hours crawling through the spaces to test, diagnose and repair it. They got banged up in the process so guess who has to fix them...",
         "eusan_nation_replika_cadreText7":"         \u2014 Unknown Replika Technician",
         "eusan_nation_penrose_survey_equipmentText1":"The combined surveying equipment in your fleet reduces the survey cost by %s",

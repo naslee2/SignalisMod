@@ -36,7 +36,7 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
             throw new RuntimeException("This mod requires Nexerelin");
         }
     }
-        @Override
+    @Override
     public void onNewGameAfterEconomyLoad() {
         SectorAPI sector = Global.getSector();
         if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
