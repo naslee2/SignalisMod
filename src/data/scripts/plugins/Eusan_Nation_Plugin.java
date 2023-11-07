@@ -3,6 +3,8 @@ package data.scripts.plugins;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.SectorAPI;
+import data.campaign.fleets.Eusan_Nation_personalFleetFalke;
 
 import exerelin.campaign.SectorManager;
 
@@ -33,6 +35,12 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
         if (!nexerlinPresent){
             throw new RuntimeException("This mod requires Nexerelin");
         }
-
+    }
+        @Override
+    public void onNewGameAfterEconomyLoad() {
+        SectorAPI sector = Global.getSector();
+        if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
+            sector.addScript(new Eusan_Nation_personalFleetFalke());
+        }
     }
 }
