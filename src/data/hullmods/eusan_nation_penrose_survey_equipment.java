@@ -25,6 +25,11 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
     float BONUS = 200f;
 
     static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+    static String eusan_nation_penrose_survey_equipment1 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText1");
+    static String eusan_nation_penrose_survey_equipment2 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText2");
+    static String eusan_nation_penrose_survey_equipment3 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText3");
+    static String eusan_nation_penrose_survey_equipment4 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText4");
+    static String eusan_nation_penrose_survey_equipment5 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText5");
 
     
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id){
@@ -42,9 +47,21 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
     @Override
     public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec){
         final Color flavor = new Color(110,110,110,255);
+        final Color green = new Color(55,245,65,255);
+
+        if (isForModSpec || ship == null) return;
+		if (Global.getSettings().getCurrentState() == GameState.TITLE) return;
+
+        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+		int machinery = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.HEAVY_MACHINERY), 0, ship);
+		int supplies = (int) Misc.getFleetwideTotalMod(fleet, Stats.getSurveyCostReductionId(Commodities.SUPPLIES), 0, ship);
 
         tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
-        //tooltip.addPara(detailText, width, flavor, null)
+        tooltip.addPara(eusan_nation_penrose_survey_equipment1, 10f, Misc.getHighlightColor(), "" + BONUS);
+        tooltip.addPara(eusan_nation_penrose_survey_equipment2, 10f, Misc.getHighlightColor(), "" + supplies);
+        tooltip.addPara(eusan_nation_penrose_survey_equipment3, 10f, Misc.getHighlightColor(), "" + machinery);
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_penrose_survey_equipment4).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_penrose_survey_equipment5);
 
     }
 
