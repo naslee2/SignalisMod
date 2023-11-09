@@ -32,9 +32,9 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
         if (!lazyLibPresent){
             throw new RuntimeException("This mod requires LazyLib" + "\nGet it at http://fractalsoftworks.com/forum/index.php?topic=5444");
         }
-        if (!nexerlinPresent){
-            throw new RuntimeException("This mod requires Nexerelin");
-        }
+        // if (!nexerlinPresent){
+        //     throw new RuntimeException("This mod requires Nexerelin");
+        // }
     }
     @Override
     public void onNewGameAfterEconomyLoad() {
