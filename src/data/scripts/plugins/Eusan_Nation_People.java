@@ -17,6 +17,8 @@ public class Eusan_Nation_People {
     public static String ARIANE_YEONG_FIRSTNAME = "Ariane";
     public static String ARIANE_YEONG_LASTNAME = "Yeong";
 	public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
+    public static String ADMIRAL_FALKE_FIRSTNAME = "Falke";
+    public static String ADMIRAL_FALKE_LASTNAME = "";
 
 	public static MarketAPI market = null;
 
@@ -49,14 +51,14 @@ public class Eusan_Nation_People {
             market.addPerson(officer_yeong);
             importantpeople_heimat.addPerson(officer_yeong);
 
-	PersonAPI admiral_falke = Global.getFactory().createPerson();
+	        PersonAPI admiral_falke = Global.getFactory().createPerson();
             admiral_falke.setId(ADMIRAL_FALKE);
             admiral_falke.setFaction(EUSAN_NATION);
             admiral_falke.setGender(Gender.FEMALE);
-            admiral_falke.setRankId();
-            admiral_falke.setPostId();
-            admiral_falke.getName().setFirst();
-            admiral_falke.getName().setLast();
+            admiral_falke.setRankId("spaceAdmiral");
+            admiral_falke.setPostId("fleetCommander");
+            admiral_falke.getName().setFirst("ADMIRAL_FALKE_FIRSTNAME");
+            admiral_falke.getName().setLast("ADMIRAL_FALKE_LASTNAME");
             admiral_falke.setImportance(PersonImportance.VERY_HIGH);
             admiral_falke.getStats().setLevel(15);
             admiral_falke.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);
