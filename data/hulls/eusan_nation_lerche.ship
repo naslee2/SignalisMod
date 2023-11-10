@@ -2,7 +2,7 @@
   "hullName": "Lerche",
   "hullId": "eusan_nation_lerche",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/eusan_nation_lerche.png",
+  "spriteName": "graphics/ships/eusan_nation_lerche2.png",
   "style": "MIDLINE",
   "coversColor": "180,180,180,255",
   "height": 108,
@@ -12,6 +12,9 @@
   "shieldCenter": [0, -0],
   "shieldRadius": 87.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "missile_autoloader"
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -47,7 +50,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [39, 15]
+      "locations": [35, 15]
     },
     {
       "id": "WS0005",
@@ -56,25 +59,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [39, -15]
-    },
-    {
-      "id": "WS0006",
-      "size": "SMALL",
-      "type": "MISSILE",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": 0,
-      "locations": [22, 15]
-    },
-    {
-      "id": "WS0007",
-      "size": "SMALL",
-      "type": "MISSILE",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": -0,
-      "locations": [22, -15]
+      "locations": [35, -15]
     }
   ],
   "engineSlots": [

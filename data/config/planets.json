@@ -12,7 +12,7 @@
 		"cloudTexture":"graphics/planets/vineta_clouds.png",
 		"cloudColor":[255,255,255,250],
 		"cloudRotation":-3,
-		"glowTexture":"graphics/planets/uaf_planet_new_auroria_glow.png",
+		"glowTexture":"graphics/planets/vineta_habglows.png",
 		"icon":"graphics/warroom/icon_planet.png",
 		"iconColor":[225,225,255,255],
 		"isStar":false,

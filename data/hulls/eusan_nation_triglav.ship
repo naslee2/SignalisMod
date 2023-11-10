@@ -1,0 +1,127 @@
+{
+  "hullName": "Triglav",
+  "hullId": "eusan_nation_triglav",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/eusan_nation_triglav.png",
+  "style": "MIDLINE",
+  "height": 208,
+  "width": 130,
+  "center": [65, 89],
+  "collisionRadius": 143.5,
+  "shieldCenter": [15, 0],
+  "shieldRadius": 124.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0001": "eusan_nation_kayak"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-23, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 45,
+      "locations": [67, 12]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -45,
+      "locations": [67, -12]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 45,
+      "locations": [37, 13]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -45,
+      "locations": [37, -13]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 180,
+      "locations": [-68, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-81, 13],
+      "length": 43,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-81, -13],
+      "length": 43,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, -0],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78.5, 19],
+      "length": 32,
+      "width": 8,
+      "angle": -170,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78.5, -19],
+      "length": 32,
+      "width": 8,
+      "angle": 170,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -85, -21,
+    -72, -31,
+    -17, -38,
+    28, -24,
+    95, -20,
+    95, 20,
+    28, 24,
+    -17, 38,
+    -72, 31,
+    -85, 21
+  ]
+}
