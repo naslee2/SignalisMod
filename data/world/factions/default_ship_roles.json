@@ -8,14 +8,15 @@
     "combatMedium":{
         #"eusan_nation_cantor":8,
         #"eusan_nation_tremore":8,
-        #"eusan_nation_trevivian":8
+        #"eusan_nation_trevivian":8,
+        "eusan_nation_triglav_standard":9
     },
     "combatLarge":{
         #"eusan_nation_comoros":8,
         #"eusan_nation_engollan":8
     },
     "combatCapital":{
-        #"eusan_nation_revolution":6,
+        #"eusan_nation_revolution":5,
         "eusan_nation_admiral_standard":1
     },
     "crig":{},

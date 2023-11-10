@@ -1,0 +1,22 @@
+{
+  "variantId": "eusan_nation_triglav_standard",
+  "hullId": "eusan_nation_triglav",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 14,
+  "fluxVents": 14,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_kayak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
