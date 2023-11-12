@@ -32,13 +32,15 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
-			"eusan_nation_standard_bp":0.9,
+			"eusan_nation_standard_bp":1,
 			"eusan_nation_advanced_bp":0.9
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
-			"eusan_nation_triglav":0.2,
-			"eusan_nation_admiral":0.1
+			"eusan_nation_wachtel":0.5,
+			"eusan_nation_pelikan":0.5,
+			"eusan_nation_triglav":2,
+			"eusan_nation_admiral":0.45
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
@@ -50,8 +52,10 @@
 		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp","base_bp","lowtech_bp", "midline_bp"],
 		"hulls":[
 			"eusan_nation_penrose",
+			"eusan_nation_pelikan",
 			"eusan_nation_triglav",
 			"eusan_nation_admiral",
+			"eusan_nation_wachtel",
 			"atlas",
 			"monitor",
 			"prometheus",

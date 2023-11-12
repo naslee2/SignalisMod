@@ -22,8 +22,8 @@
     "crig":{},
     "utility":{
         "eusan_nation_penrose_standard":1.0,
-        #"eusan_nation_pelikan":1.0,
-        #"eusan_nation_wachtel":1.0
+        "eusan_nation_pelikan_standard":2.0,
+        "eusan_nation_wachtel_standard":2.0
     }
 
 }
