@@ -32,12 +32,15 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
-			"eusan_nation_standard_bp":0.9,
+			"eusan_nation_standard_bp":1,
 			"eusan_nation_advanced_bp":0.9
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
-			"eusan_nation_admiral":0.1
+			"eusan_nation_wachtel":0.5,
+			"eusan_nation_pelikan":0.5,
+			"eusan_nation_triglav":2,
+			"eusan_nation_admiral":0.45
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
@@ -49,7 +52,10 @@
 		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp","base_bp","lowtech_bp", "midline_bp"],
 		"hulls":[
 			"eusan_nation_penrose",
+			"eusan_nation_pelikan",
+			"eusan_nation_triglav",
 			"eusan_nation_admiral",
+			"eusan_nation_wachtel",
 			"atlas",
 			"monitor",
 			"prometheus",
@@ -181,17 +187,18 @@
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
-			"flkr":{"name":"Protektor Führungskommando"},
-			"stcr":{"name":"Protektor Security Leader"},
-			"adlr":{"name":"Facility Administrator"},
-			"kncr":{"name":"Blockwart"},	
+			"protektor_flkr":{"name":"Protektor Führungskommando"},
+			"protektor_stcr":{"name":"Protektor Security Leader"},
+			"fac_adlr":{"name":"Facility Administrator"},
+			"bloc_kncr":{"name":"Blockwart"},	
 			"gestaltVMFlightOfficer":{"name":"Gestalt Flight Officer"},
 			"gestaltOfficer":{"name":"Gestalt Officer"}
 		},
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
-			"fleetCommander":{"name":"Konteradmiral"},
+			"fleetCommander":{"name":"Admiral"},
+			"defenseFleetCommander":{"name":"Konteradmiral"},
 			"baseCommander":{"name":"Kapitän zur See"},
 			"adlr":{"name":"Facility Administrator"},
 			"arar":{"name":"Low Cost Repair Worker"},

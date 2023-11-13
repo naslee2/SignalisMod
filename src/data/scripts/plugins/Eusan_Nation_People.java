@@ -6,6 +6,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Voices;
 
@@ -15,6 +16,9 @@ public class Eusan_Nation_People {
     public static String OFFICER_YEONG = "eusan_nation_officer_yeong";
     public static String ARIANE_YEONG_FIRSTNAME = "Ariane";
     public static String ARIANE_YEONG_LASTNAME = "Yeong";
+	public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
+    public static String ADMIRAL_FALKE_FIRSTNAME = "Falke";
+    public static String ADMIRAL_FALKE_LASTNAME = "";
 
 	public static MarketAPI market = null;
 
@@ -46,6 +50,34 @@ public class Eusan_Nation_People {
             market.getCommDirectory().getEntryForPerson(officer_yeong).setHidden(false);
             market.addPerson(officer_yeong);
             importantpeople_heimat.addPerson(officer_yeong);
+
+	        PersonAPI admiral_falke = Global.getFactory().createPerson();
+            admiral_falke.setId(ADMIRAL_FALKE);
+            admiral_falke.setFaction(EUSAN_NATION);
+            admiral_falke.setGender(Gender.FEMALE);
+            admiral_falke.setRankId("spaceAdmiral");
+            admiral_falke.setPostId("fleetCommander");
+            admiral_falke.getName().setFirst("ADMIRAL_FALKE_FIRSTNAME");
+            admiral_falke.getName().setLast("ADMIRAL_FALKE_LASTNAME");
+            admiral_falke.setImportance(PersonImportance.VERY_HIGH);
+            admiral_falke.getStats().setLevel(15);
+            admiral_falke.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.POLARIZED_ARMOR, 2);
+            admiral_falke.getStats().setSkillLevel(Skills.ORDNANCE_EXPERTISE, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.CREW_TRAINING, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.SUPPORT_DOCTRINE, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.TACTICAL_DRILLS, 1);
+            admiral_falke.getStats().setSkillLevel(Skills.OFFICER_MANAGEMENT, 1);
+            admiral_falke.addTag("coff_nocapture");
+            importantpeople_heimat.addPerson(admiral_falke);
         }
 
     }
