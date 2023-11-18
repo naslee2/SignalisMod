@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.listeners.*;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -70,4 +71,12 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor5).italicize();
         tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor6);
     }
+
+    @Override
+	public boolean isApplicableToShip(ShipAPI ship){
+		if (ship != null && ship.getHullSpec().getHullId().startsWith("eusan_nation_")){
+			return true;
+		}
+		return false;
+	}
 }

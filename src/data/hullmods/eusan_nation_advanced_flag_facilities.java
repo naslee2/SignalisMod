@@ -1,8 +1,5 @@
 package data.hullmods;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -10,10 +7,11 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatFleetManagerAPI;
 import com.fs.starfarer.api.combat.DeployedFleetMemberAPI;
-import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
@@ -21,6 +19,13 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 	public static final String MOD_ID = "eusan_nation_advanced_flag_facilities";
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+	}
+
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+		if(ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
+			//if someone tries to install incompatible hullmods, remove it.
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Eusan Advanced Flag Facilities");
+		}
 	}
 
 	//flag facilities 
@@ -57,7 +62,23 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 		return null;
 	}
 
-	//@Override
+	@Override
+	public boolean isApplicableToShip(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
+			return false;
+		}
+		if (ship != null && ship.getHullSpec().getHullId().contains("eusan_nation_admiral")){
+			return true;
+		}
+		return false;
+	}
+
+	public String getUnapplicableReason(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
+			return "Incompatable with Operations Center";
+		}
+		return null;
+	}
 
 
 }

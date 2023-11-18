@@ -13,6 +13,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.SurveyPluginImpl;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.hullmods.BaseLogisticsHullMod;
 import com.fs.starfarer.api.ui.Alignment;
@@ -39,6 +40,13 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
 		stats.getDynamic().getMod(Stats.getSurveyCostReductionId(Commodities.SUPPLIES)).modifyFlat(id, mod);
     }
 
+    public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+		if(ship.getVariant().getHullMods().contains(HullMods.SURVEYING_EQUIPMENT)){
+			//if someone tries to install incompatible hullmods, remove it.
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Penrose Surveying Equipment");
+		}
+	}
+
     public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) BONUS + "%";
 		return null;
@@ -62,7 +70,25 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
         tooltip.addPara(eusan_nation_penrose_survey_equipment3, 10f, Misc.getHighlightColor(), "" + machinery);
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_penrose_survey_equipment4).italicize();
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_penrose_survey_equipment5);
-
     }
+
+    @Override
+	public boolean isApplicableToShip(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.SURVEYING_EQUIPMENT)){
+			return false;
+		}
+		if (ship != null && ship.getHullSpec().getHullId().contains("eusan_nation_penrose")){
+			return true;
+		}
+		return false;
+	}
+
+
+    public String getUnapplicableReason(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.SURVEYING_EQUIPMENT)){
+			return "Incompatible with Surveying Equipment";
+		}
+		return null;
+	}
 
 }

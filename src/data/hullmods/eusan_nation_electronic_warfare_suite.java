@@ -2,16 +2,17 @@ package data.hullmods;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
 
+import org.magiclib.util.MagicIncompatibleHullmods;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -55,6 +56,13 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
         stats.getMissileTurnAccelerationBonus().modifyPercent(id, MISSILE_TURN_ACCEL_BONUS);
 	}
 
+    public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+		if(ship.getVariant().getHullMods().contains(HullMods.ECCM) || ship.getVariant().getHullMods().contains(HullMods.ECM)){
+			//if someone tries to install incompatible hullmods, remove it.
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Eusan Electronic Warfare Suite");
+		}
+	}
+
     public String getDescriptionParam(int index, HullSize hullSize) {  
         if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue() + "%";
         if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%";
@@ -65,8 +73,6 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
 
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
-        final Color green = new Color(55,245,65,255);
-		final Color red = new Color(245,55,65,255);
 		final Color flavor = new Color(110,110,110,255);
 
         tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
@@ -76,5 +82,29 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite4).italicize();
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite5);
     }
+
+    @Override
+	public boolean isApplicableToShip(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.ECCM)){
+			return false;
+		}
+        if (ship != null && ship.getVariant().getHullMods().contains(HullMods.ECM)){
+            return false;
+        }
+		if (ship != null && ship.getHullSpec().getHullId().startsWith("eusan_nation_")){
+			return true;
+		}
+		return false;
+	}
+
+    public String getUnapplicableReason(ShipAPI ship){
+		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.ECCM)){
+			return "Incompatible with the ECCM Package";
+		}
+        if (ship != null && ship.getVariant().getHullMods().contains(HullMods.ECM)){
+            return "Incompatible with the ECM Package";
+        }
+		return null;
+	}
 
 }
