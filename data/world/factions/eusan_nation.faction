@@ -40,6 +40,7 @@
 			"eusan_nation_wachtel":0.5,
 			"eusan_nation_pelikan":0.5,
 			"eusan_nation_triglav":2,
+			"eusan_nation_revolution": 0.6,
 			"eusan_nation_admiral":0.45
 		},
 	},
@@ -54,6 +55,7 @@
 			"eusan_nation_penrose",
 			"eusan_nation_pelikan",
 			"eusan_nation_triglav",
+			"eusan_nation_revolution",
 			"eusan_nation_admiral",
 			"eusan_nation_wachtel",
 			"atlas",

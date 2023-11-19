@@ -13,6 +13,8 @@
   "shieldRadius": 236.5,
   "viewOffset": 0,
   "builtInMods": [
+    "eusan_nation_electronic_warfare_suite",
+    "eusan_nation_replika_cadre",
     "missleracks",
   ],
   "builtInWeapons": {

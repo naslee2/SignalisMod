@@ -16,7 +16,7 @@
         #"eusan_nation_engollan":8
     },
     "combatCapital":{
-        #"eusan_nation_revolution":5,
+        "eusan_nation_revolution_standard":2,
         "eusan_nation_admiral_standard":1
     },
     "crig":{},
