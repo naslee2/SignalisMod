@@ -159,6 +159,8 @@ I used to paint. Stopped because work was taking up too much of my time.
 OR
 The Penrose Program...a lot of drum banging for something that most people don't see. Gigantic waste of time to be honest. Dont tell the Protektors I said that ok?
 ",,
+,,,,,,
+,,,,,,
 OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat",
 "#END OFFICER_YEONG_CHAT",,,,,,
 ,,,,,,
@@ -198,16 +200,30 @@ OR
 ,,,,,,
 # OFFICER_YEONG_GIFT,,,,,,
 OFFICER_YEONG_OPTIONS_GIFT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-!$officeryeonggiftgive","FireAll PopulateofficeryeongGiftOptions",,"officeryeongGiftOptions:Give Officer Yeong a Gift",
+$player.officeryeonggiftgive == false",,,"officeryeongGiftOptions:Give Officer Yeong a Gift",
 OFFICER_YEONG_OPTIONS_GIFT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$officeryeonggiftgive","SetEnabled officeryeongGiftOptions false
+$player.officeryeonggiftgive == true","SetEnabled officeryeongGiftOptions false
 SetTooltip officeryeongGiftOptions ""You recently done this. Wait for a few days.""",,"officeryeongGiftOptions: Give Officer Yeong a Gift",
 OFFICER_YEONG_GIFT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongGiftOptions","FireAll PopulateofficeryeongGiftOptions",,,
-OFFICER_YEONG_GIFT_LOBSTER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo lobster",,,"officeryeongGiftLobster: Offer Officer Yeong a lobster from Volturn",
+OFFICER_YEONG_GIFT_LOBSTER_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo lobster",,,"officeryeongGiftLobsterOffer: Offer Officer Yeong a lobster from Volturn",
+OFFICER_YEONG_GIFT_LOBSTER_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterOffer","AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 7
+FireAll PopulateOptions","""Thanks for the gift of lobster. Now I don't have to eat the ration packs they give us."" $personLastName says. ""Do you know how many time I have eaten the same ration pack this last week?""
+
+$personLastName takes the gift from you. She seems slightly pleased with the fact she isn't going to eat the same dish this evening. 
+OR
+""Oh? A lobster? The last time I had lobster was when i was a child. My mother managed to get lobster from Vineta but even then it was a bit old.""
+
+You hand her the lobster. She gives you a small nod in appreciation.
+OR
+""Oh my lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact don't tell me I don't want to know...""
+
+She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
 OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
 OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
-$officeryeonggiftgive true 3","FireAll PopulateofficeryeongGiftOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I only eaten lobster once and it was for a special occasion. That was years ago.""
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I only eaten lobster once and it was for a special occasion. That was years ago.""
 
 ""Wait...what do you mean blue lobsters?""
 OR
@@ -222,32 +238,9 @@ OR
 ""Honestly, the rumor is that lobsters are shipped here as food for the upper echelons of the Nation's government here. I never seen any type of seafood here, Volturn or from Vineta.""
 
 ""Why you ask? Are you trying to get me one?""",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushRep: Offer Officer Yeong a soft plush lobster toy",
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
-$officeryeonggiftgive true 3","FireAll PopulateofficeryeongGiftOptions",,,
-OFFICER_YEONG_GIFT_CHOCOLAVA,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLava: Offer Officer Yeong a chocolate lava cake",
-OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
-OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
-$officeryeonggiftgive true 3","FireAll PopulateofficeryeongGiftOptions",,,
-OFFICER_YEONG_GIFT_LOBSTER_REP,DialogOptionSelected,"$option == officeryeongGiftLobster","AdjustRepActivePerson WELCOMING 5
-$player.officeryeonggiftgive = true 7
-FireAll PopulateOptions","""Oh? Is this lobster for me? We have our own lobster but those are hard to come by because they are often reserved for high ranking members of the Goverment. I can buy my own but they either sold out or just not available for months on end...""
-
-She takes the lobster from you. You can tell she is already thinking about cooking it.
-OR
-""I remember that one time my family had lobster from Vineta"" $personLastName muses. ""It was such a long time ago I had forgotten what it looked or smelled like...""
-
-She takes you gift and thanks you. You watch her give the lobster a small poke, probably trying to see if its real or not.
-OR
-""That...is a lobster...for me?"" $personLastName asks. 
-
-You respond with an affirmative and she closes the box. She examines the box a bit more before reopening the box again to see the lobster.
-
-""Dinner tonight will be lobster"" $personLastName says. ""Thank you very much!""",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_REP,DialogOptionSelected,"$option == officeryeongGiftLobsterPlush","AdjustRepActivePerson WELCOMING 1
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushOffer: Offer Officer Yeong a soft plush lobster toy",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushOffer","AdjustRepActivePerson WELCOMING 1
 $player.officeryeonggiftgive = true 14
 FireAll PopulateOptions","""Thanks for the gift."" $personLastName says.  ""It be hard to keep this gift because contraband isn't allowed and i am pretty sure this is contraband.""
 
@@ -260,8 +253,14 @@ OR
 ""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Forturnatly I have the means of keeping gifts or sanitizing them. Thanks anyway.""
 
 She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
-OFFICER_YEONG_GIFT_CHOCOLAVA_REP,DialogOptionSelected,"$option == officeryeongGiftChocoLava","AdjustRepActivePerson WELCOMING 5
-$player.officeryeonggiftgive = true 10
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""test""",,
+OFFICER_YEONG_GIFT_CHOCOLAVA_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaOffer: Offer Officer Yeong a chocolate lava cake",
+OFFICER_YEONG_GIFT_CHOCOLAVA_GIFTED,DialogOptionSelected,"$option == officeryeongGiftChocoLavaOffer","AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 5
 FireAll PopulateOptions","""Huh? Interesting I never seen this type of dessert before"" $personLastName says. ""This is actually pretty good. Where does it come from?""
 
 She pokes the cake a bit...chocolate filling begins to ooze out.
@@ -279,6 +278,16 @@ OR
 ""This is really good. Thanks for the gift!""
 
 ",,
+OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
+OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""test""",,
+OFFICER_YEONG_GIFT_ESCAPE_BUTTON,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
+OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
+OR
+""Perhaps it be best if you did not""
+OR
+""""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
 "#END EUSAN_NATION_OFFICER_YEONG",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
