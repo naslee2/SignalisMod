@@ -79,7 +79,8 @@ OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOptions,"RepLTE ""eusan_nation"" WE
 $player.commissionFactionId == ""eusan_nation""
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-",,,"officeryeongNeuralRepBriefing0:""So I have a new task for you if you are up for it""",
+$officeryeong_neuralrepositorystart == false","$officeryeong_neuralrepositorystart = true
+BeginConversation ""eusan_nation_officer_yeong""",,"officeryeongNeuralRepBriefing0:""So I have a new task for you if you are up for it""",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
 
 ""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
@@ -147,21 +148,21 @@ ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED."
 "#END OFFICER_YEONG_GREETING",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
-OFFICER_YEONG_CHAT,DialogOptionSelected,"$option == officeryeongChat",,"I hate my life did you know that
-OR
-Smoking kills. Thats why I smoke.
-OR
-Rotfront at this time of year rains very hard. It always rains on Rotfront
-OR
-I got stationed at Leng once. Hated it. Transfered to Heimat.
-OR
-I used to paint. Stopped because work was taking up too much of my time.
-OR
-The Penrose Program...a lot of drum banging for something that most people don't see. Gigantic waste of time to be honest. Dont tell the Protektors I said that ok?
-",,
-,,,,,,
-,,,,,,
 OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat",
+OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions",,,
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM,PopulateOfficerYeongChatOptions,,,,,
+OFFICER_YEONG_CHAT_HEIMAT,PopulateOfficerYeongChatOptions,,,,,
+OFFICER_YEONG_CHAT_ROTFRONT,PopulateOfficerYeongChatOptions,,,,,
+OFFICER_YEONG_CHAT_LENG,PopulateOfficerYeongChatOptions,,,,,
+OFFICER_YEONG_CHAT_SMOKING,PopulateOfficerYeongChatOptions,,,,,
+OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongChatEscape:I gotta go...",
+OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm...let me know if you want to know more stuff...""
+OR
+""Talk to you later then...""
+OR
+""Remember, whatever we speak here, probably should not be said anywhere else. Just a precaution""
+OR
+""See you next time...""",,
 "#END OFFICER_YEONG_CHAT",,,,,,
 ,,,,,,
 # OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
@@ -282,12 +283,12 @@ OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCarg
 OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
 ","$player.officeryeonggiftgive = true 3
 FireAll PopulateOptions","""test""",,
-OFFICER_YEONG_GIFT_ESCAPE_BUTTON,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
+OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
 OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
 OR
 ""Perhaps it be best if you did not""
 OR
-""""",,
+""Whatever...""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
 "#END EUSAN_NATION_OFFICER_YEONG",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
