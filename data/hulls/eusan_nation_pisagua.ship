@@ -1,0 +1,121 @@
+{
+  "hullName": "Pisagua",
+  "hullId": "eusan_nation_pisagua",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/eusan_nation_pisagua.png",
+  "style": "MIDLINE",
+  "coversColor": "180,180,180,255",
+  "height": 108,
+  "width": 128,
+  "center": [64, 47],
+  "collisionRadius": 89.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 87.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [3, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 257,
+      "angle": 90,
+      "locations": [-9, 21]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 257,
+      "angle": -90,
+      "locations": [-9, -21]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 80,
+      "locations": [21, 25]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -80,
+      "locations": [21, -25]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-33, 19],
+      "length": 44,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-33, -19],
+      "length": 44,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-32, 26],
+      "length": 30,
+      "width": 10,
+      "angle": -170,
+      "contrailSize": 10,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-32, -26],
+      "length": 30,
+      "width": 10,
+      "angle": 170,
+      "contrailSize": 10,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-33, 11],
+      "length": 30,
+      "width": 10,
+      "angle": 170,
+      "contrailSize": 10,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-33, -11],
+      "length": 30,
+      "width": 10,
+      "angle": -170,
+      "contrailSize": 10,
+      "style": "EUSAN"
+    }
+  ],
+  "bounds": [
+    -36, -37,
+    -13, -42,
+    40, -23,
+    40, 23,
+    -13, 42,
+    -36, 37,
+    -45, -0
+  ]
+}

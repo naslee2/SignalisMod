@@ -120,39 +120,39 @@
       "width": 18,
       "angle": 180,
       "contrailSize": 18,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-91, 7.5],
-      "length": 28.153845,
-      "width": 8.913138,
+      "length": 28,
+      "width": 8,
       "angle": -167,
-      "contrailSize": 8.913138,
-      "style": "HIGH_TECH"
+      "contrailSize": 8,
+      "style": "EUSAN"
     },
     {
       "location": [-91, -7.5],
-      "length": 28.153845,
-      "width": 8.913138,
+      "length": 28,
+      "width": 8,
       "angle": 167,
-      "contrailSize": 8.913138,
-      "style": "HIGH_TECH"
+      "contrailSize": 8,
+      "style": "EUSAN"
     },
     {
       "location": [-77, 45],
-      "length": 28.153845,
-      "width": 8.913138,
+      "length": 28,
+      "width": 8,
       "angle": -166,
-      "contrailSize": 8.913138,
-      "style": "HIGH_TECH"
+      "contrailSize": 8,
+      "style": "EUSAN"
     },
     {
       "location": [-77, -45],
-      "length": 28.153845,
-      "width": 8.913138,
+      "length": 28,
+      "width": 8,
       "angle": 166,
-      "contrailSize": 8.913138,
-      "style": "HIGH_TECH"
+      "contrailSize": 8,
+      "style": "EUSAN"
     },
     {
       "location": [-77, 37],
@@ -160,7 +160,7 @@
       "width": 15,
       "angle": 180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-77, -37],
@@ -168,7 +168,7 @@
       "width": 15,
       "angle": -180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     }
   ],
   "bounds": [

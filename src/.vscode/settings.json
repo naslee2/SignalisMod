@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\starsector-core\\starfarer.api.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\starsector-core\\lwjgl.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\starsector-core\\lwjgl_util.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\mods\\Nexerelin\\jars\\ExerelinCore.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\starsector-core\\xstream-1.4.10.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\starsector-core\\log4j-1.2.9.jar",
+        "w:\\Projet perso\\Mods starsector\\Starsector\\mods\\MagicLib\\jars\\MagicLib.jar"
+    ]
+}
