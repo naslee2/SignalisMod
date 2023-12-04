@@ -1,0 +1,44 @@
+{
+  "id": "eusan_nation_isolde_builtin",
+  "specClass": "projectile",
+  "projectileSpecId": "eusan_nation_isolde_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/eusan_nation_isolde_builtin_base.png",
+  "turretGunSprite": "graphics/weapons/eusan_nation_isolde_builtin_gun.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_isolde_builtin_base.png",
+  "hardpointGunSprite": "graphics/weapons/eusan_nation_isolde_builtin_gun.png",
+  "visualRecoil": 9,
+  "turretOffsets": [
+    12,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    25.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "renderHints":[RENDER_BARREL_BELOW],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 20,
+    "spread": 5,
+    "particleSizeMin": 12,
+    "particleSizeRange": 12,
+    "particleDuration": 0.5,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      240,
+      165,
+      200
+    ]
+  },
+  "fireSoundTwo": "heavy_mauler_fire"
+}

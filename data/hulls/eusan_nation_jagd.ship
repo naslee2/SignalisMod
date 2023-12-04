@@ -83,6 +83,33 @@
       "arc": 5,
       "angle": -0,
       "locations": [-37, -42]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 24,
+      "locations": [-23, 27]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -24,
+      "locations": [-23, -27]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-82, -0]
     }
   ],
   "engineSlots": [
@@ -92,7 +119,7 @@
       "width": 17,
       "angle": 180,
       "contrailSize": 17,
-      "style": "COBRA_BOMBER"
+      "style": "EUSAN_IMPERIAL"
     },
     {
       "location": [-80, 26.5],
@@ -100,7 +127,7 @@
       "width": 10,
       "angle": 180,
       "contrailSize": 10,
-      "style": "COBRA_BOMBER"
+      "style": "EUSAN_IMPERIAL"
     },
     {
       "location": [-80, -26.5],
@@ -108,7 +135,7 @@
       "width": 10,
       "angle": -180,
       "contrailSize": 10,
-      "style": "COBRA_BOMBER"
+      "style": "EUSAN_IMPERIAL"
     }
   ],
   "bounds": [

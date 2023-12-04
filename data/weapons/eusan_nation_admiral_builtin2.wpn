@@ -1,7 +1,7 @@
 {
   "id": "eusan_nation_admiral_builtin2",
   "specClass": "projectile",
-  "projectileSpecId": "heavymauler_shot",
+  "projectileSpecId": "eusan_nation_admiral_shot",
   "type": "BALLISTIC",
   "size": "LARGE",
   "displayArcRadius": 600,
@@ -53,7 +53,7 @@
     "spread": 20,
     "particleSizeMin": 12,
     "particleSizeRange": 16,
-    "particleDuration": 0.5,
+    "particleDuration": 1.5,
     "particleCount": 16,
     "particleColor": [
       255,
