@@ -7,8 +7,7 @@
     "gameVersion": "0.96a",
     "dependencies": [
         {"id": "lw_lazylib", "name": "LazyLib"},
-		{"id": "MagicLib", "name": "MagicLib"},
-		{"id": "nexerelin", "name": "Nexerelin"}
+		{"id": "MagicLib", "name": "MagicLib"}
     ],
     "jars":["jars/signalisMod.jar"],
 	"modPlugin":"data.scripts.plugins.Eusan_Nation_Plugin"

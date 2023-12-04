@@ -5,12 +5,15 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 import java.awt.Color;
+
+import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_replika_cadre extends BaseHullMod {
 
@@ -43,6 +46,13 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
         stats.getOverloadTimeMod().modifyMult(id, 1f - OVERLOAD_BONUS * 0.01f);
     }
 
+    public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+		if(ship.getVariant().getHullMods().contains(HullMods.EFFICIENCY_OVERHAUL) || ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
+			//if someone tries to install incompatible hullmods, remove it.
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Replika Cadre");
+		}
+	}
+
     public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship){
 		if (index == 1) return "" + (int) Math.round(CR_RECOVERY_BONUS) + "%";
         return null;
@@ -52,7 +62,6 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
         final Color flavor = new Color(110,110,110,255);
 
-        tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
         tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
         tooltip.addPara(eusan_nation_replika_cadre1, 10.0f, Misc.getHighlightColor(), (int) Math.round((1f - MAINTENANCE_MULT) * 100f) + "%");
         tooltip.addPara(eusan_nation_replika_cadre2, 10.0f, Misc.getHighlightColor(), (int) Math.round(REPAIR_RATE_BONUS) + "%");

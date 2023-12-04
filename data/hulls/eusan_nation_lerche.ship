@@ -2,15 +2,15 @@
   "hullName": "Lerche",
   "hullId": "eusan_nation_lerche",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/eusan_nation_lerche2.png",
+  "spriteName": "graphics/ships/eusan_nation_lerche.png",
   "style": "MIDLINE",
   "coversColor": "180,180,180,255",
-  "height": 108,
-  "width": 128,
-  "center": [64, 47],
+  "height": 130,
+  "width": 120,
+  "center": [60, 52],
   "collisionRadius": 89.5,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 87.5,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 82,
   "viewOffset": 0,
   "builtInMods": [
     "missile_autoloader"
@@ -21,27 +21,27 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 200,
+      "arc": 270,
       "angle": 0,
-      "locations": [3, -0]
+      "locations": [7, -0]
     },
     {
       "id": "WS0002",
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 257,
-      "angle": 90,
-      "locations": [-9, 21]
+      "arc": 270,
+      "angle": 180,
+      "locations": [-19, -0]
     },
     {
       "id": "WS0003",
       "size": "SMALL",
-      "type": "BALLISTIC",
-      "mount": "TURRET",
-      "arc": 257,
-      "angle": -90,
-      "locations": [-9, -21]
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [10, 20]
     },
     {
       "id": "WS0004",
@@ -49,109 +49,80 @@
       "type": "MISSILE",
       "mount": "HARDPOINT",
       "arc": 0,
-      "angle": 0,
-      "locations": [35, 15]
-    },
-    {
-      "id": "WS0005",
-      "size": "SMALL",
-      "type": "MISSILE",
-      "mount": "HARDPOINT",
-      "arc": 0,
       "angle": -0,
-      "locations": [35, -15]
+      "locations": [10, -20]
     }
   ],
   "engineSlots": [
     {
-      "location": [-38, 11],
+      "location": [-28, 19],
       "length": 44,
       "width": 15,
       "angle": 180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
-      "location": [-38, -11],
+      "location": [-28, -19],
       "length": 44,
       "width": 15,
       "angle": -180,
       "contrailSize": 15,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
-      "location": [-34, 19],
-      "length": 30,
-      "width": 10,
+      "location": [-32, 30],
+      "length": 23,
+      "width": 9.,
+      "angle": 162,
+      "contrailSize": 9,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-32, -30],
+      "length": 23,
+      "width": 9,
+      "angle": -162,
+      "contrailSize": 9,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-30, 27],
+      "length": 32,
+      "width": 9,
       "angle": -170,
-      "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "contrailSize": 9,
+      "style": "EUSAN"
     },
     {
-      "location": [-34, -19],
-      "length": 30,
-      "width": 10,
+      "location": [-30, -27],
+      "length": 32,
+      "width": 9,
       "angle": 170,
-      "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "contrailSize": 9,
+      "style": "EUSAN"
     },
     {
-      "location": [-34, 3],
-      "length": 30,
-      "width": 10,
-      "angle": 170,
-      "contrailSize": 10,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-34, -3],
-      "length": 30,
-      "width": 10,
-      "angle": -170,
-      "contrailSize": 10,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-33, 31],
-      "length": 30,
-      "width": 10,
-      "angle": 155,
-      "contrailSize": 128,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-33, -31],
-      "length": 30,
-      "width": 10,
-      "angle": -155,
-      "contrailSize": 128,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-35, 23],
-      "length": 30,
-      "width": 10,
-      "angle": 165,
-      "contrailSize": 128,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-35, -23],
-      "length": 30,
-      "width": 10,
-      "angle": -165,
-      "contrailSize": 128,
-      "style": "HIGH_TECH"
+      "location": [-33, -0],
+      "length": 46,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "EUSAN"
     }
   ],
   "bounds": [
-    -36, -37,
-    -13, -42,
-    40, -24,
-    58, -0,
-    40, 24,
-    -13, 42,
-    -36, 37,
-    -45, -0
+    -42, -9,
+    -30, -11,
+    -39, -34,
+    -5, -35,
+    16, -14,
+    72, -4,
+    72, 4,
+    16, 14,
+    -5, 35,
+    -39, 34,
+    -30, 11,
+    -42, 9
   ]
 }

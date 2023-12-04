@@ -11,11 +11,6 @@
   "shieldCenter": [15, 0],
   "shieldRadius": 124.5,
   "viewOffset": 0,
-  "builtInMods": [
-    "eusan_nation_K4_composite_armor",
-    "eusan_nation_electronic_warfare_suite",
-    "eusan_nation_replika_cadre"
-  ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_kayak"
   },
@@ -82,7 +77,7 @@
       "width": 14,
       "angle": 180,
       "contrailSize": 14,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-81, -13],
@@ -90,7 +85,7 @@
       "width": 14,
       "angle": -180,
       "contrailSize": 14,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-79, -0],
@@ -98,7 +93,7 @@
       "width": 8,
       "angle": 180,
       "contrailSize": 8,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-78.5, 19],
@@ -106,7 +101,7 @@
       "width": 8,
       "angle": -170,
       "contrailSize": 8,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-78.5, -19],
@@ -114,7 +109,7 @@
       "width": 8,
       "angle": 170,
       "contrailSize": 8,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     }
   ],
   "bounds": [

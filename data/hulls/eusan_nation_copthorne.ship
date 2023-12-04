@@ -78,7 +78,7 @@
       "width": 10,
       "angle": 180,
       "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-23, -16],
@@ -86,7 +86,7 @@
       "width": 10,
       "angle": -180,
       "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-19, 23],
@@ -94,7 +94,7 @@
       "width": 10,
       "angle": 180,
       "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     },
     {
       "location": [-19, -23],
@@ -102,7 +102,7 @@
       "width": 10,
       "angle": -180,
       "contrailSize": 10,
-      "style": "HIGH_TECH"
+      "style": "EUSAN"
     }
   ],
   "bounds": [
