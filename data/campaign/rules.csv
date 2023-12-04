@@ -74,42 +74,6 @@ AddText""As this mod is under a work in progress, new features will come online 
 ,,,,,,
 # EUSAN_NATION_OFFICER_YEONG,,,,,,
 ,,,,,,
-# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOptions,"RepLTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
-$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$officeryeong_neuralrepositorystart == false","$officeryeong_neuralrepositorystart = true
-BeginConversation ""eusan_nation_officer_yeong""",,"officeryeongNeuralRepBriefing0:""So I have a new task for you if you are up for it""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
-
-""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
-
-""Anyway, if you are up to the task, I have an assignment and needs to be done..."" she explains...","officeryeongNeuralRepBriefing1:""Alright...tell me what needs to be done?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1",,"""The name is Ariane Yeong. Remember that next time."" she said as she slid a rather thin looking folder with numerous crossed out items and redactions on the front cover.
-
-You open the folder and inside are a series of pictures, a few pages with lists of statistics printed and an old newspaper clipping. You take a look at the pictures and they all seem to show the same building from different angles. Then you look at the newspaper cutout and you seem to notice that it just shows a giant hole on the ground and ruined buildings near it. 
-
-""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing2:""Let me guess...someone bombed it right?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2",,"""Yes yes...its a hole in the ground. Nuked by the Empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser several years ago. Probably some remnant Imperials doing pirate raids on merchant shipping...who cares...the issue here is that I been given an assignment to recover data if there is any from this crater on Vineta"" she explained. She puts a finger on the picture as if making a point. An uncomfortable pause occurs. She lifts her finger from the picture and she straightens up.
-
-Ariane stands up and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
-
-""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
-
-""It seems that the political games have soured people in upper management and has forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction or so they say has grounded all transport ships. AEON making life difficult for us so we need someone not officially part of our agency to do so. You have some immunity from their nonsense""","officeryeongNeuralRepBriefing3:""Right...then what? What is my contact method?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3",,"""Send him a coded message upon arriving at Vineta. Once you set up initial communication, meet with him directly and get the data he is carrying. Fly back to Heimat""
-
-""if we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons...and we cripple the spy network.""","officeryeongNeuralRepBriefing4:""I see. Well thats in it for me?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll ","""You get paid according to the rules and regulations set forth by the Nation"" Ariane dryly responds.
-
-""50,000 credits to be exact.""
-
-Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
-
-""Code frequencies to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' """,,
-"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
-,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
 OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $id ==  ""eusan_nation_officer_yeong"" score: 100
@@ -146,6 +110,41 @@ COMMUNICATIONS TERMINATED. IF THIS HAS BEEN IN ERROR, PLEASE SEE CENTRAL AUTHORI
 OR
 ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
 "#END OFFICER_YEONG_GREETING",,,,,,
+,,,,,,
+# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
+
+""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
+
+""Anyway, if you are up to the task, I have an assignment and needs to be done..."" she explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0",,"""The name is Ariane Yeong. Remember that next time."" she said as she slid a rather thin looking folder with numerous crossed out items and redactions on the front cover.
+
+You open the folder and inside are a series of pictures, a few pages with lists of statistics printed and an old newspaper clipping. You take a look at the pictures and they all seem to show the same building from different angles. Then you look at the newspaper cutout and you seem to notice that it just shows a giant hole on the ground and ruined buildings near it. 
+
+""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1",,"""Yes yes...its a hole in the ground. Nuked by the Empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser several years ago. Probably some remnant Imperials doing pirate raids on merchant shipping...who cares...the issue here is that I been given an assignment to recover data if there is any from this crater on Vineta"" she explained. She puts a finger on the picture as if making a point. An uncomfortable pause occurs. She lifts her finger from the picture and she straightens up.
+
+Ariane stands up and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
+
+""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
+
+""It seems that the political games have soured people in upper management and has forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction or so they say has grounded all transport ships. AEON making life difficult for us so we need someone not officially part of our agency to do so. You have some immunity from their nonsense""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2",,"""Send him a coded message upon arriving at Vineta. Once you set up initial communication, meet with him directly and get the data he is carrying. Fly back to Heimat""
+
+""if we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons...and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well thats in it for me?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3",,"""You get paid according to the rules and regulations set forth by the Nation"" Ariane dryly responds.
+
+""50,000 credits to be exact.""
+
+Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
+
+""Code frequencies to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. ",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4",,,,
+"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
