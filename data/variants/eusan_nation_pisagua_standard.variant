@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_pisagua_standard",
+  "hullId": "eusan_nation_pisagua",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 5,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_cantor_standard",
+  "hullId": "eusan_nation_cantor",
+  "displayName": "standard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}
