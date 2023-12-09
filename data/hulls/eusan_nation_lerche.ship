@@ -73,7 +73,7 @@
     {
       "location": [-32, 30],
       "length": 23,
-      "width": 9.,
+      "width": 9,
       "angle": 162,
       "contrailSize": 9,
       "style": "EUSAN"

@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_trevivian_standard",
+  "hullId": "eusan_nation_trevivian",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 15,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}
