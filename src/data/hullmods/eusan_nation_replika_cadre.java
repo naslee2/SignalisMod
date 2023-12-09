@@ -47,10 +47,13 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
     }
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
-		if(ship.getVariant().getHullMods().contains(HullMods.EFFICIENCY_OVERHAUL) || ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
+		if(ship.getVariant().getHullMods().contains(HullMods.EFFICIENCY_OVERHAUL)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Replika Cadre");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "Replika Cadre");
 		}
+        if(ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
+            MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.AUTOREPAIR, "Replika Cadre");
+        }
 	}
 
     public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship){

@@ -43,7 +43,7 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.SURVEYING_EQUIPMENT)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Penrose Surveying Equipment");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.SURVEYING_EQUIPMENT, "Penrose Surveying Equipment");
 		}
 	}
 
