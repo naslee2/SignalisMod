@@ -112,10 +112,13 @@ ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED."
 "#END OFFICER_YEONG_GREETING",,,,,,
 ,,,,,,
 # OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOptions,"RepGTE ""eusan_nation"" WELCOMING
+,,,,,,
+# BRIEFING,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
 $player.commissionFactionId == ""eusan_nation""
 $id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it""",
+$player.metOfficerYeong == true
+$officeryeong_neuralrepositorystart == false",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it"" highlight",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
 
 ""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
@@ -142,8 +145,40 @@ OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == office
 
 Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
 
-""Code frequencies to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. ",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4",,,,
+""Code frequencies to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. 
+",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOptions","""Alright then. Come back to me when you are ready""
+or
+""Ok sure. Let me know if you want to reconsider.""",,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept: I accept the mission.",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$officeryeong_neuralrepositorystart = true
+$missionId = officeryeong_NeuralRepoQuest
+FireAll PopulateOptions
+","""Good. Now the fun begins. For accepting this mission you herby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
+"#END BRIEFING",,,,,,
+,,,,,,
+# MEETING_AGENT,,,,,,
+NEW RULE,,"$player.commissionFactionId == ""eusan_nation""
+$officeryeong_neuralrepositorystart == true",,,,
+"#END MEETING_AGENT",,,,,,
+,,,,,,
+# MISSION_END,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$officeryeong_neuralrepositorystart == true",,,"officeryeongNeuralRepFinal: So have you finished the mission as ordered?",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongNeuralRepFinal","FireAll PopulateNeuralRepoMissionOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_OPTION,PopulateNeuralRepoMissionOptions,,,,"officeryeongNeuralRepCancel: The mission is still ongoing.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongNeuralRepCancel","FireAll PopulateOptions","""Oh I see..."" 
+
+You see a small look of disappointment on her face. You probably should have finished the mission prior to asking her.
+
+""Well then...go and finish it. I will be waiting.""",,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOptions,,,,"officeryeongNeuralRepConfirm: I got the information from the agent.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","FireAll PopulateOptions","""Interesting. Thanks for the information. Your job is now complete""",,
+"#END MISSION_END",,,,,,
 "#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,

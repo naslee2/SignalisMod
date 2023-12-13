@@ -221,7 +221,8 @@
 			"star":{"name":"Protektor Security Technician"},
 			"stcr":{"name":"Protektor Security Leader"},
 			"kncr":{"name":"Blockwart"},
-			"gestaltInvestigator":{"name":"Investigator"}
+			"gestaltInvestigator":{"name":"Investigator"},
+			"gestaltAgent":{"name":"Agent"}
 		},
 	},
 	"voices":{
