@@ -160,8 +160,11 @@ FireAll PopulateOptions
 "#END BRIEFING",,,,,,
 ,,,,,,
 # MEETING_AGENT,,,,,,
-NEW RULE,,"$player.commissionFactionId == ""eusan_nation""
-$officeryeong_neuralrepositorystart == true",,,,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_special_agent"" score: 100
+$officeryeong_neuralrepositorystart == true
+
+","ShowPersonVisual",,,
 "#END MEETING_AGENT",,,,,,
 ,,,,,,
 # MISSION_END,,,,,,
