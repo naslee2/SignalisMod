@@ -151,7 +151,7 @@
 		"theme":"music_default_market_neutral",
 		"market_neutral":"music_default_market_neutral",
 		"market_hostile":"music_default_market_hostile",
-		"market_friendly":"music_default_market_friendly",
+		"market_friendly":"tsuyoshi_market_friendly",
 		"encounter_neutral":"music_hegemony_encounter_neutral",
 		"encounter_hostile":"music_hegemony_encounter_hostile",
 		"encounter_friendly":"music_hegemony_encounter_friendly",
