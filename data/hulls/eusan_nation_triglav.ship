@@ -11,6 +11,10 @@
   "shieldCenter": [15, 0],
   "shieldRadius": 124.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "eusan_nation_engineering_design",
+    "eusan_nation_replika_cadre",
+  ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_kayak"
   },
