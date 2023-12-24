@@ -111,79 +111,6 @@ OR
 ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
 "#END OFFICER_YEONG_GREETING",,,,,,
 ,,,,,,
-# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
-,,,,,,
-# BRIEFING,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$officeryeong_neuralrepositorystart == false",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it"" highlight",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
-
-""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
-
-""Anyway, if you are up to the task, I have an assignment and needs to be done..."" she explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0",,"""The name is Ariane Yeong. Remember that next time."" she said as she slid a rather thin looking folder with numerous crossed out items and redactions on the front cover.
-
-You open the folder and inside are a series of pictures, a few pages with lists of statistics printed and an old newspaper clipping. You take a look at the pictures and they all seem to show the same building from different angles. Then you look at the newspaper cutout and you seem to notice that it just shows a giant hole on the ground and ruined buildings near it. 
-
-""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1",,"""Yes yes...its a hole in the ground. Nuked by the Empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser several years ago. Probably some remnant Imperials doing pirate raids on merchant shipping...who cares...the issue here is that I been given an assignment to recover data if there is any from this crater on Vineta"" she explained. She puts a finger on the picture as if making a point. An uncomfortable pause occurs. She lifts her finger from the picture and she straightens up.
-
-Ariane stands up and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
-
-""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
-
-""It seems that the political games have soured people in upper management and has forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction or so they say has grounded all transport ships. AEON making life difficult for us so we need someone not officially part of our agency to do so. You have some immunity from their nonsense""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2",,"""Send him a coded message upon arriving at Vineta. Once you set up initial communication, meet with him directly and get the data he is carrying. Fly back to Heimat""
-
-""if we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons...and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well thats in it for me?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3",,"""You get paid according to the rules and regulations set forth by the Nation"" Ariane dryly responds.
-
-""50,000 credits to be exact.""
-
-Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
-
-""Code frequencies to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. 
-",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOptions","""Alright then. Come back to me when you are ready""
-or
-""Ok sure. Let me know if you want to reconsider.""",,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept: I accept the mission.",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$officeryeong_neuralrepositorystart = true
-$missionId = officeryeong_NeuralRepoQuest
-FireAll PopulateOptions
-","""Good. Now the fun begins. For accepting this mission you herby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
-"#END BRIEFING",,,,,,
-,,,,,,
-# MEETING_AGENT,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_special_agent"" score: 100
-$officeryeong_neuralrepositorystart == true
-
-","ShowPersonVisual",,,
-"#END MEETING_AGENT",,,,,,
-,,,,,,
-# MISSION_END,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$officeryeong_neuralrepositorystart == true",,,"officeryeongNeuralRepFinal: So have you finished the mission as ordered?",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongNeuralRepFinal","FireAll PopulateNeuralRepoMissionOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_OPTION,PopulateNeuralRepoMissionOptions,,,,"officeryeongNeuralRepCancel: The mission is still ongoing.",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongNeuralRepCancel","FireAll PopulateOptions","""Oh I see..."" 
-
-You see a small look of disappointment on her face. You probably should have finished the mission prior to asking her.
-
-""Well then...go and finish it. I will be waiting.""",,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOptions,,,,"officeryeongNeuralRepConfirm: I got the information from the agent.",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","FireAll PopulateOptions","""Interesting. Thanks for the information. Your job is now complete""",,
-"#END MISSION_END",,,,,,
-"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
-,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_PENROSE,,,,,,
@@ -265,6 +192,112 @@ OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmo
 OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
 "#END OFFICER_YEONG_CHAT",,,,,,
+,,,,,,
+# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
+,,,,,,
+# BRIEFING,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_neuralrepositorystart == false
+",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it"" ",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart",,"""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
+
+""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
+
+""Anyway, if you are up to the task, I have an assignment and needs to be done..."" she explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0",,"""The name is Ariane Yeong. You refer to me as Officer Yeong. Remember that next time."" she said as she slid a rather thin looking folder with numerous crossed out items and redactions on the front cover.
+
+You open the folder and inside are a series of pictures, a few pages with lists of statistics printed and an old newspaper clipping. You take a look at the pictures and they all seem to show the same building from different angles. Then you look at the newspaper cutout and you seem to notice that it just shows a giant hole on the ground and ruined buildings near it. 
+
+""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1",,"""Yes yes...its a hole in the ground. Nuked by the Empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser several years ago. Probably some remnant Imperials doing retaliatory raids...who cares...the issue here is that I been given an assignment to recover data if there is any from this crater on Vineta"" she explained. She puts a finger on the picture as if making a point. An uncomfortable pause occurs. She lifts her finger from the picture and she straightens up.
+
+Ariane stands up and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
+
+""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
+
+""It seems that the political games have soured people in upper management and has forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction or so they say has grounded all transport ships. AEON making life difficult for us so we need someone not officially part of our agency to do so. You have some immunity from their nonsense""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2",,"""Send him a coded message upon arriving at Vineta. Once you set up initial communication, meet with him directly and get the data he is carrying. Fly back to Heimat""
+
+""if we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons...and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well thats in it for me?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3",,"""You get paid according to the rules and regulations set forth by the Nation"" Ariane dryly responds.
+
+""50,000 credits to be exact.""
+
+Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
+
+""Code frequencies and special codewords to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. 
+",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOptions","""Alright then. Come back to me when you are ready""
+or
+""Ok sure. Let me know if you want to reconsider.""",,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept: I accept the mission.",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$global.officeryeong_neuralrepositorystart = true
+BeginMission eusan_nation_neuralRepoQuest
+FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you herby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
+"#END BRIEFING",,,,,,
+,,,,,,
+# MEETING_AGENT,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_special_agent"" score: 10000
+$global.officeryeong_neuralrepositorystart == true","ShowPersonVisual
+FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the specified frequency and begins to broadcast the coded signal at the specified time. 
+
+After a few seconds of broadcasting, a reply signal comes over. The comms officer quickly decodes the message and hands you the result.
+
+""Recovery Area 5. North Supply depot. Section 11""
+
+You give a nod and set out to the agreed upon location with two of your trusted bodyguards.
+
+The area specified by the coded transmission was near a large crater. The crater used to be a sprawling campus dedicated to the storage of maintenance of neural patterns associated with the creation of Replikas. Now its a hole on the ground, a reminder of the painful sacrifices made by the Eusan Nation in its fight against the empire. 
+
+As you arrive at the meeting spot, a man is busy arranging crates and supplies. He gives you no attention as he busily sorts the supplies.",,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,,,"officeryeongNeuralRepAgentTalk1: ""I got a package to deliver but the address is in Carcosa""",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
+","
+","""I am not sure how I can help but I will try"" the man replied
+
+You motion the bodyguards to relax and assume overwatch position. You look at the man and ask him for the information you were sent to get.
+
+""You three characters here for the data right?"" the man says rather curtly. He opens his jacket and holds box containing several data disks. Standard issue data storage devices by the looks of it. He hands it over to you which you promptly pocket it.
+
+""AEON knows your here probably but one cannot be too careful. Project manifests, data logs, experimental results, inventory lists its all there."" the agent says.
+
+""Now scram before AEON decides to change their minds.""","officeryeongNeuralRepAgentTalk2: Exit the area",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2","$global.eusan_nation_neuralrepo_returnInfo = true
+$global.officeryeong_neuralrepositoryMetAgent = true
+Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, there was an sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? Why would a government agency such as AEON go through all this trouble to erect obstacles for data retrieval? 
+
+You quash the thought. Perhaps all will be revealed in good time. You board your shuttle begin your return trip back to the main spaceport.","officeryeongNeuralRepAgentTalk3: Return to the ship",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions",,,
+"#END MEETING_AGENT",,,,,,
+,,,,,,
+# MISSION_END,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_neuralrepositorystart == true
+$global.eusan_nation_neuralrepo_completed == false",,,"officeryeongNeuralRepFinal: So have you finished the mission as ordered?",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongNeuralRepFinal","FireAll PopulateNeuralRepoMissionOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == false",,,"officeryeongNeuralRepCancel: The mission is still ongoing.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongNeuralRepCancel","FireAll PopulateOptions","""Oh I see..."" 
+
+You see a small look of disappointment on her face. You probably should have finished the mission prior to asking her.
+
+""Well then...go and finish it. I will be waiting.""",,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == true",,,"officeryeongNeuralRepConfirm: I got the information from the agent.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","$global.eusan_nation_neuralrepo_completed = true
+Call $global.eusan_nation_neuralrepo_ref updateStage
+AddStoryPoints 1
+FireAll PopulateOptions","""Interesting. Thanks for helping me out. I wont forget your assistance on this matter. Your job is now complete and your payment should be arriving shortly after you leave this place."" she says as she motions you to leave. You feel like being forced out.
+
+As you leave the door you can hear the computer disk drive whirring as it accesses the data. The door closes before you can attempt to guess what may be on the disk.",,
+"#END MISSION_END",,,,,,
+"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
 OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions",,,

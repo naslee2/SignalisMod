@@ -99,6 +99,7 @@ public class Eusan_Nation_People {
             special_agent.setImportance(PersonImportance.HIGH);
             special_agent.addTag(Tags.CONTACT_MILITARY);
             special_agent.setVoice(Voices.SOLDIER);
+            market.addPerson(special_agent); 
             importantpeople_vineta.addPerson(special_agent);
         }
 
