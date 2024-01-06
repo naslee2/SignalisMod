@@ -39,7 +39,7 @@ public class eusan_nation_neuralRepoQuest extends HubMissionWithSearch{
             return false;
         }
 
-        if (!setPersonMissionRef(specialAgent, "$intaff_ref")) {
+        if (!setPersonMissionRef(specialAgent, "$eusan_nation_neuralrepo_ref")) {
             return false;
         }
 
@@ -112,7 +112,7 @@ public class eusan_nation_neuralRepoQuest extends HubMissionWithSearch{
 
     @Override
     public String getBaseName() {
-        return "Neural Repository Quest";
+        return "Recover data from the ruined Central Neural Repository";
     }
 
     @Override
