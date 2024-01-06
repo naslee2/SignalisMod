@@ -196,7 +196,7 @@ OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == office
 # OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
 ,,,,,,
 # BRIEFING,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongMissionOptions,"RepGTE ""eusan_nation"" WELCOMING
 $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
@@ -277,7 +277,7 @@ OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option
 "#END MEETING_AGENT",,,,,,
 ,,,,,,
 # MISSION_END,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOptions,"$player.commissionFactionId == ""eusan_nation""
+OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
 $id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_neuralrepositorystart == true
@@ -300,7 +300,16 @@ As you leave the door you can hear the computer disk drive whirring as it access
 "#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
-OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions",,,
+OFFICER_YEONG_CHAT_LISTALLOPTIONS1,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: Tell me about...
+officeryeongMissionOptions: Do you have any work for me?",
+OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChatOptions","FireAll PopulateOfficerYeongChatOptions",,,
+OFFICER_YEONG_CHAT_LISTMISSIONOPTIONS,DialogOptionSelected,"$option == officeryeongMissionOptions","FireAll PopulateOfficerYeongMissionOptions",,,
+OFFICER_YEONG_CHAT_MISSIONESCAPE_OPTION,PopulateOfficerYeongMissionOptions,,,,"officeryeongMissionEscape:""Perhaps some other time""",
+OFFICER_YEONG_CHAT_MISSIONESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongMissionEscape","FireAll PopulateOptions","""Talk to you later then...""
+OR
+""See you next time...""
+OR
+""Come back later. I may have other stuff that you can help with.""",,
 OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatEscape:""I got to go now...""",
 OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm...let me know if you want to know more stuff...""
 OR
@@ -332,7 +341,7 @@ FireAll PopulateOptions","""Flattery is nice""
 OR
 ""Thank you but your not my type""
 OR
-""Why thank you for the nice words. You just made my dad slightly brighter than normal""
+""Why thank you for the nice words. You just made my day slightly brighter than normal""
 OR
 ""Do you mean it?""",,
 OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1

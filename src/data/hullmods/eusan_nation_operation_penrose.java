@@ -27,7 +27,7 @@ public class eusan_nation_operation_penrose extends BaseLogisticsHullMod {
         float days = Global.getSector().getClock().convertToDays(amount);
         //float daysActive = Global.getSector().getClock().getElapsedDaysSince(startTime);
         daysElasped += days;
-        logger.info("Logger active. Report Economy tick fired, StartTime is: " + daysElasped);
+        //logger.info("Logger active. Report Economy tick fired, StartTime is: " + daysElasped);
 
     }
     
@@ -38,7 +38,7 @@ public class eusan_nation_operation_penrose extends BaseLogisticsHullMod {
     public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship){
         float daysActive = daysElasped;
         if(index == 0){
-            logger.info("Logger active. daysActive is: " + (int) daysActive);
+            //logger.info("Logger active. daysActive is: " + (int) daysActive);
             return "" + (int) daysActive;
         }
         return null;
