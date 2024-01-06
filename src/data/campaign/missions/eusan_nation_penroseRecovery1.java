@@ -36,9 +36,37 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 		preferPlanetInDirectionOfOtherMissions();
         target_planet = pickPlanet();
 
+        if(officer_yeong == null){
+            return false;
+        }
         if (target_planet == null) {
 			return false;
 		}
+        if(!setGlobalReference("$eusan_nation_penroseRecovery1_ref")){
+            return false;
+        }
+
+        setPersonOverride(officer_yeong);
+
+        setStartingStage(Stage.LOCATE_PENROSE);
+        addSuccessStages(Stage.COMPLETED);
+
+        setStoryMission();
+
+        setStageOnGlobalFlag(Stage.RETURN_BLACKBOX, "");
+        setStageOnGlobalFlag(Stage.COMPLETED, "");
+
+        makeImportant(target_planet, "", Stage.LOCATE_PENROSE);
+
+        beginStageTrigger(Stage.RETURN_BLACKBOX);
+        makeImportant(officer_yeong, "", Stage.RETURN_BLACKBOX);
+        endTrigger();
+
+        beginStageTrigger(Stage.COMPLETED);
+        triggerSetGlobalMemoryValue("", true);
+        endTrigger();
+
+        setCreditReward(50000);
 
         //return false;
         return true;
