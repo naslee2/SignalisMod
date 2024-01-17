@@ -20,6 +20,8 @@ Ship sprites, hull and ship data by Sikair.
 
 Thanks to Kaysaar, WMGreywind and Sikair for coding assistance.
 
+Thanks to @Th0usandw1nd for letting me use his Officer Yeong character concept.  
+
 Cristiferbeast#2981 for being the public face of the Signalis modding community.
 
 C H E E K I B R E E K I#4004 for proofreading
