@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_raubtier_standard",
+  "hullId": "eusan_nation_raubtier",
+  "displayName": "standard",
+  "goalVariant": false,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_tyrann_standard",
+  "hullId": "eusan_nation_tyrann",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 9,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

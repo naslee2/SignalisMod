@@ -13,6 +13,8 @@
   "shieldRadius": 82,
   "viewOffset": 0,
   "builtInMods": [
+    "eusan_nation_engineering_design",
+    "eusan_nation_replika_cadre",
     "missile_autoloader"
   ],
   "weaponSlots": [
@@ -73,7 +75,7 @@
     {
       "location": [-32, 30],
       "length": 23,
-      "width": 9.,
+      "width": 9,
       "angle": 162,
       "contrailSize": 9,
       "style": "EUSAN"

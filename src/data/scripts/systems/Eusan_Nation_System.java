@@ -75,7 +75,7 @@ public class Eusan_Nation_System {
         sector.getEconomy().addMarket(buyan_market, false);
 
         //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
-        PlanetAPI vineta = system.addPlanet("eusan_nation_vineta", signalisStar, "Vineta", "water", 88f, 190f, 6000f, 360f);
+        PlanetAPI vineta = system.addPlanet("eusan_nation_vineta", signalisStar, "Vineta", "flooded_world", 88f, 190f, 6000f, 360f);
         ProcgenUsedNames.notifyUsed("Vineta");
         vineta.setFaction("eusan_nation");
         vineta.getSpec().setTexture(Global.getSettings().getSpriteName("planets","vineta_planet"));
@@ -95,10 +95,12 @@ public class Eusan_Nation_System {
         vineta_market.addCondition(Conditions.RUINS_EXTENSIVE);
         vineta_market.addCondition(Conditions.ORE_MODERATE);
         vineta_market.addCondition(Conditions.ORGANICS_ABUNDANT);
-        vineta_market.addCondition(Conditions.WATER_SURFACE);
+        vineta_market.addCondition(Conditions.FARMLAND_ADEQUATE);
+        //vineta_market.addCondition(Conditions.WATER_SURFACE);
         vineta_market.addIndustry(Industries.POPULATION);
         vineta_market.addIndustry(Industries.MEGAPORT);
-        vineta_market.addIndustry(Industries.AQUACULTURE);
+        //vineta_market.addIndustry(Industries.AQUACULTURE);
+        vineta_market.addIndustry(Industries.FARMING);
         vineta_market.addIndustry(Industries.MINING);
         vineta_market.addIndustry(Industries.LIGHTINDUSTRY);
         vineta_market.addIndustry(Industries.HEAVYBATTERIES);

@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_engollan_standard",
+  "hullId": "eusan_nation_engollan",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 17,
+  "fluxVents": 17,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

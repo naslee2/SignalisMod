@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_lerche_standard",
+  "hullId": "eusan_nation_lerche",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 7,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

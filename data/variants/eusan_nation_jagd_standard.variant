@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_jagd_standard",
+  "hullId": "eusan_nation_jagd",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

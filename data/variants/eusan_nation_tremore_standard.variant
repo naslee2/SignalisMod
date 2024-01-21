@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_tremore_standard",
+  "hullId": "eusan_nation_tremore",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 12,
+  "fluxVents": 12,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,14 @@
+{
+    "music":{
+        "tsuyoshi_market_friendly":[
+            {
+                "source":"sounds/music",
+                "volume":0.4,
+                "files":[
+                    "SigSector_Drifting_Debris_03.ogg"
+                ],
+                "randomStart": true
+            }
+        ]
+    }
+}
