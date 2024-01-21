@@ -1,19 +1,27 @@
 {
     "combatSmallForSmallFleet":{
-        "eusan_nation_copthorne_standard":8
+        "eusan_nation_copthorne_standard":8,
+        "eusan_nation_iltis_standard":8,
+        "eusan_nation_lerche_standard":8,
+        "eusan_nation_tyrann_standard":8
     },
     "combatSmall":{
-        "eusan_nation_copthorne_standard":8
+        "eusan_nation_copthorne_standard":8,
+        "eusan_nation_iltis_standard":8,
+        "eusan_nation_lerche_standard":8,
+        "eusan_nation_tyrann_standard":8,
+        "eusan_nation_raubtier_standard":8
     },
     "combatMedium":{
-        "eusan_nation_cantor_standard":8,
-        #"eusan_nation_tremore":8,
-        #"eusan_nation_trevivian":8,
-        "eusan_nation_triglav_standard":9
+        "eusan_nation_cantor_standard":7,
+        "eusan_nation_tremore_standard":7,
+        "eusan_nation_trevivian_standard":7,
+        "eusan_nation_triglav_standard":7,
+        "eusan_nation_jagd_standard":7
     },
     "combatLarge":{
-        #"eusan_nation_comoros":8,
-        #"eusan_nation_engollan":8,
+        "eusan_nation_comoros_standard":6,
+        "eusan_nation_engollan_standard":6,
         "eusan_nation_isolde_standard":1
     },
     "combatCapital":{
