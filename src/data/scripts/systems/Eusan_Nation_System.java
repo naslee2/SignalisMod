@@ -96,10 +96,8 @@ public class Eusan_Nation_System {
         vineta_market.addCondition(Conditions.ORE_MODERATE);
         vineta_market.addCondition(Conditions.ORGANICS_ABUNDANT);
         vineta_market.addCondition(Conditions.FARMLAND_ADEQUATE);
-        //vineta_market.addCondition(Conditions.WATER_SURFACE);
         vineta_market.addIndustry(Industries.POPULATION);
         vineta_market.addIndustry(Industries.MEGAPORT);
-        //vineta_market.addIndustry(Industries.AQUACULTURE);
         vineta_market.addIndustry(Industries.FARMING);
         vineta_market.addIndustry(Industries.MINING);
         vineta_market.addIndustry(Industries.LIGHTINDUSTRY);
@@ -135,7 +133,7 @@ public class Eusan_Nation_System {
         kitezh.setFaction("eusan_nation");
         kitezh.setCustomDescriptionId("eusan_nation_kitezh_planet");
         kitezh.getSpec().setTexture(Global.getSettings().getSpriteName("planets","kitezh_planet"));
-        //kitezh.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", ""));
+        kitezh.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "kitezh_habglows"));
         //kitezh.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", ""));
         //kitezh.setInteractionImage("illustrations", "");
         kitezh.applySpecChanges();
