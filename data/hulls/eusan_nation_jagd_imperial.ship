@@ -1,8 +1,8 @@
 {
-  "hullName": "Jagd (VM)",
-  "hullId": "eusan_nation_jagd",
+  "hullName": "Jagd ",
+  "hullId": "eusan_nation_jagd_imperial",
   "hullSize": "DESTROYER",
-  "spriteName": "graphics/ships/eusan_nation_jagd.png",
+  "spriteName": "graphics/ships/eusan_nation_jagd_empire.png",
   "style": "MIDLINE",
   "height": 206,
   "width": 100,
@@ -12,8 +12,7 @@
   "shieldRadius": 123.5,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
-    "eusan_nation_replika_cadre"
+
   ],
   "weaponSlots": [
     {

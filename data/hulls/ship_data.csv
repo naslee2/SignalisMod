@@ -19,7 +19,11 @@ Engollan,eusan_nation_engollan,Missile Cruiser,Eusan Tech,fastmissileracks,14,70
 #Capital,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Revolution,eusan_nation_revolution,Missile Battleship,Eusan Tech,flarelauncher_active,25,18000,1200,16000,,500,300,,40,40,30,10,20,3000,OMNI,,270,0.6,0.8,,,320,450,400,260,10,26,7,165000,4,12,660,0.25,50,50,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_standard_ship_bp,,0.5,2,4,,512
 Admiral,eusan_nation_admiral,Battleship,Eusan Tech,burndrive,30,20000,1350,20000,,1200,285,,45,40,25,10,15,3200,OMNI,,200,0.7,0.7,,,340,500,300,300,10,30,8,185000,3,15,600,0.25,50,50,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,4,,513
-#Empire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Raubtier,eusan_nation_raubtier,Frigate,Eusan Tech,displacer,5,1600,350,3000,,200,60,,110,120,70,70,90,140,FRONT,,160,0.6,0.7,,,16,24,20,25,1,25,10,11000,8,10,240,0.25,5,5,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,2,,208
-Jagd,eusan_nation_jagd,Destroyer,Eusan Tech,canister_flak,11,3200,350,6400,,600,90,,85,80,60,45,70,300,FRONT,,270,0.5,0.8,,,50,60,50,40,2,20,9,51000,5,20,340,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.6,2,3,,310
-Isolde,eusan_nation_isolde,Fast Cruiser,Eusan Tech,microburn,14,9000,850,9000,,400,150,,70,50,40,25,25,1400,OMNI,,160,0.5,0.8,,,110,150,100,120,4,30,9,100000,4,12,540,0.25,22,22,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,4,,404.5
+#Empire_Captures,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Raubtier (VM),eusan_nation_raubtier,Frigate,Eusan Tech,displacer,5,1600,350,3000,,200,60,,110,120,70,70,90,140,FRONT,,160,0.6,0.7,,,16,24,20,25,1,25,10,11000,8,10,240,0.25,5,5,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,2,,208
+Jagd (VM),eusan_nation_jagd,Destroyer,Eusan Tech,canister_flak,11,3200,350,6400,,600,90,,85,80,60,45,70,300,FRONT,,270,0.5,0.8,,,50,60,50,40,2,20,9,51000,5,20,340,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.6,2,3,,310
+Isolde (VM),eusan_nation_isolde,Fast Cruiser,Eusan Tech,microburn,14,9000,850,9000,,400,150,,70,50,40,25,25,1400,OMNI,,160,0.5,0.8,,,110,150,100,120,4,30,9,100000,4,12,540,0.25,22,22,,,,,,,RENDER_ENGINES_BELOW_HULL,eusan_nation_advanced_ship_bp,,0.5,2,4,,404.5
+#Empire_Remnants
+Raubtier,eusan_nation_raubtier_imperial,Frigate,Eusan Tech,displacer,5,1600,350,3000,,200,60,,110,120,70,70,90,140,FRONT,,160,0.6,0.7,,,16,24,20,25,1,25,10,11000,8,10,240,0.25,5,5,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.5,2,2,,208
+Jagd,eusan_nation_jagd_imperial,Destroyer,Eusan Tech,canister_flak,11,3200,350,6400,,600,90,,85,80,60,45,70,300,FRONT,,270,0.5,0.8,,,50,60,50,40,2,20,9,51000,5,20,340,0.25,12,12,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.6,2,3,,310
+Isolde,eusan_nation_isolde_imperial,Fast Cruiser,Eusan Tech,microburn,14,9000,850,9000,,400,150,,70,50,40,25,25,1400,OMNI,,160,0.5,0.8,,,110,150,100,120,4,30,9,100000,4,12,540,0.25,22,22,,,,,,,RENDER_ENGINES_BELOW_HULL,,,0.5,2,4,,404.5

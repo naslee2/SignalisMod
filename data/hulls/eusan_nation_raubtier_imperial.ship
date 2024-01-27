@@ -1,8 +1,8 @@
 {
-  "hullName": "Ranbtier (VM)",
-  "hullId": "eusan_nation_raubtier",
+  "hullName": "Ranbtier",
+  "hullId": "eusan_nation_raubtier_imperial",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/eusan_nation_raubtier.png",
+  "spriteName": "graphics/ships/eusan_nation_raubtier_empire.png",
   "style": "MIDLINE",
   "height": 122,
   "width": 76,
@@ -12,8 +12,7 @@
   "shieldRadius": 73,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
-    "eusan_nation_replika_cadre",
+
   ],
   "weaponSlots": [
     {

@@ -1,8 +1,8 @@
 {
-  "hullName": "Isolde (VM)",
-  "hullId": "eusan_nation_isolde",
+  "hullName": "Isolde",
+  "hullId": "eusan_nation_isolde_imperial",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/eusan_nation_isolde.png",
+  "spriteName": "graphics/ships/eusan_nation_isolde_empire.png",
   "style": "MIDLINE",
   "height": 290,
   "width": 132,
@@ -12,8 +12,7 @@
   "shieldRadius": 173.5,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
-    "eusan_nation_replika_cadre"
+
   ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_isolde_builtin",
