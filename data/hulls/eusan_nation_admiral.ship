@@ -14,8 +14,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_K4_composite_armor",
-    "eusan_nation_advanced_flag_facilities",
     "eusan_nation_electronic_warfare_suite",
+    "eusan_nation_engineering_design",
     "eusan_nation_replika_cadre"
   ],
   "builtInWeapons": {

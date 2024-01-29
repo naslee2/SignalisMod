@@ -18,7 +18,8 @@ public class Eusan_Nation_People {
     public static String ARIANE_YEONG_LASTNAME = "Yeong";
 	public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
     public static String ADMIRAL_FALKE_FIRSTNAME = "Falke";
-    public static String ADMIRAL_FALKE_LASTNAME = "";
+    public static String ADMIRAL_FALKE_LASTNAME = "VSF01";
+    public static String SPECIAL_AGENT = "eusan_nation_special_agent";
 
 	public static MarketAPI market = null;
 
@@ -28,6 +29,7 @@ public class Eusan_Nation_People {
 
     public void create() {
         createImportantPeople_heimat();
+        createImportantPeople_vineta();
 	}
 
     public static void createImportantPeople_heimat(){
@@ -78,6 +80,27 @@ public class Eusan_Nation_People {
             admiral_falke.getStats().setSkillLevel(Skills.OFFICER_MANAGEMENT, 1);
             admiral_falke.addTag("coff_nocapture");
             importantpeople_heimat.addPerson(admiral_falke);
+        }
+    }
+
+    public static void createImportantPeople_vineta(){
+        ImportantPeopleAPI importantpeople_vineta = Global.getSector().getImportantPeople();
+        market = Global.getSector().getEconomy().getMarket("vineta_market");
+        if(market !=null){
+            PersonAPI special_agent = Global.getFactory().createPerson();
+            special_agent.setId(SPECIAL_AGENT);
+            special_agent.setFaction(EUSAN_NATION);
+            special_agent.setGender(Gender.FEMALE);
+            special_agent.setRankId("gestaltOfficer");
+            special_agent.setPostId("gestaltAgent");
+            special_agent.getName().setFirst("Special");
+            special_agent.getName().setLast("Agent");
+            special_agent.setPortraitSprite("graphics/portraits/portrait_hegemony15.png");
+            special_agent.setImportance(PersonImportance.HIGH);
+            special_agent.addTag(Tags.CONTACT_MILITARY);
+            special_agent.setVoice(Voices.SOLDIER);
+            market.addPerson(special_agent); 
+            importantpeople_vineta.addPerson(special_agent);
         }
 
     }

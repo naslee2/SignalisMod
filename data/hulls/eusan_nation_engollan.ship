@@ -13,6 +13,8 @@
   "shieldRadius": 112,
   "viewOffset": 0,
   "builtInMods": [
+    "eusan_nation_engineering_design",
+    "eusan_nation_replika_cadre",
     "missleracks"
   ],
   "weaponSlots": [

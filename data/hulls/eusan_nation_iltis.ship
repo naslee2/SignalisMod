@@ -12,7 +12,9 @@
   "shieldRadius": 78.5,
   "viewOffset": 0,
   "builtInMods": [
-    "eccm"
+    "eusan_nation_electronic_warfare_suite",
+    "eusan_nation_engineering_design",
+    "eusan_nation_replika_cadre"
   ],
   "weaponSlots": [
     {

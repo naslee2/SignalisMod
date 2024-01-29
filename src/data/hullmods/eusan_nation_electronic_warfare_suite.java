@@ -57,9 +57,13 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
 	}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
-		if(ship.getVariant().getHullMods().contains(HullMods.ECCM) || ship.getVariant().getHullMods().contains(HullMods.ECM)){
+		if(ship.getVariant().getHullMods().contains(HullMods.ECCM)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Eusan Electronic Warfare Suite");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECM, "Eusan Electronic Warfare Suite");
+		}
+		if(ship.getVariant().getHullMods().contains(HullMods.ECM)){
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECCM, "Eusan Electronic Warfare Suite");
+
 		}
 	}
 
