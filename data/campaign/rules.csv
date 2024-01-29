@@ -445,8 +445,10 @@ You take the envelope of money from her. You give her a slight nod and exit out 
 "#END OFFICER_YEONG_PENROSERECOVERY1_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
-OFFICER_YEONG_CHAT_LISTALLOPTIONS1,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: ""Tell me about...""
-officeryeongMissionOptions: ""Do you have any work for me?""",
+OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: ""Tell me about...""
+officeryeongMissionOptions: ""Do you have any work for me?""
+officeryeongChatOptionsEscape: ""I got to go now""",
+OFFICER_YEONG_CHAT_LISTALLOPTIONS_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatOptionsEscape","FireAll PopulateOptions",,,
 OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChatOptions","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
 OR
 ""I can spare some time to talk a bit. What do you want to talk about?""
