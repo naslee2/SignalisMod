@@ -47,10 +47,6 @@ public class Eusan_Nation_System {
         ProcgenUsedNames.notifyUsed("Buyan");
         buyan.setFaction("eusan_nation");
         buyan.setCustomDescriptionId("eusan_nation_buyan_planet");
-
-        //System Gate
-        CustomCampaignEntityAPI signalis_system_gate = system.addCustomEntity("alatyr_gate", "Alatyr Gate", "inactive_gate", null);
-        signalis_system_gate.setCircularOrbit(signalisStar, 347f, 2950f, 280f);
     
         MarketAPI buyan_market = Global.getFactory().createMarket("buyan_market", buyan.getName(), 5);
         buyan_market.setPrimaryEntity(buyan);
@@ -77,6 +73,10 @@ public class Eusan_Nation_System {
         buyan_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         buyan_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         sector.getEconomy().addMarket(buyan_market, false);
+
+        //System Gate
+        CustomCampaignEntityAPI signalis_system_gate = system.addCustomEntity("alatyr_gate", "Alatyr Gate", "inactive_gate", null);
+        signalis_system_gate.setCircularOrbit(signalisStar, 347f, 2950f, 280f);
 
         //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
         PlanetAPI vineta = system.addPlanet("eusan_nation_vineta", signalisStar, "Vineta", "flooded_world", 88f, 190f, 5000f, 360f);
