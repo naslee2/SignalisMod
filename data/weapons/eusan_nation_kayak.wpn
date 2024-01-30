@@ -1,12 +1,12 @@
 {
   "id": "eusan_nation_kayak",
   "specClass": "projectile",
-  "projectileSpecId": "eusan_nation_kayak_mirv1",
+  "projectileSpecId": "eusan_nation_kayak_lrm",
   "type": "MISSILE",
   "size": "LARGE",
   "displayArcRadius": 300,
-  "turretSprite": "graphics/weapons/eusan_nation_triglav_builtin_base.png",
-  "hardpointSprite": "graphics/weapons/eusan_nation_triglav_builtin_base.png",
+  "turretSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
   "renderHints": [
   ],
   "turretOffsets": [
