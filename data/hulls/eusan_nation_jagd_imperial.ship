@@ -118,26 +118,26 @@
   "engineSlots": [
     {
       "location": [-85, -0],
-      "length": 55,
-      "width": 17,
+      "length": 52,
+      "width": 14,
       "angle": 180,
-      "contrailSize": 17,
+      "contrailSize": 14,
       "style": "EUSAN_IMPERIAL"
     },
     {
-      "location": [-80, 26.5],
-      "length": 33,
-      "width": 10,
+      "location": [-83, 26.5],
+      "length": 29,
+      "width": 8,
       "angle": 180,
-      "contrailSize": 10,
+      "contrailSize": 8,
       "style": "EUSAN_IMPERIAL"
     },
     {
-      "location": [-80, -26.5],
-      "length": 33,
-      "width": 10,
+      "location": [-83, -26.5],
+      "length": 29,
+      "width": 8,
       "angle": -180,
-      "contrailSize": 10,
+      "contrailSize": 8,
       "style": "EUSAN_IMPERIAL"
     }
   ],
