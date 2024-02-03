@@ -18,7 +18,6 @@ public class eusan_nation_engineering_design extends BaseLogisticsHullMod{
     public static float CR_RECOVERY_BONUS = 35f;
     public static float REPAIR_RATE_BONUS = 35f;
     public static float OVERLOAD_BONUS = 15f;
-
     public static float FUEL_USE_MULT = 0.9F;
     public static float SUPPLY_USE_MULT = 0.7F;
     public static float REPAIR_BONUS = 35f;
