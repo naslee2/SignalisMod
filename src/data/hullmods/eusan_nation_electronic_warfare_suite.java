@@ -20,14 +20,14 @@ import com.fs.starfarer.api.util.Misc;
 
 public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
     
-	public static float MISSILE_RANGE_MULT = 0.7f;
-	public static float MISSILE_RATE_BONUS = 60f;
-	public static float MISSILE_TURN_ACCEL_BONUS = 150f;
+	public static float MISSILE_RANGE_MULT = 0.6f;
+	public static float MISSILE_RATE_BONUS = 35f;
+	public static float MISSILE_TURN_ACCEL_BONUS = 100f;
 
     public static float EW_PENALTY_MULT = 0.7f;
 
-    public static float ECCM_CHANCE = 1f;
-	public static float GUIDANCE_IMPROVEMENT = 1f;
+    public static float ECCM_CHANCE = 0.3f;
+	public static float GUIDANCE_IMPROVEMENT = 0.8f;
 
     static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
     static String eusan_nation_electronic_warfare_suite1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText1");
@@ -59,10 +59,10 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.ECCM)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECM, "Eusan Electronic Warfare Suite");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECM, "eusan_nation_electronic_warfare_suite");
 		}
 		if(ship.getVariant().getHullMods().contains(HullMods.ECM)){
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECCM, "Eusan Electronic Warfare Suite");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ECCM, "eusan_nation_electronic_warfare_suite");
 
 		}
 	}

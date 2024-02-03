@@ -15,7 +15,7 @@ import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
-    public static final float RECOVERY_BONUS = 300f;
+    public static final float RECOVERY_BONUS = 225f;
 	public static final String MOD_ID = "eusan_nation_advanced_flag_facilities";
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -24,7 +24,7 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "Eusan Advanced Flag Facilities");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "eusan_nation_advanced_flag_facilities");
 		}
 	}
 

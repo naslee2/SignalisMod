@@ -28,7 +28,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.MISSILE_AUTOLOADER)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILE_AUTOLOADER, "Missile Assembly Compartment");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILE_AUTOLOADER, "eusan_nation_missile_assembly_compartment");
 		}
 	}
 

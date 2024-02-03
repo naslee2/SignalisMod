@@ -16,8 +16,8 @@ import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_replika_cadre extends BaseHullMod {
 
-    public static float MAINTENANCE_MULT = 0.8f;
-    public static float REPAIR_BONUS = 50f;
+    public static float MAINTENANCE_MULT = 0.6f;
+    public static float REPAIR_BONUS = 35f;
 	//public static float REPAIR_RATE_BONUS = 50f;
 	//public static float CR_RECOVERY_BONUS = 50f;
     //public static float OVERLOAD_BONUS = 20f;
@@ -47,7 +47,7 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.EFFICIENCY_OVERHAUL)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "Replika Cadre");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "eusan_nation_replika_cadre");
 		}
         // if(ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
         //     MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.AUTOREPAIR, "Replika Cadre");

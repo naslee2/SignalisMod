@@ -101,7 +101,10 @@ OFFICER_YEONG_INTRO_COMMISIONED,PickGreeting,"$player.commissionFactionId == ""e
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == false","$player.metOfficerYeong = true
 ShowPersonVisual
-FireAll PopulateOptions","Hello there. What do you want.",,
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A stressed out military officer of the Nation, Ariane Yeong has spent her formative years living under oppressive umbrella of the Nation. Once she had lofty goals and aspirations as a young girl would have. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText ""Hello this is Officer Ariane Yeong speaking. What do you want?""",,,
 OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 ",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
@@ -331,9 +334,9 @@ OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == office
 ""Given how much time has passed, the mission is one of recovery. The mission recorder is to be recovered, the crew, if found, be given last rites as befitting of..."" Ariane squints her eyes a bit at the paper she held.
 
 ""Heroes of the Nation"" she said with a flat tone. ","officeryeongPenroseRecovery1Briefing2: ""Alright. Where should I look?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2",,"""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located in this system and the signal seems to be originating from this planet.""
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
 
-""As mentioned before, recover the mission recorder, any suitable information and lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
+""As mentioned before, your mission is to recover the mission recorder, any suitable information and if possible...lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
