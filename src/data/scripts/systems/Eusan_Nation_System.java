@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
@@ -45,13 +46,13 @@ public class Eusan_Nation_System {
         //-BUYAN - Toxic World-
         PlanetAPI buyan = system.addPlanet("eusan_nation_buyan", signalisStar , "Buyan", "toxic", 30f, 170f, 2100f, 225f);
         ProcgenUsedNames.notifyUsed("Buyan");
-        buyan.setFaction("eusan_nation");
+        buyan.setFaction(Factions.PIRATES);
         buyan.setCustomDescriptionId("eusan_nation_buyan_planet");
     
         MarketAPI buyan_market = Global.getFactory().createMarket("buyan_market", buyan.getName(), 5);
         buyan_market.setPrimaryEntity(buyan);
         buyan.setMarket(buyan_market);
-        buyan_market.setFactionId("eusan_nation");
+        buyan_market.setFactionId(Factions.PIRATES);
         buyan_market.addCondition(Conditions.POPULATION_5);
         buyan_market.addCondition(Conditions.TOXIC_ATMOSPHERE);
         buyan_market.addCondition(Conditions.RARE_ORE_MODERATE);
@@ -159,6 +160,7 @@ public class Eusan_Nation_System {
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
         kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
+        kitezh_market.addCondition(Conditions.DISSIDENT);
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
@@ -207,6 +209,7 @@ public class Eusan_Nation_System {
         rotfront_market.addCondition(Conditions.ORGANICS_COMMON);
         rotfront_market.addCondition(Conditions.ORE_SPARSE);
         rotfront_market.addCondition(Conditions.LOW_GRAVITY);
+        rotfront_market.addCondition(Conditions.LARGE_REFUGEE_POPULATION);
         rotfront_market.addIndustry(Industries.POPULATION);
         rotfront_market.addIndustry(Industries.MEGAPORT);
         rotfront_market.addIndustry(Industries.WAYSTATION);
@@ -217,7 +220,7 @@ public class Eusan_Nation_System {
         rotfront_market.addIndustry(Industries.PATROLHQ);
         rotfront_market.addIndustry(Industries.HEAVYBATTERIES);
         rotfront_market.addIndustry(Industries.BATTLESTATION);
-        rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
+        //rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);

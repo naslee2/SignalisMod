@@ -33,7 +33,6 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 
         Pair<String, Integer> deficitSmokes = getMaxDeficit(Commodities.FOOD);
         applyDeficitToProduction(1, deficitSmokes, "eusan_nation_nationsmokes");
-        modifyStabilityWithBaseMod();
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -44,20 +43,11 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
     @Override
     public void unapply(){
         super.unapply();
-        unmodifyStabilityWithBaseMod();
-
     }
 
     protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {
 		return mode != IndustryTooltipMode.NORMAL || isFunctional();
 	}
-
-	// @Override
-	// protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
-	// 	if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
-	// 		addStabilityPostDemandSection(tooltip, hasDemand, mode);
-	// 	}
-	// }
     
     public String getNameForModifier() {
 		if (getSpec().getName().contains("VEB")) {
@@ -65,11 +55,6 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 		}
 		return Misc.ucFirst(getSpec().getName());
 	}
-
-    // @Override
-	// protected Pair<String, Integer> getStabilityAffectingDeficit() {
-	// 	return getMaxDeficit(Commodities.SUPPLIES, Commodities.HEAVY_MACHINERY, Commodities.FOOD);
-	// }
 
     @Override
 	public String getCurrentImage() {
