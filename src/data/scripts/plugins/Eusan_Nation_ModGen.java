@@ -21,4 +21,5 @@ public class Eusan_Nation_ModGen  {
         new Eusan_Nation_People().create();
     }
 
+
 }

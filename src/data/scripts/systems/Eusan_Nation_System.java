@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.impl.campaign.econ.RecentUnrest;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
@@ -161,6 +162,7 @@ public class Eusan_Nation_System {
         kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
         kitezh_market.addCondition(Conditions.DISSIDENT);
+        RecentUnrest.get(kitezh_market).add(10, " Protests against the Nation");
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
