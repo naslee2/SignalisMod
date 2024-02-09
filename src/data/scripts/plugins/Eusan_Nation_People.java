@@ -6,6 +6,8 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Personalities;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Voices;
@@ -57,11 +59,13 @@ public class Eusan_Nation_People {
             admiral_falke.setId(ADMIRAL_FALKE);
             admiral_falke.setFaction(EUSAN_NATION);
             admiral_falke.setGender(Gender.FEMALE);
-            admiral_falke.setRankId("spaceAdmiral");
-            admiral_falke.setPostId("fleetCommander");
-            admiral_falke.getName().setFirst("ADMIRAL_FALKE_FIRSTNAME");
-            admiral_falke.getName().setLast("ADMIRAL_FALKE_LASTNAME");
+            admiral_falke.setRankId(Ranks.SPACE_ADMIRAL);
+            admiral_falke.setPostId(Ranks.POST_FLEET_COMMANDER);
+            admiral_falke.getName().setFirst(ADMIRAL_FALKE_FIRSTNAME);
+            admiral_falke.getName().setLast(ADMIRAL_FALKE_LASTNAME);
+            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_officer_yeong.png");
             admiral_falke.setImportance(PersonImportance.VERY_HIGH);
+            admiral_falke.setPersonality(Personalities.AGGRESSIVE);
             admiral_falke.getStats().setLevel(15);
             admiral_falke.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);
             admiral_falke.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
@@ -79,6 +83,7 @@ public class Eusan_Nation_People {
             admiral_falke.getStats().setSkillLevel(Skills.TACTICAL_DRILLS, 1);
             admiral_falke.getStats().setSkillLevel(Skills.OFFICER_MANAGEMENT, 1);
             admiral_falke.addTag("coff_nocapture");
+            admiral_falke.setVoice(Voices.SOLDIER);
             importantpeople_heimat.addPerson(admiral_falke);
         }
     }

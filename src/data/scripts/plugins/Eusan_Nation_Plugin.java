@@ -50,6 +50,7 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     @Override
     public void onNewGameAfterEconomyLoad() {
         SectorAPI sector = Global.getSector();
+        new Eusan_Nation_People().create();
         if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
             sector.addScript(new Eusan_Nation_personalFleetFalke());
         }
