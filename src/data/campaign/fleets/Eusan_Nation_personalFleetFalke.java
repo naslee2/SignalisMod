@@ -58,7 +58,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         FleetMemberAPI oldFlagship = falkeFleet.getFlagship();
         FleetMemberAPI newFlagship = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "eusan_nation_admiral_standard");
         falkeFleet.getFleetData().addFleetMember(newFlagship);
-        logger.info("Logger active: flagship is: " + newFlagship);
+        logger.info("Logger active: flagship is: " + newFlagship.getCaptain().getId());
         if (newFlagship != null && oldFlagship != null) {
             newFlagship.setCaptain(oldFlagship.getCaptain());
             oldFlagship.setFlagship(false);
@@ -152,7 +152,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
 
         falkeFleet.getFleetData().sort();
 
-        logger.info("Logger active: fleet is: " + falkeFleet.getFleetData());
+        //logger.info("Logger active: fleet is: " + falkeFleet.getFleetData());
 
         return falkeFleet;
     }
@@ -160,7 +160,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
     @Override
     public boolean canSpawnFleetNow() {
         MarketAPI heimat = Global.getSector().getEconomy().getMarket("heimat_market");
-        logger.info("Logger active: fleet is spawning at: " + heimat.getId());
+        //logger.info("Logger active: fleet is spawning at: " + heimat.getId());
         if (heimat == null || heimat.hasCondition(Conditions.DECIVILIZED)) return false;
         if (!heimat.getFactionId().equals(EUSAN_NATION)) return false;
         return true;
