@@ -75,7 +75,6 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
 
         //flagship
         falkeFleet.getFlagship().setShipName("VM Guardian of the Revolution");
-        falkeFleet.getFlagship().setId("eusan_nation_admiral_standard");
 
         //battleship division
         falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard").setShipName("VM Yun In-cheom");
