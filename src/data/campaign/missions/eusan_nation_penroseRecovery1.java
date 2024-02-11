@@ -22,7 +22,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
     protected PersonAPI officer_yeong;
     protected PlanetAPI vineta;
     protected PlanetAPI target_planet;
-    protected StarSystemAPI target_starsystem;
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {

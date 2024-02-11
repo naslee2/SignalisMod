@@ -334,7 +334,9 @@ OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == office
 ""Given how much time has passed, the mission is one of recovery. The mission recorder is to be recovered, the crew, if found, be given last rites as befitting of..."" Ariane squints her eyes a bit at the paper she held.
 
 ""Heroes of the Nation"" she said with a flat tone. ","officeryeongPenroseRecovery1Briefing2: ""Alright. Where should I look?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_distanceLy""
+Call $eusan_nation_penroseRecovery1_ref ""Target:$eusan_nation_penroseRecovery1_systemName""
+Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
 
 ""As mentioned before, your mission is to recover the mission recorder, any suitable information and if possible...lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
@@ -356,14 +358,14 @@ $eusan_nation_penroseRecovery1_targetPlanet score:1000
 $global.officeryeong_penroserecovery1_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
+defaultLeave: Leave",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1",,"As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
 
 You head over to the communication's officer and begin to examine the data. The transmission was broadcasting on a specific frequency, using a series of dashes and beeps. You note its similarity to the transmission played for you during the mission brief by Officer Yeong. You order your communication's officer to record the transmission and triangulate its location. 
 
-45 mins later the communication's officer finally reports that the location of the Penrose 419. 
-","officeryeongPenroseRecovery1Option1: Send a team down to investigate the crash site.
-defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","$global.eusan_nation_penroseRecovery1_returnBlackbox = true
+45 mins later the communication's officer finally reports that the location of the Penrose 419. ","officeryeongPenroseRecovery1Option2: Deploy the recovery teams to the surface",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option2","$global.eusan_nation_penroseRecovery1_returnBlackbox = true
 $global.eusan_nation_penroseRecovery1_recoveredData = true
 Call $global.eusan_nation_penroseRecovery1_ref updateStage","The team's shuttle touched down on the planet with little issue. After a short hike they finally came upon the site where the communication's officer indicated the Penrose-419 would be. The ship seemed to be intact, having appeared to have crash landed. Most of the lower hull was buried and parts of the starboard wing was sheared off. Aside from the damage from the landing and lost wing, there could be no doubt of the identity of the ship with a giant 419 on the intact portside wing.
 
@@ -371,8 +373,8 @@ After a few hours surveying the hull and setting up equipment to enter, the reco
 
 The team split into two, one to the flight deck, another to the cryo chamber. The team entered the flight deck with no issue but the second team reported that the cryo chamber was wrecked beyond recovery. Entry would be impossible with the equipment they have. No sign of the crew was found but they did find bits of pieces of a Replika unit.
 
-""Sir message from the ground team, they have the mission data recorder and the logbooks."" the communication's officer reported.","officeryeongPenroseRecovery1Option2: Order your team to return to the fleet.",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option2","FireAll PopulateOptions","The team returned to the ship without incident. The recovery team leader presents the container with the mission data recorder and the logbooks.
+""Sir message from the ground team, they have the mission data recorder and the logbooks."" the communication's officer reported.","officeryeongPenroseRecovery1Option3: Order your team to return to the fleet.",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option3","FireAll PopulateOptions","The team returned to the ship without incident. The recovery team leader presents the container with the mission data recorder and the logbooks.
 
 ""Here is the recovered items sir. Its a mess down there and we tried to recover as much as we can. No sign of the flight officer or the replika but we did find parts of one.""
 

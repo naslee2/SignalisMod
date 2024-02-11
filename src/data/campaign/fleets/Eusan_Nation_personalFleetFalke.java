@@ -35,7 +35,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
     public CampaignFleetAPI spawnFleet() {
 
         MarketAPI heimat = Global.getSector().getEconomy().getMarket("heimat_market");
-        logger.info("Logger active: .getMarket is: " + heimat.getStarSystem());
+        //logger.info("Logger active: .getMarket is: " + heimat.getStarSystem());
 
         FleetCreatorMission m = new FleetCreatorMission(random);
         m.beginFleet();
@@ -58,7 +58,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         FleetMemberAPI oldFlagship = falkeFleet.getFlagship();
         FleetMemberAPI newFlagship = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "eusan_nation_admiral_standard");
         falkeFleet.getFleetData().addFleetMember(newFlagship);
-        logger.info("Logger active: flagship is: " + newFlagship.getCaptain().getId());
+        //logger.info("Logger active: flagship is: " + newFlagship.getCaptain().getId());
         if (newFlagship != null && oldFlagship != null) {
             newFlagship.setCaptain(oldFlagship.getCaptain());
             oldFlagship.setFlagship(false);

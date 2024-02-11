@@ -279,11 +279,11 @@
 		"tradeSmuggler":"Smuggler",
         "smallTrader":"Trader",
 
-        "patrolSmall":"Grenzabteilung",
-        "patrolMedium":"Grenzbrigade",
-        "patrolLarge":"Grenzflottille",
+        "patrolSmall":"Patrouillengruppe",
+        "patrolMedium":"Patrouillenbrigade",
+        "patrolLarge":"Patrouillenflottille",
 
-		#"inspectionFleet":"Inspektionsflotte",
+		#"inspectionFleet":"Inspektionsflottille",
 		"taskForce":"Flottile",
 
         "foodReliefFleet":"Humanitarian Convoy",
