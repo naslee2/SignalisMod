@@ -9,6 +9,16 @@
                 ],
                 "randomStart": true
             }
+        ],
+        "penrose_419_SOS":[
+            {
+                "source":"sounds/music",
+                "volume":0.2,
+                "files":[
+                    "tcp_d3_20_a_irdial.ogg"
+                ],
+                "randomStart": true
+            }
         ]
     }
 }

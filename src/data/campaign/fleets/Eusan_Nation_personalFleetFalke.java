@@ -16,11 +16,11 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.Of
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
 
 public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
-    Logger logger = Global.getLogger(Eusan_Nation_personalFleetFalke.class);
+    //Logger logger = Global.getLogger(Eusan_Nation_personalFleetFalke.class);
 
     public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
     public static String EUSAN_NATION = "eusan_nation";

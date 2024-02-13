@@ -313,7 +313,7 @@ $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_neuralrepo_completed == true
 $global.officeryeong_penroserecovery1_start == false",,,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start",,"As you sit down on the chair in her small office, Ariane takes out a small packet of cigs and lights one up. Taking a deep draw and blows out a sizable cloud of cigarette smoke before she begins to explain your next mission.
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start","BeginMission eusan_nation_penroseRecoveryQuest1 false","As you sit down on the chair in her small office, Ariane takes out a small packet of cigs and lights one up. Taking a deep draw and blows out a sizable cloud of cigarette smoke before she begins to explain your next mission.
 
 ""My superiors were pleased you got the data from our agent in Vineta. That wierd chapter is over and whatever issues they had with AEON, its now over. Your new task I have been authorized to give you is more strenuous. More fetch and carry type stuff. There is a whole list of this stuff but I will be giving them to you one by one.""
 
@@ -327,21 +327,20 @@ OFFICER_YEONG_PENROSERECOVERY1_BRIEFING1,DialogOptionSelected,"$option == office
 ""Listen to that. Its a rather simple transmission. A series of beeps and if you remember your basic codes, beeps and dashes."" She stops the recording device with a swift press of a button. 
 
 ","officeryeongPenroseRecovery1Briefing1: ""So what kind of transmission is it?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing1",,"""This is a standard Penrose emergency beacon. Its set to go off when a Penrose craft has suffered severe damage or has crashed landed on a rock. Given how this weak this transmission was received it was a miracle the Rotfront Array picked this up"" Ariane says. She then picks up a paper from her desk and began to summarize the information to you in a rather curt manner.
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing1","Call $global.eusan_nation_penroseRecovery1_ref updateData","""This is a standard Penrose emergency beacon. Its set to go off when a Penrose craft has suffered severe damage or has crashed landed on a rock. Given how this weak this transmission was received it was a miracle the Rotfront Array picked this up"" Ariane says. She then picks up a paper from her desk and began to summarize the information to you in a rather curt manner.
 
 ""The transmission is from the PENROSE-419. It was launched over two decades ago. The Flight Officer's name was Cameron Yang. The replika was your standard LSTR unit, LSTR-419. The last known contact was roughly 12 years ago before they dropped out of contact. There was a very brief attempt to restore contact but given 419's mission was essentially over, the Nation did not bother outside the standard hails.""
 
 ""Given how much time has passed, the mission is one of recovery. The mission recorder is to be recovered, the crew, if found, be given last rites as befitting of..."" Ariane squints her eyes a bit at the paper she held.
 
 ""Heroes of the Nation"" she said with a flat tone. ","officeryeongPenroseRecovery1Briefing2: ""Alright. Where should I look?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_distanceLy""
-Call $eusan_nation_penroseRecovery1_ref ""Target:$eusan_nation_penroseRecovery1_systemName""
-Call $eusan_nation_penroseRecovery1_ref ""Target: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","Call $global.eusan_nation_penroseRecovery1_ref showMap ""Destination: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
 
 ""As mentioned before, your mission is to recover the mission recorder, any suitable information and if possible...lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider: I changed my mind...",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
+FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
@@ -358,16 +357,18 @@ $eusan_nation_penroseRecovery1_targetPlanet score:1000
 $global.officeryeong_penroserecovery1_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""
+eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
 defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1",,"As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
 
 You head over to the communication's officer and begin to examine the data. The transmission was broadcasting on a specific frequency, using a series of dashes and beeps. You note its similarity to the transmission played for you during the mission brief by Officer Yeong. You order your communication's officer to record the transmission and triangulate its location. 
 
 45 mins later the communication's officer finally reports that the location of the Penrose 419. ","officeryeongPenroseRecovery1Option2: Deploy the recovery teams to the surface",
 OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option2","$global.eusan_nation_penroseRecovery1_returnBlackbox = true
 $global.eusan_nation_penroseRecovery1_recoveredData = true
-Call $global.eusan_nation_penroseRecovery1_ref updateStage","The team's shuttle touched down on the planet with little issue. After a short hike they finally came upon the site where the communication's officer indicated the Penrose-419 would be. The ship seemed to be intact, having appeared to have crash landed. Most of the lower hull was buried and parts of the starboard wing was sheared off. Aside from the damage from the landing and lost wing, there could be no doubt of the identity of the ship with a giant 419 on the intact portside wing.
+Call $global.eusan_nation_penroseRecovery1_ref updateStage
+eusan_nation_penroseRecovery1_rulecmd resumeMusic_penroseRecovery1","The team's shuttle touched down on the planet with little issue. After a short hike they finally came upon the site where the communication's officer indicated the Penrose-419 would be. The ship seemed to be intact, having appeared to have crash landed. Most of the lower hull was buried and parts of the starboard wing was sheared off. Aside from the damage from the landing and lost wing, there could be no doubt of the identity of the ship with a giant 419 on the intact portside wing.
 
 After a few hours surveying the hull and setting up equipment to enter, the recovery team finally gained entry via the emergency hatch on the top of the hull. The interior of the ship was a charred mess. Debris, burned documents, and wrecked equipment was everywhere.
 

@@ -23,7 +23,7 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
     String ruleCall = params.get(0).getString(memoryMap);
 
     if(ruleCall.equals("playSignal_penroseRecovery1")){
-        Global.getSoundPlayer().playCustomMusic(1, 1, "", true);
+        Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
     }
     else if(ruleCall.equals( "endMusic_penroseRecovery1")){
         Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);

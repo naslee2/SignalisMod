@@ -1,6 +1,6 @@
 {
     "ruleCommandPackages":[
-        
+        "data.campaign.rulecmd"
     ],
     "graphics":{
         "planets":{
