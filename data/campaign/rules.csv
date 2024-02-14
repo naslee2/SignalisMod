@@ -347,7 +347,8 @@ OR
 ""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:  I accept the mission.",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroserecovery1_start = true
-BeginMission eusan_nation_penroseRecoveryQuest1
+ShowPersonVisual
+AcceptMission
 FireAll PopulateOptions","""Thank you. Now formally I will need to give you the usual spiel of working for the Nation but I won't. Anyway your mission """,,
 "#END RECOVERY_BRIEFING",,,,,,
 ,,,,,,
