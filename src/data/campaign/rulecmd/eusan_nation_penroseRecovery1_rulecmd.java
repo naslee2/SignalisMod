@@ -22,20 +22,38 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
     }
     String ruleCall = params.get(0).getString(memoryMap);
 
-    if(ruleCall.equals("playSignal_penroseRecovery1")){
-        Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
-    }
-    else if(ruleCall.equals( "endMusic_penroseRecovery1")){
-        Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
-        Global.getSoundPlayer().pauseMusic();
-    }
-    else if(ruleCall.equals( "resumeMusic_penroseRecovery1")){
-        Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
-		Global.getSoundPlayer().restartCurrentMusic();
-    }
-    else{
-        dialog.getTextPanel().addPara("Uh oh an error has occured!");
-        dialog.getTextPanel().addPara("No intel for code: " + ruleCall);
+    // if(ruleCall.equals("playSignal_penroseRecovery1")){
+    //     Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
+    // }
+    // else if(ruleCall.equals( "endMusic_penroseRecovery1")){
+    //     Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
+    //     Global.getSoundPlayer().pauseMusic();
+    // }
+    // else if(ruleCall.equals( "resumeMusic_penroseRecovery1")){
+    //     Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
+	// 	   Global.getSoundPlayer().restartCurrentMusic();
+    // }
+    // else{
+    //     dialog.getTextPanel().addPara("Uh oh an error has occured!");
+    //     dialog.getTextPanel().addPara("No intel for code: " + ruleCall);
+    // }
+
+    switch(ruleCall){
+        case "playSignal_penroseRecovery1":
+            Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
+            break;
+        case "endMusic_penroseRecovery1":
+            Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
+            Global.getSoundPlayer().pauseMusic();
+            break;
+        case "resumeMusic_penroseRecovery1":
+            Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
+	 	    Global.getSoundPlayer().restartCurrentMusic();
+            break;
+        default:
+            dialog.getTextPanel().addPara("Uh oh an error has occured!");
+            dialog.getTextPanel().addPara("No intel for code: " + ruleCall);
+            break;
     }
            
     return true;
