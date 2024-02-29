@@ -451,6 +451,60 @@ You take the envelope of money from her. You give her a slight nod and exit out 
 "#END RECOVERY_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSERECOVERY1_QUEST",,,,,,
 ,,,,,,
+# OFFICER_YEONG_PENROSERECOVERY2_QUEST,,,,,,
+,,,,,,
+# RECOVERY2_BRIEFING,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongMissionOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.eusan_nation_penroseRecovery1_completed == true
+$global.eusan_nation_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2_start:  I have mission for your skillset...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected," $option == officeryeongPenroseRecovery2_start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a seat at the desk. You've become used to this now. 
+
+""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder and unsurprisingly its filled with redactions and crossed out sentences. Typical.
+
+""As before, my superiors have decided that you are the best person for the job. Now its time for you to help us with another mission. Its a standard recovery op. Just like last time you are to go to a target location and recover the mission data recorder.""","officeryeongPenroseRecovery2_briefing0: ""Sure. What is the catch then?""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing0",,"""The recovery site is located in this star system which is several light years away from this area."" She says, flipping a page from the folder and pointing at a black and white picture of a star map.
+
+""However, there is an issue. Our military intelligence have determined that the star system has at this moment, an unknown fleet. Our signals analysts belive the fleet to be a Tri-Tachhyon patrol group. Why they are in the star system is anyone's guess. Our determination is that these ships are just conducting deep space patrol. I asked for more information and was told there isn't anymore. No information on precise size of hostile forces, composition, etc. Just a signals analysis of a patrol sized group.""
+","officeryeongPenroseRecovery2_briefing1: ""Hostile fleet, no information on size or composition. Got it.""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING2,DialogOptionSelected,"$option ==  officeryeongPenroseRecovery2_briefing1","Call $global.eusan_nation_penroseRecovery2_ref updateData","""Now your mission target: PENROSE-388. This Penrose was launched over two decades ago. Like all Penrose craft, they were sent on randomized trajectories. Now due to the presence of a hostile fleet, it is vital that you destroy this fleet. My superiors have made it abundantly clear to me and I am making it abundantly clear to you. Destroy this fleet. Do this before you recover PENROSE-388""
+
+""Now for the other bits. PENROSE-388 dropped out of contact 18 years ago. Commanded by a young pilot named Mary Cheng. Well connected. Has ties to a powerful political faction here on Heimat. Due to her status of being the daughter of a powerful political family, my superiors have prioritized the recovery of PENROSE-388 to the top of the list.""","officeryeongPenroseRecovery2_briefing2: ""I understand""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing2",,"""The details on the mission are inside the briefing packet but I will for brevity sake, tell you exactly where to go. Signal analysis indicates that PENROSE-388 is located $eusan_nation_penroseRecovery2_distanceLy light years away in the $eusan_nation_penroseRecovery2_systemName system and the craft has crashed on the planet $eusan_nation_penroseRecovery2_planetName""
+
+""Got that? Good. You can refresh yourself later. Its all here in the packet"" Ariane says. She opens her drawer and grabs a bright red packet of cigarettes. A familiar, smokey smell begins to permeate the room. She takes a long drag and lets out a puff. 
+
+""Were are done here...you know what to do.""","officeryeongPenroseRecovery2_briefing3: Time for me to go to work then...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing3","FireAll PopulatePenroseRecovery2StartOptions",,,
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Reconsider","AbortMission
+FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
+OR
+""Take your time. Come back later if you want to proceed.""
+OR
+""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.eusan_nation_penroseRecovery2_start = true
+ShowPersonVisual
+AcceptMission
+FireAll PopulateOptions",,,
+"#END RECOVERY2_BRIEFING",,,,,,
+,,,,,,
+# OFFICER_YEONG_PENROSERECOVERY2_ENCOUNTER,,,,,,
+NEW RULE,,,,,,
+"#END OFFICER_YEONG_PENROSERECOVERY2_ENCOUNTER",,,,,,
+,,,,,,
+# RECOVERY2,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,,,,,,
+"#END RECOVERY2",,,,,,
+,,,,,,
+# RECOVERY2_MISSION_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_FINAL,,,,,,
+"#END RECOVERY2_MISSION_END",,,,,,
+"#END OFFICER_YEONG_PENROSERECOVERY2_QUEST",,,,,,
+,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
 OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: ""Tell me about...""
 officeryeongMissionOptions: ""Do you have any work for me?""

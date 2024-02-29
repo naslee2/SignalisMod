@@ -39,7 +39,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
-        if(!setGlobalReference("$eusan_nation_penroseRecovery1_ref")){
+        if(!setGlobalReference("$eusan_nation_penroseRecovery2_ref")){
             return false;
         }
 
@@ -167,7 +167,10 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     }
 
     protected void updateInteractionDataImpl(){
-        
+        set("$eusan_nation_penroseRecovery2_planetId", target_planet.getId());
+        set("$eusan_nation_penroseRecovery2_planetName", target_planet.getName());
+        set("$eusan_nation_penroseRecovery2_systemName", target_planet.getStarSystem().getNameWithNoType());
+        set("$eusan_nation_penroseRecovery2_distanceLy", getDistanceLY(target_planet));
     }
 
     @Override //based off the Internal Affairs example mod
