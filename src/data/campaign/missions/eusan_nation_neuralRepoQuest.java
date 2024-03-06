@@ -75,7 +75,7 @@ public class eusan_nation_neuralRepoQuest extends HubMissionWithSearch{
         setRepRewardPerson(RepRewards.HIGH);
 		setRepRewardFaction(RepRewards.HIGH);
 
-        //setPersonIsPotentialContactOnSuccess(officer_yeong, 1f);
+        setPersonIsPotentialContactOnSuccess(officer_yeong, 1f);
         
         return true;
         //return false;
