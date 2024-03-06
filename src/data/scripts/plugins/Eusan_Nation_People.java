@@ -49,7 +49,7 @@ public class Eusan_Nation_People {
             officer_yeong.setImportance(PersonImportance.HIGH);
             officer_yeong.getName().setFirst(ARIANE_YEONG_FIRSTNAME);
             officer_yeong.getName().setLast(ARIANE_YEONG_LASTNAME);
-            officer_yeong.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke.png");
+            officer_yeong.setPortraitSprite("graphics/portraits/eusan_nation_officer_yeong.png");
             officer_yeong.addTag(Tags.CONTACT_MILITARY);
             officer_yeong.setVoice(Voices.SOLDIER);
             market.getCommDirectory().addPerson(officer_yeong, 1);
@@ -66,7 +66,7 @@ public class Eusan_Nation_People {
             admiral_falke.setPostId(Ranks.POST_FLEET_COMMANDER);
             admiral_falke.getName().setFirst(ADMIRAL_FALKE_FIRSTNAME);
             admiral_falke.getName().setLast(ADMIRAL_FALKE_LASTNAME);
-            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_officer_yeong.png");
+            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke.png");
             admiral_falke.setImportance(PersonImportance.VERY_HIGH);
             admiral_falke.setPersonality(Personalities.AGGRESSIVE);
             admiral_falke.getStats().setLevel(9);
