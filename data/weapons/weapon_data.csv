@@ -1,4 +1,15 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+#SMALL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+25mm Dangpa Type 75,eusan_nation_dangpa,1,,250,300,,35,,1,75,4,60,8,30,FRAGMENTATION,1,,0,0.05,1,,0,15,0.5,5,,700,,,10,,,PD,"pd7, SR",,,,Point Defense,,,,,,,,,,1
+35mm Dory Type 74,eusan_nation_dory,1,,300,400,,50,,4,60,4,,,,HIGH_EXPLOSIVE,20,,0,1,1,,0,5,1,2,,850,,,20,,,PD,"pd7, SR",,,,Point Defense,,,,,Hit on hull or armor deal an additional %s fragmentation damage to fighters and missiles.,200,,,,1
+#MEDIUM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+57mm Wuqiong Type 77,eusan_nation_wuqiong_double,1,,2000,500,,150,,10,30,12,,,,ENERGY,75,,0,1,1,,0,10,2,10,,700,,,30,,,PD,"pd13, SR",,,,Point Defense (Area),,,,,,,,,,4
+127mm Kompakt Type 73,eusan_nation_kompakt,1,,1800,700,,100,,12,30,10,30,2,10,HIGH_EXPLOSIVE,90,,0,0.33,1,,0,20,5,5,,500,,,30,,,,"he14,",,,,Anti Armor,,,,,,,,,,4
+203mm  Rogatina Type 76,eusan_nation_rogatina,2,,2250,750,,160,50,40,10,14,,,,HIGH_EXPLOSIVE,350,,0,3,1,,20,20,0,0,,1000,,,300,,,,"he15,",,,,Anti Armor,,,,,,,,,,5.5
+127mm Tulip Type 78,eusan_nation_tulip,2,,2600,600,,60,,10,12,10,,,,KINETIC,40,,0,0.25,1,,0,8,2,4,,800,,,30,,,,kinetic12,,,,Anti Shield,,,,,,,,,,4.125
+#LARGE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+305mm Lightning Bolt Pattern 169,eusan_nation_lbhvel,3,,2250,1000,,700,500,40,10,22,,,,KINETIC,600,,0,3,1,,,,,,,1000,,,300,,,,"kinetic16, LR",,,,Anti Shield,,,,,,,,,,5.5
+365mm Taean Type 60,eusan_nation_taean,2,,3200,900,,200,,20,10,18,,,,HIGH_EXPLOSIVE,180,,0,2,1,,3,12,3,12,,650,,,100,,,,he17,,,,Anti Shield,,,,,,,,,,7.25
 #BUILTIN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 460mm Type 71,eusan_nation_admiral_builtin1,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,700,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,,,Anti Armor,,,,,,,,,,
 460mm Type 71,eusan_nation_admiral_builtin2,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,700,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,,,Anti Armor,,,,,,,,,,

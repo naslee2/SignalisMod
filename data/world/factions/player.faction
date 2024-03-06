@@ -4,8 +4,8 @@
     ],
     "portraits":{
         "standard_male":[
-            "eusan_nation_NoDataPortrait_male_NoArtifacts_128.png",
-            "eusan_nation_NoDataPortrait_male_128.png"
+            "graphics/portraits/eusan_nation_NoDataPortrait_male_NoArtifacts_128.png",
+            "graphics/portraits/eusan_nation_NoDataPortrait_male_128.png"
         ],
         "standard_female":[
             "graphics/portraits/eusan_nation_ariane.png",

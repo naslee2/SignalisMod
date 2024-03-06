@@ -36,6 +36,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected PlanetAPI target_planet;
     protected CampaignFleetAPI target_fleet;
     protected StarSystemAPI target_starsystem;
+    protected PersonAPI tricach_fleetcommander;
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {

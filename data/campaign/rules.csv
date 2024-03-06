@@ -99,7 +99,8 @@ OR
 Don't know you, don't care.",,
 OFFICER_YEONG_INTRO_COMMISIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == false","$player.metOfficerYeong = true
+$player.metOfficerYeong == false
+AddPotentialContact ""eusan_nation_officer_yeong""","$player.metOfficerYeong = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
@@ -296,7 +297,8 @@ OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOpt
 OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","$global.eusan_nation_neuralrepo_completed = true
 Call $global.eusan_nation_neuralrepo_ref updateStage
 AddStoryPoints 1
-FireAll PopulateOptions","You inform her that you were successful in getting the information from the agent. She seems rather pleased with your success.
+FireAll PopulateOptions
+","You inform her that you were successful in getting the information from the agent. She seems rather pleased with your success.
 
 ""Excellent work. Thank you for helping me out. I wont forget your assistance on this matter. Your job is now complete and your payment should be arriving shortly after you leave this place."" she says as she motions you to leave. You feel like being forced out.
 
@@ -459,7 +461,7 @@ $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_penroseRecovery1_completed == true
-$global.eusan_nation_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2_start:  I have mission for your skillset...",
+$global.eusan_nation_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2_start:  ""I have another recovery mission for you.""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected," $option == officeryeongPenroseRecovery2_start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a seat at the desk. You've become used to this now. 
 
 ""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder and unsurprisingly its filled with redactions and crossed out sentences. Typical.
@@ -492,9 +494,9 @@ AcceptMission
 FireAll PopulateOptions",,,
 "#END RECOVERY2_BRIEFING",,,,,,
 ,,,,,,
-# OFFICER_YEONG_PENROSERECOVERY2_ENCOUNTER,,,,,,
-NEW RULE,,,,,,
-"#END OFFICER_YEONG_PENROSERECOVERY2_ENCOUNTER",,,,,,
+# RECOVERY2_ENCOUNTER,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,,,,,,
+"#END RECOVERY2_ENCOUNTER",,,,,,
 ,,,,,,
 # RECOVERY2,,,,,,
 OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,,,,,,
@@ -507,7 +509,7 @@ OFFICER_YEONG_PENROSERECOVERY2_FINAL,,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
 OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: ""Tell me about...""
-officeryeongMissionOptions: ""Do you have any work for me?""
+officeryeongMissionOptions: Ask her if the Nation requires your assistance.
 officeryeongChatOptionsEscape: ""I got to go now""",
 OFFICER_YEONG_CHAT_LISTALLOPTIONS_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatOptionsEscape","FireAll PopulateOptions",,,
 OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChatOptions","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
@@ -521,7 +523,11 @@ OFFICER_YEONG_CHAT_LISTMISSIONOPTIONS,DialogOptionSelected,"$option == officerye
 OR
 ""Perhaps. Let me see if I have anything outstanding at the moment.""
 OR
-""Help? Let's check the list shall we...""",,
+""Help? Let's check the list shall we...""
+OR
+""The Nation is always of need of help...""
+OR
+""Let me see...""",,
 OFFICER_YEONG_CHAT_MISSIONESCAPE_OPTION,PopulateOfficerYeongMissionOptions,,,,"officeryeongMissionEscape:""Perhaps some other time""",
 OFFICER_YEONG_CHAT_MISSIONESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongMissionEscape","FireAll PopulateOptions","""Talk to you later then...""
 OR

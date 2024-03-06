@@ -1,0 +1,68 @@
+{
+  "id": "eusan_nation_rogatina",
+  "specClass": "projectile",
+  "projectileSpecId": "heavymauler_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/eusan_nation_heavy_turret_base.png",
+  "turretGunSprite": "graphics/weapons/eusan_nation_heavy_turret_gun.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_heavy_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/eusan_nation_heavy_hardpoint_gun.png",
+  "visualRecoil": 12,
+  "turretOffsets": [
+    19,
+    0,
+    19,
+    0,
+    19,
+    0,
+    19,
+    0,
+    19,
+    0
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    30,
+    0,
+    30,
+    0,
+    30,
+    0,
+    30,
+    0,
+    30,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "separateRecoilForLinkedBarrels":"TRUE",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 40,
+    "spread": 5,
+    "particleSizeMin": 12,
+    "particleSizeRange": 14,
+    "particleDuration": 0.5,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      240,
+      165,
+      200
+    ]
+  },
+  "fireSoundTwo": "heavy_mauler_fire"
+}
