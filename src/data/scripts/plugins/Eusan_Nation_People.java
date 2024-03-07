@@ -66,7 +66,7 @@ public class Eusan_Nation_People {
             admiral_falke.setPostId(Ranks.POST_FLEET_COMMANDER);
             admiral_falke.getName().setFirst(ADMIRAL_FALKE_FIRSTNAME);
             admiral_falke.getName().setLast(ADMIRAL_FALKE_LASTNAME);
-            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke.png");
+            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke_128.png");
             admiral_falke.setImportance(PersonImportance.VERY_HIGH);
             admiral_falke.setPersonality(Personalities.AGGRESSIVE);
             admiral_falke.getStats().setLevel(9);
@@ -104,7 +104,6 @@ public class Eusan_Nation_People {
             market.addPerson(special_agent); 
             importantpeople_vineta.addPerson(special_agent);
         }
-
     }
 
     public static void createImportantPeople_rotfront(){
