@@ -8,7 +8,37 @@
   "quality": 1,
   "permaMods": [],
   "hullMods": [],
-  "weaponGroups": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_taean",
+        "WS0002": "eusan_nation_taean",
+        "WS0003": "squall",
+        "WS0004": "squall",
+        "WS0005": "harpoon",
+        "WS0006": "harpoon",
+        "WS0007": "harpoon",
+        "WS0008": "harpoon",
+        "WS0009": "harpoon",
+        "WS0010": "harpoon",
+        "WS0011": "eusan_nation_kompakt",
+        "WS0012": "eusan_nation_rogatina",
+        "WS0013": "eusan_nation_rogatina",
+        "WS0014": "eusan_nation_wuqiong_double",
+        "WS0015": "eusan_nation_dangpa",
+        "WS0016": "eusan_nation_dangpa",
+        "WS0017": "eusan_nation_dory",
+        "WS0018": "eusan_nation_dory",
+        "WS0019": "eusan_nation_dory",
+        "WS0020": "eusan_nation_dory",
+        "WS0021": "eusan_nation_dory",
+        "WS0022": "eusan_nation_dory",
+        "WS0023": "eusan_nation_dangpa"
+      }
+    }
+  ],
   "modules": [],
   "wings": []
 }

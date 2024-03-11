@@ -8,7 +8,20 @@
   "quality": 1,
   "permaMods": [],
   "hullMods": [],
-  "weaponGroups": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_rogatina",
+        "WS0002": "locust",
+        "WS0003": "eusan_nation_dangpa",
+        "WS0004": "eusan_nation_dory",
+        "WS0005": "eusan_nation_dory",
+        "WS0006": "eusan_nation_dangpa"
+      }
+    }
+  ],
   "modules": [],
   "wings": []
 }

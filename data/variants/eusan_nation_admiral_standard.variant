@@ -14,7 +14,27 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "eusan_nation_admiral_builtin2",
-        "WS0002": "eusan_nation_admiral_builtin1"
+        "WS0002": "eusan_nation_admiral_builtin1",
+        "WS0003": "eusan_nation_tulip",
+        "WS0004": "eusan_nation_tulip",
+        "WS0005": "eusan_nation_kompakt",
+        "WS0006": "eusan_nation_tulip",
+        "WS0007": "eusan_nation_tulip",
+        "WS0008": "eusan_nation_kompakt",
+        "WS0009": "eusan_nation_wuqiong_double",
+        "WS0010": "harpoonpod",
+        "WS0011": "harpoonpod",
+        "WS0012": "harpoonpod",
+        "WS0013": "harpoonpod",
+        "WS0014": "eusan_nation_dangpa",
+        "WS0015": "eusan_nation_dory",
+        "WS0016": "eusan_nation_dory",
+        "WS0017": "eusan_nation_dory",
+        "WS0018": "eusan_nation_dangpa",
+        "WS0019": "eusan_nation_dory",
+        "WS0020": "eusan_nation_dory",
+        "WS0021": "eusan_nation_dory",
+        "WS0022": "eusan_nation_dangpa"
       }
     }
   ],

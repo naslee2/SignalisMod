@@ -359,10 +359,10 @@ $eusan_nation_penroseRecovery1_targetPlanet score:1000
 $global.officeryeong_penroserecovery1_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""
-eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
 defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1
+eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
 
 You head over to the communication's officer and begin to examine the data. The transmission was broadcasting on a specific frequency, using a series of dashes and beeps. You note its similarity to the transmission played for you during the mission brief by Officer Yeong. You order your communication's officer to record the transmission and triangulate its location. 
 
@@ -673,7 +673,7 @@ OR
 ,,,,,,
 # EUSAN_NATION_ADMIRAL_FALKE,,,,,,
 ,,,,,,
-# ADMIRAL_FALKE_GREETING,,,,,,
+# ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
 ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
@@ -682,8 +682,8 @@ $faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
 ShowPersonVisual
 FireAll PopulateOptions
 $menuState = fleetConvMain 0
-AddText ""Your requests for communications is granted and a the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
-AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks columns on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
+AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
+AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
@@ -692,8 +692,8 @@ $faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
 ShowPersonVisual
 FireAll PopulateOptions
 $menuState = fleetConvMain 0
-AddText ""Your requests for communications is granted and a the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
-AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks columns on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
+AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
+AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, traveller. Welcome to our little side of the stars. Perhaps one day we can work together?""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
@@ -703,8 +703,8 @@ $faction.neutralToPlayer score:100","$player.metAdmiralFalke = true
 ShowPersonVisual
 FireAll PopulateOptions
 $menuState = fleetConvMain 0
-AddText ""Your requests for communications is granted and a the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
-AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks columns on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
+AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
+AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, Comrade. Intimidated? Do I intimidate you? I do hope so. Now behave yourself. I shall be watching.""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
@@ -713,8 +713,8 @@ $faction.neutralToPlayer score:100","$player.metAdmiralFalke = true
 ShowPersonVisual
 FireAll PopulateOptions
 $menuState = fleetConvMain 0
-AddText ""Your requests for communications is granted and a the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
-AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks columns on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
+AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
+AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there fellow traveller. You seem lost. Its only natural you come to me to ask for my help. So...how can I help you?""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
@@ -731,7 +731,11 @@ OR
 OR
 ""We carry the torch of the Revolution in our hands, comrade""
 OR
-""Greetings and salutations, comrade. May light of the Nation guide you on your travels.""","cutCommLink:Cut the comm link",
+""Greetings and salutations, comrade. May light of the Nation guide you on your travels.""
+OR
+""Comrade! Its good to see you. You must have so many stories to tell us.""
+OR
+""Back again, Comrade? My golden radiance is irresistible yes I know.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
@@ -740,9 +744,11 @@ FireAll PopulateOptions","""Ah hello there, traveller. Have you come to witness 
 OR
 ""Hello there, traveller. You are a long way from home""
 OR
-""What brings you to our star system?""
+""What brings you to our star system, dear traveller?""
 OR
-""Greetings and salutations, dear traveller. May the stars shine bright on your travels.""","cutCommLink:Cut the comm link",
+""Greetings and salutations, dear traveller. May the stars shine bright on your travels.""
+OR
+""Hello traveller. I am fortunate to have met you. One day I hope you join our Nation.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
@@ -753,7 +759,9 @@ OR
 OR
 ""Have you come to bask in the glory of the Nation or have you just decided to waste my time?""
 OR
-""""","cutCommLink:Cut the comm link",
+""Perhaps you should reflect on how to improve yourself. There is still time.""
+OR
+""The stars are very unforgiving without friends and allies. Its not recommended to wander without a guardian.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_HOSTILE,OpenCommLink,"$id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""","$entity.ignorePlayerCommRequests = true 1
 $menuState = fleetConvMain 0
@@ -766,7 +774,7 @@ OR
 ""The Nation demands justice and I am its instrument.""
 OR
 ""The last chapter of your life is being written by my hands. Come and lets see how it ends.""","cutCommLink:Cut the comm link",
-"#END ADMIRAL_FALKE_GREETING",,,,,,
+"#END ADMIRAL_FALKE_FLEET GREETINGS",,,,,,
 "#END EUSAN_NATION_ADMIRAL_FALKE",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 

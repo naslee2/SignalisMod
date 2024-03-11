@@ -3,7 +3,7 @@
   "hullId": "eusan_nation_triglav",
   "displayName": "Standard",
   "goalVariant": false,
-  "fluxCapacitors":10,
+  "fluxCapacitors": 10,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
@@ -13,7 +13,11 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_kayak"
+        "WS0002": "eusan_nation_dory",
+        "WS0003": "eusan_nation_dory",
+        "WS0004": "eusan_nation_dory",
+        "WS0005": "eusan_nation_dory",
+        "WS0006": "eusan_nation_dangpa"
       }
     }
   ],

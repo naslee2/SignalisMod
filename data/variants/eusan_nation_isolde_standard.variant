@@ -13,7 +13,19 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_isolde_builtin"
+        "WS0001": "eusan_nation_isolde_builtin",
+        "WS0002": "eusan_nation_lbhvel",
+        "WS0003": "reaper",
+        "WS0004": "reaper",
+        "WS0005": "eusan_nation_dory",
+        "WS0006": "eusan_nation_dory",
+        "WS0007": "eusan_nation_dory",
+        "WS0008": "eusan_nation_dangpa",
+        "WS0009": "eusan_nation_dangpa",
+        "WS0010": "eusan_nation_dangpa",
+        "WS0011": "eusan_nation_dangpa",
+        "WS0012": "eusan_nation_dangpa",
+        "WS0013": "eusan_nation_dangpa"
       }
     }
   ],
