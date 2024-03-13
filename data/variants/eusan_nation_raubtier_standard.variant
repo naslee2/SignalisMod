@@ -14,7 +14,13 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "chaingun",
-        "WS0002": "chaingun",
+        "WS0002": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0003": "eusan_nation_dangpa"
       }
     }

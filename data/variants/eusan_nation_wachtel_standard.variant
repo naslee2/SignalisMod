@@ -3,17 +3,23 @@
   "hullId": "eusan_nation_wachtel",
   "displayName": "Standard",
   "goalVariant": false,
-  "fluxCapacitors": 5,
-  "fluxVents": 5,
+  "fluxCapacitors": 6,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
   "hullMods": [],
   "weaponGroups": [
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_dangpa",
+        "WS0001": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0002": "eusan_nation_dangpa"
       }
     }

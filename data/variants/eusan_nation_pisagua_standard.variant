@@ -10,11 +10,23 @@
   "hullMods": [],
   "weaponGroups": [
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_dangpa",
-        "WS0002": "eusan_nation_dangpa",
+        "WS0001": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0003": "eusan_nation_dangpa"
       }
     }

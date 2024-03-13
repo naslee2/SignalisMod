@@ -13,15 +13,51 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_rogatina",
-        "WS0002": "eusan_nation_rogatina",
-        "WS0003": "eusan_nation_tulip",
-        "WS0004": "eusan_nation_tulip",
-        "WS0005": "eusan_nation_dory",
-        "WS0006": "eusan_nation_dory",
-        "WS0007": "eusan_nation_dangpa",
-        "WS0008": "eusan_nation_dangpa",
-        "WS0009": "eusan_nation_dangpa",
+        "WS0001": "eusan_nation_tulip",
+        "WS0002": "eusan_nation_tulip"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "eusan_nation_rogatina",
+        "WS0005": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "eusan_nation_rogatina",
+        "WS0006": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
         "WS0010": "annihilatorpod",
         "WS0011": "annihilatorpod"
       }

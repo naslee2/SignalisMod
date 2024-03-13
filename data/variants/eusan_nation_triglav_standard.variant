@@ -10,13 +10,25 @@
   "hullMods": [],
   "weaponGroups": [
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0002": "eusan_nation_dory",
+        "WS0004": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0003": "eusan_nation_dory",
-        "WS0004": "eusan_nation_dory",
-        "WS0005": "eusan_nation_dory",
+        "WS0005": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
         "WS0006": "eusan_nation_dangpa"
       }
     }
