@@ -105,7 +105,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
     @Override
     public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
         if(currentStage == Stage.LOCATE_PENROSE419){
-            info.addPara("A transponder signal has been detected. Locate and recover the Penrose-419's blackbox and any remains of the crew if possible. The location has been determined to be at " + target_planet.getName() + " at the " + target_planet.getStarSystem().getNameWithNoType() + " system.", tc, pad);
+            info.addPara("A transponder signal has been detected. Locate and recover the Penrose-419's blackbox and any remains of the crew if possible. The location has been determined to be at " + target_planet.getName() + " in the " + target_planet.getStarSystem().getNameWithNoType() + " system.", tc, pad);
             return true;
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
@@ -116,7 +116,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
     @Override
     public String getBaseName() {
-        return "Recover the mission data recorder from the PENROSE-419";
+        return "Recover the PENROSE-419's mission data recorder";
     }
 
     @Override

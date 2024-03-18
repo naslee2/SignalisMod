@@ -19,6 +19,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -36,7 +37,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected PlanetAPI target_planet;
     protected CampaignFleetAPI target_fleet;
     protected StarSystemAPI target_starsystem;
-    protected PersonAPI tricach_fleetcommander;
+    protected PersonAPI tritach_fleetcommander;
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
@@ -70,6 +71,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
             return false;
         }
 
+        tritach_fleetcommander = Global.getSector().getFaction(Factions.TRITACHYON).createRandomPerson();
+        tritach_fleetcommander.setRankId(Ranks.SPACE_COMMANDER);
+        tritach_fleetcommander.setPostId(Ranks.POST_PATROL_COMMANDER);
+        tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
+
         //enemy fleet
         FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, PATROL_MEDIUM, 50f, 10f, 10f, 10f, 0f, 0f, -10f); 
         hostile_fleetParams.averageSMods = 1;
@@ -77,9 +83,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
         target_fleet.setName("Deep Space Patrol Group 41");
         target_fleet.setNoFactionInName(false);
+        target_fleet.setCommander(tritach_fleetcommander);
+        target_fleet.getFlagship().setCaptain(tritach_fleetcommander);
         Misc.makeHostile(target_fleet);
         Misc.makeNoRepImpact(target_fleet, "$eusan_nation");
-        //Misc.makeImportant(target_fleet, "$eusan_nation");
+        Misc.makeImportant(target_fleet, "$eusan_nation");
 
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY, "$eusan_nation");
@@ -96,11 +104,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
 
         setStoryMission();
 
-        setStageOnGlobalFlag(Stage.LOCATE_PENROSE388, "$eusan_nation_penroseRecovery2_locatePenrose");
+        setStageOnMemoryFlag(Stage.LOCATE_PENROSE388, officer_yeong, "$eusan_nation_penroseRecovery2_killFleet");
         setStageOnGlobalFlag(Stage.RETURN_BLACKBOX, "$eusan_nation_penroseRecovery2_returnBlackbox");
         setStageOnGlobalFlag(Stage.COMPLETED, "$eusan_nation_penroseRecovery2_completed");
 
-        makeImportant(target_fleet, "$eusan_nation_penroseRecovery2_killFleet", Stage.DEFEAT_HOSTILES);
+        makeImportant(target_fleet, "$eusan_nation_penroseRecovery2_targetSystem", Stage.DEFEAT_HOSTILES);
 
         beginStageTrigger(Stage.LOCATE_PENROSE388);
         makeImportant(target_planet, "$eusan_nation_penroseRecovery2_targetPlanet", Stage.LOCATE_PENROSE388);
@@ -127,7 +135,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height){
         float opad = 10f;
         if(currentStage == Stage.DEFEAT_HOSTILES){
-            info.addPara("Destroy hostile forces in the star system before recovering the Penrose.", opad);
+            info.addPara("Destroy hostile forces in the " + target_starsystem.getNameWithNoType() + " star system before recovering the Penrose.", opad);
         }
         else if(currentStage == Stage.LOCATE_PENROSE388){
             info.addPara("Locate and recover the blackbox of the PENROSE-488.", opad);
@@ -140,11 +148,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     @Override
     public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
         if(currentStage == Stage.DEFEAT_HOSTILES){
-            info.addPara("Destroy hostile forces in the star system before recovering the Penrose", tc, pad);
+            info.addPara("Destroy hostile forces in the " + target_starsystem.getNameWithLowercaseTypeShort() + " star system before recovering the Penrose.", tc, pad);
             return true;
         }
         else if(currentStage == Stage.LOCATE_PENROSE388){
-            info.addPara("Locate and recover the Penrose-388's blackbox and any remains of the crew if possible.", tc, pad);
+            info.addPara("Locate and recover the Penrose-388's blackbox and any remains of the crew if possible. The location has been determined to be at " + target_planet.getName() + " in the " + target_planet.getStarSystem().getNameWithNoType() + " system.", tc, pad);
             return true;
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
@@ -156,7 +164,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     
     @Override
     public String getBaseName() {
-        return "Recover the mission data recorder from the PENROSE-388";
+        return "Recover the PENROSE-388's mission data recorder.";
     }
 
     @Override
@@ -172,10 +180,13 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         set("$eusan_nation_penroseRecovery2_planetName", target_planet.getName());
         set("$eusan_nation_penroseRecovery2_systemName", target_planet.getStarSystem().getNameWithNoType());
         set("$eusan_nation_penroseRecovery2_distanceLy", getDistanceLY(target_planet));
+        set("$eusan_nation_penroseRecovery2_tritach_fleetcommanderName", tritach_fleetcommander.getNameString());
     }
 
     @Override //based off the Internal Affairs example mod
     public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI winner, BattleAPI battle) {
+        if (isDone() || result != null) return;
+
         float distToPlayer = Misc.getDistance(fleet, Global.getSector().getPlayerFleet());
         boolean playerInvolved = battle.isPlayerInvolved() || (fleet.isInCurrentLocation() && distToPlayer < 2000f);
 
@@ -190,6 +201,8 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         if (!playerInvolved || !battle.isInvolved(fleet) || battle.onPlayerSide(fleet)) {
             return;
         }
+
+        if (fleet.getFlagship() != null && fleet.getFlagship().getCaptain() == target_fleet) return;
 
         getPerson().getMemoryWithoutUpdate().set("$eusan_nation_penroseRecovery2_killFleet", true);
     }

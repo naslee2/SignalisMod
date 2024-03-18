@@ -313,7 +313,7 @@ $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_neuralrepo_completed == true
-$global.officeryeong_penroserecovery1_start == false",,,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
+$global.officeryeong_penroseRecovery1_start == false",,,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start","BeginMission eusan_nation_penroseRecoveryQuest1 false","As you sit down on the chair in her small office, Ariane takes out a small packet of cigs and lights one up. Taking a deep draw and blows out a sizable cloud of cigarette smoke before she begins to explain your next mission.
 
 ""My superiors were pleased you got the data from our agent in Vineta. That wierd chapter is over and whatever issues they had with AEON, its now over. Your new task I have been authorized to give you is more strenuous. More fetch and carry type stuff. There is a whole list of this stuff but I will be giving them to you one by one.""
@@ -347,7 +347,7 @@ OR
 OR
 ""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:  I accept the mission.",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroserecovery1_start = true
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroseRecovery1_start = true
 ShowPersonVisual
 AcceptMission
 FireAll PopulateOptions","""Thank you. Now formally I will need to give you the usual spiel of working for the Nation but I won't. Anyway your mission """,,
@@ -356,7 +356,7 @@ FireAll PopulateOptions","""Thank you. Now formally I will need to give you the 
 # RECOVERY,,,,,,
 OFFICER_YEONG_PENROSERECOVERY1_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
 $eusan_nation_penroseRecovery1_targetPlanet score:1000
-$global.officeryeong_penroserecovery1_start == true
+$global.officeryeong_penroseRecovery1_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
 OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
@@ -388,7 +388,7 @@ You congratulate the recovery team leader for a job well done. Now its time to r
 OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
 $id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$global.officeryeong_penroserecovery1_start == true
+$global.officeryeong_penroseRecovery1_start == true
 $global.eusan_nation_penroseRecovery1_completed == false",,,"officeryeongPenroseRecovery1Final: Update Ariane on the status of your mission.",
 OFFICER_YEONG_PENROSERECOVERY1_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Final","FireAll PopulatePenroseRecovery1Options",,,
 OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_OPTION,PopulatePenroseRecovery1Options,"$global.eusan_nation_penroseRecovery1_recoveredData == false",,,"officeryeongPenroseRecovery1Cancel: Tell her that you have yet to complete the mission.",
@@ -460,8 +460,8 @@ $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_penroseRecovery1_completed == true
-$global.eusan_nation_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2_start:  ""I have another recovery mission for you.""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected," $option == officeryeongPenroseRecovery2_start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a seat at the desk. You've become used to this now. 
+$global.officeryeong_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2Start:  ""I have another recovery mission for you.""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a seat at the desk. You've become used to this now. 
 
 ""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder and unsurprisingly its filled with redactions and crossed out sentences. Typical.
 
@@ -473,7 +473,7 @@ OFFICER_YEONG_PENROSERECOVERY2_BRIEFING1,DialogOptionSelected,"$option == office
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING2,DialogOptionSelected,"$option ==  officeryeongPenroseRecovery2_briefing1","Call $global.eusan_nation_penroseRecovery2_ref updateData","""Now your mission target: PENROSE-388. This Penrose was launched over two decades ago. Like all Penrose craft, they were sent on randomized trajectories. Now due to the presence of a hostile fleet, it is vital that you destroy this fleet. My superiors have made it abundantly clear to me and I am making it abundantly clear to you. Destroy this fleet. Do this before you recover PENROSE-388""
 
 ""Now for the other bits. PENROSE-388 dropped out of contact 18 years ago. Commanded by a young pilot named Mary Cheng. Well connected. Has ties to a powerful political faction here on Heimat. Due to her status of being the daughter of a powerful political family, my superiors have prioritized the recovery of PENROSE-388 to the top of the list.""","officeryeongPenroseRecovery2_briefing2: ""I understand""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing2",,"""The details on the mission are inside the briefing packet but I will for brevity sake, tell you exactly where to go. Signal analysis indicates that PENROSE-388 is located $eusan_nation_penroseRecovery2_distanceLy light years away in the $eusan_nation_penroseRecovery2_systemName system and the craft has crashed on the planet $eusan_nation_penroseRecovery2_planetName""
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing2","Call $global.eusan_nation_penroseRecovery2_ref showMap ""Destination: $eusan_nation_penroseRecovery2_planetName""","""The details on the mission are inside the briefing packet but I will for brevity sake, tell you exactly where to go. Signal analysis indicates that PENROSE-388 is located $eusan_nation_penroseRecovery2_distanceLy light years away in the $eusan_nation_penroseRecovery2_systemName system and the craft has crashed on the planet $eusan_nation_penroseRecovery2_planetName""
 
 ""Got that? Good. You can refresh yourself later. Its all here in the packet"" Ariane says. She opens her drawer and grabs a bright red packet of cigarettes. A familiar, smokey smell begins to permeate the room. She takes a long drag and lets out a puff. 
 
@@ -487,22 +487,78 @@ OR
 OR
 ""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:  I accept the mission.",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.eusan_nation_penroseRecovery2_start = true
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
 ShowPersonVisual
 AcceptMission
 FireAll PopulateOptions",,,
 "#END RECOVERY2_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY2_ENCOUNTER,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,OpenCommLink,"$entity.eusan_nation_hostilefleet score:100","$entity.ignorePlayerCommRequests = true","In the screen, the Trit Tacheyon fleet commander gives you a unfriendly look as if $HeOrShe just gotten a unwanted guest in $HeOrShe house.
+
+""This is Commander $personName. You entered into our patrol zone. If you come here just to talk, you are sadly mistaken.""
+
+""Now if you don't mind you will be fine target practice for my fleet. Need to keep our performance ratings.""","cutCommLink:Cut the comm link",
 "#END RECOVERY2_ENCOUNTER",,,,,,
 ,,,,,,
 # RECOVERY2,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
+$eusan_nation_penroseRecovery2_targetPlanet score:1000
+$global.officeryeong_penroseRecovery2_start == true
+","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
+OFFICER_YEONG_PENROSERECOVERY2_OPTION1,PopulateOfficerYeongPenroseRecovery2Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the Penrose SOS signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery2Option1: Enter Orbit around the planet
+defaultLeave: Leave",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1",,"Entering orbit around the planet, your communications officer noticed a faint signal from the surface. Your officer and his assistants begin to triangulate the signal as you order your recovery teams to the shuttle bay.
+
+Your officer noted there is unusual interference from the surface but its a natural phenomenon. You give the officer a nod, thankful that there is no more interference from hostile actors. 
+
+After what seemed like hours the communication's officer finally reports that the location of the Penrose-388. ","officeryeongPenroseRecovery2Option2: Deploy the recovery teams to the surface",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option2","$global.eusan_nation_penroseRecovery2_returnBlackbox = true
+$global.eusan_nation_penroseRecovery2_recoveredData = true","The team touches down and begins to hike towards the signal. Given how badly the signal had been scrambled by the planet's own atmosphere, its a miracle that the communication's officer managed to located the crashed Penrose with accuracy. 
+
+Arriving at the crashed ship, your team lead sends a radio message which arrived garbled. You can only make out traces of voice as the team leader makes his report.
+
+""Craft...landed...intact...cryo. Checking..."" the transmission says. Not very helpful. You give a nod to your comm officer and he makes a few adjustments.","officeryeongPenroseRecovery2Option3: Continue",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION4,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option3",,"As time went on, you begin to feel impatient and order your comm officer to clean up the transmissions coming from the surface. The officer complies and begins to start adjusting his equipment. A few more adjustments and the comm officer finally reports a new transmission from the recovery team.
+
+""Sir? We have something you may want to see."" the officer reports. He hands a printout from the communication's  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find a somewhat intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. The medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened with the cryo chamber. Apparently the cryo chamber was still operating. 
+
+The pilot, Mary Cheng, gives you a rather drowsy salute. Temporary side effects of the cryo chamber no doubt. The medical team already is beginning to go over her. 
+
+""Thank you so much."" she begins. Her voice quivering with emotion. You can see tears in her eyes.
+
+""You saved my life. I had long since given up hope of rescue. I cannot express how grateful i am for you to come to my aid. I knew the Nation will one day rescue me but i had begun to lose hope every time i woke up from cryo.""
+
+""Let me repay you in kind. Let me join your fleet."" she says.
+
+It seems that Mary wants to join your fleet. You are always in need of officers so why not? ","officeryeongPenroseRecovery2Option5: Lets go home then.",
+OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
 "#END RECOVERY2",,,,,,
 ,,,,,,
 # RECOVERY2_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_FINAL,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_penroseRecovery2_start == true
+$global.eusan_nation_penroseRecovery2_completed == false",,,"officeryeongPenroseRecovery2Final: Update Ariane on the status of your mission.",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Final","FireAll PopulatePenroseRecovery2Options",,,
+OFFICER_YEONG_PENROSERECOVERY2_CANCEL_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == false",,,"officeryeongPenroseRecovery2Cancel: Tell her that you have yet to complete the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Cancel","FireAll PopulateOptions","""Wasting my time is it now?""
+
+Your admission to her has visibly annoyed her. Its almost like you can see a small snarl.
+
+""Please let me know if you finished your job.""
+
+",,
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == true",,,"officeryeongPenroseRecovery2ConfirmOption: Tell her that you recovered the mission data recorder.",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2ConfirmOption",,"""TO DO LATER PLACEHOLDER""","officeryeongPenroseRecovery2Confirm1: Continue",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm1",,"""TO DO LATER PLACEHOLDER""","officeryeongPenroseRecovery2Confirm2: Continue",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm2","$global.eusan_nation_penroseRecovery2_completed = true
+Call $global.eusan_nation_penroseRecovery2_ref updateStage
+AddStoryPoints 1
+FireAll PopulateOptions","""TO DO LATER PLACEHOLDER""",,
 "#END RECOVERY2_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSERECOVERY2_QUEST",,,,,,
 ,,,,,,
