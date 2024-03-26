@@ -9,8 +9,6 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc.Token;
 
-import data.campaign.missions.eusan_nation_penroseRecovery1;
-
 public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
 
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -20,25 +18,9 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
     if(params.isEmpty()){
         return false;
     }
-    String ruleCall = params.get(0).getString(memoryMap);
+    String ruleCall1 = params.get(0).getString(memoryMap);
 
-    // if(ruleCall.equals("playSignal_penroseRecovery1")){
-    //     Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
-    // }
-    // else if(ruleCall.equals( "endMusic_penroseRecovery1")){
-    //     Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
-    //     Global.getSoundPlayer().pauseMusic();
-    // }
-    // else if(ruleCall.equals( "resumeMusic_penroseRecovery1")){
-    //     Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
-	// 	   Global.getSoundPlayer().restartCurrentMusic();
-    // }
-    // else{
-    //     dialog.getTextPanel().addPara("Uh oh an error has occured!");
-    //     dialog.getTextPanel().addPara("No intel for code: " + ruleCall);
-    // }
-
-    switch(ruleCall){
+    switch(ruleCall1){
         case "playSignal_penroseRecovery1":
             Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
             break;
@@ -52,7 +34,7 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
             break;
         default:
             dialog.getTextPanel().addPara("Uh oh an error has occured!");
-            dialog.getTextPanel().addPara("No intel for code: " + ruleCall);
+            dialog.getTextPanel().addPara("No intel for code: " + ruleCall1);
             break;
     }
            

@@ -494,7 +494,7 @@ FireAll PopulateOptions",,,
 "#END RECOVERY2_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY2_ENCOUNTER,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,OpenCommLink,"$entity.eusan_nation_hostilefleet score:100","$entity.ignorePlayerCommRequests = true","In the screen, the Trit Tacheyon fleet commander gives you a unfriendly look as if $HeOrShe just gotten a unwanted guest in $HeOrShe house.
+OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,OpenCommLink,"$entity.eusan_nation_hostilefleet score:100","$entity.ignorePlayerCommRequests = true","In the screen, the Tri-Tachyon fleet commander gives you a unfriendly look as if $HeOrShe just gotten a unwanted guest in $HeOrShe house.
 
 ""This is Commander $personName. You entered into our patrol zone. If you come here just to talk, you are sadly mistaken.""
 
@@ -522,18 +522,18 @@ Arriving at the crashed ship, your team lead sends a radio message which arrived
 ""Craft...landed...intact...cryo. Checking..."" the transmission says. Not very helpful. You give a nod to your comm officer and he makes a few adjustments.","officeryeongPenroseRecovery2Option3: Continue",
 OFFICER_YEONG_PENROSERECOVERY2_OPTION4,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option3",,"As time went on, you begin to feel impatient and order your comm officer to clean up the transmissions coming from the surface. The officer complies and begins to start adjusting his equipment. A few more adjustments and the comm officer finally reports a new transmission from the recovery team.
 
-""Sir? We have something you may want to see."" the officer reports. He hands a printout from the communication's  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find a somewhat intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. The medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened with the cryo chamber. Apparently the cryo chamber was still operating. 
+""Sir? We have something you may want to see."" the officer reports. He hands a printout from the communication's  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find an intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. The medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened on the surface. Apparently the cryo chamber was still operating and the pilot was alive.
 
-The pilot, Mary Cheng, gives you a rather drowsy salute. Temporary side effects of the cryo chamber no doubt. The medical team already is beginning to go over her. 
+The pilot, Mary Cheng, gives you a rather flimsy salute. Temporary side effects of the cryo chamber no doubt. The medical team already is beginning to go over her. 
 
 ""Thank you so much."" she begins. Her voice quivering with emotion. You can see tears in her eyes.
 
-""You saved my life. I had long since given up hope of rescue. I cannot express how grateful i am for you to come to my aid. I knew the Nation will one day rescue me but i had begun to lose hope every time i woke up from cryo.""
+""You saved my life. I had long since given up hope of rescue. I cannot express how grateful i am for you to come to my aid. I knew the Nation will one day rescue me but I had begun to lose hope every time I woke up from cryo. The last time I went to cryo sleep, I just set the timer to 100 years.""
 
-""Let me repay you in kind. Let me join your fleet."" she says.
+""Let me repay you in kind. Let me join your fleet as an officer."" she says.
 
-It seems that Mary wants to join your fleet. You are always in need of officers so why not? ","officeryeongPenroseRecovery2Option5: Lets go home then.",
+It seems that Mary wants to join your fleet. You are always in need of officers so why not? ","officeryeongPenroseRecovery2Option5: Welcome aboard! Lets go home..",
 OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
 "#END RECOVERY2",,,,,,
 ,,,,,,

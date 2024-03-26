@@ -138,7 +138,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
             info.addPara("Destroy hostile forces in the " + target_starsystem.getNameWithNoType() + " star system before recovering the Penrose.", opad);
         }
         else if(currentStage == Stage.LOCATE_PENROSE388){
-            info.addPara("Locate and recover the blackbox of the PENROSE-488.", opad);
+            info.addPara("Locate and recover the blackbox of the PENROSE-388.", opad);
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
             info.addPara("Blackbox retrieved. Return the data to " + officer_yeong.getNameString() + ".", opad);
@@ -148,7 +148,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     @Override
     public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
         if(currentStage == Stage.DEFEAT_HOSTILES){
-            info.addPara("Destroy hostile forces in the " + target_starsystem.getNameWithLowercaseTypeShort() + " star system before recovering the Penrose.", tc, pad);
+            info.addPara("Destroy hostile forces in the " + target_starsystem.getNameWithLowercaseTypeShort() + " star system before recovering the Penrose-388.", tc, pad);
             return true;
         }
         else if(currentStage == Stage.LOCATE_PENROSE388){
@@ -156,7 +156,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
             return true;
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
-            info.addPara("Return to " + officer_yeong.getNameString() + ".", tc, pad);
+            info.addPara("Blackbox retrieved. Return the data to " + officer_yeong.getNameString() + ".", tc, pad);
             
         }
         return false;
