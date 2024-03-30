@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.combat.BattleObjectiveAPI.Importance;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
@@ -23,8 +24,11 @@ public class Eusan_Nation_People {
     public static String ADMIRAL_FALKE_LASTNAME = "VSF01";
     public static String SPECIAL_AGENT = "eusan_nation_special_agent";
     public static String ROTFRONT_FLEETADMIRAL = "eusan_nation_rotfront_admiral";
-
-	public static MarketAPI market = null;
+    public static String MARY_CHENG = "eusan_nation_mary_cheng";
+    public static String MARY_CHENG_FIRST_NAME = "Mary";
+	public static String MARY_CHENG_LAST_NAME = "Cheng";
+    
+    public static MarketAPI market = null;
 
     public static PersonAPI getPerson(String id) {
 		return Global.getSector().getImportantPeople().getPerson(id);
@@ -33,6 +37,7 @@ public class Eusan_Nation_People {
     public void create() {
         createImportantPeople_heimat();
         createImportantPeople_vineta();
+        createImportantPeople_miscOfficers();
 	}
 
     public static void createImportantPeople_heimat(){
@@ -131,6 +136,30 @@ public class Eusan_Nation_People {
             rotfront_fleetAdmiral.addTag("coff_nocapture");
             importantpeople_rotfront.addPerson(rotfront_fleetAdmiral);    
         }
+    }
+
+    public static void createImportantPeople_miscOfficers(){
+        ImportantPeopleAPI importantpeople_miscOfficers = Global.getSector().getImportantPeople();
+        PersonAPI mary_cheng = Global.getFactory().createPerson();
+        mary_cheng.setId(MARY_CHENG);
+        mary_cheng.setFaction(EUSAN_NATION);
+        mary_cheng.getName().setFirst(MARY_CHENG_FIRST_NAME);
+        mary_cheng.getName().setLast(MARY_CHENG_LAST_NAME);
+        mary_cheng.setGender(Gender.FEMALE);
+        mary_cheng.setRankId("gestaltOfficer");
+        mary_cheng.setPostId("gestaltPenrosePilot");
+        mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
+        mary_cheng.setImportance(PersonImportance.MEDIUM);
+        mary_cheng.setPersonality(Personalities.STEADY);
+        mary_cheng.getStats().setLevel(5);
+        mary_cheng.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
+        mary_cheng.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 1);
+        mary_cheng.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);
+        mary_cheng.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
+        mary_cheng.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
+        mary_cheng.setVoice(Voices.SOLDIER);
+        mary_cheng.addTag("coff_nocapture");
+        importantpeople_miscOfficers.addPerson(mary_cheng);
     }
     
 }

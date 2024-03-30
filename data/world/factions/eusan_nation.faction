@@ -215,12 +215,9 @@
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
-			"protektor_flkr":{"name":"Protektor Führungskommando"},
-			"protektor_stcr":{"name":"Protektor Security Leader"},
-			"fac_adlr":{"name":"Facility Administrator"},
-			"bloc_kncr":{"name":"Blockwart"},	
-			"gestaltVMFlightOfficer":{"name":"Gestalt Flight Officer"},
-			"gestaltOfficer":{"name":"Gestalt Officer"}
+			"replika":{"name":"Replika"},
+			"gestaltOfficer":{"name":"Gestalt Officer"},
+			"gestaltFlightOfficer":{"name":"Gestalt Flight Officer"}
 		},
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
@@ -240,7 +237,9 @@
 			"stcr":{"name":"Protektor Security Leader"},
 			"kncr":{"name":"Blockwart"},
 			"gestaltInvestigator":{"name":"Investigator"},
-			"gestaltAgent":{"name":"Agent"}
+			"gestaltAgent":{"name":"Agent"},
+			"gestaltPenrosePilot":{"name":"Penrose Flight Officer"}
+
 		},
 	},
 	"voices":{

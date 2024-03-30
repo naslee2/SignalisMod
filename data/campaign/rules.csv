@@ -341,6 +341,7 @@ OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == office
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
+ShowPersonVisual
 FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
 OR
 ""Take your time. Come back later if you want to proceed.""
@@ -509,7 +510,8 @@ $global.officeryeong_penroseRecovery2_start == true
 FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
 OFFICER_YEONG_PENROSERECOVERY2_OPTION1,PopulateOfficerYeongPenroseRecovery2Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the Penrose SOS signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery2Option1: Enter Orbit around the planet
 defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1",,"Entering orbit around the planet, your communications officer noticed a faint signal from the surface. Your officer and his assistants begin to triangulate the signal as you order your recovery teams to the shuttle bay.
+OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1","eusan_nation_penroseRecovery2_rulecmd endMusic_penroseRecovery2
+eusan_nation_penroseRecovery2_rulecmd playSignal_penroseRecovery2","Entering orbit around the planet, your communications officer noticed a faint signal from the surface. Your officer and his assistants begin to triangulate the signal as you order your recovery teams to the shuttle bay.
 
 Your officer noted there is unusual interference from the surface but its a natural phenomenon. You give the officer a nod, thankful that there is no more interference from hostile actors. 
 
@@ -523,7 +525,8 @@ Arriving at the crashed ship, your team lead sends a radio message which arrived
 OFFICER_YEONG_PENROSERECOVERY2_OPTION4,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option3",,"As time went on, you begin to feel impatient and order your comm officer to clean up the transmissions coming from the surface. The officer complies and begins to start adjusting his equipment. A few more adjustments and the comm officer finally reports a new transmission from the recovery team.
 
 ""Sir? We have something you may want to see."" the officer reports. He hands a printout from the communication's  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find an intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. The medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened on the surface. Apparently the cryo chamber was still operating and the pilot was alive.
+OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","eusan_nation_penroseRecovery2_rulecmd resumeMusic_penroseRecovery2
+Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened on the surface. Apparently the cryo chamber was still operating and the pilot was alive.
 
 The pilot, Mary Cheng, gives you a rather flimsy salute. Temporary side effects of the cryo chamber no doubt. The medical team already is beginning to go over her. 
 
@@ -534,7 +537,8 @@ The pilot, Mary Cheng, gives you a rather flimsy salute. Temporary side effects 
 ""Let me repay you in kind. Let me join your fleet as an officer."" she says.
 
 It seems that Mary wants to join your fleet. You are always in need of officers so why not? ","officeryeongPenroseRecovery2Option5: Welcome aboard! Lets go home..",
-OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
+OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","eusan_nation_penroseRecovery2_rulecmd add_officer_penroseRecovery2
+FireAll PopulateOptions",,,
 "#END RECOVERY2",,,,,,
 ,,,,,,
 # RECOVERY2_MISSION_END,,,,,,
