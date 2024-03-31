@@ -147,6 +147,7 @@ public class Eusan_Nation_People {
         mary_cheng.getName().setLast(MARY_CHENG_LAST_NAME);
         mary_cheng.setGender(Gender.FEMALE);
         mary_cheng.setRankId("gestaltOfficer");
+        //mary_cheng.setRankId(Ranks.SPACE_LIEUTENANT);
         mary_cheng.setPostId("gestaltPenrosePilot");
         mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
         mary_cheng.setImportance(PersonImportance.MEDIUM);

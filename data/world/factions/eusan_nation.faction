@@ -215,9 +215,7 @@
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
-			"replika":{"name":"Replika"},
-			"gestaltOfficer":{"name":"Gestalt Officer"},
-			"gestaltFlightOfficer":{"name":"Gestalt Flight Officer"}
+	
 		},
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
@@ -225,21 +223,6 @@
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},
 			"baseCommander":{"name":"Kapitän zur See"},
-			"adlr":{"name":"Facility Administrator"},
-			"arar":{"name":"Low Cost Repair Worker"},
-			"eulr":{"name":"Low-Cost Domestic Worker"},
-			"flkr":{"name":"Protektor Führungskommando"},
-			"klbr":{"name":"Elite Protektor Specialist"},
-			"lstr":{"name":"Kosmo-Pioneer Specialist"},
-			"mnhr":{"name":"Industrial Specialist"},
-			"sapr":{"name":"Heavy Weapons Specialist"},
-			"star":{"name":"Protektor Security Technician"},
-			"stcr":{"name":"Protektor Security Leader"},
-			"kncr":{"name":"Blockwart"},
-			"gestaltInvestigator":{"name":"Investigator"},
-			"gestaltAgent":{"name":"Agent"},
-			"gestaltPenrosePilot":{"name":"Penrose Flight Officer"}
-
 		},
 	},
 	"voices":{
