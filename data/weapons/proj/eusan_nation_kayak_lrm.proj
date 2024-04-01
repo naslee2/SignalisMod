@@ -2,9 +2,9 @@
 	"id":"eusan_nation_kayak_lrm",
 	"specClass":"missile",	
 	"missileType":"MISSILE",
-	"sprite":"graphics/missiles/eusan_nation_kayak_lrm.png",
-	"size":[17,43],	
-	"center":[8.5,22],
+	"sprite":"graphics/missiles/eusan_nation_kayak_mirv2.png",
+	"size":[13,31],	
+	"center":[6.5,16],
 	"collisionRadius":16,
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color

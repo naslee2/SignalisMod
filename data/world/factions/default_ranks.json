@@ -1,0 +1,24 @@
+{
+    "ranks":{
+        "gestaltOfficer":{"name":"Leutnant zur See"},
+        "replika":{"name":"Replika"},
+        "gestaltAgentRank":{"name":"Undercover Operative"}
+    },
+    "posts":{
+        "adlr":{"name":"Facility Administrator"},
+		"arar":{"name":"Low Cost Repair Worker"},
+		"eulr":{"name":"Low-Cost Domestic Worker"},
+		"flkr":{"name":"Protektor Führungskommando"},
+		"klbr":{"name":"Elite Protektor Specialist"},
+		"lstr":{"name":"Kosmo-Pioneer Specialist"},
+		"mnhr":{"name":"Industrial Specialist"},
+		"sapr":{"name":"Heavy Weapons Specialist"},
+		"star":{"name":"Protektor Security Technician"},
+		"stcr":{"name":"Protektor Security Leader"},
+		"kncr":{"name":"Blockwart"},
+		"gestaltInvestigator":{"name":"Investigator"},
+		"gestaltAgent":{"name":"Agent"},
+		"gestaltPenrosePilot":{"name":"Penrose Flight Officer"}
+    }
+
+}

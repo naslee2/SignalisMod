@@ -9,6 +9,36 @@
                 ],
                 "randomStart": true
             }
+        ],
+        "penrose_419_SOS":[
+            {
+                "source":"sounds/music",
+                "volume":0.3,
+                "files":[
+                    "tcp_d3_20_a_irdial.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "penrose_388_SOS":[
+            {
+                "source":"sounds/music",
+                "volume":0.3,
+                "files":[
+                    "tcp_d3_20_a_irdial.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "penrose_512_SOS":[
+            {
+                "source":"sounds/music",
+                "volume":0.3,
+                "files":[
+                    "tcp_d1_12_three_note_odditiy_irdial.ogg"
+                ],
+                "randomStart": true
+            }
         ]
     }
 }

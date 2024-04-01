@@ -13,10 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_engineering_design",
-    "eusan_nation_replika_cadre",
   ],
   "builtInWeapons": {
-    "WS0001": "eusan_nation_kayak"
+    "WS0001": "eusan_nation_kayak_R"
   },
   "weaponSlots": [
     {
@@ -72,6 +71,33 @@
       "arc": 230,
       "angle": 180,
       "locations": [-68, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [95, -0]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 155,
+      "locations": [-29, 37]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -155,
+      "locations": [-29, -37]
     }
   ],
   "engineSlots": [

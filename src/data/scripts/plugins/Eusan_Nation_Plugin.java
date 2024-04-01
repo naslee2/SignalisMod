@@ -38,11 +38,21 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
             throw new RuntimeException("This mod requires Magic Lib");
         }
     }
+
     // @Override
-    // public void onNewGameAfterEconomyLoad() {
+    // public void onGameLoad(boolean newGame) {
     //     SectorAPI sector = Global.getSector();
-    //     if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
-    //         sector.addScript(new Eusan_Nation_personalFleetFalke());
-    //     }
+    //         if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
+    //             sector.addScript(new Eusan_Nation_personalFleetFalke());
+    //         }
     // }
+    
+    @Override
+    public void onNewGameAfterEconomyLoad() {
+        SectorAPI sector = Global.getSector();
+        new Eusan_Nation_People().create();
+        if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
+            sector.addScript(new Eusan_Nation_personalFleetFalke());
+        }
+    }
 }

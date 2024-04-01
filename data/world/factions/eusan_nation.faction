@@ -1,6 +1,9 @@
 {
 	id:"eusan_nation",
 	"color":[124,36,30,255],
+	#"baseUIColor":[106,21,28,255],
+	#"secondaryUIColor":[194,133,12,255],
+	"secondarySegments":4,
 	"displayName":"Eusan Nation",
 	"displayNameWithArticle":"the Eusan Nation",
 	"logo":"graphics/factions/eusan_nation_banner.png", #modifed flag from original by TheFrommie86
@@ -63,7 +66,7 @@
 		"hulls":[],
 	},
 	"knownShips":{
-		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp","base_bp","lowtech_bp", "midline_bp"],
+		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp"],
 		"hulls":[
 			"eusan_nation_penrose",
 			"eusan_nation_pelikan",
@@ -101,10 +104,8 @@
 		"hulls":[],
 	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp"],
+		"tags":[],
 		"fighters":[
-			"thunder_wing",
-			"hoplon_wing",
 		],
 	},
 	"priorityFighters":{
@@ -214,12 +215,7 @@
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
-			"protektor_flkr":{"name":"Protektor Führungskommando"},
-			"protektor_stcr":{"name":"Protektor Security Leader"},
-			"fac_adlr":{"name":"Facility Administrator"},
-			"bloc_kncr":{"name":"Blockwart"},	
-			"gestaltVMFlightOfficer":{"name":"Gestalt Flight Officer"},
-			"gestaltOfficer":{"name":"Gestalt Officer"}
+	
 		},
 		"posts":{
 			"factionLeader":{"name":"Vorsitzender"},
@@ -227,19 +223,6 @@
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},
 			"baseCommander":{"name":"Kapitän zur See"},
-			"adlr":{"name":"Facility Administrator"},
-			"arar":{"name":"Low Cost Repair Worker"},
-			"eulr":{"name":"Low-Cost Domestic Worker"},
-			"flkr":{"name":"Protektor Führungskommando"},
-			"klbr":{"name":"Elite Protektor Specialist"},
-			"lstr":{"name":"Kosmo-Pioneer Specialist"},
-			"mnhr":{"name":"Industrial Specialist"},
-			"sapr":{"name":"Heavy Weapons Specialist"},
-			"star":{"name":"Protektor Security Technician"},
-			"stcr":{"name":"Protektor Security Leader"},
-			"kncr":{"name":"Blockwart"},
-			"gestaltInvestigator":{"name":"Investigator"},
-			"gestaltAgent":{"name":"Agent"}
 		},
 	},
 	"voices":{
@@ -279,11 +262,11 @@
 		"tradeSmuggler":"Smuggler",
         "smallTrader":"Trader",
 
-        "patrolSmall":"Grenzabteilung",
-        "patrolMedium":"Grenzbrigade",
-        "patrolLarge":"Grenzflottille",
+        "patrolSmall":"Patrouillengruppe",
+        "patrolMedium":"Patrouillenbrigade",
+        "patrolLarge":"Patrouillenflottille",
 
-		#"inspectionFleet":"Inspektionsflotte",
+		#"inspectionFleet":"Inspektionsflottille",
 		"taskForce":"Flottile",
 
         "foodReliefFleet":"Humanitarian Convoy",

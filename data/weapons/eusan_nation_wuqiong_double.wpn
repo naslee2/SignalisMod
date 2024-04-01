@@ -1,0 +1,53 @@
+{
+  "id": "eusan_nation_wuqiong_double",
+  "specClass": "projectile",
+  "projectileSpecId": "eusan_nation_wuqiong_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "displayArcRadius": 400,
+  "turretSprite": "graphics/weapons/eusan_nation_flak_turret_base.png",
+  "turretGunSprite": "graphics/weapons/eusan_nation_flak_turret_gun.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_flak_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/eusan_nation_flak_hardpoint_gun.png",
+  "visualRecoil": 5,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    19,
+    -3.5,
+    19,
+    3.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    29.5,
+    -3.5,
+    29.5,
+    3.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 40,
+    "spread": 30,
+    "particleSizeMin": 16,
+    "particleSizeRange": 18,
+    "particleDuration": 0.3,
+    "particleCount": 46,
+    "particleColor": [
+      75,
+      255,
+      230,
+      225
+    ]
+  },
+  "fireSoundTwo": "flak_fire"
+}

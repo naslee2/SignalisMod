@@ -1,0 +1,212 @@
+{
+  "hullName": "Isolde",
+  "hullId": "eusan_nation_isolde_imperial",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/eusan_nation_isolde_empire.png",
+  "style": "MIDLINE",
+  "height": 290,
+  "width": 132,
+  "center": [66, 145],
+  "collisionRadius": 179.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 173.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "builtInWeapons": {
+    "WS0001": "eusan_nation_isolde_builtin",
+    "WS0014": "eusan_nation_isolde_deco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [124.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [4, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": 0,
+      "locations": [-39, 40]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": -0,
+      "locations": [-39, -40]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [90, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 70,
+      "locations": [65, 13]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -70,
+      "locations": [65, -13]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 70,
+      "locations": [33, 16]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -70,
+      "locations": [33, -16]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [-25, 22]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [-25, -22]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 135,
+      "locations": [-123, 28]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -135,
+      "locations": [-123, -28]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [128, -0],
+      "renderOrderMod": 100
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-130, -0],
+      "length": 48,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-132, 28],
+      "length": 41,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-132, -28],
+      "length": 41,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-129, 8],
+      "length": 34,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-129, -8],
+      "length": 34,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "EUSAN_IMPERIAL"
+    }
+  ],
+  "bounds": [
+    -134, -22,
+    -143, -35,
+    -121, -45,
+    -115, -41,
+    -81, -52,
+    -33, -50,
+    -31, -33,
+    129, -17,
+    142, -11,
+    142, 11,
+    129, 17,
+    -31, 33,
+    -33, 50,
+    -81, 52,
+    -115, 41,
+    -121, 45,
+    -143, 35,
+    -134, 22
+  ]
+}

@@ -11,7 +11,11 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
+//import org.apache.log4j.Logger;
+
 public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
+
+    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery1.class);
 
     public static enum Stage {
         LOCATE_PENROSE419,
@@ -22,7 +26,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
     protected PersonAPI officer_yeong;
     protected PlanetAPI vineta;
     protected PlanetAPI target_planet;
-    protected StarSystemAPI target_starsystem;
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
@@ -35,6 +38,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
         resetSearch();
         requirePlanetUnpopulated();
+        requirePlanetNotStar();
 		preferPlanetNotFullySurveyed();
 		preferPlanetInDirectionOfOtherMissions();
         preferPlanetWithoutRuins();
@@ -42,6 +46,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         preferSystemUnexplored();
         preferSystemNotPulsar();
         preferSystemNotBlackHole();
+        
 
         target_planet = pickPlanet();
 
@@ -51,9 +56,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         if (target_planet == null) {
 			return false;
 		}
-        if(target_planet.isStar()){
-            return false;
-        }
 
         setStartingStage(Stage.LOCATE_PENROSE419);
         addSuccessStages(Stage.COMPLETED);
@@ -82,10 +84,10 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
     }
 
     protected void updateInteractionDataImpl(){
-        set("$eusan_nation_penroseRecovery1_planetId",target_planet.getId());
-        set("$eusan_nation_penroseRecovery1_planetName",target_planet.getName());
-        set("$eusan_nation_penroseRecovery1_systemName",target_planet.getStarSystem().getNameWithNoType());
-        set("$eusan_nation_penroseRecovery1_distanceLy",getDistanceLY(target_planet));
+        set("$eusan_nation_penroseRecovery1_planetId", target_planet.getId());
+        set("$eusan_nation_penroseRecovery1_planetName", target_planet.getName());
+        set("$eusan_nation_penroseRecovery1_systemName", target_planet.getStarSystem().getNameWithNoType());
+        set("$eusan_nation_penroseRecovery1_distanceLy", getDistanceLY(target_planet));
     }
     
     @Override
@@ -102,7 +104,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
     @Override
     public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
         if(currentStage == Stage.LOCATE_PENROSE419){
-            info.addPara("A transponder signal has been detected. Locate and recover the Penrose-419's blackbox and any remains of the crew if possible.", tc, pad);
+            info.addPara("A transponder signal has been detected. Locate and recover the Penrose-419's blackbox and any remains of the crew if possible. The location has been determined to be at " + target_planet.getName() + " in the " + target_planet.getStarSystem().getNameWithNoType() + " system.", tc, pad);
             return true;
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
@@ -113,7 +115,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
     @Override
     public String getBaseName() {
-        return "Recover the mission data recorder from the PENROSE-419";
+        return "Recover the PENROSE-419's mission data recorder";
     }
 
     @Override

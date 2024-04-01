@@ -16,18 +16,14 @@ import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_replika_cadre extends BaseHullMod {
 
-    public static float MAINTENANCE_MULT = 0.8f;
-    public static float REPAIR_BONUS = 50f;
-	//public static float REPAIR_RATE_BONUS = 50f;
-	//public static float CR_RECOVERY_BONUS = 50f;
-    //public static float OVERLOAD_BONUS = 20f;
+    public static float MAINTENANCE_MULT = 0.6f;
+    public static float REPAIR_BONUS = 35f;
 
     static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
     static String eusan_nation_replika_cadre1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText1");
-    //static String eusan_nation_replika_cadre2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText2");
-    //static String eusan_nation_replika_cadre3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText3");
+
     static String eusan_nation_replika_cadre2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText2");
-    //static String eusan_nation_replika_cadre5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText5");
+
     static String eusan_nation_replika_cadre3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText3");
     static String eusan_nation_replika_cadre4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText4");
     
@@ -47,7 +43,7 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		if(ship.getVariant().getHullMods().contains(HullMods.EFFICIENCY_OVERHAUL)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "Replika Cadre");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "eusan_nation_replika_cadre");
 		}
         // if(ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
         //     MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.AUTOREPAIR, "Replika Cadre");

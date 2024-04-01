@@ -1,0 +1,157 @@
+{
+  "hullName": "Jagd ",
+  "hullId": "eusan_nation_jagd_imperial",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/eusan_nation_jagd_empire.png",
+  "style": "MIDLINE",
+  "height": 206,
+  "width": 100,
+  "center": [50, 97],
+  "collisionRadius": 131.5,
+  "shieldCenter": [6, 0],
+  "shieldRadius": 123.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [80, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 60,
+      "locations": [30, 13]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -60,
+      "locations": [30, -13]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 60,
+      "locations": [-2, 16]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -60,
+      "locations": [-2, -16]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 180,
+      "locations": [-72, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-37, 42]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-37, -42]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 24,
+      "locations": [-23, 27]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -24,
+      "locations": [-23, -27]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-82, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-85, -0],
+      "length": 52,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-83, 26.5],
+      "length": 29,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "EUSAN_IMPERIAL"
+    },
+    {
+      "location": [-83, -26.5],
+      "length": 29,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "EUSAN_IMPERIAL"
+    }
+  ],
+  "bounds": [
+    -86, -33,
+    -73, -34,
+    -45, -47,
+    -15, -28,
+    90, -16,
+    90, 16,
+    -15, 28,
+    -45, 48,
+    -53, 38,
+    -82, 33,
+    -92, -0
+  ]
+}

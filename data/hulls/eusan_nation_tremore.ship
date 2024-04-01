@@ -14,7 +14,6 @@
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_engineering_design",
-    "eusan_nation_replika_cadre",
   ],
   "builtInWeapons": {
     "WS0007": "eusan_nation_tremore_deco1"
