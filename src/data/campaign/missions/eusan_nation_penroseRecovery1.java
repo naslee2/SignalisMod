@@ -38,6 +38,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
         resetSearch();
         requirePlanetUnpopulated();
+        requirePlanetNotStar();
 		preferPlanetNotFullySurveyed();
 		preferPlanetInDirectionOfOtherMissions();
         preferPlanetWithoutRuins();
@@ -45,6 +46,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         preferSystemUnexplored();
         preferSystemNotPulsar();
         preferSystemNotBlackHole();
+        
 
         target_planet = pickPlanet();
 
@@ -54,9 +56,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         if (target_planet == null) {
 			return false;
 		}
-        if(target_planet.isStar()){
-            return false;
-        }
 
         setStartingStage(Stage.LOCATE_PENROSE419);
         addSuccessStages(Stage.COMPLETED);

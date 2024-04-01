@@ -50,6 +50,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
 
         resetSearch();
         requirePlanetUnpopulated();
+        requirePlanetNotStar();
 		preferPlanetNotFullySurveyed();
 		preferPlanetInDirectionOfOtherMissions();
         preferPlanetWithoutRuins();
@@ -67,9 +68,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         if (target_planet == null) {
 			return false;
 		}
-        if(target_planet.isStar()){
-            return false;
-        }
 
         tritach_fleetcommander = Global.getSector().getFaction(Factions.TRITACHYON).createRandomPerson();
         tritach_fleetcommander.setRankId(Ranks.SPACE_COMMANDER);
