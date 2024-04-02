@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_triglav_standard",
   "hullId": "eusan_nation_triglav",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 10,
   "fluxVents": 10,
   "quality": 1,

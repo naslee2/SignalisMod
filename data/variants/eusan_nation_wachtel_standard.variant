@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_wachtel_standard",
   "hullId": "eusan_nation_wachtel",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 6,
   "fluxVents": 6,
   "quality": 1,

@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_pelikan_standard",
   "hullId": "eusan_nation_pelikan",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 5,
   "fluxVents": 5,
   "quality": 1,
