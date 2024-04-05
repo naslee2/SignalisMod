@@ -145,7 +145,7 @@
 		"hullMods":[
 			"reinforcedhull",
     		"blast_doors",
-    		"dedicated_targeting_core".
+    		"dedicated_targeting_core",
 			"expanded_deck_crew",
 			"magazines",
 			"missleracks",
