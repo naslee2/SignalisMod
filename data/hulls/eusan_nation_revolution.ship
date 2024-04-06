@@ -13,7 +13,7 @@
   "shieldRadius": 236.5,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
+    "eusan_nation_engineering_design"
   ],
   "builtInWeapons": {
     "DECO1": "eusan_nation_revolution_deco1",
@@ -38,7 +38,8 @@
       "mount": "TURRET",
       "arc": 230,
       "angle": 0,
-      "locations": [-46, -0]
+      "locations": [-46, -0],
+      "renderOrderMod": 100
     },
     {
       "id": "WS0003",

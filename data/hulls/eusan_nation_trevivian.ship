@@ -13,8 +13,11 @@
   "shieldRadius": 109,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
+    "eusan_nation_engineering_design"
   ],
+  "builtInWeapons": {
+    "WS0008": "eusan_nation_trevivian_builtin"
+  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -78,6 +81,15 @@
       "arc": 255,
       "angle": 180,
       "locations": [-60, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [49, -0]
     }
   ],
   "engineSlots": [
