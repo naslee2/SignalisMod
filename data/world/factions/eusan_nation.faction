@@ -35,8 +35,8 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
-			"eusan_nation_standard_bp":1,
-			"eusan_nation_advanced_bp":0.9
+			"eusan_nation_standard_package":1,
+			"eusan_nation_advanced_package":0.9
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
@@ -62,11 +62,11 @@
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["eusan_nation_standard_bp","eusan_nation_advanced_bp"],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[],
 	},
 	"knownShips":{
-		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp"],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[
 			"eusan_nation_penrose",
 			"eusan_nation_pelikan",
@@ -109,7 +109,7 @@
 		"fighters":[],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp"],
+		"tags":["missile_bp"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -138,6 +138,12 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"harpoonpod",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
 		],
 	},
 	"knownHullMods":{
