@@ -1,7 +1,7 @@
 {
   "id": "eusan_nation_taean",
   "specClass": "projectile",
-  "projectileSpecId": "hellbore_shot",
+  "projectileSpecId": "heavymauler_shot",
   "type": "BALLISTIC",
   "size": "LARGE",
   "displayArcRadius": 600,
@@ -48,7 +48,7 @@
     "particleSizeMin": 10,
     "particleSizeRange": 25,
     "particleDuration": 0.75,
-    "particleCount": 25,
+    "particleCount": 20,
     "particleColor": [
       255,
       120,
