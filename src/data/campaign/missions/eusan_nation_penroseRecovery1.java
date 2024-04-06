@@ -76,7 +76,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         endTrigger();
 
         setCreditReward(100000);
-        //Global.getSector().getPlayerStats().addStoryPoints(1);
         setRepRewardPerson(RepRewards.HIGH);
 		setRepRewardFaction(RepRewards.HIGH);
 
