@@ -1,7 +1,5 @@
 package data.campaign.missions;
 
-import static com.fs.starfarer.api.impl.campaign.ids.FleetTypes.PATROL_MEDIUM;
-
 import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
@@ -18,6 +16,7 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
@@ -75,7 +74,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
 
         //enemy fleet
-        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, PATROL_MEDIUM, 50f, 10f, 10f, 10f, 0f, 0f, -10f); 
+        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.PATROL_MEDIUM, 50f, 10f, 10f, 10f, 0f, 0f, -10f); 
         hostile_fleetParams.averageSMods = 1;
 
         target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);

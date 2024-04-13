@@ -3,22 +3,22 @@ id,trigger,conditions,script,text,options,notes
 ,,,,,,
 # RULESET_TRADE_FLAVOR_TEXT_START,,,,,,
 flavorTextMarketBuyan,TradePanelFlavorText,"$market.id == buyan_market score:1000
-$id == eusan_nation_buyan","AddText""Entering the station after docking you can see a large emblem of the Nation emblazoned prominently over the main entranceway. Numerous replika units are working around the dockyard with several roaming with weaponry. This is a major security zone as most of the patrolling replikas are armed with shotguns, rifles and shields. A stern looking replika security officer steps towards you to demand that you sign several forms, shoving a rather beaten computer pad in your face. After what seems like an eternity, you finally sign the last of the forms just for docking. Satisfied, the replika officer then waves you past the security checkpoint, allowing you to, at last, begin your errands and business at the station"" textGrayColor",,,
+$id == eusan_nation_buyan","AddText""Entering the station after docking, you see a large emblem of the Nation emblazoned prominently over the main entrance. Numerous replika units can be seen working in the dockyard, many of them visibly armed. A stern looking replika security officer stops you, and demands that you sign several forms, shoving a rather beaten looking computer pad in your face. After what seems like an eternity, you are finally waved past the checkpoint."" textGrayColor",,,
 flavorTextMarketVineta,TradePanelFlavorText,"$market.id == vineta_market score:1000
-$id == eusan_nation_vineta","AddText""Arriving at Vineta, you are immediately greeted by a large crowd of people waiting for transport to and from the planet. At the security checkpoint, the security replika hands you a rather worn looking computer pad. Numerous customs and declaration forms labeled REQUIRED greet your eyes. After a very long time you finally complete the last form and hand the pad back to the replika. Satisfied she opens the security gate and waves you in. As you walk out, you can hear the replika behind you shout 'NEXT' for the next person in line."" textGrayColor",,,
+$id == eusan_nation_vineta","AddText""Arriving at Vineta, you are immediately greeted by a large crowd of people waiting for transport to and from the planet. The planets shattered moon hangs heavy in the morning sky above, a dramatic backdrop to the mundane logistics work going on around you."" textGrayColor",,,
 flavorTextMarketKitezh,TradePanelFlavorText,"$market.id == kitezh_market score:1000
-$id == eusan_nation_kitezh","AddText""The embarkation area was teeming with a large number of workers and replikas handling sizable cargo containers being loaded onto trams. Some of the workers and machinery have telltale signs of the dust of Kitezh, tinged with its famous red sands. The local security replika beckons you to sign a form. You give a sigh and head over to begin the long process of paperwork just to pass customs."" textGrayColor",,,
+$id == eusan_nation_kitezh","AddText""The embarkation area is teeming with a large number of workers and replikas handling cargo containers being loaded onto trams. Some of them sport the famous red sand of Kitezh coating their uniforms. Your cargo manifest is scrutinized with unusual suspicion by the replika security, one of many measures taken against the ongoing revolt."" textGrayColor",,,
 flavorTextMarketRotfront,TradePanelFlavorText,"$market.id == rotfront_market score:1000
-$id == eusan_nation_rotfront","AddText""After a very, very long visit at the security booth trying to get the forms signed, ordered and filled out, you exit the docking area to finally enter the main lobby area. The logo of the Nation is exceptionally prominent, a massive golden icon towering over the people walking about. The brillance of color the emblem makes isn't enough to cover up the dreadful rainy gloom outside. Large numbers of grey apartment buildings certainly do not help. The sooner ship captains complete their buisness and leave Rotfront, the happier they become."" textGrayColor",,,
+$id == eusan_nation_rotfront","AddText""After signing the required forms, make your way out of the spaceport to the main lobby. The logo of the Nation is exceptionally prominent, a massive golden icon towering over the people walking about. Such a patriotic display does little to offset the gloomy conditions outside the building, one made only worse by the endless rows of brutalist apartment complexes. The sooner you can leave this dreary place, the better."" textGrayColor",,,
 flavorTextMarketHeimat,TradePanelFlavorText,"$market.id == heimat_market score:1000
-$id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. However once you land, get past the port authority replikas and sign the insane forms, visitors are greeted by a large, almost opulent city. Numerous people walk about with an equal number of replikas of varying shapes and heights doing various tasks. For you and your fellow crewmates, Heimat, seemingly, is probably one of the few places where people actually care about appearences."" textGrayColor",,,
+$id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. But after descending through them, your shuttle is greeted by an expansive metropolis, no doubt home to the vast majority of the planets population. The well maintained megaport is swarming with activity, and replikas in dress uniforms direct you to the expansive, almost opulent lobby - to sign more paperwork."" textGrayColor",,,
 flavorTextMarketLeng,TradePanelFlavorText,"$market.id == leng_market score:1000
-$id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, it is mostly used for shipping cargo exports. Security replikas are considerably rougher and stricter here as the units greeting you don't have the usual standard security weaponry, but instead, the heavier military grade equipment. The air of fear is palpable here. Most of the workers avoid your gaze while replikas patrol with undisputed authority."" textGrayColor",,,
+$id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, its mostly used for shipping cargo out. The replika security is more stern and abrasive, and every last one of them is armed. A feeling of fear and suspicion permeates the atmosphere, and most of the workers avoid your gaze."" textGrayColor",,,
 "#END RULESET_TRADE_FLAVOR_TEXT_START",,,,,,
 ,,,,,,
 # RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
 relLevelNeutralSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == eusan_nation",,"You are not generally well known by $faction officials, for good or ill. Like any other common individual, they just don't care about you.",,
+$faction.id == eusan_nation",,"You are not generally well known by $faction officials, for good or ill. Like any regular person they just don't care about you.",,
 relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == eusan_nation",,"The $faction authorities tend to view you favorably but not enough to give you much attention. At best, you might be sold some export grade surplus equipment or some low quality consumer goods if you are brave or dumb enough to purchase.",,
 relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == WELCOMING
@@ -32,13 +32,13 @@ $faction.id == eusan_nation",,"$faction officials tend to view you with suspicio
 relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == eusan_nation",,"No shoot-on-sight orders have been given but @faction forces are on alert and encouraged to make your life miserable.",,
 relLevelHostileSigNation,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == eusan_nation",,"Your name is known to officials as a menace to society and designated a top enemy of the people. $Faction commanders have authorization to engage your fleet on sight. However, there may still be a way for you to sneak into their markets to do some black-market trading. You might still recover good standing with $theFaction, but it's going to take some serious work or bribery to do so.",,
+$faction.id == eusan_nation",,"Your name is known to officials as a menace to society and top enemy of the people. $Faction commanders have authorization to engage your fleet on sight. However, there may still be a way for you to sneak into their markets to do some black-market trading. You might still recover good standing with $theFaction, but it's going to take some serious work or bribery to do so.",,
 relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == VENGFUL
 $faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number one, a scourge and something to be hated and destroyed.",,
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
-bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with a large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector and thankfully they appear to accept your standard credits as currency. Very few members of the Nation or military members are here. The ones that are present are probably high ranking officers or top level government officials.",,
+bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here. The ones are probably are high ranking officers or top level government officials.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
@@ -546,12 +546,47 @@ $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penroseRecovery512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start",,"You arrive at Ariane's office and had no trouble getting in. However instead of you entering her office like any other time, you are greeted by two members of the Volksmarine blocking your path. Both of them seem to be senior enlisted members and look like they found a threat. They both glare at you as if you committed a grave crime.
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
 
-","officeryeongPenroseRecovery512_briefing0: It  must be serious...",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING2,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING3,DialogOptionSelected,,,,,
+A Falke unit to be exact. The only major fleet formation to be commanded by one.
+
+""You remember me, $playerName. I am touched that you did so, comrade."" a voice spoke.
+
+Except there was no one speaking. The room was quiet with the exception of the computer fans whining.
+
+Behind the two men, a very large Replika strode in. Admiral Falke in all her glory, tall, beautiful and with a golden halo behind her emanating a soft glow. She towered over everyone else in the office. There was an air of discomfort.
+
+""Now now do not let my radiance stun you into silence. I am here because there is a mission to be done. You happen to be the best qualified and best of all, available.""","officeryeongPenroseRecovery512_briefing0_1: ""Fascinating...""
+officeryeongPenroseRecovery512_briefing0_2: ""Did you just...speak to me telepathically?""
+officeryeongPenroseRecovery512_briefing0_3: ""How may I be of service to the Nation?""",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","ShowSecondPerson eusan_nation_admiral_falke
+AdjustRepPerson admiral_falke WELCOMING 1
+","""Very good $playerName. Most people think it is their mind playing tricks but I see you did your research and understood my abilities."" Admiral Falke says. She seem to be impressed you understood what Falke units were capable of doing.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1a: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke
+AdjustRepPerson admiral_falke NEUTRAL -1","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1b: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","ShowSecondPerson eusan_nation_admiral_falke","""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1c: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1a
+$option == officeryeongPenroseRecovery512_briefing1b
+$option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_nation_admiral_falke","Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
+
+""Uh...yes ma'am."" she says. Ariane then opens a drawer on her desk and pulls out a small folder. 
+
+""So when you were off doing whatever you were doing, there was a strange signal coming from deep space. The Deep Space Array on Rotfront deciphered it as a Penrose signal."" 
+
+You open the folder and and look at a sheet of paper with series of numbers and letters printed in a haphazard way. A couple sections were circled and a small stamp indicated that the contents were classified ""Top Secret""","officeryeongPenroseRecovery512_briefing2: ""Oh so another recovery mission. Then why she is here?""",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"""A question for the ages.""",,
 OFFICER_YEONG_PENROSERECOVERY512_BRIEFING4,DialogOptionSelected,,,,,
 OFFICER_YEONG_PENROSERECOVERY512_BRIEFING5,DialogOptionSelected,,,,,
 OFFICER_YEONG_PENROSERECOVERY512_BRIEFING6,DialogOptionSelected,,,,,

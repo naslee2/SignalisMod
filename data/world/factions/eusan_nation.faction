@@ -241,11 +241,11 @@
 	
 		},
 		"posts":{
-			"factionLeader":{"name":"Vorsitzender"},
+			"factionLeader":{"name":"Great Revolutionary of the Nation"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},
-			"baseCommander":{"name":"Kapitän zur See"},
+			"baseCommander":{"name":"Festungskommandant"},
 		},
 	},
 	"voices":{
@@ -281,19 +281,19 @@
 		},
 	},	
 	"fleetTypeNames":{
-        "trade":"Merchant Fleet",
-		"tradeSmuggler":"Smuggler",
-        "smallTrader":"Trader",
+        "trade":"Handelsflotte",
+		"tradeSmuggler":"Schmugglerflotte",
+        "smallTrader":"Haendler", #its Händler but starsector being starsector, use Haendler as a workaround
 
         "patrolSmall":"Patrouillengruppe",
-        "patrolMedium":"Patrouillenbrigade",
-        "patrolLarge":"Patrouillenflottille",
+        "patrolMedium":"Patrouillenflottille",
+        "patrolLarge":"Patrouillenflotte",
 
-		#"inspectionFleet":"Inspektionsflottille",
-		"taskForce":"Flottile",
+		#"inspectionFleet":"Inspektionsflotte",
+		"taskForce":"Kampfgruppe",
 
-        "foodReliefFleet":"Humanitarian Convoy",
+        "foodReliefFleet":"Humanitaere Hilfe", #its Humanitäre Hilfe but starsector being starsector. Use Humanitaere
 
-		"battlestation":"Fortress"
+		"battlestation":"Festung"
     },
 },

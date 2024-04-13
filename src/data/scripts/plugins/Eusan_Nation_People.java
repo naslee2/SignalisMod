@@ -83,7 +83,6 @@ public class Eusan_Nation_People {
             admiral_falke.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
             admiral_falke.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
             admiral_falke.getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
-            admiral_falke.addTag("coff_nocapture");
             admiral_falke.setVoice(Voices.SOLDIER);
             importantpeople_heimat.addPerson(admiral_falke);
         }
@@ -133,7 +132,6 @@ public class Eusan_Nation_People {
             rotfront_fleetAdmiral.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
             rotfront_fleetAdmiral.getStats().setSkillLevel(Skills.POINT_DEFENSE,1);
             rotfront_fleetAdmiral.setVoice(Voices.SOLDIER);
-            rotfront_fleetAdmiral.addTag("coff_nocapture");
             importantpeople_rotfront.addPerson(rotfront_fleetAdmiral);    
         }
     }
@@ -159,7 +157,6 @@ public class Eusan_Nation_People {
         mary_cheng.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
         mary_cheng.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
         mary_cheng.setVoice(Voices.SOLDIER);
-        mary_cheng.addTag("coff_nocapture");
         importantpeople_miscOfficers.addPerson(mary_cheng);
     }
     
