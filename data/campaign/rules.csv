@@ -18,15 +18,15 @@ $id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a
 ,,,,,,
 # RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
 relLevelNeutralSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == eusan_nation",,"You are not generally well known by $faction officials, for good or ill. Like any regular person they just don't care about you.",,
+$faction.id == eusan_nation",,"You are not generally well known by the $faction for good or ill. Patrols and officials require the usual level of obedience - and paperwork - from you.",,
 relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == eusan_nation",,"The $faction authorities tend to view you favorably but not enough to give you much attention. At best, you might be sold some export grade surplus equipment or some low quality consumer goods if you are brave or dumb enough to purchase.",,
+$faction.id == eusan_nation",,"The $faction authorities have a slightly higher opinion of you than other spacers, but but you are still largely unknown. You might be able to purchase surplus military supplies, depending on the mood of who you ask.",,
 relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == WELCOMING
 $faction.id == eusan_nation",,"Your name is known to some mid-level positions of $theFaction. The mere mention of your name can cause some officials to break out in a sweat or fidget nervously.",,
 relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == eusan_nation",,"You are relatively well-known within $theFaction, whether in person or by reputation. Low level officials will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word to their superiors.",,
 relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You may receive trade concessions and access to high-quality ships and munitions. Your tales and aid are legendary, and your influence and connections are limitless within $faction.",,
+$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You will receive trade concessions, high-quality ships, and munitions. Your tales and aid are legendary, and your influence and connections are nigh limitless within the $faction.",,
 relLevelSuspiciousSigNation,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == eusan_nation",,"$faction officials tend to view you with suspicion. Access to the port authority is granted only grudgingly, and you find yourself the subject of frequent investigations and harassment by Replika security units.",,
 relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
@@ -38,16 +38,16 @@ $faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your las
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
-bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here. The ones are probably are high ranking officers or top level government officials.",,
+bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
 greetingFriendlySigNation,OpenCommLink,"$faction.id == eusan_nation 
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","Confirming Volksmarine NIS transponder and encryption code. Good to see you $playerName. Have a good day.",,
+FireAll PopulateOptions","Confirming Volksmarine NIS transponder and encryption code. Good to see you $playerName.",,
 greetingNeutralSigNation,OpenCommLink,"$faction.id == eusan_nation
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","Domain-type AIS Code verified. This is $personRank $personName of Eusan Nation. You are in our self-defense zone and within weapons range. State your intentions, over.",,
+FireAll PopulateOptions","Domain-type AIS Code verified. This is $personRank $personName of Eusan Nation. Maintain safe distance from our fleet, and state your intentions, over.",,
 greetingHostileWeakerSigNation,OpenCommLink,"$faction.id == eusan_nation
 $entity.isHostile
 $entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 1","Send word to HQ and request reinforcements! Our forces may be less powerful at the moment but the Nation will prevail!","cutCommLink:Cut the comm link",
@@ -103,13 +103,13 @@ $player.metOfficerYeong == false","$player.metOfficerYeong = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
-AddTextSmall ""A stressed out military officer of the Nation, Ariane Yeong has spent her formative years living under oppressive umbrella of the Nation. Once she had lofty goals and aspirations as a young girl would have. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
 AddText ""Hello this is Officer Ariane Yeong speaking. What do you want?""",,,
 OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 ",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
 OR
-COMMUNICATIONS TERMINATED. IF THIS HAS BEEN IN ERROR, PLEASE SEE CENTRAL AUTHORITY.
+COMMUNICATIONS TERMINATED. IF YOU BELIEVE THIS TO BE AN ERROR, PLEASE SEE CENTRAL AUTHORITY.
 OR
 ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
 "#END OFFICER_YEONG_GREETING",,,,,,
@@ -422,7 +422,7 @@ OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2St
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
 ShowPersonVisual
 AcceptMission
-FireAll PopulateOptions",,,
+FireAll PopulateOptions","""Good luck. You going to need it for this mission.""",,
 "#END RECOVERY2_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY2_ENCOUNTER,,,,,,
@@ -546,7 +546,8 @@ $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penroseRecovery512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
+BeginMission eusan_nation_penrose512Quest false","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
 
 A Falke unit to be exact. The only major fleet formation to be commanded by one.
 
@@ -586,15 +587,37 @@ $option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_na
 ""So when you were off doing whatever you were doing, there was a strange signal coming from deep space. The Deep Space Array on Rotfront deciphered it as a Penrose signal."" 
 
 You open the folder and and look at a sheet of paper with series of numbers and letters printed in a haphazard way. A couple sections were circled and a small stamp indicated that the contents were classified ""Top Secret""","officeryeongPenroseRecovery512_briefing2: ""Oh so another recovery mission. Then why she is here?""",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"""A question for the ages.""",,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING4,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING5,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING6,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_END,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDERED,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPTED,DialogOptionSelected,,"$global.eusan_nation_penroseRecovery512_start = true",,,
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2","ShowSecondPerson eusan_nation_admiral_falke","""A question for the ages."" Admiral Falke says. 
+
+""Perhaps you should sit down. Be comfortable, comrade.""
+
+You take a seat and begin to read the folder given to you by Ariane. The 1st sheet of paper seems to be a signal analysis of a Penrose transponder signal. The transponder code read 512 but that number was circled and noted with a single question mark. The second list seems to be a list of all Penrose ships currently being fitted out or being built but does not list a 512. A third sheet listed 512 but showed it was never completed and scrapped for parts.
+
+Admiral Falke breaks the silence. 
+
+""I see that you understand our confusion. The Penrose signal we intercepted comes from a ship that no longer exists. The ship was dismantled for parts and its space frame mothballed. Then how do we have then, a Penrose signal coming in with that unique frequency? Penrose frequencies are unique to each craft and 512 had a unique identifier made prior to its mission being cancelled. The signal coming in from our mystery ship is an exact match to the ones we have on record. "" she says.","officeryeongPenroseRecovery512_briefing3: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3","ShowSecondPerson eusan_nation_admiral_falke","""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
+
+""Either someone launched and accidently keyed in the unique transponder signal to 512 from another mission or the ship was launched without our knowledge. Both are equally improbable.""","officeryeongPenroseRecovery512_briefing4: A mystery!",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4",,"""Correct."" Admiral Falke replies. ""This is where you come in.""
+
+She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
+
+""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $heOrShe where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5",,"""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
+FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
+OR
+""Take your time. Come back later if you want to proceed.""
+OR
+""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penroseRecovery512_start = true
+ShowPersonVisual
+AcceptMission
+FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
 "#END RECOVERY512_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY512,,,,,,

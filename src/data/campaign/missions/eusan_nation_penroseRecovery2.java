@@ -123,8 +123,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         setRepRewardPerson(RepRewards.HIGH);
 		setRepRewardFaction(RepRewards.HIGH);
 
-        
-
         return true;
     }
 

@@ -57,8 +57,41 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         preferSystemUnexplored();
         preferSystemNotPulsar();
         preferSystemNotBlackHole();
-        
         requirePlanetConditions(ReqMode.ANY, conditionsList);
+
+        target_planet = pickPlanet();
+        target_starsystem = target_planet.getStarSystem();
+
+        if(officer_yeong == null){
+            return false;
+        }
+        if (target_planet == null) {
+			return false;
+		}
+
+        setStartingStage(Stage.LOCATE_PENROSE512);
+        addSuccessStages(Stage.RETURN_BLACKBOX);
+
+        setStoryMission();
+
+        setStageOnGlobalFlag(Stage.RETURN_BLACKBOX, "$eusan_nation_penrose512_returnBlackbox");
+        setStageOnGlobalFlag(Stage.COMPLETED, "$eusan_nation_penrose512_completed");
+
+        beginStageTrigger(Stage.LOCATE_PENROSE512);
+        makeImportant(target_planet, "$eusan_nation_penrose512_targetPlanet", Stage.LOCATE_PENROSE512);
+        endTrigger();
+
+        beginStageTrigger(Stage.RETURN_BLACKBOX);
+        makeImportant(officer_yeong, "$eusan_nation_penrose512_returnBlackbox", Stage.RETURN_BLACKBOX);
+        endTrigger();
+
+        beginStageTrigger(Stage.COMPLETED);
+        triggerSetGlobalMemoryValue("$eusan_nation_penrose512_completed", true);
+        endTrigger();
+
+        setCreditReward(100000);
+        setRepRewardPerson(RepRewards.HIGH);
+		setRepRewardFaction(RepRewards.HIGH);
 
         return false;
 	}
