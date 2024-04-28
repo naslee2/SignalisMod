@@ -18,7 +18,8 @@
 		"kncr":{"name":"Blockwart"},
 		"gestaltInvestigator":{"name":"Investigator"},
 		"gestaltAgent":{"name":"Agent"},
-		"gestaltPenrosePilot":{"name":"Penrose Flight Officer"}
+		"gestaltPenrosePilot":{"name":"Penrose Flight Officer"},
+		"bartender":{"name":"Bartender"}
     }
 
 }

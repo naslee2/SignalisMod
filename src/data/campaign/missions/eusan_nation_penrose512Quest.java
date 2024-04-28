@@ -27,6 +27,7 @@ import com.fs.starfarer.api.util.Misc;
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
     public static enum Stage {
+        INTERVIEW_LSTR_UNIT,
         LOCATE_PENROSE512,
         RETURN_BLACKBOX,
         COMPLETED
@@ -69,11 +70,12 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 			return false;
 		}
 
-        setStartingStage(Stage.LOCATE_PENROSE512);
+        setStartingStage(Stage.INTERVIEW_LSTR_UNIT);
         addSuccessStages(Stage.RETURN_BLACKBOX);
 
         setStoryMission();
 
+        setStageOnGlobalFlag(Stage.LOCATE_PENROSE512, "$eusan_nation_penrose512_locateShip");
         setStageOnGlobalFlag(Stage.RETURN_BLACKBOX, "$eusan_nation_penrose512_returnBlackbox");
         setStageOnGlobalFlag(Stage.COMPLETED, "$eusan_nation_penrose512_completed");
 

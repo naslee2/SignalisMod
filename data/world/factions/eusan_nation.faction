@@ -3,7 +3,7 @@
 	"color":[124,36,30,255],
 	#"baseUIColor":[106,21,28,255],
 	#"secondaryUIColor":[194,133,12,255],
-	"secondarySegments":4,
+	"secondarySegments":1,
 	"displayName":"Eusan Nation",
 	"displayNameWithArticle":"the Eusan Nation",
 	"logo":"graphics/factions/eusan_nation_banner.png", #modifed flag from original by TheFrommie86

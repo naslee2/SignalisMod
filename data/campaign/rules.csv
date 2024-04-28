@@ -38,7 +38,9 @@ $faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your las
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
-bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
+bardesc_eusanNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
+bardesc_rotfront,BarPrintDesc,"$faction.id== eusan_nation
+$market.id == ""rotfront_market""","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
@@ -72,7 +74,7 @@ AddText""As this mod is under a work in progress, new features will come online 
 ,,,,,,
 # EUSAN_NATION_NPC_DIALOUGE,,,,,,
 ,,,,,,
-# EUSAN_NATION_OFFICER_YEONG,,,,,,
+# OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
 OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
@@ -539,14 +541,14 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
 $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
-$global.eusan_nation_penroseRecovery512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
+$global.eusan_nation_penrose512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
+OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
 
 A Falke unit to be exact. The only major fleet formation to be commanded by one.
@@ -560,25 +562,25 @@ Behind the two men, a very large Replika strode in. Admiral Falke in all her glo
 ""Now now do not let my radiance stun you into silence. I am here because there is a mission to be done. You happen to be the best qualified and best of all, available.""","officeryeongPenroseRecovery512_briefing0_1: ""Fascinating...""
 officeryeongPenroseRecovery512_briefing0_2: ""Did you just...speak to me telepathically?""
 officeryeongPenroseRecovery512_briefing0_3: ""How may I be of service to the Nation?""",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","ShowSecondPerson eusan_nation_admiral_falke
+OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","ShowSecondPerson eusan_nation_admiral_falke
 AdjustRepPerson admiral_falke WELCOMING 1
 ","""Very good $playerName. Most people think it is their mind playing tricks but I see you did your research and understood my abilities."" Admiral Falke says. She seem to be impressed you understood what Falke units were capable of doing.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
 ""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1a: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke
 AdjustRepPerson admiral_falke NEUTRAL -1","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
 ""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1b: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","ShowSecondPerson eusan_nation_admiral_falke","""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
+OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","ShowSecondPerson eusan_nation_admiral_falke","""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
 ""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1c: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1a
+OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1a
 $option == officeryeongPenroseRecovery512_briefing1b
 $option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_nation_admiral_falke","Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
 
@@ -587,7 +589,7 @@ $option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_na
 ""So when you were off doing whatever you were doing, there was a strange signal coming from deep space. The Deep Space Array on Rotfront deciphered it as a Penrose signal."" 
 
 You open the folder and and look at a sheet of paper with series of numbers and letters printed in a haphazard way. A couple sections were circled and a small stamp indicated that the contents were classified ""Top Secret""","officeryeongPenroseRecovery512_briefing2: ""Oh so another recovery mission. Then why she is here?""",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2","ShowSecondPerson eusan_nation_admiral_falke","""A question for the ages."" Admiral Falke says. 
+OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2","ShowSecondPerson eusan_nation_admiral_falke","""A question for the ages."" Admiral Falke says. 
 
 ""Perhaps you should sit down. Be comfortable, comrade.""
 
@@ -596,37 +598,60 @@ You take a seat and begin to read the folder given to you by Ariane. The 1st she
 Admiral Falke breaks the silence. 
 
 ""I see that you understand our confusion. The Penrose signal we intercepted comes from a ship that no longer exists. The ship was dismantled for parts and its space frame mothballed. Then how do we have then, a Penrose signal coming in with that unique frequency? Penrose frequencies are unique to each craft and 512 had a unique identifier made prior to its mission being cancelled. The signal coming in from our mystery ship is an exact match to the ones we have on record. "" she says.","officeryeongPenroseRecovery512_briefing3: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3","ShowSecondPerson eusan_nation_admiral_falke","""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
+OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3","ShowSecondPerson eusan_nation_admiral_falke","""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
 
 ""Either someone launched and accidently keyed in the unique transponder signal to 512 from another mission or the ship was launched without our knowledge. Both are equally improbable.""","officeryeongPenroseRecovery512_briefing4: A mystery!",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4",,"""Correct."" Admiral Falke replies. ""This is where you come in.""
+OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4",,"""Correct."" Admiral Falke replies. ""This is where you come in.""
 
 She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
 
 ""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $heOrShe where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5",,"""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5",,"""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:  I accept the mission.",
-OFFICER_YEONG_PENROSERECOVERY512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penroseRecovery512_start = true
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penrose512_start = true
 ShowPersonVisual
 AcceptMission
 FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
 "#END RECOVERY512_BRIEFING",,,,,,
 ,,,,,,
+# RECOVERY512_INTERVIEW,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_START,PickGreeting,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_1,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_2,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_3,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_4,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_END,,,,,,
+"#END RECOVERY512_INTERVIEW",,,,,,
+,,,,,,
 # RECOVERY512,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_PLANETARRIVAL,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_PLANET_ESCAPE_RETURN,,,,,,
+OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
+$eusan_nation_penrose512_targetPlanet score:1000
+$global.eusan_nation_penrose512_start == true",,,,
+OFFICER_YEONG_PENROSE512_OPTION1,,,,,,
+OFFICER_YEONG_PENROSE512_OPTION2,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION3,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION4,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION5,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_PLANET_ESCAPE_RETURN,,,,,,
 "#END RECOVERY512",,,,,,
 ,,,,,,
 # RECOVERY512_MISSION_END,,,,,,
 OFFICER_YEONG_PENROSERECOVERY512_FINAL,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_FINAL_LISTOPTIONS,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_OPTIONS,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,,,,,,
 "#END RECOVERY512_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
 ,,,,,,
@@ -856,12 +881,12 @@ OR
 OR
 ""Whatever...""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
-"#END EUSAN_NATION_OFFICER_YEONG",,,,,,
+"#END OFFICER_YEONG",,,,,,
 ,,,,,,
-# EUSAN_NATION_ADMIRAL_FALKE,,,,,,
+# ADMIRAL_FALKE,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
-ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
@@ -882,7 +907,7 @@ $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, traveller. Welcome to our little side of the stars. Perhaps one day we can work together?""",,"cutCommLink:Cut the comm link",
-ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
@@ -903,7 +928,7 @@ $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there fellow traveller. You seem lost. Its only natural you come to me to ask for my help. So...how can I help you?""",,"cutCommLink:Cut the comm link",
-ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
@@ -942,6 +967,28 @@ OR
 ""If the Nation made any mistakes, perhaps one of them is not having you be a friend earlier. ""
 OR
 ""One day we will have victory. The Nation will certainly be glad to have you as a loyal comrade for the day we achieve it.""","cutCommLink:Cut the comm link",
+ADMIRAL_FALKE_GREETING_NEUTRAL_COMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$player.metAdmiralFalke == true
+$id ==  eusan_nation_admiral_falke score: 100
+$faction.id == ""eusan_nation""
+$faction.neutralToPlayer score:1000","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Greetings comrade. Make sure you behave.""
+OR
+""Comrade, my time is limited, my patience is even more so.""
+OR
+""Have you come to bask in the glory of the Nation? Or have you just decided to waste my time?""
+OR
+""Perhaps you should reflect on how to improve yourself. There is still time.""
+OR
+""The stars are very unforgiving without friends and allies. Its not recommended to wander without a guardian.""
+OR
+""One day victory will be ours. The Nation will ply the stars flying our banner. Either you stand with us together in victory or you will be left behind.""
+OR
+""I show mercy to those who submit. If you decide to behave I might let you live.""
+OR
+""Oh my. Have you come to talk to me? I hope you have something interesting to say if you are this desperate to bother me.""
+OR
+""The Empire was defeated long ago but our vigilance will never cease. I hope you understand that. Its only natural to be suspicious of misbehavior.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
@@ -978,6 +1025,54 @@ OR
 OR
 """"Perhaps its time to end this sad chapter of your life. If you wanted mercy, you should have fought harder.""","cutCommLink:Cut the comm link",
 "#END ADMIRAL_FALKE_FLEET GREETINGS",,,,,,
-"#END EUSAN_NATION_ADMIRAL_FALKE",,,,,,
+"#END ADMIRAL_FALKE",,,,,,
+,,,,,,
+# MARLIS,,,,,,
+,,,,,,
+# MARLIS_GREETINGS,,,,,,
+MARLIS_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
+$market.id == ""rotfront_market""",,"You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small handwave to come over...","marlis_bar: Have a chat with the Replika at the bar.","AddBarEvent marlis_bar_interaction ""Have a chat with the Replika at the bar.""  ""You see a Replika busy cleaning some glasses. You catch her eye and she gives you a small handwave to come over."""
+MARLIS_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.friendlyToPlayer score:1000
+$option == marlis_bar","$player.metMarlis = true
+ShowPersonVisual true eusan_nation_marlis
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.","$option == marlis_bar_interaction"
+MARLIS_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.friendlyToPlayer score:1000
+$option ==  marlis_bar","$player.metMarlis = true
+ShowPersonVisual true eusan_nation_marlis
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_INTRO_NEUTRAL_COMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.commissionFactionId == ""eusan_nation""
+$player.metMarlis == false
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","$player.metMarlis = true
+ShowPersonVisual true eusan_nation_marlis
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT"".",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","$player.metMarlis = true
+ShowPersonVisual true eusan_nation_marlis
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_FRIENDLY_COMISSIONED,,,,,,
+MARLIS_GREETING_FRIENDLY,,,,,,
+MARLIS_GREETING_NEUTRAL_COMISSIONED,,,,,,
+MARLIS_GREETING_NEUTRAL,,,,,,
+MARLIS_GREETING_HOSTILE,,,,,,
+MARLIS_EXIT,DialogOptionSelected,"$option == exitMarlis_bar","BarCMD showOptions",,,
+"#END MARLIS_GREETINGS",,,,,,
+"#END MARLIS",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 
