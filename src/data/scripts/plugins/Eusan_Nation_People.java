@@ -56,7 +56,7 @@ public class Eusan_Nation_People {
             officer_yeong.setId(OFFICER_YEONG);
             officer_yeong.setFaction(EUSAN_NATION);
             officer_yeong.setGender(Gender.FEMALE);
-            officer_yeong.setRankId("gestaltOfficer");
+            officer_yeong.setRankId("gestaltOfficerLt");
             officer_yeong.setPostId("gestaltInvestigator");
             officer_yeong.setImportance(PersonImportance.HIGH);
             officer_yeong.getName().setFirst(ARIANE_YEONG_FIRSTNAME);
@@ -104,7 +104,7 @@ public class Eusan_Nation_People {
             special_agent.setId(SPECIAL_AGENT);
             special_agent.setFaction(EUSAN_NATION);
             special_agent.setGender(Gender.FEMALE);
-            special_agent.setRankId("gestaltOfficer");
+            special_agent.setRankId("gestaltOfficerULt");
             special_agent.setPostId("gestaltAgent");
             special_agent.getName().setFirst("Special");
             special_agent.getName().setLast("Agent");
@@ -163,7 +163,7 @@ public class Eusan_Nation_People {
         mary_cheng.getName().setFirst(MARY_CHENG_FIRST_NAME);
         mary_cheng.getName().setLast(MARY_CHENG_LAST_NAME);
         mary_cheng.setGender(Gender.FEMALE);
-        mary_cheng.setRankId("gestaltOfficer");
+        mary_cheng.setRankId("gestaltOfficerLt");
         mary_cheng.setPostId("gestaltPenrosePilot");
         mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
         mary_cheng.setImportance(PersonImportance.MEDIUM);

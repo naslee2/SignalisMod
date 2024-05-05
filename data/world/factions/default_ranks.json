@@ -1,8 +1,17 @@
 {
     "ranks":{
-        "gestaltOfficer":{"name":"Leutnant zur See"},
-        "replika":{"name":"Replika"},
-        "gestaltAgentRank":{"name":"Undercover Operative"}
+		"gestaltOfficerULt":{"name":"Unterleutnant zur Stern"},
+		"gestaltOfficerLt":{"name":"Leutnant zur Stern"},
+		"gestaltOfficerOLt":{"name":"Oberleutnant zur Stern"},
+		"gestaltOfficerKL":{"name":"Kapitänleutnant"},
+		"gestaltOfficerKK":{"name":"Korvettenkapitän"},
+		"gestaltOfficerFK":{"name":"Fregattenkapitän"},
+		"gestaltOfficerKS":{"name":"Kapitän zur Stern"},
+		"gestaltOfficerKAm":{"name":"Konteradmiral"},
+		"gestaltOfficerVAm":{"name":"Vizeadmiral"},
+		"gestaltOfficerAm":{"name":"Admiral"},
+		"gestaltOfficerFAm":{"name":"Flottenadmiral"},
+        "replika":{"name":"Replika"}
     },
     "posts":{
         "adlr":{"name":"Facility Administrator"},
