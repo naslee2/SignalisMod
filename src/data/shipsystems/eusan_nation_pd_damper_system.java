@@ -17,7 +17,6 @@ public class eusan_nation_pd_damper_system extends BaseShipSystemScript {
 
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		effectLevel = 1f;
-		
 		stats.getHullDamageTakenMult().modifyMult(id, 1f - (1f - DMG_REDUCTION) * effectLevel);
 		stats.getArmorDamageTakenMult().modifyMult(id, 1f - (1f - DMG_REDUCTION) * effectLevel);
 		stats.getEmpDamageTakenMult().modifyMult(id, 1f - (1f - DMG_REDUCTION) * effectLevel);
@@ -59,5 +58,4 @@ public class eusan_nation_pd_damper_system extends BaseShipSystemScript {
 		stats.getArmorDamageTakenMult().unmodify(id);
 		stats.getEmpDamageTakenMult().unmodify(id);
 	}
-
 }

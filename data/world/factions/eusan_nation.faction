@@ -36,7 +36,7 @@
 	"hullFrequency":{
 		"tags":{
 			"eusan_nation_standard_package":1,
-			"eusan_nation_advanced_package":0.9
+			"eusan_nation_advanced_package":0.7
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
@@ -119,6 +119,7 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"eusan_nation_pernach",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
@@ -138,6 +139,7 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"eusan_nation_pernach",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
