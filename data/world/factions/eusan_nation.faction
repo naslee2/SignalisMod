@@ -3,7 +3,7 @@
 	"color":[124,36,30,255],
 	#"baseUIColor":[106,21,28,255],
 	#"secondaryUIColor":[194,133,12,255],
-	"secondarySegments":4,
+	"secondarySegments":1,
 	"displayName":"Eusan Nation",
 	"displayNameWithArticle":"the Eusan Nation",
 	"logo":"graphics/factions/eusan_nation_banner.png", #modifed flag from original by TheFrommie86
@@ -35,8 +35,8 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
-			"eusan_nation_standard_bp":1,
-			"eusan_nation_advanced_bp":0.9
+			"eusan_nation_standard_package":1,
+			"eusan_nation_advanced_package":0.9
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
@@ -62,11 +62,11 @@
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["eusan_nation_standard_bp","eusan_nation_advanced_bp"],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[],
 	},
 	"knownShips":{
-		"tags":["eusan_nation_standard_ship_bp","eusan_nation_advanced_ship_bp"],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[
 			"eusan_nation_penrose",
 			"eusan_nation_pelikan",
@@ -109,7 +109,7 @@
 		"fighters":[],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp"],
+		"tags":["missile_bp"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -138,6 +138,12 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"harpoonpod",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
 		],
 	},
 	"knownHullMods":{
@@ -235,11 +241,11 @@
 	
 		},
 		"posts":{
-			"factionLeader":{"name":"Vorsitzender"},
+			"factionLeader":{"name":"Great Revolutionary of the Nation"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},
-			"baseCommander":{"name":"Kapitän zur See"},
+			"baseCommander":{"name":"Festungskommandant"},
 		},
 	},
 	"voices":{
@@ -275,19 +281,19 @@
 		},
 	},	
 	"fleetTypeNames":{
-        "trade":"Merchant Fleet",
-		"tradeSmuggler":"Smuggler",
-        "smallTrader":"Trader",
+        "trade":"Handelsflotte",
+		"tradeSmuggler":"Schmugglerflotte",
+        "smallTrader":"Haendler", #its Händler but starsector being starsector, use Haendler as a workaround
 
         "patrolSmall":"Patrouillengruppe",
-        "patrolMedium":"Patrouillenbrigade",
-        "patrolLarge":"Patrouillenflottille",
+        "patrolMedium":"Patrouillenflottille",
+        "patrolLarge":"Patrouillenflotte",
 
-		#"inspectionFleet":"Inspektionsflottille",
-		"taskForce":"Flottile",
+		#"inspectionFleet":"Inspektionsflotte",
+		"taskForce":"Kampfgruppe",
 
-        "foodReliefFleet":"Humanitarian Convoy",
+        "foodReliefFleet":"Humanitaere Hilfe", #its Humanitäre Hilfe but starsector being starsector. Use Humanitaere
 
-		"battlestation":"Fortress"
+		"battlestation":"Festung"
     },
 },

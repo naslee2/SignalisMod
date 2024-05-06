@@ -34,25 +34,27 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
     @Override
     public CampaignFleetAPI spawnFleet() {
 
-        MarketAPI heimat = Global.getSector().getEconomy().getMarket("heimat_market");
+        MarketAPI heimat_market = Global.getSector().getEconomy().getMarket("heimat_market");
         //logger.info("Logger active: .getMarket is: " + heimat.getStarSystem());
+        SectorEntityToken heimat_entity = Global.getSector().getEntityById("eusan_nation_heimat");
 
         FleetCreatorMission m = new FleetCreatorMission(random);
         m.beginFleet();
 
-        Vector2f loc = heimat.getLocationInHyperspace();
+        Vector2f loc = heimat_market.getLocationInHyperspace();
 
         m.triggerCreateFleet(FleetSize.MAXIMUM, FleetQuality.SMOD_2, EUSAN_NATION, FleetTypes.TASK_FORCE, loc);
         m.triggerSetFleetOfficers( OfficerNum.MORE, OfficerQuality.UNUSUALLY_HIGH);
         m.triggerSetFleetCommander(getPerson());
         m.triggerSetFleetFaction(EUSAN_NATION);
-        m.triggerSetPatrol();
-        m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, heimat);
+        //m.triggerSetPatrol();
+        m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, heimat_market);
         m.triggerFleetSetNoFactionInName();
         m.triggerFleetSetName("Ever Victorious Fleet");
-        m.triggerFleetSetPatrolActionText("Patrolling");
+        m.triggerSetFleetQuality(FleetQuality.SMOD_1);
+        //m.triggerFleetSetPatrolActionText("Patrolling");
         m.triggerPatrolAllowTransponderOff();
-        m.triggerOrderFleetPatrol(heimat.getStarSystem());
+        //m.triggerOrderFleetPatrol(heimat.getStarSystem());
 
         CampaignFleetAPI falkeFleet = m.createFleet();
         FleetMemberAPI oldFlagship = falkeFleet.getFlagship();
@@ -68,10 +70,11 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         }
 
         falkeFleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
-        heimat.getContainingLocation().addEntity(falkeFleet);
-        falkeFleet.setLocation(heimat.getPlanetEntity().getLocation().x, heimat.getPlanetEntity().getLocation().y);
-        //falkeFleet.addAssignment(FleetAssignment.DEFEND_LOCATION, (SectorEntityToken) heimat, 365);
+        heimat_market.getContainingLocation().addEntity(falkeFleet);
+        falkeFleet.setLocation(heimat_market.getPlanetEntity().getLocation().x, heimat_market.getPlanetEntity().getLocation().y);
+        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, (SectorEntityToken) heimat_entity, 365);
         falkeFleet.setFacing((float) random.nextFloat() * 360f);
+
 
         //flagship
         falkeFleet.getFlagship().setShipName("VM Guardian of the Revolution");

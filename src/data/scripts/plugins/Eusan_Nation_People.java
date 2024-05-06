@@ -1,5 +1,7 @@
 package data.scripts.plugins;
 
+import javax.xml.bind.annotation.XmlElementDecl.GLOBAL;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -27,6 +29,10 @@ public class Eusan_Nation_People {
     public static String MARY_CHENG = "eusan_nation_mary_cheng";
     public static String MARY_CHENG_FIRST_NAME = "Mary";
 	public static String MARY_CHENG_LAST_NAME = "Cheng";
+    public static String MARLIS = "eusan_nation_marlis";
+    public static String MARLIS_FIRST_NAME = "Marlis";
+    public static String MARLIS_LAST_NAME = "EULR-FV R2652";
+
     
     public static MarketAPI market = null;
 
@@ -37,6 +43,7 @@ public class Eusan_Nation_People {
     public void create() {
         createImportantPeople_heimat();
         createImportantPeople_vineta();
+        createImportantPeople_rotfront();
         createImportantPeople_miscOfficers();
 	}
 
@@ -49,7 +56,7 @@ public class Eusan_Nation_People {
             officer_yeong.setId(OFFICER_YEONG);
             officer_yeong.setFaction(EUSAN_NATION);
             officer_yeong.setGender(Gender.FEMALE);
-            officer_yeong.setRankId("gestaltOfficer");
+            officer_yeong.setRankId("gestaltOfficerLt");
             officer_yeong.setPostId("gestaltInvestigator");
             officer_yeong.setImportance(PersonImportance.HIGH);
             officer_yeong.getName().setFirst(ARIANE_YEONG_FIRSTNAME);
@@ -83,7 +90,6 @@ public class Eusan_Nation_People {
             admiral_falke.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
             admiral_falke.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
             admiral_falke.getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
-            admiral_falke.addTag("coff_nocapture");
             admiral_falke.setVoice(Voices.SOLDIER);
             importantpeople_heimat.addPerson(admiral_falke);
         }
@@ -98,7 +104,7 @@ public class Eusan_Nation_People {
             special_agent.setId(SPECIAL_AGENT);
             special_agent.setFaction(EUSAN_NATION);
             special_agent.setGender(Gender.FEMALE);
-            special_agent.setRankId("gestaltOfficer");
+            special_agent.setRankId("gestaltOfficerULt");
             special_agent.setPostId("gestaltAgent");
             special_agent.getName().setFirst("Special");
             special_agent.getName().setLast("Agent");
@@ -122,7 +128,6 @@ public class Eusan_Nation_People {
             rotfront_fleetAdmiral.setGender(Gender.FEMALE);
             rotfront_fleetAdmiral.setRankId(Ranks.SPACE_ADMIRAL);
             rotfront_fleetAdmiral.setPostId(Ranks.POST_FLEET_COMMANDER);
-            rotfront_fleetAdmiral.setImportance(PersonImportance.HIGH);
             rotfront_fleetAdmiral.setPersonality(Personalities.CAUTIOUS);
             rotfront_fleetAdmiral.getStats().setLevel(7);
             rotfront_fleetAdmiral.getStats().setSkillLevel(Skills.CREW_TRAINING, 1);
@@ -133,8 +138,20 @@ public class Eusan_Nation_People {
             rotfront_fleetAdmiral.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
             rotfront_fleetAdmiral.getStats().setSkillLevel(Skills.POINT_DEFENSE,1);
             rotfront_fleetAdmiral.setVoice(Voices.SOLDIER);
-            rotfront_fleetAdmiral.addTag("coff_nocapture");
             importantpeople_rotfront.addPerson(rotfront_fleetAdmiral);    
+
+            PersonAPI rotfront_marlis = Global.getFactory().createPerson();
+            rotfront_marlis.setId(MARLIS);
+            rotfront_marlis.setFaction(EUSAN_NATION);
+            rotfront_marlis.setGender(Gender.FEMALE);
+            rotfront_marlis.getName().setFirst(MARLIS_FIRST_NAME);
+            rotfront_marlis.getName().setLast(MARLIS_LAST_NAME);
+            rotfront_marlis.setGender(Gender.FEMALE);
+            rotfront_marlis.setPortraitSprite("graphics/portraits/eusan_nation_marlis_128.png");
+            rotfront_marlis.setRankId("replika");
+            rotfront_marlis.setPostId("bartender");
+            rotfront_marlis.setVoice(Voices.BUSINESS);
+            importantpeople_rotfront.addPerson(rotfront_marlis);
         }
     }
 
@@ -146,8 +163,7 @@ public class Eusan_Nation_People {
         mary_cheng.getName().setFirst(MARY_CHENG_FIRST_NAME);
         mary_cheng.getName().setLast(MARY_CHENG_LAST_NAME);
         mary_cheng.setGender(Gender.FEMALE);
-        mary_cheng.setRankId("gestaltOfficer");
-        //mary_cheng.setRankId(Ranks.SPACE_LIEUTENANT);
+        mary_cheng.setRankId("gestaltOfficerLt");
         mary_cheng.setPostId("gestaltPenrosePilot");
         mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
         mary_cheng.setImportance(PersonImportance.MEDIUM);
@@ -159,7 +175,6 @@ public class Eusan_Nation_People {
         mary_cheng.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
         mary_cheng.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
         mary_cheng.setVoice(Voices.SOLDIER);
-        mary_cheng.addTag("coff_nocapture");
         importantpeople_miscOfficers.addPerson(mary_cheng);
     }
     
