@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_admiral_standard",
   "hullId": "eusan_nation_admiral",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 30,
   "fluxVents": 30,
   "quality": 1,

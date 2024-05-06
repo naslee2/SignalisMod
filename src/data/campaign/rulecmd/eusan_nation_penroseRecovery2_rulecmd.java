@@ -15,7 +15,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 import org.apache.log4j.Logger;
 
 public class eusan_nation_penroseRecovery2_rulecmd extends BaseCommandPlugin{
-    Logger logger = Global.getLogger(eusan_nation_penroseRecovery2_rulecmd.class);
+    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery2_rulecmd.class);
 
     protected PersonAPI mary_cheng;
     protected CampaignFleetAPI playerFleet;
@@ -30,7 +30,7 @@ public class eusan_nation_penroseRecovery2_rulecmd extends BaseCommandPlugin{
         String ruleCall2 = params.get(0).getString(memoryMap);
         playerFleet = Global.getSector().getPlayerFleet();
         mary_cheng = Global.getSector().getImportantPeople().getPerson("eusan_nation_mary_cheng");
-        logger.info("Logger Active: mary cheng info " + mary_cheng);
+        //logger.info("Logger Active: mary cheng info " + mary_cheng);
         switch(ruleCall2){
             case "playSignal_penroseRecovery2":
                 Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_388_SOS", true);
@@ -44,11 +44,10 @@ public class eusan_nation_penroseRecovery2_rulecmd extends BaseCommandPlugin{
                 Global.getSoundPlayer().restartCurrentMusic();
                 break;
             case "add_officer_penroseRecovery2":
-        
-                logger.info("Logger Active: mary cheng's rankid is " + mary_cheng.getRankId());
-                logger.info("Logger Active: mary cheng's rank is " + mary_cheng.getRank());
-                logger.info("Logger Active: mary cheng's postid is " + mary_cheng.getPostId());
-                logger.info("Logger Active: mary cheng's post is " + mary_cheng.getPost());
+                //logger.info("Logger Active: mary cheng's rankid is " + mary_cheng.getRankId());
+                //logger.info("Logger Active: mary cheng's rank is " + mary_cheng.getRank());
+                //logger.info("Logger Active: mary cheng's postid is " + mary_cheng.getPostId());
+                //logger.info("Logger Active: mary cheng's post is " + mary_cheng.getPost());
                 playerFleet.getFleetData().addOfficer(mary_cheng);
                 AddRemoveCommodity.addOfficerGainText(mary_cheng, dialog.getTextPanel());
                 break;

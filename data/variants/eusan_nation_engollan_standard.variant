@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_engollan_standard",
   "hullId": "eusan_nation_engollan",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 17,
   "fluxVents": 17,
   "quality": 1,

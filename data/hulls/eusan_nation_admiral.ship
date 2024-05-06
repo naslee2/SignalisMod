@@ -8,13 +8,12 @@
   "height": 492,
   "width": 194,
   "center": [97, 220],
-  "collisionRadius": 317,
-  "shieldCenter": [26, 0],
-  "shieldRadius": 288,
+  "collisionRadius": 279,
+  "shieldCenter": [16, -0],
+  "shieldRadius": 261,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
-
+    "eusan_nation_engineering_design"
   ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_admiral_builtin2",

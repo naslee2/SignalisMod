@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_raubtier_standard",
   "hullId": "eusan_nation_raubtier",
   "displayName": "standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 8,
   "fluxVents": 8,
   "quality": 1,

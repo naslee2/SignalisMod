@@ -3,51 +3,53 @@ id,trigger,conditions,script,text,options,notes
 ,,,,,,
 # RULESET_TRADE_FLAVOR_TEXT_START,,,,,,
 flavorTextMarketBuyan,TradePanelFlavorText,"$market.id == buyan_market score:1000
-$id == eusan_nation_buyan","AddText""Entering the station after docking you can see a large emblem of the Nation emblazoned prominently over the main entranceway. Numerous replika units are around working the dockyard with several replikas roaming around with weaponry. Obviously this is a major security zone as most of the patrolling replikas are armed with shotguns, rifles and shields. A stern looking replika security officer steps towards you and to demand that you sign several forms, shoving a rather beaten looking computer pad in your face. After what seems like an eternity you finally sign the last of the forms just for docking. Satisfied, the replika security officer then waves you past the security checkpoint, allowing you to finally begin your errands and business at the station"" textGrayColor",,,
+$id == eusan_nation_buyan","AddText""Entering the station after docking, you see a large emblem of the Nation emblazoned prominently over the main entrance. Numerous replika units can be seen working in the dockyard, many of them visibly armed. A stern looking replika security officer stops you, and demands that you sign several forms, shoving a rather beaten looking computer pad in your face. After what seems like an eternity, you are finally waved past the checkpoint."" textGrayColor",,,
 flavorTextMarketVineta,TradePanelFlavorText,"$market.id == vineta_market score:1000
-$id == eusan_nation_vineta","AddText""Arriving at Vineta, you are immediately greeted by a large crowd of people waiting for transport to and from the planet. At the security checkpoint the security replika hands you a rather worn looking computer pad. Numerous customs and declaration forms labeled REQUIRED greet your eyes. After a very long time you finally complete the last form and hand the pad back to the replika. Satisfied she opens the security gate and waves you in. As you walk out, you can hear the replika behind you shout 'NEXT' for the next person in line."" textGrayColor",,,
+$id == eusan_nation_vineta","AddText""Arriving at Vineta, you are immediately greeted by a large crowd of people waiting for transport to and from the planet. The planets shattered moon hangs heavy in the morning sky above, a dramatic backdrop to the mundane logistics work going on around you."" textGrayColor",,,
 flavorTextMarketKitezh,TradePanelFlavorText,"$market.id == kitezh_market score:1000
-$id == eusan_nation_kitezh","AddText""The embarkation area was teeming with a large number of workers and replikas handling large cargo containers being loaded onto trams. Some of the workers and machinery have the telltale signs of tinged with the famous red dusty sands of Kitezh. The local security replika beckons you to sign a form. You give a sigh and head over to begin the long process of paperwork just to pass customs."" textGrayColor",,,
+$id == eusan_nation_kitezh","AddText""The embarkation area is teeming with a large number of workers and replikas handling cargo containers being loaded onto trams. Some of them sport the famous red sand of Kitezh coating their uniforms. Your cargo manifest is scrutinized with unusual suspicion by the replika security, one of many measures taken against the ongoing revolt."" textGrayColor",,,
 flavorTextMarketRotfront,TradePanelFlavorText,"$market.id == rotfront_market score:1000
-$id == eusan_nation_rotfront","AddText""After a very, very long visit at the security booth trying to get the forms signed, ordered and filled out, you exit the docking area to finally enter the main lobby area. The logo of the Nation is exceptionally prominent, a massive golden icon towering over the people walking about. The brillance of color the emblem makes isn't enough to cover up the dreadful rainy gloom outside. The large number of grey apartment building certainly do not help. The sooner ship captains complete their buisness and leave Rotfront, the happier they become."" textGrayColor",,,
+$id == eusan_nation_rotfront","AddText""After signing the required forms, make your way out of the spaceport to the main lobby. The logo of the Nation is exceptionally prominent, a massive golden icon towering over the people walking about. Such a patriotic display does little to offset the gloomy conditions outside the building, one made only worse by the endless rows of brutalist apartment complexes. The sooner you can leave this dreary place, the better."" textGrayColor",,,
 flavorTextMarketHeimat,TradePanelFlavorText,"$market.id == heimat_market score:1000
-$id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. However once you land, get past the port authority replikas and sign the insane forms, visitors are greeted by a large, almost opulent city. Numerous people walk about with an equal number of replikas of varying shapes and heights doing various tasks. For you and your fellow crewmates, Heimat is probably one of the few places that actually look like people care about appearences."" textGrayColor",,,
+$id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. But after descending through them, your shuttle is greeted by an expansive metropolis, no doubt home to the vast majority of the planets population. The well maintained megaport is swarming with activity, and replikas in dress uniforms direct you to the expansive, almost opulent lobby - to sign more paperwork."" textGrayColor",,,
 flavorTextMarketLeng,TradePanelFlavorText,"$market.id == leng_market score:1000
-$id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, its mostly used for shipping cargo out. Security replikas are much rougher and strict here as the number greeting you don't have the usual security weaponry but much heavier stuff. You can definitely detect an air of fear here. Most of the workers avoid your gaze while the replikas seem to be occupying positions of authority here."" textGrayColor",,,
+$id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, its mostly used for shipping cargo out. The replika security is more stern and abrasive, and every last one of them is armed. A feeling of fear and suspicion permeates the atmosphere, and most of the workers avoid your gaze."" textGrayColor",,,
 "#END RULESET_TRADE_FLAVOR_TEXT_START",,,,,,
 ,,,,,,
 # RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
 relLevelNeutralSigNation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == eusan_nation",,"You are not generally well known by $faction officials, for good or ill. Like any regular person they just don't care about you.",,
+$faction.id == eusan_nation",,"You are not generally well known by the $faction for good or ill. Patrols and officials require the usual level of obedience - and paperwork - from you.",,
 relLevelFavorableSigNation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == eusan_nation",,"The $faction authorities tend to view you favorably but not enough to give you much attention. At best, you might be sold some export grade surplus equipment or some low quality consumer goods if you are brave enough or dumb enough to purchase.",,
+$faction.id == eusan_nation",,"The $faction authorities have a slightly higher opinion of you than other spacers, but but you are still largely unknown. You might be able to purchase surplus military supplies, depending on the mood of who you ask.",,
 relLevelWelcomingSigNation,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == eusan_nation",,"Your name is known to some mid-level of $theFaction. The mere mention of your name can cause some officials to break out in a sweat or fidget nervously.",,
+$faction.id == eusan_nation",,"Your name is known to some mid-level positions of $theFaction. The mere mention of your name can cause some officials to break out in a sweat or fidget nervously.",,
 relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == eusan_nation",,"You're relatively well-known within $theFaction, whether in person or by reputation. Low level officials will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word.",,
+$faction.id == eusan_nation",,"You are relatively well-known within $theFaction, whether in person or by reputation. Low level officials will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word to their superiors.",,
 relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You may receive trade concessions and access to high-quality ships and munitions. Your tales and aid are legendary, and your influence and connections limitless within $faction.",,
+$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You will receive trade concessions, high-quality ships, and munitions. Your tales and aid are legendary, and your influence and connections are nigh limitless within the $faction.",,
 relLevelSuspiciousSigNation,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == eusan_nation",,"$faction officials tend to view you with suspicion. Access to the port authority is granted only grudgingly, and you find yourself the subject of frequent investigations and harassment by Replika security units.",,
 relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == eusan_nation",,"No shoot on sight orders have been given but @faction forces are on alert and encouraged to make your life miserable.",,
+$faction.id == eusan_nation",,"No shoot-on-sight orders have been given but @faction forces are on alert and encouraged to make your life miserable.",,
 relLevelHostileSigNation,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == eusan_nation",,"Your name is known to officials as a menace to society and top enemy of the people. $Faction commanders have authorization to engage your fleet on sight. However, there may still be a way for you to sneak into their markets to do some black-market trading. You might still recover good standing with $theFaction, but it's going to take some serious work or bribery to do so.",,
 relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == VENGFUL
-$faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number 1, a scourge and something to be hated and destroyed.",,
+$faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number one, a scourge and something to be hated and destroyed.",,
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
-bardescSigNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here. The ones are probably are high ranking officers or top level government officials.",,
+bardesc_eusanNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
+bardesc_rotfront,BarPrintDesc,"$faction.id== eusan_nation
+$market.id == ""rotfront_market""","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
 greetingFriendlySigNation,OpenCommLink,"$faction.id == eusan_nation 
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","Confirming Volksmarine NIS transponder and encryption code. Good to see you $playerName and have a good day.",,
+FireAll PopulateOptions","Confirming Volksmarine NIS transponder and encryption code. Good to see you $playerName.",,
 greetingNeutralSigNation,OpenCommLink,"$faction.id == eusan_nation
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","Domain-type AIS Code verified. This is $personRank $personName of Eusan Nation. You are in our our self-defense zone and within weapons range. State your intentions, over.",,
+FireAll PopulateOptions","Domain-type AIS Code verified. This is $personRank $personName of Eusan Nation. Maintain safe distance from our fleet, and state your intentions, over.",,
 greetingHostileWeakerSigNation,OpenCommLink,"$faction.id == eusan_nation
 $entity.isHostile
 $entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 1","Send word to HQ and request reinforcements! Our forces may be less powerful at the moment but the Nation will prevail!","cutCommLink:Cut the comm link",
@@ -63,7 +65,7 @@ $entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1","Atte
 # NEXERLIN_FACTION_INTRO_START,,,,,,
 eusan_nation_NGCStep3FactionStart,ExerelinNGCStep3,"$playerFaction == eusan_nation","AddText""Hello and thank you for choosing the Eusan Nation. This faction is based off the faction of the same name from Signalis, a horror game created by Barbara Wittmann and Yuri Stern of indie game studio, rose-engine. Many thanks to them for creating a wonderful game that no two people have the same idea of what the story is.""
 
-AddText""The Eusan Nation is a totalitarian nation in which in the setting of Starsector, have won their decades long struggle against the Eusan Empire. Now masters of their own star system, they must now contend with the aftermath of the war and the wider Persean Sector. They have been lucky so far with the major powers being rather unconcerned of the struggles of the Eusan people. Now with the system finally under total control of the Nation, the stars are theirs for the taking.""
+AddText""The Eusan Nation is a totalitarian nation which, in the setting of Starsector, have won their decades long struggle against the Eusan Empire. Now masters of their own star system, they must now contend with the aftermath of the war and the wider Persean Sector. They have been lucky so far with the major powers being rather apathetic of the struggles of the Eusan people. Now with the system finally under total control of the Nation, the stars are theirs for the taking.""
 
 AddText""The Nation is primarily a low-tech faction with lots of missile and ballistic weaponry strapped to rather primitive looking starships. What they lack in technology, they make up for it in soft advantages. Their fleet is rather heavy in frigates, destroyers, and cruisers.""
 
@@ -72,7 +74,7 @@ AddText""As this mod is under a work in progress, new features will come online 
 ,,,,,,
 # EUSAN_NATION_NPC_DIALOUGE,,,,,,
 ,,,,,,
-# EUSAN_NATION_OFFICER_YEONG,,,,,,
+# OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
 OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
@@ -80,21 +82,21 @@ $id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true","ShowPersonVisual
 FireAll PopulateOptions","Hello there. What do you want?
 OR
-Welcome back $playerName, what can I do for you?
+Welcome back, $playerName. What can I do for you?
 OR
-Hello hello. Got any smokes I can ask of you?
+Hello-hello. Got any smokes I can ask of you?
 OR
 Calling me again? What do you want this time?
 OR
-Well well well if it isn't $playerName. What do you need this time?",,
+Well, well, well, if it isn't $playerName. What do you need this time?",,
 OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
 ",,"INVALID CREDENTIALS. PLEASE SEE CENTRAL AUTHORITY FOR PERMISSIONS. THIS COMMUNICATIONS LINK WILL NOW END.
 OR
-Hello who is this. Your security credentials isn't valid so I am going to cut this convo short.
+Hello, who is this? Your security credentials aren't valid so I am going to cut this short.
 OR
 Don't bother me.
 OR
-Who is this. Identify yourself...
+Who is this? Identify yourself...
 OR
 Don't know you, don't care.",,
 OFFICER_YEONG_INTRO_COMMISIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
@@ -103,42 +105,577 @@ $player.metOfficerYeong == false","$player.metOfficerYeong = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
-AddTextSmall ""A stressed out military officer of the Nation, Ariane Yeong has spent her formative years living under oppressive umbrella of the Nation. Once she had lofty goals and aspirations as a young girl would have. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
 AddText ""Hello this is Officer Ariane Yeong speaking. What do you want?""",,,
 OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 ",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
 OR
-COMMUNICATIONS TERMINATED. IF THIS HAS BEEN IN ERROR, PLEASE SEE CENTRAL AUTHORITY.
+COMMUNICATIONS TERMINATED. IF YOU BELIEVE THIS TO BE AN ERROR, PLEASE SEE CENTRAL AUTHORITY.
 OR
 ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
 "#END OFFICER_YEONG_GREETING",,,,,,
+,,,,,,
+# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
+,,,,,,
+# REPO_BRIEFING,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_neuralrepositorystart == false
+","SetOptionColor officeryeongNeuralRepStart highlight",,"officeryeongNeuralRepStart:""So, I have a new task for you if you are up for it"" ",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart","SetTextHighlights ""Eusan Nation""","""The reason I asked is that you have been deemed trustworthy by our security services, and even though I don't have much clout, I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
+
+""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There are a few tasks perfect for someone like you..."" She says, a small, faint smile lighting up, slowly. You wonder, when was the last time she did that?
+
+""Anyway, if you are up to the task, I have an assignment that needs to be done."" She explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive"" ""Ariane Yeong"" ""Officer Yeong""","""The name is Ariane Yeong. You are to refer to me as Officer Yeong or Ma'am. Remember that next time."" She says, sliding a rather thin looking folder to you. The cover is littered with redactions and white-out.
+
+You open the folder, and inside are a series of pictures, statistics and data sets, and the occasional newspaper clipping. All the photos are of the same building, taken at a variety of angles. The newspaper clippings, however, show a hole where it appears the building was. 
+
+""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1","SetTextHighlights ""Central Neural Archive"" ""AEON"" ""Empire"" ""Vineta""","""Not bombed, nuked. By the empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser some cycles ago. Probably some remnant Imperials doing retaliatory raids and... who cares. The issue here is that I have been given an assignment to recover data - if there is any - from this crater on Vineta."" she explains. Ariane puts a finger on the picture as if to make a point, pausing on it for an uncomfortable amount of time. She lifts her finger from the picture and she straightens up.
+
+Ariane stands and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
+
+""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
+
+""It seems that the political games have soured people in upper management and have forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction-- or so they say-- has grounded all transport ships. AEON is making life difficult for us so we need someone ""not"" officially part of our agency to do so. You have some immunity from their nonsense.""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2","SetTextHighlights ""Vineta"" ""Heimat""","""Send him a coded message upon arriving at Vineta. Once you set up initial communications, meet with him directly and get the data he is carrying. Fly back to Heimat.""
+
+""Now you probably are wondering what the data is for? For starters, its to help us find spies or holes in our counterintelligence network. For decades we spent on a cat and mouse game against the Empire's spies. The attack on the Central Neural Archive was too precise and too well placed to be a shot planned from external observation. Someone on the inside must have been able to give the Imperials the location of an area where the Archive was structurally the weakest.""
+
+""If we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons... and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well what's in it for me?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3","SetTextHighlights ""I got a package to deliver but the address is in Carcosa."" ""I am not sure how I can help but I will try""","""You get paid according to the rules and regulations set forth by the Nation."" Ariane dryly responds. She crosses her arms, mildly unimpressed by your focus on payment
+
+""50,000 credits to be exact.""
+
+Ariane then stands up from her desk and hands you an envelope. You rip it open and see a list of shortwave comms frequencies. 
+
+""Code frequencies and special codewords to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try.' ""","officeryeongNeuralRepBriefing4: Got it. 
+",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOfficerYeongChatOptions","""Alright then. Come back to me when you are ready""
+or
+""Ok sure. Let me know if you want to reconsider.""",,
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept: I accept the mission.",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$global.officeryeong_neuralrepositorystart = true
+BeginMission eusan_nation_neuralRepoQuest
+FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you hereby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
+"#END REPO_BRIEFING",,,,,,
+,,,,,,
+# MEETING_AGENT,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_special_agent"" score: 10000
+$global.officeryeong_neuralrepositorystart == true","SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""
+ShowPersonVisual
+FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
+
+After a few seconds, the line crackles with a response. The comms officer quickly decodes the message and hands you the result.
+
+""Recovery Area 5. North Supply depot. Section 11.""
+
+You give a nod and set out to the agreed upon location, shadowed by your bodyguards.
+
+The transmission leads you to an area by a large crater, no doubt the remains of the neural repository. The facility was once used to store and manufacture the neural patterns used by replikas. Now, it is little more than a scar in the ground, surrounded by temporary buildings set up in the vicinity of the impressive scene of destruction.
+
+As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.",,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,,,"officeryeongNeuralRepAgentTalk1: ""I got a package to deliver but the address is in Carcosa""",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
+","SetTextHighlights ""data"" ""I am not sure how I can help, but I will try""","""I am not sure how I can help, but I will try."" the man replied
+
+You motion your bodyguards to relax, but keep an eye on the situation.
+
+""You three characters here for the data right?"" The man says rather curtly. He opens his jacket and lifts the lid of a box containing several data disks, all of the same standardized design. He hands one to you unprompted, and you quickly pocket it.
+
+""AEON knows you're here, probably, but one cannot be too careful. Project manifests, data logs, experimental results, inventory lists. It's all there."" the agent says.
+
+""Now scram before AEON decides to change their minds.""","officeryeongNeuralRepAgentTalk2: Exit the area",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2","$global.eusan_nation_neuralrepo_returnInfo = true
+$global.officeryeong_neuralrepositoryMetAgent = true
+Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, you cant shake a sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? And why would AEON put up so many obstacles?
+
+You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk3: Return to the ship",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship was uneventful, the box of data disks secured in your hand. Though you are curious of what is actually inside the disks, it would probably be a bad idea to look. Better to just get the job done.
+
+Time to go home now.
+",,
+"#END MEETING_AGENT",,,,,,
+,,,,,,
+# REPO_MISSION_END,,,,,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_neuralrepositorystart == true
+$global.eusan_nation_neuralrepo_completed == false","SetOptionColor officeryeongNeuralRepFinal highlight",,"officeryeongNeuralRepFinal: Update Ariane on the status of your mission.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongNeuralRepFinal","FireAll PopulateNeuralRepoMissionOptions",,,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == false",,,"officeryeongNeuralRepCancel: Tell her that the mission is still ongoing...",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongNeuralRepCancel","FireAll PopulateOptions","""Oh I see..."" 
+
+You see a small look of disappointment on her face. You probably should have finished the mission prior to asking her.
+
+""Well then... go and finish it. I will be waiting.""",,
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == true",,,"officeryeongNeuralRepConfirm: Tell her that you obtained the data from the agent on Vineta.",
+OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","$global.eusan_nation_neuralrepo_completed = true
+Call $global.eusan_nation_neuralrepo_ref updateStage
+AddStoryPoints 1
+FireAll PopulateOptions
+","You inform her that you were successful in getting the information from the agent. She seems rather pleased with your success.
+
+""Excellent work. Thank you for helping me out. I wont forget your assistance on this matter. Your job is now complete and your payment should be arriving shortly after you leave this place."" She says as she motions you to leave. You feel like you're being forced out.
+
+As you leave the door you can hear the computer disk drive whirring as it accesses the data. The door closes before you can attempt to guess what may be on the disk.",,
+"#END REPO_MISSION_END",,,,,,
+"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
+,,,,,,
+# OFFICER_YEONG_PENROSERECOVERY1_QUEST,,,,,,
+,,,,,,
+# RECOVERY_BRIEFING,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.eusan_nation_neuralrepo_completed == true
+$global.officeryeong_penroseRecovery1_start == false","SetOptionColor officeryeongPenroseRecovery1Start highlight",,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start","BeginMission eusan_nation_penroseRecoveryQuest1 false
+SetTextHighlights ""AEON""","You sit down in the stiff chair in her cramped office, and she retrieves a pack of cigarettes, lighting one up for herself. She takes a deep puff, before explaining the mission.
+
+""My superiors were pleased you got the data from our agent in Vineta. Whatever was going on with AEON there appears to have been resolved. This new job is a bit more in depth, not just running intelligence errands.""
+
+Ariane straightens up and hands you a folder. As you open the folder, the first page is already filled with redactions. Clearly someone was paranoid about secrets getting out.","officeryeongPenroseRecovery1Briefing0: ""Lots of redactions on this...""",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING1,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing0","SetTextHighlights ""Penrose Program"" ""replika"" ""Rotfront""","""Standard procedure. Im sure you know, captain. Much of this information is classified if not to my eyes then yours."" Ariane says. She takes another draw from her cig and blows the smoke towards the celling.
+
+""I assume you know about the Penrose Program. If not, it's the Nation's deep space exploration program. Two crew, one human, one replika. Shoved into a deep space scout ship. Then shot out into the outer reaches of the system.""
+
+""And a few weeks ago, the Deep Space Radio Array on Rotfront detected this transmission."" Ariane says, pressing a button on a recording device on her desk. Garbled radio noise resolves into a series of beeps, some long, some short. Morse code.
+
+""Im sure you know what these beeps are."" She stops the recording device with a swift press of a button. 
+
+","officeryeongPenroseRecovery1Briefing1: ""So what kind of transmission is it?""",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing1","SetTextHighlights ""PENROSE-419"" ""LSTR-419"" ""Penrose"" ""Cameron Yang""
+Call $global.eusan_nation_penroseRecovery1_ref updateData","""Three dots, three dashes, three dots, its an emergency distress signal. Usually sent out after a critical malfunction at an unexpected time, or a crash landing. The signal is very weak as well, I'm surprised we could pick it up."" Ariane says. She then picks up a paper from her desk and began to summarize the information to you in a rather curt manner.
+
+""The transmission is from the PENROSE-419. It was launched over two decades ago. The Flight Officer's name was Cameron Yang. The replika was your standard LSTR unit, LSTR-419. The last time the replied to our hails was 12 years ago. There were a few attempts to reestablish contact, but given 419's mission was essentially over, the Nation did not bother outside the standard hails.""
+
+""Given how much time has passed, the mission is one of recovery. The mission recorder is to be recovered. The crew, if found, be given last rites as befitting of..."" Ariane double checks what she is reading, squinting at the paper in her hands.
+
+""Heroes of the Nation."" She said with a flatly. ","officeryeongPenroseRecovery1Briefing2: ""Alright. Where should I look?""",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","SetTextHighlights $eusan_nation_penroseRecovery1_distanceLy $eusan_nation_penroseRecovery1_systemName $eusan_nation_penroseRecovery1_planetName
+Call $global.eusan_nation_penroseRecovery1_ref showMap ""Destination: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName.""
+
+""Go there, find the black box mission recorder, and lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
+ShowPersonVisual
+FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know""
+OR
+""Take your time. Come back later if you want to proceed.""
+OR
+""Ok sure. If you wish to think it through, go ahead. I'll be waiting here once you get yourself together.""",,
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroseRecovery1_start = true
+ShowPersonVisual
+AcceptMission
+FireAll PopulateOptions","""Thank you. I will skip the usual procedures and speech for taking on a mission in the name of the Nation. You know what to do. """,,
+"#END RECOVERY_BRIEFING",,,,,,
+,,,,,,
+# RECOVERY,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
+$eusan_nation_penroseRecovery1_targetPlanet score:1000
+$global.officeryeong_penroseRecovery1_start == true
+","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. Your comms officer triangulates the rough location of the signal, while a survey team is prepared.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
+defaultLeave: Leave",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","SetTextHighlights ""PENROSE-419""
+eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1
+eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communications officer finally pins the signals location. 
+
+You head over to the communication's officer and begin to examine the data. The transmission is broadcasting on a unique frequency, well outside standard domain protocol. You note its similarity to the transmission played for you during the mission brief by Officer Yeong.  
+
+Your musing over the data is interrupted by your ops officer reminding you the survey-turned-recovery team is ready to go.","officeryeongPenroseRecovery1Option2: Deploy the recovery teams to the surface",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option2","SetTextHighlights ""PENROSE-419""
+$global.eusan_nation_penroseRecovery1_returnBlackbox = true
+$global.eusan_nation_penroseRecovery1_recoveredData = true
+Call $global.eusan_nation_penroseRecovery1_ref updateStage
+eusan_nation_penroseRecovery1_rulecmd resumeMusic_penroseRecovery1","The team's shuttle touched down on the planet with little issue. After a short hike, they finally came upon the site where the communication's officer indicated the PENROSE-419 would be. The ship seemed to be intact, having appeared to have crash landed. Most of the lower hull was buried and parts of the starboard wing was sheared off. Aside from the damage from the landing and lost wing, there could be no doubt of the identity of the ship with a giant 419 on the intact portside wing.
+
+After a few hours surveying the hull and setting up equipment to enter, the recovery team finally gained entry via the emergency hatch on the top of the hull. The interior of the ship was a charred mess. Debris, burned documents, and wrecked equipment was everywhere.
+
+The team split into two, one to the flight deck, another to the cryo chamber. The team entered the flight deck with no issue but the second team reported that the cryo chamber was wrecked beyond recovery. Entry would be impossible with the equipment they had. No sign of the crew was found but they did find bits of pieces of a Replika unit.
+
+""Sir message from the ground team, they have the mission data recorder and the logbooks."" The communication's officer reported.","officeryeongPenroseRecovery1Option3: Order your team to return to the fleet.",
+OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option3","FireAll PopulateOptions","The team returned to the ship without incident. The team's leader presents the container containing the mission data recorder and the logbooks.
+
+""Here are the recovered items, sir. It's a mess down there and we tried to recover as much as we could. No sign of the flight officer or the replika but we did find parts of one.""
+
+You congratulate the recovery team leader for a job well done. Now it's time to return to Heimat with the data recorder. Hopefully Officer Yeong will be more forthcoming on what is on the device.",,
+"#END RECOVERY",,,,,,
+,,,,,,
+# RECOVERY_MISSION_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_penroseRecovery1_start == true
+$global.eusan_nation_penroseRecovery1_completed == false","SetOptionColor officeryeongPenroseRecovery1Final highlight",,"officeryeongPenroseRecovery1Final: Update Ariane on the status of your mission.",
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Final","FireAll PopulatePenroseRecovery1Options",,,
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_OPTION,PopulatePenroseRecovery1Options,"$global.eusan_nation_penroseRecovery1_recoveredData == false",,,"officeryeongPenroseRecovery1Cancel: Tell her that you have yet to complete the mission.",
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Cancel","FireAll PopulateOptions","""So you decided to come and waste my time?""
+
+You can see on her face that she is annoyed by your admission.
+
+""Why are you here? Why are you telling me this.""
+
+",,
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_OPTION,PopulatePenroseRecovery1Options,"$global.eusan_nation_penroseRecovery1_recoveredData == true",,,"officeryeongPenroseRecovery1ConfirmOption: Tell her that you recovered the mission data recorder.",
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenroseRecovery1ConfirmOption","SetTextHighlights ""Penrose Program"" ""2nd Phase"" ""Phase 3""","You hand over the recorder and logs. She hooks them up to a specialized device, which whirs slowly while loading the data. Once it finally does, she asks you to help her read over it.
+
+It takes a generous amount of time, but you are able to piece together a story. The story of a proud, patriotic Vinetan man, eager to serve the Nation.
+
+He was elated to be accepted onto the Penrose program, and the majority of the logs throughout the first phase of the mission are mundane. The second phase, however, does not go as well. The ship suffers a freon leak, spoiling much of the onboard rations before they can be saved. His tone becomes increasingly distressed at their lack of food. Past phase 3 of the Program, things became more disturbing. Around day cycle 4881, the food supplies were critically low. The man has clearly entered a state of psychosis, and eventually gets into an altercation with his Replika. He cannibalized her.
+
+At this point the log entries began to become more sparse in writing, and what little writing there is devolves into illegible rambling, before abruptly stopping on what you guess is cycle 4886. You look to see if Ariane has seen this, but she is busy sorting through the more technical data.
+
+""You saw what happened?"" She asked. It is almost like she knew what you were about to ask.
+
+","officeryeongPenroseRecovery1Confirm1: ""He...ate his Replika...""",
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Confirm1","SetTextHighlights ""PENROSE-419"" ""PENROSE-211"" ""Great Revolutionary"" ""Phase 3""","""That is... not surprising. At least not in the Penrose Program."" 
+
+She sits back on her chair and hands you a mission report from another Penrose mission, PENROSE-211. 
+
+""An earlier mission. Most earlier missions are classified, but I managed to get my hands on this one. This flight officer appears to have made a similar decision. After Phase 3, most Penrose ships will eventually run out of consumables and supplies to keep the ship operating. Reports of desperate behavior among Penrose flight officers are extremely common""
+
+She points to a page where the final transmission of the PENROSE-211 was received. 
+
+""The officer was a patriot, much like the PENROSE-419's officer. Proud, willing to do anything for the Nation. At the end of his mission, several years after Phase 3, he was busy transmitting insults and hostile messages back to Heimat.""
+
+She taps the page as if prompting you to read it. Obviously she cannot say it out loud. 
+
+'Fuck the Nation.' One line said.
+
+Another line had: 'You sent me out here to die.' 
+
+'You built a revolution on lies.'
+
+There were several pages worth of the transcribed messages, some of which contain a colorful variety of slurs exclusive to the Nation's society. 
+
+""From what I see here from the data recorder from 419, it's different in many respects but the behavior was the same as 211. They both felt abandoned and sent to die. Once you hit Phase 3 of the Program, either you found a suitable planet or you failed. 419 failed.""","officeryeongPenroseRecovery1Confirm2: Continue",
+OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Confirm2
+ ","SetTextHighlights ""PENROSE-419""
+$global.eusan_nation_penroseRecovery1_completed = true
+Call $global.eusan_nation_penroseRecovery1_ref updateStage
+AddStoryPoints 1
+FireAll PopulateOptions","""There are no happy endings for this program. You must be wondering why bother recover the data recorders. They all died in service of the Nation, right? I also wonder why they bother. The truth of their demise is something I expect the Nation to bury""
+
+""The PENROSE-419 was sent into deep space to search for planets. To expand the Nation, to find new worlds for us to settle. In the eyes of the Nation they did just that. All it cost is one ship, one pilot and one replika. I think my superiors are more interested in how they died rather than why.""
+
+Ariane then opens a drawer in her desk and pulls out an envelope. 
+
+""Your reward as promised.""
+
+You take the envelope of money from her. You give her a slight nod and exit out her office.",,
+"#END RECOVERY_MISSION_END",,,,,,
+"#END OFFICER_YEONG_PENROSERECOVERY1_QUEST",,,,,,
+,,,,,,
+# OFFICER_YEONG_PENROSERECOVERY2_QUEST,,,,,,
+,,,,,,
+# RECOVERY2_BRIEFING,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.eusan_nation_penroseRecovery1_completed == true
+$global.officeryeong_penroseRecovery2_start == false","SetOptionColor officeryeongPenroseRecovery2Start highlight",,"officeryeongPenroseRecovery2Start:  ""I have another recovery mission for you.""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a sit at the desk. You've become used to this now. 
+
+""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder, and unsurprisingly, it's filled with redactions and crossed out sentences. Typical.
+
+""As before, my superiors have decided that you are the best person for the job. Now it's time for you to help us with another mission. It's a standard recovery op. Just like last time you are to go to a target location and recover the mission data recorder.""","officeryeongPenroseRecovery2_briefing0: ""Sure. What is the catch then?""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing0","SetTextHighlights ""Tri-Tachyon""","""The recovery site is located in this star system, which is several light years away from this area."" She says, flipping a page from the folder and pointing at a black and white picture of a star map.
+
+""However, there is an issue. Our military intelligence has determined that the star system has, at this moment, an unknown fleet. Our signal analysts believe the fleet to be a Tri-Tachyon patrol group. Why they are in the star system is anyone's guess. Our determination is that these ships are just conducting deep space patrols. I asked for more information and was told there isn't any more. No information on precise size of hostile forces, composition, etc. Just a signals analysis of a patrol sized group.""
+","officeryeongPenroseRecovery2_briefing1: ""Hostile fleet, no information on size or composition. Got it.""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING2,DialogOptionSelected,"$option ==  officeryeongPenroseRecovery2_briefing1","SetTextHighlights ""PENROSE-388"" ""Mary Cheng""
+Call $global.eusan_nation_penroseRecovery2_ref updateData","""Now your mission target: PENROSE-388. This Penrose was launched over two decades ago. Like all Penrose craft, they were sent on randomized trajectories. Now due to the presence of a hostile fleet, it is vital that you destroy this fleet. My superiors have made it abundantly clear to me and I am making it abundantly clear to you. Destroy this fleet. Do this before you recover PENROSE-388.""
+
+""Now for the other bits. PENROSE-388 dropped out of contact eighteen years ago. Commanded by a young pilot named Mary Cheng. Well connected. Has ties to a powerful political faction here on Heimat. Due to her status of being the daughter of a powerful political family, my superiors have prioritized the recovery of PENROSE-388 to the top of the list.""","officeryeongPenroseRecovery2_briefing2: ""I understand""",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing2","SetTextHighlights $eusan_nation_penroseRecovery2_distanceLy $eusan_nation_penroseRecovery2_systemName $eusan_nation_penroseRecovery2_planetName
+Call $global.eusan_nation_penroseRecovery2_ref showMap ""Destination: $eusan_nation_penroseRecovery2_planetName""","""The details on the mission are inside the briefing packet but I will, for brevity's sake, tell you exactly where to go. Signal analysis indicates that PENROSE-388 is located $eusan_nation_penroseRecovery2_distanceLy light years away in the $eusan_nation_penroseRecovery2_systemName system and the craft has crashed on the planet $eusan_nation_penroseRecovery2_planetName""
+
+""Got that? Good. You can refresh yourself later. Its all here in the packet"" Ariane says. She opens her drawer and grabs a bright red packet of cigarettes. A familiar, smokey smell begins to permeate the room. She takes a long drag and lets out a puff. 
+
+""Were are done here...you know what to do.""","officeryeongPenroseRecovery2_briefing3: Time for me to go to work then...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing3","FireAll PopulatePenroseRecovery2StartOptions",,,
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Reconsider","AbortMission
+FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
+OR
+""Take your time. Come back later if you want to proceed.""
+OR
+""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
+ShowPersonVisual
+AcceptMission
+FireAll PopulateOptions","""Good luck. You going to need it for this mission.""",,
+"#END RECOVERY2_BRIEFING",,,,,,
+,,,,,,
+# RECOVERY2_ENCOUNTER,,,,,,
+OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,OpenCommLink,"$entity.eusan_nation_hostilefleet score:100","$entity.ignorePlayerCommRequests = true
+SetTextHighlights Tri-Tachyon","In the screen, the Tri-Tachyon fleet commander gives you an unfriendly look, as if $HeOrShe has just gotten an unwanted guest in $HeOrShe's house.
+
+""This is Commander $personName. You entered into our patrol zone. If you've come here just to talk, you are sadly mistaken.""
+
+""Now if you don't mind, you will be fine target practice for my fleet. Need to keep our performance ratings.""
+","cutCommLink:Cut the comm link",
+"#END RECOVERY2_ENCOUNTER",,,,,,
+,,,,,,
+# RECOVERY2,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
+$eusan_nation_penroseRecovery2_targetPlanet score:1000
+$global.officeryeong_penroseRecovery2_start == true
+","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
+OFFICER_YEONG_PENROSERECOVERY2_OPTION1,PopulateOfficerYeongPenroseRecovery2Option,,"SetShortcut defaultLeave ""ESCAPE""
+SetTextHighlights ""Penrose SOS""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the Penrose SOS signal. After a brief set of maneuvers, you prepare to enter orbit around the planet.","officeryeongPenroseRecovery2Option1: Enter Orbit around the planet
+defaultLeave: Leave",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1","eusan_nation_penroseRecovery2_rulecmd endMusic_penroseRecovery2
+eusan_nation_penroseRecovery2_rulecmd playSignal_penroseRecovery2
+SetTextHighlights ""Penrose-388""","Entering orbit around the planet, your communications officer noticed a faint signal from the surface. Your officer and his assistants begin to triangulate the signal as you order your recovery teams to the shuttle bay.
+
+Your officer noted there is unusual interference coming from the surface but it is merely a natural phenomenon. Reassured, you give the officer a nod, thankful that there is no more interference from hostile actors. 
+
+After what seemed like hours, the communication's officer finally reports the location of the Penrose-388.
+","officeryeongPenroseRecovery2Option2: Deploy the recovery teams to the surface",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option2","$global.eusan_nation_penroseRecovery2_returnBlackbox = true
+$global.eusan_nation_penroseRecovery2_recoveredData = true
+SetTextHighlights """"Craft...landed...intact...cryo... Checking...""""","The team touches down and begins to hike towards the signal. Given how badly the signal had been scrambled by the planet's own atmosphere, it's a miracle that the communication's officer managed to locate the crashed Penrose with accuracy. 
+
+Arriving at the crashed ship, your team lead sends a radio message which arrives garbled. You can only make out traces of voice as the team leader makes his report.
+
+""Craft...landed...intact...cryo... Checking..."" The transmission says. Not very helpful. You give a nod to your comm officer and he makes a few adjustments.","officeryeongPenroseRecovery2Option3: Continue",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION4,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option3",,"As time goes on, you begin to feel impatient and order your comm officer to clean up the transmissions coming from the surface. The officer complies and begins to start adjusting his equipment. A few more adjustments and the comm officer finally reports a new transmission from the recovery team.
+
+""Sir? We have something you may want to see."" The officer reports. He hands a printout from the communications  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find an intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. A medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
+OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","SetTextHighlights ""Mary Cheng""
+eusan_nation_penroseRecovery2_rulecmd resumeMusic_penroseRecovery2
+Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened on the surface. Apparently the cryo chamber was still operating and the pilot was alive.
+
+The pilot, Mary Cheng, gives you a rather flimsy salute. Temporary side effects of the cryo chamber no doubt. The medical team is already beginning to go over her. 
+
+""Thank you so much."" She begins. Her voice quivering with emotion. You can see tears in her eyes.
+
+""You saved my life. I had long since given up hope of rescue. I cannot express how grateful I am for you for coming to my aid. I knew the Nation would one day rescue me but I had begun to lose hope every time I woke up from cryo. The last time I went to cryo sleep, I just set the timer to 100 years.""
+
+""Let me repay you in kind. Let me join your fleet as an officer."" She says.
+
+It seems that Mary wants to join your fleet. You are not too sure as just a few hours ago, she was slumbering in a cryo-chamber. Perhaps you should consult Ariane about this situation. 
+
+You give a non-commital answer back to Mary. The answer did not seem to satisfy her but she looks like she understands.","officeryeongPenroseRecovery2Option5: Lets go home..",
+OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
+"#END RECOVERY2",,,,,,
+,,,,,,
+# RECOVERY2_MISSION_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY2_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.officeryeong_penroseRecovery2_start == true
+$global.eusan_nation_penroseRecovery2_completed == false","SetOptionColor officeryeongPenroseRecovery2Final highlight",,"officeryeongPenroseRecovery2Final: Update Ariane on the status of your mission.",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Final","FireAll PopulatePenroseRecovery2Options",,,
+OFFICER_YEONG_PENROSERECOVERY2_CANCEL_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == false",,,"officeryeongPenroseRecovery2Cancel: Tell her that you have yet to complete the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Cancel","FireAll PopulateOptions","""Wasting my time now, is it?""
+
+Your admission to her has visibly annoyed her. You can almost see a small snarl.
+
+""Please let me know if you've finished your job.""
+
+",,
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == true",,,"officeryeongPenroseRecovery2ConfirmOption: Tell her that you recovered the mission data recorder.",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2ConfirmOption","SetTextHighlights ""Mary Cheng""","""Alright, let see..."" She says. 
+
+You give her the data recorder and are about to explain what happened but she interrupts you with a very swift question.
+
+""Did you find the pilot?""
+
+You respond with an affirmative and recount finding the pilot, Mary Cheng, alive, dazed but unharmed from the long cryosleep. Ariane raises her eyebrows a bit, probably not expecting you to report a Penrose pilot alive, out of all scenarios. 
+
+""Of all the things I expected, finding a pilot alive all this time wasn't one of them. The emergency cryogenic units were extremely durable devices but my information on their true longevity is limited. We had instances where cryogenic units failed after a few years.""
+
+She pauses a bit. Apparently the news of a Penrose pilot surviving has her thinking.
+
+""Where is she now?"" She asks you.
+
+","officeryeongPenroseRecovery2Confirm1: ""She is onboard my ship. Why?""",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm1",,"You respond to Ariane that Mary is currently aboard your flagship. Alive and well but currently recuperating from the long cryo sleep and catching up on all the events that happened since she left home.
+
+""Don't let her come back down here, then."" She responds cooly. 
+
+You are taken aback by this. She has never met Mary outside of the data files but something about her tone struck you as odd. Why would you not return a long lost citizen, heroine actually, back to the Nation?
+
+""You are probably thinking why I would ask you to keep her from home. The answer is simple. She knows too much."" Ariane took a puff of her cigarette. ""Not to mention the psych profile on her isn't a shining beacon of stability. From what I gathered, she joined the program as some sort of rebellion against her father. Leveraged her family connections to get a pilot slot.""
+
+She lets out a small sigh, smoke faintly wafting from her lips. 
+
+""Until I can get guidance from leadership on how to handle this situation, you will have to employ Mary as a fleet officer for your ships. To be honest this is the first time I have ever heard of anyone being found alive from a Penrose mission. Sooner or later news of this is going to get out but for now keep her with you.""
+
+""For now keep her as part of your fleet.""","officeryeongPenroseRecovery2Confirm2: Continue",
+OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm2","$global.eusan_nation_penroseRecovery2_completed = true
+Call $global.eusan_nation_penroseRecovery2_ref updateStage
+eusan_nation_penroseRecovery2_rulecmd add_officer_penroseRecovery2
+AddStoryPoints 1
+FireAll PopulateOptions","You get up to leave Ariane's office. Before you step through the doorway, Ariane gives you one last piece of advice. 
+
+""Keep her with your fleet, for now, until the foreseeable future. I have sent your payment for a job well done.""
+
+You give her a nod and pull out a communications device. You send off a message to your ship to give Mary the news. A short ping from the ship lets you know she is now aware of the situation and happily agrees with staying on as an officer with your fleet.",,
+"#END RECOVERY2_MISSION_END",,,,,,
+"#END OFFICER_YEONG_PENROSERECOVERY2_QUEST",,,,,,
+,,,,,,
+# OFFICER_YEONG_PENROSE512_QUEST,,,,,,
+,,,,,,
+# RECOVERY512_BRIEFING,,,,,,
+OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+$player.commissionFactionId == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$player.metAdmiralFalke == true
+$global.eusan_nation_penroseRecovery2_completed == true
+$global.eusan_nation_penrose512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
+OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
+BeginMission eusan_nation_penrose512Quest false","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
+
+A Falke unit to be exact. The only major fleet formation to be commanded by one.
+
+""You remember me, $playerName. I am touched that you did so, comrade."" a voice spoke.
+
+Except there was no one speaking. The room was quiet with the exception of the computer fans whining.
+
+Behind the two men, a very large Replika strode in. Admiral Falke in all her glory, tall, beautiful and with a golden halo behind her emanating a soft glow. She towered over everyone else in the office. There was an air of discomfort.
+
+""Now now do not let my radiance stun you into silence. I am here because there is a mission to be done. You happen to be the best qualified and best of all, available.""","officeryeongPenroseRecovery512_briefing0_1: ""Fascinating...""
+officeryeongPenroseRecovery512_briefing0_2: ""Did you just...speak to me telepathically?""
+officeryeongPenroseRecovery512_briefing0_3: ""How may I be of service to the Nation?""",
+OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","ShowSecondPerson eusan_nation_admiral_falke
+AdjustRepPerson admiral_falke WELCOMING 1
+","""Very good $playerName. Most people think it is their mind playing tricks but I see you did your research and understood my abilities."" Admiral Falke says. She seem to be impressed you understood what Falke units were capable of doing.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1a: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke
+AdjustRepPerson admiral_falke NEUTRAL -1","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1b: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","ShowSecondPerson eusan_nation_admiral_falke","""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
+
+She gestured to Ariane, who was sitting in her desk chair in silence. 
+
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1c: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1a
+$option == officeryeongPenroseRecovery512_briefing1b
+$option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_nation_admiral_falke","Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
+
+""Uh...yes ma'am."" she says. Ariane then opens a drawer on her desk and pulls out a small folder. 
+
+""So when you were off doing whatever you were doing, there was a strange signal coming from deep space. The Deep Space Array on Rotfront deciphered it as a Penrose signal."" 
+
+You open the folder and and look at a sheet of paper with series of numbers and letters printed in a haphazard way. A couple sections were circled and a small stamp indicated that the contents were classified ""Top Secret""","officeryeongPenroseRecovery512_briefing2: ""Oh so another recovery mission. Then why she is here?""",
+OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2","ShowSecondPerson eusan_nation_admiral_falke","""A question for the ages."" Admiral Falke says. 
+
+""Perhaps you should sit down. Be comfortable, comrade.""
+
+You take a seat and begin to read the folder given to you by Ariane. The 1st sheet of paper seems to be a signal analysis of a Penrose transponder signal. The transponder code read 512 but that number was circled and noted with a single question mark. The second list seems to be a list of all Penrose ships currently being fitted out or being built but does not list a 512. A third sheet listed 512 but showed it was never completed and scrapped for parts.
+
+Admiral Falke breaks the silence. 
+
+""I see that you understand our confusion. The Penrose signal we intercepted comes from a ship that no longer exists. The ship was dismantled for parts and its space frame mothballed. Then how do we have then, a Penrose signal coming in with that unique frequency? Penrose frequencies are unique to each craft and 512 had a unique identifier made prior to its mission being cancelled. The signal coming in from our mystery ship is an exact match to the ones we have on record. "" she says.","officeryeongPenroseRecovery512_briefing3: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3","ShowSecondPerson eusan_nation_admiral_falke","""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
+
+""Either someone launched and accidently keyed in the unique transponder signal to 512 from another mission or the ship was launched without our knowledge. Both are equally improbable.""","officeryeongPenroseRecovery512_briefing4: A mystery!",
+OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4",,"""Correct."" Admiral Falke replies. ""This is where you come in.""
+
+She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
+
+""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $heOrShe where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5",,"""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
+FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
+OR
+""Take your time. Come back later if you want to proceed.""
+OR
+""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:  I accept the mission.",
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penrose512_start = true
+ShowPersonVisual
+AcceptMission
+FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
+"#END RECOVERY512_BRIEFING",,,,,,
+,,,,,,
+# RECOVERY512_INTERVIEW,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_START,PickGreeting,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_1,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_2,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_3,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_4,,,,,,
+OFFICER_YEONG_PENROSE512_INTERVIEW_END,,,,,,
+"#END RECOVERY512_INTERVIEW",,,,,,
+,,,,,,
+# RECOVERY512,,,,,,
+OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
+$eusan_nation_penrose512_targetPlanet score:1000
+$global.eusan_nation_penrose512_start == true",,,,
+OFFICER_YEONG_PENROSE512_OPTION1,,,,,,
+OFFICER_YEONG_PENROSE512_OPTION2,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION3,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION4,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_OPTION5,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_PLANET_ESCAPE_RETURN,,,,,,
+"#END RECOVERY512",,,,,,
+,,,,,,
+# RECOVERY512_MISSION_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_FINAL,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_FINAL_LISTOPTIONS,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_OPTIONS,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_END,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,,,,,,
+"#END RECOVERY512_MISSION_END",,,,,,
+"#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_PENROSE,,,,,,
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about the that its going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That it""
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about that, it's going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That's it.""
 
 ""Given that you have high level access I guess I can tell you about the Penrose Program in detail...""","officeryeongChatPenroseProgramOption1: Continue",
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM2,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption1",,"""The Penrose program in reality is an attempt to show the rest of the galaxy of the power of the Eusan Nation. You seen those posters plastered on the metro lines streets about the Penrose? Its all about telling us, mainly the people of the Nation, how powerful we are.""
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM2,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption1",,"""The Penrose program in reality is an attempt to show the rest of the galaxy the power of the Eusan Nation. You seen those posters plastered on the metro lines' streets about the Penrose? Its all about telling us, mainly the people of the Nation, how powerful we are.""
 
 ""We sent out a lot of these craft into the deep void to find planets we can colonize, mine or just expand the Nation. We pair human pilots with a Replika. In this case the LSTR Replikas. The LSTR types are meant for deep space assignments and repair work. The Volksmarine uses a lot of these replikas on their ships. AEON? Depends on the facility.""
 ","officeryeongChatPenroseProgramOption2: Continue",
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM3,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption2",,"""The Penrose program has been operating for a long time. I don't have the details available but rumors say that we launched dozens of these ships during the war. How we did that while a major war was happening is beyond me...""
 
-""Anyway that is all I have. Anything else would require a higher security clearance and I don't want to get in trouble by telling you things that isn't cleared with my superiors...""","officeryeongChatPenroseProgramOption3: Very well I won't press the matter further...",
+""Anyway that is all I have. Anything else would require a higher security clearance and I don't want to get in trouble by telling you things that aren't cleared with my superiors...""","officeryeongChatPenroseProgramOption3: Very well I won't press the matter further...",
 OFFICER_YEONG_CHAT_PENROSE_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption3","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_PENROSE",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_HEIMAT,,,,,,
 OFFICER_YEONG_CHAT_HEIMAT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatHeimatOption: Tell me about Heimat...",
-OFFICER_YEONG_CHAT_HEIMAT1,DialogOptionSelected,"$option == officeryeongChatHeimatOption",,"""Heimat is the captial of our Nation. I assumed you know that by now..."" she says. She adjusted her uniform a bit and continued on...
+OFFICER_YEONG_CHAT_HEIMAT1,DialogOptionSelected,"$option == officeryeongChatHeimatOption",,"""Heimat is the captial of our Nation. I assumed you knew that by now..."" she says. She adjusted her uniform a bit and continued on...
 
-""Heimat is where the magic started. A bunch of miners got fed up, overthrew the Imperial garrison here. They used the leftover materials to expand their military forces and build a proper army. The other planets were already rebelling against the Empire with mixed results. Kitezeh had its rebellion snuffed out relatively quickly. Vineta's fought on for years until the first reinforcements arrived from Heimat.""","officeryeongChatHeimatOption1: Continue",
-OFFICER_YEONG_CHAT_HEIMAT2,DialogOptionSelected,"$option == officeryeongChatHeimatOption1",,"""Most if not all of the Nation's government agencies resides here on this planet. Volksmarine, Volksarmee, AEON, every branch of government... ""
+""Heimat is where the magic started. A bunch of miners got fed up, overthrew the Imperial garrison here. They used the leftover materials to expand their military forces and build a proper army. The other planets were already rebelling against the Empire with mixed results. Kitezh had its rebellion snuffed out relatively quickly. Vineta's fought on for years until the first reinforcements arrived from Heimat.""","officeryeongChatHeimatOption1: Continue",
+OFFICER_YEONG_CHAT_HEIMAT2,DialogOptionSelected,"$option == officeryeongChatHeimatOption1",,"""Most, if not all, of the Nation's government agencies reside here on this planet. Volksmarine, Volksarmee, AEON, every branch of government... ""
 
-""You know initially the government was supposed to relocate to Vineta after the war but they did a survey of the planet and found out that the planet was just too damaged to consider relocating. Also Heimat was already functioning as the capital of the Nation so it made little sense to relocate to Vineta. Asides from that I guess thats the basics of Heimat.""
+""You know, initially the government was supposed to relocate to Vineta after the war but they did a survey of the planet and found out that the planet was just too damaged to consider relocating. Also Heimat was already functioning as the capital of the Nation so it made little sense to relocate to Vineta. Aside from that, I guess thats the basics of Heimat.""
 
 ""Heimat is the home of the Nation's government. That is pretty much it.""","officeryeongChatHeimatOption2: Thanks for the information...",
 OFFICER_YEONG_CHAT_HEIMAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatHeimatOption2","FireAll PopulateOfficerYeongChatOptions",,,
@@ -148,13 +685,13 @@ OFFICER_YEONG_CHAT_HEIMAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officer
 OFFICER_YEONG_CHAT_ROTFRONT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatRotfrontOption: Tell me about Rotfront...",
 OFFICER_YEONG_CHAT_ROTFRONT1,DialogOptionSelected,"$option == officeryeongChatRotfrontOption",,"""Rotfront...yeah...""
 
-""Rotfront was my home for a good long time. I spent many years of my childhood with my mother cooped up inside a radio station. I had lots of fond memories there. Read a lot of books, did art and pretty much had much of the station to myself. Homeschooled for most of my childhood too.
+""Rotfront was my home for a good long time. I spent many years of my childhood with my mother cooped up inside a radio station. I had lots of fond memories there. Read a lot of books, did art and pretty much had much of the station to myself. Homeschooled for most of my childhood too.""
 
-Her voice trailed off and you can tell there were some really bad memories resurfacing.  
+Her voice trailed off and you can tell there were some unpleasant memories resurfacing.  
 
 ""Then one day my mother told me I was to live with my aunt Kamilla. So I moved from the radio station to the main city at Blockwart C...""
 ","officeryeongChatRotfront1: Continue",
-OFFICER_YEONG_CHAT_ROTFRONT2,DialogOptionSelected,"$option == officeryeongChatRotfront1",,"""Went to highschool there. Never liked it. Bullies everywhere."" she says, motioning to her hair and eyes as she went on. ""Made fun of my hair, my eyes, my family. Made friends of course but that is a story for another time.""
+OFFICER_YEONG_CHAT_ROTFRONT2,DialogOptionSelected,"$option == officeryeongChatRotfront1",,"""Went to highschool there. Never liked it. Bullies everywhere."" She says, motioning to her hair and eyes as she went on. ""Made fun of my hair, my eyes, my family. Made friends of course, but that is a story for another time.""
 
 ""Military service done there at Rotfront, trained and operated as a radio operator. Spent 2 years doing that. Never knew what happened to my friends after high school. Tried getting hold of them but no response to my letters or requests...""
 
@@ -168,10 +705,10 @@ OFFICER_YEONG_CHAT_ROTFRONT_ESCAPE_RETURN,DialogOptionSelected,"$option == offic
 OFFICER_YEONG_CHAT_LENG_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatLengOption: Tell me about Leng...",
 OFFICER_YEONG_CHAT_LENG1,DialogOptionSelected,"$option == officeryeongChatLengOption",,"""Was born on Leng. I do not have many memories of that place because my mother moved us to Rotfront due to her position as a radio officer.""
 
-""As far as I can tell, Leng is the outermost planet of the star system. The Nation's furthest outpost. A shithole from what I gathered. Dodged a bullet right there too. They wanted to send me to Leng after my mandatory military service would you belive that? I applied for a different military service and got accepted...barely from what I was told.""","officeryeongChatLeng1:Continue",
+""As far as I can tell, Leng is the outermost planet of the star system. The Nation's furthest outpost. A shithole from what I gathered. Dodged a bullet right there too. They wanted to send me to Leng after my mandatory military service, would you belive that? I applied for a different military service and got accepted...barely from what I was told.""","officeryeongChatLeng1:Continue",
 OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1",,"""Leng is not a nice place from what I heard. Unlike Buyan or Rotfront, Leng is literally an airless rock with tunnels for human habitation. You got the orbital and the elevator. Then you have the various rail and tram lines to whatever areas you need to go.""
 
-""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush hush rumors of course but the rumors are its not a nice place to live, work, or have a family.""
+""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
 
 ""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:Continue",
 OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
@@ -183,466 +720,36 @@ OFFICER_YEONG_CHAT_SMOKING1,DialogOptionSelected,"$option == officeryeongChatSmo
 
 ""Ohhhh...yeah. Smoking. That....""
 
-""Yeah smoking kills. That is why I smoke. Pretty much my job requires a lot of patience and since I don't have much to do at home or anywhere else, I smoke. I go through a few smokes a day. Yeah yeah lung cancer is a danger. Most cigarette brands sold by the Nation are extremely strong compared to the Imperial brands. What is funny is that Imperial branded cigarettes were prohibited from being sold until fairly recently. Back then anyone caught selling them will get a prison sentence or get sent to a labor camp. ""Illegal distribution of banned paraphillia."" the law says.""
+""Yeah smoking kills. That is why I smoke. Pretty much my job requires a lot of patience and since I don't have much to do at home or anywhere else, I smoke. I go through a few smokes a day. Yeah, yeah, lung cancer is a danger. Most cigarette brands sold by the Nation are extremely strong compared to the Imperial brands. What is funny is that Imperial branded cigarettes were prohibited from being sold until fairly recently. Back then anyone caught selling them would get a prison sentence or get sent to a labor camp. 'Illegal distribution of banned paraphillia,' the law says.""
 
-""Owning a packet of Imperial cigs isn't a crime anymore. I can smoke them but since they are so rare these days its almost impossible to get a hold of.""
+""Owning a packet of Imperial cigs isn't a crime anymore. I can smoke them but since they are so rare these days, it's almost impossible to get a hold of.""
 ","officeryeongChatSmoking1: Continue",
-OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"""Interestingly, I hear that the Empire had large stocks of cigs stockpiled for its soldiers and since the war ended, there have been rumors of warehouses being found with massive stocks of cigarettes and other items. There are even rumors that the factories that used to make the cigs are now being retooled to make the same cigs with different packaging. Something more ""patriotic"" or so they say.""
+OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"""Interestingly, I hear that the Empire had large stocks of cigs stockpiled for its soldiers and since the war ended, there have been rumors of warehouses being found with massive stocks of cigarettes and other items. There are even rumors that the factories that used to make the cigs are now being retooled to make the same cigs with different packaging. Something more 'patriotic', or so they say.""
 
-""I just wish someone would give me a pack of the Imperial Era smokes. Old tobacco i heard mellows with age.""
+""I just wish someone would give me a pack of the Imperial Era smokes. Old tobacco, I heard mellows with age.""
 
-""Remember...smoking kills. That is why I smoke.""","officeryeongChatSmoking2: Continue",
+""Remember... smoking kills. That is why I smoke.""","officeryeongChatSmoking2: Continue",
 OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
 "#END OFFICER_YEONG_CHAT",,,,,,
 ,,,,,,
-# OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
-,,,,,,
-# REPO_BRIEFING,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongMissionOptions,"RepGTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
-$id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.officeryeong_neuralrepositorystart == false
-",,,"officeryeongNeuralRepStart:""So I have a new task for you if you are up for it"" ",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart","SetTextHighlights ""Eusan Nation""","""The reason why I asked is that you have been deem trustworthy by our security services and even though I don't have much clout, the way things work here I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
-
-""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There is something small and nice for someone like you..."" she says, a small, faint smile lighting up. You can see it took some effort for her to smile. You wonder when was the last time she did that.
-
-""Anyway, if you are up to the task, I have an assignment and needs to be done..."" she explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive""","""The name is Ariane Yeong. You refer to me as Officer Yeong. Remember that next time."" she said as she slid a rather thin looking folder with numerous crossed out items and redactions on the front cover.
-
-You open the folder and inside are a series of pictures, a few pages with lists of statistics printed and an old newspaper clipping. You take a look at the pictures and they all seem to show the same building from different angles. Then you look at the newspaper cutout and you seem to notice that it just shows a giant hole on the ground and ruined buildings near it. 
-
-""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1","SetTextHighlights ""Central Neural Archive"" ""AEON"" ""Empire"" ""Vineta""","""Yes yes...its a hole in the ground. Nuked by the Empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser several years ago. Probably some remnant Imperials doing retaliatory raids...who cares...the issue here is that I been given an assignment to recover data if there is any from this crater on Vineta"" she explained. She puts a finger on the picture as if making a point. An uncomfortable pause occurs. She lifts her finger from the picture and she straightens up.
-
-Ariane stands up and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
-
-""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
-
-""It seems that the political games have soured people in upper management and has forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction or so they say has grounded all transport ships. AEON making life difficult for us so we need someone not officially part of our agency to do so. You have some immunity from their nonsense""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2","SetTextHighlights ""Vineta"" ""Heimat""","""Send him a coded message upon arriving at Vineta. Once you set up initial communication, meet with him directly and get the data he is carrying. Fly back to Heimat""
-
-""if we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons...and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well thats in it for me?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3","SetTextHighlights ""I got a package to deliver but the address is in Carcosa""","""You get paid according to the rules and regulations set forth by the Nation"" Ariane dryly responds.
-
-""50,000 credits to be exact.""
-
-Ariane stands up from her desk and hands you an envelope. You rip it open and see a list of radio frequencies. 
-
-""Code frequencies and special codewords to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try' ""","officeryeongNeuralRepBriefing4: Got it. 
-",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOptions","""Alright then. Come back to me when you are ready""
-or
-""Ok sure. Let me know if you want to reconsider.""",,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept: I accept the mission.",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$global.officeryeong_neuralrepositorystart = true
-BeginMission eusan_nation_neuralRepoQuest
-FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you herby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
-"#END REPO_BRIEFING",,,,,,
-,,,,,,
-# MEETING_AGENT,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$id == ""eusan_nation_special_agent"" score: 10000
-$global.officeryeong_neuralrepositorystart == true","SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11""
-ShowPersonVisual
-FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the specified frequency and begins to broadcast the coded signal at the specified time. 
-
-After a few seconds of broadcasting, a reply signal comes over. The comms officer quickly decodes the message and hands you the result.
-
-""Recovery Area 5. North Supply depot. Section 11""
-
-You give a nod and set out to the agreed upon location with two of your trusted bodyguards.
-
-The area specified by the coded transmission was near a large crater. The crater used to be a sprawling campus dedicated to the storage of maintenance of neural patterns associated with the creation of Replikas. Now its a hole on the ground, a reminder of the painful sacrifices made by the Eusan Nation in its fight against the empire. 
-
-As you arrive at the meeting spot, a man is busy arranging crates and supplies. He gives you no attention as he busily sorts the supplies.",,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,,,"officeryeongNeuralRepAgentTalk1: ""I got a package to deliver but the address is in Carcosa""",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
-","SetTextHighlights ""data""","""I am not sure how I can help but I will try"" the man replied
-
-You motion the bodyguards to relax and assume overwatch position. You look at the man and ask him for the information you were sent to get.
-
-""You three characters here for the data right?"" the man says rather curtly. He opens his jacket and holds box containing several data disks. Standard issue data storage devices by the looks of it. He hands it over to you which you promptly pocket it.
-
-""AEON knows your here probably but one cannot be too careful. Project manifests, data logs, experimental results, inventory lists its all there."" the agent says.
-
-""Now scram before AEON decides to change their minds.""","officeryeongNeuralRepAgentTalk2: Exit the area",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2","$global.eusan_nation_neuralrepo_returnInfo = true
-$global.officeryeong_neuralrepositoryMetAgent = true
-Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, there was an sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? Why would a government agency such as AEON go through all this trouble to erect obstacles for data retrieval? 
-
-You quash the thought. Perhaps all will be revealed in good time. You board your shuttle begin your return trip back to the main spaceport.","officeryeongNeuralRepAgentTalk3: Return to the ship",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship was uneventful, the box of data disks in your hand. As you head back, you could not help but wonder what is on the data disks. Given how unkind the Nation may be if you looked at them, you decided to quash that thought. 
-
-Time to go home now.
-",,
-"#END MEETING_AGENT",,,,,,
-,,,,,,
-# REPO_MISSION_END,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.officeryeong_neuralrepositorystart == true
-$global.eusan_nation_neuralrepo_completed == false",,,"officeryeongNeuralRepFinal: Update Ariane on the status of your mission.",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongNeuralRepFinal","FireAll PopulateNeuralRepoMissionOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == false",,,"officeryeongNeuralRepCancel: Tell her that the mission is still ongoing...",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongNeuralRepCancel","FireAll PopulateOptions","""Oh I see..."" 
-
-You see a small look of disappointment on her face. You probably should have finished the mission prior to asking her.
-
-""Well then...go and finish it. I will be waiting.""",,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_OPTION,PopulateNeuralRepoMissionOptions,"$global.officeryeong_neuralrepositoryMetAgent == true",,,"officeryeongNeuralRepConfirm: Tell her that you obtained the data from the agent on Vineta.",
-OFFICER_YEONG_NEURALREPOSITORY_FINAL_CONFIRM_END,DialogOptionSelected,"$option == officeryeongNeuralRepConfirm","$global.eusan_nation_neuralrepo_completed = true
-Call $global.eusan_nation_neuralrepo_ref updateStage
-AddStoryPoints 1
-FireAll PopulateOptions
-","You inform her that you were successful in getting the information from the agent. She seems rather pleased with your success.
-
-""Excellent work. Thank you for helping me out. I wont forget your assistance on this matter. Your job is now complete and your payment should be arriving shortly after you leave this place."" she says as she motions you to leave. You feel like being forced out.
-
-As you leave the door you can hear the computer disk drive whirring as it accesses the data. The door closes before you can attempt to guess what may be on the disk.",,
-"#END REPO_MISSION_END",,,,,,
-"#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
-,,,,,,
-# OFFICER_YEONG_PENROSERECOVERY1_QUEST,,,,,,
-,,,,,,
-# RECOVERY_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_START,PopulateOfficerYeongMissionOptions,"RepGTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
-$id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.eusan_nation_neuralrepo_completed == true
-$global.officeryeong_penroseRecovery1_start == false",,,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start","BeginMission eusan_nation_penroseRecoveryQuest1 false","As you sit down on the chair in her small office, Ariane takes out a small packet of cigs and lights one up. Taking a deep draw and blows out a sizable cloud of cigarette smoke before she begins to explain your next mission.
-
-""My superiors were pleased you got the data from our agent in Vineta. That wierd chapter is over and whatever issues they had with AEON, its now over. Your new task I have been authorized to give you is more strenuous. More fetch and carry type stuff. There is a whole list of this stuff but I will be giving them to you one by one.""
-
-Ariane straightens up and hands you a folder. As you open the folder the 1st page already is filled with redactions. Clearly someone was paranoid about secrets getting out.","officeryeongPenroseRecovery1Briefing0: ""Lots of redactions on this...""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING1,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing0","SetTextHighlights ""Penrose Program"" ""replika"" ""Rotfront""","""Yes. Its standard procedure honestly. Things are classified even if the information itself isn't really classified."" Ariane says. She takes another draw from her cig and blows the smoke towards the celling.
-
-""I assume you know about the Penrose Program. If not, its the Nation's deep space exploration program. Two crew, one human, one replika. Shoved into a deep space scout ship. Shot into deep space at whatever direction the Nation deems worthy of exploring.""
-
-""So a few weeks ago the Deep Space Radio Array on Rotfront detected this transmission."" Ariane says, pressing a button on a recording device on her desk. It began playing a rapid set of beeps before cutting out and repeating again.
-
-""Listen to that. Its a rather simple transmission. A series of beeps and if you remember your basic codes, beeps and dashes."" She stops the recording device with a swift press of a button. 
-
-","officeryeongPenroseRecovery1Briefing1: ""So what kind of transmission is it?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing1","SetTextHighlights ""PENROSE-419"" ""LSTR-419""
-Call $global.eusan_nation_penroseRecovery1_ref updateData","""This is a standard Penrose emergency beacon. Its set to go off when a Penrose craft has suffered severe damage or has crashed landed on a rock. Given how this weak this transmission was received it was a miracle the Rotfront Array picked this up"" Ariane says. She then picks up a paper from her desk and began to summarize the information to you in a rather curt manner.
-
-""The transmission is from the PENROSE-419. It was launched over two decades ago. The Flight Officer's name was Cameron Yang. The replika was your standard LSTR unit, LSTR-419. The last known contact was roughly 12 years ago before they dropped out of contact. There was a very brief attempt to restore contact but given 419's mission was essentially over, the Nation did not bother outside the standard hails.""
-
-""Given how much time has passed, the mission is one of recovery. The mission recorder is to be recovered, the crew, if found, be given last rites as befitting of..."" Ariane squints her eyes a bit at the paper she held.
-
-""Heroes of the Nation"" she said with a flat tone. ","officeryeongPenroseRecovery1Briefing2: ""Alright. Where should I look?""",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing2","SetTextHighlights $eusan_nation_penroseRecovery1_distanceLy $eusan_nation_penroseRecovery1_systemName $eusan_nation_penroseRecovery1_planetName
-Call $global.eusan_nation_penroseRecovery1_ref showMap ""Destination: $eusan_nation_penroseRecovery1_planetName""","""Alright. Here is the important part. The transmission was traced to this part of the galaxy. Our analysts have determined that the Penrose is located $eusan_nation_penroseRecovery1_distanceLy light years away in the $eusan_nation_penroseRecovery1_systemName system and the signal seems to be originating from the planet $eusan_nation_penroseRecovery1_planetName""
-
-""As mentioned before, your mission is to recover the mission recorder, any suitable information and if possible...lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3: Understood",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider: I changed my mind...",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
-ShowPersonVisual
-FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
-OR
-""Take your time. Come back later if you want to proceed.""
-OR
-""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:  I accept the mission.",
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroseRecovery1_start = true
-ShowPersonVisual
-AcceptMission
-FireAll PopulateOptions","""Thank you. Now formally I will need to give you the usual spiel of working for the Nation but I won't. Anyway your mission """,,
-"#END RECOVERY_BRIEFING",,,,,,
-,,,,,,
-# RECOVERY,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
-$eusan_nation_penroseRecovery1_targetPlanet score:1000
-$global.officeryeong_penroseRecovery1_start == true
-","ShowDefaultVisual
-FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery1Option1: Enter Orbit around the planet
-defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","SetTextHighlights ""PENROSE-419""
-eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1
-eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communication's officer notifies you that a transmission has been detected and on a specific frequency known to be used by the Penrose program. The transmission is a standard emergency beacon, emitting a general distress call and identifier. 
-
-You head over to the communication's officer and begin to examine the data. The transmission was broadcasting on a specific frequency, using a series of dashes and beeps. You note its similarity to the transmission played for you during the mission brief by Officer Yeong. You order your communication's officer to record the transmission and triangulate its location. 
-
-45 mins later the communication's officer finally reports that the location of the PENROSE-419. ","officeryeongPenroseRecovery1Option2: Deploy the recovery teams to the surface",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option2","SetTextHighlights ""PENROSE-419""
-$global.eusan_nation_penroseRecovery1_returnBlackbox = true
-$global.eusan_nation_penroseRecovery1_recoveredData = true
-Call $global.eusan_nation_penroseRecovery1_ref updateStage
-eusan_nation_penroseRecovery1_rulecmd resumeMusic_penroseRecovery1","The team's shuttle touched down on the planet with little issue. After a short hike they finally came upon the site where the communication's officer indicated the PENROSE-419 would be. The ship seemed to be intact, having appeared to have crash landed. Most of the lower hull was buried and parts of the starboard wing was sheared off. Aside from the damage from the landing and lost wing, there could be no doubt of the identity of the ship with a giant 419 on the intact portside wing.
-
-After a few hours surveying the hull and setting up equipment to enter, the recovery team finally gained entry via the emergency hatch on the top of the hull. The interior of the ship was a charred mess. Debris, burned documents, and wrecked equipment was everywhere.
-
-The team split into two, one to the flight deck, another to the cryo chamber. The team entered the flight deck with no issue but the second team reported that the cryo chamber was wrecked beyond recovery. Entry would be impossible with the equipment they have. No sign of the crew was found but they did find bits of pieces of a Replika unit.
-
-""Sir message from the ground team, they have the mission data recorder and the logbooks."" the communication's officer reported.","officeryeongPenroseRecovery1Option3: Order your team to return to the fleet.",
-OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option3","FireAll PopulateOptions","The team returned to the ship without incident. The recovery team leader presents the container with the mission data recorder and the logbooks.
-
-""Here is the recovered items sir. Its a mess down there and we tried to recover as much as we can. No sign of the flight officer or the replika but we did find parts of one.""
-
-You congratulate the recovery team leader for a job well done. Now its time to return to Heimat with the data recorder. Hopefully Officer Yeong will be more forthcoming on what is on the device.",,
-"#END RECOVERY",,,,,,
-,,,,,,
-# RECOVERY_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.officeryeong_penroseRecovery1_start == true
-$global.eusan_nation_penroseRecovery1_completed == false",,,"officeryeongPenroseRecovery1Final: Update Ariane on the status of your mission.",
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Final","FireAll PopulatePenroseRecovery1Options",,,
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_OPTION,PopulatePenroseRecovery1Options,"$global.eusan_nation_penroseRecovery1_recoveredData == false",,,"officeryeongPenroseRecovery1Cancel: Tell her that you have yet to complete the mission.",
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Cancel","FireAll PopulateOptions","""So you decided to come and waste my time?""
-
-You can see on her face that she is annoyed by your admission.
-
-""Please let me know if you finished your job.""
-
-",,
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_OPTION,PopulatePenroseRecovery1Options,"$global.eusan_nation_penroseRecovery1_recoveredData == true",,,"officeryeongPenroseRecovery1ConfirmOption: Tell her that you recovered the mission data recorder.",
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenroseRecovery1ConfirmOption","SetTextHighlights ""Penrose Program""","You hand over the mission data recorder and the logs to Ariane. It takes a few minutes for her to hook up the data recorder to a special machine. At the same time she hands you the logs and tells you to skim over it. Obviously she needs your help so you decide to give it a try.
-
-It takes a few hours of reading of the logs and you can already piece together a story. The logs tell of the Flight Officer, a proud man of Vinetan origin and his mission. As the mission started you can tell his was extremely proud of the Nation and his selection to be part of the Penrose Program. A fine example of a loyal citizen of the Nation.
-
-You continue to read the logs and the story of the proud, patriotic Flight Officer. Around the 2nd Phase of the mission, his Penrose suffers a coolant leak. The leak is repaired but the radiation was enough to leak through a storage compartment and contaminate some food supplies. Although this was not distressing at first, later log entries detail the Flight Officer's growing concern about not having enough food.
-
-Past Phase 3 of the Program, things became more disturbing. Around day cycle 4500 the food supplies became distressingly low. Most Penrose ships had enough food supplies past day cycle 6500 but the radiation leak event cut that down drastically. Around cycle 4881, the officer terminates his Replika and began to eat it.
-
-At this point the log entries began to become more sparse in writing. You turn to Ariane for instructions as the logs by this point become almost useless. She however was busy examining the data from the mission recorder. You tap on her shoulder and she looks up.
-
-""You saw what he did to his Replika right?"" she asked. It is almost like she knew what you were about to ask.
-
-","officeryeongPenroseRecovery1Confirm1: ""He...ate his Replika...""",
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Confirm1","SetTextHighlights ""PENROSE-419"" ""PENROSE-211""","""He ate his Replika. That is...not surprising. At least not in the Penrose Program."" 
-
-She sits back on her chair and hands you a mission report from another Penrose mission, PENROSE-211. 
-
-""An earlier mission. Most of the early missions were classified but this one I had to ask a lot of favors to get. This flight officer also killed and ate his Replika because he was starving. After Phase 3, most Penrose ships will eventually run out of consumables and supplies to keep the ship operating. Reports of desperate behavior among Penrose flight officers are extremely common""
-
-She points to a page where the final transmission of the PENROSE-211 was received. 
-
-""The officer was a patriot, much like the PENROSE-419's officer. Proud, willing to do anything for the Nation. At the end of his mission, several years after Phase 3, he was busy transmitting insults and hostile messages back to Heimat.""
-
-She taps the page as if prompting you to read it. Obviously she cannot say it out loud. 
-
-'Fuck the Nation' one line said.
-
-Another line had: 'You sent me out here to die.' 
-
-'Fuck the Great Revolutionary'
-
-There were several pages worth of transcribed messages. The flight officer was clearly at his wits end. 
-
-""From what I see here from the data recorder from 419, its different in many respects but the behavior was the same as 211. They both felt abandoned and sent to die. Once you hit Phase 3 of the Program, either you found a suitable planet or you failed. 419 failed.""","officeryeongPenroseRecovery1Confirm2: Continue",
-OFFICER_YEONG_PENROSERECOVERY1_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Confirm2
- ","SetTextHighlights ""PENROSE-419""
-$global.eusan_nation_penroseRecovery1_completed = true
-Call $global.eusan_nation_penroseRecovery1_ref updateStage
-AddStoryPoints 1
-FireAll PopulateOptions","""So ends the story of the PENROSE-419. There are no happy endings for these people""
-
-""You must be wondering why bother recover the data recorders. They all died in service of the Nation right? I also wonder why they bother. The truth of their demise is something I expect the Nation to bury.""
-
-""The PENROSE-419 was sent to deep space to search for planets. To expand the Nation, to find new worlds for us to settle. In the eyes of the Nation they did just that. All it cost is one ship, one pilot and one replika. I think my superiors are more interested in how they died rather than why.""
-
-Ariane then opens a drawer in her desk and pulls out an envelope. 
-
-""Your reward as promised.""
-
-You take the envelope of money from her. You give her a slight nod and exit out her office.",,
-"#END RECOVERY_MISSION_END",,,,,,
-"#END OFFICER_YEONG_PENROSERECOVERY1_QUEST",,,,,,
-,,,,,,
-# OFFICER_YEONG_PENROSERECOVERY2_QUEST,,,,,,
-,,,,,,
-# RECOVERY2_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongMissionOptions,"RepGTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
-$id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.eusan_nation_penroseRecovery1_completed == true
-$global.officeryeong_penroseRecovery2_start == false",,,"officeryeongPenroseRecovery2Start:  ""I have another recovery mission for you.""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a seat at the desk. You've become used to this now. 
-
-""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder and unsurprisingly its filled with redactions and crossed out sentences. Typical.
-
-""As before, my superiors have decided that you are the best person for the job. Now its time for you to help us with another mission. Its a standard recovery op. Just like last time you are to go to a target location and recover the mission data recorder.""","officeryeongPenroseRecovery2_briefing0: ""Sure. What is the catch then?""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing0",,"""The recovery site is located in this star system which is several light years away from this area."" She says, flipping a page from the folder and pointing at a black and white picture of a star map.
-
-""However, there is an issue. Our military intelligence have determined that the star system has at this moment, an unknown fleet. Our signals analysts belive the fleet to be a Tri-Tachyon patrol group. Why they are in the star system is anyone's guess. Our determination is that these ships are just conducting deep space patrol. I asked for more information and was told there isn't anymore. No information on precise size of hostile forces, composition, etc. Just a signals analysis of a patrol sized group.""
-","officeryeongPenroseRecovery2_briefing1: ""Hostile fleet, no information on size or composition. Got it.""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING2,DialogOptionSelected,"$option ==  officeryeongPenroseRecovery2_briefing1","SetTextHighlights ""PENROSE-388"" ""Mary Cheng""
-Call $global.eusan_nation_penroseRecovery2_ref updateData","""Now your mission target: PENROSE-388. This Penrose was launched over two decades ago. Like all Penrose craft, they were sent on randomized trajectories. Now due to the presence of a hostile fleet, it is vital that you destroy this fleet. My superiors have made it abundantly clear to me and I am making it abundantly clear to you. Destroy this fleet. Do this before you recover PENROSE-388""
-
-""Now for the other bits. PENROSE-388 dropped out of contact 18 years ago. Commanded by a young pilot named Mary Cheng. Well connected. Has ties to a powerful political faction here on Heimat. Due to her status of being the daughter of a powerful political family, my superiors have prioritized the recovery of PENROSE-388 to the top of the list.""","officeryeongPenroseRecovery2_briefing2: ""I understand""",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing2","SetTextHighlights $eusan_nation_penroseRecovery2_distanceLy $eusan_nation_penroseRecovery2_systemName $eusan_nation_penroseRecovery2_planetName
-Call $global.eusan_nation_penroseRecovery2_ref showMap ""Destination: $eusan_nation_penroseRecovery2_planetName""","""The details on the mission are inside the briefing packet but I will for brevity sake, tell you exactly where to go. Signal analysis indicates that PENROSE-388 is located $eusan_nation_penroseRecovery2_distanceLy light years away in the $eusan_nation_penroseRecovery2_systemName system and the craft has crashed on the planet $eusan_nation_penroseRecovery2_planetName""
-
-""Got that? Good. You can refresh yourself later. Its all here in the packet"" Ariane says. She opens her drawer and grabs a bright red packet of cigarettes. A familiar, smokey smell begins to permeate the room. She takes a long drag and lets out a puff. 
-
-""Were are done here...you know what to do.""","officeryeongPenroseRecovery2_briefing3: Time for me to go to work then...",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing3","FireAll PopulatePenroseRecovery2StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider: I changed my mind...",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Reconsider","AbortMission
-FireAll PopulateOptions","""Shame. If you want to reconsider, let me know""
-OR
-""Take your time. Come back later if you want to proceed.""
-OR
-""Ok sure. If you wish to think it through that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:  I accept the mission.",
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
-ShowPersonVisual
-AcceptMission
-FireAll PopulateOptions",,,
-"#END RECOVERY2_BRIEFING",,,,,,
-,,,,,,
-# RECOVERY2_ENCOUNTER,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_ENCOUNTER,OpenCommLink,"$entity.eusan_nation_hostilefleet score:100","$entity.ignorePlayerCommRequests = true","In the screen, the Tri-Tachyon fleet commander gives you a unfriendly look as if $HeOrShe just gotten a unwanted guest in $HeOrShe house.
-
-""This is Commander $personName. You entered into our patrol zone. If you come here just to talk, you are sadly mistaken.""
-
-""Now if you don't mind you will be fine target practice for my fleet. Need to keep our performance ratings.""","cutCommLink:Cut the comm link",
-"#END RECOVERY2_ENCOUNTER",,,,,,
-,,,,,,
-# RECOVERY2,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
-$eusan_nation_penroseRecovery2_targetPlanet score:1000
-$global.officeryeong_penroseRecovery2_start == true
-","ShowDefaultVisual
-FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
-OFFICER_YEONG_PENROSERECOVERY2_OPTION1,PopulateOfficerYeongPenroseRecovery2Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. You order your communication's group to begin scanning frequencies to triangulate the source of the Penrose SOS signal. After a brief set of course correction maneuvers you prepare to enter orbit around the planet.","officeryeongPenroseRecovery2Option1: Enter Orbit around the planet
-defaultLeave: Leave",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1","eusan_nation_penroseRecovery2_rulecmd endMusic_penroseRecovery2
-eusan_nation_penroseRecovery2_rulecmd playSignal_penroseRecovery2","Entering orbit around the planet, your communications officer noticed a faint signal from the surface. Your officer and his assistants begin to triangulate the signal as you order your recovery teams to the shuttle bay.
-
-Your officer noted there is unusual interference from the surface but its a natural phenomenon. You give the officer a nod, thankful that there is no more interference from hostile actors. 
-
-After what seemed like hours the communication's officer finally reports that the location of the Penrose-388. ","officeryeongPenroseRecovery2Option2: Deploy the recovery teams to the surface",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option2","$global.eusan_nation_penroseRecovery2_returnBlackbox = true
-$global.eusan_nation_penroseRecovery2_recoveredData = true","The team touches down and begins to hike towards the signal. Given how badly the signal had been scrambled by the planet's own atmosphere, its a miracle that the communication's officer managed to located the crashed Penrose with accuracy. 
-
-Arriving at the crashed ship, your team lead sends a radio message which arrived garbled. You can only make out traces of voice as the team leader makes his report.
-
-""Craft...landed...intact...cryo. Checking..."" the transmission says. Not very helpful. You give a nod to your comm officer and he makes a few adjustments.","officeryeongPenroseRecovery2Option3: Continue",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION4,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option3",,"As time went on, you begin to feel impatient and order your comm officer to clean up the transmissions coming from the surface. The officer complies and begins to start adjusting his equipment. A few more adjustments and the comm officer finally reports a new transmission from the recovery team.
-
-""Sir? We have something you may want to see."" the officer reports. He hands a printout from the communication's  console and hands it to you. Your eyes widen as you read the report. Your recovery team managed to find an intact Penrose craft and somehow the ship contained a working cryo chamber with the flight officer still alive. The recovery team then activated the cryo chamber's thaw procedure. The medical officer on site has already gone over the pilot's vitals and given a preliminary report.","officeryeongPenroseRecovery2Option4: Order the recovery team to return back to the ship",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION5,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option4","SetTextHighlights ""Mary Cheng""
-eusan_nation_penroseRecovery2_rulecmd resumeMusic_penroseRecovery2
-Call $global.eusan_nation_penroseRecovery2_ref updateStage","As you welcome the team back, the team leader begins to explain what had happened on the surface. Apparently the cryo chamber was still operating and the pilot was alive.
-
-The pilot, Mary Cheng, gives you a rather flimsy salute. Temporary side effects of the cryo chamber no doubt. The medical team already is beginning to go over her. 
-
-""Thank you so much."" she begins. Her voice quivering with emotion. You can see tears in her eyes.
-
-""You saved my life. I had long since given up hope of rescue. I cannot express how grateful i am for you to come to my aid. I knew the Nation will one day rescue me but I had begun to lose hope every time I woke up from cryo. The last time I went to cryo sleep, I just set the timer to 100 years.""
-
-""Let me repay you in kind. Let me join your fleet as an officer."" she says.
-
-It seems that Mary wants to join your fleet. You are not too sure as just a few hours ago she was slumbering in a cryo-chamber. Perhaps you should consult Ariane about this situation.","officeryeongPenroseRecovery2Option5: Lets go home..",
-OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
-"#END RECOVERY2",,,,,,
-,,,,,,
-# RECOVERY2_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_FINAL,PopulateOfficerYeongMissionOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true
-$global.officeryeong_penroseRecovery2_start == true
-$global.eusan_nation_penroseRecovery2_completed == false",,,"officeryeongPenroseRecovery2Final: Update Ariane on the status of your mission.",
-OFFICER_YEONG_PENROSERECOVERY2_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Final","FireAll PopulatePenroseRecovery2Options",,,
-OFFICER_YEONG_PENROSERECOVERY2_CANCEL_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == false",,,"officeryeongPenroseRecovery2Cancel: Tell her that you have yet to complete the mission.",
-OFFICER_YEONG_PENROSERECOVERY2_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Cancel","FireAll PopulateOptions","""Wasting my time is it now?""
-
-Your admission to her has visibly annoyed her. Its almost like you can see a small snarl.
-
-""Please let me know if you finished your job.""
-
-",,
-OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_OPTION,PopulatePenroseRecovery2Options,"$global.eusan_nation_penroseRecovery2_recoveredData == true",,,"officeryeongPenroseRecovery2ConfirmOption: Tell her that you recovered the mission data recorder.",
-OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenroseRecovery2ConfirmOption",,"""Alright let see"" she says. 
-
-You give her the data recorder and was about to start to explain what happened but she interrupts you with the very question.
-
-""Did you find the pilot?""
-
-You respond with an affirmative and recount the story of finding the pilot, Mary Cheng, alive, dazed but unharmed from the long cryosleep. Ariane raises her eyebrows a bit, probably not expecting you to report a Penrose pilot alive of all scenarios. 
-
-""Of all the things I expected, finding a pilot alive all this time isn't one of them. The emergency cryogenic units were extremely durable devices but my information on their true longevity is limited. We had instances where cryogenic units failed after a few years.""
-
-She pauses a bit. Apparently the news of a Penrose pilot surviving has her thinking.
-
-""Where is she now?"" she asks you.
-
-","officeryeongPenroseRecovery2Confirm1: ""She is onboard my ship. Why?""",
-OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm1",,"You respond to Ariane that Mary is currently aboard your flagship. Alive and well but currently recuperating from the long cryo sleep and catching up on all the events that happened since she left home.
-
-""Don't let her come back down here then"" she responds. 
-
-You are taken aback by this. She has never met Mary outside of the data files but something about her tone struck you odd. Why would you not return a long lost citizen, heroine actually back to the Nation?
-
-""You are probably thinking about why I would ask you not to let her back home. The answer is simple. She knows too much. Also the psych profile on her isn't a shining beacon of stability. From what I gathered she joined the program as some sort of rebellion against her father. Leveraged her family connections to get a pilot slot.""
-
-She sighs a bit. 
-
-""Until I can get guidance from leadership on how to handle this situation, you will have to employ Mary as a fleet officer for your ships. To be honest this is the first time I have ever heard of anyone being found alive from a Penrose mission. Sooner or later news of this is going to get out but for now keep her with you.""
-
-""For now keep her as part of your fleet.""","officeryeongPenroseRecovery2Confirm2: Continue",
-OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Confirm2","$global.eusan_nation_penroseRecovery2_completed = true
-Call $global.eusan_nation_penroseRecovery2_ref updateStage
-eusan_nation_penroseRecovery2_rulecmd add_officer_penroseRecovery2
-AddStoryPoints 1
-FireAll PopulateOptions","You get up to leave Ariane's office. Before you step through the door, Ariane gives you one last piece of advice. 
-
-""Keep her with your fleet for now for the foreseeable future. Also I have sent your payment for a job well done.""
-
-You give her a nod and pull out a communications device. You send off a message to your ship to give Mary the news. A short ping from the ship lets you know she is now aware of the situation and happily agrees with staying on as an officer with your fleet.",,
-"#END RECOVERY2_MISSION_END",,,,,,
-"#END OFFICER_YEONG_PENROSERECOVERY2_QUEST",,,,,,
-,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
-OFFICER_YEONG_CHAT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongChat",,,"officeryeongChatOptions: ""Tell me about...""
-officeryeongMissionOptions: Ask her if the Nation requires your assistance.
-officeryeongChatOptionsEscape: ""I got to go now""",
-OFFICER_YEONG_CHAT_LISTALLOPTIONS_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatOptionsEscape","FireAll PopulateOptions",,,
-OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChatOptions","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
+OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
+OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
 OR
-""I can spare some time to talk a bit. What do you want to talk about?""
+""I can spare some time to talk for a bit. What do you want to talk about?""
 OR
 ""Ask away.""
 OR
 ""What do you want to know?""",,
-OFFICER_YEONG_CHAT_LISTMISSIONOPTIONS,DialogOptionSelected,"$option == officeryeongMissionOptions","FireAll PopulateOfficerYeongMissionOptions","""Hmmm...let me check if there is anything you can help with.""
-OR
-""Perhaps. Let me see if I have anything outstanding at the moment.""
-OR
-""Help? Let's check the list shall we...""
-OR
-""The Nation is always of need of help...""
-OR
-""Let me see...""",,
-OFFICER_YEONG_CHAT_MISSIONESCAPE_OPTION,PopulateOfficerYeongMissionOptions,,,,"officeryeongMissionEscape:""Perhaps some other time""",
-OFFICER_YEONG_CHAT_MISSIONESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongMissionEscape","FireAll PopulateOptions","""Talk to you later then...""
-OR
-""See you next time...""
-OR
-""Come back later. I may have other stuff that you can help with.""",,
-OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatEscape:""I got to go now...""",
-OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm...let me know if you want to know more stuff...""
+OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateOfficerYeongChatOptions,,"SetShortcut officeryeongChatEscape ""ESCAPE""",,"officeryeongChatEscape:""I got to go now...""",
+OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm... let me know if you want to know more information...""
 OR
 ""Talk to you later then...""
 OR
-""Remember, whatever we speak here, probably should not be said anywhere else. Just a precaution""
+""Remember, whatever we speak here, should probably not be said anywhere else. Just a precaution.""
 OR
 ""See you next time...""",,
-OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
 "#END OFFICER_YEONG_CHAT_OPTIONS",,,,,,
 ,,,,,,
 # OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
@@ -661,22 +768,22 @@ SetTooltip officeryeongInsultResult ""You recently done this. Wait for a few day
 ",
 OFFICER_YEONG_COMPLIMENT_RESULT,DialogOptionSelected,"$option == officeryeongComplementResult","AdjustRepActivePerson WELCOMING 1
 $player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""Flattery is nice""
+FireAll PopulateOptions","""Flattery is nice.""
 OR
-""Thank you but your not my type""
+""Thank you, but you're not my type.""
 OR
-""Why thank you for the nice words. You just made my day slightly brighter than normal""
+""Why, thank you for the nice words. You just made my day slightly brighter than normal.""
 OR
 ""Do you mean it?""",,
 OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1
 $player.officeryeongreptalk = true 3
 FireAll PopulateOptions","""That is not nice...""
 OR
-""Aye go away then...""
+""Aye, go away then...""
 OR
-""Uh huh...right then...""
+""Uh-huh... right then...""
 OR
-""Insulting me right here right now? Wow...""",,
+""Insulting me right here, right now? Wow...""",,
 "#END OFFICER_YEONG_INSULT_COMPLIMENT",,,,,,
 ,,,,,,
 # OFFICER_YEONG_GIFT,,,,,,
@@ -690,7 +797,7 @@ OFFICER_YEONG_GIFT_LOBSTER_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan
 PlayerHasCargo lobster",,,"officeryeongGiftLobsterOffer: Offer Officer Yeong a lobster from Volturn",
 OFFICER_YEONG_GIFT_LOBSTER_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterOffer","AdjustRepActivePerson WELCOMING 5
 $player.officeryeonggiftgive = true 7
-FireAll PopulateOptions","""Thanks for the gift of lobster. Now I don't have to eat the ration packs they give us."" $personLastName says. ""Do you know how many time I have eaten the same ration pack this last week?""
+FireAll PopulateOptions","""Thanks for the gift of lobster. Now I don't have to eat the ration packs they give us."" $personLastName says. ""Do you know how many times I have eaten the same ration pack this last week?""
 
 $personLastName takes the gift from you. She seems slightly pleased with the fact she isn't going to eat the same dish this evening. 
 OR
@@ -698,19 +805,19 @@ OR
 
 You hand her the lobster. She gives you a small nod in appreciation.
 OR
-""Oh my lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact don't tell me I don't want to know...""
+""Oh my, lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact, don't tell me. I don't want to know...""
 
 She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
 OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
 OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
 ","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I only eaten lobster once and it was for a special occasion. That was years ago.""
+FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
 
-""Wait...what do you mean blue lobsters?""
+""Wait... what do you mean blue lobsters?""
 OR
-""Lobsters...from Volturn? I have heard of them but I never seen one in person. I assume they have claws and stuff...""
+""Lobsters... from Volturn? I have heard of them but I've never seen one in person. I assume they have claws and stuff...""
 
-""I bet it costs a lot just to ship them here""
+""I bet it costs a lot just to ship them here.""
 OR
 ""I am not sure. Volturn is far away and I don't have time to fly around or travel. Even if I had the ability, I would need to pass checkpoint after checkpoint just to leave this planet. Not worth the time and effort just to sample a dish.""
 
@@ -723,15 +830,15 @@ OFFICER_YEONG_GIFT_LOBSTERPLUSH_OFFER,PopulateofficeryeongGiftOptions,"$id == ""
 PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushOffer: Offer Officer Yeong a soft plush lobster toy",
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushOffer","AdjustRepActivePerson WELCOMING 1
 $player.officeryeonggiftgive = true 14
-FireAll PopulateOptions","""Thanks for the gift."" $personLastName says.  ""It be hard to keep this gift because contraband isn't allowed and i am pretty sure this is contraband.""
+FireAll PopulateOptions","""Thanks for the gift."" $personLastName says.  ""It'd be hard to keep this gift because contraband isn't allowed and I am pretty sure this is contraband.""
 
 She looks happy but as she moves away you can see her edging towards the trash bin...
 OR
-""What a pitiful looking mascot. I love it."" as $personLastName takes the plush lobster from you. ""Thanks for the gift but please don't give me things like this in the future i can get in trouble...""
+""What a pitiful looking mascot. I love it."" As $personLastName takes the plush lobster from you. ""Thanks for the gift but please don't give me things like this in the future. I can get in trouble...""
 
-She gives the plush toy a small pat and disappears into her office. You hear a clunk of a trash bin lid.
+She gives the plush toy a small pat and disappears into her office. You hear the clunk of a trash bin lid.
 OR
-""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Forturnatly I have the means of keeping gifts or sanitizing them. Thanks anyway.""
+""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Fortunately, I have the means of keeping gifts... or sanitizing them. Thanks anyway.""
 
 She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
@@ -742,19 +849,19 @@ OFFICER_YEONG_GIFT_CHOCOLAVA_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eus
 PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaOffer: Offer Officer Yeong a chocolate lava cake",
 OFFICER_YEONG_GIFT_CHOCOLAVA_GIFTED,DialogOptionSelected,"$option == officeryeongGiftChocoLavaOffer","AdjustRepActivePerson WELCOMING 5
 $player.officeryeonggiftgive = true 5
-FireAll PopulateOptions","""Huh? Interesting I never seen this type of dessert before"" $personLastName says. ""This is actually pretty good. Where does it come from?""
+FireAll PopulateOptions","""Huh? Interesting. I have never seen this type of dessert before."" $personLastName says. ""This is actually pretty good. Where does it come from?""
 
 She pokes the cake a bit...chocolate filling begins to ooze out.
 
-""In fact don't tell me. Its better if I don't know"". 
+""In fact, don't tell me. It's better if I don't know."" 
 OR
-""Oh my what is this thing? A cake? And its filled with a sweet gooey filling? How decadent...Nothing like this comes to my desk"" $personLastName says. You can tell she is exceptionally fascinated by the cake you gave her.
+""Oh my, what is this thing? A cake? And it's filled with a sweet gooey filling? How decadent... Nothing like this comes to my desk."" $personLastName says. You can tell she is exceptionally fascinated by the cake you gave her.
 
 She gives the cake a small nibble. Chocolate filing oozes out and she gives a small smile.
 
-""Thanks...this means a lot to me""
+""Thanks... This means a lot to me.""
 OR
-""You really should not be giving me gifts its considered illegal and against the laws I could get in trouble...is that cake? With a sweet filling?"" $personLastName says. She moves her hand to poke the filling that oozed out. She gives a small lick and her eyes brighten.
+""You really should not be giving me gifts. It is considered illegal and against the laws... I could get in trouble... Is that cake? With a sweet filling?"" $personLastName says. She moves her hand to poke the filling that oozed out. She gives it a small lick and her eyes brighten.
 
 ""This is really good. Thanks for the gift!""
 
@@ -766,16 +873,16 @@ FireAll PopulateOptions","""test""",,
 OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
 OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
 OR
-""Perhaps it be best if you did not""
+""Perhaps it'd be best if you did not.""
 OR
 ""Whatever...""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
-"#END EUSAN_NATION_OFFICER_YEONG",,,,,,
+"#END OFFICER_YEONG",,,,,,
 ,,,,,,
-# EUSAN_NATION_ADMIRAL_FALKE,,,,,,
+# ADMIRAL_FALKE,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
-ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
@@ -785,7 +892,7 @@ FireAll PopulateOptions
 $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
-AddText ""Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""",,"cutCommLink:Cut the comm link",
+AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
 $id ==  eusan_nation_admiral_falke score: 100
@@ -796,7 +903,7 @@ $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, traveller. Welcome to our little side of the stars. Perhaps one day we can work together?""",,"cutCommLink:Cut the comm link",
-ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
@@ -817,7 +924,7 @@ $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there fellow traveller. You seem lost. Its only natural you come to me to ask for my help. So...how can I help you?""",,"cutCommLink:Cut the comm link",
-ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
@@ -830,26 +937,54 @@ OR
 OR
 ""Many have tried to cross me, none survived. Comrade, it is up to us to defeat those who drag us down.""
 OR
-""We carry the torch of the Revolution in our hands, comrade""
+""We carry the torch of the Revolution in our hands, comrade.""
 OR
-""Greetings and salutations, comrade. May light of the Nation guide you on your travels.""
+""Greetings and salutations, comrade. May the light of the Nation guide you on your travels.""
 OR
-""Comrade! Its good to see you. You must have so many stories to tell us.""
+""Comrade! It's good to see you. You must have so many stories to tell us.""
 OR
-""Back again, Comrade? My golden radiance is irresistible yes I know.""","cutCommLink:Cut the comm link",
+""Back again, Comrade? My golden radiance is irresistible, yes, I know.""
+OR
+""When the Empire was defeated my comrades""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
 $faction.friendlyToPlayer score:1000","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Ah hello there, traveller. Have you come to witness my radiance?""
 OR
-""Hello there, traveller. You are a long way from home""
+""Hello there, traveller. You are a long way from home.""
 OR
 ""What brings you to our star system, dear traveller?""
 OR
 ""Greetings and salutations, dear traveller. May the stars shine bright on your travels.""
 OR
-""Hello traveller. I am fortunate to have met you. One day I hope you join our Nation.""","cutCommLink:Cut the comm link",
+""Hello traveller. I am fortunate to have met you. One day, I hope you join our Nation in glorious victory.""
+OR
+""If the Nation made any mistakes, perhaps one of them is not having you be a friend earlier. ""
+OR
+""One day we will have victory. The Nation will certainly be glad to have you as a loyal comrade for the day we achieve it.""","cutCommLink:Cut the comm link",
+ADMIRAL_FALKE_GREETING_NEUTRAL_COMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$player.metAdmiralFalke == true
+$id ==  eusan_nation_admiral_falke score: 100
+$faction.id == ""eusan_nation""
+$faction.neutralToPlayer score:1000","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Greetings comrade. Make sure you behave.""
+OR
+""Comrade, my time is limited, my patience is even more so.""
+OR
+""Have you come to bask in the glory of the Nation? Or have you just decided to waste my time?""
+OR
+""Perhaps you should reflect on how to improve yourself. There is still time.""
+OR
+""The stars are very unforgiving without friends and allies. Its not recommended to wander without a guardian.""
+OR
+""One day victory will be ours. The Nation will ply the stars flying our banner. Either you stand with us together in victory or you will be left behind.""
+OR
+""I show mercy to those who submit. If you decide to behave I might let you live.""
+OR
+""Oh my. Have you come to talk to me? I hope you have something interesting to say if you are this desperate to bother me.""
+OR
+""The Empire was defeated long ago but our vigilance will never cease. I hope you understand that. Its only natural to be suspicious of misbehavior.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
@@ -858,11 +993,19 @@ FireAll PopulateOptions","""Greetings traveller. You have entered the sovereign 
 OR
 ""Traveller, my time is limited, my patience is even more so. My fleet stands ready. Understand your place.""
 OR
-""Have you come to bask in the glory of the Nation or have you just decided to waste my time?""
+""Have you come to bask in the glory of the Nation? Or have you just decided to waste my time?""
 OR
 ""Perhaps you should reflect on how to improve yourself. There is still time.""
 OR
-""The stars are very unforgiving without friends and allies. Its not recommended to wander without a guardian.""","cutCommLink:Cut the comm link",
+""The stars are very unforgiving without friends and allies. Its not recommended to wander without a guardian.""
+OR
+""One day victory will be ours. The Nation will ply the stars flying our banner. Either you stand with us together in victory or you will be left behind.""
+OR
+""I show mercy to those who submit. If you decide to behave I might let you live, traveller.""
+OR
+""Oh my. Have you come to talk to me? I hope you have something interesting to say if you are this desperate to bother me.""
+OR
+""The Empire was defeated long ago but our vigilance will never cease. I hope you understand that. Its only natural to be suspicious of travellers, including you.""","cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_HOSTILE,OpenCommLink,"$id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""","$entity.ignorePlayerCommRequests = true 1
 $menuState = fleetConvMain 0
@@ -874,8 +1017,90 @@ OR
 OR
 ""The Nation demands justice and I am its instrument.""
 OR
-""The last chapter of your life is being written by my hands. Come and lets see how it ends.""","cutCommLink:Cut the comm link",
+""The last chapter of your life is being written by my hands. Come and lets see how it ends.""
+OR
+""""Perhaps its time to end this sad chapter of your life. If you wanted mercy, you should have fought harder.""","cutCommLink:Cut the comm link",
 "#END ADMIRAL_FALKE_FLEET GREETINGS",,,,,,
-"#END EUSAN_NATION_ADMIRAL_FALKE",,,,,,
+"#END ADMIRAL_FALKE",,,,,,
+,,,,,,
+# MARLIS,,,,,,
+,,,,,,
+# MARLIS_GREETINGS,,,,,,
+MARLIS_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
+$market.id == ""rotfront_market""",,"You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small handwave to come over...","marlis_bar: Have a chat with the Replika at the bar.","AddBarEvent marlis_bar_interaction ""Have a chat with the Replika at the bar.""  ""You see a Replika busy cleaning some glasses. You catch her eye and she gives you a small handwave to come over."""
+MARLIS_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.friendlyToPlayer score:1000
+$option == marlis_bar","$player.metMarlis = true
+SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.","$option == marlis_bar_interaction"
+MARLIS_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.friendlyToPlayer score:1000
+$option ==  marlis_bar","$player.metMarlis = true
+SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_INTRO_NEUTRAL_COMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.commissionFactionId == ""eusan_nation""
+$player.metMarlis == false
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","$player.metMarlis = true
+SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT"".",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metMarlis == false
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","$player.metMarlis = true
+SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true
+AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
+AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddText ""PLACEHOLDER TEXT""",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_FRIENDLY_COMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metMarlis == true
+$faction.friendlyToPlayer score:1000
+$option == marlis_bar","SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true","""Hello comrade, how do you do this fine day?""
+OR
+""Welcome back, comrade. I hope you are well?""
+OR
+""Fancy a drink today?""","exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metMarlis == true
+$faction.friendlyToPlayer score:1000
+$option == marlis_bar","SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true","""Greetings. You seem parched. Would you like a drink?""
+OR
+""Ah a customer has come back. What will it be?""","exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_NEUTRAL_COMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.commissionFactionId == ""eusan_nation""
+$player.metMarlis == true
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.commissionFactionId == ""eusan_nation""
+$player.metMarlis == true
+$faction.neutralToPlayer score:100
+$option ==  marlis_bar","SaveCurrentVisual
+BeginConversation eusan_nation_marlis true true",,"exitMarlis_bar: Leave Marlis to her work.",
+MARLIS_GREETING_HOSTILE,,,,,,
+MARLIS_EXIT,DialogOptionSelected,"$option == exitMarlis_bar","EndConversation DO_NOT_FIRE
+RestoreSavedVisual
+BarCMD showOptions",,,
+"#END MARLIS_GREETINGS",,,,,,
+"#END MARLIS",,,,,,
 "#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 

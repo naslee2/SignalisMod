@@ -2,7 +2,7 @@
   "variantId": "eusan_nation_isolde_standard",
   "hullId": "eusan_nation_isolde",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 0,
   "fluxVents": 0,
   "quality": 1,

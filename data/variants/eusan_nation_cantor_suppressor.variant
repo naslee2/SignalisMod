@@ -1,0 +1,51 @@
+{
+  "variantId": "eusan_nation_cantor_suppressor",
+  "hullId": "eusan_nation_cantor",
+  "displayName": "Suppressor",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_tulip",
+        "WS0002": "eusan_nation_tulip",
+        "WS0003": "salamanderpod",
+        "WS0004": "salamanderpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

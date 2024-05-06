@@ -83,6 +83,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         return true;
     }
 
+
     protected void updateInteractionDataImpl(){
         set("$eusan_nation_penroseRecovery1_planetId", target_planet.getId());
         set("$eusan_nation_penroseRecovery1_planetName", target_planet.getName());
