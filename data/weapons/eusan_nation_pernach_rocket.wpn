@@ -1,0 +1,46 @@
+{
+  "id": "eusan_nation_pernach_rocket",
+  "specClass": "projectile",
+  "projectileSpecId":"annihilator_rocket",
+  "type": "BALLISTIC",
+  "size": "SMALL",
+  "displayArcRadius": 600,
+  "turretSprite": "graphics/weapons/eusan_nation_pernach_turret_base.png",
+  "turretGunSprite": "graphics/weapons/eusan_nation_pernach_turret_gun.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_pernach_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/eusan_nation_pernach_hardpoint_gun.png",
+  "specialWeaponGlowHeight": 30,
+  "specialWeaponGlowWidth": 12,
+  "visualRecoil": 7,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "turretOffsets": [
+    22,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    25.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode":"ALTERNATING",	
+	"animationType":"SMOKE",
+	"interruptibleBurst":false,
+	"smokeSpec":{"particleSizeMin":10.0,
+							 "particleSizeRange":14.0,
+							 "cloudParticleCount":3,
+							 "cloudDuration":1.5,
+							 "cloudRadius":12.0;
+							 "blowbackParticleCount":3,
+							 "blowbackDuration":0.45,
+							 "blowbackLength":20.0,
+							 "blowbackSpread":6.0,
+							 "particleColor":[190,180,160,95]},
+	"fireSoundTwo":"annihilator_fire",
+}
