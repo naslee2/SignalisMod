@@ -20,18 +20,19 @@ Ship sprites, hull and ship data by Sikair.
 
 Thanks to Kaysaar, WMGreywind and Sikair for coding assistance.
 
-Thanks to @Th0usandw1nd for letting me use his Officer Yeong character concept.  
+Thanks to Koil_52, lebonelesssnek, C H E E K I B R E E K I and Venri for writing assistance
 
-Cristiferbeast#2981 for being the public face of the Signalis modding community.
+Thanks to @Th0usandw1nd for letting me use his Officer Yeong character concept. 
 
-C H E E K I B R E E K I#4004 for proofreading
+Cristiferbeast for being the public face of the Signalis modding community.
 
-firebombpng#2396 for the Eusan Nation flag
+Thanks to Mallow / @AkulaAkura and Koil_52 for the portaits
 
 Vineta Planetary Textures and cloud layer by Mallow / @AkulaAkura 
 
-StrixBerseria, Swiftnicity#7031 and firebombpng
-#2396 for the Eusan Nation crests
+firebombpng#2396 for the Eusan Nation flag
+
+StrixBerseria, Swiftnicity#7031 and firebombpng#2396 for the Eusan Nation crests
 
 Terraformed Mars as Kitezh Planetary Textures by Daniel Michel aka Dizzy Crow. From OpenGameArt.org
 
