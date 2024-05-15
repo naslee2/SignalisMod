@@ -64,9 +64,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         if(officer_yeong == null){
             return false;
         }
-        if (target_planet == null) {
-			return false;
-		}
 
         tritach_fleetcommander = Global.getSector().getFaction(Factions.TRITACHYON).createRandomPerson();
         tritach_fleetcommander.setRankId(Ranks.SPACE_COMMANDER);

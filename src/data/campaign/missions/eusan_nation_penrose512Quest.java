@@ -26,7 +26,6 @@ import com.fs.starfarer.api.util.Misc;
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
     public static enum Stage {
-        INTERVIEW_LSTR_UNIT,
         LOCATE_PENROSE512,
         RETURN_BLACKBOX,
         COMPLETED
@@ -65,11 +64,7 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         if(officer_yeong == null){
             return false;
         }
-        if (target_planet == null) {
-			return false;
-		}
 
-        setStartingStage(Stage.INTERVIEW_LSTR_UNIT);
         addSuccessStages(Stage.RETURN_BLACKBOX);
 
         setStoryMission();
@@ -96,5 +91,38 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
         return false;
 	}
+
+    @Override
+    public String getPostfixForState() {
+        if (startingStage != null) {
+            return "";
+        }
+        return super.getPostfixForState();
+    }
+
+    protected void updateInteractionDataImpl(){
+        set("$eusan_nation_penrose512_planetId", target_planet.getId());
+        set("$eusan_nation_penrose512_planetName", target_planet.getName());
+        set("$eusan_nation_penrose512_systemName", target_planet.getStarSystem().getNameWithNoType());
+        set("$eusan_nation_penrose512_distanceLy", getDistanceLY(target_planet));
+    }
+
+    @Override
+    public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
+        if(currentStage == Stage.LOCATE_PENROSE512){
+            info.addPara("Locate the Penrose 512 at the " + target_starsystem.getNameWithLowercaseTypeShort() + " ", tc, pad);
+            return true;
+        }
+        else if(currentStage == Stage.RETURN_BLACKBOX){
+            info.addPara("Mission Complete. Return to Ariane Yeong with your findings.", tc, pad);
+            return true;
+        }
+        return false;
+    }
+    
+    @Override
+    public String getBaseName() {
+        return "Investigate the Penrose-512";
+    }
     
 }
