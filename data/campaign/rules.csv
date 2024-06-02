@@ -597,12 +597,13 @@ Admiral Falke breaks the silence.
 OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3","ShowSecondPerson eusan_nation_admiral_falke","""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
 
 ""Either someone launched and accidently keyed in the unique transponder signal to 512 from another mission or the ship was launched without our knowledge. Both are equally improbable.""","officeryeongPenroseRecovery512_briefing4: A mystery!",
-OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4",,"""Correct."" Admiral Falke replies. ""This is where you come in.""
+OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""Correct."" Admiral Falke replies. ""This is where you come in.""
 
 She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
 
 ""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $heOrShe where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5",,"""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","$eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
+Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
@@ -618,67 +619,106 @@ AcceptMission
 FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
 "#END RECOVERY512_BRIEFING",,,,,,
 ,,,,,,
-# RECOVERY512_INTERVIEW,,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_START,PickGreeting,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_1,,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_2,,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_3,,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_4,,,,,,
-OFFICER_YEONG_PENROSE512_INTERVIEW_END,,,,,,
-"#END RECOVERY512_INTERVIEW",,,,,,
-,,,,,,
 # RECOVERY512,,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_TARGET_PLANET,,,,,,
 OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
 $eusan_nation_penrose512_targetPlanet score:1000
-$global.eusan_nation_penrose512_start == true",,,,
-OFFICER_YEONG_PENROSE512_LANDING1,,,,,,
-OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSE512_EXPLORE_HUB,DialogOptionSelected,,,,,
+$global.eusan_nation_penrose512_start == true","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenrose512Option",,,
+OFFICER_YEONG_PENROSE512_LANDING1,PopulateOfficerYeongPenrose512Option,,"SetShortcut defaultLeave ""ESCAPE""","PLACEHOLDER TEXT","officeryeongPenrose512Landing1: Enter Orbit around the planet
+defaultLeave: Leave",
+OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongPenrose512Landing1",,"PLACEHOLDER TEXT","officeryeongPenrose512Landing2: Enter the Penrose-512",
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2",,"PLACEHOLDER TEXT","officeryeongPenrose512enter_penrose1: Continue",
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1",,"PLACEHOLDER TEXT","officeryeongPenrose512enter_penrose2: Enter the Ship",
+OFFICER_YEONG_PENROSE512_MIDDLE_HUB,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,"Player enters Penrose 512"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
-# OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE1,,,,,,
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2,,,,,,
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE3,,,,,,
+# OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
+$player.officeryeongPenrose512_poweron == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
+$player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
+$player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""","PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
+$player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""","PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore1: Explore the flight deck",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore1",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2: Look around the cockpit.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore3: Check out the photo stuck to an instrument panel.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_PHOTO,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore3","$player.officeryeongPenrose512_foundKeycard = true",,"officeryeongPenrose512_forwardDecks_photo: Pick up photo.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_photo","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
 "#END OFFICER_YEONG_PENROSE512_FORWARD_DECKS",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_MIDDLE_SECTION,,,,,,
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_EXPLORE1,,,,,,
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_EXPLORE2,,,,,,
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_EXPLORE3,,,,,,
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_START,PopulateOfficerYeongPenrose512Explore,,,,"officeryeongPenrose512_middleDecks_start: Enter the Middle decks",
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION1,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_start","FireAll PopulateOfficerYeongPenrose512MiddileSectionExplore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2a: View Map","Player finds a diagram of the ship"
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_VIEWMAP,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a",,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2a_viewmap: Go back to the main hall.",
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a_viewmap
+","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2b: Check the Penrose's system status monitor.","Player finds a dead replika and a keycard nearby."
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b","$player.officeryeongPenrose512_poweron = false","PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2c_systemsa: Go back to the main hall.","power is off"
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXITa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2c_systemsa","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b","$player.officeryeongPenrose512_poweron = true","PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2c_systemsb: Go back to the main hall.","power is on"
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXITb,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2c_systemsb","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
 "#END OFFICER_YEONG_PENROSE512_MIDDLE_SECTION",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_AFT_DECKS,,,,,,
-OFFICER_YEONG_PENROSE512_AFT_DECKS1,,,,,,
-OFFICER_YEONG_PENROSE512_AFT_DECKS2,,,,,,
-OFFICER_YEONG_PENROSE512_AFT_DECKS3,,,,,,
+OFFICER_YEONG_PENROSE512_AFT_DECKS_START,PopulateOfficerYeongPenrose512Explore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_start: Enter the aft decks of the Penrose",
+OFFICER_YEONG_PENROSE512_AFT_DECKS1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_start","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a,PopulateOfficerYeongPenrose512_aftDecks_explore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks2a: Search the crew quarters",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a",,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks2a_keycard: Pick up the keycard.","pick up keycard to access forward decks"
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b,PopulateOfficerYeongPenrose512_aftDecks_explore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_explore2b: Stablize the reactor.","Player finds a power grid controller"
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b","$player.officeryeongPenrose512_poweron = true","PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_explore2b: Go back to the main hall.",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_poweron","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
 "#END OFFICER_YEONG_PENROSE512_AFT_DECKS",,,,,,
 ,,,,,,
-# OFFICER_YEONG_PENROSE512_RECOVERY_END,,,,,,
-OFFICER_YEONG_PENROSE512_PLANET_END2,,,,,,
-OFFICER_YEONG_PENROSE512_PLANET_END3,,,,,,
-OFFICER_YEONG_PENROSE512_PLANET_ESCAPE_RETURN,,,,,,
-,,,,,,
-# OFFICER_YEONG_PENROSE512_PLANET_END1,,,,,,
-"#END OFFICER_YEONG_PENROSE512_PLANET_END1",,,,,,
-"#END OFFICER_YEONG_PENROSE512_RECOVERY_END",,,,,,
+# OFFICER_YEONG_PENROSE512_CRYO,,,,,,
+OFFICER_YEONG_PENROSE512_CRYO_START,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundPicture == true
+$player.officeryeongPenrose512_foundKeycard == true","SetTooltip officeryeongPenrose512_cryo_start ""Once you enter the cryo bay, there is no turning back...""","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_start: Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKED,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundPicture == false
+$player.officeryeongPenrose512_foundKeycard == false","SetEnabled officeryeongPenrose512_cryo_start false
+SetTooltip officeryeongPenrose512_cryo_start ""You will have to wait until the salvage crew unblocks the door with their tools. Give it some time.""","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_start: Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_start",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore1: Look at the cryo chamber.",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2: Use the photo to enter the cryo chamber code.",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2a: Exit the Cryo chamber",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","$global.eusan_nation_penrose512_returnBlackbox = true
+$global.eusan_nation_penrose512_recoveredData = true
+Call $global.eusan_nation_penrose512_ref updateStage","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore3: Return to your fleet.",
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","FireAll PopulateOptions",,,
+"#END OFFICER_YEONG_PENROSE512_CRYO",,,,,,
 "#END RECOVERY512",,,,,,
 ,,,,,,
 # RECOVERY512_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_FINAL,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_FINAL_LISTOPTIONS,DialogOptionSelected,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_OPTIONS,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,,,,,,
+OFFICER_YEONG_PENROSERECOVERY512_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
+$id  ==  ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$global.eusan_nation_penrose512_start == true
+$global.eusan_nation_penrose512_completed == false",,,"officeryeongPenrose512Final: Update Ariane on the status of your mission.",
+OFFICER_YEONG_PENROSERECOVERY512_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenrose512Final","FireAll PopulatePenrose512Options",,,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_OPTION,PopulatePenrose512Options,"$global.eusan_nation_penrose512_recoveredData == false",,,"officeryeongPenrose512Cancel: Tell her that you have yet to complete the mission.",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenrose512Cancel","FireAll PopulateOptions","""Do we have to do this every time you come here and waste my time?""
+
+She shakes her head over your admission. 
+
+""Please finish the job before you come back and waste my time again.""
+
+",,
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,PopulatePenrose512Options,"$global.eusan_nation_penrose512_recoveredData == true",,,"officeryeongPenrose512ConfirmOption: Tell her that you recovered the mission data recorder.",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenrose512ConfirmOption",,"PLACEHOLDER TEXT","officeryeongPenrose512Confirm1: PLACEHOLDER 1",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1",,"PLACEHOLDER TEXT","officeryeongPenrose512Confirm2: PLACEHOLDER 2",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2","$global.eusan_nation_penrose512_completed = true
+Call $global.eusan_nation_penrose512_ref updateStage
+AddStoryPoints 1
+FireAll PopulateOptions","PLACEHOLDER TEXT","officeryeongPenrose512Confirm3: PLACEHOLDER 3",
 "#END RECOVERY512_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
+"#END OFFICER_YEONG",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
@@ -906,7 +946,7 @@ OR
 OR
 ""Whatever...""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
-"#END OFFICER_YEONG",,,,,,
+"#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE,,,,,,
 ,,,,,,
@@ -1137,5 +1177,4 @@ RestoreSavedVisual
 BarCMD showOptions",,,
 "#END MARLIS_GREETINGS",,,,,,
 "#END MARLIS",,,,,,
-"#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
 

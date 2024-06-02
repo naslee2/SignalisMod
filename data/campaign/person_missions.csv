@@ -2,3 +2,4 @@ mission id,person id,tagsAll,tagsAny,tagsNotAny,tags,freq,min timeout,max timeou
 eusan_nation_neuralRepoQuest,,,,,,,,,,,,,,,graphics/icons/missions/data_retrieval.png,data.campaign.missions.eusan_nation_neuralRepoQuest
 eusan_nation_penroseRecoveryQuest1,,,,,,,,,,,,,,,graphics/icons/missions/data_retrieval.png,data.campaign.missions.eusan_nation_penroseRecovery1
 eusan_nation_penroseRecoveryQuest2,,,,,,,,,,,,,,,graphics/icons/missions/data_retrieval.png,data.campaign.missions.eusan_nation_penroseRecovery2
+eusan_nation_penrose512Quest,,,,,,,,,,,,,,,graphics/icons/missions/data_retrieval.png,data.campaign.missions.eusan_nation_penroseRecovery2
