@@ -72,9 +72,236 @@ AddText""The Nation is primarily a low-tech faction with lots of missile and bal
 AddText""As this mod is under a work in progress, new features will come online as things progress. I hope you enjoy this mod and thank you for choosing this faction to play.""",,,
 "#END NEXERLIN_FACTION_INTRO_START",,,,,,
 ,,,,,,
-# OFFICER_YEONG,,,,,,
+# EUSAN_NATION_NPC,,,,,,
 ,,,,,,
 # OFFICER_YEONG,,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT,,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_PENROSE,,,,,,
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about that, it's going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That's it.""
+
+""Given that you have high level access I guess I can tell you about the Penrose Program in detail...""","officeryeongChatPenroseProgramOption1: Continue",
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM2,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption1",,"""The Penrose program in reality is an attempt to show the rest of the galaxy the power of the Eusan Nation. You seen those posters plastered on the metro lines' streets about the Penrose? Its all about telling us, mainly the people of the Nation, how powerful we are.""
+
+""We sent out a lot of these craft into the deep void to find planets we can colonize, mine or just expand the Nation. We pair human pilots with a Replika. In this case the LSTR Replikas. The LSTR types are meant for deep space assignments and repair work. The Volksmarine uses a lot of these replikas on their ships. AEON? Depends on the facility.""
+","officeryeongChatPenroseProgramOption2: Continue",
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM3,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption2",,"""The Penrose program has been operating for a long time. I don't have the details available but rumors say that we launched dozens of these ships during the war. How we did that while a major war was happening is beyond me...""
+
+""Anyway that is all I have. Anything else would require a higher security clearance and I don't want to get in trouble by telling you things that aren't cleared with my superiors...""","officeryeongChatPenroseProgramOption3: Very well I won't press the matter further...",
+OFFICER_YEONG_CHAT_PENROSE_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption3","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_PENROSE",,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_HEIMAT,,,,,,
+OFFICER_YEONG_CHAT_HEIMAT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatHeimatOption: Tell me about Heimat...",
+OFFICER_YEONG_CHAT_HEIMAT1,DialogOptionSelected,"$option == officeryeongChatHeimatOption",,"""Heimat is the captial of our Nation. I assumed you knew that by now..."" she says. She adjusted her uniform a bit and continued on...
+
+""Heimat is where the magic started. A bunch of miners got fed up, overthrew the Imperial garrison here. They used the leftover materials to expand their military forces and build a proper army. The other planets were already rebelling against the Empire with mixed results. Kitezh had its rebellion snuffed out relatively quickly. Vineta's fought on for years until the first reinforcements arrived from Heimat.""","officeryeongChatHeimatOption1: Continue",
+OFFICER_YEONG_CHAT_HEIMAT2,DialogOptionSelected,"$option == officeryeongChatHeimatOption1",,"""Most, if not all, of the Nation's government agencies reside here on this planet. Volksmarine, Volksarmee, AEON, every branch of government... ""
+
+""You know, initially the government was supposed to relocate to Vineta after the war but they did a survey of the planet and found out that the planet was just too damaged to consider relocating. Also Heimat was already functioning as the capital of the Nation so it made little sense to relocate to Vineta. Aside from that, I guess thats the basics of Heimat.""
+
+""Heimat is the home of the Nation's government. That is pretty much it.""","officeryeongChatHeimatOption2: Thanks for the information...",
+OFFICER_YEONG_CHAT_HEIMAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatHeimatOption2","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_HEIMAT",,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_ROTFRONT,,,,,,
+OFFICER_YEONG_CHAT_ROTFRONT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatRotfrontOption: Tell me about Rotfront...",
+OFFICER_YEONG_CHAT_ROTFRONT1,DialogOptionSelected,"$option == officeryeongChatRotfrontOption",,"""Rotfront...yeah...""
+
+""Rotfront was my home for a good long time. I spent many years of my childhood with my mother cooped up inside a radio station. I had lots of fond memories there. Read a lot of books, did art and pretty much had much of the station to myself. Homeschooled for most of my childhood too.""
+
+Her voice trailed off and you can tell there were some unpleasant memories resurfacing.  
+
+""Then one day my mother told me I was to live with my aunt Kamilla. So I moved from the radio station to the main city at Blockwart C...""
+","officeryeongChatRotfront1: Continue",
+OFFICER_YEONG_CHAT_ROTFRONT2,DialogOptionSelected,"$option == officeryeongChatRotfront1",,"""Went to highschool there. Never liked it. Bullies everywhere."" She says, motioning to her hair and eyes as she went on. ""Made fun of my hair, my eyes, my family. Made friends of course, but that is a story for another time.""
+
+""Military service done there at Rotfront, trained and operated as a radio operator. Spent 2 years doing that. Never knew what happened to my friends after high school. Tried getting hold of them but no response to my letters or requests...""
+
+""Anyway, enough chit chat about Rotfront. The less we talk about it, the better...""
+
+","officeryeongChatRotfront2: Thanks for the information...",
+OFFICER_YEONG_CHAT_ROTFRONT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatRotfront2","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_ROTFRONT",,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_LENG,,,,,,
+OFFICER_YEONG_CHAT_LENG_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatLengOption: Tell me about Leng...",
+OFFICER_YEONG_CHAT_LENG1,DialogOptionSelected,"$option == officeryeongChatLengOption",,"""Was born on Leng. I do not have many memories of that place because my mother moved us to Rotfront due to her position as a radio officer.""
+
+""As far as I can tell, Leng is the outermost planet of the star system. The Nation's furthest outpost. A shithole from what I gathered. Dodged a bullet right there too. They wanted to send me to Leng after my mandatory military service, would you belive that? I applied for a different military service and got accepted...barely from what I was told.""","officeryeongChatLeng1:Continue",
+OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1",,"""Leng is not a nice place from what I heard. Unlike Buyan or Rotfront, Leng is literally an airless rock with tunnels for human habitation. You got the orbital and the elevator. Then you have the various rail and tram lines to whatever areas you need to go.""
+
+""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
+
+""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:Continue",
+OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_LENG",,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_SMOKING,,,,,,
+OFFICER_YEONG_CHAT_SMOKING_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatSmokingOption: So I noticed you smoke a lot...",
+OFFICER_YEONG_CHAT_SMOKING1,DialogOptionSelected,"$option == officeryeongChatSmokingOption",,"""Smoking?"" she queries. She gives you a confused look at you then her eyes dart to her lit cigarette and back to you.
+
+""Ohhhh...yeah. Smoking. That....""
+
+""Yeah smoking kills. That is why I smoke. Pretty much my job requires a lot of patience and since I don't have much to do at home or anywhere else, I smoke. I go through a few smokes a day. Yeah, yeah, lung cancer is a danger. Most cigarette brands sold by the Nation are extremely strong compared to the Imperial brands. What is funny is that Imperial branded cigarettes were prohibited from being sold until fairly recently. Back then anyone caught selling them would get a prison sentence or get sent to a labor camp. 'Illegal distribution of banned paraphillia,' the law says.""
+
+""Owning a packet of Imperial cigs isn't a crime anymore. I can smoke them but since they are so rare these days, it's almost impossible to get a hold of.""
+","officeryeongChatSmoking1: Continue",
+OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"""Interestingly, I hear that the Empire had large stocks of cigs stockpiled for its soldiers and since the war ended, there have been rumors of warehouses being found with massive stocks of cigarettes and other items. There are even rumors that the factories that used to make the cigs are now being retooled to make the same cigs with different packaging. Something more 'patriotic', or so they say.""
+
+""I just wish someone would give me a pack of the Imperial Era smokes. Old tobacco, I heard mellows with age.""
+
+""Remember... smoking kills. That is why I smoke.""","officeryeongChatSmoking2: Continue",
+OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
+"#END OFFICER_YEONG_CHAT",,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_OPTIONS,,,,,,
+OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
+OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
+OR
+""I can spare some time to talk for a bit. What do you want to talk about?""
+OR
+""Ask away.""
+OR
+""What do you want to know?""",,
+OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateOfficerYeongChatOptions,,"SetShortcut officeryeongChatEscape ""ESCAPE""",,"officeryeongChatEscape:""I got to go now...""",
+OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm... let me know if you want to know more information...""
+OR
+""Talk to you later then...""
+OR
+""Remember, whatever we speak here, should probably not be said anywhere else. Just a precaution.""
+OR
+""See you next time...""",,
+"#END OFFICER_YEONG_CHAT_OPTIONS",,,,,,
+,,,,,,
+# OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
+OFFICER_YEONG_OPTIONS_COMPLIMENT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == false",,,"officeryeongComplementResult:Compliment Officer Yeong
+",
+OFFICER_YEONG_OPTIONS_COMPLIMENT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == true","SetEnabled officeryeongComplementResult false
+SetTooltip officeryeongComplementResult ""You recently done this. Wait for a few days.""",,"officeryeongComplementResult:Compliment Officer Yeong",
+OFFICER_YEONG_OPTIONS_INSULTS,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == false",,,"officeryeongInsultResult:Insult Officer Yeong
+",
+OFFICER_YEONG_OPTIONS_INSULTS_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeongreptalk == true","SetEnabled officeryeongInsultResult false
+SetTooltip officeryeongInsultResult ""You recently done this. Wait for a few days.""",,"officeryeongInsultResult:Insult Officer Yeong
+",
+OFFICER_YEONG_COMPLIMENT_RESULT,DialogOptionSelected,"$option == officeryeongComplementResult","AdjustRepActivePerson WELCOMING 1
+$player.officeryeongreptalk = true 3
+FireAll PopulateOptions","""Flattery is nice.""
+OR
+""Thank you, but you're not my type.""
+OR
+""Why, thank you for the nice words. You just made my day slightly brighter than normal.""
+OR
+""Do you mean it?""",,
+OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1
+$player.officeryeongreptalk = true 3
+FireAll PopulateOptions","""That is not nice...""
+OR
+""Aye, go away then...""
+OR
+""Uh-huh... right then...""
+OR
+""Insulting me right here, right now? Wow...""",,
+"#END OFFICER_YEONG_INSULT_COMPLIMENT",,,,,,
+,,,,,,
+# OFFICER_YEONG_GIFT,,,,,,
+OFFICER_YEONG_OPTIONS_GIFT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeonggiftgive == false",,,"officeryeongGiftOptions:Give Officer Yeong a Gift",
+OFFICER_YEONG_OPTIONS_GIFT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+$player.officeryeonggiftgive == true","SetEnabled officeryeongGiftOptions false
+SetTooltip officeryeongGiftOptions ""You recently done this. Wait for a few days.""",,"officeryeongGiftOptions: Give Officer Yeong a Gift",
+OFFICER_YEONG_GIFT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongGiftOptions","FireAll PopulateofficeryeongGiftOptions",,,
+OFFICER_YEONG_GIFT_LOBSTER_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo lobster",,,"officeryeongGiftLobsterOffer: Offer Officer Yeong a lobster from Volturn",
+OFFICER_YEONG_GIFT_LOBSTER_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterOffer","AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 7
+FireAll PopulateOptions","""Thanks for the gift of lobster. Now I don't have to eat the ration packs they give us."" $personLastName says. ""Do you know how many times I have eaten the same ration pack this last week?""
+
+$personLastName takes the gift from you. She seems slightly pleased with the fact she isn't going to eat the same dish this evening. 
+OR
+""Oh? A lobster? The last time I had lobster was when i was a child. My mother managed to get lobster from Vineta but even then it was a bit old.""
+
+You hand her the lobster. She gives you a small nod in appreciation.
+OR
+""Oh my, lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact, don't tell me. I don't want to know...""
+
+She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
+OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
+OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
+
+""Wait... what do you mean blue lobsters?""
+OR
+""Lobsters... from Volturn? I have heard of them but I've never seen one in person. I assume they have claws and stuff...""
+
+""I bet it costs a lot just to ship them here.""
+OR
+""I am not sure. Volturn is far away and I don't have time to fly around or travel. Even if I had the ability, I would need to pass checkpoint after checkpoint just to leave this planet. Not worth the time and effort just to sample a dish.""
+
+""Maybe one day...""
+OR
+""Honestly, the rumor is that lobsters are shipped here as food for the upper echelons of the Nation's government here. I never seen any type of seafood here, Volturn or from Vineta.""
+
+""Why you ask? Are you trying to get me one?""",,
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushOffer: Offer Officer Yeong a soft plush lobster toy",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushOffer","AdjustRepActivePerson WELCOMING 1
+$player.officeryeonggiftgive = true 14
+FireAll PopulateOptions","""Thanks for the gift."" $personLastName says.  ""It'd be hard to keep this gift because contraband isn't allowed and I am pretty sure this is contraband.""
+
+She looks happy but as she moves away you can see her edging towards the trash bin...
+OR
+""What a pitiful looking mascot. I love it."" As $personLastName takes the plush lobster from you. ""Thanks for the gift but please don't give me things like this in the future. I can get in trouble...""
+
+She gives the plush toy a small pat and disappears into her office. You hear the clunk of a trash bin lid.
+OR
+""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Fortunately, I have the means of keeping gifts... or sanitizing them. Thanks anyway.""
+
+She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""test""",,
+OFFICER_YEONG_GIFT_CHOCOLAVA_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
+PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaOffer: Offer Officer Yeong a chocolate lava cake",
+OFFICER_YEONG_GIFT_CHOCOLAVA_GIFTED,DialogOptionSelected,"$option == officeryeongGiftChocoLavaOffer","AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 5
+FireAll PopulateOptions","""Huh? Interesting. I have never seen this type of dessert before."" $personLastName says. ""This is actually pretty good. Where does it come from?""
+
+She pokes the cake a bit...chocolate filling begins to ooze out.
+
+""In fact, don't tell me. It's better if I don't know."" 
+OR
+""Oh my, what is this thing? A cake? And it's filled with a sweet gooey filling? How decadent... Nothing like this comes to my desk."" $personLastName says. You can tell she is exceptionally fascinated by the cake you gave her.
+
+She gives the cake a small nibble. Chocolate filing oozes out and she gives a small smile.
+
+""Thanks... This means a lot to me.""
+OR
+""You really should not be giving me gifts. It is considered illegal and against the laws... I could get in trouble... Is that cake? With a sweet filling?"" $personLastName says. She moves her hand to poke the filling that oozed out. She gives it a small lick and her eyes brighten.
+
+""This is really good. Thanks for the gift!""
+
+",,
+OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
+OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
+","$player.officeryeonggiftgive = true 3
+FireAll PopulateOptions","""test""",,
+OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
+OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
+OR
+""Perhaps it'd be best if you did not.""
+OR
+""Whatever...""",,
+"#END OFFICER_YEONG_GIFT",,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
 OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
@@ -721,234 +948,6 @@ FireAll PopulateOptions","PLACEHOLDER TEXT","officeryeongPenrose512Confirm3: PLA
 "#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
 "#END OFFICER_YEONG",,,,,,
 ,,,,,,
-# OFFICER_YEONG_CHAT,,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_PENROSE,,,,,,
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about that, it's going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That's it.""
-
-""Given that you have high level access I guess I can tell you about the Penrose Program in detail...""","officeryeongChatPenroseProgramOption1: Continue",
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM2,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption1",,"""The Penrose program in reality is an attempt to show the rest of the galaxy the power of the Eusan Nation. You seen those posters plastered on the metro lines' streets about the Penrose? Its all about telling us, mainly the people of the Nation, how powerful we are.""
-
-""We sent out a lot of these craft into the deep void to find planets we can colonize, mine or just expand the Nation. We pair human pilots with a Replika. In this case the LSTR Replikas. The LSTR types are meant for deep space assignments and repair work. The Volksmarine uses a lot of these replikas on their ships. AEON? Depends on the facility.""
-","officeryeongChatPenroseProgramOption2: Continue",
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM3,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption2",,"""The Penrose program has been operating for a long time. I don't have the details available but rumors say that we launched dozens of these ships during the war. How we did that while a major war was happening is beyond me...""
-
-""Anyway that is all I have. Anything else would require a higher security clearance and I don't want to get in trouble by telling you things that aren't cleared with my superiors...""","officeryeongChatPenroseProgramOption3: Very well I won't press the matter further...",
-OFFICER_YEONG_CHAT_PENROSE_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption3","FireAll PopulateOfficerYeongChatOptions",,,
-"#END OFFICER_YEONG_CHAT_PENROSE",,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_HEIMAT,,,,,,
-OFFICER_YEONG_CHAT_HEIMAT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatHeimatOption: Tell me about Heimat...",
-OFFICER_YEONG_CHAT_HEIMAT1,DialogOptionSelected,"$option == officeryeongChatHeimatOption",,"""Heimat is the captial of our Nation. I assumed you knew that by now..."" she says. She adjusted her uniform a bit and continued on...
-
-""Heimat is where the magic started. A bunch of miners got fed up, overthrew the Imperial garrison here. They used the leftover materials to expand their military forces and build a proper army. The other planets were already rebelling against the Empire with mixed results. Kitezh had its rebellion snuffed out relatively quickly. Vineta's fought on for years until the first reinforcements arrived from Heimat.""","officeryeongChatHeimatOption1: Continue",
-OFFICER_YEONG_CHAT_HEIMAT2,DialogOptionSelected,"$option == officeryeongChatHeimatOption1",,"""Most, if not all, of the Nation's government agencies reside here on this planet. Volksmarine, Volksarmee, AEON, every branch of government... ""
-
-""You know, initially the government was supposed to relocate to Vineta after the war but they did a survey of the planet and found out that the planet was just too damaged to consider relocating. Also Heimat was already functioning as the capital of the Nation so it made little sense to relocate to Vineta. Aside from that, I guess thats the basics of Heimat.""
-
-""Heimat is the home of the Nation's government. That is pretty much it.""","officeryeongChatHeimatOption2: Thanks for the information...",
-OFFICER_YEONG_CHAT_HEIMAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatHeimatOption2","FireAll PopulateOfficerYeongChatOptions",,,
-"#END OFFICER_YEONG_CHAT_HEIMAT",,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_ROTFRONT,,,,,,
-OFFICER_YEONG_CHAT_ROTFRONT_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatRotfrontOption: Tell me about Rotfront...",
-OFFICER_YEONG_CHAT_ROTFRONT1,DialogOptionSelected,"$option == officeryeongChatRotfrontOption",,"""Rotfront...yeah...""
-
-""Rotfront was my home for a good long time. I spent many years of my childhood with my mother cooped up inside a radio station. I had lots of fond memories there. Read a lot of books, did art and pretty much had much of the station to myself. Homeschooled for most of my childhood too.""
-
-Her voice trailed off and you can tell there were some unpleasant memories resurfacing.  
-
-""Then one day my mother told me I was to live with my aunt Kamilla. So I moved from the radio station to the main city at Blockwart C...""
-","officeryeongChatRotfront1: Continue",
-OFFICER_YEONG_CHAT_ROTFRONT2,DialogOptionSelected,"$option == officeryeongChatRotfront1",,"""Went to highschool there. Never liked it. Bullies everywhere."" She says, motioning to her hair and eyes as she went on. ""Made fun of my hair, my eyes, my family. Made friends of course, but that is a story for another time.""
-
-""Military service done there at Rotfront, trained and operated as a radio operator. Spent 2 years doing that. Never knew what happened to my friends after high school. Tried getting hold of them but no response to my letters or requests...""
-
-""Anyway, enough chit chat about Rotfront. The less we talk about it, the better...""
-
-","officeryeongChatRotfront2: Thanks for the information...",
-OFFICER_YEONG_CHAT_ROTFRONT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatRotfront2","FireAll PopulateOfficerYeongChatOptions",,,
-"#END OFFICER_YEONG_CHAT_ROTFRONT",,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_LENG,,,,,,
-OFFICER_YEONG_CHAT_LENG_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatLengOption: Tell me about Leng...",
-OFFICER_YEONG_CHAT_LENG1,DialogOptionSelected,"$option == officeryeongChatLengOption",,"""Was born on Leng. I do not have many memories of that place because my mother moved us to Rotfront due to her position as a radio officer.""
-
-""As far as I can tell, Leng is the outermost planet of the star system. The Nation's furthest outpost. A shithole from what I gathered. Dodged a bullet right there too. They wanted to send me to Leng after my mandatory military service, would you belive that? I applied for a different military service and got accepted...barely from what I was told.""","officeryeongChatLeng1:Continue",
-OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1",,"""Leng is not a nice place from what I heard. Unlike Buyan or Rotfront, Leng is literally an airless rock with tunnels for human habitation. You got the orbital and the elevator. Then you have the various rail and tram lines to whatever areas you need to go.""
-
-""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
-
-""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:Continue",
-OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
-"#END OFFICER_YEONG_CHAT_LENG",,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_SMOKING,,,,,,
-OFFICER_YEONG_CHAT_SMOKING_OPTION,PopulateOfficerYeongChatOptions,,,,"officeryeongChatSmokingOption: So I noticed you smoke a lot...",
-OFFICER_YEONG_CHAT_SMOKING1,DialogOptionSelected,"$option == officeryeongChatSmokingOption",,"""Smoking?"" she queries. She gives you a confused look at you then her eyes dart to her lit cigarette and back to you.
-
-""Ohhhh...yeah. Smoking. That....""
-
-""Yeah smoking kills. That is why I smoke. Pretty much my job requires a lot of patience and since I don't have much to do at home or anywhere else, I smoke. I go through a few smokes a day. Yeah, yeah, lung cancer is a danger. Most cigarette brands sold by the Nation are extremely strong compared to the Imperial brands. What is funny is that Imperial branded cigarettes were prohibited from being sold until fairly recently. Back then anyone caught selling them would get a prison sentence or get sent to a labor camp. 'Illegal distribution of banned paraphillia,' the law says.""
-
-""Owning a packet of Imperial cigs isn't a crime anymore. I can smoke them but since they are so rare these days, it's almost impossible to get a hold of.""
-","officeryeongChatSmoking1: Continue",
-OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"""Interestingly, I hear that the Empire had large stocks of cigs stockpiled for its soldiers and since the war ended, there have been rumors of warehouses being found with massive stocks of cigarettes and other items. There are even rumors that the factories that used to make the cigs are now being retooled to make the same cigs with different packaging. Something more 'patriotic', or so they say.""
-
-""I just wish someone would give me a pack of the Imperial Era smokes. Old tobacco, I heard mellows with age.""
-
-""Remember... smoking kills. That is why I smoke.""","officeryeongChatSmoking2: Continue",
-OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
-"#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
-"#END OFFICER_YEONG_CHAT",,,,,,
-,,,,,,
-# OFFICER_YEONG_CHAT_OPTIONS,,,,,,
-OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
-OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
-OR
-""I can spare some time to talk for a bit. What do you want to talk about?""
-OR
-""Ask away.""
-OR
-""What do you want to know?""",,
-OFFICER_YEONG_CHAT_ESCAPE_OPTION,PopulateOfficerYeongChatOptions,,"SetShortcut officeryeongChatEscape ""ESCAPE""",,"officeryeongChatEscape:""I got to go now...""",
-OFFICER_YEONG_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatEscape","FireAll PopulateOptions","""Mmmhm... let me know if you want to know more information...""
-OR
-""Talk to you later then...""
-OR
-""Remember, whatever we speak here, should probably not be said anywhere else. Just a precaution.""
-OR
-""See you next time...""",,
-"#END OFFICER_YEONG_CHAT_OPTIONS",,,,,,
-,,,,,,
-# OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
-OFFICER_YEONG_OPTIONS_COMPLIMENT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongComplementResult:Compliment Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_COMPLIMENT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongComplementResult false
-SetTooltip officeryeongComplementResult ""You recently done this. Wait for a few days.""",,"officeryeongComplementResult:Compliment Officer Yeong",
-OFFICER_YEONG_OPTIONS_INSULTS,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_INSULTS_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongInsultResult false
-SetTooltip officeryeongInsultResult ""You recently done this. Wait for a few days.""",,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_COMPLIMENT_RESULT,DialogOptionSelected,"$option == officeryeongComplementResult","AdjustRepActivePerson WELCOMING 1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""Flattery is nice.""
-OR
-""Thank you, but you're not my type.""
-OR
-""Why, thank you for the nice words. You just made my day slightly brighter than normal.""
-OR
-""Do you mean it?""",,
-OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""That is not nice...""
-OR
-""Aye, go away then...""
-OR
-""Uh-huh... right then...""
-OR
-""Insulting me right here, right now? Wow...""",,
-"#END OFFICER_YEONG_INSULT_COMPLIMENT",,,,,,
-,,,,,,
-# OFFICER_YEONG_GIFT,,,,,,
-OFFICER_YEONG_OPTIONS_GIFT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeonggiftgive == false",,,"officeryeongGiftOptions:Give Officer Yeong a Gift",
-OFFICER_YEONG_OPTIONS_GIFT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeonggiftgive == true","SetEnabled officeryeongGiftOptions false
-SetTooltip officeryeongGiftOptions ""You recently done this. Wait for a few days.""",,"officeryeongGiftOptions: Give Officer Yeong a Gift",
-OFFICER_YEONG_GIFT_LISTALLOPTIONS,DialogOptionSelected,"$option == officeryeongGiftOptions","FireAll PopulateofficeryeongGiftOptions",,,
-OFFICER_YEONG_GIFT_LOBSTER_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo lobster",,,"officeryeongGiftLobsterOffer: Offer Officer Yeong a lobster from Volturn",
-OFFICER_YEONG_GIFT_LOBSTER_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterOffer","AdjustRepActivePerson WELCOMING 5
-$player.officeryeonggiftgive = true 7
-FireAll PopulateOptions","""Thanks for the gift of lobster. Now I don't have to eat the ration packs they give us."" $personLastName says. ""Do you know how many times I have eaten the same ration pack this last week?""
-
-$personLastName takes the gift from you. She seems slightly pleased with the fact she isn't going to eat the same dish this evening. 
-OR
-""Oh? A lobster? The last time I had lobster was when i was a child. My mother managed to get lobster from Vineta but even then it was a bit old.""
-
-You hand her the lobster. She gives you a small nod in appreciation.
-OR
-""Oh my, lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact, don't tell me. I don't want to know...""
-
-She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
-OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
-OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
-
-""Wait... what do you mean blue lobsters?""
-OR
-""Lobsters... from Volturn? I have heard of them but I've never seen one in person. I assume they have claws and stuff...""
-
-""I bet it costs a lot just to ship them here.""
-OR
-""I am not sure. Volturn is far away and I don't have time to fly around or travel. Even if I had the ability, I would need to pass checkpoint after checkpoint just to leave this planet. Not worth the time and effort just to sample a dish.""
-
-""Maybe one day...""
-OR
-""Honestly, the rumor is that lobsters are shipped here as food for the upper echelons of the Nation's government here. I never seen any type of seafood here, Volturn or from Vineta.""
-
-""Why you ask? Are you trying to get me one?""",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushOffer: Offer Officer Yeong a soft plush lobster toy",
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_GIFTED,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushOffer","AdjustRepActivePerson WELCOMING 1
-$player.officeryeonggiftgive = true 14
-FireAll PopulateOptions","""Thanks for the gift."" $personLastName says.  ""It'd be hard to keep this gift because contraband isn't allowed and I am pretty sure this is contraband.""
-
-She looks happy but as she moves away you can see her edging towards the trash bin...
-OR
-""What a pitiful looking mascot. I love it."" As $personLastName takes the plush lobster from you. ""Thanks for the gift but please don't give me things like this in the future. I can get in trouble...""
-
-She gives the plush toy a small pat and disappears into her office. You hear the clunk of a trash bin lid.
-OR
-""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Fortunately, I have the means of keeping gifts... or sanitizing them. Thanks anyway.""
-
-She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""test""",,
-OFFICER_YEONG_GIFT_CHOCOLAVA_OFFER,PopulateofficeryeongGiftOptions,"$id == ""eusan_nation_officer_yeong"" score 100
-PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaOffer: Offer Officer Yeong a chocolate lava cake",
-OFFICER_YEONG_GIFT_CHOCOLAVA_GIFTED,DialogOptionSelected,"$option == officeryeongGiftChocoLavaOffer","AdjustRepActivePerson WELCOMING 5
-$player.officeryeonggiftgive = true 5
-FireAll PopulateOptions","""Huh? Interesting. I have never seen this type of dessert before."" $personLastName says. ""This is actually pretty good. Where does it come from?""
-
-She pokes the cake a bit...chocolate filling begins to ooze out.
-
-""In fact, don't tell me. It's better if I don't know."" 
-OR
-""Oh my, what is this thing? A cake? And it's filled with a sweet gooey filling? How decadent... Nothing like this comes to my desk."" $personLastName says. You can tell she is exceptionally fascinated by the cake you gave her.
-
-She gives the cake a small nibble. Chocolate filing oozes out and she gives a small smile.
-
-""Thanks... This means a lot to me.""
-OR
-""You really should not be giving me gifts. It is considered illegal and against the laws... I could get in trouble... Is that cake? With a sweet filling?"" $personLastName says. She moves her hand to poke the filling that oozed out. She gives it a small lick and her eyes brighten.
-
-""This is really good. Thanks for the gift!""
-
-",,
-OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
-OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""test""",,
-OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape: Reconsider giving a gift...",
-OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
-OR
-""Perhaps it'd be best if you did not.""
-OR
-""Whatever...""",,
-"#END OFFICER_YEONG_GIFT",,,,,,
-"#END OFFICER_YEONG",,,,,,
-,,,,,,
 # ADMIRAL_FALKE,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
@@ -1178,4 +1177,5 @@ RestoreSavedVisual
 BarCMD showOptions",,,
 "#END MARLIS_GREETINGS",,,,,,
 "#END MARLIS",,,,,,
+"#END EUSAN_NATION_NPC",,,,,,
 
