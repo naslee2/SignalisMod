@@ -72,7 +72,7 @@ AddText""The Nation is primarily a low-tech faction with lots of missile and bal
 AddText""As this mod is under a work in progress, new features will come online as things progress. I hope you enjoy this mod and thank you for choosing this faction to play.""",,,
 "#END NEXERLIN_FACTION_INTRO_START",,,,,,
 ,,,,,,
-# EUSAN_NATION_NPC_DIALOUGE,,,,,,
+# OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG,,,,,,
 ,,,,,,
@@ -602,9 +602,9 @@ OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeong
 She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
 
 ""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $himOrHer where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","Call $global.eusan_nation_penrose512_ref showMap ""Destination:
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
 $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
-$eusan_nation_penrose512_planetName","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
@@ -947,7 +947,7 @@ OR
 OR
 ""Whatever...""",,
 "#END OFFICER_YEONG_GIFT",,,,,,
-"#END EUSAN_NATION_NPC_DIALOUGE",,,,,,
+"#END OFFICER_YEONG",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE,,,,,,
 ,,,,,,
