@@ -69,13 +69,10 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
         setStoryMission();
 
-        setStageOnGlobalFlag(Stage.LOCATE_PENROSE512, "$eusan_nation_penrose512_locateShip");
         setStageOnGlobalFlag(Stage.RETURN_BLACKBOX, "$eusan_nation_penrose512_returnBlackbox");
         setStageOnGlobalFlag(Stage.COMPLETED, "$eusan_nation_penrose512_completed");
 
-        beginStageTrigger(Stage.LOCATE_PENROSE512);
         makeImportant(target_planet, "$eusan_nation_penrose512_targetPlanet", Stage.LOCATE_PENROSE512);
-        endTrigger();
 
         beginStageTrigger(Stage.RETURN_BLACKBOX);
         makeImportant(officer_yeong, "$eusan_nation_penrose512_returnBlackbox", Stage.RETURN_BLACKBOX);
@@ -89,16 +86,8 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         setRepRewardPerson(RepRewards.HIGH);
 		setRepRewardFaction(RepRewards.HIGH);
 
-        return false;
+        return true;
 	}
-
-    @Override
-    public String getPostfixForState() {
-        if (startingStage != null) {
-            return "";
-        }
-        return super.getPostfixForState();
-    }
 
     protected void updateInteractionDataImpl(){
         set("$eusan_nation_penrose512_planetId", target_planet.getId());
@@ -124,5 +113,12 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
     public String getBaseName() {
         return "Investigate the Penrose-512";
     }
-    
+
+    @Override
+    public String getPostfixForState() {
+        if (startingStage != null) {
+            return "";
+        }
+        return super.getPostfixForState();
+    }
 }

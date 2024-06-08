@@ -119,12 +119,12 @@ ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED."
 # OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
 ,,,,,,
 # REPO_BRIEFING,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" FAVORABLE
 $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_neuralrepositorystart == false
-","SetOptionColor officeryeongNeuralRepStart highlight",,"officeryeongNeuralRepStart:""So, I have a new task for you if you are up for it"" ",
+eusan_nation_personRelationChecker FAVORABLE","SetOptionColor officeryeongNeuralRepStart highlight",,"officeryeongNeuralRepStart:""So, I have a new task for you if you are up for it"" ",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart","SetTextHighlights ""Eusan Nation""","""The reason I asked is that you have been deemed trustworthy by our security services, and even though I don't have much clout, I am obligated to conduct a background check for all commissioned officers of the Eusan Nation.""
 
 ""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There are a few tasks perfect for someone like you..."" She says, a small, faint smile lighting up, slowly. You wonder, when was the last time she did that?
@@ -238,7 +238,8 @@ $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_neuralrepo_completed == true
-$global.officeryeong_penroseRecovery1_start == false","SetOptionColor officeryeongPenroseRecovery1Start highlight",,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
+$global.officeryeong_penroseRecovery1_start == false
+eusan_nation_personRelationChecker WELCOMING","SetOptionColor officeryeongPenroseRecovery1Start highlight",,"officeryeongPenroseRecovery1Start: ""A new job came from my superiors about search and recovery...""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Start","BeginMission eusan_nation_penroseRecoveryQuest1 false
 SetTextHighlights ""AEON""","You sit down in the stiff chair in her cramped office, and she retrieves a pack of cigarettes, lighting one up for herself. She takes a deep puff, before explaining the mission.
 
@@ -383,12 +384,13 @@ You take the envelope of money from her. You give her a slight nod and exit out 
 # OFFICER_YEONG_PENROSERECOVERY2_QUEST,,,,,,
 ,,,,,,
 # RECOVERY2_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" FRIENDLY
 $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_penroseRecovery1_completed == true
-$global.officeryeong_penroseRecovery2_start == false","SetOptionColor officeryeongPenroseRecovery2Start highlight",,"officeryeongPenroseRecovery2Start:  ""I have another recovery mission for you.""",
+$global.officeryeong_penroseRecovery2_start == false
+eusan_nation_personRelationChecker FRIENDLY","SetOptionColor officeryeongPenroseRecovery2Start highlight",,"officeryeongPenroseRecovery2Start:  ""I have another recovery mission for you.""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Start","BeginMission eusan_nation_penroseRecoveryQuest2 false","You take a sit at the desk. You've become used to this now. 
 
 ""Have a look at this"" Ariane says. She hands you a folder detaining your next mission. You open the folder, and unsurprisingly, it's filled with redactions and crossed out sentences. Typical.
@@ -537,13 +539,14 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
+OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
 $player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
-$global.eusan_nation_penrose512_start == false","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
+$global.eusan_nation_penrose512_start == false
+eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
 
@@ -559,26 +562,23 @@ Behind the two men, a very large Replika strode in. Admiral Falke in all her glo
 officeryeongPenroseRecovery512_briefing0_2: ""Did you just...speak to me telepathically?""
 officeryeongPenroseRecovery512_briefing0_3: ""How may I be of service to the Nation?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","ShowSecondPerson eusan_nation_admiral_falke
-AdjustRepPerson admiral_falke WELCOMING 1
 ","""Very good $playerName. Most people think it is their mind playing tricks but I see you did your research and understood my abilities."" Admiral Falke says. She seem to be impressed you understood what Falke units were capable of doing.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1a: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke
-AdjustRepPerson admiral_falke NEUTRAL -1","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","ShowSecondPerson eusan_nation_admiral_falke","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1b: Continue",
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","ShowSecondPerson eusan_nation_admiral_falke","""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
 
 She gestured to Ariane, who was sitting in her desk chair in silence. 
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1c: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1a
-$option == officeryeongPenroseRecovery512_briefing1b
-$option == officeryeongPenroseRecovery512_briefing1c","ShowSecondPerson eusan_nation_admiral_falke","Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
+""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
+","ShowSecondPerson eusan_nation_admiral_falke","Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
 
 ""Uh...yes ma'am."" she says. Ariane then opens a drawer on her desk and pulls out a small folder. 
 
@@ -601,9 +601,10 @@ OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeong
 
 She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
 
-""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $heOrShe where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","$eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
-Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $himOrHer where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","Call $global.eusan_nation_penrose512_ref showMap ""Destination:
+$eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
+$eusan_nation_penrose512_planetName","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
