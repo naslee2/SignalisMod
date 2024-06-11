@@ -65,7 +65,8 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
             return false;
         }
 
-        addSuccessStages(Stage.RETURN_BLACKBOX);
+        setStartingStage(Stage.LOCATE_PENROSE512);
+        addSuccessStages(Stage.COMPLETED);
 
         setStoryMission();
 
@@ -97,13 +98,24 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
     }
 
     @Override
+    public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height){
+        float opad = 10f;
+        if(currentStage == Stage.LOCATE_PENROSE512){
+            info.addPara("Locate the Penrose 512 in the  " + target_starsystem.getNameWithNoType() + " and investigate the crashed spacecraft.", opad);
+        }
+        else if(currentStage == Stage.RETURN_BLACKBOX){
+            info.addPara("Investigation complete. Return the data to " + officer_yeong.getNameString() + ".", opad);
+        }
+    }
+
+    @Override
     public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad){
         if(currentStage == Stage.LOCATE_PENROSE512){
             info.addPara("Locate the Penrose 512 at the " + target_starsystem.getNameWithLowercaseTypeShort() + " ", tc, pad);
             return true;
         }
         else if(currentStage == Stage.RETURN_BLACKBOX){
-            info.addPara("Mission Complete. Return to Ariane Yeong with your findings.", tc, pad);
+            info.addPara("Return to " + officer_yeong.getNameString() +  " with your findings.", tc, pad);
             return true;
         }
         return false;
