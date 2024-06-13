@@ -711,14 +711,19 @@ OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explo
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_cryo_start false
 SetTooltip officeryeongPenrose512_cryo_start ""Most debris have been removed and power has been restored but there is the issue of finding the access key for the door. Try looking for an access keycard to get through the door.""","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_start: Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_start",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore1: Look at the cryo chamber.",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
+$player.officeryeongPenrose512_foundphoto == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2_BLOCKED,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
+$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2a false
+SetTooltip officeryeongPenrose512_cryo_explore2a ""The cryo sleeper looks like it requires a code combination to open it. Perhaps you should check the rest of the ship for the code.""","PLACEHOLDER TEXT Blocked","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...
+officeryeongPenrose512_cryo_explore2_exit: Return to the staging area.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2a: Use the photo to enter the cryo chamber code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2a: Use the photo to enter the cryo chamber code.
-officeryeongPenrose512_cryo_explore2b: Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2b","FireAll PopulateOfficerYeongPenrose512Explore",,,
+officeryeongPenrose512_cryo_explore2_exit: Return to the staging area.",
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","$global.eusan_nation_penrose512_returnBlackbox = true
 $global.eusan_nation_penrose512_recoveredData = true
 Call $global.eusan_nation_penrose512_ref updateStage","PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore3: Return to your fleet.",

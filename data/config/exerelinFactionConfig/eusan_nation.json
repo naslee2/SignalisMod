@@ -52,22 +52,22 @@
         ["eusan_nation_isolde_standard","eusan_nation_jagd_standard","eusan_nation_jagd_standard","eusan_nation_jagd_standard","eusan_nation_raubtier_standard","eusan_nation_raubtier_standard"]
     ],
 
-    "startShipsTradeSmall":[],
-    "startShipsTradeLarge":[],
+    #"startShipsTradeSmall":[],
+    #"startShipsTradeLarge":[],
 
-    "startShipsCarrierSmall":[],
-    "startShipsCarrierLarge":[],
+    #"startShipsCarrierSmall":[],
+    #"startShipsCarrierLarge":[],
 
     "startShipsExplorerSmall":[
         ["eusan_nation_penrose_standard"]
     ],
-    "startShipsExplorerLarge":[],
+    #"startShipsExplorerLarge":[],
 
     "startShipsGrandFleet":[
         ["eusan_nation_admiral_standard", "eusan_nation_engollan_standard","eusan_nation_tremore_standard", "eusan_nation_comoros_standard","eusan_nation_engollan_standard","eusan_nation_copthorne_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard","eusan_nation_wachtel_standard"]
     ],
 
-    "startShipsSuper":[],
+    #"startShipsSuper":[],
 
     "startSpecialItems":[
         [["eusan_nation_standard_package", ""]], [["eusan_nation_advanced_package", ""]]

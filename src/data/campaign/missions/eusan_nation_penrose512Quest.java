@@ -36,6 +36,7 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
     protected PlanetAPI target_planet;
     protected StarSystemAPI target_starsystem;
     protected String[] conditionsList;
+    protected String[] planetTypeList;
 
 	@Override
 	protected boolean create(MarketAPI arg0, boolean arg1) {
@@ -44,7 +45,8 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         }
         officer_yeong = getImportantPerson("eusan_nation_officer_yeong");
         vineta = (PlanetAPI) Global.getSector().getEntityById("eusan_nation_vineta");
-        conditionsList = new String[] {Conditions.VERY_COLD};
+        conditionsList = new String[] {Conditions.VERY_COLD, Conditions.COLD};
+        //planetTypeList = new String[] {};
 
         resetSearch();
         requirePlanetUnpopulated();
