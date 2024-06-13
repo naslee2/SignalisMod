@@ -39,6 +39,7 @@ public class Eusan_Nation_SetFactionRelations {
         eusan_nation.setRelationship(knightsofLudd.getId(), -0.25f);
 
         //mod faction relations
-        
+        eusan_nation.setRelationship("batavia", -0.1f);
+        eusan_nation.setRelationship("star_federation", 0.1f);
     }
 }
