@@ -17,11 +17,15 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Planets;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemRequirement;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+
+import data.scripts.plugins.Eusan_Nation_PlanetTerrainRequirement;
 
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
@@ -46,19 +50,24 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         officer_yeong = getImportantPerson("eusan_nation_officer_yeong");
         vineta = (PlanetAPI) Global.getSector().getEntityById("eusan_nation_vineta");
         conditionsList = new String[] {Conditions.VERY_COLD, Conditions.COLD};
-        //planetTypeList = new String[] {};
+        //planetTypeList = new String[] {Planets.FROZEN, Planets.ROCKY_ICE, Planets.CRYOVOLCANIC};
 
+        
         resetSearch();
         requirePlanetUnpopulated();
         requirePlanetNotStar();
-		preferPlanetNotFullySurveyed();
-		preferPlanetInDirectionOfOtherMissions();
-        preferPlanetUnexploredRuins();
-        preferPlanetNonGasGiant();
-        preferSystemUnexplored();
-        preferSystemNotPulsar();
-        preferSystemNotBlackHole();
-        requirePlanetConditions(ReqMode.ANY, conditionsList);
+		requirePlanetNotFullySurveyed();
+        requirePlanetUnexploredRuins();
+        requirePlanetNotGasGiant();
+        requireSystemUnexplored();
+        requireSystemNotHasPulsar();
+        requireSystemNotBlackHole();
+        requireSystemOnFringeOfSector();
+        //requireEntityType(planetTypeList);
+        //requirePlanetConditions(ReqMode.ANY, conditionsList);
+
+        search.planetReqs.add(new Eusan_Nation_PlanetTerrainRequirement());
+        
 
         target_planet = pickPlanet();
         target_starsystem = target_planet.getStarSystem();

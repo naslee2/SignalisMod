@@ -670,8 +670,12 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == 
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2b: Check the Penrose's system status monitor.","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == false",,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is off. systems monitor is offline"
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
-$player.officeryeongPenrose512_poweron == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is on. systems monitor is online"
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb1,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
+$player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundKeycard == false",,"PLACEHOLDER TEXT Reactor systems stablized and power to systems readout is active. Doors are on lockdown.","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
+$player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundKeycard == true",,"PLACEHOLDER TEXT Reactor systems stablized and power to systems readout is active. Doors lockdown lifted, keycard can be used","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","keycard found means doors unlocked, power is online"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems","FireAll PopulateOfficerYeongPenrose512MiddileSectionExplore","PLACEHOLDER TEXT",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT_OPTION,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_middlesection_exit: Return to the staging area.",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middlesection_exit","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
@@ -714,8 +718,8 @@ OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officery
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
 $player.officeryeongPenrose512_foundphoto == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2_BLOCKED,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
-$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2a false
-SetTooltip officeryeongPenrose512_cryo_explore2a ""The cryo sleeper looks like it requires a code combination to open it. Perhaps you should check the rest of the ship for the code.""","PLACEHOLDER TEXT Blocked","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...
+$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
+SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper looks like it requires a code combination to open it. Perhaps you should check the rest of the ship for the code.""","PLACEHOLDER TEXT Blocked","officeryeongPenrose512_cryo_explore2: Begin to open the cryo sleeper...
 officeryeongPenrose512_cryo_explore2_exit: Return to the staging area.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_cryo_explore2a: Use the photo to enter the cryo chamber code.",
@@ -997,7 +1001,7 @@ FireAll PopulateOptions
 $menuState = fleetConvMain 0
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
-AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link",
+AddText ""Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
 $id ==  eusan_nation_admiral_falke score: 100
