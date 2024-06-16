@@ -25,7 +25,7 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.Star
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.plugins.Eusan_Nation_PlanetTerrainRequirement;
+import data.scripts.plugins.Eusan_Nation_PlanetColdTypeRequirement;
 
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
@@ -66,7 +66,7 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         //requireEntityType(planetTypeList);
         //requirePlanetConditions(ReqMode.ANY, conditionsList);
 
-        search.planetReqs.add(new Eusan_Nation_PlanetTerrainRequirement());
+        search.planetReqs.add(new Eusan_Nation_PlanetColdTypeRequirement());
         
 
         target_planet = pickPlanet();
