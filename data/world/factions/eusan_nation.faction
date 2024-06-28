@@ -89,9 +89,6 @@
 			"eusan_nation_isolde",
 			"atlas",
 			"prometheus",
-			"gryphon",
-			"falcon",
-			"eagle",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available

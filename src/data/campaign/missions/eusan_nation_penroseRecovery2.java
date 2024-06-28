@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
@@ -23,7 +24,13 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
+import org.apache.log4j.Logger;
+
+import data.scripts.plugins.Eusan_Nation_FleetScaler;
+
 public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implements FleetEventListener {
+    Logger logger = Global.getLogger(eusan_nation_penroseRecovery2.class);
+
     public static enum Stage {
         DEFEAT_HOSTILES,
         LOCATE_PENROSE388,
@@ -37,6 +44,8 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected CampaignFleetAPI target_fleet;
     protected StarSystemAPI target_starsystem;
     protected PersonAPI tritach_fleetcommander;
+    
+    public int playerFleetDP = Global.getSector().getPlayerFleet().getFleetPoints();
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
@@ -70,8 +79,13 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         tritach_fleetcommander.setPostId(Ranks.POST_PATROL_COMMANDER);
         tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
 
+        //data sent to fleetScaler
+        Eusan_Nation_FleetScaler scalerData = new Eusan_Nation_FleetScaler(playerFleetDP);
+        String fleetType = scalerData.fleetScaler();
+        logger.info("Logger Active: Fleet DP points is equal to: " + scalerData.fleetScaler());
+
         //enemy fleet
-        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.PATROL_MEDIUM, 50f, 10f, 10f, 10f, 0f, 0f, -10f); 
+        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, fleetType, 100f, 10f, 10f, 0f, 0f, 0f, 10f); 
         hostile_fleetParams.averageSMods = 1;
 
         target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
@@ -207,4 +221,5 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
             getPerson().getMemoryWithoutUpdate().set("$eusan_nation_penroseRecovery2_killFleet", true);
         }
     }
+
 }
