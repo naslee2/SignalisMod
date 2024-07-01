@@ -20,6 +20,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -29,7 +30,7 @@ import org.apache.log4j.Logger;
 import data.scripts.plugins.Eusan_Nation_FleetScaler;
 
 public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implements FleetEventListener {
-    Logger logger = Global.getLogger(eusan_nation_penroseRecovery2.class);
+    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery2.class);
 
     public static enum Stage {
         DEFEAT_HOSTILES,
@@ -46,6 +47,8 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected PersonAPI tritach_fleetcommander;
     
     public int playerFleetDP = Global.getSector().getPlayerFleet().getFleetPoints();
+    public int playerCapitalShips = Global.getSector().getPlayerFleet().getNumCapitals();
+    
 
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
@@ -80,19 +83,28 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
 
         //data sent to fleetScaler
-        Eusan_Nation_FleetScaler scalerData = new Eusan_Nation_FleetScaler(playerFleetDP);
-        String fleetType = scalerData.fleetScaler();
-        logger.info("Logger Active: Fleet DP points is equal to: " + scalerData.fleetScaler());
+        Eusan_Nation_FleetScaler fleetData = new Eusan_Nation_FleetScaler(playerFleetDP);
+        //logger.info("Logger Active: Fleet DP points is equal to: " + scalerData.fleetScaler());
 
         //enemy fleet
-        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, fleetType, 100f, 10f, 10f, 0f, 0f, 0f, 10f); 
-        hostile_fleetParams.averageSMods = 1;
+        CampaignFleetAPI target_fleet = fleetData.fleetScaler();
+        //FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, fleetType, 100f, 10f, 10f, 0f, 0f, 0f, 10f);
+        
+        //hostile_fleetParams.averageSMods = 1;
 
-        target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
-        target_fleet.setName("Deep Space Patrol Group 41");
+        //target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
+        
+        //target_fleet.setName("Deep Space Patrol Group 41");
         target_fleet.setNoFactionInName(false);
         target_fleet.setCommander(tritach_fleetcommander);
         target_fleet.getFlagship().setCaptain(tritach_fleetcommander);
+        target_fleet.getCommander().getStats().setLevel(5);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.POINT_DEFENSE, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
+
         Misc.makeHostile(target_fleet);
         Misc.makeNoRepImpact(target_fleet, "$eusan_nation");
         Misc.makeImportant(target_fleet, "$eusan_nation");
@@ -101,7 +113,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, "$eusan_nation");
-
         target_fleet.getMemoryWithoutUpdate().set("$eusan_nation_hostilefleet", true);
         target_fleet.getAI().addAssignment(FleetAssignment.PATROL_SYSTEM, target_starsystem.getCenter(), 200f, null);
         target_fleet.addEventListener(this);
