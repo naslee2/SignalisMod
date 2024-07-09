@@ -13,7 +13,8 @@
   "shieldRadius": 261,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design"
+    "eusan_nation_engineering_design",
+    "eusan_nation_K4_composite_armor"
   ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_admiral_builtin2",
