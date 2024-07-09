@@ -34,7 +34,6 @@ public class Eusan_Nation_FleetScaler{
             enemyFleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.PATROL_LARGE, modiferDP, 15f, 10f, 0f, 0f, 0f, 10f);
 
             enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
-            enemyFleetData.setName("Deep Space Patrol 41");
 
             return enemyFleetData;
         }
@@ -42,7 +41,6 @@ public class Eusan_Nation_FleetScaler{
             enemyFleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.TASK_FORCE, modiferDP, 20f, 15f, 0f, 0f, 0f, 15f);
             
             enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
-            enemyFleetData.setName("Deep Strike Group 11");
 
             return enemyFleetData;
         }
@@ -50,7 +48,6 @@ public class Eusan_Nation_FleetScaler{
             enemyFleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.TASK_FORCE, modiferDP, 25f, 20f, 0f, 0f, 0f, 20f);
 
             enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
-            enemyFleetData.setName("Long Range Research Fleet 17");
 
             return enemyFleetData; 
         }

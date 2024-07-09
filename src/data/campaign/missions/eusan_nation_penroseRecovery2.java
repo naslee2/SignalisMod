@@ -47,9 +47,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected PersonAPI tritach_fleetcommander;
     
     public int playerFleetDP = Global.getSector().getPlayerFleet().getFleetPoints();
-    public int playerCapitalShips = Global.getSector().getPlayerFleet().getNumCapitals();
+    protected int enemyCaptials;
+    protected int enemyCrusiers;
+    protected int enemyDestroyers;
+    protected int enemyFrigates;
     
-
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
         if(!setGlobalReference("$eusan_nation_penroseRecovery2_ref")){
@@ -93,8 +95,13 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         //hostile_fleetParams.averageSMods = 1;
 
         //target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
+
+        enemyCaptials = target_fleet.getNumCapitals();
+        enemyCrusiers = target_fleet.getNumCruisers();
+        enemyDestroyers = target_fleet.getNumDestroyers();
+        enemyFrigates = target_fleet.getNumFighters();
         
-        //target_fleet.setName("Deep Space Patrol Group 41");
+        target_fleet.setName("Deep Space Patrol Group 41");
         target_fleet.setNoFactionInName(false);
         target_fleet.setCommander(tritach_fleetcommander);
         target_fleet.getFlagship().setCaptain(tritach_fleetcommander);
@@ -141,9 +148,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         triggerSetGlobalMemoryValue("$eusan_nation_penroseRecovery2_completed", true);
         endTrigger();
 
-        setCreditReward(100000);
-        setRepRewardPerson(RepRewards.HIGH);
-		setRepRewardFaction(RepRewards.HIGH);
+        
+        int totalReward = rewardScaleer(enemyCaptials, enemyCrusiers, enemyDestroyers, enemyFrigates);
+        setCreditReward(totalReward);
+        setRepRewardPerson(RepRewards.VERY_HIGH);
+		setRepRewardFaction(RepRewards.VERY_HIGH);
 
         return true;
     }
@@ -231,6 +240,25 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         if(fleet.getMemoryWithoutUpdate().contains("$eusan_nation_hostilefleet")){
             getPerson().getMemoryWithoutUpdate().set("$eusan_nation_penroseRecovery2_killFleet", true);
         }
+    }
+
+    public int rewardScaleer(int numCaptials, int numCruisers, int numDestroyers, int numFrigates){
+        int reward = 100000;
+
+        for(int i = 0; i < numCaptials; i++){
+            reward = reward + 750000; 
+        }
+        for(int i = 0; i < numCruisers; i++){
+            reward = reward + 65000; 
+        }
+        for(int i = 0; i < numDestroyers; i++){
+            reward = reward + 55000; 
+        }
+        for(int i = 0; i < numFrigates; i++){
+            reward = reward + 45000; 
+        }
+
+        return reward;
     }
 
 }
