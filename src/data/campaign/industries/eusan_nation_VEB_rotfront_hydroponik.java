@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
@@ -27,12 +28,14 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 
         demand(Commodities.SUPPLIES, 3);
         demand(Commodities.HEAVY_MACHINERY, 3);
-        demand(Commodities.FOOD, 3);
+        //demand(Commodities.FOOD, 3);
 
-        supply("eusan_nation_nationsmokes", 4);
+		
 
-        Pair<String, Integer> deficitSmokes = getMaxDeficit(Commodities.FOOD);
-        applyDeficitToProduction(1, deficitSmokes, "eusan_nation_nationsmokes");
+        //supply("eusan_nation_nationsmokes", 4);
+
+        //Pair<String, Integer> deficitSmokes = getMaxDeficit(Commodities.FOOD);
+        //applyDeficitToProduction(1, deficitSmokes, "eusan_nation_nationsmokes");
 
 		if (!isFunctional()) {
 			supply.clear();
