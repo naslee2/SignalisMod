@@ -1,0 +1,32 @@
+{
+  "variantId": "eusan_nation_jagd_imperial_variant",
+  "hullId": "eusan_nation_jagd_imperial",
+  "displayName": "New Variant",
+  "goalVariant": false,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "pointdefenseai"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0002": "eusan_nation_pernach",
+        "WS0003": "eusan_nation_pernach",
+        "WS0004": "lightdualmg",
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg",
+        "WS0007": "heatseeker",
+        "WS0008": "heatseeker"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
