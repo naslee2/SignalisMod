@@ -21,13 +21,13 @@
         "eusan_nation_trevivian_standard":7,
         "eusan_nation_triglav_standard":7,
         "eusan_nation_jagd_standard":7,
-        "eusan_nation_jagd_imperial":0
+        "eusan_nation_jagd_imperial_standard":0
     },
     "combatLarge":{
         "eusan_nation_comoros_standard":6,
         "eusan_nation_engollan_standard":6,
         "eusan_nation_isolde_standard":1,
-        "eusan_nation_isolde_imperial":0
+        "eusan_nation_isolde_imperial_standard":0
     },
     "combatCapital":{
         "eusan_nation_revolution_standard":2,
