@@ -1,0 +1,101 @@
+{
+    "eusan_nation_imperial_remnants":{
+    
+        "required_mods_id": ["eusan_nation"],
+
+        #TRIGGERS (ALL OPTIONAL)
+        
+        "trigger_market_id": ["heimat_market"],
+        "trigger_marketFaction_any": ["eusan_nation"],
+        "trigger_marketFaction_alliedWith": false,
+        "trigger_marketFaction_none": [],
+        "trigger_marketFaction_enemyWith": false,
+        "trigger_market_minSize": 0,
+        "trigger_player_minLevel": 0,
+        "trigger_min_fleet_size": 0,
+        "trigger_min_days_elapsed": 10, 
+        "trigger_weight_mult": 0,
+        #"trigger_memKeys_all": {"$key":true,},
+        #"trigger_memKeys_any": {"$key":true,},
+        "trigger_playerRelationship_atLeast": {"eusan_nation":0.25,},
+        #"trigger_playerRelationship_atMost": {"faction":0.0,},
+        
+        #BOUNTY DESCRIPTION
+        
+        "job_name": "Imperial Remnants",
+        "job_description": "A series of intelligence missions by deep space reconnaissance have determined the location of a major Imperial Remnant force. These forces are scattered and without an unifying leadership to bind them into a single, cohesive force. Should a new leader unify these Imperial forces under a single banner, they will pose a significant threat to the Nation. \nSignals intelligence has determined that the Imperial Remnant has obtained material support and weaponry to retrofit their ships with more commonly used equipment used by other powers in the Persean Sector. Intelligence has also determined that the enemy fleet has Isolde-class cruisers. These pose a direct threat Volksmarine operations in the sector. Destroy this fleet and cripple their operations.",
+        "job_comm_reply": "Oh great the Nation sends yet another unsuspecting fleet commander to take us out. They keep sending you fools to your deaths. No matter, if it is a fight you want, it is a fight you get.",
+        "job_intel_success": "Imperial Remnant fleet destroyed. The Nation is pleased with your success. One less remnant to threaten the glorious future of the Nation",
+        "job_intel_failure": "",
+        "job_intel_expired": "Imperial Remnant has reportedly moved to a new area of operations. Intellignce has lost track of their movements. Assessment of possible future impact to the Nation is ongoing...",
+        "job_forFaction": "eusan_nation",
+        "job_deadline": 90,
+        "job_credit_reward": 150000,
+        "job_reward_scaling": 1,
+        "job_reputation_reward":5,
+        #"job_item_reward": {"item":0,},
+        "job_type":"neutralisation",
+        "job_show_type": true,
+        "job_show_captain": true,
+        "job_show_fleet": "presetText",
+        "job_show_distance": "vague",
+        "job_show_arrow": false,
+        "job_difficultyDescription": "auto",
+        "job_pick_option": "Accept the job",
+        #"job_pick_script": "data.script.script",
+        #"job_memKey":"$key",
+        #"job_conclusion_script":"data.script.script",
+        
+		#"existing_target_memkey":"$memKey",
+
+        #TARGET COMMANDER (OPTIONAL)
+        
+        "target_first_name":"Kim",
+        "target_last_name":"Soon",
+        "target_portrait":"",
+        "target_gender":"MALE",
+        "target_rank": "spaceCaptain",
+        "target_post": "fleetCommander",
+        "target_personality": "aggressive",
+        "target_aiCoreId": null,
+        "target_level": 7,
+        "target_elite_skills":2,
+        "target_skill_preference": "ANY",
+        #"target_skills": {"skill":1,}, 
+    
+    
+        #TARGET FLEET
+        
+        "fleet_name":"43rd Star Fottilla",
+        "fleet_faction": "ML_bounty",
+        "fleet_flagship_variant":"eusan_nation_isolde_imperial",
+        "fleet_flagship_name":"KM Ausonia",
+        "fleet_flagship_alwaysRecoverable": true,
+        "fleet_flagship_autofit": false,
+        "fleet_preset_ships": {
+            "eusan_nation_isolde_imperial_standard":6,
+            "eusan_nation_jagd_imperial_standard":10,
+            "eusan_nation_raubtier_imperial_standard":8
+        },
+        "fleet_preset_autofit": false,
+        "fleet_scaling_multiplier": 1.1,
+        "fleet_min_FP": 300,
+        "fleet_composition_faction": "ML_bounty",
+        "fleet_composition_quality": 2,
+        "fleet_transponder": false,
+		"fleet_no_retreat": false,
+        "fleet_behavior": "AGGRESSIVE",
+        "fleet_musicSetId": null,
+        
+        #LOCATION
+        
+        "location_entitiesID": ["location1",],
+        "location_marketFactions": ["faction",],
+        "location_distance": "CLOSE",
+        "location_themes": ["procgen_no_theme", "procgen_no_theme_pulsar_blackhole",],
+        "location_themes_blacklist": ["theme_already_occupied", "theme_already_colonized", "theme_hidden", "no_pulsar_blackhole"],
+        "location_entities": ["entity",],
+        "location_prioritizeUnexplored": true,
+        "location_defaultToAnyEntity": true,
+    },
+}

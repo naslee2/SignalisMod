@@ -1,0 +1,51 @@
+{
+    "staticNames":{
+        "hegemony":{
+            "eusan_nation":["Rejuvenation Treaty"]
+        },
+        "independent":{
+			"eusan_nation":["Frendship and Assistance Group"]
+		},
+		"persean":{
+			"eusan_nation":["Indepedent Systems Concord"]
+		},
+        "tritachyon":{
+            "eusan_nation":["Stellar Tech Union"]
+        },
+        "sindrian_diktat":{
+            "eusan_nation":["The United Front"]
+        },
+        "eusan_nation":{
+            "hegemony":["Rejuvenation Treaty"],
+            "independent":["Frendship and Assistance Group"],
+            "persean":["Indepedent Systems Concord"],
+            "tritachyon":["Stellar Tech Union"],
+            "sindrian_diktat":["The United Front"],
+            #modded factions
+            "star_federation":["Indepedent Star Alliance"],
+            "mayasura":["Iapetus Initative"],
+            "sikr_saniris":["Mutual Assistance Treaty"],
+            "ironshell":["Rejuvenation Treaty"],
+            "batavia":["Indepedent Systems Concord"],
+            "rebelrats":["Mutual Assistance Treaty"]
+		},
+        "star_federation":{
+            "eusan_nation":["Indepedent Star Alliance"]
+        },
+        "mayasura":{
+            "eusan_nation":["Iapetus Initative"]
+        },
+        "sikr_saniris":{
+            "eusan_nation":["Mutual Assistance Treaty"]
+        },
+        "ironshell":{
+            "eusan_nation":["Rejuvenation Treaty"]
+        },
+        "batavia":{
+            "eusan_nation":["Indepedent Systems Concord"]
+        },
+        "rebelrats":{
+            "eusan_nation":["Mutual Assistance Treaty"]
+        } 
+    }
+}
