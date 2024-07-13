@@ -27,7 +27,7 @@
             "sikr_saniris":["Mutual Assistance Treaty"],
             "ironshell":["Rejuvenation Treaty"],
             "batavia":["Indepedent Systems Concord"],
-            "rebelrats":["Mutual Assistance Treaty"]
+            "rebelrats":["Pact of Independence"]
 		},
         "star_federation":{
             "eusan_nation":["Indepedent Star Alliance"]
@@ -45,7 +45,7 @@
             "eusan_nation":["Indepedent Systems Concord"]
         },
         "rebelrats":{
-            "eusan_nation":["Mutual Assistance Treaty"]
+            "eusan_nation":["Stellar Defence Treaty"]
         } 
     }
 }
