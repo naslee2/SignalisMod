@@ -47,6 +47,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected PersonAPI tritach_fleetcommander;
     
     public int playerFleetDP = Global.getSector().getPlayerFleet().getFleetPoints();
+    public String enemyFaction = Factions.TRITACHYON;
     protected int enemyCaptials;
     protected int enemyCrusiers;
     protected int enemyDestroyers;
@@ -85,7 +86,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
 
         //data sent to fleetScaler
-        Eusan_Nation_FleetScaler fleetData = new Eusan_Nation_FleetScaler(playerFleetDP);
+        Eusan_Nation_FleetScaler fleetData = new Eusan_Nation_FleetScaler(playerFleetDP, enemyFaction);
         //logger.info("Logger Active: Fleet DP points is equal to: " + scalerData.fleetScaler());
 
         //enemy fleet

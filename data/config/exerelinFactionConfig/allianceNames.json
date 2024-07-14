@@ -26,7 +26,7 @@
             "mayasura":["Iapetus Initative"],
             "sikr_saniris":["Mutual Assistance Treaty"],
             "ironshell":["Rejuvenation Treaty"],
-            "batavia":["Indepedent Systems Concord"],
+            "batavia":["Indepedent Systems Concordiate"],
             "rebelrats":["Pact of Independence"]
 		},
         "star_federation":{
@@ -42,7 +42,7 @@
             "eusan_nation":["Rejuvenation Treaty"]
         },
         "batavia":{
-            "eusan_nation":["Indepedent Systems Concord"]
+            "eusan_nation":["Indepedent Systems Concordiate"]
         },
         "rebelrats":{
             "eusan_nation":["Stellar Defence Treaty"]
