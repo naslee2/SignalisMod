@@ -1,7 +1,7 @@
 {
   "variantId": "eusan_nation_raubtier_imperial_standard",
   "hullId": "eusan_nation_raubtier_imperial",
-  "displayName": "New Variant",
+  "displayName": "Standard",
   "goalVariant": false,
   "fluxCapacitors": 9,
   "fluxVents": 8,
