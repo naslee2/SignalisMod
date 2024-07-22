@@ -13,8 +13,9 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
-    protected static float missile_ammo_bonus = 20f;
-    protected static float missile_regen_bonus = 10f;
+    protected static float missile_ammo_bonus = 15f;
+    protected static float missile_regen_bonus = 7.5f;
+	protected static float missile_flux_increase = 5f;
 
 	//protected static float small_missile_cost_reduction = 5;
 	//protected static float medium_missile_cost_reduction = 10;
@@ -23,6 +24,8 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);
         stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
+		stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_ammo_bonus);
+	
 	}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
@@ -34,6 +37,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 			//if someone tries to install incompatible hullmods, remove it.
 			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSLERACKS, "eusan_nation_missile_assembly_compartment");
 		}
+		
 	}
 
 
