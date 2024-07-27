@@ -15,10 +15,12 @@
 	"shipNameSources":{
 		"MERCANTILE":1,
 		"BRITISH_NAVY":1,
-		"GREEK":1,
-		"CELTIC":1,
-		"SPACE":1,
-		"GENERAL":1,
+		"Eusan_Nation_VM_DDR":1,
+		"Eusan_Nation_KOR":1,
+		"Eusan_Nation_GER":1,
+		"Eusan_Nation_TW":1,
+		"Eusan_Nation_Bird":1,
+		"Eusan_Nation_CN":1
 	},
 	"names":{
 		"old english":1,
@@ -36,7 +38,7 @@
 	"hullFrequency":{
 		"tags":{
 			"eusan_nation_standard_package":1,
-			"eusan_nation_advanced_package":0.7
+			"eusan_nation_advanced_package":0.5
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
