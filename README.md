@@ -16,7 +16,7 @@ Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0 WARNING MAKE 
 
 # CREDITS
 
-Ship sprites, hull and ship data by Sikair.
+Ship sprites, hull, weapons and ship data by Sikair.
 
 Thanks to Kaysaar, WMGreywind and Sikair for coding assistance.
 
@@ -32,7 +32,7 @@ Vineta Planetary Textures and cloud layer by Mallow / @AkulaAkura
 
 firebombpng#2396 for the Eusan Nation flag
 
-StrixBerseria, Swiftnicity#7031 and firebombpng#2396 for the Eusan Nation crests
+StrixBerseria, Swiftnicity#7031, and firebombpng#2396 for the Eusan Nation crests
 
 Terraformed Mars as Kitezh Planetary Textures by Daniel Michel aka Dizzy Crow. From OpenGameArt.org
 
