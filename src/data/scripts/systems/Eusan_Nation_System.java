@@ -222,7 +222,7 @@ public class Eusan_Nation_System {
         rotfront_market.addIndustry(Industries.PATROLHQ);
         rotfront_market.addIndustry(Industries.HEAVYBATTERIES);
         rotfront_market.addIndustry(Industries.BATTLESTATION);
-        //rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
+        rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
