@@ -38,7 +38,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
         demand(Commodities.HEAVY_MACHINERY, 2);
         //demand(Commodities.FOOD, 3);
 		if(market.hasIndustry(Industries.FARMING)){
-			market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().modifyFlat("VEB Hydroponik", farming_bonus, "VEB");
+			market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().modifyFlat("VEB Hydroponik", farming_bonus, "VEB Hydroponik");
 			//rotfront_market.getIndustry(Industries.FARMING).getSupplyBonus().modifyFlat("VEB Hydroponik", farming_bonus);
 		}
 
@@ -57,7 +57,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
     public void unapply(){
         super.unapply();
 		if (market.hasIndustry(Industries.FARMING)) {
-            market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().unmodifyFlat("VEB_Hydroponik");
+            market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().unmodifyFlat("VEB Hydroponik");
    }
     }
 
@@ -69,6 +69,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode){
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
+		tooltip.addPara("Enhances Farming Industry production", h, opad);
 		tooltip.addPara("Food Production Bonus: %s", opad, h, "+" + String.valueOf(farming_bonus));
 	}
     

@@ -49,7 +49,7 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         }
         officer_yeong = getImportantPerson("eusan_nation_officer_yeong");
         vineta = (PlanetAPI) Global.getSector().getEntityById("eusan_nation_vineta");
-        conditionsList = new String[] {Conditions.VERY_COLD, Conditions.COLD};
+        //conditionsList = new String[] {Conditions.VERY_COLD, Conditions.COLD};
         //planetTypeList = new String[] {Planets.FROZEN, Planets.ROCKY_ICE, Planets.CRYOVOLCANIC};
 
         
