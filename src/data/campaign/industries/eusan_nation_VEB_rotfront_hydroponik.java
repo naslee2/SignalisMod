@@ -58,7 +58,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
         super.unapply();
 		if (market.hasIndustry(Industries.FARMING)) {
             market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().unmodifyFlat("VEB Hydroponik");
-   }
+   	}
     }
 
     protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {

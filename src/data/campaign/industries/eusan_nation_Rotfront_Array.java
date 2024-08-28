@@ -1,0 +1,87 @@
+package data.campaign.industries;
+
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
+import com.fs.starfarer.api.campaign.econ.Industry;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
+import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
+import com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Pair;
+
+import java.awt.Color;
+import java.util.List;
+
+public class eusan_nation_Rotfront_Array extends BaseIndustry{
+
+    float array_stability_bonus = 1.0f;
+    StarSystemAPI system = Global.getSector().getStarSystem("Alatyr");
+
+    //List<MarketAPI> data = Misc.getMarketsInLocation(system);
+    
+    @Override
+    public boolean isHidden(){
+        return !market.getFactionId().equals("eusan_nation");
+    }
+
+    @Override
+    public boolean isFunctional(){
+        return super.isFunctional() && market.getFactionId().equals("eusan_nation");
+    }
+
+    @Override
+    public void apply() {
+        for(MarketAPI market : Misc.getMarketsInLocation(system, "eusan_nation")){
+            CommRelayCondition relays = CommRelayCondition.get(market);
+            if(relays != null){
+                market.getStability().modifyFlat("Rotfront Array", array_stability_bonus, "Rotfront Array");
+            }
+        }
+            
+        if (!isFunctional()) {
+			supply.clear();
+			unapply();
+		}
+        
+    }
+
+    @Override
+    public void unapply(){
+        super.unapply();
+        for(MarketAPI market : Misc.getMarketsInLocation(system, "eusan_nation")){
+            CommRelayCondition relays = CommRelayCondition.get(market);
+            if(relays != null){
+                market.getStability().unmodifyFlat("Rotfront Array");
+            }
+        }
+    }
+
+    @Override
+	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode){
+		float opad = 10f;
+		Color h = Misc.getHighlightColor();
+		tooltip.addPara("Enhances Stability to all markets", h, opad);
+		tooltip.addPara("Stability Bonus: %s", opad, h, "+" + String.valueOf(array_stability_bonus));
+	}
+
+    @Override
+	public boolean isAvailableToBuild() {
+		return false;
+	}
+	
+	public boolean showWhenUnavailable() {
+		return false;
+	}
+
+	@Override
+	public boolean canImprove() {
+		return false;
+	}
+}
