@@ -1,12 +1,10 @@
 package data.campaign.industries;
 
 import java.util.List;
-import java.util.concurrent.locks.Condition;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -14,8 +12,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
-
-import data.campaign.missions.eusan_nation_penroseRecovery2;
 
 import org.apache.log4j.Logger;
 
@@ -79,23 +75,6 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
             }
         }
 
-		// if(market.hasIndustry(Industries.MINING)){
-		// 	if(market.hasCondition(miningOreConditionsList[0]) || market.hasCondition(miningOreConditionsList[1]) || market.hasCondition(miningOreConditionsList[2]) || market.hasCondition(miningOreConditionsList[3]) || market.hasCondition(miningOreConditionsList[4])){
-		// 		market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().modifyFlat("AEON Facility", mining_ore_bonus, "AEON Facility");
-		// 	}
-		// 	if(market.hasCondition(miningRareOreConditionsList[0]) || market.hasCondition(miningRareOreConditionsList[1]) || market.hasCondition(miningRareOreConditionsList[2]) || market.hasCondition(miningRareOreConditionsList[3]) || market.hasCondition(miningRareOreConditionsList[4])){
-		// 		market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().modifyFlat("AEON Facility", mining_rareOre_bonus, "AEON Facility");
-		// 	}
-		// 	if(market.hasCondition(miningOrganicsConditionsList[0]) || market.hasCondition(miningOrganicsConditionsList[1]) || market.hasCondition(miningOrganicsConditionsList[2]) || market.hasCondition(miningOrganicsConditionsList[3])){
-		// 		market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().modifyFlat("AEON Facility", mining_organics_bonus, "AEON Facility");
-		// 	}
-		// 	if(market.hasCondition(miningvolatilesConditionsList[0]) || market.hasCondition(miningvolatilesConditionsList[1]) || market.hasCondition(miningvolatilesConditionsList[2]) || market.hasCondition(miningvolatilesConditionsList[3])){
-		// 		market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().modifyFlat("AEON Facility", mining_volatiles_bonus, "AEON Facility");
-		// 	}
-		// }
-
-
-
 		//Pair<String, Integer> deficitSupplies = getMaxDeficit(Commodities.SUPPLIES);
 		Pair<String, Integer> deficitCrew = getMaxDeficit(Commodities.CREW);
 
@@ -119,31 +98,24 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 			if(industry.getSpec().hasTag(Industries.MINING)){
 				market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("AEON Facility");
 				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("AEON Facility");
-				market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("AEON Facility");
 				market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
 			}
 		}
-
-		// if(market.hasCondition(miningOreConditionsList[0]) || market.hasCondition(miningOreConditionsList[1]) || market.hasCondition(miningOreConditionsList[2]) || market.hasCondition(miningOreConditionsList[3]) || market.hasCondition(miningOreConditionsList[4])){
-		// 	market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("AEON Facility");
-		// }
-		// if(market.hasCondition(miningRareOreConditionsList[0]) || market.hasCondition(miningRareOreConditionsList[1]) || market.hasCondition(miningRareOreConditionsList[2]) || market.hasCondition(miningRareOreConditionsList[3]) || market.hasCondition(miningRareOreConditionsList[4])){
-		// 	market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("AEON Facility");
-		// }
-		// if(market.hasCondition(miningOrganicsConditionsList[0]) || market.hasCondition(miningOrganicsConditionsList[1]) || market.hasCondition(miningOrganicsConditionsList[2]) || market.hasCondition(miningOrganicsConditionsList[3])){
-		// 	market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
-		// }
-		// if(market.hasCondition(miningvolatilesConditionsList[0]) || market.hasCondition(miningvolatilesConditionsList[1]) || market.hasCondition(miningvolatilesConditionsList[2]) || market.hasCondition(miningvolatilesConditionsList[3])){
-		// 	market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
-		// }
-
     }
 
 	public boolean matchesConditionReq(String ... conditions){
         for (String condition : conditions) {
-            if(!market.hasCondition(condition))return false;
-        }
-        return true;
+			logger.info("Logger Active: Condition is: " + condition);
+            if(market.hasCondition(condition)) {
+				//logger.info("Logger Active: market does not have condition listed: ");
+				logger.info("Logger Active: market has condition listed. TRUE");
+				return true;
+        	}
+		}
+		//logger.info("Logger Active: market has condition listed. TRUE");
+		logger.info("Logger Active: market does not have condition listed: ");
+        return false;
     }
 
     public boolean producedThisCommodity(Industry ind,String commodity){
