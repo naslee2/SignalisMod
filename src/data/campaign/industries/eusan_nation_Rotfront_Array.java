@@ -10,16 +10,22 @@ import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.SensorArrayEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
+import org.apache.log4j.Logger;
+
 import java.awt.Color;
 import java.util.List;
 
 public class eusan_nation_Rotfront_Array extends BaseIndustry{
+
+    Logger logger = Global.getLogger(eusan_nation_Rotfront_Array.class);
+
 
     float array_stability_bonus = 1.0f;
     StarSystemAPI system = Global.getSector().getStarSystem("Alatyr");
@@ -38,9 +44,16 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
 
     @Override
     public void apply() {
+        super.apply(true);
+
+        demand(Commodities.SUPPLIES, 2);
+        demand(Commodities.HEAVY_MACHINERY, 2);
+
         for(MarketAPI market : Misc.getMarketsInLocation(system, "eusan_nation")){
             CommRelayCondition relays = CommRelayCondition.get(market);
+            logger.info("Logger Active: Market is: " + market);
             if(relays != null){
+                logger.info("Logger Active: Relay: " + relays);
                 market.getStability().modifyFlat("Rotfront Array", array_stability_bonus, "Rotfront Array");
             }
         }
@@ -51,6 +64,11 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
 		}
         
     }
+
+    // @Override
+    // public void advance(float amount) {
+
+    // }
 
     @Override
     public void unapply(){
@@ -63,6 +81,10 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
         }
     }
 
+    protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {
+		return mode != IndustryTooltipMode.NORMAL || isFunctional();
+	}
+
     @Override
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode){
 		float opad = 10f;
@@ -71,6 +93,14 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
 		tooltip.addPara("Stability Bonus: %s", opad, h, "+" + String.valueOf(array_stability_bonus));
 	}
 
+    public boolean isDemandLegal(CommodityOnMarketAPI com) {
+		return true;
+	}
+
+	public boolean isSupplyLegal(CommodityOnMarketAPI com) {
+		return true;
+	}
+    
     @Override
 	public boolean isAvailableToBuild() {
 		return false;

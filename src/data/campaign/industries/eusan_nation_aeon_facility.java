@@ -106,15 +106,13 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 
 	public boolean matchesConditionReq(String ... conditions){
         for (String condition : conditions) {
-			logger.info("Logger Active: Condition is: " + condition);
+			//logger.info("Logger Active: Condition is: " + condition);
             if(market.hasCondition(condition)) {
-				//logger.info("Logger Active: market does not have condition listed: ");
-				logger.info("Logger Active: market has condition listed. TRUE");
+				//logger.info("Logger Active: market has condition listed. TRUE");
 				return true;
         	}
 		}
-		//logger.info("Logger Active: market has condition listed. TRUE");
-		logger.info("Logger Active: market does not have condition listed: ");
+		//logger.info("Logger Active: market does not have condition listed: ");
         return false;
     }
 
