@@ -6,12 +6,16 @@ import java.util.Random;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
+import java.awt.Color;
 
 public class eusan_nation_aeon_hq extends BaseIndustry{
+
+	protected static float ship_quality_bonus = 0.1f;
     
     @Override
     public boolean isHidden(){
@@ -29,14 +33,16 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 
         demand(Commodities.SUPPLIES, size - 1);
         demand(Commodities.HAND_WEAPONS, size - 1);
-		//demand(Commodities.HEAVY_MACHINERY, size -1);
+		demand(Commodities.HEAVY_MACHINERY, size -1);
 
-		supply(Commodities.CREW, size);
-		supply(Commodities.MARINES, size);
+		//supply(Commodities.CREW, size);
+		//supply(Commodities.MARINES, size);
 
 		Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
 		applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
-		
+
+		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat(getModId(), ship_quality_bonus, getNameForModifier());
+
 		modifyStabilityWithBaseMod();
 
 		if (!isFunctional()) {
@@ -59,9 +65,12 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 
 	@Override
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
+		float opad = 10f;
+		Color h = Misc.getHighlightColor();
 		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
 			addStabilityPostDemandSection(tooltip, hasDemand, mode);
 		}
+		tooltip.addPara("Ship Quality Bonus: %s", opad, h, "+" + String.valueOf(ship_quality_bonus));
 	}
 
     @Override

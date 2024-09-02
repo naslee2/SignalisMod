@@ -5,6 +5,7 @@ import java.util.List;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
+import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -30,6 +31,8 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 	protected float mining_rareOre_bonus = 1.0f;
 	protected float mining_organics_bonus = 2.0f;
 	protected float mining_volatiles_bonus = 2.0f;
+	protected float refining_metal_bonus = 2.0f;
+	protected float refining_rare_metal_bonus = 1.0f;
 
     @Override
     public boolean isHidden(){
@@ -45,34 +48,37 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
         super.apply(true);
         int size = market.getSize();
 
-        demand(Commodities.SUPPLIES, size);
-		demand(Commodities.CREW, size);
+        demand(Commodities.SUPPLIES, size-1);
+		demand(Commodities.CREW, size-1);
+		demand(Commodities.HEAVY_MACHINERY, size-1);
 
-		//supply(Commodities.ORE, size - 1);
-		//supply(Commodities.ORGANICS, size - 2);
-		supply(Commodities.ORGANS, size);
+		supply(Commodities.ORGANS, size-2);
 
 		for (Industry industry : market.getIndustries()) {
-			logger.info("Logger Active: Industry is " + industry);
+			//logger.info("Logger Active: Industry is " + industry);
             if(industry.getSpec().hasTag(Industries.MINING)){
-				logger.info("Logger Active: Mining tag is " + industry.getSpec().hasTag(Industries.MINING));
+				//logger.info("Logger Active: Mining tag is " + industry.getSpec().hasTag(Industries.MINING));
                 if(matchesConditionReq(miningOreConditionsList)){
-					logger.info("Logger Active: Ore Condition found for " + industry);
+					//logger.info("Logger Active: Ore Condition found for " + industry);
                     industry.getSupply(Commodities.ORE).getQuantity().modifyFlat("AEON Facility", mining_ore_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningRareOreConditionsList)){
-					logger.info("Logger Active: Rare Ore Condition found for " + industry);
+					//logger.info("Logger Active: Rare Ore Condition found for " + industry);
                     industry.getSupply(Commodities.RARE_ORE).getQuantity().modifyFlat("AEON Facility", mining_rareOre_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningOrganicsConditionsList)){
-					logger.info("Logger Active: Organics Condition found for " + industry);
+					//logger.info("Logger Active: Organics Condition found for " + industry);
                     industry.getSupply(Commodities.ORGANICS).getQuantity().modifyFlat("AEON Facility", mining_organics_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningvolatilesConditionsList)){
-					logger.info("Logger Active: Volitailes Condition found for " + industry);
+					//logger.info("Logger Active: Volitailes Condition found for " + industry);
                     industry.getSupply(Commodities.VOLATILES).getQuantity().modifyFlat("AEON Facility", mining_volatiles_bonus, "AEON Facility");
                 }
             }
+			if(industry.getSpec().hasTag(Industries.REFINING)){
+				industry.getSupply(Commodities.METALS).getQuantity().modifyFlat("AEON Facility", refining_metal_bonus, "AEON Facility");
+				industry.getSupply(Commodities.RARE_METALS).getQuantity().modifyFlat("AEON Facility", refining_rare_metal_bonus, "AEON Facility");
+			}
         }
 
 		//Pair<String, Integer> deficitSupplies = getMaxDeficit(Commodities.SUPPLIES);
@@ -82,7 +88,7 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 		//applyDeficitToProduction(1, deficitSupplies, Commodities.ORE, Commodities.ORGANICS);
 		applyDeficitToProduction(1, deficitCrew, Commodities.ORGANS);
 		
-		modifyStabilityWithBaseMod();
+		//modifyStabilityWithBaseMod();
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -100,6 +106,11 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("AEON Facility");
 				market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("AEON Facility");
 				market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
+			}
+			if(industry.getSpec().hasTag(Industries.REFINING)){
+				market.getIndustry(Industries.MINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("AEON Facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("AEON Facility");
+
 			}
 		}
     }
@@ -128,29 +139,44 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
 		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
 			addStabilityPostDemandSection(tooltip, hasDemand, mode);
-			
 		}
+
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
-		tooltip.addPara("Enhances Mining Industry production", h, opad);
-		if(market.hasCondition(miningOreConditionsList[0]) || market.hasCondition(miningOreConditionsList[1]) || market.hasCondition(miningOreConditionsList[2]) || market.hasCondition(miningOreConditionsList[3]) || market.hasCondition(miningOreConditionsList[4])){
-			tooltip.addPara("Metal Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_ore_bonus));
+
+		for (Industry industry : market.getIndustries()){
+			if(industry.getSpec().hasTag(Industries.MINING)){
+				tooltip.addPara("Enhances Mining Industry production", h, opad);
+				if(industry.getSupply(Commodities.ORE).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Metal Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_ore_bonus));
+				}
+				if(industry.getSupply(Commodities.RARE_ORE).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Transplutonic Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_rareOre_bonus));
+				}
+				if(industry.getSupply(Commodities.ORGANICS).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Organics Bonus: %s", opad, h, "+" + String.valueOf(mining_organics_bonus));
+				}
+				if(industry.getSupply(Commodities.VOLATILES).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Volatiles Bonus: %s", opad, h, "+" + String.valueOf(mining_volatiles_bonus));
+				}
+			}
+			if(industry.getSpec().hasTag(Industries.REFINING)){
+				tooltip.addPara("Enhances Refining Industry production", h, opad);
+				if(industry.getSupply(Commodities.METALS).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Metals Bonus: %s", opad, h, "+" + String.valueOf(refining_metal_bonus));
+				}
+				if(industry.getSupply(Commodities.RARE_METALS).getQuantity().getModifiedValue() > 0){
+					tooltip.addPara("Transplutonics Bonus: %s", opad, h, "+" + String.valueOf(refining_rare_metal_bonus));
+				}
+			}
 		}
-		if(market.hasCondition(miningRareOreConditionsList[0]) || market.hasCondition(miningRareOreConditionsList[1]) || market.hasCondition(miningRareOreConditionsList[2]) || market.hasCondition(miningRareOreConditionsList[3]) || market.hasCondition(miningRareOreConditionsList[4])){
-			tooltip.addPara("Transplutonic Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_rareOre_bonus));
-		}
-		if(market.hasCondition(miningOrganicsConditionsList[0]) || market.hasCondition(miningOrganicsConditionsList[1]) || market.hasCondition(miningOrganicsConditionsList[2]) || market.hasCondition(miningOrganicsConditionsList[3])){
-			tooltip.addPara("Organics Bonus: %s", opad, h, "+" + String.valueOf(mining_organics_bonus));
-		}
-		if(market.hasCondition(miningvolatilesConditionsList[0]) || market.hasCondition(miningvolatilesConditionsList[1]) || market.hasCondition(miningvolatilesConditionsList[2]) || market.hasCondition(miningvolatilesConditionsList[3])){
-			tooltip.addPara("Volatiles Bonus: %s", opad, h, "+" + String.valueOf(mining_volatiles_bonus));
-		}
+		
 	}
 
-    @Override
-	protected int getBaseStabilityMod() {
-		return 1;
-	}
+    // @Override
+	// protected int getBaseStabilityMod() {
+	// 	return 1;
+	// }
 
     public String getNameForModifier() {
 		if (getSpec().getName().contains("HQ")) {
