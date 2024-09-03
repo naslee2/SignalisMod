@@ -68,7 +68,7 @@ public class Eusan_Nation_System {
         buyan_market.addIndustry(Industries.REFINING);
         buyan_market.addIndustry(Industries.MEGAPORT);
         buyan_market.addIndustry(Industries.HEAVYBATTERIES);
-        buyan_market.addIndustry(Industries.LIGHTINDUSTRY);
+        buyan_market.addIndustry(Industries.PATROLHQ);
         buyan_market.addIndustry(Industries.BATTLESTATION);
         buyan_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         buyan_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
@@ -111,6 +111,7 @@ public class Eusan_Nation_System {
         vineta_market.addIndustry(Industries.WAYSTATION);
         vineta_market.addIndustry(Industries.PATROLHQ);
         vineta_market.addIndustry(Industries.BATTLESTATION);
+        vineta_market.addIndustry("eusan_nation_volksarmee_defense_coordination");
         vineta_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
@@ -161,12 +162,11 @@ public class Eusan_Nation_System {
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
         kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
-        kitezh_market.addCondition(Conditions.DISSIDENT);
+        //kitezh_market.addCondition(Conditions.DISSIDENT);
         RecentUnrest.get(kitezh_market).add(10, " Protests against the Nation");
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
-        //kitezh_market.addIndustry(Industries.LIGHTINDUSTRY);
         kitezh_market.addIndustry(Industries.POPULATION);
         kitezh_market.addIndustry(Industries.WAYSTATION);
         kitezh_market.addIndustry(Industries.SPACEPORT);

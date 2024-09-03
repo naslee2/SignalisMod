@@ -17,8 +17,6 @@ import java.awt.Color;
 public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 
 	float farming_bonus = 2.0f;
-	//MarketAPI rotfront_market = Global.getSector().getEconomy().getMarket("rotfront_market");
-
 
     @Override
     public boolean isHidden(){
