@@ -41,9 +41,9 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 		Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
 		applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
 
-		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat(getModId(), ship_quality_bonus, getNameForModifier());
+		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat("eusan_nation_aeon_hq", ship_quality_bonus, "AEON HQ");
 
-		modifyStabilityWithBaseMod();
+		//modifyStabilityWithBaseMod();
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -55,7 +55,7 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
     public void unapply(){
         super.unapply();
 
-        unmodifyStabilityWithBaseMod();
+        //unmodifyStabilityWithBaseMod();
 
     }
 
@@ -73,10 +73,10 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 		tooltip.addPara("Ship Quality Bonus: %s", opad, h, "+" + String.valueOf(ship_quality_bonus));
 	}
 
-    @Override
-	protected int getBaseStabilityMod() {
-		return 2;
-	}
+    // @Override
+	// protected int getBaseStabilityMod() {
+	// 	return 1;
+	// }
 
     public String getNameForModifier() {
 		if (getSpec().getName().contains("HQ")) {

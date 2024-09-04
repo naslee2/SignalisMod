@@ -27,11 +27,11 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 	protected String[] miningOrganicsConditionsList = new String[] {Conditions.ORGANICS_ABUNDANT, Conditions.ORGANICS_COMMON, Conditions.ORGANICS_PLENTIFUL, Conditions.ORGANICS_TRACE};
 	protected String[] miningvolatilesConditionsList = new String[] {Conditions.VOLATILES_ABUNDANT, Conditions.VOLATILES_DIFFUSE, Conditions.VOLATILES_PLENTIFUL, Conditions.VOLATILES_TRACE};
 
-	protected float mining_ore_bonus = 2.0f;
+	protected float mining_ore_bonus = 1.0f;
 	protected float mining_rareOre_bonus = 1.0f;
-	protected float mining_organics_bonus = 2.0f;
-	protected float mining_volatiles_bonus = 2.0f;
-	protected float refining_metal_bonus = 2.0f;
+	protected float mining_organics_bonus = 1.0f;
+	protected float mining_volatiles_bonus = 1.0f;
+	protected float refining_metal_bonus = 1.0f;
 	protected float refining_rare_metal_bonus = 1.0f;
 
     @Override
@@ -60,24 +60,24 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 				//logger.info("Logger Active: Mining tag is " + industry.getSpec().hasTag(Industries.MINING));
                 if(matchesConditionReq(miningOreConditionsList)){
 					//logger.info("Logger Active: Ore Condition found for " + industry);
-                    industry.getSupply(Commodities.ORE).getQuantity().modifyFlat("AEON Facility", mining_ore_bonus, "AEON Facility");
+                    industry.getSupply(Commodities.ORE).getQuantity().modifyFlat("eusan_nation_aeon_facility", mining_ore_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningRareOreConditionsList)){
 					//logger.info("Logger Active: Rare Ore Condition found for " + industry);
-                    industry.getSupply(Commodities.RARE_ORE).getQuantity().modifyFlat("AEON Facility", mining_rareOre_bonus, "AEON Facility");
+                    industry.getSupply(Commodities.RARE_ORE).getQuantity().modifyFlat("eusan_nation_aeon_facility", mining_rareOre_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningOrganicsConditionsList)){
 					//logger.info("Logger Active: Organics Condition found for " + industry);
-                    industry.getSupply(Commodities.ORGANICS).getQuantity().modifyFlat("AEON Facility", mining_organics_bonus, "AEON Facility");
+                    industry.getSupply(Commodities.ORGANICS).getQuantity().modifyFlat("eusan_nation_aeon_facility", mining_organics_bonus, "AEON Facility");
                 }
                 if(matchesConditionReq(miningvolatilesConditionsList)){
 					//logger.info("Logger Active: Volitailes Condition found for " + industry);
-                    industry.getSupply(Commodities.VOLATILES).getQuantity().modifyFlat("AEON Facility", mining_volatiles_bonus, "AEON Facility");
+                    industry.getSupply(Commodities.VOLATILES).getQuantity().modifyFlat("eusan_nation_aeon_facility", mining_volatiles_bonus, "AEON Facility");
                 }
             }
 			if(industry.getSpec().hasTag(Industries.REFINING)){
-				industry.getSupply(Commodities.METALS).getQuantity().modifyFlat("AEON Facility", refining_metal_bonus, "AEON Facility");
-				industry.getSupply(Commodities.RARE_METALS).getQuantity().modifyFlat("AEON Facility", refining_rare_metal_bonus, "AEON Facility");
+				industry.getSupply(Commodities.METALS).getQuantity().modifyFlat("eusan_nation_aeon_facility", refining_metal_bonus, "AEON Facility");
+				industry.getSupply(Commodities.RARE_METALS).getQuantity().modifyFlat("eusan_nation_aeon_facility", refining_rare_metal_bonus, "AEON Facility");
 			}
         }
 
@@ -99,17 +99,17 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
     @Override
     public void unapply(){
         super.unapply();
-        unmodifyStabilityWithBaseMod();
+        //unmodifyStabilityWithBaseMod();
 		for (Industry industry : market.getIndustries()) {
 			if(industry.getSpec().hasTag(Industries.MINING)){
-				market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("AEON Facility");
-				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("AEON Facility");
-				market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("AEON Facility");
-				market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("AEON Facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
 			}
 			if(industry.getSpec().hasTag(Industries.REFINING)){
-				market.getIndustry(Industries.MINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("AEON Facility");
-				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("AEON Facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
+				market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("eusan_nation_aeon_facility");
 
 			}
 		}

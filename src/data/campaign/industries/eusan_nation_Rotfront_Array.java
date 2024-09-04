@@ -54,7 +54,7 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
             logger.info("Logger Active: Market is: " + market);
             if(relays != null){
                 logger.info("Logger Active: Relay: " + relays);
-                market.getStability().modifyFlat("Rotfront Array", array_stability_bonus, "Rotfront Array");
+                market.getStability().modifyFlat("eusan_nation_Rotfront_Array", array_stability_bonus, "Rotfront Array");
             }
         }
             
@@ -76,7 +76,7 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
         for(MarketAPI market : Misc.getMarketsInLocation(system, "eusan_nation")){
             CommRelayCondition relays = CommRelayCondition.get(market);
             if(relays != null){
-                market.getStability().unmodifyFlat("Rotfront Array");
+                market.getStability().unmodifyFlat("eusan_nation_Rotfront_Array");
             }
         }
     }

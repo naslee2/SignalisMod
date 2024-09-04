@@ -36,7 +36,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
         demand(Commodities.HEAVY_MACHINERY, 2);
         //demand(Commodities.FOOD, 3);
 		if(market.hasIndustry(Industries.FARMING)){
-			market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().modifyFlat("VEB Hydroponik", farming_bonus, "VEB Hydroponik");
+			market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().modifyFlat("eusan_nation_VEB_rotfront_hydroponik", farming_bonus, "VEB Hydroponik");
 			//rotfront_market.getIndustry(Industries.FARMING).getSupplyBonus().modifyFlat("VEB Hydroponik", farming_bonus);
 		}
 
@@ -55,7 +55,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
     public void unapply(){
         super.unapply();
 		if (market.hasIndustry(Industries.FARMING)) {
-            market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().unmodifyFlat("VEB Hydroponik");
+            market.getIndustry(Industries.FARMING).getSupply(Commodities.FOOD).getQuantity().unmodifyFlat("eusan_nation_VEB_rotfront_hydroponik");
    	}
     }
 
