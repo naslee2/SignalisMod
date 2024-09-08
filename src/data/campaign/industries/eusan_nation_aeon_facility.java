@@ -148,25 +148,25 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 			if(industry.getSpec().hasTag(Industries.MINING)){
 				tooltip.addPara("Enhances Mining Industry production", h, opad);
 				if(industry.getSupply(Commodities.ORE).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Metal Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_ore_bonus));
+					tooltip.addPara("Metal Ore Bonus: %s", opad, h, "+" + (int) mining_ore_bonus);
 				}
 				if(industry.getSupply(Commodities.RARE_ORE).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Transplutonic Ore Bonus: %s", opad, h, "+" + String.valueOf(mining_rareOre_bonus));
+					tooltip.addPara("Transplutonic Ore Bonus: %s", opad, h, "+" + (int) mining_rareOre_bonus);
 				}
 				if(industry.getSupply(Commodities.ORGANICS).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Organics Bonus: %s", opad, h, "+" + String.valueOf(mining_organics_bonus));
+					tooltip.addPara("Organics Bonus: %s", opad, h, "+" + (int) mining_organics_bonus);
 				}
 				if(industry.getSupply(Commodities.VOLATILES).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Volatiles Bonus: %s", opad, h, "+" + String.valueOf(mining_volatiles_bonus));
+					tooltip.addPara("Volatiles Bonus: %s", opad, h, "+" + (int) mining_volatiles_bonus);
 				}
 			}
 			if(industry.getSpec().hasTag(Industries.REFINING)){
 				tooltip.addPara("Enhances Refining Industry production", h, opad);
 				if(industry.getSupply(Commodities.METALS).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Metals Bonus: %s", opad, h, "+" + String.valueOf(refining_metal_bonus));
+					tooltip.addPara("Metals Bonus: %s", opad, h, "+" + (int) refining_metal_bonus);
 				}
 				if(industry.getSupply(Commodities.RARE_METALS).getQuantity().getModifiedValue() > 0){
-					tooltip.addPara("Transplutonics Bonus: %s", opad, h, "+" + String.valueOf(refining_rare_metal_bonus));
+					tooltip.addPara("Transplutonics Bonus: %s", opad, h, "+" + (int) refining_rare_metal_bonus);
 				}
 			}
 		}

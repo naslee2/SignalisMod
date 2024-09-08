@@ -111,7 +111,7 @@ public class Eusan_Nation_System {
         vineta_market.addIndustry(Industries.WAYSTATION);
         vineta_market.addIndustry(Industries.PATROLHQ);
         vineta_market.addIndustry(Industries.BATTLESTATION);
-        vineta_market.addIndustry("eusan_nation_volksarmee_defense_coordination");
+        vineta_market.addIndustry("eusan_nation_defense_coordination_center");
         vineta_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
@@ -158,12 +158,12 @@ public class Eusan_Nation_System {
         kitezh_market.setFactionId("eusan_nation");
         kitezh_market.addCondition(Conditions.POPULATION_5);
         kitezh_market.addCondition(Conditions.HABITABLE);
-        kitezh_market.addCondition(Conditions.FARMLAND_POOR);
+        kitezh_market.addCondition(Conditions.FARMLAND_ADEQUATE);
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
-        kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
+        kitezh_market.addCondition(Conditions.RARE_ORE_MODERATE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
         //kitezh_market.addCondition(Conditions.DISSIDENT);
-        RecentUnrest.get(kitezh_market).add(10, " Protests against the Nation");
+        RecentUnrest.get(kitezh_market).add(17, "Protests against the Nation");
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
@@ -259,6 +259,7 @@ public class Eusan_Nation_System {
         heimat_market.addCondition(Conditions.LOW_GRAVITY);
         heimat_market.addCondition(Conditions.TOXIC_ATMOSPHERE);
         heimat_market.addCondition(Conditions.REGIONAL_CAPITAL); //need to change to Headquaters condition when implemented in future Starsector versions
+        heimat_market.addCondition("eusan_nation_herz_der_revolution");
         heimat_market.addIndustry(Industries.MINING);
         heimat_market.addIndustry(Industries.FUELPROD);
         heimat_market.addIndustry(Industries.ORBITALWORKS);

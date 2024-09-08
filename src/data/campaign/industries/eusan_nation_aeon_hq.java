@@ -67,10 +67,10 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
-		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
-			addStabilityPostDemandSection(tooltip, hasDemand, mode);
-		}
-		tooltip.addPara("Ship Quality Bonus: %s", opad, h, "+" + String.valueOf(ship_quality_bonus));
+		//if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
+		//	addStabilityPostDemandSection(tooltip, hasDemand, mode);
+		//}
+		tooltip.addPara("Ship Quality Bonus: %s", opad, h, "+" + (int) (ship_quality_bonus * 100) + "%");
 	}
 
     // @Override

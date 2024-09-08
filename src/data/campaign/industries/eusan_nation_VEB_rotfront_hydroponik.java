@@ -16,7 +16,7 @@ import java.awt.Color;
 
 public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 
-	float farming_bonus = 2.0f;
+	protected static float farming_bonus = 2.0f;
 
     @Override
     public boolean isHidden(){
@@ -68,7 +68,7 @@ public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		tooltip.addPara("Enhances Farming Industry production", h, opad);
-		tooltip.addPara("Food Production Bonus: %s", opad, h, "+" + String.valueOf(farming_bonus));
+		tooltip.addPara("Food Production Bonus: %s", opad, h, "+" + (int) farming_bonus);
 	}
     
     public String getNameForModifier() {

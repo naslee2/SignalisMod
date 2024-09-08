@@ -4,6 +4,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -11,8 +12,7 @@ import java.awt.Color;
 
 public class eusan_nation_defense_coordination_center extends BaseIndustry {
 
-    
-    float ground_defense_bonus = 2f;
+    protected static float ground_defense_bonus = 2f;
 
     @Override
     public boolean isHidden(){
@@ -61,7 +61,7 @@ public class eusan_nation_defense_coordination_center extends BaseIndustry {
         Color h = Misc.getHighlightColor();
         float opad = 10f;
         tooltip.addPara("Enhances Ground defenses", h, opad);
-        tooltip.addPara("Ground defense strength: %s", opad, h, "+" + String.valueOf(ground_defense_bonus) + "%");
+        tooltip.addPara("Ground defense strength: %s", opad, h, Strings.X + ground_defense_bonus);
 
     }
 

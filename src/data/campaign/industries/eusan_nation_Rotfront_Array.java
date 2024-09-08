@@ -27,7 +27,7 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
     Logger logger = Global.getLogger(eusan_nation_Rotfront_Array.class);
 
 
-    float array_stability_bonus = 1.0f;
+    protected static float array_stability_bonus = 1.0f;
     StarSystemAPI system = Global.getSector().getStarSystem("Alatyr");
 
     //List<MarketAPI> data = Misc.getMarketsInLocation(system);
@@ -90,7 +90,7 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		tooltip.addPara("Enhances Stability to all markets", h, opad);
-		tooltip.addPara("Stability Bonus: %s", opad, h, "+" + String.valueOf(array_stability_bonus));
+		tooltip.addPara("Stability Bonus: %s", opad, h, "+" + (int) array_stability_bonus);
 	}
 
     public boolean isDemandLegal(CommodityOnMarketAPI com) {
