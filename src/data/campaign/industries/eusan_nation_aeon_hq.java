@@ -32,14 +32,14 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
         int size = market.getSize();
 
         demand(Commodities.SUPPLIES, size - 1);
-        demand(Commodities.HAND_WEAPONS, size - 1);
+        //demand(Commodities.HAND_WEAPONS, size - 1);
 		demand(Commodities.HEAVY_MACHINERY, size -1);
 
 		//supply(Commodities.CREW, size);
 		//supply(Commodities.MARINES, size);
 
-		Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
-		applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
+		//Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
+		//applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
 
 		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat("eusan_nation_aeon_hq", ship_quality_bonus, "AEON HQ");
 
@@ -56,6 +56,7 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
         super.unapply();
 
         //unmodifyStabilityWithBaseMod();
+		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).unmodifyFlat("eusan_nation_aeon_hq");
 
     }
 

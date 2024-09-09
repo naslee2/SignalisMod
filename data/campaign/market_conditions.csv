@@ -1,3 +1,3 @@
 name,id,planetary,decivRemove,script,desc,icon,order
-Herz der Revolution,eusan_nation_herz_der_revolution,false,false,data.campaign.conditions.eusan_nation_herz_der_revolution,"Heimat, the captial of the Nation, and 'Heart of the Revolution'. Since the fateful days of the uprising, Heimat's inhabitants have fierce pride over its role in overthrow and eventual victory over the Empire.",graphics/icons/markets/urbanized_polity.png,1010,
-,,,,,,,,
+Herz der Revolution,eusan_nation_herz_der_revolution,false,false,data.campaign.conditions.eusan_nation_herz_der_revolution,"Heimat, the capital of the Nation, and 'Heart of the Revolution'. Since the fateful days of the uprising, Heimat's inhabitants have fierce pride over its role in overthrowing and eventual victory over the Empire.",graphics/icons/markets/urbanized_polity.png,1010,
+Protektor Cadres,eusan_nation_protektor_cadres,false,false,data.campaign.conditions.eusan_nation_protektor_cadres,"The Nation, ever vigilant against spies, saboteurs, and fifth columnists, employs large amounts of Replikas dedicated to internal security, counter-intelligence, and surveillance.",graphics/icons/markets/mercenaries.png,1020,

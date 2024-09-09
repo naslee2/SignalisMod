@@ -62,6 +62,7 @@ public class Eusan_Nation_System {
         buyan_market.addCondition(Conditions.ORGANICS_COMMON);
         buyan_market.addCondition(Conditions.VOLATILES_DIFFUSE);
         buyan_market.addCondition(Conditions.RUINS_EXTENSIVE);
+        buyan_market.addCondition("eusan_nation_protektor_cadres");
         buyan_market.addIndustry(Industries.POPULATION);
         buyan_market.addIndustry(Industries.WAYSTATION);
         buyan_market.addIndustry(Industries.MINING);
@@ -102,6 +103,7 @@ public class Eusan_Nation_System {
         vineta_market.addCondition(Conditions.ORE_MODERATE);
         vineta_market.addCondition(Conditions.ORGANICS_ABUNDANT);
         vineta_market.addCondition(Conditions.FARMLAND_ADEQUATE);
+        vineta_market.addCondition("eusan_nation_protektor_cadres");;
         vineta_market.addIndustry(Industries.POPULATION);
         vineta_market.addIndustry(Industries.MEGAPORT);
         vineta_market.addIndustry(Industries.FARMING);
@@ -162,8 +164,8 @@ public class Eusan_Nation_System {
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
         kitezh_market.addCondition(Conditions.RARE_ORE_MODERATE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
-        //kitezh_market.addCondition(Conditions.DISSIDENT);
-        RecentUnrest.get(kitezh_market).add(17, "Protests against the Nation");
+        kitezh_market.addCondition("eusan_nation_protektor_cadres");
+        RecentUnrest.get(kitezh_market).add(18, "Protests against the Nation");
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
@@ -212,6 +214,7 @@ public class Eusan_Nation_System {
         rotfront_market.addCondition(Conditions.ORE_SPARSE);
         rotfront_market.addCondition(Conditions.LOW_GRAVITY);
         rotfront_market.addCondition(Conditions.LARGE_REFUGEE_POPULATION);
+        rotfront_market.addCondition("eusan_nation_protektor_cadres");
         rotfront_market.addIndustry(Industries.POPULATION);
         rotfront_market.addIndustry(Industries.MEGAPORT);
         rotfront_market.addIndustry(Industries.WAYSTATION);
@@ -299,6 +302,7 @@ public class Eusan_Nation_System {
         leng_market.addCondition(Conditions.ORE_ABUNDANT);
         leng_market.addCondition(Conditions.NO_ATMOSPHERE);
         leng_market.addCondition(Conditions.RARE_ORE_MODERATE);
+        leng_market.addCondition("eusan_nation_protektor_cadres");
         leng_market.addIndustry(Industries.SPACEPORT);
         leng_market.addIndustry(Industries.WAYSTATION);
         leng_market.addIndustry(Industries.GROUNDDEFENSES);
