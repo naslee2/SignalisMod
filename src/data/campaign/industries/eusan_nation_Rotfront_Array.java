@@ -24,8 +24,7 @@ import java.util.List;
 
 public class eusan_nation_Rotfront_Array extends BaseIndustry{
 
-    Logger logger = Global.getLogger(eusan_nation_Rotfront_Array.class);
-
+    //Logger logger = Global.getLogger(eusan_nation_Rotfront_Array.class);
 
     protected static float array_stability_bonus = 1.0f;
     StarSystemAPI system = Global.getSector().getStarSystem("Alatyr");
@@ -51,9 +50,9 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
 
         for(MarketAPI market : Misc.getMarketsInLocation(system, "eusan_nation")){
             CommRelayCondition relays = CommRelayCondition.get(market);
-            logger.info("Logger Active: Market is: " + market);
+            //logger.info("Logger Active: Market is: " + market);
             if(relays != null){
-                logger.info("Logger Active: Relay: " + relays);
+                //logger.info("Logger Active: Relay: " + relays);
                 market.getStability().modifyFlat("eusan_nation_Rotfront_Array", array_stability_bonus, "Rotfront Array");
             }
         }
@@ -65,10 +64,10 @@ public class eusan_nation_Rotfront_Array extends BaseIndustry{
         
     }
 
-    // @Override
-    // public void advance(float amount) {
-
-    // }
+    //@Override
+    //public void advance(float amount) {
+        //super.advance(amount);
+    //}
 
     @Override
     public void unapply(){
