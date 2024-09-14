@@ -17,7 +17,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import java.awt.Color;
 import java.util.List;

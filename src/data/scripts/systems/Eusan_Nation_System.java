@@ -128,7 +128,8 @@ public class Eusan_Nation_System {
         shattered_moon.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         shattered_moon.setCustomDescriptionId("eusan_nation_shattered_moon");
 
-        system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f, null, null);
+        system.addAsteroidBelt(vineta, 400, 740f, 256f, 300f, 305f, Terrain.ASTEROID_BELT, "Asteroid Ring");
+        system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f);
 
         //Wrecked Station related to Vineta
         CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("signalis_wrecked_station", "Abandoned Orbital Complex 6", "station_side02", "neutral");

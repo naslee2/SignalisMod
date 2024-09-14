@@ -12,7 +12,8 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.util.Misc.Token;
-import org.apache.log4j.Logger;
+
+//import org.apache.log4j.Logger;
 
 public class eusan_nation_penroseRecovery2_rulecmd extends BaseCommandPlugin{
     //Logger logger = Global.getLogger(eusan_nation_penroseRecovery2_rulecmd.class);

@@ -14,7 +14,7 @@ import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.Global;
 
 public class eusan_nation_operation_penrose extends BaseLogisticsHullMod {
-    Logger logger = Global.getLogger(eusan_nation_operation_penrose.class);
+    //Logger logger = Global.getLogger(eusan_nation_operation_penrose.class);
     CampaignClockAPI clock = Global.getSector().getClock();
 
     protected float daysElasped = 0f;

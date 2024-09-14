@@ -14,13 +14,13 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import java.awt.Color;
 
 public class eusan_nation_aeon_facility extends BaseIndustry{
 
-	Logger logger = Global.getLogger(eusan_nation_aeon_facility.class);
+	//Logger logger = Global.getLogger(eusan_nation_aeon_facility.class);
 
 	protected String[] miningOreConditionsList = new String[] {Conditions.ORE_ABUNDANT, Conditions.ORE_MODERATE, Conditions.ORE_RICH, Conditions.ORE_SPARSE, Conditions.ORE_ULTRARICH};
 	protected String[] miningRareOreConditionsList = new String[] {Conditions.RARE_ORE_ABUNDANT, Conditions.RARE_ORE_MODERATE, Conditions.RARE_ORE_RICH, Conditions.RARE_ORE_SPARSE, Conditions.RARE_ORE_ULTRARICH};
