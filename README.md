@@ -34,6 +34,8 @@ firebombpng#2396 for the Eusan Nation flag
 
 StrixBerseria, Swiftnicity#7031, and firebombpng#2396 for the Eusan Nation crests
 
+Thanks to phi_zeta_iota and darkvion for letting me use/copy their flag concepts for the Nation and related states.
+
 Terraformed Mars as Kitezh Planetary Textures by Daniel Michel aka Dizzy Crow. From OpenGameArt.org
 
 Jupiter and Saturn Textures from https://www.solarsystemscope.com/

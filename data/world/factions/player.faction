@@ -1,6 +1,21 @@
 {
     "flags":[
-
+        {
+			"logo":"graphics/factions/eusan_nation_player_buyanFlag.png",
+			"crest":"graphics/factions/eusan_nation_player_buyanCrest.png"
+		},
+        {
+			"logo":"graphics/factions/eusan_nation_player_vinetaFlag.png",
+			"crest":"graphics/factions/eusan_nation_player_vinetaCrest.png"
+		},
+        {
+			"logo":"graphics/factions/eusan_nation_player_kitezhFlag.png",
+			"crest":"graphics/factions/eusan_nation_player_kitezhCrest.png"
+		},
+        {
+			"logo":"graphics/factions/eusan_nation_player_rotfrontFlag.png",
+			"crest":"graphics/factions/eusan_nation_player_rotfrontCrest.png"
+		},
     ],
     "portraits":{
         "standard_male":[
