@@ -235,14 +235,14 @@
 	},
 	"ranks":{
 		"ranks":{
-			"factionLeader":{"name":"Great Revolutionary"},
+			"factionLeader":{"name":"The Great Revolutionary"},
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
 	
 		},
 		"posts":{
-			"factionLeader":{"name":"Great Revolutionary of the Nation"},
+			"factionLeader":{"name":"The Great Revolutionary of the Nation"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},

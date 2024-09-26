@@ -25,10 +25,10 @@ public class eusan_nation_PeopleStrings {
     public static String MARLIS = "eusan_nation_marlis";
     public static String MARLIS_FIRST_NAME = "Marlis";
     public static String MARLIS_LAST_NAME = "EULR-FV-R2652";
+    public static String ROTFRONT_FLEETADMIRAL = "eusan_nation_rotfront_admiral";
 
     //MISC NPC
     public static String SPECIAL_AGENT = "eusan_nation_special_agent";
-    public static String ROTFRONT_FLEETADMIRAL = "eusan_nation_rotfront_admiral";
     
     //FLEET OFFICER NPC
     public static String MARY_CHENG = "eusan_nation_mary_cheng";

@@ -11,7 +11,8 @@
 		"gestaltOfficerVAm":{"name":"Vizeadmiral"},
 		"gestaltOfficerAm":{"name":"Admiral"},
 		"gestaltOfficerFAm":{"name":"Flottenadmiral"},
-        "replika":{"name":"Replika"}
+        "replika":{"name":"Replika"},
+		"daughterNationRank":{"name":"The Daughter"}
     },
     "posts":{
         "adlr":{"name":"Facility Administrator"},
@@ -28,7 +29,8 @@
 		"gestaltInvestigator":{"name":"Investigator"},
 		"gestaltAgent":{"name":"Agent"},
 		"gestaltPenrosePilot":{"name":"Penrose Flight Officer"},
-		"bartender":{"name":"Bartender"}
+		"bartender":{"name":"Bartender"},
+		"daughterNation":{"name":"The Daughter and Heir to the Great Revolutionary"}
     }
 
 }
