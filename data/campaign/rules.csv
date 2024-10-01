@@ -130,30 +130,22 @@ OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == office
 ""I have several things on my plate and frankly I don't have enough time to follow up on all of them myself. There are a few tasks perfect for someone like you..."" She says, a small, faint smile lighting up, slowly. You wonder, when was the last time she did that?
 
 ""Anyway, if you are up to the task, I have an assignment that needs to be done."" She explains...","officeryeongNeuralRepBriefing0:""Alright...tell me what needs to be done?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive"" ""Ariane Yeong"" ""Officer Yeong""","""The name is Ariane Yeong. You are to refer to me as Officer Yeong or Ma'am. Remember that next time."" She says, sliding a rather thin looking folder to you. The cover is littered with redactions and white-out.
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive"" ""Ariane Yeong"" ""Officer Yeong""","""The name is Ariane Yeong"" she says, sliding a rather thin looking folder to you. The cover is littered with redactions and white-out, making a mess of the important text.
 
-You open the folder, and inside are a series of pictures, statistics and data sets, and the occasional newspaper clipping. All the photos are of the same building, taken at a variety of angles. The newspaper clippings, however, show a hole where it appears the building was. 
+The inside is more accommodating to read, and contains several photos of a large building at various angles. 
 
-""What your looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1","SetTextHighlights ""Central Neural Archive"" ""AEON"" ""Empire"" ""Vineta""","""Not bombed, nuked. By the empire. So according to my information, the Central Neural Archive was destroyed by an Imperial cruiser some cycles ago. Probably some remnant Imperials doing retaliatory raids and... who cares. The issue here is that I have been given an assignment to recover data - if there is any - from this crater on Vineta."" she explains. Ariane puts a finger on the picture as if to make a point, pausing on it for an uncomfortable amount of time. She lifts her finger from the picture and she straightens up.
+""What you're looking at is the Central Neural Archive""","officeryeongNeuralRepBriefing1:""Let me guess...someone bombed it right?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING2,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing1","SetTextHighlights ""Central Neural Archive"" ""AEON"" ""Empire"" ""Vineta""","""Not bombed, nuked. By the empire some time ago. Probably some remnant Imperials doing retaliatory raids and... who cares. The issue here is that I have been given an assignment to recover data - if there is any - from this crater on Vineta.""
 
-Ariane stands and walks over to a file cabinet and pulls out another folder. She opens it and hands you a paper with a picture.
+She slides another photo across the desk to you.
 
-""This man here is our agent sent to recover the data. AEON obviously dislikes certain outside agencies poking their noses into their operations and goes to great effort to discourage it but I have authority from a higher power. Several days ago AEON work crews unearthed a backup data storage from the central computer room. We made requests for the data but AEON refused us at every turn until recently.""
+""This man is the agent I sent originally to get the data. It was a hassle, but he managed to get the data, but it can't just be transmitted or mailed. now AEON is making it difficult for him to get it to us.""","officeryeongNeuralRepBriefing2:""And how do I do that?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2","SetTextHighlights ""Vineta"" ""Heimat""","""Send him a coded message upon arriving at Vineta. Once you set up initial communications, meet with him directly and get the data he is carrying. Fly back to Heimat."" She swipes at a strange Tri-Pad adjacent bootleg, sending your fleet the codes and other information.
 
-""It seems that the political games have soured people in upper management and have forced AEON to cooperate with us. We asked our agent on Vineta to get the data but a traffic control malfunction-- or so they say-- has grounded all transport ships. AEON is making life difficult for us so we need someone ""not"" officially part of our agency to do so. You have some immunity from their nonsense.""","officeryeongNeuralRepBriefing2:""Right...then what? What is my contact method?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING3,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing2","SetTextHighlights ""Vineta"" ""Heimat""","""Send him a coded message upon arriving at Vineta. Once you set up initial communications, meet with him directly and get the data he is carrying. Fly back to Heimat.""
+""I shouldn't tell you this, but you might need to know what to look for, and I trust you. The data is mostly counterintelligence, part of a larger operation the Nation has been conducting.""","officeryeongNeuralRepBriefing3:""And my payment?""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3","SetTextHighlights ""I got a package to deliver but the address is in Carcosa."" ""I am not sure how I can help but I will try""","""You get paid according to regulations on paying sector mercenary fleets"" she responds dryly, ""that being 50,000 standard domain credits.""
 
-""Now you probably are wondering what the data is for? For starters, its to help us find spies or holes in our counterintelligence network. For decades we spent on a cat and mouse game against the Empire's spies. The attack on the Central Neural Archive was too precise and too well placed to be a shot planned from external observation. Someone on the inside must have been able to give the Imperials the location of an area where the Archive was structurally the weakest.""
-
-""If we get the info, we can find the spy or narrow down the search. KLBR units will be able to locate the person or persons... and we cripple the spy network.""","officeryeongNeuralRepBriefing3:""I see. Well what's in it for me?""",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing3","SetTextHighlights ""I got a package to deliver but the address is in Carcosa."" ""I am not sure how I can help but I will try""","""You get paid according to the rules and regulations set forth by the Nation."" Ariane dryly responds. She crosses her arms, mildly unimpressed by your focus on payment
-
-""50,000 credits to be exact.""
-
-Ariane then stands up from her desk and hands you an envelope. You rip it open and see a list of shortwave comms frequencies. 
-
-""Code frequencies and special codewords to contact him. The passphrase is 'I got a package to deliver but the address is in Carcosa.' The response will be, 'I am not sure how I can help but I will try.' ""","officeryeongNeuralRepBriefing4: Got it. 
+She hands you an envelope before you leave. ""A paper copy of the code phrase. All the less sensitive information has been uploaded to your fleet.""","officeryeongNeuralRepBriefing4: ""Got it."" 
 ",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider: I changed my mind...",
@@ -177,30 +169,22 @@ After a few seconds, the line crackles with a response. The comms officer quickl
 
 ""Recovery Area 5. North Supply depot. Section 11.""
 
-You give a nod and set out to the agreed upon location, shadowed by your bodyguards.
-
 The transmission leads you to an area by a large crater, no doubt the remains of the neural repository. The facility was once used to store and manufacture the neural patterns used by replikas. Now, it is little more than a scar in the ground, surrounded by temporary buildings set up in the vicinity of the impressive scene of destruction.
 
 As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.",,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1: ""I got a package to deliver but the address is in Carcosa""",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1: Use the code phrase",
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
-","SetTextHighlights ""data"" ""I am not sure how I can help, but I will try""","""I am not sure how I can help, but I will try."" the man replied
+","SetTextHighlights ""data"" ""I am not sure how I can help, but I will try""","I got a package to deliver, but the address is in Carcosa.
 
-You motion your bodyguards to relax, but keep an eye on the situation.
+""I am not sure how I can help, but I will try."" the man replies. He sizes you up before deciding you are worth trusting.
 
-""You three characters here for the data right?"" The man says rather curtly. He opens his jacket and lifts the lid of a box containing several data disks, all of the same standardized design. He hands one to you unprompted, and you quickly pocket it.
-
-""AEON knows you're here, probably, but one cannot be too careful. Project manifests, data logs, experimental results, inventory lists. It's all there."" the agent says.
-
-""Now scram before AEON decides to change their minds.""","officeryeongNeuralRepAgentTalk2: Exit the area",
+""You three characters here for the data, right?"" the man asks rhetorically. He rips open a spot on his jacket and slides a disk out of it. ""You aren't officially affiliated with us, so don't worry about being courteous with AEON. Dont expect them to be courteous to you either, though. You should leave.""","officeryeongNeuralRepAgentTalk2: Exit the area",
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2","$global.eusan_nation_neuralrepo_returnInfo = true
 $global.officeryeong_neuralrepositoryMetAgent = true
 Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, you cant shake a sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? And why would AEON put up so many obstacles?
 
 You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk3: Return to the ship",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship was uneventful, the box of data disks secured in your hand. Though you are curious of what is actually inside the disks, it would probably be a bad idea to look. Better to just get the job done.
-
-Time to go home now.
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship is uneventful, the disk secured in your hand.
 ",,
 "#END MEETING_AGENT",,,,,,
 ,,,,,,
@@ -224,9 +208,9 @@ AddStoryPoints 1
 FireAll PopulateOptions
 ","You inform her that you were successful in getting the information from the agent. She seems rather pleased with your success.
 
-""Excellent work. Thank you for helping me out. I wont forget your assistance on this matter. Your job is now complete and your payment should be arriving shortly after you leave this place."" She says as she motions you to leave. You feel like you're being forced out.
+""Excellent work. Thank you for helping me out."" She seems relieved to have the disk in hand, suppressing a smile as she puts it into a bulky device on her desk. She motions for you to leave.
 
-As you leave the door you can hear the computer disk drive whirring as it accesses the data. The door closes before you can attempt to guess what may be on the disk.",,
+""Your payment should be going through soon.""",,
 "#END REPO_MISSION_END",,,,,,
 "#END OFFICER_YEONG_NEURALREPOSITORY_QUEST",,,,,,
 ,,,,,,
@@ -464,7 +448,7 @@ OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END1,DialogOptionSelected,"$
 
 ""Did you find the pilot?""
 
-You recall that Mary Cheng was alive, safely removed from a functional cryo-pod. ""They don't usually last that long,"" she remarks under her breath, as she watches the footage of your salvage crew opening it up.
+You recount that Mary Cheng was alive, safely removed from a functional cryo-pod. ""They don't usually last that long,"" she remarks under her breath, as she watches the footage of your salvage crew opening it up.
 
 She pauses a bit. Apparently the news of a Penrose pilot surviving has her thinking.
 
@@ -482,7 +466,7 @@ OFFICER_YEONG_PENROSERECOVERY2_FINAL_CANCEL_CONFIRM_END3,DialogOptionSelected,"$
 Call $global.eusan_nation_penroseRecovery2_ref updateStage
 eusan_nation_penroseRecovery2_rulecmd add_officer_penroseRecovery2
 AddStoryPoints 1
-FireAll PopulateOptions","You get up to leave Ariane's office. Before you step through the doorway, Ariane gives you one last piece of advice. 
+FireAll PopulateOptions","You get up to leave Ariane's office. Before you step through the doorway, Ariane tells you one more thing. 
 
 ""Keep her with your fleet, for now, until the foreseeable future. I have sent your payment for a job well done.""
 
@@ -502,63 +486,55 @@ $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
 eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start: I have a new mission and it requires...your expertise...",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
-BeginMission eusan_nation_penrose512Quest false","Ariane's cryptic request for your assistance was enough for you to figure out something was not right. As you begin to sit down in front of her desk, the door behind you began to open. Turning your head you see two large men wearing Volksmarine uniforms enter the room. They both have patches indicating they were from the Ever Victorius Fleet. You remember that the fleet was under the umbrella command of the Heimat Defense Fotilla and it was commanded by a Replika. 
+BeginMission eusan_nation_penrose512Quest false","Ariane's request was rather cryptic, whatever is going on must be important. Your shuttle makes the usual descent to the surface and you once again find yourself in her office. This time, man in a Volksmarine uniform stops you before you enter the office, and waves your security detail away.
 
-A Falke unit to be exact. The only major fleet formation to be commanded by one.
+Upon entering, you see why. Standing before you and Ariane, is admiral Falke herself. Though her mouth doesn't open, you swear you can hear her speak.
 
-""You remember me, $playerName. I am touched that you did so, comrade."" a voice spoke.
 
-Except there was no one speaking. The room was quiet with the exception of the computer fans whining.
-
-Behind the two men, a very large Replika strode in. Admiral Falke in all her glory, tall, beautiful and with a golden halo behind her emanating a soft glow. She towered over everyone else in the office. There was an air of discomfort.
-
-""Now now do not let my radiance stun you into silence. I am here because there is a mission to be done. You happen to be the best qualified and best of all, available.""","officeryeongPenroseRecovery512_briefing0_1: ""Fascinating...""
-officeryeongPenroseRecovery512_briefing0_2: ""Did you just...speak to me telepathically?""
+Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1: Telepathy?
+officeryeongPenroseRecovery512_briefing0_2: Get out of my head.
 officeryeongPenroseRecovery512_briefing0_3: ""How may I be of service to the Nation?""",
-OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 1","""Very good $playerName. Most people think it is their mind playing tricks but I see you did your research and understood my abilities."" Admiral Falke says. She seem to be impressed you understood what Falke units were capable of doing.
+OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 1","Yes, though it is much more than that, and the proper term is ""Bioresonance"".
 
-She gestured to Ariane, who was sitting in her desk chair in silence. 
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1","""Yes I did. It is all part of my abilities. All Falke units are equipped with Bioresonant modules. It is our gift bestowed upon us by the Nation. It allows us to influence our paths to victory."" she explained. You could feel a slight annoyance from her tone as if she has repeated this to multiple people before. Perhaps you could have done a little more reading on the subject.
+She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
-She gestured to Ariane, who was sitting in her desk chair in silence. 
+""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1","Now, commander, no need for such hostilities. If I wished to harm you, It would have happened already.
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3",,"""The Nation asks and you rise up to the challenge. Very admirable. For this task we have, we need you, your fleet and your leadership."" she says. Her voice is strangely neutral on the subject as if you were expected to say that.
 
-She gestured to Ariane, who was sitting in her desk chair in silence. 
+The blood drains from Ariane's face, who is probably also hearing Falke's words. She shoots a look pleading you to drop the stand off.
 
-""Now it is your turn, Ms. Yeong. Please...tell us why we are all here...""","officeryeongPenroseRecovery512_briefing1: Continue",
+Falke finally speaks. ""Ariane, brief them on the mission.""","officeryeongPenroseRecovery512_briefing1: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3",,"Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.
+
+
+Falke glances at Ariane, waiting for her to say something.","officeryeongPenroseRecovery512_briefing1: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
-",,"Ariane looked uncomfortable. Clearly Admiral Falke's presence is giving her discomfort. 
+",,"Ariane lays a folder on the desk, the redactions and notes on the documents considerably more neat and professional than the ones for previous missions.
 
-""Uh...yes ma'am."" she says. Ariane then opens a drawer on her desk and pulls out a small folder. 
+""While you were away, the Rotfront Array detected a signal coming from deep space. Though it was heavily distorted, it is clearly another Penrose distress signal.""
 
-""So when you were off doing whatever you were doing, there was a strange signal coming from deep space. The Deep Space Array on Rotfront deciphered it as a Penrose signal."" 
+She traces her finger across a star map, circling it around a star system marked in red.
 
-You open the folder and and look at a sheet of paper with series of numbers and letters printed in a haphazard way. A couple sections were circled and a small stamp indicated that the contents were classified ""Top Secret""","officeryeongPenroseRecovery512_briefing2: ""Oh so another recovery mission. Then why she is here?""",
-OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"""A question for the ages."" Admiral Falke says. 
+""You are to go to this system and recover the source of the signal.""","officeryeongPenroseRecovery512_briefing2: ""A simple recovery mission, yet you are here...""",
+OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"Admiral Falke takes a seat, and motions for you to do the same. Ariane holds up a sheet of paper, an inventory of ships and ship parts of the Penrose class, for her to narrate.
 
-""Perhaps you should sit down. Be comfortable, comrade.""
+""Every Penrose constructed is on this sheet, along with its fate."" A not insignificant number of them are noted as 'LOST WITH ALL HANDS'.
 
-You take a seat and begin to read the folder given to you by Ariane. The 1st sheet of paper seems to be a signal analysis of a Penrose transponder signal. The transponder code read 512 but that number was circled and noted with a single question mark. The second list seems to be a list of all Penrose ships currently being fitted out or being built but does not list a 512. A third sheet listed 512 but showed it was never completed and scrapped for parts.
+""Penrose 512, was never launched. It was partially constructed before being stripped for parts and mothballed. It is currently sitting at a storage depot awaiting final disposal.""
 
-Admiral Falke breaks the silence. 
+Ariane flips to another document. A photograph clearly shows a partially disassembled craft with the hull number ""512"" in yellowing numbers.  The point made is clear: this ship was never launched and the equipment for it stripped from it. ","officeryeongPenroseRecovery512_briefing3: Continue",
+OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3",,"Ariane continues in place of Falke, setting down the papers. ""We have interviewed dock workers, checked all the construction and launch relay logs, scoured everything related to the Penrose program, and can find no record of the ship being launched.""","officeryeongPenroseRecovery512_briefing4: ""So we have a mystery...""",
+OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""That is what we believe to be the case."" Falke stands up, and begins pacing around the room as she says this. ""And that is where you come in. Your fleet is well equipped and could investigate the signal, without requiring us to organize an expeditionary force of our own.""
 
-""I see that you understand our confusion. The Penrose signal we intercepted comes from a ship that no longer exists. The ship was dismantled for parts and its space frame mothballed. Then how do we have then, a Penrose signal coming in with that unique frequency? Penrose frequencies are unique to each craft and 512 had a unique identifier made prior to its mission being cancelled. The signal coming in from our mystery ship is an exact match to the ones we have on record. "" she says.","officeryeongPenroseRecovery512_briefing3: Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3",,"""So far we interviewed the builders, the surplus yard holding the mothballed space frame. Every single person we talked to say the same thing. PENROSE-512 was never launched let alone completed."" Ariane says.
-
-""Either someone launched and accidently keyed in the unique transponder signal to 512 from another mission or the ship was launched without our knowledge. Both are equally improbable.""","officeryeongPenroseRecovery512_briefing4: A mystery!",
-OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""Correct."" Admiral Falke replies. ""This is where you come in.""
-
-She walks around the office and begins to examine the various furniture and decorations. She stopped at a small framed painting and examines it. It shows an island alone in a body of water. There seems to be a small figure on a boat near the island. After a brief moment she turns around and faces you. 
-
-""Now comrade, the mission is simple. Go out there and find this mystery Penrose. Ariane, dear, do me a favor and tell $himOrHer where to go?""","officeryeongPenroseRecovery512_briefing5: Continue",
+The lie is barely disguised. You are expendable, moreso than the Nation's own fleets at least. So you will test the waters.","officeryeongPenroseRecovery512_briefing5: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
 Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
 
-","""Yes ma'am. Your target is is located at $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system and the craft has crashed on the planet $eusan_nation_penrose512_planetName. When you get there. Recover the mission data recorder. Additionally recover serial numbers, personal effects, the Replika and of course anything that will tell us about this Penrose.""","officeryeongPenroseRecovery512_briefing6: Continue",
+","Falke motions to Ariane, perhaps speaking to her telepathically as well. Ariane snaps to attention and tells you the mission info.
+
+""The target is $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system. and we believe the signal to be from $eusan_nation_penrose512_planetName. Recover everything. The whole ship if you can. And please, record as much of the process as possible.""","officeryeongPenroseRecovery512_briefing6: Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider: I changed my mind...",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
@@ -580,46 +556,64 @@ FireAll PopulateOptions","""When you come back, prepare yourself for a long debr
 OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
 $eusan_nation_penrose512_targetPlanet score:1000
 $global.eusan_nation_penrose512_start == true","ShowDefaultVisual
-FireAll PopulateOfficerYeongPenrose512Option","PLACEHOLDER TEXT",,
+FireAll PopulateOfficerYeongPenrose512Option","Your fleet approaches the planet, your crew uneasy. Word of the strange nature of the signal appears to have spread further through your crew than it should have, and everyone is on edge. Your sensors pay close attention to every angle of the void, preparing for an ambush, or worse.",,
 OFFICER_YEONG_PENROSE512_LANDING1,PopulateOfficerYeongPenrose512Option,,"SetShortcut defaultLeave ""ESCAPE""
-","PLACEHOLDER TEXT","officeryeongPenrose512Landing1: Enter Orbit around the planet
+","Your fleet finishes its approach to the planet. Nothing abnormal about it has been detected thus far, save for the signal itself. 
+
+The comms officer reports the signal is an exact match on what is on file. ","officeryeongPenrose512Landing1: Enter Orbit around the planet
 defaultLeave: Leave",
 OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongPenrose512Landing1","#eusan_nation_penrose512Quest_rulecmd endMusic_512
 eusan_nation_penrose512Quest_rulecmd playSignal_512
-","PLACEHOLDER TEXT","officeryeongPenrose512Landing2: Enter the Penrose-512",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2",,"PLACEHOLDER TEXT","officeryeongPenrose512enter_penrose1: Continue",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1",,"PLACEHOLDER TEXT","officeryeongPenrose512enter_penrose2: Enter the Ship",
-OFFICER_YEONG_PENROSE512_MIDDLE_HUB,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,"Player enters Penrose 512"
+","Having pinpointed the location, you order a team down to the surface, along with a large compliment of marines and whatever heavy arms can be found aboard the fleet. Despite the danger and persistence by your executive officer to dissuade, you decide to head down there as well.
+
+The combat shuttles approach the wreckage from a low altitude, but find nothing out of the ordinary.
+
+","officeryeongPenrose512Landing2: Begin recovery operations.",
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2",,"As your team approaches the wreck, the crew begin to set up equipment for entry. Due to the cold environment, the work is slow at first but picks up pace as the base camp begins to take form. 
+
+What seems to be an eternity, the crew reports its finished setting up and is beginning the entry to the ship.","officeryeongPenrose512enter_penrose1: Continue",
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1",,"The recovery crew finds the airlock and surprisingly they are able to open it without use of external equipment. The recovery team leader reports they are able to enter the ship through the main airlock intact and the interior in satisfactory condition.","officeryeongPenrose512enter_penrose2: Enter the Ship",
+OFFICER_YEONG_PENROSE512_HALLWAY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","FireAll PopulateOfficerYeongPenrose512Explore","The hallway area connecting the airlock to the rest of the ship seems to be in good condition. You begin to prepare to venture deeper into ship.",,"Player enters Penrose 512"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
-$player.officeryeongPenrose512_poweron == true",,"PLACEHOLDER TEXT start forward decks","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+$player.officeryeongPenrose512_poweron == true",,"According to the ship plans, this area was supposed to be the forward decks which includes the flight deck and crew areas. You and your team begin to enter the compartments listed on the plans. ","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","PLACEHOLDER TEXT blocked a","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","According to the ship plans, this area was supposed to be the forward decks which includes the flight deck and crew areas. You and your team begin to enter the compartments listed on the plans. ","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks","Player needs to find a keycard from the aft decks"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""","PLACEHOLDER TEXT blocked b","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""","According to the ship plans, this area was supposed to be the forward decks which includes the flight deck and crew areas. You and your team begin to enter the compartments listed on the plans. ","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""","PLACEHOLDER TEXT blocked c","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","PLACEHOLDER TEXT explore",,
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""","According to the ship plans, this area was supposed to be the forward decks which includes the flight deck and crew areas. You and your team begin to enter the compartments listed on the plans. ","officeryeongPenrose512_forwardDecks_start: Enter the Forward Decks",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","Entering the forward decks, you and the recovery team begin to survey the area. The flight decks seem to be intact and the rest of the compartments are in good shape. Damaged equipment and debris from items coming lose from the crash litter the area.",,
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a,PopulateOfficerYeongPenrose512ForwardSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2a: Look around the cockpit.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == false",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2aPhoto1: Check out the photo stuck to an instrument panel.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2aPhoto2: Pick up the damaged photo.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","$player.officeryeongPenrose512_foundphoto = true","PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2_exit: Leave the flight deck.","pick up the photo"
+$player.officeryeongPenrose512_foundphoto == false",,"The recovery team member waves you down. Apparently the flight deck is intact and safe to enter. After squeezing through the damaged doors, you find yourself in front of the main cockpit area of the Penrose-512. The window of the cockpit is frosted over with snow. The ship has been here for some time in order to be completely covered with now. 
+
+The team member behind you shines his light on the instrument panel. The left panel is offline. The middle panel shows an error screen. The right panel is cracked.","officeryeongPenrose512_forwardDecks_explore2aPhoto1: Check out the photo stuck to an instrument panel.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1",,"As you continue to look over the panel, you noticed a photograph wedged in the instrument panel attached to the top of the cockpit. You can make a faint outline of a woman in the picture.","officeryeongPenrose512_forwardDecks_explore2aPhoto2: Pick up the damaged photo.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","$player.officeryeongPenrose512_foundphoto = true","Motioning the nearby crewmember to move out of the way, you move towards the instrument panel to take the photo out.
+
+Looking at it closer, it seems to be a A self-developing photo. Severely damaged, only a portion of the photo remains intact. You can see the picture of what seems to be the pilot. Short-haired and silver haired. 
+
+She seems happy and proud. Somehow you feel like you seen this person before...","officeryeongPenrose512_forwardDecks_explore2_exit: Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2aPhotofound: Continue","photo was already found"
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,,"officeryeongPenrose512_forwardDecks_explore2_exit: Leave the flight deck.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b,PopulateOfficerYeongPenrose512ForwardSectionExplore,"$player.officeryeongPenrose512_locatedDistress == false",,,"officeryeongPenrose512_forwardDecks_explore2b: Search for the distress beacon.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1: Search for the distress beacon controls.",
+$player.officeryeongPenrose512_foundphoto == true",,"You enter the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound: Continue","photo was already found"
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already. Got to be sure...","officeryeongPenrose512_forwardDecks_explore2_exit: Leave the flight deck.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b,PopulateOfficerYeongPenrose512ForwardSectionExplore,"$player.officeryeongPenrose512_locatedDistress == false",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2b: Search for the distress beacon.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
+$player.officeryeongPenrose512_distress_located == false",,"As you search ","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1: Search for the distress beacon controls.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2: Shut down the beacon. ",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2","$player.officeryeongPenrose512_locatedDistress = true
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2","$player.officeryeongPenrose512_locatedDistress = true
 eusan_nation_penrose512Quest_rulecmd resumeMusic_512",,"officeryeongPenrose512_forwardDecks_explore2_exit: Leave the forward deck.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit",,"PLACEHOLDER TEXT","officeryeongPenrose512_forwardDecks_exit_option: Return to the staging area.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_exit_option","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
+$player.officeryeongPenrose512_distress_located == true",,,,
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND_EXIT,DialogOptionSelected,,,,,
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_exit_option","FireAll PopulateOfficerYeongPenrose512Explore","You return to the hallway where your team has made a temporary rest zone and staging area. ",,
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit",,"As your team continues their work, you decide to exit out of the forward decks.","officeryeongPenrose512_forwardDecks_exit_option: Return to the staging area.",
 "#END OFFICER_YEONG_PENROSE512_FORWARD_DECKS",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_MIDDLE_SECTION,,,,,,
@@ -639,8 +633,8 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$optio
 $player.officeryeongPenrose512_poweron == true
 $player.officeryeongPenrose512_foundKeycard == true",,"PLACEHOLDER TEXT Reactor systems stablized and power to systems readout is active. Doors lockdown lifted, keycard can be used","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","keycard found means doors unlocked, power is online"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems","FireAll PopulateOfficerYeongPenrose512MiddileSectionExplore","PLACEHOLDER TEXT",,
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT_OPTION,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_middlesection_exit: Return to the staging area.",
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middlesection_exit","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT_OPTION,PopulateOfficerYeongPenrose512MiddileSectionExplore,,,"As your team continues their work, you decide to exit out of this area.","officeryeongPenrose512_middlesection_exit: Return to the staging area.",
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middlesection_exit","FireAll PopulateOfficerYeongPenrose512Explore","You return to the hallway where your team has made a temporary rest zone and staging area. ",,
 "#END OFFICER_YEONG_PENROSE512_MIDDLE_SECTION",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_AFT_DECKS,,,,,,
@@ -660,8 +654,8 @@ OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERCHECK,DialogOptionSelected,"$option ==
 $player.officeryeongPenrose512_poweron == true",,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_explore2b_power: Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power","$player.officeryeongPenrose512_poweron = true","PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_explore2b_exit_option: Go back and search the rest of the deck in this area.",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","PLACEHOLDER TEXT",,
-OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT_OPTION,PopulateOfficerYeongPenrose512_aftDecks_explore,,,"PLACEHOLDER TEXT","officeryeongPenrose512_aftDecks_exit: Return to the staging area.",
-OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_exit","FireAll PopulateOfficerYeongPenrose512Explore","PLACEHOLDER TEXT",,
+OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT_OPTION,PopulateOfficerYeongPenrose512_aftDecks_explore,,,"As your team continues their work, you decide to exit out of the aft decks.","officeryeongPenrose512_aftDecks_exit: Return to the staging area.",
+OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_exit","FireAll PopulateOfficerYeongPenrose512Explore","You return to the hallway where your team has made a temporary rest zone and staging area. ",,
 "#END OFFICER_YEONG_PENROSE512_AFT_DECKS",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_CRYO,,,,,,
