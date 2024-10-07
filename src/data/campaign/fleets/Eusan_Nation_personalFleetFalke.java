@@ -78,65 +78,69 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
 
         //flagship
         falkeFleet.getFlagship().setShipName("VM Guardian of the Revolution");
+        falkeFleet.getFlagship().getVariant().addMod("eusan_nation_K4_composite_armor");
+        falkeFleet.getFlagship().getVariant().addPermaMod("eusan_nation_K4_composite_armor", false);
+        falkeFleet.getFlagship().getVariant().addMod(HullMods.DEDICATED_TARGETING_CORE);
+        falkeFleet.getFlagship().getVariant().addMod(HullMods.TURRETGYROS);
 
         //battleship division
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard").setShipName("VM Yun In-cheom");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard").setShipName("VM Sejong");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard").setShipName("VM Na Dae-yong");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard").setShipName("VM Rotfront Revolution");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard").setShipName("VM Iriy Revolution");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard").setShipName("VM Lukomorye Revolution");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard").setShipName("VM Penglai Revolution");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_revolution_standard");
         
         //cruisers
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard").setShipName("VM Jared Y. Wong");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard").setShipName("VM Vinetan Sunrise");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard").setShipName("VM Zhemchug");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard").setShipName("VM Serinia F. Haoyu");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard").setShipName("VM Golden Sunrise");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard").setShipName("VM Crimson Sunrise");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard").setShipName("VM Spyglass and Stars");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard").setShipName("VM Karinia L. Jang");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard").setShipName("VM Harry A. Kim");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard").setShipName("VM Yukikaze");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_comoros_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_engollan_standard");
 
         //destroyers
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard").setShipName("VM Augsburg");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard").setShipName("VM Yeongcheon");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard").setShipName("VM Gunsan");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard").setShipName("VM Goyang");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard").setShipName("VM Gimje");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard").setShipName("VM Suao");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard").setShipName("VM Luodong");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard").setShipName("VM Wujie");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard").setShipName("VM Murino");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard").setShipName("VM Vyborg");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard").setShipName("VM Daecheon");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard").setShipName("VM Gangneung");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_cantor_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tremore_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_trevivian_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_triglav_standard");
 
         //frigates
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard").setShipName("VM Zebrafink");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard").setShipName("VM Quetzal");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard").setShipName("VM Iltis");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard").setShipName("VM Sturmvogel");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard").setShipName("VM Eistaucher");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard").setShipName("VM Möwe");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard").setShipName("VM Drossel");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard").setShipName("VM Rotkehlchen");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard").setShipName("VM Amsel");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard").setShipName("VM SKR-510");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard").setShipName("VM SKR-395");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard").setShipName("VM SKR-427");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_iltis_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_tyrann_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_lerche_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_copthorne_standard");
 
         //support ships
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_pelikan_standard").setShipName("VM N-201456");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_pelikan_standard").setShipName("VM N-201401");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_pisagua_standard").setShipName("VM N-199101");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_pisagua_standard").setShipName("VM N-199634");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard").setShipName("VM SSV-445");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard").setShipName("VM SSV-450");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard").setShipName("VM SSV-413");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard").setShipName("VM SSV-429");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_pelikan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_pelikan_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_pisagua_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_pisagua_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
 
         falkeFleet.getFleetData().sort();
 

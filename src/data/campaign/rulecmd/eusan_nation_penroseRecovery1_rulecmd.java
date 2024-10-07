@@ -25,11 +25,11 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
                 Global.getSoundPlayer().playCustomMusic(1, 1, "penrose_419_SOS", true);
                 break;
             case "endMusic_penroseRecovery1":
-                Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
-                Global.getSoundPlayer().pauseMusic();
+                //Global.getSoundPlayer().setSuspendDefaultMusicPlayback(true);
+                //Global.getSoundPlayer().pauseMusic();
                 break;
             case "resumeMusic_penroseRecovery1":
-                Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
+                //Global.getSoundPlayer().setSuspendDefaultMusicPlayback(false);
                 Global.getSoundPlayer().restartCurrentMusic();
                 break;
             default:

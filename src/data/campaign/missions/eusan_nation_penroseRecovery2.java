@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
@@ -19,11 +20,18 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
+import org.apache.log4j.Logger;
+
+import data.scripts.plugins.Eusan_Nation_FleetScaler;
+
 public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implements FleetEventListener {
+    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery2.class);
+
     public static enum Stage {
         DEFEAT_HOSTILES,
         LOCATE_PENROSE388,
@@ -37,7 +45,14 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     protected CampaignFleetAPI target_fleet;
     protected StarSystemAPI target_starsystem;
     protected PersonAPI tritach_fleetcommander;
-
+    
+    public int playerFleetDP = Global.getSector().getPlayerFleet().getFleetPoints();
+    public String enemyFaction = Factions.TRITACHYON;
+    protected int enemyCaptials;
+    protected int enemyCrusiers;
+    protected int enemyDestroyers;
+    protected int enemyFrigates;
+    
     @Override
     protected boolean create(MarketAPI arg0, boolean arg1) {
         if(!setGlobalReference("$eusan_nation_penroseRecovery2_ref")){
@@ -64,24 +79,40 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         if(officer_yeong == null){
             return false;
         }
-        if (target_planet == null) {
-			return false;
-		}
 
         tritach_fleetcommander = Global.getSector().getFaction(Factions.TRITACHYON).createRandomPerson();
         tritach_fleetcommander.setRankId(Ranks.SPACE_COMMANDER);
         tritach_fleetcommander.setPostId(Ranks.POST_PATROL_COMMANDER);
         tritach_fleetcommander.getMemoryWithoutUpdate().set("$tritach_fleetcommander", true);
 
-        //enemy fleet
-        FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, FleetTypes.PATROL_MEDIUM, 50f, 10f, 10f, 10f, 0f, 0f, -10f); 
-        hostile_fleetParams.averageSMods = 1;
+        //data sent to fleetScaler
+        Eusan_Nation_FleetScaler fleetData = new Eusan_Nation_FleetScaler(playerFleetDP, enemyFaction);
+        //logger.info("Logger Active: Fleet DP points is equal to: " + scalerData.fleetScaler());
 
-        target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
+        //enemy fleet
+        CampaignFleetAPI target_fleet = fleetData.fleetScaler();
+        //FleetParamsV3 hostile_fleetParams = new FleetParamsV3(null, null, Factions.TRITACHYON, null, fleetType, 100f, 10f, 10f, 0f, 0f, 0f, 10f);
+        
+        //hostile_fleetParams.averageSMods = 1;
+
+        //target_fleet = FleetFactoryV3.createFleet(hostile_fleetParams);
+
+        enemyCaptials = target_fleet.getNumCapitals();
+        enemyCrusiers = target_fleet.getNumCruisers();
+        enemyDestroyers = target_fleet.getNumDestroyers();
+        enemyFrigates = target_fleet.getNumFighters();
+        
         target_fleet.setName("Deep Space Patrol Group 41");
         target_fleet.setNoFactionInName(false);
         target_fleet.setCommander(tritach_fleetcommander);
         target_fleet.getFlagship().setCaptain(tritach_fleetcommander);
+        target_fleet.getCommander().getStats().setLevel(5);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.POINT_DEFENSE, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
+        target_fleet.getCommander().getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
+
         Misc.makeHostile(target_fleet);
         Misc.makeNoRepImpact(target_fleet, "$eusan_nation");
         Misc.makeImportant(target_fleet, "$eusan_nation");
@@ -90,7 +121,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, "$eusan_nation");
-
         target_fleet.getMemoryWithoutUpdate().set("$eusan_nation_hostilefleet", true);
         target_fleet.getAI().addAssignment(FleetAssignment.PATROL_SYSTEM, target_starsystem.getCenter(), 200f, null);
         target_fleet.addEventListener(this);
@@ -119,9 +149,11 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         triggerSetGlobalMemoryValue("$eusan_nation_penroseRecovery2_completed", true);
         endTrigger();
 
-        setCreditReward(100000);
-        setRepRewardPerson(RepRewards.HIGH);
-		setRepRewardFaction(RepRewards.HIGH);
+        
+        int totalReward = rewardScaleer(enemyCaptials, enemyCrusiers, enemyDestroyers, enemyFrigates);
+        setCreditReward(totalReward);
+        setRepRewardPerson(RepRewards.VERY_HIGH);
+		setRepRewardFaction(RepRewards.VERY_HIGH);
 
         return true;
     }
@@ -210,4 +242,24 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
             getPerson().getMemoryWithoutUpdate().set("$eusan_nation_penroseRecovery2_killFleet", true);
         }
     }
+
+    public int rewardScaleer(int numCaptials, int numCruisers, int numDestroyers, int numFrigates){
+        int reward = 100000;
+
+        for(int i = 0; i < numCaptials; i++){
+            reward = reward + 750000; 
+        }
+        for(int i = 0; i < numCruisers; i++){
+            reward = reward + 65000; 
+        }
+        for(int i = 0; i < numDestroyers; i++){
+            reward = reward + 55000; 
+        }
+        for(int i = 0; i < numFrigates; i++){
+            reward = reward + 45000; 
+        }
+
+        return reward;
+    }
+
 }

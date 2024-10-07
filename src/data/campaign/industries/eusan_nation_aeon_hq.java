@@ -1,17 +1,18 @@
 package data.campaign.industries;
 
-import java.util.Random;
-
-//import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
+import java.awt.Color;
 
 public class eusan_nation_aeon_hq extends BaseIndustry{
+
+	protected static float ship_quality_bonus = 0.1f;
     
     @Override
     public boolean isHidden(){
@@ -28,16 +29,18 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
         int size = market.getSize();
 
         demand(Commodities.SUPPLIES, size - 1);
-        demand(Commodities.HAND_WEAPONS, size - 1);
-		//demand(Commodities.HEAVY_MACHINERY, size -1);
+        //demand(Commodities.HAND_WEAPONS, size - 1);
+		demand(Commodities.HEAVY_MACHINERY, size -1);
 
-		supply(Commodities.CREW, size);
-		supply(Commodities.MARINES, size);
+		//supply(Commodities.CREW, size);
+		//supply(Commodities.MARINES, size);
 
-		Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
-		applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
-		
-		modifyStabilityWithBaseMod();
+		//Pair<String, Integer> deficitHandWeapons = getMaxDeficit(Commodities.HAND_WEAPONS);
+		//applyDeficitToProduction(1, deficitHandWeapons, Commodities.MARINES);
+
+		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat("eusan_nation_aeon_hq", ship_quality_bonus, "AEON HQ");
+
+		//modifyStabilityWithBaseMod();
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -49,7 +52,8 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
     public void unapply(){
         super.unapply();
 
-        unmodifyStabilityWithBaseMod();
+        //unmodifyStabilityWithBaseMod();
+		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).unmodifyFlat("eusan_nation_aeon_hq");
 
     }
 
@@ -59,15 +63,18 @@ public class eusan_nation_aeon_hq extends BaseIndustry{
 
 	@Override
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
-		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
-			addStabilityPostDemandSection(tooltip, hasDemand, mode);
-		}
+		float opad = 10f;
+		Color h = Misc.getHighlightColor();
+		//if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
+		//	addStabilityPostDemandSection(tooltip, hasDemand, mode);
+		//}
+		tooltip.addPara("Ship Quality Bonus: %s", opad, h, "+" + (int) (ship_quality_bonus * 100) + "%");
 	}
 
-    @Override
-	protected int getBaseStabilityMod() {
-		return 2;
-	}
+    // @Override
+	// protected int getBaseStabilityMod() {
+	// 	return 1;
+	// }
 
     public String getNameForModifier() {
 		if (getSpec().getName().contains("HQ")) {

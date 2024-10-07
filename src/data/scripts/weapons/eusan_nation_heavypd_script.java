@@ -17,13 +17,11 @@ public class eusan_nation_heavypd_script implements OnHitEffectPlugin{
            ApplyDamageResultAPI damage, CombatEngineAPI engine) {
                if(target instanceof ShipAPI){
                     ShipAPI ship = (ShipAPI) target;
-                   if(ship.isFighter() && !shieldhit){
+                    if(ship.isFighter() && !shieldhit){
                        engine.applyDamage(target, point, 200f, DamageType.FRAGMENTATION, 0, false, false, projectile.getSource());
-                   }  
-                   
+                    }  
                } else if(target instanceof MissileAPI){
                     engine.applyDamage(target, point, 200f, DamageType.FRAGMENTATION, 0, false, false, projectile.getSource());
                }
            } 
-    
 }

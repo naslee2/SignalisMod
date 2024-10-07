@@ -62,13 +62,14 @@ public class Eusan_Nation_System {
         buyan_market.addCondition(Conditions.ORGANICS_COMMON);
         buyan_market.addCondition(Conditions.VOLATILES_DIFFUSE);
         buyan_market.addCondition(Conditions.RUINS_EXTENSIVE);
+        buyan_market.addCondition("eusan_nation_protektor_cadres");
         buyan_market.addIndustry(Industries.POPULATION);
         buyan_market.addIndustry(Industries.WAYSTATION);
         buyan_market.addIndustry(Industries.MINING);
         buyan_market.addIndustry(Industries.REFINING);
         buyan_market.addIndustry(Industries.MEGAPORT);
         buyan_market.addIndustry(Industries.HEAVYBATTERIES);
-        buyan_market.addIndustry(Industries.LIGHTINDUSTRY);
+        buyan_market.addIndustry(Industries.PATROLHQ);
         buyan_market.addIndustry(Industries.BATTLESTATION);
         buyan_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         buyan_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
@@ -102,6 +103,7 @@ public class Eusan_Nation_System {
         vineta_market.addCondition(Conditions.ORE_MODERATE);
         vineta_market.addCondition(Conditions.ORGANICS_ABUNDANT);
         vineta_market.addCondition(Conditions.FARMLAND_ADEQUATE);
+        vineta_market.addCondition("eusan_nation_protektor_cadres");;
         vineta_market.addIndustry(Industries.POPULATION);
         vineta_market.addIndustry(Industries.MEGAPORT);
         vineta_market.addIndustry(Industries.FARMING);
@@ -111,6 +113,7 @@ public class Eusan_Nation_System {
         vineta_market.addIndustry(Industries.WAYSTATION);
         vineta_market.addIndustry(Industries.PATROLHQ);
         vineta_market.addIndustry(Industries.BATTLESTATION);
+        vineta_market.addIndustry("eusan_nation_defense_coordination_center");
         vineta_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
@@ -125,7 +128,8 @@ public class Eusan_Nation_System {
         shattered_moon.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         shattered_moon.setCustomDescriptionId("eusan_nation_shattered_moon");
 
-        system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f, null, null);
+        system.addAsteroidBelt(vineta, 400, 740f, 256f, 300f, 305f, Terrain.ASTEROID_BELT, "Asteroid Ring");
+        system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f);
 
         //Wrecked Station related to Vineta
         CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("signalis_wrecked_station", "Abandoned Orbital Complex 6", "station_side02", "neutral");
@@ -157,16 +161,15 @@ public class Eusan_Nation_System {
         kitezh_market.setFactionId("eusan_nation");
         kitezh_market.addCondition(Conditions.POPULATION_5);
         kitezh_market.addCondition(Conditions.HABITABLE);
-        kitezh_market.addCondition(Conditions.FARMLAND_POOR);
+        kitezh_market.addCondition(Conditions.FARMLAND_ADEQUATE);
         kitezh_market.addCondition(Conditions.ORE_MODERATE);
-        kitezh_market.addCondition(Conditions.RARE_ORE_SPARSE);
+        kitezh_market.addCondition(Conditions.RARE_ORE_MODERATE);
         kitezh_market.addCondition(Conditions.LOW_GRAVITY);
-        kitezh_market.addCondition(Conditions.DISSIDENT);
-        RecentUnrest.get(kitezh_market).add(10, " Protests against the Nation");
+        kitezh_market.addCondition("eusan_nation_protektor_cadres");
+        RecentUnrest.get(kitezh_market).add(18, "Protests against the Nation");
         kitezh_market.addIndustry(Industries.FARMING);
         kitezh_market.addIndustry(Industries.MINING);
         kitezh_market.addIndustry(Industries.REFINING);
-        //kitezh_market.addIndustry(Industries.LIGHTINDUSTRY);
         kitezh_market.addIndustry(Industries.POPULATION);
         kitezh_market.addIndustry(Industries.WAYSTATION);
         kitezh_market.addIndustry(Industries.SPACEPORT);
@@ -212,6 +215,7 @@ public class Eusan_Nation_System {
         rotfront_market.addCondition(Conditions.ORE_SPARSE);
         rotfront_market.addCondition(Conditions.LOW_GRAVITY);
         rotfront_market.addCondition(Conditions.LARGE_REFUGEE_POPULATION);
+        rotfront_market.addCondition("eusan_nation_protektor_cadres");
         rotfront_market.addIndustry(Industries.POPULATION);
         rotfront_market.addIndustry(Industries.MEGAPORT);
         rotfront_market.addIndustry(Industries.WAYSTATION);
@@ -222,7 +226,8 @@ public class Eusan_Nation_System {
         rotfront_market.addIndustry(Industries.PATROLHQ);
         rotfront_market.addIndustry(Industries.HEAVYBATTERIES);
         rotfront_market.addIndustry(Industries.BATTLESTATION);
-        //rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
+        rotfront_market.addIndustry("eusan_nation_Rotfront_Array");
+        rotfront_market.addIndustry("eusan_nation_VEB_rotfront_hydroponik");
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
@@ -258,6 +263,7 @@ public class Eusan_Nation_System {
         heimat_market.addCondition(Conditions.LOW_GRAVITY);
         heimat_market.addCondition(Conditions.TOXIC_ATMOSPHERE);
         heimat_market.addCondition(Conditions.REGIONAL_CAPITAL); //need to change to Headquaters condition when implemented in future Starsector versions
+        heimat_market.addCondition("eusan_nation_herz_der_revolution");
         heimat_market.addIndustry(Industries.MINING);
         heimat_market.addIndustry(Industries.FUELPROD);
         heimat_market.addIndustry(Industries.ORBITALWORKS);
@@ -266,6 +272,7 @@ public class Eusan_Nation_System {
         heimat_market.addIndustry(Industries.WAYSTATION);
         heimat_market.addIndustry(Industries.HEAVYBATTERIES);
         heimat_market.addIndustry(Industries.POPULATION);
+        heimat_market.getIndustry(Industries.POPULATION).setImproved(true);
         heimat_market.addIndustry("eusan_nation_aeon_hq");
         heimat_market.addIndustry(Industries.STARFORTRESS);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
@@ -296,6 +303,7 @@ public class Eusan_Nation_System {
         leng_market.addCondition(Conditions.ORE_ABUNDANT);
         leng_market.addCondition(Conditions.NO_ATMOSPHERE);
         leng_market.addCondition(Conditions.RARE_ORE_MODERATE);
+        leng_market.addCondition("eusan_nation_protektor_cadres");
         leng_market.addIndustry(Industries.SPACEPORT);
         leng_market.addIndustry(Industries.WAYSTATION);
         leng_market.addIndustry(Industries.GROUNDDEFENSES);

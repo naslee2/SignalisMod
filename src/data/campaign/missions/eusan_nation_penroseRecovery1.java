@@ -53,9 +53,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         if(officer_yeong == null){
             return false;
         }
-        if (target_planet == null) {
-			return false;
-		}
 
         setStartingStage(Stage.LOCATE_PENROSE419);
         addSuccessStages(Stage.COMPLETED);

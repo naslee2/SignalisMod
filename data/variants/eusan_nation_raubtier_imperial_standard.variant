@@ -1,0 +1,27 @@
+{
+  "variantId": "eusan_nation_raubtier_imperial_standard",
+  "hullId": "eusan_nation_raubtier_imperial",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 9,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0002": "heavymortar",
+        "WS0003": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

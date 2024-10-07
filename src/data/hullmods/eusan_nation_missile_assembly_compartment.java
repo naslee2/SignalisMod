@@ -13,16 +13,19 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
-    protected static float missile_ammo_bonus = 150f;
-    protected static float missile_regen_bonus = 100f;
+    protected static float missile_ammo_bonus = 15f;
+    protected static float missile_regen_bonus = 7.5f;
+	protected static float missile_flux_increase = 5f;
 
-	protected static float small_missile_cost_reduction = 5;
-	protected static float medium_missile_cost_reduction = 10;
-	protected static float large_missile_cost_reduction = 15;
+	//protected static float small_missile_cost_reduction = 5;
+	//protected static float medium_missile_cost_reduction = 10;
+	//protected static float large_missile_cost_reduction = 15;
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);
-        //stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
+        stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
+		stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_ammo_bonus);
+	
 	}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
@@ -30,6 +33,11 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 			//if someone tries to install incompatible hullmods, remove it.
 			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILE_AUTOLOADER, "eusan_nation_missile_assembly_compartment");
 		}
+		if(ship.getVariant().getHullMods().contains(HullMods.MISSLERACKS)){
+			//if someone tries to install incompatible hullmods, remove it.
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSLERACKS, "eusan_nation_missile_assembly_compartment");
+		}
+		
 	}
 
 

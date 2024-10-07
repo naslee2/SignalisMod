@@ -41,7 +41,8 @@
             "generic_aeon_facility":"graphics/icons/industry/light_industry.png"
         },
         "eusan_nation_people":{
-            "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png"
+            "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
+            "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png"
         }
 
 

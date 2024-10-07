@@ -15,10 +15,12 @@
 	"shipNameSources":{
 		"MERCANTILE":1,
 		"BRITISH_NAVY":1,
-		"GREEK":1,
-		"CELTIC":1,
-		"SPACE":1,
-		"GENERAL":1,
+		"Eusan_Nation_DDR_VM":1,
+		"Eusan_Nation_KOR":1,
+		"Eusan_Nation_GER":1,
+		"Eusan_Nation_TW":1,
+		"Eusan_Nation_Bird":1,
+		"Eusan_Nation_CN":1
 	},
 	"names":{
 		"old english":1,
@@ -36,7 +38,7 @@
 	"hullFrequency":{
 		"tags":{
 			"eusan_nation_standard_package":1,
-			"eusan_nation_advanced_package":0.9
+			"eusan_nation_advanced_package":0.5
 		},
 		"hulls":{
 			"eusan_nation_penrose":0,
@@ -89,9 +91,6 @@
 			"eusan_nation_isolde",
 			"atlas",
 			"prometheus",
-			"gryphon",
-			"falcon",
-			"eagle",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
@@ -119,6 +118,7 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"eusan_nation_pernach",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
@@ -138,6 +138,7 @@
 			"eusan_nation_tulip",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
+			"eusan_nation_pernach",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
@@ -234,14 +235,14 @@
 	},
 	"ranks":{
 		"ranks":{
-			"factionLeader":{"name":"Great Revolutionary"},
+			"factionLeader":{"name":"The Great Revolutionary"},
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
 			"spaceCommander":{"name":"Vize­admiral"},
 	
 		},
 		"posts":{
-			"factionLeader":{"name":"Great Revolutionary of the Nation"},
+			"factionLeader":{"name":"The Great Revolutionary of the Nation"},
 			"patrolCommander":{"name":"Fregattenkapitän"},
 			"fleetCommander":{"name":"Admiral"},
 			"defenseFleetCommander":{"name":"Konteradmiral"},
