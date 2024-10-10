@@ -644,25 +644,13 @@ Aside from the lights set up by the recovery crew, you do not see anything else 
 Unless the power is reactivated, there is not much anyone can do.","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == false","SetTextHighlightColors ""106,21,28,255""
-SetTextHighlights ""PENROSE-512""
-SetTextHighlights ""SCOUT SYSTEMS VEHICLE STATUS MONITOR.""
-SetTextHighlights ""COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED.""","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
+$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
 
-PENROSE-512
-
-SCOUT SYSTEMS VEHICLE STATUS MONITOR.
-
-COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED.
-
-Your briefing packet mentioned about a security keycard for Penrose vessels. It would take too much time to decrypt the security system. Recovering the keycard would also unlock many of the Penrose-512's compartments.
-
-Lets hope it wasn't destroyed in the landing...","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
+","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
 $player.officeryeongPenrose512_foundKeycard == true","SetTextHighlightColors ""106,21,28,255""
-SetTextHighlights ""PENROSE-512""
-SetTextHighlights ""SCOUT SYSTEMS VEHICLE STATUS MONITOR."" ""STATUS: CRITICAL SYSTEMS FAILURE""  ""LOCATION: UNKNOWN PLANETARY SURFACE"" ""A. YEONG, GESTALT PILOT - NO SIGNAL"" ""LSTR-512, REPLIKA UNIT - NO SIGNAL""","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. With the keycard you found, the system is now unlocked.
+SetTextHighlights ""PENROSE-512"" ""SCOUT SYSTEMS VEHICLE STATUS MONITOR."" ""STATUS: CRITICAL SYSTEMS FAILURE""  ""LOCATION: UNKNOWN PLANETARY SURFACE"" ""A. YEONG, GESTALT PILOT - NO SIGNAL"" ""LSTR-512, REPLIKA UNIT - NO SIGNAL""","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. With the keycard you found, the system is now unlocked.
 
 You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
 
@@ -674,7 +662,7 @@ STATUS: CRITICAL SYSTEMS FAILURE
 LOCATION: UNKNOWN PLANETARY SURFACE
 
 A. YEONG, GESTALT PILOT - NO SIGNAL
-LSTR-512, REPLIKA UNIT - NO SIGNAL","officeryeongPenrose512_middleDecks_explore2b_systems1: ...wait a minute...","keycard found means doors unlocked, power is online"
+LSTR-512, REPLIKA UNIT - NO SIGNAL","officeryeongPenrose512_middleDecks_explore2b_systems1: ...wait a minute...",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","SetTextHighlights ""A. Yeong. Gestalt Pilot. ""","You re-read the systems monitor, this time more slowly. The wireframe of the Penrose-512 slowly rotates a few times before you finally made sure there is no mistake. 
 
 A. Yeong. Gestalt Pilot. 
