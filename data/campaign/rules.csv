@@ -644,15 +644,8 @@ Aside from the lights set up by the recovery crew, you do not see anything else 
 Unless the power is reactivated, there is not much anyone can do.","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == false","SetTextHighlightColors ""106,21,28,255""
-SetTextHighlights ""PENROSE-512"" ""SCOUT SYSTEMS VEHICLE STATUS MONITOR."" ""COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED.""
-eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
+$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
 
-PENROSE-512
-
-SCOUT SYSTEMS VEHICLE STATUS MONITOR.
-
-COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED.
 ","officeryeongPenrose512_middleDecks_explore2b_systems: Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
