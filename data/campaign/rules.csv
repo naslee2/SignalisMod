@@ -1250,17 +1250,17 @@ $player.metMarlis == false
 $faction.friendlyToPlayer score:1000
 $option == marlis_bar","$player.metMarlis = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who's been helping us out recently! Tell you what, your first drink's on the house. Just a little thanks on behalf of our Nation.""
-FireAll PopulateMarlisBarOptions",,,"$option == marlis_bar_interaction"
+FireAll PopulateMarlisBarOptions",,,"SaveCurrentVisual"
 MARLIS_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.metMarlis == false
 $faction.friendlyToPlayer score:1000
 $option ==  marlis_bar","$player.metMarlis = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new face! And from the looks of it, not from around here either. Well that's fine. Just take a seat, and I'll be with you shortly!""
@@ -1271,7 +1271,7 @@ $player.metMarlis == false
 $faction.neutralToPlayer score:100
 $option ==  marlis_bar","$player.metMarlis = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT"".
@@ -1281,7 +1281,7 @@ $player.metMarlis == false
 $faction.neutralToPlayer score:100
 $option ==  marlis_bar","$player.metMarlis = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT""
@@ -1292,7 +1292,7 @@ $faction.id == ""eusan_nation""
 $player.metMarlis == true
 $faction.friendlyToPlayer score:1000
 $option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 FireAll PopulateMarlisBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
 OR
 ""Hello comrade, how do you do this fine day?""
@@ -1304,7 +1304,7 @@ MARLIS_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.metMarlis == true
 $faction.friendlyToPlayer score:1000
 $option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 FireAll PopulateMarlisBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
 OR
 ""Greetings. You seem parched. Would you like a drink?""
@@ -1316,7 +1316,7 @@ $player.commissionFactionId == ""eusan_nation""
 $player.metMarlis == true
 $faction.neutralToPlayer score:100
 $option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 FireAll PopulateMarlisBarOptions","""What do you wish to drink?""
 OR
 ""How can I take your order?""",,
@@ -1324,7 +1324,7 @@ MARLIS_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.metMarlis == true
 $faction.neutralToPlayer score:100
 $option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true
+BeginConversation eusan_nation_marlis false true
 FireAll PopulateMarlisBarOptions","""You seem thirsty.""
 OR
 ""You are a long way from home. What can I get you?""
@@ -1333,7 +1333,7 @@ OR
 MARLIS_GREETING_HOSTILE,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $faction.isHostile score:100
 $option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis true true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitMarlis_barHostile:Leave Marlis alone.",
+BeginConversation eusan_nation_marlis false true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitMarlis_barHostile:Leave Marlis alone.",
 "#END MARLIS_GREETINGS",,,,,,
 ,,,,,,
 # MARLIS_BAR_SALES,,,,,,
