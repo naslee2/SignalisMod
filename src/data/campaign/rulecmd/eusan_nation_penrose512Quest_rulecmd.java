@@ -17,7 +17,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 
 public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
      Color eusanRed = new Color(106,21,28,255);
-     String headerLine = "---------------------------------------------------------------------------------";
+     String headerLine = "----------------------------------------------------------------------------------------";
 
     @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -43,24 +43,36 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
                 break;
             case "addSystemStatusActive":
                 TextPanelAPI text = dialog.getTextPanel();
+                text.setFontVictor();
+                text.addPara(headerLine, eusanRed);
+                text.addPara("                      -PENROSE-512-", eusanRed);
+                text.addPara("            SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed);
+                text.addPara("STATUS: CRITICAL SYSTEMS FAILURE", eusanRed);
+                text.addPara("LOCATION: UNKNOWN PLANETARY SURFACE", eusanRed);
+                text.addPara("");
+                text.addPara("                       ---REPORT---", eusanRed);
+                text.addPara("CREW STATUS:", eusanRed);
+                text.addPara("  A. YEONG, GESTALT PILOT - NO SIGNAL", eusanRed);
+                text.addPara("  LSTR-512, REPLIKA UNIT - NO SIGNAL", eusanRed);
+                text.addPara("");
+                text.addPara("         HARD LANDING HAS DAMAGED CRITICAL SYSTEMS!            ", eusanRed);
+                text.addPara("");
+                text.addPara("                 /////////////WARNING////////////             ", eusanRed);
+                text.addPara("          SURFACE TEMPERATURES CRITICALLY LOW!                 ", eusanRed);
+                text.addPara("         WEAR PROTECTIVE CLOTHING DURING A.V.A.                ", eusanRed);
+                text.addPara("                 //////////////////////////////////////", eusanRed);
+                text.addPara(headerLine, eusanRed);
+                text.setFontInsignia();
                 break;
             case "addSystemStatusLockdown":
                 TextPanelAPI text2b = dialog.getTextPanel();
                 TextPanelAPI text2c = dialog.getTextPanel();
 
-                //text2b.addPara(headerLine, eusanRed);
-                //TooltipMakerAPI tooltip = text2b.beginTooltip();
-                //tooltip.setParaFont("graphics/fonts/silver.fnt");
-                //tooltip.setParaFontOrbitron();
-                //tooltip.addPara("Test", eusanRed, 0);
-                //text2b.addTooltip();
-                //text2b.addPara("test2 after tooltip");
-
                 text2b.setFontVictor();
                 text2b.addPara(headerLine, eusanRed);
-                text2b.addPara("              PENROSE-512              ", eusanRed);
-                text2b.addPara("                       SCOUT SYSTEMS VEHICLE STATUS MONITOR                      ", eusanRed);
-                text2b.addPara("              COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED              ", eusanRed);
+                text2b.addPara("                      -PENROSE-512-", eusanRed);
+                text2b.addPara("           SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed);
+                text2b.addPara("   COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED", eusanRed);
                 text2b.addPara(headerLine, eusanRed);
                 text2b.setFontInsignia();
 

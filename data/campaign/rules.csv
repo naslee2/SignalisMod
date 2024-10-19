@@ -528,7 +528,7 @@ Ariane flips to another document. A photograph clearly shows a partially disasse
 OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing3",,"Ariane continues in place of Falke, setting down the papers. ""We have interviewed dock workers, checked all the construction and launch relay logs, scoured everything related to the Penrose program, and can find no record of the ship being launched.""","officeryeongPenroseRecovery512_briefing4:""So we have a mystery...""",
 OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""That is what we believe to be the case."" Falke stands up, and begins pacing around the room as she says this. ""And that is where you come in. Your fleet is well equipped and could investigate the signal, without requiring us to organize an expeditionary force of our own.""
 
-The lie is barely disguised. You are expendable, moreso than the Nation's own fleets at least. So you will test the waters.","officeryeongPenroseRecovery512_briefing5: Continue",
+The lie is barely disguised. You are expendable, moreso than the Nation's own fleets at least. So you will test the waters.","officeryeongPenroseRecovery512_briefing5:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
 Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
 
@@ -644,25 +644,12 @@ Aside from the lights set up by the recovery crew, you do not see anything else 
 Unless the power is reactivated, there is not much anyone can do.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
-
-","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
+$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == true","SetTextHighlightColors ""106,21,28,255""
-SetTextHighlights ""PENROSE-512"" ""SCOUT SYSTEMS VEHICLE STATUS MONITOR."" ""STATUS: CRITICAL SYSTEMS FAILURE""  ""LOCATION: UNKNOWN PLANETARY SURFACE"" ""A. YEONG, GESTALT PILOT - NO SIGNAL"" ""LSTR-512, REPLIKA UNIT - NO SIGNAL""","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. With the keycard you found, the system is now unlocked.
+$player.officeryeongPenrose512_foundKeycard == true","eusan_nation_penrose512Quest_rulecmd addSystemStatusActive","You survey the mess hall. A recovery team member reports that the power grid is stabilized and the system is active. With the keycard you found, the system is now unlocked.
 
-You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:
-
-PENROSE-512
-
-SCOUT SYSTEMS VEHICLE STATUS MONITOR.
-
-STATUS: CRITICAL SYSTEMS FAILURE
-LOCATION: UNKNOWN PLANETARY SURFACE
-
-A. YEONG, GESTALT PILOT - NO SIGNAL
-LSTR-512, REPLIKA UNIT - NO SIGNAL","officeryeongPenrose512_middleDecks_explore2b_systems1:...wait a minute...",
+You take a look at the systems monitor. The red tinted monitor glows bright. On the monitor, the screen reads:","officeryeongPenrose512_middleDecks_explore2b_systems1:...wait a minute...",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","SetTextHighlights ""A. Yeong. Gestalt Pilot. ""","You re-read the systems monitor, this time more slowly. The wireframe of the Penrose-512 slowly rotates a few times before you finally made sure there is no mistake. 
 
 A. Yeong. Gestalt Pilot. 
@@ -684,7 +671,7 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == o
 # OFFICER_YEONG_PENROSE512_AFT_DECKS,,,,,,
 OFFICER_YEONG_PENROSE512_AFT_DECKS_START,PopulateOfficerYeongPenrose512Explore,,,,"officeryeongPenrose512_aftDecks_start:Enter the aft decks of the Penrose",
 OFFICER_YEONG_PENROSE512_AFT_DECKS1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_start","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","You enter the aft decks of the Penrose-512 as indicated on the plans. The recovery team has already begun their work so you can see portable lights and rescue equipment ready.",,
-OFFICER_YEONG_PENROSE512_AFT_DECKS2a,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks2a:Search the crew quarters",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks2a:Head into the crew quarters",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a
 $player.officeryeongPenrose512_foundKeycard == false",,"You enter the crew quarters and is greeted by a mass of debris that does not appear to be related to the crash.
 
@@ -1072,46 +1059,46 @@ $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
 ShowPersonVisual
-FireAll PopulateOptions
 $menuState = fleetConvMain 0
+FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
-AddText ""Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""
-FireAll PopulateOptions",,,"cutCommLink:Cut the comm link"
+AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link","cutCommLink:Cut the comm link
+$menuState = fleetConvMain 0"
 ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
 ShowPersonVisual
-FireAll PopulateOptions
 $menuState = fleetConvMain 0
+FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, traveller. Welcome to our little side of the stars. Perhaps one day we can work together?""
-FireAll PopulateOptions",,,
+",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.neutralToPlayer score:100","$player.metAdmiralFalke = true
 ShowPersonVisual
-FireAll PopulateOptions
 $menuState = fleetConvMain 0
+FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, Comrade. Intimidated? Do I intimidate you? I do hope so. Now behave yourself. I shall be watching.""
-FireAll PopulateOptions",,,
+",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
 $faction.neutralToPlayer score:100","$player.metAdmiralFalke = true
 ShowPersonVisual
-FireAll PopulateOptions
 $menuState = fleetConvMain 0
+FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Fotillia. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there fellow traveller. You seem lost. Its only natural you come to me to ask for my help. So...how can I help you?""
-FireAll PopulateOptions",,,
+",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == true
