@@ -1197,9 +1197,40 @@ OR
 """"Perhaps its time to end this sad chapter of your life. If you wanted mercy, you should have fought harder.""","cutCommLink:Cut the comm link",
 "#END ADMIRAL_FALKE_FLEET GREETINGS",,,,,,
 ,,,,,,
-# ADMIRAL_FALKE_CHAT_OPTIONS,,,,,,
+# ADMIRAL_FALKE_CHAT,,,,,,
 ,,,,,,
-# ADMIRAL_FALKE_CHAT_ESCAPE_OPTION,,,,,,
+# ADMIRAL_FALKE_CHAT_VOLKSMARINE,,,,,,
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_1,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption",,"She gives you a soft smile and disarming look. 
+
+""Oh so you wish to know more about the Volksmarine, hmm?"" Admiral Falke says. 
+
+""The Volksmarine, as you may know, is the Nation's primary military arm dedicated to defending against our enemies that ply the stars.""
+
+""For many decades we fought against our hated foes, the Empire, for control of this star system. Our humble beginnings began on Heimat using repurposed cargo freighters and civilian shuttle ferries armed with whatever weapons we can put together.""
+
+""We could never match the Empire ship to ship. They had better ships, guns, trained crews, etc. They outclassed us at everything.""","admiralFalkeVolksmarineOption1:Continue",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_2,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption1",,"""When we finally reached Buyan, our fleet was a far cry from the improvised cargo ships with guns strapped to the hull. We had purpose built capital ships, and an officer corps blooded from the most vicious engagements against the Empire. Our final battle was bloody and hard fought but the victory was decisive.""
+
+""After the war, we expanded our fleet. We do not have the luxury of letting our guard down. The Volksmarine contends with threats from a variety of vectors. We have ongoing issues with the Hegemony, the Persean League, and Tri-Tacheyon. Pirates and religious extremists shouting about the evils of technology tests our patience every day.""","admiralFalkeVolksmarineOption2:Continue",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_3,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption2",,"""Just remember, the Voksmarine is to defend the Nation and its interests."" Falke says. ""Where the Nation goes, the Volksmarine is there. We fight for the revolution. We fight to keep it.""
+
+She gives you a small smile. 
+
+""I belive that is all for now. It is time for me to go.""","admiralFalkeVolksmarineOption3:Continue",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption3","FireAll PopulateAdmiralFalkeChatOptions",,,
+"#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
+,,,,,,
+# ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,,,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,,"admiralFalkeGrandFuelFleet1:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet2:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet3:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
+"#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
+"#END ADMIRAL_FALKE_CHAT",,,,,,
+,,,,,,
+# ADMIRAL_FALKE_CHAT_OPTIONS,,,,,,
 ADMIRAL_FALKE_CHAT_OPTIONS,PopulateOptions,"$id ==  eusan_nation_admiral_falke score: 100",,,"admiralFalkeChat:Chat with Admiral Falke",
 ADMIRAL_FALKE_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == admiralFalkeChat","FireAll PopulateAdmiralFalkeChatOptions","""Hello there. What do you wish to speak about?""
 OR
@@ -1222,7 +1253,6 @@ OR
 ""Safe travels.""
 OR
 ""Goodbye, then. The Nation bids you well in your travels.""",,
-"#END ADMIRAL_FALKE_CHAT_ESCAPE_OPTION",,,,,,
 "#END ADMIRAL_FALKE_CHAT_OPTIONS",,,,,,
 "#END ADMIRAL_FALKE",,,,,,
 ,,,,,,

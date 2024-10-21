@@ -45,7 +45,7 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
                 TextPanelAPI text = dialog.getTextPanel();
                 text.setFontVictor();
                 text.addPara(headerLine, eusanRed);
-                text.addPara("                      -PENROSE-512-", eusanRed);
+                text.addPara("                     -PENROSE-512-", eusanRed);
                 text.addPara("            SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed);
                 text.addPara("STATUS: CRITICAL SYSTEMS FAILURE", eusanRed);
                 text.addPara("LOCATION: UNKNOWN PLANETARY SURFACE", eusanRed);
