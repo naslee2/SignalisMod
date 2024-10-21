@@ -12,28 +12,13 @@ import java.util.Map;
 public class eusan_nation_hasModId extends BaseCommandPlugin{
 
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
-        
-        String modId = params.get(0).getString(memoryMap);
-        Boolean modChecker = Global.getSettings().getModManager().isModEnabled(modId);
+        if(params.isEmpty()){
+            return false;
+        }
         if(dialog == null){
             return false;
         }
-        switch(modId){
-            case "sbr":
-                //checks if San Bativa Republic is active.
-                return modChecker;
-            case "PAGSM":
-                //checks if Phillip Andrada Gas Station Manager is active.
-                return modChecker;
-            case "uaf":
-                //checks if United Aurora Federation is active
-                return modChecker;
-            default:
-                dialog.getTextPanel().addPara("Uh oh an error has occured!");
-                dialog.getTextPanel().addPara("The mod id is invalid or does not exist for: " + modId);
-                break;
-            }
-        return true;
+        return Global.getSettings().getModManager().isModEnabled(params.get(0).getString(memoryMap));
     }
     
 }
