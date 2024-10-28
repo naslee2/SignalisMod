@@ -25,30 +25,21 @@ public class Eusan_Nation_FleetScaler{
         
         FleetParamsV3 enemyFleetParams;
         CampaignFleetAPI enemyFleetData;
-        float modiferDP = (float) (playerFleetDP - (playerFleetDP * 0.10));
+        float modifierDP = (float) (playerFleetDP - (playerFleetDP * 0.10));
 
         if(playerFleetDP < 100){
-            enemyFleetParams = new FleetParamsV3(null, null, enemyFaction, null, FleetTypes.PATROL_LARGE, modiferDP, 15f, 10f, 0f, 0f, 0f, 10f);
+            enemyFleetParams = new FleetParamsV3(null, null, enemyFaction, null, FleetTypes.PATROL_LARGE, modifierDP, 15f, 10f, 0f, 0f, 0f, 10f);
 
             enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
 
             return enemyFleetData;
         }
-        if(playerFleetDP >= 100 || playerFleetDP < 150){
-            enemyFleetParams = new FleetParamsV3(null, null, enemyFaction, null, FleetTypes.TASK_FORCE, modiferDP, 20f, 15f, 0f, 0f, 0f, 15f);
-            
-            enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
+        enemyFleetParams = new FleetParamsV3(null, null, enemyFaction, null, FleetTypes.TASK_FORCE, modifierDP, 20f, 15f, 0f, 0f, 0f, 15f);
 
-            return enemyFleetData;
-        }
-        else{
-            enemyFleetParams = new FleetParamsV3(null, null, enemyFaction, null, FleetTypes.TASK_FORCE, modiferDP, 25f, 20f, 0f, 0f, 0f, 20f);
+        enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
 
-            enemyFleetData = FleetFactoryV3.createFleet(enemyFleetParams);
+        return enemyFleetData;
 
-            return enemyFleetData; 
-        }
-
-	}
+    }
 
 }
