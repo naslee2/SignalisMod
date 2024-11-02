@@ -72,8 +72,8 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         falkeFleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
         heimat_market.getContainingLocation().addEntity(falkeFleet);
         falkeFleet.setLocation(heimat_market.getPlanetEntity().getLocation().x, heimat_market.getPlanetEntity().getLocation().y);
-        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, (SectorEntityToken) heimat_entity, 365);
-        falkeFleet.setFacing((float) random.nextFloat() * 360f);
+        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, heimat_entity, 365);
+        falkeFleet.setFacing(random.nextFloat() * 360f);
 
 
         //flagship
@@ -154,8 +154,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         MarketAPI heimat = Global.getSector().getEconomy().getMarket("heimat_market");
         //logger.info("Logger active: fleet is spawning at: " + heimat.getId());
         if (heimat == null || heimat.hasCondition(Conditions.DECIVILIZED)) return false;
-        if (!heimat.getFactionId().equals(EUSAN_NATION)) return false;
-        return true;
+        return heimat.getFactionId().equals(EUSAN_NATION);
     }
 
     @Override

@@ -4,8 +4,10 @@ package data.scripts.plugins;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorAPI;
+import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import data.campaign.fleets.Eusan_Nation_personalFleetFalke;
 
+import data.scripts.systems.Eusan_Nation_System;
 import exerelin.campaign.SectorManager;
 
 public class Eusan_Nation_Plugin extends BaseModPlugin {
@@ -22,8 +24,13 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
 
     private static void initModPlugin(){
         //boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+//        if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
+//            new Eusan_Nation_ModGen().generateNew(Global.getSector());
+//        }
         if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
-            new Eusan_Nation_ModGen().generateNew(Global.getSector());
+            new Eusan_Nation_System().generate(Global.getSector());
+            SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
+            new Eusan_Nation_SetFactionRelations().SetFactionRelations(Global.getSector());
         }
     }
 
