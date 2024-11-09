@@ -1222,11 +1222,31 @@ ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == ad
 "#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,,,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,,"admiralFalkeGrandFuelFleet1:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet2:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet3:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+$player.metsfcyenni == true
+$player.commissionFactionId == ""eusan_nation""",,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,"""Why do you ask? she says. Obviously she scanned your thought patterns so her statement seems redundant.
+
+There is a small pause. You can tell she is a bit amused.
+
+""Of all the powers in the sector, there is nothing more amusing than the Sindrian Fuel Company. I feel there is unexplainable bond between us and the Sindrians."" She tells you. 
+
+""The Sindrians have however, taken upon themselves to develop and build their own fleet of ships. Mainly to enhance their standing as the undisputed producers of antimatter fuel. Gunboat diplomacy or rather should I say, energy diplomacy.'","admiralFalkeGrandFuelFleet1:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""The commanding officer is of course, Ruka Yenni. Eccentric, confident, and very skilled from what I hear. Somewhat narcissistic. Our intelligence services have an extensive file on her."" Admiral Falke says. 
+
+""And do not forget that there is an entire volume of the war book dedicated to the Sindrian Fuel Company's fleet. I do not think they have any non-fuel tanker ships in their fleet.""","admiralFalkeGrandFuelFleet2:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"Before you ask to know more, she already begins to tell you the answer.
+
+""Yes Ruka is very interesting. She is a predator in a sense. Extremely dangerous if you cross her. Her being in command is perhaps one of the better decisions Sindria has done in the last few years.""
+
+""Anyone she meets, she has a tendency to call ""moths"". She called me ""radiant inferno"". Your guess is good as mine..."" she says with a soft smile. ","admiralFalkeGrandFuelFleet3:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_4,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3",,"""The Grand Fuel Fleet is a very powerful formation. Some of the most unusual and powerful warships ever built. With Ruka in charge, they form a core of powerful ships but...there is something brewing in Sindria.""
+
+She puts a finger on her lips.
+
+""Between you and me...that fleet, or its commander will play a critical role in Sindria's future.""","admiralFalkeGrandFuelFleet4:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_5,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet4",,"""Now. Is there anything else? Good. I enjoyed this chat. You can come back to me and I be happy to explain it all again.""","admiralFalkeGrandFuelFleet5:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet5","FireAll PopulateAdmiralFalkeChatOptions",,,
 "#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
 "#END ADMIRAL_FALKE_CHAT",,,,,,
 ,,,,,,
