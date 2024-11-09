@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
 public class Eusan_Nation_MessageIntel {
     static Logger logger = Global.getLogger(Eusan_Nation_MessageIntel.class);
     public static void arianeMessage_neuroRepo(){
-        if (Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean("$officeryeong_neuralrepositorystart"))
+        if (Global.getSector().getMemoryWithoutUpdate().getBoolean("$officeryeong_neuralrepositorystart"))
             logger.info("Logger Active: ref memory is active and fired!");
 
     }
