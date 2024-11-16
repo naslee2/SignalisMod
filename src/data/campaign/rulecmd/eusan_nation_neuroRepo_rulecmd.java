@@ -25,7 +25,7 @@ public class eusan_nation_neuroRepo_rulecmd extends BaseCommandPlugin {
         switch(message){
             case "sendArianeMessage":
                 Eusan_Nation_MessageIntel.arianeMessage_neuroRepo();
-                logger.info("Logger Active: rulecmd fired1dfs!~!");
+                logger.info("Logger Active: rulecmd fired1dfs!~!TOOOT");
                 break;
             default:
                 dialog.getTextPanel().addPara("Uh oh an error has occurred!");

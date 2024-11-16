@@ -277,7 +277,6 @@ FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
 OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION1,PopulateOfficerYeongPenroseRecovery1Option,,"SetShortcut defaultLeave ""ESCAPE""","Following the information given to you by Officer Yeong, you arrive at the designated planet. Your comms officer triangulates the rough location of the signal, while a survey team is prepared.","officeryeongPenroseRecovery1Option1:Enter Orbit around the planet
 defaultLeave:Leave",
 OFFICER_YEONG_PENROSERECOVERY1_PLANET_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Option1","SetTextHighlights ""PENROSE-419""
-#eusan_nation_penroseRecovery1_rulecmd endMusic_penroseRecovery1
 eusan_nation_penroseRecovery1_rulecmd playSignal_penroseRecovery1","As you enter orbit above the planet, your communications officer finally pins the signals location. 
 
 You head over to the communication's officer and begin to examine the data. The transmission is broadcasting on a unique frequency, well outside standard domain protocol. It is significantly clearer and less degraded this close to the source, but still garbled.
@@ -404,8 +403,7 @@ FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
 OFFICER_YEONG_PENROSERECOVERY2_OPTION1,PopulateOfficerYeongPenroseRecovery2Option,,"SetShortcut defaultLeave ""ESCAPE""
 SetTextHighlights ""Penrose SOS""","Following the information given to you by Officer Yeong, you arrive at the designated planet. Your communications officer performs the familiar triangulation protocol, radio noise slowly resolving into the familiar SOS beeps.","officeryeongPenroseRecovery2Option1:Enter Orbit around the planet
 defaultLeave:Leave",
-OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1","#eusan_nation_penroseRecovery2_rulecmd endMusic_penroseRecovery2
-eusan_nation_penroseRecovery2_rulecmd playSignal_penroseRecovery2
+OFFICER_YEONG_PENROSERECOVERY2_OPTION2,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option1","eusan_nation_penroseRecovery2_rulecmd playSignal_penroseRecovery2
 SetTextHighlights ""Penrose-388""","Entering orbit around the planet, a previously hidden, faint signal appears on scopes.
 
 You manage to locate Penrose-388, and perform a quick high-power sweep of the area. No anomalies appear; Tri-Tachyon either packed up what they were doing here, or are hiding in preparation for an ambush.
@@ -563,8 +561,7 @@ OFFICER_YEONG_PENROSE512_LANDING1,PopulateOfficerYeongPenrose512Option,,"SetShor
 
 The comms officer reports the signal is an exact match on what is on file. ","officeryeongPenrose512Landing1:Enter Orbit around the planet
 defaultLeave:Leave",
-OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongPenrose512Landing1","#eusan_nation_penrose512Quest_rulecmd endMusic_512
-eusan_nation_penrose512Quest_rulecmd playSignal_512
+OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongPenrose512Landing1","eusan_nation_penrose512Quest_rulecmd playSignal_512
 ","Having pinpointed the location, you order a team down to the surface, along with a large compliment of marines and whatever heavy arms can be found aboard the fleet. Despite the danger and persistence by your executive officer to dissuade, you decide to head down there as well.
 
 The combat shuttles approach the wreckage from a low altitude, but find nothing out of the ordinary.
@@ -825,7 +822,8 @@ With that, you get up to leave with a nagging feeling about that photo. A feelin
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_PENROSE,,,,,,
-OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
+OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+$global.eusan_nation_penroseRecovery2_completed == true",,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about that, it's going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That's it.""
 
 ""Given that you have high level access I guess I can tell you about the Penrose Program in detail...""","officeryeongChatPenroseProgramOption1:Continue",
@@ -1201,7 +1199,7 @@ OR
 # ADMIRAL_FALKE_CHAT,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_VOLKSMARINE,,,,,,
-ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,"$global.eusan_nation_penrose512_completed == true",,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
 ADMIRAL_FALKE_CHAT_VOLKSMARINE_1,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption",,"She gives you a soft smile and disarming look. 
 
 ""Oh so you wish to know more about the Volksmarine, hmm?"" Admiral Falke says. 
