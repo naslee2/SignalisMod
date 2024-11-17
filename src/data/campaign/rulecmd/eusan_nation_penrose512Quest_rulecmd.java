@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.SettingsAPI;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.Fonts;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -44,24 +45,24 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
             case "addSystemStatusActive":
                 TextPanelAPI text = dialog.getTextPanel();
                 text.setFontVictor();
-                text.addPara(headerLine, eusanRed);
-                text.addPara("                     -PENROSE-512-", eusanRed);
-                text.addPara("            SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed);
+                text.addPara(headerLine, eusanRed).setAlignment(Alignment.MID);
+                text.addPara("-PENROSE-512-", eusanRed).setAlignment(Alignment.MID);
+                text.addPara("SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed).setAlignment(Alignment.MID);
                 text.addPara("STATUS: CRITICAL SYSTEMS FAILURE", eusanRed);
                 text.addPara("LOCATION: UNKNOWN PLANETARY SURFACE", eusanRed);
                 text.addPara("");
-                text.addPara("                       ---REPORT---", eusanRed);
+                text.addPara("---REPORT---", eusanRed).setAlignment(Alignment.MID);
                 text.addPara("CREW STATUS:", eusanRed);
-                text.addPara("  A. YEONG, GESTALT PILOT - NO SIGNAL", eusanRed);
-                text.addPara("  LSTR-512, REPLIKA UNIT - NO SIGNAL", eusanRed);
+                text.addPara("A. YEONG, GESTALT PILOT - NO SIGNAL", eusanRed).setAlignment(Alignment.LMID);
+                text.addPara("LSTR-512, REPLIKA UNIT - NO SIGNAL", eusanRed).setAlignment(Alignment.LMID);
                 text.addPara("");
-                text.addPara("         HARD LANDING HAS DAMAGED CRITICAL SYSTEMS!            ", eusanRed);
+                text.addPara("HARD LANDING HAS DAMAGED CRITICAL SYSTEMS!", eusanRed).setAlignment(Alignment.MID);
                 text.addPara("");
-                text.addPara("                 /////////////WARNING////////////             ", eusanRed);
-                text.addPara("          SURFACE TEMPERATURES CRITICALLY LOW!                 ", eusanRed);
-                text.addPara("         WEAR PROTECTIVE CLOTHING DURING A.V.A.                ", eusanRed);
-                text.addPara("                 //////////////////////////////////////", eusanRed);
-                text.addPara(headerLine, eusanRed);
+                text.addPara("/////////////WARNING////////////", eusanRed).setAlignment(Alignment.MID);
+                text.addPara("SURFACE TEMPERATURES CRITICALLY LOW!", eusanRed).setAlignment(Alignment.MID);
+                text.addPara("WEAR PROTECTIVE CLOTHING DURING A.V.A.", eusanRed).setAlignment(Alignment.MID);
+                text.addPara("//////////////////////////////////////", eusanRed).setAlignment(Alignment.MID);
+                text.addPara(headerLine, eusanRed).setAlignment(Alignment.MID);
                 text.setFontInsignia();
                 break;
             case "addSystemStatusLockdown":
@@ -69,11 +70,11 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
                 TextPanelAPI text2c = dialog.getTextPanel();
 
                 text2b.setFontVictor();
-                text2b.addPara(headerLine, eusanRed);
-                text2b.addPara("                      -PENROSE-512-", eusanRed);
-                text2b.addPara("           SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed);
-                text2b.addPara("   COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED", eusanRed);
-                text2b.addPara(headerLine, eusanRed);
+                text2b.addPara(headerLine, eusanRed).setAlignment(Alignment.MID);
+                text2b.addPara("-PENROSE-512-", eusanRed).setAlignment(Alignment.MID);
+                text2b.addPara("SCOUT SYSTEMS VEHICLE STATUS MONITOR", eusanRed).setAlignment(Alignment.MID);
+                text2b.addPara("COMPARTMENT LOCKDOWN ACTIVE. SECURITY OVERRIDE NEEDED", eusanRed).setAlignment(Alignment.MID);
+                text2b.addPara(headerLine, eusanRed).setAlignment(Alignment.MID);
                 text2b.setFontInsignia();
 
                 text2c.addPara("Your briefing packet mentioned about a security keycard for Penrose vessels. It would take too much time to decrypt the security system. Recovering the keycard would also unlock many of the Penrose-512's compartments.");

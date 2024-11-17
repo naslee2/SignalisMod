@@ -28,8 +28,8 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
     protected PlanetAPI vineta;
     protected PlanetAPI target_planet;
     protected StarSystemAPI target_starsystem;
-    protected String[] conditionsList;
-    protected String[] planetTypeList;
+    //protected String[] conditionsList;
+    //protected String[] planetTypeList;
 
 	@Override
 	protected boolean create(MarketAPI arg0, boolean arg1) {
