@@ -4,12 +4,12 @@ import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PlanetAPI;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
 
 //import org.apache.log4j.Logger;
 
@@ -39,13 +39,14 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         resetSearch();
         requirePlanetUnpopulated();
         requirePlanetNotStar();
-		preferPlanetNotFullySurveyed();
-		preferPlanetInDirectionOfOtherMissions();
+        preferPlanetNotFullySurveyed();
+        preferPlanetInDirectionOfOtherMissions();
         preferPlanetWithoutRuins();
         preferPlanetNonGasGiant();
         preferSystemUnexplored();
         preferSystemNotPulsar();
         preferSystemNotBlackHole();
+        search.systemReqs.add(new Eusan_Nation_SystemNotHiddenReq());
         
 
         target_planet = pickPlanet();

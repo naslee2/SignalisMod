@@ -17,7 +17,6 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
@@ -25,7 +24,8 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import org.apache.log4j.Logger;
+import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
+//import org.apache.log4j.Logger;
 
 import data.scripts.plugins.Eusan_Nation_FleetScaler;
 
@@ -72,6 +72,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         preferSystemUnexplored();
         preferSystemNotPulsar();
         preferSystemNotBlackHole();
+        search.systemReqs.add(new Eusan_Nation_SystemNotHiddenReq());
 
         target_planet = pickPlanet();
         target_starsystem = target_planet.getStarSystem();

@@ -3,29 +3,18 @@ package data.campaign.missions;
 import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.BattleAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
-import com.fs.starfarer.api.impl.campaign.ids.Conditions;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.Planets;
-import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
-import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
-import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemRequirement;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.fs.starfarer.api.util.Misc;
+
 
 import data.scripts.plugins.Eusan_Nation_PlanetColdTypeRequirement;
+import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
 
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
@@ -63,9 +52,7 @@ public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
         requireSystemNotHasPulsar();
         requireSystemNotBlackHole();
         requireSystemOnFringeOfSector();
-        //requireEntityType(planetTypeList);
-        //requirePlanetConditions(ReqMode.ANY, conditionsList);
-
+        search.systemReqs.add(new Eusan_Nation_SystemNotHiddenReq());
         search.planetReqs.add(new Eusan_Nation_PlanetColdTypeRequirement());
         
 
