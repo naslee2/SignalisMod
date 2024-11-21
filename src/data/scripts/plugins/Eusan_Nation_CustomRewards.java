@@ -14,19 +14,19 @@ public class Eusan_Nation_CustomRewards {
         numFrigates = frigates;
     }
     public int rewardScale(){
-        int reward = 100000;
+        int reward = 50000;
 
         for(int i = 0; i < numCaptials; i++){
-            reward = reward + 750000;
+            reward = reward + 650000;
         }
         for(int i = 0; i < numCruisers; i++){
-            reward = reward + 65000;
-        }
-        for(int i = 0; i < numDestroyers; i++){
             reward = reward + 55000;
         }
-        for(int i = 0; i < numFrigates; i++){
+        for(int i = 0; i < numDestroyers; i++){
             reward = reward + 45000;
+        }
+        for(int i = 0; i < numFrigates; i++){
+            reward = reward + 35000;
         }
         return reward;
     }
