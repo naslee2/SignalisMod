@@ -5,11 +5,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 
-//import java.util.Random;
-//import org.apache.log4j.Logger;
-
 public class Eusan_Nation_FleetScaler{
-    //static Logger logger = Global.getLogger(Eusan_Nation_FleetScaler.class);
 
     static int playerFleetDP = 0;
     static String enemyFaction;
@@ -23,8 +19,6 @@ public class Eusan_Nation_FleetScaler{
     }
 
     public CampaignFleetAPI fleetScaler(){
-        //logger.info("Logger Active: playerFleet DP is: " + playerFleetDP);
-        //FleetParamsV3 enemyFleetData;
         
         FleetParamsV3 enemyFleetParams;
         CampaignFleetAPI enemyFleetData;

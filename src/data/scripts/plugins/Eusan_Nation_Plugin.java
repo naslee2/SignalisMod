@@ -1,5 +1,4 @@
 package data.scripts.plugins;
-//import javax.management.RuntimeErrorException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
@@ -23,10 +22,6 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     }
 
     private static void initModPlugin(){
-        //boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
-//        if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
-//            new Eusan_Nation_ModGen().generateNew(Global.getSector());
-//        }
         if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
             new Eusan_Nation_System().generate(Global.getSector());
             SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
@@ -53,10 +48,6 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
 
     // @Override
     // public void onGameLoad(boolean newGame) {
-    //     SectorAPI sector = Global.getSector();
-    //         if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
-    //             sector.addScript(new Eusan_Nation_personalFleetFalke());
-    //         }
     // }
     
     @Override
