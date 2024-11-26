@@ -35,7 +35,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     }
 
     protected PersonAPI officer_yeong;
-    protected PlanetAPI vineta;
     protected PlanetAPI target_planet;
     protected CampaignFleetAPI target_fleet;
     protected StarSystemAPI target_starsystem;
@@ -56,7 +55,6 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         }
 
         officer_yeong = getImportantPerson("eusan_nation_officer_yeong");
-        vineta = (PlanetAPI) Global.getSector().getEntityById("eusan_nation_vineta");
 
         resetSearch();
         requirePlanetUnpopulated();
