@@ -14,7 +14,7 @@ import com.fs.starfarer.api.util.Pair;
 
 import java.awt.Color;
 
-public class eusan_nation_VEB_rotfront_hydroponik extends BaseIndustry {
+public class Eusan_Nation_VEB_Rotfront_Hydroponik extends BaseIndustry {
 
 	protected static float farming_bonus = 2.0f;
 

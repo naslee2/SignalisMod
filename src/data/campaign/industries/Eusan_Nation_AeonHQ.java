@@ -10,7 +10,7 @@ import com.fs.starfarer.api.util.Pair;
 
 import java.awt.Color;
 
-public class eusan_nation_aeon_hq extends BaseIndustry{
+public class Eusan_Nation_AeonHQ extends BaseIndustry{
 
 	protected static float ship_quality_bonus = 0.1f;
     

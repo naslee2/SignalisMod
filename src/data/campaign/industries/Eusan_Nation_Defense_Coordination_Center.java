@@ -10,7 +10,7 @@ import com.fs.starfarer.api.util.Misc;
 
 import java.awt.Color;
 
-public class eusan_nation_defense_coordination_center extends BaseIndustry {
+public class Eusan_Nation_Defense_Coordination_Center extends BaseIndustry {
 
     protected static float ground_defense_bonus = 2f;
 

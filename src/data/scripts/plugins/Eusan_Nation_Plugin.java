@@ -4,7 +4,7 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import data.campaign.fleets.Eusan_Nation_personalFleetFalke;
+import data.campaign.fleets.Eusan_Nation_PersonalFleetFalke;
 
 import data.scripts.systems.Eusan_Nation_System;
 import exerelin.campaign.SectorManager;
@@ -54,8 +54,8 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     public void onNewGameAfterEconomyLoad() {
         SectorAPI sector = Global.getSector();
         new Eusan_Nation_PeopleData().create();
-        if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
-            sector.addScript(new Eusan_Nation_personalFleetFalke());
+        if (!sector.hasScript(Eusan_Nation_PersonalFleetFalke.class)) {
+            sector.addScript(new Eusan_Nation_PersonalFleetFalke());
         }
     }
 }

@@ -4,7 +4,7 @@ import com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-public class eusan_nation_herz_der_revolution extends BaseMarketConditionPlugin{
+public class Eusan_Nation_Herz_Der_Revolution extends BaseMarketConditionPlugin{
 
     protected static float heimat_stability_bonus = 2.0f;
 

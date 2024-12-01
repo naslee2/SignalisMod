@@ -273,7 +273,7 @@ public class Eusan_Nation_System {
         heimat_market.addIndustry(Industries.HEAVYBATTERIES);
         heimat_market.addIndustry(Industries.POPULATION);
         heimat_market.getIndustry(Industries.POPULATION).setImproved(true);
-        heimat_market.addIndustry("eusan_nation_aeon_hq");
+        heimat_market.addIndustry("eusan_nation_aeonHQ");
         heimat_market.addIndustry(Industries.STARFORTRESS);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_BLACK);

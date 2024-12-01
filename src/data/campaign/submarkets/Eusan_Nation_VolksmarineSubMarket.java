@@ -2,26 +2,21 @@ package data.campaign.submarkets;
 
 import org.apache.log4j.Logger;
 
-import com.fs.starfarer.api.campaign.SubmarketPlugin;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
-import com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin;
 import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
-import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.combat.CombatFleetManagerAPI;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 
-public class eusan_nation_volksmarineSubMarket extends BaseSubmarketPlugin{
+public class Eusan_Nation_VolksmarineSubMarket extends BaseSubmarketPlugin{
 
-    public static Logger log = Global.getLogger(eusan_nation_volksmarineSubMarket.class);
+    public static Logger log = Global.getLogger(Eusan_Nation_VolksmarineSubMarket.class);
     
     @Override
     public void init(SubmarketAPI submarket) {

@@ -22,7 +22,7 @@ import com.fs.starfarer.api.util.Pair;
 import java.awt.Color;
 import java.util.List;
 
-public class eusan_nation_Rotfront_Array extends BaseIndustry{
+public class Eusan_Nation_Rotfront_Array extends BaseIndustry{
 
     //Logger logger = Global.getLogger(eusan_nation_Rotfront_Array.class);
 
