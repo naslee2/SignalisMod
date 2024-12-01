@@ -6,7 +6,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.plugins.Eusan_Nation_MessageIntel;
+import data.campaign.intel.Eusan_Nation_MessageIntel;
 import org.apache.log4j.Logger;
 
 import java.util.List;

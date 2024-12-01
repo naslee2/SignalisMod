@@ -1,4 +1,4 @@
-package data.scripts.plugins;
+package data.campaign.intel;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI;
