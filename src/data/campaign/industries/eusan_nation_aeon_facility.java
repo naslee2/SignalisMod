@@ -5,7 +5,6 @@ import java.util.List;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -14,13 +13,10 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
-//import org.apache.log4j.Logger;
-
 import java.awt.Color;
 
 public class eusan_nation_aeon_facility extends BaseIndustry{
 
-	//Logger logger = Global.getLogger(eusan_nation_aeon_facility.class);
 
 	protected String[] miningOreConditionsList = new String[] {Conditions.ORE_ABUNDANT, Conditions.ORE_MODERATE, Conditions.ORE_RICH, Conditions.ORE_SPARSE, Conditions.ORE_ULTRARICH};
 	protected String[] miningRareOreConditionsList = new String[] {Conditions.RARE_ORE_ABUNDANT, Conditions.RARE_ORE_MODERATE, Conditions.RARE_ORE_RICH, Conditions.RARE_ORE_SPARSE, Conditions.RARE_ORE_ULTRARICH};
@@ -117,13 +113,10 @@ public class eusan_nation_aeon_facility extends BaseIndustry{
 
 	public boolean matchesConditionReq(String ... conditions){
         for (String condition : conditions) {
-			//logger.info("Logger Active: Condition is: " + condition);
             if(market.hasCondition(condition)) {
-				//logger.info("Logger Active: market has condition listed. TRUE");
 				return true;
         	}
 		}
-		//logger.info("Logger Active: market does not have condition listed: ");
         return false;
     }
 
