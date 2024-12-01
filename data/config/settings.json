@@ -7,6 +7,7 @@
             "gas_giant1":"graphics/planets/gas_giant1.png",
             "gas_giant2":"graphics/planets/gas_giant2.png",
             "vineta_planet":"graphics/planets/vineta_surface.png",
+            #"vineta_planet":"graphics/planets/Untitled.png",
             "kitezh_planet":"graphics/planets/kitezh_terraformed_terrain.png"
             
         },
