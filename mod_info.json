@@ -2,7 +2,7 @@
     "id": "eusan_nation",
     "name": "Eusan Nation",
     "author": "homete",
-    "version": "0.1.1b",
+    "version": "0.1.2",
     "description": "A silly mod based on the game Signalis",
     "gameVersion": "0.97a-RC7",
     "dependencies": [
