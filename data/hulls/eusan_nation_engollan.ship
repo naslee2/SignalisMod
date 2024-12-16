@@ -2,7 +2,7 @@
   "hullName": "Engollan",
   "hullId": "eusan_nation_engollan",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/eusan_nation_engollan2.png",
+  "spriteName": "graphics/ships/eusan_nation_engollan.png",
   "style": "MIDLINE",
   "coversColor": "180,180,180,255",
   "height": 208,

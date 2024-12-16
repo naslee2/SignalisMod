@@ -1,0 +1,87 @@
+{
+  "hullName": "Riems (Tanker)",
+  "hullId": "eusan_nation_riems_tanker",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/eusan_nation_riems_tanker.png",
+  "style": "MIDLINE",
+  "height": 190,
+  "width": 92,
+  "center": [46, 95],
+  "collisionRadius": 115,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 112.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -90,
+      "locations": [40, -13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 90,
+      "locations": [40, 13]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 60,
+      "locations": [92, 4]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": -60,
+      "locations": [92, -4]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [22, 24],
+      "length": 60,
+      "width": 13,
+      "angle": 158,
+      "contrailSize": 13,
+      "style": "EUSAN"
+    },
+    {
+      "location": [22, -24],
+      "length": 60,
+      "width": 13,
+      "angle": -158,
+      "contrailSize": 13,
+      "style": "EUSAN"
+    }
+  ],
+  "bounds": [
+    -83, -26,
+    -8, -26,
+    14, -20,
+    51, -41,
+    67, -26,
+    62, -19,
+    93, -8,
+    93, 8,
+    62, 19,
+    67, 26,
+    51, 41,
+    10, 21,
+    -8, 26,
+    -83, 26,
+    -93, -0
+  ]
+}
