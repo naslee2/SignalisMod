@@ -29,7 +29,7 @@ public class Eusan_Nation_System {
         system.getLocation().set(-33000, 34000);
         system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
     
-        PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initeStar( Unique starId, planettype from planets.json, radius, corona radius from star edge)
+        PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initStar( Unique starId, planet type from planets.json, radius, corona radius from star edge)
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
         system.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY,"music_campaign_alpha_site");
@@ -81,7 +81,7 @@ public class Eusan_Nation_System {
         CustomCampaignEntityAPI signalis_system_gate = system.addCustomEntity("alatyr_gate", "Alatyr Gate", "inactive_gate", null);
         signalis_system_gate.setCircularOrbit(signalisStar, 347f, 2950f, 280f);
 
-        //-VINETA AND THE SHATTERED MOON AND DEBRIS RING- Terran world? Water World?
+        //-VINETA AND THE SHATTERED MOON AND DEBRIS RING-Terran world? Water World?
         PlanetAPI vineta = system.addPlanet("eusan_nation_vineta", signalisStar, "Vineta", "flooded_world", 88f, 190f, 5000f, 360f);
         ProcgenUsedNames.notifyUsed("Vineta");
         vineta.setFaction("eusan_nation");
@@ -103,7 +103,7 @@ public class Eusan_Nation_System {
         vineta_market.addCondition(Conditions.ORE_MODERATE);
         vineta_market.addCondition(Conditions.ORGANICS_ABUNDANT);
         vineta_market.addCondition(Conditions.FARMLAND_ADEQUATE);
-        vineta_market.addCondition("eusan_nation_protektor_cadres");;
+        vineta_market.addCondition("eusan_nation_protektor_cadres");
         vineta_market.addIndustry(Industries.POPULATION);
         vineta_market.addIndustry(Industries.MEGAPORT);
         vineta_market.addIndustry(Industries.FARMING);
@@ -144,7 +144,7 @@ public class Eusan_Nation_System {
         innerJumpPoint.setRelatedPlanet(vineta);
         system.addEntity(innerJumpPoint);
 
-        //-KITZEH - Arid World-
+        //-KITEZH - Arid World-
         PlanetAPI kitezh = system.addPlanet("eusan_nation_kitezh", signalisStar, "Kitezh", "arid", 310f, 120f, 7000f, 687f);
         ProcgenUsedNames.notifyUsed("Kitezh");
         kitezh.setFaction("eusan_nation");
@@ -262,7 +262,7 @@ public class Eusan_Nation_System {
         heimat_market.addCondition(Conditions.RARE_ORE_SPARSE);
         heimat_market.addCondition(Conditions.LOW_GRAVITY);
         heimat_market.addCondition(Conditions.TOXIC_ATMOSPHERE);
-        heimat_market.addCondition(Conditions.REGIONAL_CAPITAL); //need to change to Headquaters condition when implemented in future Starsector versions
+        heimat_market.addCondition(Conditions.REGIONAL_CAPITAL); //need to change to Headquarters condition when implemented in future Starsector versions
         heimat_market.addCondition("eusan_nation_herz_der_revolution");
         heimat_market.addIndustry(Industries.MINING);
         heimat_market.addIndustry(Industries.FUELPROD);
@@ -273,7 +273,7 @@ public class Eusan_Nation_System {
         heimat_market.addIndustry(Industries.HEAVYBATTERIES);
         heimat_market.addIndustry(Industries.POPULATION);
         heimat_market.getIndustry(Industries.POPULATION).setImproved(true);
-        heimat_market.addIndustry("eusan_nation_aeon_hq");
+        heimat_market.addIndustry("eusan_nation_aeonHQ");
         heimat_market.addIndustry(Industries.STARFORTRESS);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_BLACK);

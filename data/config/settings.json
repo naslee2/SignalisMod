@@ -7,6 +7,7 @@
             "gas_giant1":"graphics/planets/gas_giant1.png",
             "gas_giant2":"graphics/planets/gas_giant2.png",
             "vineta_planet":"graphics/planets/vineta_surface.png",
+            #"vineta_planet":"graphics/planets/Untitled.png",
             "kitezh_planet":"graphics/planets/kitezh_terraformed_terrain.png"
             
         },
@@ -21,7 +22,7 @@
 
         },
         "ui":{
-
+            "keypad_bg":"graphics/ui/keypad.png"
         },
         "fx":{  
 			"trails_trail_clean":"graphics/trails/fx/trails_clean.png",
@@ -43,7 +44,8 @@
         "eusan_nation_people":{
             "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
             "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png"
-        }
+        },
+
 
 
     }

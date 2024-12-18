@@ -1,6 +1,6 @@
 package data.campaign.ids;
 
-public class eusan_nation_PeopleStrings {
+public class Eusan_Nation_PeopleStrings {
     //HEIMAT NPC
     public static String OFFICER_YEONG = "eusan_nation_officer_yeong";
     public static String ARIANE_YEONG_FIRSTNAME = "Ariane";
@@ -35,7 +35,7 @@ public class eusan_nation_PeopleStrings {
     public static String MARY_CHENG_FIRST_NAME = "Mary";
 	public static String MARY_CHENG_LAST_NAME = "Cheng";
 
-    public eusan_nation_PeopleStrings(){
+    public Eusan_Nation_PeopleStrings(){
     }
     
 }

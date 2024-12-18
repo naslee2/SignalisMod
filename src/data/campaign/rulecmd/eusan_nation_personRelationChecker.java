@@ -12,7 +12,6 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 
 public class eusan_nation_personRelationChecker extends BaseCommandPlugin{
 
-    @Override
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
         
         String relationLevel = params.get(0).getString(memoryMap);
@@ -49,11 +48,10 @@ public class eusan_nation_personRelationChecker extends BaseCommandPlugin{
                 return (relationLevelToPlayer < -74);
             default:
                 dialog.getTextPanel().addPara("Uh oh an error has occured!");
-                dialog.getTextPanel().addPara("No releation code for type: " + relationLevel);
+                dialog.getTextPanel().addPara("No relation code for type: " + relationLevel);
                 break;
-        }
-
-    return true;
+            }
+        return true;
     }
     
 }

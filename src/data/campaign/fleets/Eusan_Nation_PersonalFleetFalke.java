@@ -19,13 +19,13 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 //import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
 
-public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
-    //Logger logger = Global.getLogger(Eusan_Nation_personalFleetFalke.class);
+public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
+    //Logger logger = Global.getLogger(Eusan_Nation_PersonalFleetFalke.class);
 
     public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
     public static String EUSAN_NATION = "eusan_nation";
 
-    public Eusan_Nation_personalFleetFalke() {
+    public Eusan_Nation_PersonalFleetFalke() {
         super(ADMIRAL_FALKE);
         setMinRespawnDelayDays(10f);
         setMaxRespawnDelayDays(20f);
@@ -72,8 +72,8 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         falkeFleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
         heimat_market.getContainingLocation().addEntity(falkeFleet);
         falkeFleet.setLocation(heimat_market.getPlanetEntity().getLocation().x, heimat_market.getPlanetEntity().getLocation().y);
-        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, (SectorEntityToken) heimat_entity, 365);
-        falkeFleet.setFacing((float) random.nextFloat() * 360f);
+        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, heimat_entity, 365);
+        falkeFleet.setFacing(random.nextFloat() * 360f);
 
 
         //flagship
@@ -154,8 +154,7 @@ public class Eusan_Nation_personalFleetFalke extends PersonalFleetScript {
         MarketAPI heimat = Global.getSector().getEconomy().getMarket("heimat_market");
         //logger.info("Logger active: fleet is spawning at: " + heimat.getId());
         if (heimat == null || heimat.hasCondition(Conditions.DECIVILIZED)) return false;
-        if (!heimat.getFactionId().equals(EUSAN_NATION)) return false;
-        return true;
+        return heimat.getFactionId().equals(EUSAN_NATION);
     }
 
     @Override

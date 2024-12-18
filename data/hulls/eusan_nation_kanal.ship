@@ -1,0 +1,111 @@
+{
+  "hullName": "Kanal",
+  "hullId": "eusan_nation_kanal",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/eusan_nation_kanal.png",
+  "style": "MIDLINE",
+  "height": 278,
+  "width": 182,
+  "center": [91, 125],
+  "collisionRadius": 176,
+  "shieldCenter": [14, 0],
+  "shieldRadius": 158.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -55,
+      "locations": [37, -44]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 55,
+      "locations": [37, 44]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -100,
+      "locations": [-16, -55]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 100,
+      "locations": [-16, 55]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-114, -0],
+      "length": 33,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-116, 13],
+      "length": 33,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-116, -13],
+      "length": 33,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-105, 26],
+      "length": 30,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-105, -26],
+      "length": 30,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "EUSAN"
+    }
+  ],
+  "bounds": [
+    -122, -21,
+    -102, -42,
+    -69, -47,
+    -19, -74,
+    32, -57,
+    38, -62,
+    126, -34,
+    139, -0,
+    126, 34,
+    38, 62,
+    32, 57,
+    -19, 74,
+    -69, 47,
+    -102, 42,
+    -122, 21
+  ]
+}

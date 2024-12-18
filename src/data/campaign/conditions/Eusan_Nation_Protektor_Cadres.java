@@ -4,7 +4,7 @@ import com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-public class eusan_nation_protektor_cadres extends BaseMarketConditionPlugin{
+public class Eusan_Nation_Protektor_Cadres extends BaseMarketConditionPlugin{
 
     protected static float protektor_stability_bonus = 1.0f;
 

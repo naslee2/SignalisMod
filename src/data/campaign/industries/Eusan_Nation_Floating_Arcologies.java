@@ -4,11 +4,10 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 
 import java.awt.Color;
 
-public class eusan_nation_floating_arcologies extends BaseIndustry {
+public class Eusan_Nation_Floating_Arcologies extends BaseIndustry {
 
     public static float accessibility_bonus = 0.25f;
 

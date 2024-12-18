@@ -1,12 +1,17 @@
 package data.scripts.plugins;
-//import javax.management.RuntimeErrorException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorAPI;
-import data.campaign.fleets.Eusan_Nation_personalFleetFalke;
+import com.fs.starfarer.api.impl.campaign.shared.SharedData;
+import data.campaign.fleets.Eusan_Nation_PersonalFleetFalke;
 
+import data.kaysaar.ui.KeypadPanel;
+import data.scripts.systems.Eusan_Nation_System;
 import exerelin.campaign.SectorManager;
+import org.lazywizard.lazylib.MathUtils;
+
+import java.util.ArrayList;
 
 public class Eusan_Nation_Plugin extends BaseModPlugin {
     
@@ -21,9 +26,10 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     }
 
     private static void initModPlugin(){
-        //boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
         if (!nexerlinPresent || SectorManager.getManager().isCorvusMode()){
-            new Eusan_Nation_ModGen().generateNew(Global.getSector());
+            new Eusan_Nation_System().generate(Global.getSector());
+            SharedData.getData().getPersonBountyEventData().addParticipatingFaction("eusan_nation");
+            new Eusan_Nation_SetFactionRelations().SetFactionRelations(Global.getSector());
         }
     }
 
@@ -42,23 +48,50 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() throws Exception{
         super.onApplicationLoad();
-        //Global.getSettings().loadFont("graphics/fonts/silver.fnt");
     }
 
     // @Override
     // public void onGameLoad(boolean newGame) {
-    //     SectorAPI sector = Global.getSector();
-    //         if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
-    //             sector.addScript(new Eusan_Nation_personalFleetFalke());
-    //         }
     // }
     
     @Override
     public void onNewGameAfterEconomyLoad() {
         SectorAPI sector = Global.getSector();
         new Eusan_Nation_PeopleData().create();
-        if (!sector.hasScript(Eusan_Nation_personalFleetFalke.class)) {
-            sector.addScript(new Eusan_Nation_personalFleetFalke());
+        if (!sector.hasScript(Eusan_Nation_PersonalFleetFalke.class)) {
+            sector.addScript(new Eusan_Nation_PersonalFleetFalke());
         }
+    }
+
+    @Override
+    public void onGameLoad(boolean newGame) {
+        super.onGameLoad(newGame);
+        hometeKeyGenerator();
+    }
+    private  void hometeKeyGenerator() {
+        if(!Global.getSector().getMemory().contains(KeypadPanel.keyMemToKey)){
+            ArrayList<Integer> ints = new ArrayList<>();
+            int combinations = 5;
+
+            for (int i = 0; i < combinations; i++) {
+                while (true){
+                    int cur = MathUtils.getRandomNumberInRange(1,9);
+                    boolean found = false;
+                    for (Integer anInt : ints) {
+                        if(cur == anInt){
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(!found){
+                        ints.add(cur);
+                        break;
+                    }
+                }
+
+            }
+            Global.getSector().getMemory().set(KeypadPanel.keyMemToKey, ints);
+        }
+
     }
 }

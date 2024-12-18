@@ -33,7 +33,7 @@ public class eusan_nation_penroseRecovery1_rulecmd extends BaseCommandPlugin{
                 Global.getSoundPlayer().restartCurrentMusic();
                 break;
             default:
-                dialog.getTextPanel().addPara("Uh oh an error has occured!");
+                dialog.getTextPanel().addPara("Uh oh an error has occurred!");
                 dialog.getTextPanel().addPara("No intel for code: " + ruleCall1);
                 break;
         }

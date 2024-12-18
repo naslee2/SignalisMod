@@ -4,10 +4,10 @@
             "eusan_nation":["Rejuvenation Treaty"]
         },
         "independent":{
-			"eusan_nation":["Frendship and Assistance Group"]
+			"eusan_nation":["Friendship and Assistance Group"]
 		},
 		"persean":{
-			"eusan_nation":["Indepedent Systems Concord"]
+			"eusan_nation":["Independent Systems Concord"]
 		},
         "tritachyon":{
             "eusan_nation":["Stellar Tech Union"]
@@ -17,23 +17,23 @@
         },
         "eusan_nation":{
             "hegemony":["Rejuvenation Treaty"],
-            "independent":["Frendship and Assistance Group"],
-            "persean":["Indepedent Systems Concord"],
+            "independent":["Friendship and Assistance Group"],
+            "persean":["Independent Systems Concord"],
             "tritachyon":["Stellar Tech Union"],
             "sindrian_diktat":["The United Front"],
             #modded factions
-            "star_federation":["Indepedent Star Alliance"],
-            "mayasura":["Iapetus Initative"],
+            "star_federation":["Independent Star Alliance"],
+            "mayasura":["Iapetus Initiative"],
             "sikr_saniris":["Mutual Assistance Treaty"],
             "ironshell":["Rejuvenation Treaty"],
-            "batavia":["Indepedent Systems Concordiate"],
+            "batavia":["Independent Systems Concordat"],
             "rebelrats":["Pact of Independence"]
 		},
         "star_federation":{
-            "eusan_nation":["Indepedent Star Alliance"]
+            "eusan_nation":["Independent Star Alliance"]
         },
         "mayasura":{
-            "eusan_nation":["Iapetus Initative"]
+            "eusan_nation":["Iapetus Initiative"]
         },
         "sikr_saniris":{
             "eusan_nation":["Mutual Assistance Treaty"]
@@ -42,7 +42,7 @@
             "eusan_nation":["Rejuvenation Treaty"]
         },
         "batavia":{
-            "eusan_nation":["Indepedent Systems Concordiate"]
+            "eusan_nation":["Independent Systems Concordat"]
         },
         "rebelrats":{
             "eusan_nation":["Stellar Defence Treaty"]

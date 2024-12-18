@@ -18,19 +18,12 @@ public class Eusan_Nation_PlanetColdTypeRequirement implements PlanetRequirement
         //logger.info("Logger Active: Planet Type ID is: " + planetType);
         switch(planetType){
             case "frozen":
-                return true;
             case "frozen1":
-                return true;
             case "frozen2":
-                return true;
             case "frozen3":
-                return true;
             case "cryovolcanic":
-                return true;
             case "rocky_ice":
                 return true;
-            case "toxic_cold":
-                return false;
             default:
                 return false;
         }

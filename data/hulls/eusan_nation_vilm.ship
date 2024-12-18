@@ -1,0 +1,139 @@
+{
+  "hullName": "Vilm",
+  "hullId": "eusan_nation_vilm",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/eusan_nation_vilm.png",
+  "style": "MIDLINE",
+  "height": 356,
+  "width": 166,
+  "center": [83, 178],
+  "collisionRadius": 211,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 207.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 90,
+      "locations": [-34, 62]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -90,
+      "locations": [-34, -62]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 55,
+      "locations": [128, 44]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -55,
+      "locations": [128, -44]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 180,
+      "locations": [-161, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 38,
+      "locations": [138, 50]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -38,
+      "locations": [138, -50]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87, 52],
+      "length": 57,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-87, -52],
+      "length": 57,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-167, 9],
+      "length": 40,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-167, -9],
+      "length": 40,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-166, -0],
+      "length": 40,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "EUSAN"
+    }
+  ],
+  "bounds": [
+    -175, -16,
+    -137, -44,
+    -98, -40,
+    -94, -63.5,
+    -30, -78,
+    33, -56,
+    145, -56,
+    153, -43,
+    153, 43,
+    145, 56,
+    33, 56,
+    -30, 78,
+    -94, 63.5,
+    -98, 40,
+    -137, 44,
+    -175, 16
+  ]
+}
