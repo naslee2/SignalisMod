@@ -12,6 +12,5 @@
     <orderEntry type="library" name="Graphics" level="project" />
     <orderEntry type="library" name="LazyLib" level="project" />
     <orderEntry type="library" name="ExerelinCore" level="project" />
-    <orderEntry type="library" name="MagicLib" level="project" />
   </component>
 </module>
