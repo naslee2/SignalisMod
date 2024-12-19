@@ -249,7 +249,7 @@ public class Eusan_Nation_System {
         PlanetAPI heimat = system.addPlanet("eusan_nation_heimat", gas_giant2, "Heimat", "toxic", 50f, 90f, 1100f, 56f);
         heimat.setFaction("eusan_nation");
         heimat.setCustomDescriptionId("eusan_nation_heimat_planet");
-        //heimat.setInteractionImage("illustrations", "");
+        heimat.setInteractionImage("illustrations", "heimat_market");
 
         MarketAPI heimat_market = Global.getFactory().createMarket("heimat_market", heimat.getName(), 6);
         heimat_market.setPrimaryEntity(heimat);
