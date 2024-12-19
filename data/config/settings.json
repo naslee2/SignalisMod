@@ -19,7 +19,7 @@
             "vineta_clouds":"graphics/planets/vineta_clouds.png"
         },
         "illustrations":{
-
+            "heimat_market": "graphics/illustrations/heimat_illustration.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
