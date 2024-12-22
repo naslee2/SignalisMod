@@ -43,17 +43,17 @@
     ],
 
     "startShipsCombatSmall":[
-        ["eusan_nation_copthorne_standard","eusan_nation_tyrann_standard","eusan_nation_lerche_standard","eusan_nation_lerche_standard","eusan_nation_wachtel_standard","eusan_nation_pisagua_standard"],
-        ["eusan_nation_cantor_suppressor","eusan_nation_copthorne_standard","eusan_nation_iltis_standard","eusan_nation_iltis_standard","eusan_nation_pisagua_standard","eusan_nation_pisagua_standard"],
-        ["eusan_nation_tyrann_standard","eusan_nation_lerche_standard","eusan_nation_lerche_standard","eusan_nation_lerche_standard","eusan_nation_pisagua_standard","eusan_nation_pisagua_standard"]
+        ["eusan_nation_copthorne_standard","eusan_nation_lerche_standard","eusan_nation_riems_tanker_standard"],
+        ["eusan_nation_iltis_standard", "eusan_nation_tyrann_standard", "eusan_nation_riems_tanker_standard"],
+        ["eusan_nation_raubtier_standard", "eusan_nation_raubtier_standard","eusan_nation_riems_tanker_standard"]
     ],
     "startShipsCombatLarge":[
-        ["eusan_nation_revolution_standard","eusan_nation_comoros_standard","eusan_nation_engollan_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard"],
-        ["eusan_nation_isolde_standard","eusan_nation_jagd_standard","eusan_nation_jagd_standard","eusan_nation_jagd_standard","eusan_nation_raubtier_standard","eusan_nation_raubtier_standard"]
+        ["eusan_nation_engollan_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard","eusan_nation_riems_freighter_standard"],
+        ["eusan_nation_comoros_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard","eusan_nation_riems_freighter_standard"]
     ],
 
-    #"startShipsTradeSmall":[],
-    #"startShipsTradeLarge":[],
+    "startShipsTradeSmall":["eusan_nation_riems_freighter_standard", "eusan_nation_riems_tanker_standard","eusan_nation_cantor_standard"],
+    "startShipsTradeLarge":["eusan_nation_vilm_standard","eusan_nation_riems_tanker_standard","eusan_nation_trevivian_standard"],
 
     #"startShipsCarrierSmall":[],
     #"startShipsCarrierLarge":[],
@@ -64,7 +64,7 @@
     #"startShipsExplorerLarge":[],
 
     "startShipsGrandFleet":[
-        ["eusan_nation_admiral_standard", "eusan_nation_engollan_standard","eusan_nation_tremore_standard", "eusan_nation_comoros_standard","eusan_nation_engollan_standard","eusan_nation_copthorne_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard","eusan_nation_wachtel_standard"]
+        ["eusan_nation_admiral_standard","eusan_nation_tremore_standard","eusan_nation_copthorne_standard","eusan_nation_cantor_standard","eusan_nation_cantor_standard","eusan_nation_wachtel_standard"]
     ],
 
     #"startShipsSuper":[],

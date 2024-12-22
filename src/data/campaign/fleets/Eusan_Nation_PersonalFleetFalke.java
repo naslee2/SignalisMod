@@ -140,7 +140,16 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_freighter_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_freighter_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_tanker_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_tanker_standard");
 
         falkeFleet.getFleetData().sort();
 
