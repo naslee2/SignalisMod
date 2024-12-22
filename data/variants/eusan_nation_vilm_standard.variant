@@ -1,0 +1,26 @@
+{
+  "variantId": "eusan_nation_vilm_standard",
+  "hullId": "eusan_nation_vilm",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_kompakt",
+        "WS0002": "eusan_nation_kompakt",
+        "WS0003": "eusan_nation_dangpa",
+        "WS0004": "eusan_nation_dangpa",
+        "WS0005": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
