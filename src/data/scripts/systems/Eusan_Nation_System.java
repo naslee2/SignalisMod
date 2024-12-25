@@ -201,7 +201,7 @@ public class Eusan_Nation_System {
         PlanetAPI rotfront = system.addPlanet("eusan_nation_rotfront", gas_giant1, "Rotfront", "tundra", 0f, 90f, 800f, 22f);
         rotfront.setFaction("eusan_nation");
         rotfront.setCustomDescriptionId("eusan_nation_rotfront_planet");
-        //rotfront.setInteractionImage("illustrations", "");
+        rotfront.setInteractionImage("illustrations", "rotfront_market");
 
         MarketAPI rotfront_market = Global.getFactory().createMarket("rotfront_market", rotfront.getName(), 6);
         rotfront_market.setPrimaryEntity(rotfront);

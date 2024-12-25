@@ -81,7 +81,9 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         falkeFleet.getFlagship().getVariant().addMod("eusan_nation_K4_composite_armor");
         falkeFleet.getFlagship().getVariant().addPermaMod("eusan_nation_K4_composite_armor", false);
         falkeFleet.getFlagship().getVariant().addMod(HullMods.DEDICATED_TARGETING_CORE);
+        falkeFleet.getFlagship().getVariant().addPermaMod(HullMods.DEDICATED_TARGETING_CORE);
         falkeFleet.getFlagship().getVariant().addMod(HullMods.TURRETGYROS);
+        falkeFleet.getFlagship().getVariant().addPermaMod(HullMods.TURRETGYROS);
 
         //battleship division
         falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard");

@@ -7,7 +7,6 @@
             "gas_giant1":"graphics/planets/gas_giant1.png",
             "gas_giant2":"graphics/planets/gas_giant2.png",
             "vineta_planet":"graphics/planets/vineta_surface.png",
-            #"vineta_planet":"graphics/planets/Untitled.png",
             "kitezh_planet":"graphics/planets/kitezh_terraformed_terrain.png"
             
         },
@@ -19,7 +18,8 @@
             "vineta_clouds":"graphics/planets/vineta_clouds.png"
         },
         "illustrations":{
-            "heimat_market": "graphics/illustrations/heimat_illustration.png"
+            "heimat_market": "graphics/illustrations/heimat_illustration.png",
+            "rotfront_market": "graphics/illustrations/rotfront_illustration.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
@@ -31,7 +31,7 @@
 			"trails_trail_zappy":"graphics/trails/fx/trails_zappy.png",
 			"trails_trail_contrail":"graphics/trails/fx/trails_contrail.png",
 			"trails_trail_twin":"graphics/trails/fx/trails_twin.png",
-			"trails_trail_foggy":"graphics/trails/fx/trails_foggy.png",
+			"trails_trail_foggy":"graphics/trails/fx/trails_foggy.png"
         },
         "blueprint_packages":{
             "eusan_nation_standard_package":"graphics/icons/cargo/bp_eusan_nation_standard.png",
@@ -44,9 +44,6 @@
         "eusan_nation_people":{
             "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
             "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png"
-        },
-
-
-
+        }
     }
 }
