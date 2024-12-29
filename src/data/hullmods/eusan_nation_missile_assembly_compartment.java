@@ -13,18 +13,14 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
-    protected static float missile_ammo_bonus = 15f;
+    protected static float missile_ammo_bonus = 10f;
     protected static float missile_regen_bonus = 7.5f;
 	protected static float missile_flux_increase = 5f;
-
-	//protected static float small_missile_cost_reduction = 5;
-	//protected static float medium_missile_cost_reduction = 10;
-	//protected static float large_missile_cost_reduction = 15;
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);
         stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
-		stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_ammo_bonus);
+		stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_flux_increase);
 	
 	}
 
@@ -39,8 +35,6 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 		}
 		
 	}
-
-
 
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
