@@ -1153,7 +1153,7 @@ OR
 # ADMIRAL_FALKE_CHAT,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_VOLKSMARINE,,,,,,
-ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,,,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
 ADMIRAL_FALKE_CHAT_VOLKSMARINE_1,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption",,"She gives you a soft smile and disarming look. 
 
 ""Oh so you wish to know more about the Volksmarine, hmm?"" Admiral Falke says. 
@@ -1175,11 +1175,15 @@ ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == ad
 "#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,,,,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,,"admiralFalkeGrandFuelFleet1:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet2:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet3:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,"""The Grand Fuel Fleet?"" Admiral Falke responds. She puts a finger on her lips as if pondering her next words but it is clear she knows who you met.
+
+""Ah yes. Them. If there was any military formation that is full of pomp and predatory instinct it would be the Grand Fuel Fleet of the Sindrian Fuel Company. Their commanding officer is rather vicious opponent should you ever try to oppose her.""","admiralFalkeGrandFuelFleet1:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet1",,"""Then yet again, there is some truth to her reputation. For most people, she is the flame that draws the unfortunate moths to their doom.""
+
+""The Grand Fuel Fleet itself is also not to be taken lightly. They consist of the most powerful warships assigned to the Sindrian Fuel Comany fleet. The Sindrians are not idle in their pursuit of fuel profits. They have spent years producing weapons that can make other powers like the Hegemony and Leauge pause.""","admiralFalkeGrandFuelFleet2:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""","admiralFalkeGrandFuelFleet3:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions","""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""",,
 "#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
 "#END ADMIRAL_FALKE_CHAT",,,,,,
 ,,,,,,
