@@ -14,56 +14,37 @@ import java.awt.Color;
 public class eusan_nation_K4_composite_armor extends BaseHullMod {
 
     private float ENERGY_damage_increase = 0.1f;
-    private float FRAG_damage_reduction = 0.1f;
     private float HE_damage_reduction = 0.20f;
     private float KINETIC_damage_reduction = 0.20f;
 
     static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
     static String eusan_nation_k4_composite_armor1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText1");
-    //static String eusan_nation_k4_composite_armor2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText2");
-    static String eusan_nation_k4_composite_armor3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText3");
-    static String eusan_nation_k4_composite_armor4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText4");
-    static String eusan_nation_k4_composite_armor5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText5");
-    static String eusan_nation_k4_composite_armor6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText6");
+    static String eusan_nation_k4_composite_armor2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText3");
+    static String eusan_nation_k4_composite_armor3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText4");
+    static String eusan_nation_k4_composite_armor4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText5");
+    static String eusan_nation_k4_composite_armor5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText6");
 
 
     public void applyEffectsBeforeShipCreation (HullSize hullSize, MutableShipStatsAPI stats, String id){
         stats.getEnergyDamageTakenMult().modifyMult(id,  1.0f + ENERGY_damage_increase);
         stats.getHighExplosiveDamageTakenMult().modifyMult(id, 1.0f - HE_damage_reduction);
-        stats.getFragmentationDamageTakenMult().modifyMult(id, 1.0f - FRAG_damage_reduction);
         stats.getKineticDamageTakenMult().modifyMult(id, 1.0f - KINETIC_damage_reduction);
     }
-
-    // public String getDescriptionParam(int index, HullSize hullSize) {
-    //     if(index == 0){
-    //         return "" + (int) ENERGY_damage_increase + "%";
-    //     }
-    //     if(index == 1){
-    //         return "" + (int) HE_damage_reduction + "%";
-    //     }
-    //     if(index == 2){
-    //         return "" + (int) FRAG_damage_reduction + "%";
-    //     }
-    //     if(index == 3){
-    //         return "" + (int) KINETIC_damage_reduction + "%";
-    //     }
-	// 	return null;
-	// }
 
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
         final Color green = new Color(55,245,65,255);
 		final Color red = new Color(245,55,65,255);
 		final Color flavor = new Color(110,110,110,255);
-        final float pad = 5.0f;
+        final float pad10 = 5.0f;
+        final float pad5 = 5.0f;
 
-        tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
-        tooltip.addPara("- " + eusan_nation_k4_composite_armor1, 10f, red, (int) (100f * ENERGY_damage_increase) + "%");
-        //tooltip.addPara("- " + eusan_nation_k4_composite_armor2, pad, green, (int) (100f * FRAG_damage_reduction) + "%");
-        tooltip.addPara("- " + eusan_nation_k4_composite_armor3, pad, green, (int) (100f * HE_damage_reduction) + "%");
-        tooltip.addPara("- " + eusan_nation_k4_composite_armor4, pad, green, (int) (100f * KINETIC_damage_reduction) + "%");
-        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor5).italicize();
-        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor6);
+        tooltip.addSectionHeading(detailText, Alignment.MID, pad10  );
+        tooltip.addPara("- " + eusan_nation_k4_composite_armor1, pad10, red, (int) (100f * ENERGY_damage_increase) + "%");
+        tooltip.addPara("- " + eusan_nation_k4_composite_armor2, pad5, green, (int) (100f * HE_damage_reduction) + "%");
+        tooltip.addPara("- " + eusan_nation_k4_composite_armor3, pad5, green, (int) (100f * KINETIC_damage_reduction) + "%");
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor4).italicize();
+        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor5);
     }
 
     @Override

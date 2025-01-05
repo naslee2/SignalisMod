@@ -24,9 +24,7 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
 	public static float MISSILE_RANGE_MULT = 0.6f;
 	public static float MISSILE_RATE_BONUS = 35f;
 	public static float MISSILE_TURN_ACCEL_BONUS = 100f;
-
     public static float EW_PENALTY_MULT = 0.7f;
-
     public static float ECCM_CHANCE = 0.3f;
 	public static float GUIDANCE_IMPROVEMENT = 0.8f;
 
@@ -68,14 +66,6 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
 
 		}
 	}
-
-//    public String getDescriptionParam(int index, HullSize hullSize) {
-//        if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue() + "%";
-//        if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%";
-//		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue() + "%";
-//		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
-//		return null;
-//	}
 
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
