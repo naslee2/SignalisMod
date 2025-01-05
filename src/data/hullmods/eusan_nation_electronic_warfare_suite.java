@@ -1,5 +1,6 @@
 package data.hullmods;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +36,7 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
     static String eusan_nation_electronic_warfare_suite3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText3");
     static String eusan_nation_electronic_warfare_suite4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText4");
     static String eusan_nation_electronic_warfare_suite5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText5");
+	static String eusan_nation_electronic_warfare_suite6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText6");
 
     private static Map mag = new HashMap();
 	static {
@@ -67,24 +69,26 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
 		}
 	}
 
-    public String getDescriptionParam(int index, HullSize hullSize) {  
-        if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue() + "%";
-        if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%";
-		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue() + "%";
-		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
-		return null;
-	}
+//    public String getDescriptionParam(int index, HullSize hullSize) {
+//        if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue() + "%";
+//        if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%";
+//		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue() + "%";
+//		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
+//		return null;
+//	}
 
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
 		final Color flavor = new Color(110,110,110,255);
+		//String[] data = new String[]{"Frigate ", "Destroyer ", "Cruiser ", "Captial "};
 
         tooltip.addSectionHeading(detailText, Alignment.MID, 10.0F);
-        tooltip.addPara(eusan_nation_electronic_warfare_suite1, 10.0f, Misc.getHighlightColor(), (int) (ECCM_CHANCE * 100f) + "%");
-        tooltip.addPara(eusan_nation_electronic_warfare_suite2, 10.0f, Misc.getHighlightColor(), (int) MISSILE_RATE_BONUS + "%");
-        tooltip.addPara(eusan_nation_electronic_warfare_suite3, 10.0f, Misc.getHighlightColor(), (int) ((1f - EW_PENALTY_MULT) * 100f) + "%");
-        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite4).italicize();
-        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite5);
+		tooltip.addPara(eusan_nation_electronic_warfare_suite1, 10f, Misc.getHighlightColor(), new String[]{((Float) mag.get(HullSize.FRIGATE)).intValue() + "%", ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%", ((Float) mag.get(HullSize.CRUISER)).intValue() + "%", ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%"});
+        tooltip.addPara("- " + eusan_nation_electronic_warfare_suite2, 10.0f, Color.green, (int) (ECCM_CHANCE * 100f) + "%");
+        tooltip.addPara("- " + eusan_nation_electronic_warfare_suite3, 5f, Color.green, (int) MISSILE_RATE_BONUS + "%");
+        tooltip.addPara("- " + eusan_nation_electronic_warfare_suite4, 5f, Color.green, (int) ((1f - EW_PENALTY_MULT) * 100f) + "%");
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite5).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite6);
     }
 
     @Override
