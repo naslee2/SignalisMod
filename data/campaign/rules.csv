@@ -14,6 +14,8 @@ flavorTextMarketHeimat,TradePanelFlavorText,"$market.id == heimat_market score:1
 $id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. But after descending through them, your shuttle is greeted by an expansive metropolis, no doubt home to the vast majority of the planets population. The well maintained megaport is swarming with activity, and replikas in dress uniforms direct you to the expansive, almost opulent lobby - to sign more paperwork."" textGrayColor",,,
 flavorTextMarketLeng,TradePanelFlavorText,"$market.id == leng_market score:1000
 $id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, its mostly used for shipping cargo out. The replika security is more stern and abrasive, and every last one of them is armed. A feeling of fear and suspicion permeates the atmosphere, and most of the workers avoid your gaze."" textGrayColor",,,
+flavorTextMarketAbandonedVinetaStation,TradePanelFlavorText,"$market.id == eusan_nation_wrecked_station_market score:1000
+$id == eusan_nation_wrecked_station","AddText""The wrecked colonial era terraforming station is a relic from the Domain Era. Destroyed during the war between the Empire and the Nation, only wrecked ships and debris remain. However someone has fixed up the hull breaches and rebuilt the life support. Away from prying eyes of the Replika Protecktors, this is the perfect place to store things.""",,,
 "#END RULESET_TRADE_FLAVOR_TEXT_START",,,,,,
 ,,,,,,
 # RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
@@ -1311,7 +1313,7 @@ BeginConversation eusan_nation_marlis false true","""It's you... Sorry, but I th
 "#END MARLIS_GREETINGS",,,,,,
 ,,,,,,
 # MARLIS_BAR_SALES,,,,,,
-MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
+#MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
 
 She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barMarlis_cigs_intro:Browse the menu",
 #MARLIS_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barMarlis_cigs_intro2",,"You open the menu and begin browsing the items.","barMarlis_cigs_intro:Browse the menu",
@@ -1326,13 +1328,13 @@ AdjustRepActivePerson WELCOMING 1
 $player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Here you go! Enjoy."" she says as she hands you the pack.","barMarlis_cigs_intro:Look at the other items for sale.",
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
-SubCredits 50
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+AddCredits -50
 $player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
 MARLIS_BAR_SALES_EXIT_OPTION,PopulateMarlisBarSellOptions,,,,"barMarlis_cigs_exit:Go back",
 MARLIS_BAR_SALES_EXIT,DialogOptionSelected,"$option == barMarlis_cigs_exit","FireAll PopulateMarlisBarOptions",,,
 "#END MARLIS_BAR_SALES",,,,,,

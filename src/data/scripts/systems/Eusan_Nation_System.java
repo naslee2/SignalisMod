@@ -132,11 +132,11 @@ public class Eusan_Nation_System {
         system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f);
 
         //Wrecked Station related to Vineta
-        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("signalis_wrecked_station", "Abandoned Orbital Complex 6", "station_side02", "neutral");
+        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("eusan_nation_wrecked_station", "Abandoned Orbital Complex", "station_side02", "neutral");
         wrecked_station.setCircularOrbitPointingDown(vineta, 45f, 900f, 55f);
         wrecked_station.setInteractionImage("illustrations", "abandoned_station2");
-        wrecked_station.setCustomDescriptionId("signalis_wrecked_station");
-        Misc.setAbandonedStationMarket("signalis_wrecked_station_market", wrecked_station);
+        wrecked_station.setCustomDescriptionId("eusan_nation_wrecked_station");
+        Misc.setAbandonedStationMarket("eusan_nation_wrecked_station_market", wrecked_station);
         
         //Inner Jump Point related to Vineta
         JumpPointAPI innerJumpPoint = Global.getFactory().createJumpPoint("alatyr_jump_point", "Inner Jump Point");
