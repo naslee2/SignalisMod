@@ -22,8 +22,8 @@ public class eusan_nation_engineering_design extends BaseLogisticsHullMod{
     static String eusan_nation_engineering_design1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText1");
     static String eusan_nation_engineering_design2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText2");
 	static String eusan_nation_engineering_design3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText3");
-    static String eusan_nation_engineering_design4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText7");
-    static String eusan_nation_engineering_design5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText8");
+    static String eusan_nation_engineering_design4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText4");
+    static String eusan_nation_engineering_design5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText5");
 
     public void applyEffectsBeforeShipCreation(HullSize  hullSize, MutableShipStatsAPI stats, String id){
         stats.getBaseCRRecoveryRatePercentPerDay().modifyPercent(id, CR_RECOVERY_BONUS);

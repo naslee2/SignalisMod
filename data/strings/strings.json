@@ -11,7 +11,7 @@
         "eusan_nation_electronic_warfare_suiteText3":"Improved electronics increases missile maneuverability by %s, as well as significantly improving the guidance algorithm.",
         "eusan_nation_electronic_warfare_suiteText4":"Also reduces the weapon range reduction due to superior enemy Electronic Warfare by %s.",
         "eusan_nation_electronic_warfare_suiteText5":"The system processor periodically performs a background built-in-test(B-BIT), to check the status and calibration of the system. The system processor software is updated or reprogrammed as required from a memory loader verifier (MLV). The system processor uses two major software programs. The operational flight program (OFP) manages the receiver and transmitter functions, signal processing, and techniques generation. The mission data generator (MDG) contains the threat EID tables and the jamming techniques matrix for these threats.",
-        "eusan_nation_electronic_warfare_suiteText6":"         \u2014 Electronic Warfare Fundamentals 5th Edition",
+        "eusan_nation_electronic_warfare_suiteText6":"         \u2014 Electronic Warfare Fundamentals 7th Edition",
         "eusan_nation_replika_cadreText1":"",
         "eusan_nation_replika_cadreText2":"",
         "eusan_nation_replika_cadreText3":"Yes the replika cadre onboard have been working nonstop to repair the damage. Just yesterday we found out that the wiring for the port side compartments between frame 140 and 142 port side got severed but it did not show up on the diagnostics because rerouting systems kicked in. The LSTR units had to spend several hours crawling through the spaces to test, diagnose and repair it. They got banged up in the process so guess who has to fix them...",
@@ -25,7 +25,12 @@
         "eusan_nation_penrose_survey_equipmentText2":"This reduces the supply usage by %s",
         "eusan_nation_penrose_survey_equipmentText3":"It also reduce the expenditures of heavy machinery by %s",
         "eusan_nation_penrose_survey_equipmentText4":"Once you have discovered a viable planet, your next objective is to plot a course to the planet. At the same time, you are to send a coded message about this discovery back to Heimat at the listed frequencies in Appendix B of the Survey Handbook. Once the message has been sent and course has been plotted, based on your flight time and timeframe, prepare your ship for possible atmospheric entry as required by survey regulations.",
-        "eusan_nation_penrose_survey_equipmentText5":"         \u2014 Penrose Survey Briefing"
+        "eusan_nation_penrose_survey_equipmentText5":"         \u2014 Penrose Survey Briefing",
+        "eusan_nation_missile_assembly_compartmentText1": "Missile Ammo Bonus: %s",
+        "eusan_nation_missile_assembly_compartmentText2": "Missile Regen Bonus: %s",
+        "eusan_nation_missile_assembly_compartmentText3": "Missile Flux Increase: %s",
+        "eusan_nation_missile_assembly_compartmentText4": "Machinery? No fancy automated systems here. The replikas assemble the missiles and cranes send them to the ready service magazine area. Then they get loaded to the launchers. Not like the other powers with their fancy automated handling systems, we do things by hand.",
+        "eusan_nation_missile_assembly_compartmentText5": "         — Unnamed Fire Control Technician "
     }
 }
     

@@ -19,10 +19,10 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
 
     static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
     static String eusan_nation_k4_composite_armor1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText1");
-    static String eusan_nation_k4_composite_armor2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText3");
-    static String eusan_nation_k4_composite_armor3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText4");
-    static String eusan_nation_k4_composite_armor4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText5");
-    static String eusan_nation_k4_composite_armor5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText6");
+    static String eusan_nation_k4_composite_armor2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText2");
+    static String eusan_nation_k4_composite_armor3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText3");
+    static String eusan_nation_k4_composite_armor4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText4");
+    static String eusan_nation_k4_composite_armor5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_k4_composite_armorText5");
 
 
     public void applyEffectsBeforeShipCreation (HullSize hullSize, MutableShipStatsAPI stats, String id){
