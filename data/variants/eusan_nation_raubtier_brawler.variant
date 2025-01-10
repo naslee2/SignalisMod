@@ -1,26 +1,25 @@
 {
-  "variantId": "eusan_nation_raubtier_standard",
+  "variantId": "eusan_nation_raubtier_brawler",
   "hullId": "eusan_nation_raubtier",
-  "displayName": "standard",
+  "displayName": "Brawler",
   "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 7,
+  "fluxCapacitors": 5,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "targetingunit",
     "reinforcedhull",
-    "hardenedshieldemitter",
-    "auxiliarythrusters",
-    "hardened_subsystems"
+    "safetyoverrides",
+    "heavyarmor",
+    "armoredweapons"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "heavymortar",
-        "WS0002": "chaingun"
+        "WS0001": "eusan_nation_kompakt",
+        "WS0002": "eusan_nation_tulip"
       }
     },
     {

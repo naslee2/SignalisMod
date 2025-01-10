@@ -1,32 +1,34 @@
 {
-  "variantId": "eusan_nation_jagd_standard",
+  "variantId": "eusan_nation_jagd_wildcard",
   "hullId": "eusan_nation_jagd",
-  "displayName": "Standard",
+  "displayName": "Wildcard",
   "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 7,
+  "fluxCapacitors": 4,
+  "fluxVents": 2,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "advancedoptics",
-    "hardenedshieldemitter",
-    "armoredweapons"
+    "ballistic_rangefinder",
+    "missile_autoloader",
+    "auxiliarythrusters",
+    "targetingunit"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_lbhvel",
-        "WS0007": "heatseeker",
-        "WS0008": "heatseeker"
+        "WS0001": "eusan_nation_kompakt",
+        "WS0002": "eusan_nation_pebble",
+        "WS0003": "eusan_nation_pebble",
+        "WS0007": "sabot",
+        "WS0008": "sabot"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0002": "eusan_nation_dory",
         "WS0004": "eusan_nation_dangpa"
       }
     },
@@ -34,7 +36,6 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "eusan_nation_dory",
         "WS0005": "eusan_nation_dangpa"
       }
     },

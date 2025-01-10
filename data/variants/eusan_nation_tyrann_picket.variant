@@ -1,31 +1,30 @@
 {
-  "variantId": "eusan_nation_tyrann_standard",
+  "variantId": "eusan_nation_tyrann_picket",
   "hullId": "eusan_nation_tyrann",
-  "displayName": "Standard",
+  "displayName": "Picket",
   "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 8,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "reinforcedhull",
-    "hardenedshieldemitter"
+    "safetyoverrides"
   ],
   "weaponGroups": [
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "eusan_nation_wuqiong_double"
+        "WS0001": "eusan_nation_rogatina",
+        "WS0002": "heatseeker",
+        "WS0003": "sabot"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {
-        "WS0002": "atropos_single",
-        "WS0003": "atropos_single"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,

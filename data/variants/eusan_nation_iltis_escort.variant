@@ -1,22 +1,23 @@
 {
-  "variantId": "eusan_nation_iltis_standard",
+  "variantId": "eusan_nation_iltis_escort",
   "hullId": "eusan_nation_iltis",
-  "displayName": "Standard",
+  "displayName": "Escort",
   "goalVariant": true,
-  "fluxCapacitors": 4,
-  "fluxVents": 3,
+  "fluxCapacitors": 3,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "reinforcedhull",
-    "hardenedshieldemitter"
+    "missleracks",
+    "hiressensors",
+    "turretgyros"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "annihilatorpod"
+        "WS0001": "harpoonpod"
       }
     },
     {

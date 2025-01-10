@@ -1,10 +1,10 @@
 {
-  "variantId": "eusan_nation_isolde_standard",
+  "variantId": "eusan_nation_isolde_striker",
   "hullId": "eusan_nation_isolde",
-  "displayName": "Standard",
+  "displayName": "Striker",
   "goalVariant": true,
   "fluxCapacitors": 11,
-  "fluxVents": 7,
+  "fluxVents": 8,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -12,7 +12,7 @@
     "ablative_armor",
     "auxiliarythrusters",
     "reinforcedhull",
-    "blast_doors"
+    "targetingunit"
   ],
   "weaponGroups": [
     {
@@ -20,6 +20,7 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "eusan_nation_isolde_builtin",
+        "WS0002": "eusan_nation_taean",
         "WS0003": "eusan_nation_galdae_medium",
         "WS0004": "eusan_nation_galdae_medium",
         "WS0005": "eusan_nation_dangpa",
@@ -30,9 +31,7 @@
     {
       "autofire": false,
       "mode": "LINKED",
-      "weapons": {
-        "WS0002": "eusan_nation_lbhvel"
-      }
+      "weapons": {}
     },
     {
       "autofire": false,

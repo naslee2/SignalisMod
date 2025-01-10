@@ -1,36 +1,52 @@
 {
     "combatSmallForSmallFleet":{
         "eusan_nation_copthorne_standard":8,
+        "eusan_nation_copthorne_picket": 8,
         "eusan_nation_iltis_standard":8,
+        "eusan_nation_iltis_escort": 8,
         "eusan_nation_lerche_standard":8,
-        "eusan_nation_tyrann_standard":8
+        "eusan_nation_lerche_raider": 8,
+        "eusan_nation_tyrann_standard":8,
+        "eusan_nation_tyrann_picket": 8,
+        "eusan_nation_raubtier_standard":8,
+        "eusan_nation_raubtier_brawler": 8
     },
     "combatSmall":{
         "eusan_nation_copthorne_standard":8,
+        "eusan_nation_copthorne_picket": 8,
         "eusan_nation_iltis_standard":8,
+        "eusan_nation_iltis_escort": 8,
         "eusan_nation_lerche_standard":8,
+        "eusan_nation_lerche_raider": 8,
         "eusan_nation_tyrann_standard":8,
+        "eusan_nation_tyrann_picket": 8,
         "eusan_nation_raubtier_standard":8,
+        "eusan_nation_raubtier_brawler": 8,
         "eusan_nation_raubtier_imperial_standard":0
 
     },
     "combatMedium":{
         "eusan_nation_cantor_standard":7,
         "eusan_nation_cantor_suppressor":7,
+        "eusan_nation_cantor_CQB": 7,
         "eusan_nation_tremore_standard":7,
         "eusan_nation_trevivian_standard":7,
         "eusan_nation_triglav_standard":7,
         "eusan_nation_jagd_standard":7,
+        "eusan_nation_jagd_wildcard": 7,
         "eusan_nation_jagd_imperial_standard":0
     },
     "combatLarge":{
         "eusan_nation_comoros_standard":6,
         "eusan_nation_engollan_standard":6,
+        "eusan_nation_engollan_fleet": 6,
         "eusan_nation_isolde_standard":1,
+        "eusan_nation_isolde_striker": 1,
         "eusan_nation_isolde_imperial_standard":0
     },
     "combatCapital":{
         "eusan_nation_revolution_standard":2,
+        "eusan_nation_revolution_barrage": 2,
         "eusan_nation_admiral_standard":1
     },
     "crig":{},
