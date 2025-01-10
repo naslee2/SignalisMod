@@ -18,7 +18,7 @@ import java.awt.*;
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
     protected static float missile_ammo_bonus = 5f;
-    protected static float missile_regen_bonus = 3.5f;
+    protected static float missile_regen_bonus = 4f;
 	protected static float missile_flux_increase = 3f;
 
 	static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
