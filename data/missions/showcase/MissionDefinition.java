@@ -1,4 +1,4 @@
-package data.missions.eusanvirtualtraining1;
+package data.missions.showcase;
 
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -20,15 +20,42 @@ public class MissionDefinition implements MissionDefinitionPlugin{
         return flagship;
     }
 
+    final static String enemyCaptialSelect(){
+        final String [] choices2 = {
+                "conquest_DEM",
+                "pegasus_Strike",
+                "pegasus_Balanced",
+                "executor_Standard",
+                "conquest_Standard",
+                "onslaught_Standard",
+                "paragon_Escort",
+                "paragon_Raider",
+                "odyssey_Balanced",
+                "retribution_Standard",
+                "invictus_Standard",
+                "invictus_Support",
+                "atlas2_Standard",
+                "prometheus2_Standard",
+                "astral_Strike",
+                "astral_Attack",
+                "legion_Assault",
+                "legion_Escort",
+                "legion_FS",
+                "legion_Strike"
+        };
+        String enemySelect = choices2[(int) (Math.random() * (float) choices2.length)];
+        return enemySelect;
+    }
+
     public void defineMission(MissionDefinitionAPI api){
         api.initFleet(FleetSide.PLAYER, "VM", FleetGoal.ATTACK, false, 5);
         api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true);
 
         api.setFleetTagline(FleetSide.PLAYER, "Volksmarine Virtual Fleet");
-        api.setFleetTagline(FleetSide.ENEMY, "Virtual Enemy Forces (Hegemony)");
+        api.setFleetTagline(FleetSide.ENEMY, "Virtual Enemy Forces (Various)");
 
-        api.addBriefingItem("Defeat all enemy forces");
-        api.addBriefingItem("Performance will be recorded to the simulation administrators.");
+        api.addBriefingItem("Defeat the enemy warship");
+        api.addBriefingItem("Experiment with various tactics and equipment to win the engagement.");
 
         String flagshipSelection = flagshipSelect();
         api.addToFleet(FleetSide.PLAYER, flagshipSelection, FleetMemberType.SHIP, true);
@@ -57,18 +84,8 @@ public class MissionDefinition implements MissionDefinitionPlugin{
         api.addToFleet(FleetSide.PLAYER, "eusan_nation_riems_tanker_standard", FleetMemberType.SHIP, "VM Reims", false);
 
         //enemy fleet
-        api.addToFleet(FleetSide.ENEMY, "onslaught_Standard", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "legion_Strike", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "grendel_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "mora_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "eagle_Balanced", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "dominator_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "enforcer_Escort", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "condor_Strike", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "wolf_hegemony_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "lasher_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "gremlin_Strike", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
-        api.addToFleet(FleetSide.ENEMY, "centurion_Assault", FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
+        String enemyShip = enemyCaptialSelect();
+        api.addToFleet(FleetSide.ENEMY, enemyShip, FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
 
         // Set up the map.
         float width = 24000f;

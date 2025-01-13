@@ -1,0 +1,4 @@
+Location: OHS der VM - Virtual Training Computing Center
+Date: 204.2.15
+
+A virtual showcase program developed by the Offiziershochschule der Volksmarine. Users are encouraged to test out Volksmarine warships against the most common large ships of the Persean Sector. Utilize all the tools in your disposal to achieve victory.
