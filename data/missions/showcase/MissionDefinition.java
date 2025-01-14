@@ -1,7 +1,6 @@
 package data.missions.showcase;
 
 import com.fs.starfarer.api.fleet.FleetGoal;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.mission.FleetSide;
@@ -10,18 +9,14 @@ import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 
 public class MissionDefinition implements MissionDefinitionPlugin{
 
-    final static String flagshipSelect(){
-        final String [] choices = {
+    final String[] shipSelector(){
+        String[] array = new String[2];
+        final String[] choicesA ={
                 "eusan_nation_revolution_standard",
                 "eusan_nation_revolution_barrage",
                 "eusan_nation_admiral_standard"
         };
-        String flagship = choices[(int) (Math.random() * (float) choices.length)];
-        return flagship;
-    }
-
-    final static String enemyCaptialSelect(){
-        final String [] choices2 = {
+        final String [] choicesB = {
                 "conquest_DEM",
                 "pegasus_Strike",
                 "pegasus_Balanced",
@@ -43,8 +38,11 @@ public class MissionDefinition implements MissionDefinitionPlugin{
                 "legion_FS",
                 "legion_Strike"
         };
-        String enemySelect = choices2[(int) (Math.random() * (float) choices2.length)];
-        return enemySelect;
+        String flagship = choicesA[(int) (Math.random() * (float) choicesA.length)];
+        String enemySelect = choicesB[(int) (Math.random() * (float) choicesB.length)];
+        array[0] = flagship;
+        array[1] = enemySelect;
+        return array;
     }
 
     public void defineMission(MissionDefinitionAPI api){
@@ -57,8 +55,8 @@ public class MissionDefinition implements MissionDefinitionPlugin{
         api.addBriefingItem("Defeat the enemy warship");
         api.addBriefingItem("Experiment with various tactics and equipment to win the engagement.");
 
-        String flagshipSelection = flagshipSelect();
-        api.addToFleet(FleetSide.PLAYER, flagshipSelection, FleetMemberType.SHIP, true);
+        String[] flagshipSelection = shipSelector();
+        api.addToFleet(FleetSide.PLAYER, flagshipSelection[0], FleetMemberType.SHIP, true);
 
         //other player ships
         api.addToFleet(FleetSide.PLAYER, "eusan_nation_copthorne_standard", FleetMemberType.SHIP, "VM Copthorne", false);
@@ -84,8 +82,8 @@ public class MissionDefinition implements MissionDefinitionPlugin{
         api.addToFleet(FleetSide.PLAYER, "eusan_nation_riems_tanker_standard", FleetMemberType.SHIP, "VM Reims", false);
 
         //enemy fleet
-        String enemyShip = enemyCaptialSelect();
-        api.addToFleet(FleetSide.ENEMY, enemyShip, FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
+        String[] enemyShip = shipSelector();
+        api.addToFleet(FleetSide.ENEMY, enemyShip[1], FleetMemberType.SHIP, false).getCaptain().setPersonality(Personalities.AGGRESSIVE);
 
         // Set up the map.
         float width = 24000f;
