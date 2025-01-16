@@ -19,7 +19,8 @@
         },
         "illustrations":{
             "heimat_market": "graphics/illustrations/heimat_illustration.png",
-            "rotfront_market": "graphics/illustrations/rotfront_illustration.png"
+            "rotfront_market": "graphics/illustrations/rotfront_illustration.png",
+            "vineta_market": "graphics/illustrations/vineta_illustration.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"

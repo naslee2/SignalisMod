@@ -89,7 +89,7 @@ public class Eusan_Nation_System {
         vineta.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "vineta_habglows"));
         vineta.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", "vineta_clouds"));
         vineta.setCustomDescriptionId("eusan_nation_vineta_planet");
-        //vineta.setInteractionImage("illustrations", "");
+        vineta.setInteractionImage("illustrations", "vineta_market");
         vineta.applySpecChanges();
 
         MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 6);
