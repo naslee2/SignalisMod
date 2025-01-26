@@ -610,12 +610,13 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelect
 $player.officeryeongPenrose512_foundphoto == false",,"Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","$player.officeryeongPenrose512_foundphoto = true
-SetTextHighlights ""self-developing photo""
-","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
+SetTextHighlights ""self-developing photo"" ""Perhaps it would be best if you memorize this combination.""
+SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if this may come in handy. Perhaps it would be best if you memorize this combination.""
+KaysaarKeypad initCode","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
 
 Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...
 
-You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
+You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
 $player.officeryeongPenrose512_foundphoto == true",,"You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
@@ -642,7 +643,9 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == 
 ","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You finish looking at the map and ship plans.",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2b:Enter the Mess Hall","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
-$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
+$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
+
+Seems like the power is off. Without power, there is nothing you can gleam here.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
 $player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
@@ -701,10 +704,14 @@ $player.officeryeongPenrose512_foundphoto == true",,"The cryo bed itself is inta
 
 You locate the keypad on the sleeper, and flip over the photograph from the flight deck. The grids are the same size.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""","A crewmember tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye.
+$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""
+SetEnabled officeryeongPenrose512_cryo_explore2a false
+KaysaarKeypad initUI","A crewmember tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye.
 
-You remember that photo of the silver haired woman you found and pull it out from your pocket. Flipping it over you can now see that the red squares indicate the combination to open the cryo sleeper.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
+You remember that photo of the silver haired woman you found and pull it out from your pocket. Flipping it over you can now see that the red squares indicate the combination to open the cryo sleeper.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
+officeryeongPenrose512_cryo_explore2a_hint:Check the photo for the code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,,,,,
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""
