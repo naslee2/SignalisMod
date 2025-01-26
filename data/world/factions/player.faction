@@ -16,6 +16,10 @@
 			"logo":"graphics/factions/eusan_nation_player_rotfrontFlag.png",
 			"crest":"graphics/factions/eusan_nation_player_rotfrontCrest.png"
 		},
+		{
+        	"logo":"graphics/factions/eusan_nation_player_heimatFlag.png",
+        	"crest":"graphics/factions/eusan_nation_player_heimatCrest.png"
+        },
     ],
     "portraits":{
         "standard_male":[
