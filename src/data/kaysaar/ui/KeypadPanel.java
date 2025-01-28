@@ -36,7 +36,7 @@ public class KeypadPanel implements CustomUIPanelPlugin {
         panel = Global.getSettings().createCustom(width, height, this);
         createUIForFirstTime();
         ints = (ArrayList<Integer>) Global.getSector().getMemory().get(keyMemToKey);
-        logger.info("Logger Active: PENROSE-512 CRYO KEYCODE IS: " + ints.toString());
+        logger.info("Logger Active: UNORDERED PENROSE-512 CRYO KEYCODE IS: " + ints.toString());
         codeShowcaseMode = isItToShowCode;
     }
 
@@ -148,6 +148,8 @@ public class KeypadPanel implements CustomUIPanelPlugin {
             // Here you can add / disable /enable options after combination has been correctly hit
             // Also buttons are cleared so we won't cause memory leaks after exiting dialog or going to another option.
             dialog.getOptionPanel().setEnabled("officeryeongPenrose512_cryo_explore2a", true);
+            // disable hints if the user gets the combination correct.
+            dialog.getOptionPanel().setEnabled("officeryeongPenrose512_cryo_explore2a_hint", false);
         }
     }
 
