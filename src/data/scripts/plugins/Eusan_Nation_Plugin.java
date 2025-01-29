@@ -4,10 +4,11 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import data.campaign.fleets.Eusan_Nation_PersonalFleetFalke;
 
 import data.kaysaar.ui.KeypadPanel;
 import data.scripts.systems.Eusan_Nation_System;
+import data.scripts.plugins.KeyGenerator;
+import data.campaign.fleets.Eusan_Nation_PersonalFleetFalke;
 import exerelin.campaign.SectorManager;
 import org.lazywizard.lazylib.MathUtils;
 
@@ -66,7 +67,8 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     @Override
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
-        hometeKeyGenerator();
+        //hometeKeyGenerator();
+        new KeyGenerator().hometeKeyGenerator();
     }
     private  void hometeKeyGenerator() {
         if(!Global.getSector().getMemory().contains(KeypadPanel.keyMemToKey)){
@@ -88,10 +90,8 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
                         break;
                     }
                 }
-
             }
             Global.getSector().getMemory().set(KeypadPanel.keyMemToKey, ints);
         }
-
     }
 }
