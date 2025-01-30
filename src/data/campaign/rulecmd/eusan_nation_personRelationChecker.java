@@ -3,7 +3,6 @@ package data.campaign.rulecmd;
 import java.util.List;
 import java.util.Map;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;

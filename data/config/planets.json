@@ -9,7 +9,6 @@
 		"atmosphereThicknessMin":60, 
 		"atmosphereColor":[60,160,210,155],
 		"texture":"graphics/planets/vineta_surface.png",
-		#"texture":"graphics/planets/Untitled.png",
 		"cloudTexture":"graphics/planets/vineta_clouds.png",
 		"cloudColor":[255,255,255,250],
 		"cloudRotation":-7,

@@ -11,11 +11,7 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
 
-//import org.apache.log4j.Logger;
-
 public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
-
-    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery1.class);
 
     public static enum Stage {
         LOCATE_PENROSE419,
@@ -80,7 +76,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         //return false;
         return true;
     }
-
 
     protected void updateInteractionDataImpl(){
         set("$eusan_nation_penroseRecovery1_planetId", target_planet.getId());

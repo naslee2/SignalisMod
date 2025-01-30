@@ -17,10 +17,6 @@ import data.campaign.ids.Eusan_Nation_PeopleStrings;
 public class Eusan_Nation_PeopleData {
     public static String EUSAN_NATION = "eusan_nation";
 
-    //public static PersonAPI getPerson(String id) {
-		//return Global.getSector().getImportantPeople().getPerson(id);
-	//}
-
     public void create() {
         createImportantPeople_heimat();
         createImportantPeople_vineta();

@@ -15,7 +15,6 @@ import com.fs.starfarer.api.util.Misc;
 //import org.apache.log4j.Logger;
 
 import java.awt.Color;
-//import java.util.List;
 
 public class Eusan_Nation_Rotfront_Array extends BaseIndustry{
 
@@ -63,9 +62,6 @@ public class Eusan_Nation_Rotfront_Array extends BaseIndustry{
         super.advance(amount);
 
         for(CampaignFleetAPI fleet : system.getFleets()){
-//            if(fleet.isInHyperspaceTransition()){
-//                continue;
-//            }
             if(fleet.getFaction() == Global.getSector().getFaction("eusan_nation") || fleet.getFaction().isPlayerFaction()){
                 StatMod current = fleet.getStats().getSensorRangeMod().getFlatBonus(id);
 

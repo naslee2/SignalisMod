@@ -8,11 +8,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.SettingsAPI;
 import com.fs.starfarer.api.ui.Alignment;
-import com.fs.starfarer.api.ui.Fonts;
-import com.fs.starfarer.api.ui.LabelAPI;
-import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -85,7 +81,6 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
                 dialog.getTextPanel().addPara("No intel for this code!");
                 break;
         }
-
         return true; 
     }
     
