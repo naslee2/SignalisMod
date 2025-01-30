@@ -706,13 +706,11 @@ You locate the keypad on the sleeper, and flip over the photograph from the flig
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""
 SetEnabled officeryeongPenrose512_cryo_explore2a false
-KaysaarKeypad initUI","You already tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye.
-
-You remember that photo of the silver haired woman you found and pull it out from your pocket. Flipping it over you can now see that the red squares indicate the combination to open the cryo sleeper.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
+KaysaarKeypad initUI","The keypad next to the cryo chamber is brightly lit. The 9 digit keypad strangely has no numbers on the keys. Only the correct code will open this chamber.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2a_hint:Check the photo for the code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","SetTextHighlights ""photo""
-KaysaarKeypad initCode","You pull out the damaged photo and take a look. The woman in the photograph is still happily smiling. You flip the photo on its back and check the combination printed.","officeryeongPenrose512_cryo_explore2:Enter the code.",
+KaysaarKeypad initCode","You remember that photo of the silver haired woman you found and pull it out from your pocket. The woman in the photograph is still happily smiling. You flip the photo on its back and check the combination printed.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""
@@ -723,7 +721,7 @@ The crewmember tries again. The red light flashes again.
 The crewmember gives you a defeated look. Unless you wish to breach the seal and risk the life of the pilot inside, you will need the code to the 9 digit pad to unlock.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens, surrounding it and training more than a few weapons at it. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
 
 The doors hiss and open, disappointingly, to an empty chamber. Not so much as a smudge can be spotted on the interior as the water drains from it.","officeryeongPenrose512_cryo_explore3:Continue",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","eusan_nation_penrose512Quest_rulecmd resumeMusic_512
