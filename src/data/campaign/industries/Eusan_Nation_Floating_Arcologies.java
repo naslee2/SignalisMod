@@ -9,7 +9,7 @@ import java.awt.Color;
 
 public class Eusan_Nation_Floating_Arcologies extends BaseIndustry {
 
-    public static float accessibility_bonus = 0.25f;
+    public float accessibility_bonus = 0.25f;
 
     @Override
     public boolean isHidden(){

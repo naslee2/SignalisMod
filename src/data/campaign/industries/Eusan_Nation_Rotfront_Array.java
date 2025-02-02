@@ -20,8 +20,8 @@ public class Eusan_Nation_Rotfront_Array extends BaseIndustry{
 
     //Logger logger = Global.getLogger(Eusan_Nation_Rotfront_Array.class);
 
-    protected static float array_stability_bonus = 1.0f;
-    protected static float rotfront_array_sensor_bonus = 250f;
+    protected float array_stability_bonus = 1.0f;
+    protected float rotfront_array_sensor_bonus = 250f;
     StarSystemAPI system = Global.getSector().getStarSystem("Alatyr");
     //List<MarketAPI> data = Misc.getMarketsInLocation(system);
 

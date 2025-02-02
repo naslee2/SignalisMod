@@ -14,16 +14,16 @@ import java.awt.Color;
 import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_engineering_design extends BaseLogisticsHullMod{
-    public static float CR_RECOVERY_BONUS = 35f;
-    public static float REPAIR_RATE_BONUS = 35f;
-    public static float OVERLOAD_BONUS = 15f;
+    public float CR_RECOVERY_BONUS = 35f;
+    public float REPAIR_RATE_BONUS = 35f;
+    public float OVERLOAD_BONUS = 15f;
 
-    static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
-    static String eusan_nation_engineering_design1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText1");
-    static String eusan_nation_engineering_design2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText2");
-	static String eusan_nation_engineering_design3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText3");
-    static String eusan_nation_engineering_design4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText4");
-    static String eusan_nation_engineering_design5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText5");
+    String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+    String eusan_nation_engineering_design1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText1");
+    String eusan_nation_engineering_design2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText2");
+	String eusan_nation_engineering_design3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText3");
+    String eusan_nation_engineering_design4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText4");
+    String eusan_nation_engineering_design5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_engineering_designText5");
 
     public void applyEffectsBeforeShipCreation(HullSize  hullSize, MutableShipStatsAPI stats, String id){
         stats.getBaseCRRecoveryRatePercentPerDay().modifyPercent(id, CR_RECOVERY_BONUS);

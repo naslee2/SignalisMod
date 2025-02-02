@@ -11,7 +11,7 @@ import java.awt.Color;
 
 public class Eusan_Nation_VEB_Rotfront_Hydroponik extends BaseIndustry {
 
-	protected static float farming_bonus = 2.0f;
+	protected float farming_bonus = 2.0f;
 
     @Override
     public boolean isHidden(){

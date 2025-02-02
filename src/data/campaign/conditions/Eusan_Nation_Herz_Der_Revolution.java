@@ -6,7 +6,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class Eusan_Nation_Herz_Der_Revolution extends BaseMarketConditionPlugin{
 
-    protected static float heimat_stability_bonus = 2.0f;
+    protected float heimat_stability_bonus = 2.0f;
 
     public void apply(String id) {
 		if(isNationControlled()){

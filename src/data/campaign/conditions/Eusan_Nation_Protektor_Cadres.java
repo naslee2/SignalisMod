@@ -6,7 +6,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class Eusan_Nation_Protektor_Cadres extends BaseMarketConditionPlugin{
 
-    protected static float protektor_stability_bonus = 1.0f;
+    protected float protektor_stability_bonus = 1.0f;
 
     public void apply(String id){
 		if(isNationControlled()){

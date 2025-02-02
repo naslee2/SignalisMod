@@ -17,16 +17,16 @@ import java.awt.*;
 
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
-    protected static float missile_ammo_bonus = 5f;
-    protected static float missile_regen_bonus = 4f;
-	protected static float missile_flux_increase = 3f;
+    protected float missile_ammo_bonus = 5f;
+    protected float missile_regen_bonus = 4f;
+	protected float missile_flux_increase = 3f;
 
-	static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
-	static String eusan_nation_missile_assembly_compartment1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText1");
-	static String eusan_nation_missile_assembly_compartment2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText2");
-	static String eusan_nation_missile_assembly_compartment3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText3");
-	static String eusan_nation_missile_assembly_compartment4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText4");
-	static String eusan_nation_missile_assembly_compartment5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText5");
+	String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+	String eusan_nation_missile_assembly_compartment1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText1");
+	String eusan_nation_missile_assembly_compartment2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText2");
+	String eusan_nation_missile_assembly_compartment3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText3");
+	String eusan_nation_missile_assembly_compartment4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText4");
+	String eusan_nation_missile_assembly_compartment5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText5");
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);

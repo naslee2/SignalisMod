@@ -1,7 +1,5 @@
 package data.campaign.submarkets;
 
-import org.apache.log4j.Logger;
-
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
@@ -16,8 +14,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 
 public class Eusan_Nation_VolksmarineSubMarket extends BaseSubmarketPlugin{
 
-    public static Logger log = Global.getLogger(Eusan_Nation_VolksmarineSubMarket.class);
-    
     @Override
     public void init(SubmarketAPI submarket) {
 		super.init(submarket);

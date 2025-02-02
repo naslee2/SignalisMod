@@ -22,8 +22,8 @@ import org.lwjgl.util.vector.Vector2f;
 public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
     //Logger logger = Global.getLogger(Eusan_Nation_PersonalFleetFalke.class);
 
-    public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
-    public static String EUSAN_NATION = "eusan_nation";
+    protected static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
+    protected String EUSAN_NATION = "eusan_nation";
 
     public Eusan_Nation_PersonalFleetFalke() {
         super(ADMIRAL_FALKE);

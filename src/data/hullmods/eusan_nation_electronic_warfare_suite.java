@@ -21,23 +21,23 @@ import com.fs.starfarer.api.util.Misc;
 
 public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
     
-	public static float MISSILE_RANGE_MULT = 0.6f;
-	public static float MISSILE_RATE_BONUS = 35f;
-	public static float MISSILE_TURN_ACCEL_BONUS = 100f;
-    public static float EW_PENALTY_MULT = 0.7f;
-    public static float ECCM_CHANCE = 0.3f;
-	public static float GUIDANCE_IMPROVEMENT = 0.8f;
+	public float MISSILE_RANGE_MULT = 0.6f;
+	public float MISSILE_RATE_BONUS = 35f;
+	public float MISSILE_TURN_ACCEL_BONUS = 100f;
+    public float EW_PENALTY_MULT = 0.7f;
+    public float ECCM_CHANCE = 0.3f;
+	public float GUIDANCE_IMPROVEMENT = 0.8f;
 
-    static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
-    static String eusan_nation_electronic_warfare_suite1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText1");
-    static String eusan_nation_electronic_warfare_suite2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText2");
-    static String eusan_nation_electronic_warfare_suite3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText3");
-    static String eusan_nation_electronic_warfare_suite4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText4");
-    static String eusan_nation_electronic_warfare_suite5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText5");
-	static String eusan_nation_electronic_warfare_suite6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText6");
+	String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+	String eusan_nation_electronic_warfare_suite1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText1");
+	String eusan_nation_electronic_warfare_suite2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText2");
+    String eusan_nation_electronic_warfare_suite3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText3");
+    String eusan_nation_electronic_warfare_suite4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText4");
+    String eusan_nation_electronic_warfare_suite5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText5");
+	String eusan_nation_electronic_warfare_suite6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_electronic_warfare_suiteText6");
 
-    private static Map mag = new HashMap();
-	static {
+    private Map mag = new HashMap();
+	{
 		mag.put(HullSize.FRIGATE, 1f);
 		mag.put(HullSize.DESTROYER, 2f);
 		mag.put(HullSize.CRUISER, 3f);

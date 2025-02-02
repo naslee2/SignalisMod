@@ -7,9 +7,9 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 
 public class Eusan_Nation_FleetScaler{
 
-    static int playerFleetDP = 0;
-    static String enemyFaction;
-    static float strengthMult;
+    int playerFleetDP = 0;
+    String enemyFaction;
+    float strengthMult;
 
     
     public Eusan_Nation_FleetScaler(int data, String faction, float mult) {

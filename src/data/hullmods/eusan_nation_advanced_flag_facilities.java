@@ -15,8 +15,8 @@ import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
-    public static final float RECOVERY_BONUS = 225f;
-	public static final String MOD_ID = "eusan_nation_advanced_flag_facilities";
+    public final float RECOVERY_BONUS = 225f;
+	public final String MOD_ID = "eusan_nation_advanced_flag_facilities";
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 	}

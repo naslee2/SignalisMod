@@ -16,16 +16,16 @@ import org.magiclib.util.MagicIncompatibleHullmods;
 
 public class eusan_nation_replika_cadre extends BaseHullMod {
 
-    public static float MAINTENANCE_MULT = 0.6f;
-    public static float REPAIR_BONUS = 35f;
+    public float MAINTENANCE_MULT = 0.6f;
+    public float REPAIR_BONUS = 35f;
 
-    static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
-    static String eusan_nation_replika_cadre1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText1");
+    String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+    String eusan_nation_replika_cadre1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText1");
 
-    static String eusan_nation_replika_cadre2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText2");
+    String eusan_nation_replika_cadre2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText2");
 
-    static String eusan_nation_replika_cadre3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText3");
-    static String eusan_nation_replika_cadre4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText4");
+    String eusan_nation_replika_cadre3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText3");
+    String eusan_nation_replika_cadre4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_replika_cadreText4");
     
     public void applyEffectsBeforeShipCreation(HullSize  hullSize, MutableShipStatsAPI stats, String id){
         stats.getMinCrewMod().modifyMult(id, MAINTENANCE_MULT);

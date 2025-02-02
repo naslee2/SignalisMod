@@ -12,7 +12,7 @@ import java.awt.Color;
 
 public class Eusan_Nation_AeonHQ extends BaseIndustry{
 
-	protected static float ship_quality_bonus = 0.1f;
+	protected float ship_quality_bonus = 0.1f;
     
     @Override
     public boolean isHidden(){
