@@ -152,7 +152,7 @@ public class Eusan_Nation_System {
         kitezh.getSpec().setTexture(Global.getSettings().getSpriteName("planets","kitezh_planet"));
         kitezh.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "kitezh_habglows"));
         //kitezh.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", ""));
-        //kitezh.setInteractionImage("illustrations", "");
+        kitezh.setInteractionImage("illustrations", "kitezh_market");
         kitezh.applySpecChanges();
 
         MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 5);
