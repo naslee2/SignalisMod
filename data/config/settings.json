@@ -21,7 +21,8 @@
             "heimat_market": "graphics/illustrations/heimat_illustration.png",
             "rotfront_market": "graphics/illustrations/rotfront_illustration.png",
             "vineta_market": "graphics/illustrations/vineta_illustration.png",
-            "kitezh_market": "graphics/illustrations/kitezh_illustration.png"
+            "kitezh_market": "graphics/illustrations/kitezh_illustration.png",
+            "buyan_market": "graphics/illustrations/buyan_illustration.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
