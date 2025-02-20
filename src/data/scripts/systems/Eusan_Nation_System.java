@@ -293,7 +293,7 @@ public class Eusan_Nation_System {
         ProcgenUsedNames.notifyUsed("Leng");
         leng.setFaction("eusan_nation");
         leng.setCustomDescriptionId("eusan_nation_leng_planet");
-        //leng.setInteractionImage("illustrations", "");
+        leng.setInteractionImage("illustrations", "leng_market");
 
         MarketAPI leng_market = Global.getFactory().createMarket("leng_market", leng.getName(), 5);
         leng_market.setPrimaryEntity(leng);
