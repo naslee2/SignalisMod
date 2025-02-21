@@ -50,7 +50,6 @@ public class Eusan_Nation_System {
         buyan.setFaction(Factions.PIRATES);
         buyan.setCustomDescriptionId("eusan_nation_buyan_planet");
         buyan.setInteractionImage("illustrations", "buyan_market");
-        buyan.applySpecChanges();
     
         MarketAPI buyan_market = Global.getFactory().createMarket("buyan_market", buyan.getName(), 5);
         buyan_market.setPrimaryEntity(buyan);
