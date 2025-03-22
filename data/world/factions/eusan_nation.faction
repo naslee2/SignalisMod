@@ -13,7 +13,6 @@
 	"showInIntelTab":true,
 
 	"shipNameSources":{
-		"MERCANTILE":1,
 		"BRITISH_NAVY":1,
 		"Eusan_Nation_DDR_VM":1,
 		"Eusan_Nation_KOR":1,
@@ -248,7 +247,7 @@
 		],
 		"standard_female":[
 			"graphics/portraits/eusan_nation_female_128_1.png",
-			"graphics/portraits/portrait_hegemony04.png",
+			"graphics/portraits/eusan_nation_female_128_2.png",
 			"graphics/portraits/portrait_hegemony08.png",
 			"graphics/portraits/portrait_hegemony10.png",
 			"graphics/portraits/portrait_hegemony11.png",
