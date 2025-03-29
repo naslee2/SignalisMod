@@ -3,14 +3,7 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\UAF\data\campaign\commodities.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\UAF\data\missions\mission_list.csv">
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\characters\person_names.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -74,6 +67,13 @@
           </value>
         </entry>
         <entry key="\data\campaign\submarkets.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\data\characters\person_names.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

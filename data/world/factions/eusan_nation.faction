@@ -24,9 +24,8 @@
 	"names":{
 		"old english":1,
 		"modern":1,
-		"world":1,
-		"future":1,
-		"myth":1,
+		"eusan_nation_cn_names":1,
+		"eusan_nation_vn_names":1
 	},
 	
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
