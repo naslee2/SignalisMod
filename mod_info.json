@@ -4,7 +4,7 @@
     "author": "homete",
     "version": "0.1.2",
     "description": "A silly mod based on the game Signalis",
-    "gameVersion": "0.97a-RC7",
+    "gameVersion": "0.98a-RC5",
     "dependencies": [
         {"id": "lw_lazylib", "name": "LazyLib"},
 		{"id": "MagicLib", "name": "MagicLib"}
