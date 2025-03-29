@@ -78,10 +78,12 @@ eusan_nation_kayak,WEAPON,A powerful torpedo launcher for the Triglav destroyers
 eusan_nation_kayak_R,WEAPON,A powerful rocket launcher for the Triglav destroyers in a common mounting system. Fires dozens of rockets in a single salvo to overwhelm enemy defensive fires and shields.,,,,
 eusan_nation_isolde_builtin,WEAPON,The primary weapon mounted on all Isolde cruisers. Mounted on the front of the hull to take maximum advantage of its narrow forward hull profile.,,,,
 eusan_nation_pd_damper,SHIP_SYSTEM,Briefly activates an energy field that mitigates incoming damage at the cost of disabling weapons and shields. Point Defense weapons are not affected.,,,,
-#GALLERY
+#GALLERY,,,,,,
 heimat_market,GALLERY,"Heimat, Heart of the Revolution","""The beating heart of the Revolution is also the center of our new Nation. Without the sacrifices of martyr, the Nation would not have prevailed over the Empire. Now, come with me and help us build a new future for the Nation!""",,,,
 rotfront_market,GALLERY,"Rotfront, Hope of the Future","""No matter how many times I tell myself its a storm in a gas giant, I feel like I am being watched by that red eye in the sky.""",,,,
 vineta_market,GALLERY,"Vineta, Jewel of the Nation","""The cities are flooded, the moon is cracked, people are starving, and the Nation's banner flutters victoriously over the ruins of murdered world.""",,,,
 kitezh_market,GALLERY,"Kitezh, the Liberated World","""The Nation triumphant, a planet liberated. The fruits of Victory for the Nation, but not for Kitezh's people.""",,,,
 buyan_market,GALLERY,"Buyan, our Victory over the Empire","""Buyan burns. I can smell the smoke. The Empire is failing and the Nation is ascendant.""",,,,
 leng_market,GALLERY,"Leng, Nation's Frontier","""As I walked through the maze of flesh, the memories keep flooding in. The pain, the sorrow, happiness, and love. I can no longer tell which are mine and which are her's, only that we are together now.""",,,,
+#PLANETS,,,,,,
+flooded_world,PLANET,"Rising sea levels have turned this otherwise habitable world into a flooded planet. The ecosystem will take time to recover from the sudden change of landscape on its own.",,,,,
