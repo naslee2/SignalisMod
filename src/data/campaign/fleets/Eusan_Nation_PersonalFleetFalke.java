@@ -17,24 +17,28 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.Of
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 
 //import org.apache.log4j.Logger;
+import data.campaign.ids.Eusan_Nation_PeopleStrings;
 import org.lwjgl.util.vector.Vector2f;
 
 public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
     //Logger logger = Global.getLogger(Eusan_Nation_PersonalFleetFalke.class);
 
-    protected static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
     protected String EUSAN_NATION = "eusan_nation";
 
     public Eusan_Nation_PersonalFleetFalke() {
-        super(ADMIRAL_FALKE);
+        super(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         setMinRespawnDelayDays(10f);
         setMaxRespawnDelayDays(20f);
+    }
+
+    protected MarketAPI getSourceMarket(){
+        return Global.getSector().getEconomy().getMarket("heimat_market");
     }
 
     @Override
     public CampaignFleetAPI spawnFleet() {
 
-        MarketAPI heimat_market = Global.getSector().getEconomy().getMarket("heimat_market");
+        MarketAPI heimat_market = getSourceMarket();
         //logger.info("Logger active: .getMarket is: " + heimat.getStarSystem());
         SectorEntityToken heimat_entity = Global.getSector().getEntityById("eusan_nation_heimat");
 
