@@ -24,8 +24,8 @@
 	"names":{
 		"old english":1,
 		"modern":1,
-		"eusan_nation_cn_names":1,
-		"eusan_nation_vn_names":1
+		"eusan_nation_cn_names":2,
+		"eusan_nation_vn_names":2
 	},
 	
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
@@ -242,12 +242,11 @@
 			"graphics/portraits/portrait_mercenary06.png",
 			"graphics/portraits/portrait_mercenary08.png",
 			"graphics/portraits/portrait15.png",
-			"graphics/portraits/portrait33.png",
 		],
 		"standard_female":[
 			"graphics/portraits/eusan_nation_female_128_1.png",
 			"graphics/portraits/eusan_nation_female_128_2.png",
-			"graphics/portraits/portrait_hegemony08.png",
+			"graphics/portraits/eusan_nation_female_128_3.png",
 			"graphics/portraits/portrait_hegemony10.png",
 			"graphics/portraits/portrait_hegemony11.png",
 			"graphics/portraits/portrait_hegemony14.png",
@@ -264,7 +263,7 @@
 			"factionLeader":{"name":"The Great Revolutionary"},
 			"spaceFleetAdmiral":{"name":"Flottenadmiral"},
 			"spaceAdmiral":{"name":"Admiral"},
-			"spaceCommander":{"name":"Vize­admiral"},
+			"spaceCommander":{"name":"Vize-admiral"},
 	
 		},
 		"posts":{
