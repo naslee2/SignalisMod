@@ -3,7 +3,49 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Sephira Conclave\data\campaign\commodities.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Sephira Conclave\data\campaign\industries.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Sephira Conclave\data\campaign\market_conditions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Sephira Conclave\data\campaign\special_items.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\Sephira Conclave\data\campaign\submarkets.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\campaign\commodities.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\campaign\market_conditions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -18,6 +60,13 @@
           </value>
         </entry>
         <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\missions\mission_list.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\shipsystems\ship_systems.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -123,6 +172,13 @@
           </value>
         </entry>
         <entry key="\data\missions\mission_list.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\data\shipsystems\ship_systems.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
