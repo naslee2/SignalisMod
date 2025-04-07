@@ -70,7 +70,7 @@ eusan_nation_admiral_builtin1,WEAPON,An exceptionally powerful main gun for Admi
 eusan_nation_admiral_builtin2,WEAPON,An exceptionally powerful main gun for Admiral Class Battleships. The guns are so powerful that they penetrate almost all armor and deal severe damage to hulls.,,,,
 eusan_nation_kayak,WEAPON,A powerful torpedo launcher for the Triglav destroyers mounting system. Fires four powerful torpedoes for exceptional anti-armor effect.,,,,
 eusan_nation_kayak_R,WEAPON,A powerful rocket launcher for the Triglav destroyers in a common mounting system. Fires dozens of rockets in a single salvo to overwhelm enemy defensive fires and shields.,,,,
-eusan_nation_isolde_builtin,WEAPON,The primary weapon mounted on all Isolde cruisers. Mounted on the front of the hull to take maximum advantage of its narrow forward hull profile.,,,,
+eusan_nation_isolde_builtin,WEAPON,The primary weapon mounted on all Isolde cruisers. Mounted on the front of the hull to take maximum advantage of its narrow forward hull profile. Fires 220mm ammunition.,,,,
 eusan_nation_pd_damper,SHIP_SYSTEM,Briefly activates an energy field that mitigates incoming damage at the cost of disabling weapons and shields. Point Defense weapons are not affected.,,,,
 #GALLERY,,,,,,
 heimat_market,GALLERY,"Heimat, Heart of the Revolution","""The beating heart of the Revolution is also the center of our new Nation. Without the sacrifices of martyr, the Nation would not have prevailed over the Empire. Now, come with me and help us build a new future for the Nation!""",,,,
