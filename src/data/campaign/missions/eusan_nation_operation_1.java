@@ -6,6 +6,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Voices;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
@@ -36,7 +37,9 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         eldfell = Global.getSector().getEconomy().getMarket("eldfell");
         admiral_falke = getImportantPerson(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         specialAgent = getImportantPerson(Eusan_Nation_PeopleStrings.SPECIAL_AGENT);
-        hvt = getImportantPerson("eusan_nation_hvt");
+        //hvt = getImportantPerson("eusan_nation_hvt");
+
+        eldfell.getCommDirectory().addPerson(specialAgent);
 
         if(admiral_falke == null){
             return false;
@@ -55,17 +58,31 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
 
         setStoryMission();
 
-        setStageOnMemoryFlag(Stage.TALK_TO_AGENT,admiral_falke,"$eusan_nation_operation_1_talk_to_agent");
-        setStageOnGlobalFlag(Stage.LOCATE_HVT,"$eusan_nation_operation_1_locate_hvt");
-        setStageOnGlobalFlag(Stage.COMPLETED,"$eusan_nation_operation_1_competed");
+        setStageOnMemoryFlag(Stage.TALK_TO_AGENT,admiral_falke,"$eusan_nation_operation1_talk_to_agent");
+        setStageOnGlobalFlag(Stage.LOCATE_HVT,"$eusan_nation_operation1_locate_hvt");
+        setStageOnGlobalFlag(Stage.RETURN_TO_HEIMAT,"$eusan_nation_operation1_return_to_heimat");
+        setStageOnGlobalFlag(Stage.COMPLETED,"$eusan_nation_operation1_competed");
 
         beginStageTrigger(Stage.TALK_TO_AGENT);
-        makeImportant(eldfell,"$eusan_nation_operation_1_eldfell",Stage.TALK_TO_AGENT);
+        makeImportant(specialAgent,"$eusan_nation_operation1_eldfell",Stage.TALK_TO_AGENT);
         endTrigger();
 
         beginStageTrigger(Stage.LOCATE_HVT);
-        makeImportant(kazeron,"$eusan_nation_operation_1_locate_hvt",Stage.LOCATE_HVT);
+        triggerHideCommListing(specialAgent);
+        makeImportant(kazeron,"$eusan_nation_operation1_locate_hvt",Stage.LOCATE_HVT);
         endTrigger();
+
+        beginStageTrigger(Stage.RETURN_TO_HEIMAT);
+        makeImportant(admiral_falke,"$eusan_nation_operation1_return_to_heimat",Stage.RETURN_TO_HEIMAT);
+        endTrigger();
+
+        beginStageTrigger(Stage.COMPLETED);
+        triggerSetGlobalMemoryValue("$eusan_nation_operation1_completed", true);
+        endTrigger();
+
+        setCreditReward(50000);
+        setRepRewardPerson(0.15f);
+        setRepRewardFaction(CoreReputationPlugin.RepRewards.EXTREME);
 
         return true;
     }
