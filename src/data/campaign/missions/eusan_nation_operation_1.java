@@ -33,6 +33,7 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
     protected boolean create(MarketAPI createdAt, boolean barEvent) {
 
         kazeron = Global.getSector().getEconomy().getMarket("kazeron");
+        eldfell = Global.getSector().getEconomy().getMarket("eldfell");
         admiral_falke = getImportantPerson(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         specialAgent = getImportantPerson(Eusan_Nation_PeopleStrings.SPECIAL_AGENT);
         hvt = getImportantPerson("eusan_nation_hvt");
@@ -53,6 +54,18 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         addSuccessStages(Stage.COMPLETED);
 
         setStoryMission();
+
+        setStageOnMemoryFlag(Stage.TALK_TO_AGENT,admiral_falke,"$eusan_nation_operation_1_talk_to_agent");
+        setStageOnGlobalFlag(Stage.LOCATE_HVT,"$eusan_nation_operation_1_locate_hvt");
+        setStageOnGlobalFlag(Stage.COMPLETED,"$eusan_nation_operation_1_competed");
+
+        beginStageTrigger(Stage.TALK_TO_AGENT);
+        makeImportant(eldfell,"$eusan_nation_operation_1_eldfell",Stage.TALK_TO_AGENT);
+        endTrigger();
+
+        beginStageTrigger(Stage.LOCATE_HVT);
+        makeImportant(kazeron,"$eusan_nation_operation_1_locate_hvt",Stage.LOCATE_HVT);
+        endTrigger();
 
         return true;
     }
