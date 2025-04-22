@@ -102,6 +102,21 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         return false;
     }
 
+    protected void updateInteractionDataImpl() {
+        set("$eusan_nation_operation1_stage", getCurrentStage());
+    }
+
+    @Override
+    public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height){
+        float opad = 10f;
+        if(currentStage == Stage.TALK_TO_AGENT) {
+        }
+        if(currentStage == Stage.LOCATE_HVT) {
+        }
+        else if(currentStage == Stage.RETURN_TO_HEIMAT){
+        }
+    }
+
     @Override
     public String getBaseName() {
         return "Extract the HVT";
