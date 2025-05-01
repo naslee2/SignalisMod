@@ -18,6 +18,7 @@ public class Eusan_Nation_PeopleData {
         createImportantPeople_heimat();
         createImportantPeople_vineta();
         createImportantPeople_rotfront();
+        createImportantPeople_leng();
         createImportantPeople_miscOfficers();
         createImportantPeople_miscPeople();
 	}
@@ -85,7 +86,6 @@ public class Eusan_Nation_PeopleData {
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
             market_heimat.addPerson(greatRevolutionary);
             importantPeople_heimat.addPerson(greatRevolutionary);
-
         }
     }
 
@@ -134,6 +134,7 @@ public class Eusan_Nation_PeopleData {
             rotfront_fleetAdmiral.setVoice(Voices.SOLDIER);
             importantPeople_rotfront.addPerson(rotfront_fleetAdmiral);
 
+            //Marlis
             PersonAPI rotfront_marlis = Global.getFactory().createPerson();
             rotfront_marlis.setId(Eusan_Nation_PeopleStrings.MARLIS);
             rotfront_marlis.setFaction(EUSAN_NATION);
@@ -146,6 +147,29 @@ public class Eusan_Nation_PeopleData {
             rotfront_marlis.setPostId("bartender");
             rotfront_marlis.setVoice(Voices.BUSINESS);
             importantPeople_rotfront.addPerson(rotfront_marlis);
+        }
+    }
+
+    public void createImportantPeople_leng(){
+        ImportantPeopleAPI importantPeople_leng = Global.getSector().getImportantPeople();
+        MarketAPI market_leng = Global.getSector().getEconomy().getMarket("leng_market");
+        if(market_leng != null) {
+            //the very same Aldr
+            PersonAPI leng_aldr = Global.getFactory().createPerson();
+            leng_aldr.setId(Eusan_Nation_PeopleStrings.ALDR);
+            leng_aldr.setFaction(EUSAN_NATION);
+            leng_aldr.getName().setFirst(Eusan_Nation_PeopleStrings.ALDR_FIRSTNAME);
+            leng_aldr.getName().setLast(Eusan_Nation_PeopleStrings.ALDR_LASTNAME);
+            leng_aldr.setGender(Gender.MALE);
+            leng_aldr.setRankId("replika");
+            leng_aldr.setPostId(Ranks.POST_ADMINISTRATOR);
+            leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
+            leng_aldr.setVoice(Voices.OFFICIAL);
+            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+            market_leng.setAdmin(leng_aldr);
+            market_leng.getCommDirectory().addPerson(leng_aldr);
+            market_leng.addPerson(leng_aldr);
+            importantPeople_leng.addPerson(leng_aldr);
         }
     }
 

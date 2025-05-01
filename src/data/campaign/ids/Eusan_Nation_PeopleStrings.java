@@ -27,6 +27,11 @@ public class Eusan_Nation_PeopleStrings {
     public final static String MARLIS_LAST_NAME = "EULR-FV-R2652";
     public final static String ROTFRONT_FLEETADMIRAL = "eusan_nation_rotfront_admiral";
 
+    //LENG NPC
+    public final static String ALDR = "eusan_nation_alder";
+    public final static String ALDR_FIRSTNAME = "Alder";
+    public final static String ALDR_LASTNAME = "ALDR-S2301";
+
     //MISC NPC
     public final static String SPECIAL_AGENT = "eusan_nation_special_agent";
     
