@@ -162,7 +162,7 @@ public class Eusan_Nation_PeopleData {
             leng_aldr.getName().setLast(Eusan_Nation_PeopleStrings.ALDR_LASTNAME);
             leng_aldr.setGender(Gender.MALE);
             leng_aldr.setRankId("replika");
-            leng_aldr.setPostId(Ranks.POST_ADMINISTRATOR);
+            leng_aldr.setPostId("aldr");
             leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
             leng_aldr.setVoice(Voices.OFFICIAL);
             leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
