@@ -12,7 +12,7 @@ import java.awt.Color;
 
 public class Eusan_Nation_Defense_Coordination_Center extends BaseIndustry {
 
-    protected static float ground_defense_bonus = 2f;
+    protected float ground_defense_bonus = 2f;
 
     @Override
     public boolean isHidden(){

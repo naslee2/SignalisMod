@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="signalisMod">
     <output-path>$PROJECT_DIR$/jars</output-path>
     <root id="archive" name="signalisMod.jar">
-      <element id="module-output" name="signalisMod" />
+      <element id="module-output" name="SignalisMod" />
     </root>
   </artifact>
 </component>

@@ -17,24 +17,28 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.Of
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 
 //import org.apache.log4j.Logger;
+import data.campaign.ids.Eusan_Nation_PeopleStrings;
 import org.lwjgl.util.vector.Vector2f;
 
 public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
     //Logger logger = Global.getLogger(Eusan_Nation_PersonalFleetFalke.class);
 
-    public static String ADMIRAL_FALKE = "eusan_nation_admiral_falke";
-    public static String EUSAN_NATION = "eusan_nation";
+    protected String EUSAN_NATION = "eusan_nation";
 
     public Eusan_Nation_PersonalFleetFalke() {
-        super(ADMIRAL_FALKE);
+        super(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         setMinRespawnDelayDays(10f);
         setMaxRespawnDelayDays(20f);
+    }
+
+    protected MarketAPI getSourceMarket(){
+        return Global.getSector().getEconomy().getMarket("heimat_market");
     }
 
     @Override
     public CampaignFleetAPI spawnFleet() {
 
-        MarketAPI heimat_market = Global.getSector().getEconomy().getMarket("heimat_market");
+        MarketAPI heimat_market = getSourceMarket();
         //logger.info("Logger active: .getMarket is: " + heimat.getStarSystem());
         SectorEntityToken heimat_entity = Global.getSector().getEntityById("eusan_nation_heimat");
 
@@ -81,7 +85,9 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         falkeFleet.getFlagship().getVariant().addMod("eusan_nation_K4_composite_armor");
         falkeFleet.getFlagship().getVariant().addPermaMod("eusan_nation_K4_composite_armor", false);
         falkeFleet.getFlagship().getVariant().addMod(HullMods.DEDICATED_TARGETING_CORE);
+        falkeFleet.getFlagship().getVariant().addPermaMod(HullMods.DEDICATED_TARGETING_CORE);
         falkeFleet.getFlagship().getVariant().addMod(HullMods.TURRETGYROS);
+        falkeFleet.getFlagship().getVariant().addPermaMod(HullMods.TURRETGYROS);
 
         //battleship division
         falkeFleet.getFleetData().addFleetMember("eusan_nation_admiral_standard");
@@ -140,7 +146,16 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
         falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
-        falkeFleet.getFleetData().addFleetMember("eusan_nation_wachtel_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_vilm_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_kanal_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_freighter_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_freighter_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_tanker_standard");
+        falkeFleet.getFleetData().addFleetMember("eusan_nation_riems_tanker_standard");
 
         falkeFleet.getFleetData().sort();
 

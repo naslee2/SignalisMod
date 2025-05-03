@@ -7,13 +7,15 @@ $id == eusan_nation_buyan","AddText""Entering the station after docking, you see
 flavorTextMarketVineta,TradePanelFlavorText,"$market.id == vineta_market score:1000
 $id == eusan_nation_vineta","AddText""Arriving at Vineta, you are immediately greeted by a large crowd of people waiting for transport to and from the planet. The planets shattered moon hangs heavy in the morning sky above, a dramatic backdrop to the mundane logistics work going on around you."" textGrayColor",,,
 flavorTextMarketKitezh,TradePanelFlavorText,"$market.id == kitezh_market score:1000
-$id == eusan_nation_kitezh","AddText""The embarkation area is teeming with a large number of workers and replikas handling cargo containers being loaded onto trams. Some of them sport the famous red sand of Kitezh coating their uniforms. Your cargo manifest is scrutinized with unusual suspicion by the replika security, one of many measures taken against the ongoing revolt."" textGrayColor",,,
+$id == eusan_nation_kitezh","AddText""The embarkation area is teeming with a large number of workers and replikas handling cargo containers being loaded onto trams. Some of them sport the famous red sand of Kitezh coating their uniforms. Your cargo manifest is scrutinized with unusual suspicion by the replika security, one of many measures taken to guard against unwanted threats."" textGrayColor",,,
 flavorTextMarketRotfront,TradePanelFlavorText,"$market.id == rotfront_market score:1000
 $id == eusan_nation_rotfront","AddText""After signing the required forms, make your way out of the spaceport to the main lobby. The logo of the Nation is exceptionally prominent, a massive golden icon towering over the people walking about. Such a patriotic display does little to offset the gloomy conditions outside the building, one made only worse by the endless rows of brutalist apartment complexes. The sooner you can leave this dreary place, the better."" textGrayColor",,,
 flavorTextMarketHeimat,TradePanelFlavorText,"$market.id == heimat_market score:1000
 $id == eusan_nation_heimat","AddText""From orbit, the yellow clouds obscure Heimat's cities. But after descending through them, your shuttle is greeted by an expansive metropolis, no doubt home to the vast majority of the planets population. The well maintained megaport is swarming with activity, and replikas in dress uniforms direct you to the expansive, almost opulent lobby - to sign more paperwork."" textGrayColor",,,
 flavorTextMarketLeng,TradePanelFlavorText,"$market.id == leng_market score:1000
 $id == eusan_nation_leng","AddText""Cargo ships, freight trams and workers are a common sight, even at the passenger areas. It seems that despite being a general port, its mostly used for shipping cargo out. The replika security is more stern and abrasive, and every last one of them is armed. A feeling of fear and suspicion permeates the atmosphere, and most of the workers avoid your gaze."" textGrayColor",,,
+flavorTextMarketAbandonedVinetaStation,TradePanelFlavorText,"$market.id == eusan_nation_wrecked_station_market score:1000
+$id == eusan_nation_wrecked_station","AddText""The wrecked colonial era terraforming station is a relic from the Domain Era. Destroyed during the war between the Empire and the Nation, only wrecked ships and debris remain. However someone has fixed up the hull breaches and rebuilt the life support. Away from prying eyes of the Replika Protecktors, this is the perfect place to store things.""",,,
 "#END RULESET_TRADE_FLAVOR_TEXT_START",,,,,,
 ,,,,,,
 # RULESET_RELATIONSHIP_LEVEL_DESC_START,,,,,,
@@ -608,12 +610,13 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelect
 $player.officeryeongPenrose512_foundphoto == false",,"Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","$player.officeryeongPenrose512_foundphoto = true
-SetTextHighlights ""self-developing photo""
-","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
+SetTextHighlights ""self-developing photo"" ""Perhaps it would be best if you memorize this combination.""
+SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if this may come in handy. Perhaps it would be best if you memorize this combination.""
+KaysaarKeypad initCode","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
 
 Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...
 
-You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
+You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
 $player.officeryeongPenrose512_foundphoto == true",,"You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
@@ -640,7 +643,9 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == 
 ","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You finish looking at the map and ship plans.",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2b:Enter the Mess Hall","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
-$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
+$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
+
+Seems like the power is off. Without power, there is nothing you can gleam here.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
 $player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
@@ -699,10 +704,13 @@ $player.officeryeongPenrose512_foundphoto == true",,"The cryo bed itself is inta
 
 You locate the keypad on the sleeper, and flip over the photograph from the flight deck. The grids are the same size.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""","A crewmember tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye.
-
-You remember that photo of the silver haired woman you found and pull it out from your pocket. Flipping it over you can now see that the red squares indicate the combination to open the cryo sleeper.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
+$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""
+SetEnabled officeryeongPenrose512_cryo_explore2a false
+KaysaarKeypad initUI","The keypad next to the cryo chamber is brightly lit. The 9 digit keypad strangely has no numbers on the keys. Only the correct code will open this chamber.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
+officeryeongPenrose512_cryo_explore2a_hint:Check the photo for the code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","SetTextHighlights ""photo""
+KaysaarKeypad initCode","You remember that photo of the silver haired woman you found and pull it out from your pocket. The woman in the photograph is still happily smiling. You flip the photo on its back and check the combination printed.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
 $player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""
@@ -713,7 +721,7 @@ The crewmember tries again. The red light flashes again.
 The crewmember gives you a defeated look. Unless you wish to breach the seal and risk the life of the pilot inside, you will need the code to the 9 digit pad to unlock.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens, surrounding it and training more than a few weapons at it. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
 
 The doors hiss and open, disappointingly, to an empty chamber. Not so much as a smudge can be spotted on the interior as the water drains from it.","officeryeongPenrose512_cryo_explore3:Continue",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","eusan_nation_penrose512Quest_rulecmd resumeMusic_512
@@ -1153,7 +1161,7 @@ OR
 # ADMIRAL_FALKE_CHAT,,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_VOLKSMARINE,,,,,,
-ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
+ADMIRAL_FALKE_CHAT_VOLKSMARINE_OPTION,PopulateAdmiralFalkeChatOptions,,,,"admiralFalkeVolksmarineOption:Tell me about the Volksmarine.",
 ADMIRAL_FALKE_CHAT_VOLKSMARINE_1,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption",,"She gives you a soft smile and disarming look. 
 
 ""Oh so you wish to know more about the Volksmarine, hmm?"" Admiral Falke says. 
@@ -1175,11 +1183,15 @@ ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == ad
 "#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,,,,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,,"admiralFalkeGrandFuelFleet1:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet2:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,,"admiralFalkeGrandFuelFleet3:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,"""The Grand Fuel Fleet?"" Admiral Falke responds. She puts a finger on her lips as if pondering her next words but it is clear she knows who you met.
+
+""Ah yes. Them. If there was any military formation that is full of pomp and predatory instinct it would be the Grand Fuel Fleet of the Sindrian Fuel Company. Their commanding officer is rather vicious opponent should you ever try to oppose her.""","admiralFalkeGrandFuelFleet1:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet1",,"""Then yet again, there is some truth to her reputation. For most people, she is the flame that draws the unfortunate moths to their doom.""
+
+""The Grand Fuel Fleet itself is also not to be taken lightly. They consist of the most powerful warships assigned to the Sindrian Fuel Comany fleet. The Sindrians are not idle in their pursuit of fuel profits. They have spent years producing weapons that can make other powers like the Hegemony and Leauge pause.""","admiralFalkeGrandFuelFleet2:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""","admiralFalkeGrandFuelFleet3:Continue",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions","""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""",,
 "#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
 "#END ADMIRAL_FALKE_CHAT",,,,,,
 ,,,,,,
@@ -1307,7 +1319,7 @@ BeginConversation eusan_nation_marlis false true","""It's you... Sorry, but I th
 "#END MARLIS_GREETINGS",,,,,,
 ,,,,,,
 # MARLIS_BAR_SALES,,,,,,
-MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
+#MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
 
 She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barMarlis_cigs_intro:Browse the menu",
 #MARLIS_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barMarlis_cigs_intro2",,"You open the menu and begin browsing the items.","barMarlis_cigs_intro:Browse the menu",
@@ -1322,13 +1334,13 @@ AdjustRepActivePerson WELCOMING 1
 $player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Here you go! Enjoy."" she says as she hands you the pack.","barMarlis_cigs_intro:Look at the other items for sale.",
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
-SubCredits 50
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+AddCredits -50
 $player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-#NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
+NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
 MARLIS_BAR_SALES_EXIT_OPTION,PopulateMarlisBarSellOptions,,,,"barMarlis_cigs_exit:Go back",
 MARLIS_BAR_SALES_EXIT,DialogOptionSelected,"$option == barMarlis_cigs_exit","FireAll PopulateMarlisBarOptions",,,
 "#END MARLIS_BAR_SALES",,,,,,

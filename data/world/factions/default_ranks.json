@@ -15,7 +15,7 @@
 		"daughterNationRank":{"name":"The Daughter"}
     },
     "posts":{
-        "adlr":{"name":"Facility Administrator"},
+        "aldr":{"name":"Facility Administrator"},
 		"arar":{"name":"Low Cost Repair Worker"},
 		"eulr":{"name":"Low-Cost Domestic Worker"},
 		"flkr":{"name":"Protektor Führungskommando"},

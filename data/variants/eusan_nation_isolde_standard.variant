@@ -3,14 +3,16 @@
   "hullId": "eusan_nation_isolde",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 0,
+  "fluxCapacitors": 11,
+  "fluxVents": 7,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "ballistic_rangefinder",
     "ablative_armor",
-    "auxiliarythrusters"
+    "auxiliarythrusters",
+    "reinforcedhull",
+    "blast_doors"
   ],
   "weaponGroups": [
     {
@@ -18,8 +20,11 @@
       "mode": "LINKED",
       "weapons": {
         "WS0001": "eusan_nation_isolde_builtin",
-        "WS0003": "salamanderpod",
-        "WS0004": "salamanderpod"
+        "WS0003": "eusan_nation_galdae_medium",
+        "WS0004": "eusan_nation_galdae_medium",
+        "WS0005": "eusan_nation_dangpa",
+        "WS0008": "eusan_nation_dory",
+        "WS0009": "eusan_nation_dory"
       }
     },
     {
@@ -37,16 +42,13 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {
-        "WS0005": "eusan_nation_dory"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0006": "eusan_nation_dory",
-        "WS0008": "eusan_nation_dangpa",
         "WS0010": "eusan_nation_dangpa"
       }
     },
@@ -55,7 +57,6 @@
       "mode": "LINKED",
       "weapons": {
         "WS0007": "eusan_nation_dory",
-        "WS0009": "eusan_nation_dangpa",
         "WS0011": "eusan_nation_dangpa"
       }
     },

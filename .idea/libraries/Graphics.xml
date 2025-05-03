@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="Graphics">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../GraphicsLib/jars/Graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../zz GraphicsLib-1.10.2/jars/Graphics.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="file://$PROJECT_DIR$/../GraphicsLib/javadoc" />
+      <root url="file://$PROJECT_DIR$/../zz GraphicsLib-1.10.2/javadoc" />
     </JAVADOC>
     <SOURCES />
   </library>

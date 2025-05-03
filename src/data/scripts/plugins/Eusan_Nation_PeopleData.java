@@ -3,32 +3,27 @@ package data.scripts.plugins;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Personalities;
-import com.fs.starfarer.api.impl.campaign.ids.Ranks;
-import com.fs.starfarer.api.impl.campaign.ids.Skills;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.impl.campaign.ids.Voices;
+import com.fs.starfarer.api.impl.campaign.ids.*;
 
 import data.campaign.ids.Eusan_Nation_PeopleStrings;
 
 public class Eusan_Nation_PeopleData {
-    public static String EUSAN_NATION = "eusan_nation";
-
-    //public static PersonAPI getPerson(String id) {
-		//return Global.getSector().getImportantPeople().getPerson(id);
-	//}
+    public String EUSAN_NATION = "eusan_nation";
 
     public void create() {
         createImportantPeople_heimat();
         createImportantPeople_vineta();
         createImportantPeople_rotfront();
+        createImportantPeople_leng();
         createImportantPeople_miscOfficers();
+        createImportantPeople_miscPeople();
 	}
 
-    public static void createImportantPeople_heimat(){
+    public void createImportantPeople_heimat(){
         ImportantPeopleAPI importantPeople_heimat = Global.getSector().getImportantPeople();
         MarketAPI market_heimat = Global.getSector().getEconomy().getMarket("heimat_market");
         if(market_heimat != null){
@@ -91,11 +86,10 @@ public class Eusan_Nation_PeopleData {
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
             market_heimat.addPerson(greatRevolutionary);
             importantPeople_heimat.addPerson(greatRevolutionary);
-
         }
     }
 
-    public static void createImportantPeople_vineta(){
+    public void createImportantPeople_vineta(){
         ImportantPeopleAPI importantPeople_vineta = Global.getSector().getImportantPeople();
         MarketAPI market_vineta = Global.getSector().getEconomy().getMarket("vineta_market");
         if(market_vineta !=null){
@@ -117,7 +111,7 @@ public class Eusan_Nation_PeopleData {
         }
     }
 
-    public static void createImportantPeople_rotfront(){
+    public void createImportantPeople_rotfront(){
         ImportantPeopleAPI importantPeople_rotfront = Global.getSector().getImportantPeople();
         MarketAPI market_rotfront = Global.getSector().getEconomy().getMarket("rotfront_market");
         if(market_rotfront != null){
@@ -140,6 +134,7 @@ public class Eusan_Nation_PeopleData {
             rotfront_fleetAdmiral.setVoice(Voices.SOLDIER);
             importantPeople_rotfront.addPerson(rotfront_fleetAdmiral);
 
+            //Marlis
             PersonAPI rotfront_marlis = Global.getFactory().createPerson();
             rotfront_marlis.setId(Eusan_Nation_PeopleStrings.MARLIS);
             rotfront_marlis.setFaction(EUSAN_NATION);
@@ -155,7 +150,30 @@ public class Eusan_Nation_PeopleData {
         }
     }
 
-    public static void createImportantPeople_miscOfficers(){
+    public void createImportantPeople_leng(){
+        ImportantPeopleAPI importantPeople_leng = Global.getSector().getImportantPeople();
+        MarketAPI market_leng = Global.getSector().getEconomy().getMarket("leng_market");
+        if(market_leng != null) {
+            //the very same Aldr
+            PersonAPI leng_aldr = Global.getFactory().createPerson();
+            leng_aldr.setId(Eusan_Nation_PeopleStrings.ALDR);
+            leng_aldr.setFaction(EUSAN_NATION);
+            leng_aldr.getName().setFirst(Eusan_Nation_PeopleStrings.ALDR_FIRSTNAME);
+            leng_aldr.getName().setLast(Eusan_Nation_PeopleStrings.ALDR_LASTNAME);
+            leng_aldr.setGender(Gender.MALE);
+            leng_aldr.setRankId("replika");
+            leng_aldr.setPostId("aldr");
+            leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
+            leng_aldr.setVoice(Voices.OFFICIAL);
+            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+            market_leng.setAdmin(leng_aldr);
+            market_leng.getCommDirectory().addPerson(leng_aldr);
+            market_leng.addPerson(leng_aldr);
+            importantPeople_leng.addPerson(leng_aldr);
+        }
+    }
+
+    public void createImportantPeople_miscOfficers(){
         ImportantPeopleAPI importantPeople_miscOfficers = Global.getSector().getImportantPeople();
         PersonAPI mary_cheng = Global.getFactory().createPerson();
         mary_cheng.setId(Eusan_Nation_PeopleStrings.MARY_CHENG);
@@ -176,6 +194,19 @@ public class Eusan_Nation_PeopleData {
         mary_cheng.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
         mary_cheng.setVoice(Voices.SOLDIER);
         importantPeople_miscOfficers.addPerson(mary_cheng);
+    }
+
+    public void createImportantPeople_miscPeople(){
+        ImportantPeopleAPI importantPeople_miscPeople = Global.getSector().getImportantPeople();
+        PersonAPI hvt = Global.getFactory().createPerson();
+        hvt.setId("eusan_nation_hvt");
+        hvt.setFaction(Factions.INDEPENDENT);
+        hvt.setGender(FullName.Gender.MALE);
+        hvt.setRankId("unknown");
+        hvt.setPostId("unknown");
+        hvt.setImportance(PersonImportance.HIGH);
+        hvt.setVoice(Voices.SOLDIER);
+        importantPeople_miscPeople.addPerson(hvt);
     }
     
 }

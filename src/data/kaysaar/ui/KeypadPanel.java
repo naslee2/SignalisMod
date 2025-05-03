@@ -10,6 +10,9 @@ import com.fs.starfarer.api.util.Misc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
+
+import org.apache.log4j.Logger;
 
 public class KeypadPanel implements CustomUIPanelPlugin {
     InteractionDialogAPI dialog;
@@ -25,12 +28,15 @@ public class KeypadPanel implements CustomUIPanelPlugin {
     ArrayList<Integer> ints = new ArrayList<>();
     public static String keyMemToKey = "$homete_unique_key";
 
+    Logger logger = Global.getLogger(KeypadPanel.class);
+
     //width around 480 due to dialog limitations
     public KeypadPanel(InteractionDialogAPI dialog, float width, float height, boolean isItToShowCode) {
         this.dialog = dialog;
         panel = Global.getSettings().createCustom(width, height, this);
         createUIForFirstTime();
         ints = (ArrayList<Integer>) Global.getSector().getMemory().get(keyMemToKey);
+        logger.info("Logger Active: UNORDERED PENROSE-512 CRYO KEYCODE IS: " + ints.toString());
         codeShowcaseMode = isItToShowCode;
     }
 
@@ -124,7 +130,6 @@ public class KeypadPanel implements CustomUIPanelPlugin {
                     break;
                 }
             }
-
         }
         if (found) {
             onConfirm();
@@ -142,10 +147,10 @@ public class KeypadPanel implements CustomUIPanelPlugin {
         if (!codeShowcaseMode) {
             // Here you can add / disable /enable options after combination has been correctly hit
             // Also buttons are cleared so we won't cause memory leaks after exiting dialog or going to another option.
-            //dialog.getOptionPanel().setEnabled("homete_ui", false);
+            dialog.getOptionPanel().setEnabled("officeryeongPenrose512_cryo_explore2a", true);
+            // disable hints if the user gets the combination correct.
+            dialog.getOptionPanel().setEnabled("officeryeongPenrose512_cryo_explore2a_hint", false);
         }
-
-
     }
 
     @Override

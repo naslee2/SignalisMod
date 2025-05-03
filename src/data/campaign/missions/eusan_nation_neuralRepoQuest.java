@@ -13,7 +13,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 public class eusan_nation_neuralRepoQuest extends HubMissionWithSearch{
 
     // mission stages. 
-    public static enum Stage {
+    public enum Stage {
         MEET_AGENT,
         RETURN_INFO,
         COMPLETED

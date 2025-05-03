@@ -4,10 +4,13 @@
   "displayName": "Standard",
   "goalVariant": true,
   "fluxCapacitors": 9,
-  "fluxVents": 9,
+  "fluxVents": 8,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "hardenedshieldemitter"
+  ],
   "weaponGroups": [
     {
       "autofire": true,

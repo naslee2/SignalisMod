@@ -11,6 +11,9 @@
   "shieldCenter": [14, 0],
   "shieldRadius": 158.5,
   "viewOffset": 0,
+  "builtInMods": [
+      "eusan_nation_engineering_design",
+    ],
   "weaponSlots": [
     {
       "id": "WS0001",

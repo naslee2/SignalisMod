@@ -3,11 +3,16 @@
   "hullId": "eusan_nation_copthorne",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 9,
+  "fluxCapacitors": 7,
+  "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "hardened_subsystems",
+    "reinforcedhull",
+    "auxiliarythrusters"
+  ],
   "weaponGroups": [
     {
       "autofire": false,

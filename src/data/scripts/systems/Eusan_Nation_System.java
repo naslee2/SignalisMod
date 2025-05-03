@@ -49,6 +49,7 @@ public class Eusan_Nation_System {
         ProcgenUsedNames.notifyUsed("Buyan");
         buyan.setFaction(Factions.PIRATES);
         buyan.setCustomDescriptionId("eusan_nation_buyan_planet");
+        buyan.setInteractionImage("illustrations", "buyan_market");
     
         MarketAPI buyan_market = Global.getFactory().createMarket("buyan_market", buyan.getName(), 5);
         buyan_market.setPrimaryEntity(buyan);
@@ -89,7 +90,7 @@ public class Eusan_Nation_System {
         vineta.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "vineta_habglows"));
         vineta.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", "vineta_clouds"));
         vineta.setCustomDescriptionId("eusan_nation_vineta_planet");
-        //vineta.setInteractionImage("illustrations", "");
+        vineta.setInteractionImage("illustrations", "vineta_market");
         vineta.applySpecChanges();
 
         MarketAPI vineta_market = Global.getFactory().createMarket("vineta_market", vineta.getName(), 6);
@@ -132,11 +133,11 @@ public class Eusan_Nation_System {
         system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f);
 
         //Wrecked Station related to Vineta
-        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("signalis_wrecked_station", "Abandoned Orbital Complex 6", "station_side02", "neutral");
+        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("eusan_nation_wrecked_station", "Abandoned Orbital Complex", "station_side02", "neutral");
         wrecked_station.setCircularOrbitPointingDown(vineta, 45f, 900f, 55f);
         wrecked_station.setInteractionImage("illustrations", "abandoned_station2");
-        wrecked_station.setCustomDescriptionId("signalis_wrecked_station");
-        Misc.setAbandonedStationMarket("signalis_wrecked_station_market", wrecked_station);
+        wrecked_station.setCustomDescriptionId("eusan_nation_wrecked_station");
+        Misc.setAbandonedStationMarket("eusan_nation_wrecked_station_market", wrecked_station);
         
         //Inner Jump Point related to Vineta
         JumpPointAPI innerJumpPoint = Global.getFactory().createJumpPoint("alatyr_jump_point", "Inner Jump Point");
@@ -152,7 +153,7 @@ public class Eusan_Nation_System {
         kitezh.getSpec().setTexture(Global.getSettings().getSpriteName("planets","kitezh_planet"));
         kitezh.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "kitezh_habglows"));
         //kitezh.getSpec().setCloudTexture(Global.getSettings().getSpriteName("cloud_layer", ""));
-        //kitezh.setInteractionImage("illustrations", "");
+        kitezh.setInteractionImage("illustrations", "kitezh_market");
         kitezh.applySpecChanges();
 
         MarketAPI kitezh_market = Global.getFactory().createMarket("kitezh_market", kitezh.getName(), 5);
@@ -201,7 +202,7 @@ public class Eusan_Nation_System {
         PlanetAPI rotfront = system.addPlanet("eusan_nation_rotfront", gas_giant1, "Rotfront", "tundra", 0f, 90f, 800f, 22f);
         rotfront.setFaction("eusan_nation");
         rotfront.setCustomDescriptionId("eusan_nation_rotfront_planet");
-        //rotfront.setInteractionImage("illustrations", "");
+        rotfront.setInteractionImage("illustrations", "rotfront_market");
 
         MarketAPI rotfront_market = Global.getFactory().createMarket("rotfront_market", rotfront.getName(), 6);
         rotfront_market.setPrimaryEntity(rotfront);
@@ -291,7 +292,7 @@ public class Eusan_Nation_System {
         ProcgenUsedNames.notifyUsed("Leng");
         leng.setFaction("eusan_nation");
         leng.setCustomDescriptionId("eusan_nation_leng_planet");
-        //leng.setInteractionImage("illustrations", "");
+        leng.setInteractionImage("illustrations", "leng_market");
 
         MarketAPI leng_market = Global.getFactory().createMarket("leng_market", leng.getName(), 5);
         leng_market.setPrimaryEntity(leng);

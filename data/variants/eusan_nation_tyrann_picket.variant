@@ -1,0 +1,39 @@
+{
+  "variantId": "eusan_nation_tyrann_picket",
+  "hullId": "eusan_nation_tyrann",
+  "displayName": "Picket",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_rogatina",
+        "WS0002": "heatseeker",
+        "WS0003": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -25,12 +25,12 @@ public class eusan_nation_penrose_survey_equipment extends BaseHullMod{
 
     float BONUS = 200f;
 
-    static String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
-    static String eusan_nation_penrose_survey_equipment1 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText1");
-    static String eusan_nation_penrose_survey_equipment2 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText2");
-    static String eusan_nation_penrose_survey_equipment3 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText3");
-    static String eusan_nation_penrose_survey_equipment4 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText4");
-    static String eusan_nation_penrose_survey_equipment5 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText5");
+    String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+    String eusan_nation_penrose_survey_equipment1 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText1");
+    String eusan_nation_penrose_survey_equipment2 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText2");
+    String eusan_nation_penrose_survey_equipment3 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText3");
+    String eusan_nation_penrose_survey_equipment4 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText4");
+    String eusan_nation_penrose_survey_equipment5 = Global.getSettings().getString("eusan_nation_strings","eusan_nation_penrose_survey_equipmentText5");
 
     
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id){

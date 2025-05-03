@@ -15,7 +15,7 @@ public class eusan_nation_pernach_script implements OnFireEffectPlugin{
 
     private int shot_counter = 0;
 
-    private static final String WEAPON_ID = "eusan_nation_pernach_rocket";
+    private final String WEAPON_ID = "eusan_nation_pernach_rocket";
 
 	public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 		shot_counter++;

@@ -1,0 +1,73 @@
+{
+  "variantId": "eusan_nation_isolde_striker",
+  "hullId": "eusan_nation_isolde",
+  "displayName": "Striker",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "ablative_armor",
+    "auxiliarythrusters",
+    "reinforcedhull",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_isolde_builtin",
+        "WS0002": "eusan_nation_taean",
+        "WS0003": "eusan_nation_galdae_medium",
+        "WS0004": "eusan_nation_galdae_medium",
+        "WS0005": "eusan_nation_dangpa",
+        "WS0008": "eusan_nation_dory",
+        "WS0009": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "eusan_nation_dory",
+        "WS0010": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "eusan_nation_dory",
+        "WS0011": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "eusan_nation_dangpa",
+        "WS0013": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

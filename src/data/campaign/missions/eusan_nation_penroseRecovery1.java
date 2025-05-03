@@ -11,13 +11,9 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
 
-//import org.apache.log4j.Logger;
-
 public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
-    //Logger logger = Global.getLogger(eusan_nation_penroseRecovery1.class);
-
-    public static enum Stage {
+    public enum Stage {
         LOCATE_PENROSE419,
         RETURN_BLACKBOX,
         COMPLETED
@@ -81,7 +77,6 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
         return true;
     }
 
-
     protected void updateInteractionDataImpl(){
         set("$eusan_nation_penroseRecovery1_planetId", target_planet.getId());
         set("$eusan_nation_penroseRecovery1_planetName", target_planet.getName());
@@ -114,7 +109,7 @@ public class eusan_nation_penroseRecovery1 extends HubMissionWithSearch {
 
     @Override
     public String getBaseName() {
-        return "Recover the PENROSE-419's mission data recorder";
+        return "Recover PENROSE-419's data recorder";
     }
 
     @Override

@@ -185,7 +185,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     
     @Override
     public String getBaseName() {
-        return "Recover the PENROSE-388's mission data recorder.";
+        return "Recover PENROSE-388's data recorder.";
     }
 
     @Override

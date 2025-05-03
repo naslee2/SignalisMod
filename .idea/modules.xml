@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/signalisMod.iml" filepath="$PROJECT_DIR$/signalisMod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SignalisMod.iml" filepath="$PROJECT_DIR$/SignalisMod.iml" />
     </modules>
   </component>
 </project>

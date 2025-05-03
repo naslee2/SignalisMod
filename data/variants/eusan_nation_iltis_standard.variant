@@ -3,11 +3,14 @@
   "hullId": "eusan_nation_iltis",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 5,
-  "fluxVents": 5,
+  "fluxCapacitors": 4,
+  "fluxVents": 3,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "hardenedshieldemitter"
+  ],
   "weaponGroups": [
     {
       "autofire": false,

@@ -3,11 +3,14 @@
   "hullId": "eusan_nation_lerche",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 7,
-  "fluxVents": 7,
+  "fluxCapacitors": 2,
+  "fluxVents": 2,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "missile_autoloader",
+    "safetyoverrides"
+  ],
   "weaponGroups": [
     {
       "autofire": true,

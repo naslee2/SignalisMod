@@ -18,7 +18,7 @@ import data.scripts.plugins.Eusan_Nation_SystemNotHiddenReq;
 
 public class eusan_nation_penrose512Quest extends HubMissionWithSearch{
 
-    public static enum Stage {
+    public enum Stage {
         LOCATE_PENROSE512,
         RETURN_BLACKBOX,
         COMPLETED

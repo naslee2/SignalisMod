@@ -3,34 +3,37 @@
   "hullId": "eusan_nation_triglav",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 10,
-  "fluxVents": 10,
+  "fluxCapacitors": 0,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "eccm",
+    "ballistic_rangefinder",
+    "targetingunit"
+  ],
   "weaponGroups": [
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0002": "eusan_nation_dory",
-        "WS0004": "eusan_nation_dory"
+        "WS0004": "eusan_nation_pebble",
+        "WS0005": "eusan_nation_pebble",
+        "WS0006": "eusan_nation_dory"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "eusan_nation_dory",
-        "WS0005": "eusan_nation_dory"
+        "WS0003": "eusan_nation_dory"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {
-        "WS0006": "eusan_nation_dangpa"
-      }
+      "weapons": {}
     }
   ],
   "modules": [],
