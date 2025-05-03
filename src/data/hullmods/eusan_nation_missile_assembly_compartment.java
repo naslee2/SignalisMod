@@ -58,7 +58,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment2, pad5, green, (int) missile_regen_bonus + Strings.X);
 		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment3, pad5, red, (int) missile_flux_increase + Strings.X);
 		tooltip.addPara("%s", 6.0f, flavor, eusan_nation_missile_assembly_compartment4).italicize();
-		tooltip.addPara("%s", 1.0f, flavor, eusan_nation_missile_assembly_compartment5);
+		tooltip.addPara("%s", 1.0f, flavor, eusan_nation_missile_assembly_compartment5).setAlignment(Alignment.RMID);
 
     }
 

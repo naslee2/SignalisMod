@@ -44,7 +44,7 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
         tooltip.addPara("- " + eusan_nation_k4_composite_armor2, pad5, green, (int) (100f * HE_damage_reduction) + "%");
         tooltip.addPara("- " + eusan_nation_k4_composite_armor3, pad5, green, (int) (100f * KINETIC_damage_reduction) + "%");
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor4).italicize();
-        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor5);
+        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_k4_composite_armor5).setAlignment(Alignment.RMID);
     }
 
     @Override

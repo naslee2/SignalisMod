@@ -58,6 +58,6 @@ public class eusan_nation_engineering_design extends BaseLogisticsHullMod{
         tooltip.addPara("- " + eusan_nation_engineering_design2, pad, green, (int) Math.round(CR_RECOVERY_BONUS) + "%");
         tooltip.addPara("- " + eusan_nation_engineering_design3, pad, green, (int) Math.round(OVERLOAD_BONUS) + "%");
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_engineering_design4).italicize();
-        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_engineering_design5);
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_engineering_design5).setAlignment(Alignment.RMID);
     }
 }

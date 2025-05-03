@@ -78,7 +78,7 @@ public class eusan_nation_electronic_warfare_suite extends BaseHullMod {
         tooltip.addPara("- " + eusan_nation_electronic_warfare_suite3, 5f, Color.green, (int) MISSILE_RATE_BONUS + "%");
         tooltip.addPara("- " + eusan_nation_electronic_warfare_suite4, 5f, Color.green, (int) ((1f - EW_PENALTY_MULT) * 100f) + "%");
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite5).italicize();
-        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite6);
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_electronic_warfare_suite6).setAlignment(Alignment.RMID);
     }
 
     @Override
