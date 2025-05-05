@@ -151,7 +151,7 @@ or
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept:""I accept the mission.""",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$global.officeryeong_neuralrepositorystart = true
 BeginMission eusan_nation_neuralRepoQuest
-FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you hereby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
+FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you hereby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,"todo: add eusan_nation_neuroRepo_rulecmd sendArianeMessage"
 "#END REPO_BRIEFING",,,,,,
 ,,,,,,
 # MEETING_AGENT,,,,,,
