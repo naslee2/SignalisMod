@@ -1,6 +1,9 @@
 package data.hullmods;
 
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
+import com.fs.starfarer.api.loading.MissileSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.ui.Alignment;
 import org.magiclib.util.MagicIncompatibleHullmods;
 
@@ -29,12 +32,51 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 	String eusan_nation_missile_assembly_compartment5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText5");
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-        stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);
-        stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
-		stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_flux_increase);
+        //stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus);
+        //stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
+		//stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_flux_increase);
 	}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+//		if(ship.getVariant().getHullMods().contains(HullMods.MISSILE_AUTOLOADER)){
+//			//if someone tries to install incompatible hullmods, remove it.
+//			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILE_AUTOLOADER, "eusan_nation_missile_assembly_compartment");
+//		}
+//		if(ship.getVariant().getHullMods().contains(HullMods.MISSLERACKS)){
+//			//if someone tries to install incompatible hullmods, remove it.
+//			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILERACKS, "eusan_nation_missile_assembly_compartment");
+//		}
+		magicIncompatibleHullmodsChecker(ship);
+		for(WeaponAPI weapon : ship.getAllWeapons()){
+			weapon.ensureClonedSpec();
+			WeaponSpecAPI spec = weapon.getSpec();
+			//String test = weapon.getId();
+
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.LARGE)){
+				//MissileSpecAPI missileSpec = (MissileSpecAPI) spec;
+				int data = weapon.getMaxAmmo() * 3;
+				weapon.setMaxAmmo(data);
+				weapon.setAmmo(data);
+				spec.setReloadSize(spec.getReloadSize()+1);
+			}
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.MEDIUM)){
+				//MissileSpecAPI missileSpec = (MissileSpecAPI) spec;
+					int data = weapon.getMaxAmmo() * 6;
+					weapon.setMaxAmmo(data);
+					weapon.setAmmo(data);
+					spec.setReloadSize(spec.getReloadSize()+1);
+			}
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.SMALL)){
+				//MissileSpecAPI missileSpec = (MissileSpecAPI) spec;
+				int data = weapon.getMaxAmmo() * 9;
+				weapon.setMaxAmmo(data);
+				weapon.setAmmo(data);
+				spec.setReloadSize(spec.getReloadSize()+1);
+			}
+		}
+	}
+
+	public void magicIncompatibleHullmodsChecker(ShipAPI ship){
 		if(ship.getVariant().getHullMods().contains(HullMods.MISSILE_AUTOLOADER)){
 			//if someone tries to install incompatible hullmods, remove it.
 			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.MISSILE_AUTOLOADER, "eusan_nation_missile_assembly_compartment");
