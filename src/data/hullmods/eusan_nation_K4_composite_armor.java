@@ -41,14 +41,14 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
     }
 
     public void magicIncompatibleHullmodsChecker(ShipAPI ship){
-        if(ship.getVariant().getHullMods().contains(HullMods.SHIELD_SHUNT)){
-            //if someone tries to install incompatible hullmods, remove it.
-            MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.SHIELD_SHUNT, "eusan_nation_K4_composite_armor");
-        }
-        if(ship.getVariant().getHullMods().contains(HullMods.HEAVYARMOR)){
-            //if someone tries to install incompatible hullmods, remove it.
-            MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.HEAVYARMOR, "eusan_nation_K4_composite_armor");
-        }
+//        if(ship.getVariant().getHullMods().contains(HullMods.SHIELD_SHUNT)){
+//            //if someone tries to install incompatible hullmods, remove it.
+//            MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.SHIELD_SHUNT, "eusan_nation_K4_composite_armor");
+//        }
+//        if(ship.getVariant().getHullMods().contains(HullMods.HEAVYARMOR)){
+//            //if someone tries to install incompatible hullmods, remove it.
+//            MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.HEAVYARMOR, "eusan_nation_K4_composite_armor");
+//        }
     }
 
     @Override
@@ -68,10 +68,10 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
         tooltip.addPara("- " + eusan_nation_k4_composite_armor3, pad5, green, (int) (100f * KINETIC_damage_reduction) + "%");
 
         //Incompatibilities
-        tooltip.addSectionHeading(incompatibilitiesText, negative, negativeBG, Alignment.MID, pad10);
-        final TooltipMakerAPI warning_section = tooltip.beginImageWithText(Global.getSettings().getSpriteName("tooltips", "warningSymbol"), 40);
-        warning_section.addPara("Incompatible with %s and %s", 0f, negative, new String[] { "Heavy Armor", "Shield Shunt"});
-        tooltip.addImageWithText(pad10);
+//        tooltip.addSectionHeading(incompatibilitiesText, negative, negativeBG, Alignment.MID, pad10);
+//        final TooltipMakerAPI warning_section = tooltip.beginImageWithText(Global.getSettings().getSpriteName("tooltips", "warningSymbol"), 40);
+//        warning_section.addPara("Incompatible with %s and %s", 0f, negative, new String[] { "Heavy Armor", "Shield Shunt"});
+//        tooltip.addImageWithText(pad10);
 
         //Quotes
         tooltip.addPara("%s", 6.0f, flavor, eusan_nation_k4_composite_armor4).italicize();
