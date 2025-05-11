@@ -15,9 +15,9 @@ import java.awt.*;
 
 public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     
-    protected float missile_ammo_bonus_large = 3f;
-	protected float missile_ammo_bonus_medium = 5f;
-	protected float missile_ammo_bonus_small = 7f;
+    protected float missile_ammo_bonus_large = 2f;
+	protected float missile_ammo_bonus_medium = 4f;
+	protected float missile_ammo_bonus_small = 6f;
     protected float missile_regen_bonus = 4f;
 	protected float missile_flux_increase = 3f;
 
@@ -35,7 +35,6 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
         //stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus_large);
         //stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
 		//stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_flux_increase);
-
 	}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
@@ -79,6 +78,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
 		final Color green = new Color(55,245,65,255);
+		final Color red = new Color(245,55,65,255);
 		final Color negative = Misc.getNegativeHighlightColor();
 		final Color negativeBG = new Color(128,38,0,175);
 		final Color flavor = new Color(110,110,110,255);
@@ -96,7 +96,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 		//Incompatibilities
 		tooltip.addSectionHeading(incompatibilitiesText, negative,negativeBG, Alignment.MID, pad10);
 		final TooltipMakerAPI warning_section = tooltip.beginImageWithText(Global.getSettings().getSpriteName("tooltips", "warningSymbol"), 40);
-		warning_section.addPara("Incompatible with %s, %s", 0f, negative, new String[] { "Missile Autoloader", "Expanded Missile Racks"});
+		warning_section.addPara("Incompatible with %s and %s", 0f, negative, new String[] { "Missile Autoloader", "Expanded Missile Racks"});
 		tooltip.addImageWithText(pad10);
 
 		//Quotes
