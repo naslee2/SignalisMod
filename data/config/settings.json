@@ -28,6 +28,9 @@
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
         },
+        "tooltips":{
+            "warningSymbol":"graphics/tooltips/warningSymbol.png"
+        },
         "blueprint_packages":{
             "eusan_nation_standard_package":"graphics/icons/cargo/bp_eusan_nation_standard.png",
             "eusan_nation_advanced_package":"graphics/icons/cargo/bp_eusan_nation_standard.png"
