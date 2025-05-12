@@ -87,7 +87,7 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 
 		//Details section
 		tooltip.addSectionHeading(detailText, Alignment.MID, pad10);
-		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment1, pad5, green, (int) missile_ammo_bonus_small + Strings.X);
+		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment1, pad10, green, (int) missile_ammo_bonus_small + Strings.X);
 		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment2, pad5, green, (int) missile_ammo_bonus_medium + Strings.X);
 		tooltip.addPara("- " + eusan_nation_missile_assembly_compartment3, pad5, green, (int) missile_ammo_bonus_large + Strings.X);
 		//tooltip.addPara("- " + eusan_nation_missile_assembly_compartment4, pad5, green, (int) missile_regen_bonus + Strings.X);

@@ -63,7 +63,7 @@ public class eusan_nation_K4_composite_armor extends BaseHullMod {
 
         //Details section
         tooltip.addSectionHeading(detailText, Alignment.MID, pad10  );
-        tooltip.addPara("- " + eusan_nation_k4_composite_armor1, pad5, red, (int) (100f * ENERGY_damage_increase) + "%");
+        tooltip.addPara("- " + eusan_nation_k4_composite_armor1, pad10, red, (int) (100f * ENERGY_damage_increase) + "%");
         tooltip.addPara("- " + eusan_nation_k4_composite_armor2, pad5, green, (int) (100f * HE_damage_reduction) + "%");
         tooltip.addPara("- " + eusan_nation_k4_composite_armor3, pad5, green, (int) (100f * KINETIC_damage_reduction) + "%");
 
