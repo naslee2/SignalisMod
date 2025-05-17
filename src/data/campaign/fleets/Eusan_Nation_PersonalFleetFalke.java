@@ -29,6 +29,11 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         super(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         setMinRespawnDelayDays(10f);
         setMaxRespawnDelayDays(20f);
+        setDefeatTrigger(getDefeatTriggerToUse());
+    }
+
+    protected String getDefeatTriggerToUse() {
+        return "PFFalkeDefeated";
     }
 
     protected MarketAPI getSourceMarket(){

@@ -1012,6 +1012,7 @@ OR
 "#END OFFICER_YEONG",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE,,,,,,
+PFFalkeDefeated,PFFalkeDefeated,,"$player.PFFalkeDefeated = true",,,
 ,,,,,,
 # ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
 ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
