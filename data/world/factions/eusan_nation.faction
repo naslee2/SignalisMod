@@ -99,7 +99,7 @@
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
-		"tags":[],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[
 			"eusan_nation_penrose",
         	"eusan_nation_pelikan",
@@ -136,7 +136,7 @@
 		"fighters":[],
 	},
 	"knownWeapons":{
-		"tags":["missile_bp"],
+		"tags":["missile_bp","eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -155,7 +155,7 @@
 		],
 	},
 	"priorityWeapons":{
-		"tags":[],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -232,10 +232,10 @@
 		"standard_male":[
 		    "graphics/portraits/eusan_nation_aldr_128.png",
 			"graphics/portraits/eusan_nation_male_128_1.png",
-			"graphics/portraits/portrait_hegemony05.png",
-			"graphics/portraits/portrait_hegemony07.png",
-			"graphics/portraits/portrait_hegemony09.png",
-			"graphics/portraits/portrait_hegemony12.png",
+			"graphics/portraits/eusan_nation_male_128_2.png",
+            "graphics/portraits/eusan_nation_male_128_3.png",
+            "graphics/portraits/eusan_nation_male_128_4.png",
+            "graphics/portraits/eusan_nation_male_128_5.png",
 			"graphics/portraits/portrait_hegemony13.png",
 			"graphics/portraits/portrait_hegemony15.png",
 			"graphics/portraits/portrait_mercenary03.png",

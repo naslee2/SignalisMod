@@ -59,5 +59,6 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
         new KeyGenerator().hometeKeyGenerator();
+        //Global.getSector().addTransientScript(new Eusan_Nation_TimeCheckScript());
     }
 }
