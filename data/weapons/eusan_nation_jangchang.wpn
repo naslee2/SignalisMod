@@ -1,47 +1,34 @@
 {
-  "id": "eusan_nation_kayak",
+  "id": "eusan_nation_jangchang",
   "specClass": "projectile",
-  "projectileSpecId": "eusan_nation_kayak_mirv1",
+  "projectileSpecId": "eusan_nation_jangchang_lrm",
   "type": "MISSILE",
-  "size": "LARGE",
-  "displayArcRadius": 300,
-  "turretSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
-  "hardpointSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/eusan_nation_jangchang_turret_base.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_jangchang_hardpoint_base.png",
   "renderHints": [
+    RENDER_LOADED_MISSILES
   ],
   "turretOffsets": [
-    22,
-    -12,
-    22,
-    -4,
-    22,
-    4,
-    22,
-    12
+    6,
+    -5,
+    6,
+    5
   ],
   "turretAngleOffsets": [
-    0,
-    0,
     0,
     0
   ],
   "hardpointOffsets": [
-    40,
-    -12,
-    40,
-    -4,
-    40,
-    4,
-    40,
-    12
+    15.5,
+    -5,
+    15.5,
+    5
   ],
   "hardpointAngleOffsets": [
     0,
-    0,
-    0,
     0
   ],
-  "autocharge": true,
   "barrelMode": "ALTERNATING",
   "animationType": "SMOKE",
   "smokeSpec": {
@@ -61,5 +48,5 @@
       200
     ]
   },
-  "fireSoundTwo": "hurricane_mirv_fire"
+  "fireSoundTwo": "pilum_lrm_fire"
 }

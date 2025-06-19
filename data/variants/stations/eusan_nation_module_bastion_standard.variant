@@ -1,0 +1,61 @@
+{
+  "variantId": "eusan_nation_module_bastion_standard",
+  "hullId": "eusan_nation_module_bastion",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_taean"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "eusan_nation_tulip",
+        "WS0003": "eusan_nation_tulip"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "eusan_nation_dory",
+        "WS0007": "eusan_nation_dory"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_wuqiong_double",
+        "WS0008": "eusan_nation_dangpa",
+        "WS0010": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "eusan_nation_wuqiong_double",
+        "WS0009": "eusan_nation_dangpa",
+        "WS0011": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

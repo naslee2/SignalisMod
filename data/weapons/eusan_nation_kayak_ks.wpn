@@ -1,47 +1,29 @@
 {
-  "id": "eusan_nation_kayak",
+  "id": "eusan_nation_kayak_ks",
   "specClass": "projectile",
   "projectileSpecId": "eusan_nation_kayak_mirv1",
   "type": "MISSILE",
   "size": "LARGE",
-  "displayArcRadius": 300,
-  "turretSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
-  "hardpointSprite": "graphics/weapons/eusan_nation_triglav_builtin_base2.png",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/eusan_nation_kayak_ks_turret_base.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_kayak_ks_hardpoint_base.png",
   "renderHints": [
+    "RENDER_LOADED_MISSILES"
   ],
   "turretOffsets": [
-    22,
-    -12,
-    22,
-    -4,
-    22,
-    4,
-    22,
-    12
+    3,
+    -4.5
   ],
   "turretAngleOffsets": [
-    0,
-    0,
-    0,
     0
   ],
   "hardpointOffsets": [
-    40,
-    -12,
-    40,
-    -4,
-    40,
-    4,
-    40,
-    12
+    15,
+    -4.5
   ],
   "hardpointAngleOffsets": [
-    0,
-    0,
-    0,
     0
   ],
-  "autocharge": true,
   "barrelMode": "ALTERNATING",
   "animationType": "SMOKE",
   "smokeSpec": {
@@ -59,7 +41,7 @@
       100,
       100,
       200
-    ]
+	]
   },
-  "fireSoundTwo": "hurricane_mirv_fire"
+  "fireSoundTwo": "reaper_fire"
 }
