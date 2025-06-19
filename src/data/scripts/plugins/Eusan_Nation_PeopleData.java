@@ -199,7 +199,7 @@ public class Eusan_Nation_PeopleData {
     public void createImportantPeople_miscPeople(){
         ImportantPeopleAPI importantPeople_miscPeople = Global.getSector().getImportantPeople();
         PersonAPI hvt = Global.getFactory().createPerson();
-        hvt.setId("eusan_nation_hvt");
+        hvt.setId("op1_hvt");
         hvt.setFaction(Factions.INDEPENDENT);
         hvt.setGender(FullName.Gender.MALE);
         hvt.setRankId("unknown");

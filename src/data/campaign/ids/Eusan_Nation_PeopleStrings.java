@@ -34,6 +34,7 @@ public class Eusan_Nation_PeopleStrings {
 
     //MISC NPC
     public final static String SPECIAL_AGENT = "eusan_nation_special_agent";
+    public final static String HVT = "op1_HVT";
     
     //FLEET OFFICER NPC
     public final static String MARY_CHENG = "eusan_nation_mary_cheng";

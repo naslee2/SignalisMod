@@ -37,7 +37,7 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         eldfell = Global.getSector().getEconomy().getMarket("eldfell");
         admiral_falke = getImportantPerson(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
         specialAgent = getImportantPerson(Eusan_Nation_PeopleStrings.SPECIAL_AGENT);
-        //hvt = getImportantPerson("eusan_nation_hvt");
+        hvt = getImportantPerson(Eusan_Nation_PeopleStrings.HVT);
 
         eldfell.getCommDirectory().addPerson(specialAgent);
 
@@ -63,16 +63,17 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         setStageOnGlobalFlag(Stage.RETURN_TO_HEIMAT,"$eusan_nation_operation1_return_to_heimat");
         setStageOnGlobalFlag(Stage.COMPLETED,"$eusan_nation_operation1_competed");
 
-        beginStageTrigger(Stage.TALK_TO_AGENT);
+
         makeImportant(specialAgent,"$eusan_nation_operation1_eldfell",Stage.TALK_TO_AGENT);
-        endTrigger();
 
         beginStageTrigger(Stage.LOCATE_HVT);
+        kazeron.getCommDirectory().addPerson(hvt);
         triggerHideCommListing(specialAgent);
-        makeImportant(kazeron,"$eusan_nation_operation1_locate_hvt",Stage.LOCATE_HVT);
+        makeImportant(hvt, "$eusan_nation_operation1_locate_hvt", Stage.LOCATE_HVT);
         endTrigger();
 
         beginStageTrigger(Stage.RETURN_TO_HEIMAT);
+        triggerHideCommListing(hvt);
         makeImportant(admiral_falke,"$eusan_nation_operation1_return_to_heimat",Stage.RETURN_TO_HEIMAT);
         endTrigger();
 
@@ -110,10 +111,13 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
     public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height){
         float opad = 10f;
         if(currentStage == Stage.TALK_TO_AGENT) {
+            info.addPara("Meet with the " +specialAgent.getNameString(), opad);
         }
         if(currentStage == Stage.LOCATE_HVT) {
+            info.addPara("Take the HVT into custody", opad);
         }
         else if(currentStage == Stage.RETURN_TO_HEIMAT){
+            info.addPara("The HVT is secured. Return him to Heimat.", opad);
         }
     }
 
