@@ -1,0 +1,42 @@
+{
+  "variantId": "eusan_nation_module_missile_r_standard",
+  "hullId": "eusan_nation_module_missile_r",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "squall",
+        "WS0002": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "eusan_nation_tulip",
+        "WS0004": "eusan_nation_tulip"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_dangpa",
+        "WS0006": "eusan_nation_dangpa",
+        "WS0007": "eusan_nation_dory",
+        "WS0008": "eusan_nation_dory",
+        "WS0009": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

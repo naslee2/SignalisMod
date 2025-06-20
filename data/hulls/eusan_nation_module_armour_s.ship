@@ -1,0 +1,30 @@
+{
+  "hullName": "Station Armour Module",
+  "hullId": "eusan_nation_module_armour_s",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/stations/eusan_nation_station_armor_s.png",
+  "style": "MIDLINE",
+  "height": 60,
+  "width": 80,
+  "center": [40, 42],
+  "collisionRadius": 76,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 68.5,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -19,
+    0
+  ],
+  "builtInMods": [
+    "reduced_explosion",
+    "always_detaches"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    -13, -36,
+    14, -36,
+    14, 36,
+    -13, 36
+  ]
+}

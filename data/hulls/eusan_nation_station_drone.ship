@@ -1,0 +1,107 @@
+{
+  "hullName": "Bangpae",
+  "hullId": "eusan_nation_station_drone",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/stations/eusan_nation_station_drone.png",
+  "style": "MIDLINE",
+  "height": 100,
+  "width": 72,
+  "center": [36, 49],
+  "collisionRadius": 68,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 66.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "supercomputer",
+    "eusan_nation_onboard_supercomputer"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 0,
+      "locations": [19, -11]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 0,
+      "locations": [19, 11]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -90,
+      "locations": [-3, -15]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 90,
+      "locations": [-3, 15]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-45, -0],
+      "length": 25,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-13, 28],
+      "length": 18,
+      "width": 8,
+      "angle": 135,
+      "contrailSize": 8,
+      "style": "EUSAN"
+    },
+    {
+      "location": [-13, -28],
+      "length": 18,
+      "width": 8,
+      "angle": -135,
+      "contrailSize": 8,
+      "style": "EUSAN"
+    },
+    {
+      "location": [15, 32],
+      "length": 16,
+      "width": 6,
+      "angle": 45,
+      "contrailSize": 6,
+      "style": "EUSAN"
+    },
+    {
+      "location": [15, -32],
+      "length": 16,
+      "width": 6,
+      "angle": -45,
+      "contrailSize": 6,
+      "style": "EUSAN"
+    }
+  ],
+  "bounds": [
+    -6, -33,
+    29, -27,
+    25, -20,
+    25, 20,
+    29, 27,
+    -6, 33,
+    -44, -0
+  ]
+}

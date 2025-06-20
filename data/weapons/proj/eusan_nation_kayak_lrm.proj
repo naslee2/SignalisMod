@@ -1,7 +1,7 @@
 {
 	"id":"eusan_nation_kayak_lrm",
 	"specClass":"missile",	
-	"missileType":"MISSILE",
+	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
 	"sprite":"graphics/missiles/eusan_nation_kayak_mirv2.png",
 	"size":[13,31],	
 	"center":[6.5,16],

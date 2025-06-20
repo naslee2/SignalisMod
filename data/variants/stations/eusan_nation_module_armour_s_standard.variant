@@ -1,0 +1,14 @@
+{
+  "variantId": "eusan_nation_module_armour_s_standard",
+  "hullId": "eusan_nation_module_armour_s",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

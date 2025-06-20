@@ -1,5 +1,5 @@
 {
-	"id":"eusan_nation_admiral_shot",
+	"id":"eusan_nation_taean_shot",
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
