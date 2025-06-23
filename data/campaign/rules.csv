@@ -1360,5 +1360,47 @@ The replika gives you a glowering look. You are not welcome by the looks of it."
 MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
 "#END MARLIS_EXIT",,,,,,
 "#END MARLIS",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY,,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_GREETING,,,,,,
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000",,,,
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,OpenCommLink,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000",,,,
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100",,,,
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,OpenCommLink,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100",,,,
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000",,,,
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,OpenCommLink,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000",,,,
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100",,,,
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,OpenCommLink,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100",,,,
+THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,OpenCommLink,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.isHostile score:100",,,,
+"#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_OP1,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OP1",,,,,,
+"#END THE_GREAT_REVOLUTIONARY",,,,,,
 "#END EUSAN_NATION_NPC",,,,,,
 
