@@ -59,6 +59,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\campaign\industries.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\starsector-core\data\campaign\market_conditions.csv">
           <value>
             <Attribute>

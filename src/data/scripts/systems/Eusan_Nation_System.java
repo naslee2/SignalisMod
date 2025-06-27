@@ -275,7 +275,7 @@ public class Eusan_Nation_System {
         heimat_market.addIndustry(Industries.POPULATION);
         heimat_market.getIndustry(Industries.POPULATION).setImproved(true);
         heimat_market.addIndustry("eusan_nation_aeonHQ");
-        //heimat_market.addIndustry(Industries.STARFORTRESS);
+        heimat_market.addIndustry("eusan_nation_station3");
         heimat_market.addSubmarket(Submarkets.SUBMARKET_OPEN);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         heimat_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
@@ -283,9 +283,6 @@ public class Eusan_Nation_System {
         heimat_market.addSubmarket("eusan_nation_volksmarine_market");
         heimat_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
         sector.getEconomy().addMarket(heimat_market, true);
-
-        //final SectorEntityToken heimat_starFortress = system.addCustomEntity("eusan_nation_station3","Heimat Star Fortress","eusan_starFortress","eusan_nation");
-        //heimat_starFortress.setCircularOrbit(heimat,55f,500f,350f);
 
         system.addRingBand(gas_giant2, "misc", "rings_special0", 256f, 0, Color.white, 256f, 500f, 60f);
         system.addRingBand(gas_giant2, "misc", "rings_special0", 256f, 1, Color.white, 256f, 700f, 60f);
