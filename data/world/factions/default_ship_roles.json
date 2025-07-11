@@ -50,11 +50,21 @@
         "eusan_nation_admiral_standard":1
     },
     "crig":{},
-    "utility":{},
+    "utility":{
+        "eusan_nation_penrose_standard": 1,
+        "eusan_nation_wachtel_standard": 3
+    },
+    "personnelSmall":{
+        "eusan_nation_pisagua_standard": 5.0,
+        "eusan_nation_pelikan_standard": 5.0
+    },
     "combatFreighterLarge":{
         "eusan_nation_kanal_standard": 5.0
     },
-    "freighterSmall":{},
+    "freighterSmall":{
+        "eusan_nation_pisagua_standard": 5.0,
+        "eusan_nation_pelikan_standard": 5.0
+    },
     "freighterMedium":{
         "eusan_nation_riems_freighter_standard": 7.0
     },
