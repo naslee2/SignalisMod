@@ -152,6 +152,7 @@
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
+			"squall"
 		],
 	},
 	"priorityWeapons":{
@@ -171,6 +172,7 @@
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
+			"squall"
 		],
 	},
 	"knownHullMods":{
