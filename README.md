@@ -10,13 +10,13 @@ LazyLib https://fractalsoftworks.com/forum/index.php?topic=5444.0
 
 MagicLib https://fractalsoftworks.com/forum/index.php?topic=25868.0 
 
-Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0 WARNING MAKE SURE NEXERLIN IS v0.10.6c OR LATER. WILL CRASH ON OLDER VERSIONS. 
+Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0
 
 # CREDITS
 
 Ship sprites, hull, weapons and ship data by Sikair.
 
-Thanks to Kaysaar, WMGreywind and Sikair for coding assistance.
+Thanks to Kaysaar, WMGreywind, Sikair and Mayu for coding assistance.
 
 Thanks to Mallow / @AkulaAkura, Koil_52 , and yyiek for the awesome art!
 
@@ -26,7 +26,7 @@ Thanks to Koil_52, lebonelesssnek, C H E E K I B R E E K I and Venri for writing
 
 Cristiferbeast for being the public face of the Signalis modding community.
 
-firebombpng#2396 for the Eusan Nation flag, StrixBerseria, Swiftnicity#7031, and firebombpng#2396 for the Eusan Nation crests
+Responsible_Yak_5835, StrixBerseria, Swiftnicity, and firebombpng for the Eusan Nation crests
 
 Thanks to phi_zeta_iota and darkvion for letting me use/copy their flag concepts for the Nation and related states.
 
