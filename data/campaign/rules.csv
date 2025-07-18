@@ -1364,34 +1364,71 @@ MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
 # THE_GREAT_REVOLUTIONARY,,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_GREETING,,,,,,
-THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metGreatRev == false
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall "" "" highlight
+AddText """" """"",,,
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == false
+$faction.friendlyToPlayer score:1000","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall "" "" highlight
+AddText """" """"",,,
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000",,,,
-THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,OpenCommLink,"$faction.id == ""eusan_nation""
+$player.metGreatRev == false
+$faction.neutralToPlayer score:100","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall "" "" highlight
+AddText """" """"",,,
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000",,,,
-THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$player.metGreatRev == false
+$faction.neutralToPlayer score:100","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall "" "" highlight
+AddText """" """"",,,
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100",,,,
-THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,OpenCommLink,"$faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100",,,,
-THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == true","FireAll PopulateOptions",,,
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == true","FireAll PopulateOptions",,,
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000",,,,
-THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,OpenCommLink,"$faction.id == ""eusan_nation""
+$player.metGreatRev == true
+$faction.neutralToPlayer score:100","FireAll PopulateOptions",,,
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000",,,,
-THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
-$faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100",,,,
-THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,OpenCommLink,"$faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100",,,,
-THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,OpenCommLink,"$faction.id == ""eusan_nation""
+$player.metGreatRev == true
+$faction.neutralToPlayer score:100","FireAll PopulateOptions",,,
+THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.isHostile score:100",,,,
+$faction.isHostile score:100",,,"cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_OPERATION1,,,,,,
+NEW RULE,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OPERATION1",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
 "#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
