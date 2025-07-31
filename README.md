@@ -12,6 +12,12 @@ MagicLib https://fractalsoftworks.com/forum/index.php?topic=25868.0
 
 Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0
 
+# MOD INTEGRATIONS
+
+Phillip Andrada Gas Station Manager (PAGSM)
+
+TriOS (Mod Manager)
+
 # CREDITS
 
 Ship sprites, hull, weapons and ship data by Sikair.
