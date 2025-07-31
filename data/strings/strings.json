@@ -34,13 +34,10 @@
         "eusan_nation_missile_assembly_compartmentText5": "Missile Flux Increase: %s",
         "eusan_nation_missile_assembly_compartmentText6": "Machinery? No fancy automated systems here. The replikas assemble the missiles and cranes send them to the ready service magazine area. Then they get loaded to the launchers. Not like the other powers with their fancy automated handling systems, we do things by hand.",
         "eusan_nation_missile_assembly_compartmentText7": "\u2014 Unnamed Fire Control Technician",
-        "eusan_nation_missile_advanced_flag_facilities1": "",
-        "eusan_nation_missile_advanced_flag_facilities2": "",
-        "eusan_nation_missile_advanced_flag_facilities3": "",
-        "eusan_nation_missile_advanced_flag_facilities4": "",
-        "eusan_nation_missile_advanced_flag_facilities5": "",
-        "eusan_nation_missile_advanced_flag_facilities6": "",
-        "eusan_nation_missile_advanced_flag_facilities7": "\u2014 "
+        "eusan_nation_missile_advanced_flag_facilities1": "Increases the command point recovery rate by %s when installed on the flagship.",
+        "eusan_nation_missile_advanced_flag_facilities2": "Data links set. Fleet units are pinging back status and sensor pictures. Relaying updated data to network.",
+        "eusan_nation_missile_advanced_flag_facilities3": "\u2014 Tactical Officer on the VM Genevieve"
+
     }
 }
     

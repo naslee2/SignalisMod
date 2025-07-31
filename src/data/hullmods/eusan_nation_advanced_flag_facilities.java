@@ -23,6 +23,9 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
     public final float RECOVERY_BONUS = 225f;
 	public final String MOD_ID = "eusan_nation_advanced_flag_facilities";
 
+	String eusan_nation_missile_advanced_flag_facilities1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities1");
+	String eusan_nation_missile_advanced_flag_facilities2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities2");
+	String eusan_nation_missile_advanced_flag_facilities3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities3");
 	String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
 	String incompatibilitiesText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodIncompatibilities");
 
@@ -86,11 +89,17 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
 		//Details section
 		tooltip.addSectionHeading(detailText, Alignment.MID, pad10);
+		tooltip.addPara(eusan_nation_missile_advanced_flag_facilities1, pad10, green, (int) (RECOVERY_BONUS) + "%");
 
 		//Incompatibilities
 		tooltip.addSectionHeading(incompatibilitiesText, negative,negativeBG, Alignment.MID, pad10);
+		final TooltipMakerAPI warning_section = tooltip.beginImageWithText(Global.getSettings().getSpriteName("tooltips", "warningSymbol"), 40);
+		warning_section.addPara("Incompatible with %s", 0f, negative, "Operations Center");
+		tooltip.addImageWithText(pad10);
 
 		//Quotes
+		tooltip.addPara("%s", 6.0f, flavor, eusan_nation_missile_advanced_flag_facilities2).italicize();
+		tooltip.addPara("%s", 6.0f, flavor, eusan_nation_missile_advanced_flag_facilities3).setAlignment(Alignment.RMID);
 	}
 
 	@Override
@@ -106,7 +115,7 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
 	public String getUnapplicableReason(ShipAPI ship){
 		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
-			return "Incompatable with Operations Center";
+			return "Incompatible with Operations Center";
 		}
 		return null;
 	}
