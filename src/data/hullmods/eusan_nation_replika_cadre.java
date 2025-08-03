@@ -35,9 +35,6 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
         stats.getCombatEngineRepairTimeMult().modifyMult(id, 1f - REPAIR_BONUS * 0.01f);
 		stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f - REPAIR_BONUS * 0.01f);
 
-        //stats.getBaseCRRecoveryRatePercentPerDay().modifyPercent(id, CR_RECOVERY_BONUS);
-		//stats.getRepairRatePercentPerDay().modifyPercent(id, REPAIR_RATE_BONUS);
-        //stats.getOverloadTimeMod().modifyMult(id, 1f - OVERLOAD_BONUS * 0.01f);
     }
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
@@ -45,9 +42,9 @@ public class eusan_nation_replika_cadre extends BaseHullMod {
 			//if someone tries to install incompatible hullmods, remove it.
 			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EFFICIENCY_OVERHAUL, "eusan_nation_replika_cadre");
 		}
-        // if(ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
-        //     MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.AUTOREPAIR, "Replika Cadre");
-        // }
+         if(ship.getVariant().getHullMods().contains(HullMods.AUTOREPAIR)){
+             MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.AUTOREPAIR, "eusan_nation_replika_cadre");
+         }
 	}
 
     public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship){
