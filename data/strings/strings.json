@@ -36,8 +36,13 @@
         "eusan_nation_missile_assembly_compartmentText7": "\u2014 Unnamed Fire Control Technician",
         "eusan_nation_missile_advanced_flag_facilities1": "Increases the command point recovery rate by %s when installed on the flagship.",
         "eusan_nation_missile_advanced_flag_facilities2": "Data links set. Fleet units are pinging back status and sensor pictures. Relaying updated data to network.",
-        "eusan_nation_missile_advanced_flag_facilities3": "\u2014 Tactical Officer on the VM Genevieve"
-
+        "eusan_nation_missile_advanced_flag_facilities3": "\u2014 Tactical Officer on the VM Genevieve",
+        "eusan_Nation_Imperial_HullPlating1a": "Sensor Profile Reduction: %s",
+        "eusan_Nation_Imperial_HullPlating2a": "Energy Damage Taken Reduction: %s",
+        "eusan_Nation_Imperial_HullPlating3a": "Hull Combat Repair Rate Decrease: %s",
+        "eusan_Nation_Imperial_HullPlating4a": "Maintenance Repair Rate Decrease: %s",
+        "eusan_Nation_Imperial_HullPlating5a": "Its frankly advanced stuff. The Empire may have obtained materials and technology from the Sector and created armor plating that reduces the sensor detection range.",
+        "eusan_Nation_Imperial_HullPlating6a": "\u2014 Volksmarine Intelligence Officer"
     }
 }
     
