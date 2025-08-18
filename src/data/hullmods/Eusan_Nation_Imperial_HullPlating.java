@@ -12,10 +12,10 @@ import com.fs.starfarer.api.util.Misc;
 import java.awt.*;
 
 public class Eusan_Nation_Imperial_HullPlating extends BaseHullMod {
-    private float SENSOR_PROFILE_MULT = 0.60f;
+    private float SENSOR_PROFILE_MULT = 0.6f;
     private float ENERGY_DAMAGE_DECREASE = 0.15f;
-    private float HULLCOMBAT_REPAIR_RATE_DECREASE = 0.20f;
-    private float MAINTENANCE_MULT = 0.1f;
+    private float HULLCOMBAT_REPAIR_RATE_DECREASE = 0.2f;
+    private float MAINTENANCE_MULT = 0.2f;
 
     String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
     String incompatibilitiesText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodIncompatibilities");
