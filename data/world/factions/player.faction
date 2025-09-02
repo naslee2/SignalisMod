@@ -35,7 +35,10 @@
             "graphics/portraits/eusan_nation_male_128_6.png",
             "graphics/portraits/eusan_nation_male_128_7.png",
             "graphics/portraits/eusan_nation_male_128_8.png",
-            "graphics/portraits/eusan_nation_male_128_9.png"
+            "graphics/portraits/eusan_nation_male_128_9.png",
+            "graphics/portraits/eusan_nation_male_128_10.png",
+            "graphics/portraits/eusan_nation_male_128_11.png"
+
 
         ],
         "standard_female":[
@@ -52,7 +55,9 @@
             "graphics/portraits/eusan_nation_female_128_6.png",
             "graphics/portraits/eusan_nation_female_128_7.png",
             "graphics/portraits/eusan_nation_female_128_8.png",
-            "graphics/portraits/eusan_nation_female_128_9.png"
+            "graphics/portraits/eusan_nation_female_128_9.png",
+            "graphics/portraits/eusan_nation_female_128_10.png",
+            "graphics/portraits/eusan_nation_female_128_11.png"
 
 
         ]
