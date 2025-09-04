@@ -52,13 +52,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\UAF\data\weapons\weapon_data.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\signalisMod\data\strings\descriptions.csv">
           <value>
             <Attribute>
