@@ -2,6 +2,9 @@ package data.scripts.plugins;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
+import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.SpecialItemPlugin;
+import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.FullName.Gender;
@@ -9,6 +12,7 @@ import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 
+import com.fs.starfarer.combat.ai.AI;
 import data.campaign.ids.Eusan_Nation_PeopleStrings;
 
 public class Eusan_Nation_PeopleData {
@@ -48,6 +52,7 @@ public class Eusan_Nation_PeopleData {
             //Admiral Falke
 	        PersonAPI admiral_falke = Global.getFactory().createPerson();
             admiral_falke.setId(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
+            admiral_falke.setAICoreId("beta_core");
             admiral_falke.setFaction(EUSAN_NATION);
             admiral_falke.setGender(Gender.FEMALE);
             admiral_falke.setRankId(Ranks.SPACE_ADMIRAL);
@@ -67,6 +72,7 @@ public class Eusan_Nation_PeopleData {
             admiral_falke.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
             admiral_falke.getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
             admiral_falke.setVoice(Voices.SOLDIER);
+            admiral_falke.isAICore();
             importantPeople_heimat.addPerson(admiral_falke);
 
             //GreatRevolutionary
@@ -157,6 +163,7 @@ public class Eusan_Nation_PeopleData {
             //the very same Aldr
             PersonAPI leng_aldr = Global.getFactory().createPerson();
             leng_aldr.setId(Eusan_Nation_PeopleStrings.ALDR);
+            leng_aldr.setAICoreId("beta_core");
             leng_aldr.setFaction(EUSAN_NATION);
             leng_aldr.getName().setFirst(Eusan_Nation_PeopleStrings.ALDR_FIRSTNAME);
             leng_aldr.getName().setLast(Eusan_Nation_PeopleStrings.ALDR_LASTNAME);
@@ -165,7 +172,8 @@ public class Eusan_Nation_PeopleData {
             leng_aldr.setPostId("aldr");
             leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
             leng_aldr.setVoice(Voices.OFFICIAL);
-            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 2);
+            leng_aldr.isAICore();
             market_leng.setAdmin(leng_aldr);
             market_leng.getCommDirectory().addPerson(leng_aldr);
             market_leng.addPerson(leng_aldr);
