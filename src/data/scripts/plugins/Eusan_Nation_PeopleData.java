@@ -86,12 +86,31 @@ public class Eusan_Nation_PeopleData {
             greatRevolutionary.setImportance(PersonImportance.VERY_HIGH);
             greatRevolutionary.addTag(Tags.CONTACT_MILITARY);
             greatRevolutionary.getName().setFirst(Eusan_Nation_PeopleStrings.GREAT_REVOLUTIONARY_FIRSTNAME);
-            greatRevolutionary.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke_128.png");
+            greatRevolutionary.setPortraitSprite("graphics/portraits/eusan_nation_theGreatRevolutionary_128.png");
             greatRevolutionary.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
             market_heimat.setAdmin(greatRevolutionary);
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
+            market_heimat.getCommDirectory().getEntryForPerson(greatRevolutionary).setHidden(false);;
             market_heimat.addPerson(greatRevolutionary);
             importantPeople_heimat.addPerson(greatRevolutionary);
+
+            //The Daughter
+            PersonAPI theDaughter = Global.getFactory().createPerson();
+            theDaughter.setId(Eusan_Nation_PeopleStrings.THE_DAUGHTER);
+            theDaughter.setFaction(EUSAN_NATION);
+            theDaughter.setGender(Gender.FEMALE);
+            theDaughter.setRankId("daughterNationRank");
+            theDaughter.setPostId("daughterNation");
+            theDaughter.setVoice(Voices.OFFICIAL);
+            theDaughter.setImportance(PersonImportance.VERY_HIGH);
+            theDaughter.addTag(Tags.CONTACT_UNDERWORLD);
+            theDaughter.getName().setFirst(Eusan_Nation_PeopleStrings.THE_DAUGHTER_FIRSTNAME);
+            theDaughter.setPortraitSprite("graphics/portraits/eusan_nation_theDaughter_128.png");
+            market_heimat.getCommDirectory().addPerson(theDaughter,1);
+            market_heimat.getCommDirectory().getEntryForPerson(theDaughter).setHidden(false);
+            market_heimat.addPerson(theDaughter);
+            importantPeople_heimat.addPerson(theDaughter);
+
         }
     }
 
@@ -108,7 +127,7 @@ public class Eusan_Nation_PeopleData {
             special_agent.setPostId("gestaltAgent");
             special_agent.getName().setFirst("Special");
             special_agent.getName().setLast("Agent");
-            special_agent.setPortraitSprite("graphics/portraits/portrait_hegemony15.png");
+            special_agent.setPortraitSprite("graphics/portraits/eusan_nation_male_128_8.png");
             special_agent.setImportance(PersonImportance.HIGH);
             special_agent.addTag(Tags.CONTACT_MILITARY);
             special_agent.setVoice(Voices.SOLDIER);

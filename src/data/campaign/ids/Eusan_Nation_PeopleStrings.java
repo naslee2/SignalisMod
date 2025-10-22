@@ -12,14 +12,14 @@ public class Eusan_Nation_PeopleStrings {
     public final static String GREAT_REVOLUTIONARY_FIRSTNAME = "Great Revolutionary";
     public final static String THE_DAUGHTER = "eusan_nation_the_daughter";
     public final static String THE_DAUGHTER_FIRSTNAME = "The Daughter";
-    public final static String HEIMAT_FALKE = "eusan_nation_heimat_falke";
-    public final static String HEIMAT_FALKE_LASTNAME = "FLKR-HC1-01";
-    public final static String HEIMAT_ALDER = "eusan_nation_heimat_aldr";
-    public final static String ALDER_FIRSTNAME = "Alder";
-    public final static String HEIMAT_ALDER_LASTNAME = "ALDR-HC1-01";
-    public final static String HEIMAT_KOLIBRI = "eusan_nation_heimat_kolibri";
-    public final static String HEIMAT_KOLIBRI_FIRSTNAME = "Kolibri";
-    public final static String HEIMAT_KOLIBRI_LASTNAME = "KLBR-HC1-01";
+//    public final static String HEIMAT_FALKE = "eusan_nation_heimat_falke";
+//    public final static String HEIMAT_FALKE_LASTNAME = "FLKR-HC1-01";
+//    public final static String HEIMAT_ALDER = "eusan_nation_heimat_aldr";
+//    public final static String ALDER_FIRSTNAME = "Alder";
+//    public final static String HEIMAT_ALDER_LASTNAME = "ALDR-HC1-01";
+//    public final static String HEIMAT_KOLIBRI = "eusan_nation_heimat_kolibri";
+//    public final static String HEIMAT_KOLIBRI_FIRSTNAME = "Kolibri";
+//    public final static String HEIMAT_KOLIBRI_LASTNAME = "KLBR-HC1-01";
 
     //ROTFRONT NPC
     public final static String MARLIS = "eusan_nation_marlis";
