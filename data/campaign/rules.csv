@@ -458,6 +458,15 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$player.metAdmiralFalke == true
+$global.eusan_nation_penroseRecovery2_completed == true
+$global.eusan_nation_penrose512_start == false
+eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
+SetOptionColor officeryeongPenroseRecovery512Start highlight
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
 RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
@@ -1354,51 +1363,47 @@ MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
 THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metGreatRev == false
-$player.accessGrantedGreatRev == false
 $id == eusan_nation_great_revolutionary score: 100
 $faction.friendlyToPlayer score:1000","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
-AddText """"Interesting. They send a traveller from outside the Nation. That means you are either lucky or dedicated. So, comrade, how can you help the Nation?"" """,,,
+AddText """"Interesting. They send a traveller from outside the Nation. That means you are either lucky or dedicated. So, comrade, how can you help the Nation?"" """,,,"$player.accessGrantedGreatRev == false"
 THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $faction.friendlyToPlayer score:1000
-$player.metGreatRev == false
-$player.accessGrantedGreatRev == false","$player.metGreatRev = true
+$player.metGreatRev == false","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
-AddText """"Interesting. They send me someone from outside the Nation. That means you are either lucky or dedicated. So, traveller, how can you help the Nation?"" """,,,
+AddText """"Interesting. They send me someone from outside the Nation. That means you are either lucky or dedicated. So, traveller, how can you help the Nation?"" """,,,"$player.accessGrantedGreatRev == false"
 THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $player.metGreatRev == false
-$player.accessGrantedGreatRev == false
 $faction.neutralToPlayer score:100","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
-AddText """"Someone from the outside. Dedicated enough to get by I see. Remember, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,
+AddText """"Someone from the outside. Dedicated enough to get by I see. Remember, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,"$player.accessGrantedGreatRev == false"
 THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $player.metGreatRev == false
-$player.accessGrantedGreatRev == false
 $faction.neutralToPlayer score:100","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
-AddText """"An outsider. How you managed to get by with such a reputation, will remain a mystery to me. Remember traveller, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,
+AddText """"An outsider. How you managed to get by with such a reputation, will remain a mystery to me. Remember traveller, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,"$player.accessGrantedGreatRev == false"
 THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100
+$id == ""eusan_nation_great_revolutionary"" score: 100
 $faction.friendlyToPlayer score:1000
-$player.metGreatRev == true
-$player.accessGrantedGreatRev ==true","FireAll PopulateOptions","""Hello Comrade, how are you today.""
+$player.metGreatRev == true","ShowPersonVisual
+FireAll PopulateOptions","""Hello Comrade, how are you today.""
 OR
 ""Heimat welcomes you, comrade.""
 OR
@@ -1410,12 +1415,12 @@ OR
 OR
 ""Busy as always but you have my attention.""
 OR
-""Comrade, what brings you back to Heimat?""",,
+""Comrade, what brings you back to Heimat?""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100
+$id == ""eusan_nation_great_revolutionary"" score: 100
 $faction.friendlyToPlayer score:1000
-$player.metGreatRev == true
-$player.accessGrantedGreatRev ==true","FireAll PopulateOptions","""Hello traveller, how are you today.""
+$player.metGreatRev == true","ShowPersonVisual
+FireAll PopulateOptions","""Hello traveller, how are you today.""
 OR
 ""Traveller, you should consider joining the Nation. The benefits are...suitable for you.""
 OR
@@ -1427,13 +1432,13 @@ OR
 OR
 ""Governing the Nation is exhausting so please tell me what you need.""
 OR
-""I knew you were going to call so I took the liberty of making some time. Speak.""",,
+""I knew you were going to call so I took the liberty of making some time. Speak.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100
+$id == ""eusan_nation_great_revolutionary"" score: 100
 $player.metGreatRev == true
-$faction.neutralToPlayer score:100
-$player.accessGrantedGreatRev ==true","FireAll PopulateOptions","""Doing enough to scrape by, I see.""
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Doing enough to scrape by, I see.""
 OR
 ""I was told you were in the system. What do you want.""
 OR
@@ -1445,12 +1450,12 @@ OR
 OR
 ""Remember, traveller, everytime you move a muscle, I know what action you may take.""
 OR
-""Make it quick, traveller, time is precious.""",,
+""Make it quick, traveller, time is precious.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$faction.id == ""eusan_nation""
-$id == eusan_nation_great_revolutionary score: 100
+$id == ""eusan_nation_great_revolutionary"" score: 100
 $player.metGreatRev == true
-$faction.neutralToPlayer score:100
-$player.accessGrantedGreatRev ==true","FireAll PopulateOptions","""Traveller. Your actions worry me and the rest of the Nation. Perhaps its time to find a way to rectify that.""
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Traveller. Your actions worry me and the rest of the Nation. Perhaps its time to find a way to rectify that.""
 OR
 ""You are wasting precious time. Speak.""
 OR
@@ -1460,10 +1465,10 @@ OR
 OR
 ""It would be helpful if you make yourself useful and work on helping the Nation.""
 OR
-""Make it quick you are taking up precious time.""",,
+""Make it quick you are taking up precious time.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.isHostile score:100",,"""Begone""
+$faction.isHostile score:100","ShowPersonVisual","""Begone""
 OR
 ""Tch...""
 OR
