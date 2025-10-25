@@ -2,9 +2,6 @@ package data.scripts.plugins;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
-import com.fs.starfarer.api.campaign.SpecialItemData;
-import com.fs.starfarer.api.campaign.SpecialItemPlugin;
-import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.FullName.Gender;
@@ -12,7 +9,6 @@ import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 
-import com.fs.starfarer.combat.ai.AI;
 import data.campaign.ids.Eusan_Nation_PeopleStrings;
 
 public class Eusan_Nation_PeopleData {
