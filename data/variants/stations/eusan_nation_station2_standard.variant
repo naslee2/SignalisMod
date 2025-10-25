@@ -1,0 +1,24 @@
+{
+  "variantId": "eusan_nation_station2_standard",
+  "hullId": "eusan_nation_station2",
+  "displayName": "Battlestation",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [
+     # defense modules
+		{"WS0001": "eusan_nation_module_combat_standard"}, # south-facing
+		{"WS0004": "eusan_nation_module_missile_l_standard"}, # left
+		{"WS0005": "eusan_nation_module_missile_r_standard"}, # right
+		
+	# bastions, PD and otherwise
+		{"WS0002": "eusan_nation_module_bastion_standard"},
+		{"WS0003": "eusan_nation_module_bastion_standard"}, 
+		{"WS0006": "eusan_nation_module_citadel_standard"}, # north-facing
+  ],
+  "wings": []
+}

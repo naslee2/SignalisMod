@@ -11,13 +11,9 @@
   "shieldCenter": [-89, -0],
   "shieldRadius": 215.5,
   "viewOffset": 0,
-  "moduleAnchor": [
-    -20,
-    30
-  ],
   "builtInMods": [
     "supercomputer",
-	"eusan_nation_onboard_supercomputer",
+	"eccm",
     "reduced_explosion"
   ],
   "weaponSlots": [

@@ -17,7 +17,7 @@
   ],
   "builtInMods": [
     "supercomputer",
-    "eusan_nation_onboard_supercomputer",
+    "eccm",
     "reduced_explosion"
   ],
   "weaponSlots": [
@@ -28,7 +28,7 @@
       "mount": "TURRET",
       "arc": 120,
       "angle": -8,
-      "locations": [-30, -83]
+      "locations": [-30, -88]
     },
     {
       "id": "WS0002",
@@ -37,7 +37,7 @@
       "mount": "TURRET",
       "arc": 120,
       "angle": 8,
-      "locations": [-30, 83]
+      "locations": [-30, 88]
     },
     {
       "id": "WS0003",
@@ -136,7 +136,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": -11,
-      "locations": [33, -83]
+      "locations": [35, -55]
     },
     {
       "id": "WS0014",
@@ -145,7 +145,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": 11,
-      "locations": [33, 83]
+      "locations": [35, 55]
     },
     {
       "id": "WS0015",
@@ -154,7 +154,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": -11,
-      "locations": [25, -107]
+      "locations": [18, -104]
     },
     {
       "id": "WS0016",
@@ -163,7 +163,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": 11,
-      "locations": [25, 107]
+      "locations": [18, 104]
     },
     {
       "id": "WS0017",
@@ -172,7 +172,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": -11,
-      "locations": [17, -130]
+      "locations": [3, -89]
     },
     {
       "id": "WS0018",
@@ -181,58 +181,46 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": 11,
-      "locations": [17, 130]
+      "locations": [3, 89]
     },
     {
       "id": "WS0019",
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 80,
-      "angle": -120,
-      "locations": [-72, -134]
+      "arc": 135,
+      "angle": -100,
+      "locations": [-74, -134]
     },
     {
       "id": "WS0020",
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 80,
-      "angle": 120,
-      "locations": [-72, 134]
+      "arc": 135,
+      "angle": 100,
+      "locations": [-74, 134]
     }
   ],
   "engineSlots": [],
   "bounds": [
     -37, -38,
-    -56, -53,
-    -61, -92,
-    -88, -118,
-    -80, -152,
-    -66, -167,
-    -70, -175,
-    -44, -199,
-    -38, -198,
-    -36, -203,
-    16, -191,
-    26, -164,
-    21, -159,
-    52, -74,
-    43, -41,
-    43, 41,
-    52, 74,
-    21, 159,
-    26, 164,
-    16, 191,
-    -36, 203,
-    -38, 198,
-    -44, 199,
-    -70, 175,
-    -66, 167,
-    -80, 152,
-    -88, 118,
-    -61, 92,
-    -56, 53,
+    -69, -68,
+    -65, -88,
+    -77, -100,
+    -77, -119,
+    -89, -138,
+    -51, -193,
+    7, -166,
+    43, -57,
+    43, 57,
+    7, 166,
+    -51, 193,
+    -89, 138,
+    -77, 119,
+    -77, 100,
+    -65, 88,
+    -69, 68,
     -37, 38
   ]
 }
