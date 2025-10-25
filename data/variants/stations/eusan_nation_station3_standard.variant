@@ -10,30 +10,63 @@
   "hullMods": [],
   "weaponGroups": [],
   "modules": [
-	# armour plates
-		{"WS0007": "eusan_nation_module_armour_standard"},
-		{"WS0008": "eusan_nation_module_armour_standard"},
-		{"WS0009": "eusan_nation_module_armour_s_standard"},
-		{"WS0010": "eusan_nation_module_armour_s_standard"},
-		{"WS0011": "eusan_nation_module_armour_standard"},
-		{"WS0012": "eusan_nation_module_armour_standard"},
-		{"WS0013": "eusan_nation_module_armour_standard"},
-		{"WS0014": "eusan_nation_module_armour_standard"},
-		{"WS0015": "eusan_nation_module_armour_s_standard"},
-		{"WS0016": "eusan_nation_module_armour_s_standard"},
-		{"WS0017": "eusan_nation_module_armour_standard"},
-		{"WS0018": "eusan_nation_module_armour_standard"},
-		{"WS0019": "eusan_nation_module_armour_standard"},
-  
-    # defense modules
-		{"WS0001": "eusan_nation_module_combat_standard"}, # south-facing
-		{"WS0004": "eusan_nation_module_missile_l_standard"}, # left
-		{"WS0005": "eusan_nation_module_missile_r_standard"}, # right
-		
-	# bastions, PD and otherwise
-		{"WS0002": "eusan_nation_module_bastion_standard"},
-		{"WS0003": "eusan_nation_module_bastion_standard"}, 
-		{"WS0006": "eusan_nation_module_citadel_standard"}, # north-facing
+    {
+      "WS0007": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0008": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0009": "eusan_nation_module_armour_s_standard"
+    },
+    {
+      "WS0010": "eusan_nation_module_armour_s_standard"
+    },
+    {
+      "WS0011": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0012": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0013": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0014": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0015": "eusan_nation_module_armour_s_standard"
+    },
+    {
+      "WS0016": "eusan_nation_module_armour_s_standard"
+    },
+    {
+      "WS0017": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0018": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0019": "eusan_nation_module_armour_standard"
+    },
+    {
+      "WS0001": "eusan_nation_module_combat_standard"
+    },
+    {
+      "WS0004": "eusan_nation_module_missile_l_standard"
+    },
+    {
+      "WS0005": "eusan_nation_module_missile_r_standard"
+    },
+    {
+      "WS0002": "eusan_nation_module_bastion_standard"
+    },
+    {
+      "WS0003": "eusan_nation_module_bastion_standard"
+    },
+    {
+      "WS0006": "eusan_nation_module_citadel_standard"
+    }
   ],
   "wings": []
 }
