@@ -138,9 +138,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addBriefingItem("Defeat the station");
 		
 		// Set up the fleets
-		generateFleet(175 + (int)((float) Math.random() * 100), FleetSide.PLAYER, ships, api);
-		api.addToFleet(FleetSide.ENEMY, "eusan_nation_station3_standard", FleetMemberType.SHIP, false);
-		
+		generateFleet(125 + (int)((float) Math.random() * 100), FleetSide.PLAYER, ships, api);
+        api.addToFleet(FleetSide.ENEMY, "eusan_nation_station3_standard", FleetMemberType.SHIP, false);
+
 		// Set up the map.
 		float width = 24000f;
 		float height = 18000f;

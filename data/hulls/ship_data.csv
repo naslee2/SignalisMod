@@ -38,7 +38,7 @@ Isolde,eusan_nation_isolde_imperial,Fast Cruiser,Eusan Tech,microburn,14,9000,85
 #Station,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Bangpae,eusan_nation_station_drone,Drone,Eusan Tech,forgevats_station,,2000,300,1600,,400,50,,250,400,300,60,90,200,FRONT,,100,0,1,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,8
 Sternfestung,eusan_nation_station3,Sternfestung,Eusan Tech,eusan_nation_drone_station,400,160000,2400,1000,,100,0,,30,200,200,6,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2005
-Battlestation,eusan_nation_station2,Battlestation,Eusan Tech,,200,160000,2400,1000,,100,0,,30,200,200,6,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2005
+Kampfstation,eusan_nation_station2,Kampfstation,Eusan Tech,,200,160000,2400,1000,,100,0,,30,200,200,6,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2005
 ,eusan_nation_module_combat,Heavy Combat Module,Eusan Tech,forgevats_station,1,25000,1750,30000,,1200,1000,,0,0,0,10,10,3500,FRONT,,120,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2080
 ,eusan_nation_module_missile_l,Missile Support Module,Eusan Tech,forgevats_station,1,10000,1250,10000,,400,1000,,0,0,0,10,10,2500,FRONT,,100,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2081
 ,eusan_nation_module_missile_r,Missile Support Module,Eusan Tech,forgevats_station,1,10000,1250,10000,,400,1000,,0,0,0,10,10,2500,FRONT,,100,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2081
