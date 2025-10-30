@@ -1,0 +1,6 @@
+Location: OHS der VM - Virtual Training Computing Center
+Date: 205.9.01
+
+A virtual test mission created by the Offiziershochschule der Volksmarine. Officers are encouraged to test the combat capabilities of the new station in mock combat by using commonly encountered enemy warships.
+
+Click on the mission in the list to re-roll the fleets.

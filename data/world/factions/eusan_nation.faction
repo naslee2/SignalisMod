@@ -25,7 +25,8 @@
 		"old english":1,
 		"modern":1,
 		"eusan_nation_cn_names":2,
-		"eusan_nation_vn_names":2
+		"eusan_nation_vn_names":2,
+		"eusan_nation_kr_names":2.1,
 	},
 	
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
@@ -99,7 +100,7 @@
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
-		"tags":[],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"hulls":[
 			"eusan_nation_penrose",
         	"eusan_nation_pelikan",
@@ -136,7 +137,7 @@
 		"fighters":[],
 	},
 	"knownWeapons":{
-		"tags":["missile_bp"],
+		"tags":["missile_bp","eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -147,15 +148,17 @@
 			"eusan_nation_rogatina",
 			"eusan_nation_tulip",
 			"eusan_nation_galdae_medium",
+			"eusan_nation_galdae_small",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
+			"squall"
 		],
 	},
 	"priorityWeapons":{
-		"tags":[],
+		"tags":["eusan_nation_standard_package","eusan_nation_advanced_package"],
 		"weapons":[
 			"eusan_nation_dangpa",
 			"eusan_nation_dory",
@@ -166,11 +169,13 @@
 			"eusan_nation_rogatina",
 			"eusan_nation_tulip",
 			"eusan_nation_galdae_medium",
+			"eusan_nation_galdae_small",
 			"eusan_nation_lbhvel",
 			"eusan_nation_taean",
 			"harpoonpod",
 			"breachpod",
 			"sabotpod",
+			"squall"
 		],
 	},
 	"knownHullMods":{
@@ -199,10 +204,10 @@
 		
 		"aggression":2,
 		
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.1,
+		"combatFreighterProbability":2,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0.5,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
 		
 		"commanderSkillsShuffleProbability":1,
 		"commanderSkills":[
@@ -230,32 +235,32 @@
 	"fineFraction":0.25,
 	"portraits":{
 		"standard_male":[
-		    "graphics/portraits/eusan_nation_aldr_128.png",
 			"graphics/portraits/eusan_nation_male_128_1.png",
-			"graphics/portraits/portrait_hegemony05.png",
-			"graphics/portraits/portrait_hegemony07.png",
-			"graphics/portraits/portrait_hegemony09.png",
-			"graphics/portraits/portrait_hegemony12.png",
-			"graphics/portraits/portrait_hegemony13.png",
-			"graphics/portraits/portrait_hegemony15.png",
-			"graphics/portraits/portrait_mercenary03.png",
-			"graphics/portraits/portrait_mercenary06.png",
-			"graphics/portraits/portrait_mercenary08.png",
-			"graphics/portraits/portrait15.png",
+			"graphics/portraits/eusan_nation_male_128_2.png",
+            "graphics/portraits/eusan_nation_male_128_3.png",
+            "graphics/portraits/eusan_nation_male_128_4.png",
+            "graphics/portraits/eusan_nation_male_128_5.png",
+			"graphics/portraits/eusan_nation_male_128_6.png",
+			"graphics/portraits/eusan_nation_male_128_7.png",
+			"graphics/portraits/eusan_nation_male_128_8.png",
+			"graphics/portraits/eusan_nation_male_128_9.png",
+			"graphics/portraits/eusan_nation_male_128_10.png",
+			"graphics/portraits/eusan_nation_male_128_11.png",
+			"graphics/portraits/eusan_nation_male_128_12.png",
 		],
 		"standard_female":[
 			"graphics/portraits/eusan_nation_female_128_1.png",
 			"graphics/portraits/eusan_nation_female_128_2.png",
 			"graphics/portraits/eusan_nation_female_128_3.png",
 			"graphics/portraits/eusan_nation_female_128_4.png",
-			"graphics/portraits/portrait_hegemony11.png",
-			"graphics/portraits/portrait_hegemony14.png",
-			"graphics/portraits/portrait_hegemony16.png",
-			"graphics/portraits/portrait16.png",
-			"graphics/portraits/portrait22.png",
-			"graphics/portraits/portrait34.png",
-			"graphics/portraits/portrait37.png",
-			"graphics/portraits/portrait42.png",
+			"graphics/portraits/eusan_nation_female_128_5.png",
+			"graphics/portraits/eusan_nation_female_128_6.png",
+			"graphics/portraits/eusan_nation_female_128_7.png",
+			"graphics/portraits/eusan_nation_female_128_8.png",
+			"graphics/portraits/eusan_nation_female_128_9.png",
+			"graphics/portraits/eusan_nation_female_128_10.png",
+			"graphics/portraits/eusan_nation_female_128_11.png",
+			"graphics/portraits/eusan_nation_female_128_12.png"
 		],
 	},
 	"ranks":{

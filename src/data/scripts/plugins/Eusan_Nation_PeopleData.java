@@ -48,6 +48,7 @@ public class Eusan_Nation_PeopleData {
             //Admiral Falke
 	        PersonAPI admiral_falke = Global.getFactory().createPerson();
             admiral_falke.setId(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
+            admiral_falke.setAICoreId("beta_core");
             admiral_falke.setFaction(EUSAN_NATION);
             admiral_falke.setGender(Gender.FEMALE);
             admiral_falke.setRankId(Ranks.SPACE_ADMIRAL);
@@ -67,6 +68,7 @@ public class Eusan_Nation_PeopleData {
             admiral_falke.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
             admiral_falke.getStats().setSkillLevel(Skills.COORDINATED_MANEUVERS, 1);
             admiral_falke.setVoice(Voices.SOLDIER);
+            admiral_falke.isAICore();
             importantPeople_heimat.addPerson(admiral_falke);
 
             //GreatRevolutionary
@@ -80,12 +82,31 @@ public class Eusan_Nation_PeopleData {
             greatRevolutionary.setImportance(PersonImportance.VERY_HIGH);
             greatRevolutionary.addTag(Tags.CONTACT_MILITARY);
             greatRevolutionary.getName().setFirst(Eusan_Nation_PeopleStrings.GREAT_REVOLUTIONARY_FIRSTNAME);
-            greatRevolutionary.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke_128.png");
+            greatRevolutionary.setPortraitSprite("graphics/portraits/eusan_nation_theGreatRevolutionary_128.png");
             greatRevolutionary.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
             market_heimat.setAdmin(greatRevolutionary);
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
+            market_heimat.getCommDirectory().getEntryForPerson(greatRevolutionary).setHidden(false);;
             market_heimat.addPerson(greatRevolutionary);
             importantPeople_heimat.addPerson(greatRevolutionary);
+
+            //The Daughter
+            PersonAPI theDaughter = Global.getFactory().createPerson();
+            theDaughter.setId(Eusan_Nation_PeopleStrings.THE_DAUGHTER);
+            theDaughter.setFaction(EUSAN_NATION);
+            theDaughter.setGender(Gender.FEMALE);
+            theDaughter.setRankId("daughterNationRank");
+            theDaughter.setPostId("daughterNation");
+            theDaughter.setVoice(Voices.OFFICIAL);
+            theDaughter.setImportance(PersonImportance.VERY_HIGH);
+            theDaughter.addTag(Tags.CONTACT_UNDERWORLD);
+            theDaughter.getName().setFirst(Eusan_Nation_PeopleStrings.THE_DAUGHTER_FIRSTNAME);
+            theDaughter.setPortraitSprite("graphics/portraits/eusan_nation_theDaughter_128.png");
+            market_heimat.getCommDirectory().addPerson(theDaughter,1);
+            market_heimat.getCommDirectory().getEntryForPerson(theDaughter).setHidden(false);
+            market_heimat.addPerson(theDaughter);
+            importantPeople_heimat.addPerson(theDaughter);
+
         }
     }
 
@@ -102,7 +123,7 @@ public class Eusan_Nation_PeopleData {
             special_agent.setPostId("gestaltAgent");
             special_agent.getName().setFirst("Special");
             special_agent.getName().setLast("Agent");
-            special_agent.setPortraitSprite("graphics/portraits/portrait_hegemony15.png");
+            special_agent.setPortraitSprite("graphics/portraits/eusan_nation_male_128_8.png");
             special_agent.setImportance(PersonImportance.HIGH);
             special_agent.addTag(Tags.CONTACT_MILITARY);
             special_agent.setVoice(Voices.SOLDIER);
@@ -157,6 +178,7 @@ public class Eusan_Nation_PeopleData {
             //the very same Aldr
             PersonAPI leng_aldr = Global.getFactory().createPerson();
             leng_aldr.setId(Eusan_Nation_PeopleStrings.ALDR);
+            leng_aldr.setAICoreId("beta_core");
             leng_aldr.setFaction(EUSAN_NATION);
             leng_aldr.getName().setFirst(Eusan_Nation_PeopleStrings.ALDR_FIRSTNAME);
             leng_aldr.getName().setLast(Eusan_Nation_PeopleStrings.ALDR_LASTNAME);
@@ -165,7 +187,8 @@ public class Eusan_Nation_PeopleData {
             leng_aldr.setPostId("aldr");
             leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
             leng_aldr.setVoice(Voices.OFFICIAL);
-            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+            leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 2);
+            leng_aldr.isAICore();
             market_leng.setAdmin(leng_aldr);
             market_leng.getCommDirectory().addPerson(leng_aldr);
             market_leng.addPerson(leng_aldr);
@@ -199,7 +222,7 @@ public class Eusan_Nation_PeopleData {
     public void createImportantPeople_miscPeople(){
         ImportantPeopleAPI importantPeople_miscPeople = Global.getSector().getImportantPeople();
         PersonAPI hvt = Global.getFactory().createPerson();
-        hvt.setId("eusan_nation_hvt");
+        hvt.setId("op1_hvt");
         hvt.setFaction(Factions.INDEPENDENT);
         hvt.setGender(FullName.Gender.MALE);
         hvt.setRankId("unknown");

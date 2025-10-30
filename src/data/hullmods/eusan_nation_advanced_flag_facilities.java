@@ -11,20 +11,35 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 import org.magiclib.util.MagicIncompatibleHullmods;
+
+import java.awt.*;
 
 public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
     public final float RECOVERY_BONUS = 225f;
 	public final String MOD_ID = "eusan_nation_advanced_flag_facilities";
 
+	String eusan_nation_missile_advanced_flag_facilities1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities1");
+	String eusan_nation_missile_advanced_flag_facilities2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities2");
+	String eusan_nation_missile_advanced_flag_facilities3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_advanced_flag_facilities3");
+	String detailText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodDetails");
+	String incompatibilitiesText = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_hullmodIncompatibilities");
+
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 	}
 
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
+		magicIncompatibleHullmodsChecker(ship);
+	}
+
+	public void magicIncompatibleHullmodsChecker(ShipAPI ship) {
 		if(ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
 			//if someone tries to install incompatible hullmods, remove it.
-			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, "eusan_nation_advanced_flag_facilities");
+			MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OPERATIONS_CENTER, MOD_ID);
 		}
 	}
 
@@ -63,11 +78,36 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 	}
 
 	@Override
+	public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec){
+		final Color green = new Color(55,245,65,255);
+		final Color red = new Color(245,55,65,255);
+		final Color flavor = new Color(110,110,110,255);
+		final Color negative = Misc.getNegativeHighlightColor();
+		final Color negativeBG = new Color(128,38,0,175);
+		final float pad5 = 5.0f;
+		final float pad10 = 10.0f;
+
+		//Details section
+		tooltip.addSectionHeading(detailText, Alignment.MID, pad10);
+		tooltip.addPara(eusan_nation_missile_advanced_flag_facilities1, pad10, green, (int) (RECOVERY_BONUS) + "%");
+
+		//Incompatibilities
+		tooltip.addSectionHeading(incompatibilitiesText, negative,negativeBG, Alignment.MID, pad10);
+		final TooltipMakerAPI warning_section = tooltip.beginImageWithText(Global.getSettings().getSpriteName("tooltips", "warningSymbol"), 40);
+		warning_section.addPara("Incompatible with %s", 0f, negative, "Operations Center");
+		tooltip.addImageWithText(pad10);
+
+		//Quotes
+		tooltip.addPara("%s", 6.0f, flavor, eusan_nation_missile_advanced_flag_facilities2).italicize();
+		tooltip.addPara("%s", 6.0f, flavor, eusan_nation_missile_advanced_flag_facilities3).setAlignment(Alignment.RMID);
+	}
+
+	@Override
 	public boolean isApplicableToShip(ShipAPI ship){
 		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
 			return false;
 		}
-		if (ship != null && ship.getHullSpec().getHullId().contains("eusan_nation_admiral")){
+		if (ship != null && ship.getHullSpec().getHullId().startsWith("eusan_nation_")){
 			return true;
 		}
 		return false;
@@ -75,7 +115,7 @@ public class eusan_nation_advanced_flag_facilities extends BaseHullMod{
 
 	public String getUnapplicableReason(ShipAPI ship){
 		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.OPERATIONS_CENTER)){
-			return "Incompatable with Operations Center";
+			return "Incompatible with Operations Center";
 		}
 		return null;
 	}

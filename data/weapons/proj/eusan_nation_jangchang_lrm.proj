@@ -1,0 +1,38 @@
+{
+	"id":"eusan_nation_jangchang_lrm",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/eusan_nation_jangchang_lrm.png",
+	"size":[12,32],	
+	"center":[6,16],
+	"collisionRadius":14,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,100,50,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":80, # purely visual
+	#"alwaysAccelerate":true,
+	"engineSpec":{
+				  "turnAcc":60,
+				  "turnRate":45,
+				  "acc":100,
+				  "dec":80},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-14, 0],
+				    #"style":"MISSILE_MIDLINE",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,145,75,255],
+						"contrailDuration":2,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.75, # how far away from engine it starts
+						"contrailColor":[100,100,100,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":5.0,
+				    "length":36.0,
+				    "angle":180.0}],		    
+}

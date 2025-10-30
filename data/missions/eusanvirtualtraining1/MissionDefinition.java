@@ -13,7 +13,6 @@ public class MissionDefinition implements MissionDefinitionPlugin{
     final static String flagshipSelect(){
         final String [] choices = {
                 "eusan_nation_revolution_standard",
-                "eusan_nation_revolution_barrage",
                 "eusan_nation_admiral_standard"
         };
         String flagship = choices[(int) (Math.random() * (float) choices.length)];

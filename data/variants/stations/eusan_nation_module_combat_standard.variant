@@ -1,0 +1,77 @@
+{
+  "variantId": "eusan_nation_module_combat_standard",
+  "hullId": "eusan_nation_module_combat",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_taean",
+        "WS0002": "eusan_nation_taean"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "multineedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "multineedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_wuqiong_double",
+        "WS0006": "eusan_nation_wuqiong_double",
+        "WS0007": "eusan_nation_wuqiong_double",
+        "WS0019": "eusan_nation_dangpa",
+        "WS0020": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "eusan_nation_tulip",
+        "WS0009": "eusan_nation_tulip"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0010": "eusan_nation_jangchang",
+        "WS0011": "eusan_nation_jangchang",
+        "WS0012": "eusan_nation_jangchang"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "eusan_nation_pernach",
+        "WS0014": "eusan_nation_pernach",
+        "WS0015": "eusan_nation_pernach",
+        "WS0016": "eusan_nation_pernach",
+        "WS0017": "eusan_nation_pernach",
+        "WS0018": "eusan_nation_pernach"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

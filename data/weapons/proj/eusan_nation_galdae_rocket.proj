@@ -2,7 +2,7 @@
 	"id":"eusan_nation_galdae_rocket",
 	"specClass":"missile",	
 	#"missileType":"MISSILE",
-	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+	"missileType":"ROCKET",
 	"sprite":"graphics/missiles/eusan_nation_galdae_rocket.png",
 	"size":[7,25],	
 	"center":[3.5,12.5],

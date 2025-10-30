@@ -9,12 +9,11 @@ import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 
 public class MissionDefinition implements MissionDefinitionPlugin{
 
-    final String[] shipSelector(){
+    final static String[] shipSelector(){
         String[] array = new String[2];
         final String[] choicesA ={
-                "eusan_nation_revolution_standard",
-                "eusan_nation_revolution_barrage",
-                "eusan_nation_admiral_standard"
+                "eusan_nation_admiral_standard",
+                "eusan_nation_revolution_standard"
         };
         final String [] choicesB = {
                 "conquest_DEM",

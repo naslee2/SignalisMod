@@ -1,0 +1,52 @@
+{
+  "id": "eusan_nation_jangchang",
+  "specClass": "projectile",
+  "projectileSpecId": "eusan_nation_jangchang_lrm",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/eusan_nation_jangchang_turret_base.png",
+  "hardpointSprite": "graphics/weapons/eusan_nation_jangchang_hardpoint_base.png",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    6,
+    -5,
+    6,
+    5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    15.5,
+    -5,
+    15.5,
+    5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ]
+  },
+  "fireSoundTwo": "pilum_lrm_fire"
+}

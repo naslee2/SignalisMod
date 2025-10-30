@@ -24,7 +24,7 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
         COMPLETED
     }
 
-    protected PersonAPI admiral_falke;
+    protected PersonAPI great_rev;
     protected PersonAPI specialAgent;
     protected PersonAPI hvt;
     protected MarketAPI kazeron;
@@ -35,13 +35,13 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
 
         kazeron = Global.getSector().getEconomy().getMarket("kazeron");
         eldfell = Global.getSector().getEconomy().getMarket("eldfell");
-        admiral_falke = getImportantPerson(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE);
+        great_rev = getImportantPerson(Eusan_Nation_PeopleStrings.GREAT_REVOLUTIONARY);
         specialAgent = getImportantPerson(Eusan_Nation_PeopleStrings.SPECIAL_AGENT);
-        //hvt = getImportantPerson("eusan_nation_hvt");
+        hvt = getImportantPerson(Eusan_Nation_PeopleStrings.HVT);
 
         eldfell.getCommDirectory().addPerson(specialAgent);
 
-        if(admiral_falke == null){
+        if(great_rev == null){
             return false;
         }
 
@@ -58,22 +58,23 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
 
         setStoryMission();
 
-        setStageOnMemoryFlag(Stage.TALK_TO_AGENT,admiral_falke,"$eusan_nation_operation1_talk_to_agent");
+        setStageOnMemoryFlag(Stage.TALK_TO_AGENT,great_rev,"$eusan_nation_operation1_talk_to_agent");
         setStageOnGlobalFlag(Stage.LOCATE_HVT,"$eusan_nation_operation1_locate_hvt");
         setStageOnGlobalFlag(Stage.RETURN_TO_HEIMAT,"$eusan_nation_operation1_return_to_heimat");
         setStageOnGlobalFlag(Stage.COMPLETED,"$eusan_nation_operation1_competed");
 
-        beginStageTrigger(Stage.TALK_TO_AGENT);
+
         makeImportant(specialAgent,"$eusan_nation_operation1_eldfell",Stage.TALK_TO_AGENT);
-        endTrigger();
 
         beginStageTrigger(Stage.LOCATE_HVT);
+        kazeron.getCommDirectory().addPerson(hvt);
         triggerHideCommListing(specialAgent);
-        makeImportant(kazeron,"$eusan_nation_operation1_locate_hvt",Stage.LOCATE_HVT);
+        makeImportant(hvt, "$eusan_nation_operation1_locate_hvt", Stage.LOCATE_HVT);
         endTrigger();
 
         beginStageTrigger(Stage.RETURN_TO_HEIMAT);
-        makeImportant(admiral_falke,"$eusan_nation_operation1_return_to_heimat",Stage.RETURN_TO_HEIMAT);
+        triggerHideCommListing(hvt);
+        makeImportant(great_rev,"$eusan_nation_operation1_return_to_heimat",Stage.RETURN_TO_HEIMAT);
         endTrigger();
 
         beginStageTrigger(Stage.COMPLETED);
@@ -97,7 +98,7 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
             return true;
         }
         else if(currentStage == Stage.RETURN_TO_HEIMAT){
-            info.addPara("Return to " + admiral_falke.getNameString() + ".", tc, pad);
+            info.addPara("Return to " + great_rev.getNameString() + ".", tc, pad);
         }
         return false;
     }
@@ -110,10 +111,13 @@ public class eusan_nation_operation_1 extends HubMissionWithSearch {
     public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height){
         float opad = 10f;
         if(currentStage == Stage.TALK_TO_AGENT) {
+            info.addPara("Meet with the " +specialAgent.getNameString(), opad);
         }
         if(currentStage == Stage.LOCATE_HVT) {
+            info.addPara("Take the HVT into custody", opad);
         }
         else if(currentStage == Stage.RETURN_TO_HEIMAT){
+            info.addPara("The HVT is secured. Return him to Heimat.", opad);
         }
     }
 

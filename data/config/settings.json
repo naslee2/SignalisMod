@@ -28,6 +28,9 @@
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
         },
+        "tooltips":{
+            "warningSymbol":"graphics/tooltips/warningSymbol.png"
+        },
         "blueprint_packages":{
             "eusan_nation_standard_package":"graphics/icons/cargo/bp_eusan_nation_standard.png",
             "eusan_nation_advanced_package":"graphics/icons/cargo/bp_eusan_nation_standard.png"
@@ -38,7 +41,18 @@
         },
         "eusan_nation_people":{
             "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
-            "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png"
+            "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png",
+            "eusan_nation_great_revolutionary": "graphics/portraits/eusan_nation_theGreatRevolutionary_128.png",
+            "eusan_nation_the_daughter": "graphics/portraits/eusan_nation_theDaughter_128.png"
+        },
+        "fx":{
+            "trails_trail_clean":"graphics/trails/fx/trails_clean.png",
+            "trails_trail_fuzzy":"graphics/trails/fx/trails_fuzzy.png",
+            "trails_trail_smooth":"graphics/trails/fx/trails_smooth.png",
+            "trails_trail_zappy":"graphics/trails/fx/trails_zappy.png",
+            "trails_trail_contrail":"graphics/trails/fx/trails_contrail.png",
+            "trails_trail_twin":"graphics/trails/fx/trails_twin.png",
+            "trails_trail_foggy":"graphics/trails/fx/trails_foggy.png"
         }
     }
 }

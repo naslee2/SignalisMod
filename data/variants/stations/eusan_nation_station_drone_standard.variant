@@ -1,0 +1,31 @@
+{
+  "variantId": "eusan_nation_station_drone_standard",
+  "hullId": "eusan_nation_station_drone",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_galdae_medium",
+        "WS0002": "eusan_nation_galdae_medium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "eusan_nation_dangpa",
+        "WS0004": "eusan_nation_dangpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

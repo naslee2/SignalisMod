@@ -1,0 +1,110 @@
+{
+  "hullName": "Module, Heavy Bastion",
+  "hullId": "eusan_nation_module_bastion",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/stations/eusan_nation_station_bastion.png",
+  "style": "MIDLINE",
+  "height": 142,
+  "width": 196,
+  "center": [98, 68],
+  "collisionRadius": 158,
+  "shieldCenter": [-25, -0],
+  "shieldRadius": 146,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -20,
+    0
+  ],
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -0,
+      "locations": [29, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 0,
+      "locations": [-2, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -40,
+      "locations": [-20, -28]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 40,
+      "locations": [-20, 28]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -45,
+      "locations": [18, -24]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 45,
+      "locations": [18, 24]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 70,
+      "locations": [-11, 54]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -70,
+      "locations": [-11, -54]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -56, -6,
+    -41, -29,
+    -48, -41,
+    -40, -58,
+    -12, -76,
+    63, -0,
+    -12, 76,
+    -40, 58,
+    -48, 41,
+    -41, 29,
+    -56, 6
+  ]
+}

@@ -15,7 +15,7 @@
     "eusan_nation_engineering_design",
   ],
   "builtInWeapons": {
-    "WS0001": "eusan_nation_kayak_R"
+    "WS0001": "eusan_nation_hybrid_chaingun"
   },
   "weaponSlots": [
     {

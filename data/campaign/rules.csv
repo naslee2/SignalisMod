@@ -79,8 +79,7 @@ AddText""As this mod is under a work in progress, new features will come online 
 # OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
-OFFICER_YEONG_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$id ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_GREETING,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true","ShowPersonVisual
 FireAll PopulateOptions","""Hello there. What do you want?""
 OR
@@ -92,15 +91,12 @@ OR
 OR
 ""Well, well, well, if it isn't $playerName. What do you need this time?""",,
 OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-",,"INVALID CREDENTIALS. PLEASE SEE CENTRAL AUTHORITY FOR PERMISSIONS. THIS COMMUNICATIONS LINK WILL NOW END.
-OR
-""Hello, who is this? Your security credentials aren't valid so I am going to cut this short.""
-OR
-""Don't bother me.""
-OR
-""Who is this? Identify yourself...""
-OR
-""Don't know you, don't care.""",,
+$player.metOfficerYeong == false","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText """"Hello this is Officer Ariane Yeong speaking. You do not show up as an commissioned officer with the Nation. What do you want?""""",,,
 OFFICER_YEONG_INTRO_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == false","$player.metOfficerYeong = true
@@ -122,7 +118,6 @@ ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED."
 ,,,,,,
 # REPO_BRIEFING,,,,,,
 OFFICER_YEONG_NEURALREPOSITORY_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" FAVORABLE
-$player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_neuralrepositorystart == false
@@ -151,12 +146,11 @@ or
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPT_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepAccept:""I accept the mission.""",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongNeuralRepAccept","$global.officeryeong_neuralrepositorystart = true
 BeginMission eusan_nation_neuralRepoQuest
-FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you hereby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,
+FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission you hereby agree to finish the mission and prioritize its completion for the good of the Nation. Do not come back if you have not finished it.""",,"todo: add eusan_nation_neuroRepo_rulecmd sendArianeMessage"
 "#END REPO_BRIEFING",,,,,,
 ,,,,,,
 # MEETING_AGENT,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$id == ""eusan_nation_special_agent"" score: 10000
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 10000
 $global.officeryeong_neuralrepositorystart == true","SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""
 ShowPersonVisual
 FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
@@ -185,8 +179,7 @@ OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option
 "#END MEETING_AGENT",,,,,,
 ,,,,,,
 # REPO_MISSION_END,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_NEURALREPOSITORY_FINAL,PopulateOfficerYeongChatOptions,"$id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_neuralrepositorystart == true
 $global.eusan_nation_neuralrepo_completed == false","SetOptionColor officeryeongNeuralRepFinal highlight",,"officeryeongNeuralRepFinal:Update Ariane on the status of your mission.",
@@ -214,7 +207,6 @@ FireAll PopulateOptions
 ,,,,,,
 # RECOVERY_BRIEFING,,,,,,
 OFFICER_YEONG_PENROSERECOVERY1_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" WELCOMING
-$player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_neuralrepo_completed == true
@@ -264,8 +256,7 @@ FireAll PopulateOptions","""Thank you. I will skip the usual procedures and spee
 "#END RECOVERY_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
-$eusan_nation_penroseRecovery1_targetPlanet score:1000
+OFFICER_YEONG_PENROSERECOVERY1_PLANETARRVIAL,OpenInteractionDialog,"$eusan_nation_penroseRecovery1_targetPlanet score:1000
 $global.officeryeong_penroseRecovery1_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery1Option",,,
@@ -290,8 +281,7 @@ OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$optio
 "#END RECOVERY",,,,,,
 ,,,,,,
 # RECOVERY_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongChatOptions,"$id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_penroseRecovery1_start == true
 $global.eusan_nation_penroseRecovery1_completed == false","SetOptionColor officeryeongPenroseRecovery1Final highlight",,"officeryeongPenroseRecovery1Final:Update Ariane on the status of your mission.",
@@ -343,7 +333,6 @@ She leans back, speaking in a normal tone again.
 ,,,,,,
 # RECOVERY2_BRIEFING,,,,,,
 OFFICER_YEONG_PENROSERECOVERY2_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" FRIENDLY
-$player.commissionFactionId == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_penroseRecovery1_completed == true
@@ -390,8 +379,7 @@ SetTextHighlights Tri-Tachyon","the Tri-Tachyon fleet commander looks rather dis
 "#END RECOVERY2_ENCOUNTER",,,,,,
 ,,,,,,
 # RECOVERY2,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
-$eusan_nation_penroseRecovery2_targetPlanet score:1000
+OFFICER_YEONG_PENROSERECOVERY2_PLANETARRVIAL,OpenInteractionDialog,"$eusan_nation_penroseRecovery2_targetPlanet score:1000
 $global.officeryeong_penroseRecovery2_start == true
 ","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenroseRecovery2Option",,,
@@ -423,8 +411,7 @@ OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$optio
 "#END RECOVERY2",,,,,,
 ,,,,,,
 # RECOVERY2_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY2_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_PENROSERECOVERY2_FINAL,PopulateOfficerYeongChatOptions,"$id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_penroseRecovery2_start == true
 $global.eusan_nation_penroseRecovery2_completed == false","SetOptionColor officeryeongPenroseRecovery2Final highlight",,"officeryeongPenroseRecovery2Final:Update Ariane on the status of your mission.",
@@ -471,8 +458,17 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
-$player.commissionFactionId == ""eusan_nation""
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$player.metAdmiralFalke == true
+$global.eusan_nation_penroseRecovery2_completed == true
+$global.eusan_nation_penrose512_start == false
+eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
+SetOptionColor officeryeongPenroseRecovery512Start highlight
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
+OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
+RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
@@ -570,9 +566,9 @@ FireAll PopulateOptions","""When you come back, prepare yourself for a long debr
 # RECOVERY512,,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_TARGET_PLANET,,,,,,
-OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$player.commissionFactionId == ""eusan_nation""
-$eusan_nation_penrose512_targetPlanet score:1000
-$global.eusan_nation_penrose512_start == true","ShowDefaultVisual
+OFFICER_YEONG_PENROSE512_PLANETARRIVAL,OpenInteractionDialog,"$eusan_nation_penrose512_targetPlanet score:1000
+$global.eusan_nation_penrose512_start == true
+$player.commissionFactionId == ""eusan_nation""","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenrose512Option","Your fleet approaches the planet, your crew uneasy. Word of the strange nature of the signal appears to have spread further through your crew than it should have, and everyone is on edge. Your sensors pay close attention to every angle of the void, preparing for an ambush, or worse.",,
 OFFICER_YEONG_PENROSE512_LANDING1,PopulateOfficerYeongPenrose512Option,,"SetShortcut defaultLeave ""ESCAPE""
 ","Your fleet finishes its approach to the planet. Nothing abnormal about it has been detected thus far, save for the signal itself. 
@@ -741,11 +737,11 @@ A. Yeong. ",,
 "#END RECOVERY512",,,,,,
 ,,,,,,
 # RECOVERY512_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY512_FINAL,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
-$id  ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_PENROSERECOVERY512_FINAL,PopulateOfficerYeongChatOptions,"$id  ==  ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.eusan_nation_penrose512_start == true
-$global.eusan_nation_penrose512_completed == false","SetOptionColor officeryeongPenrose512Final highlight",,"officeryeongPenrose512Final:Update Ariane on the status of your mission.","remember to add branching dialogue for telling ariane about her name on the ship once fluffy adds flag"
+$global.eusan_nation_penrose512_completed == false
+$player.commissionFactionId == ""eusan_nation""","SetOptionColor officeryeongPenrose512Final highlight",,"officeryeongPenrose512Final:Update Ariane on the status of your mission.","remember to add branching dialogue for telling ariane about her name on the ship once fluffy adds flag"
 OFFICER_YEONG_PENROSERECOVERY512_FINAL_LISTOPTIONS,DialogOptionSelected,"$option == officeryeongPenrose512Final","FireAll PopulatePenrose512Options",,,
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_OPTION,PopulatePenrose512Options,"$global.eusan_nation_penrose512_recoveredData == false",,,"officeryeongPenrose512Cancel:Tell her that you have yet to complete the mission.",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_END,DialogOptionSelected,"$option == officeryeongPenrose512Cancel","FireAll PopulateOptions","""Do we have to do this every time you come here and waste my time?""
@@ -1012,6 +1008,7 @@ OR
 "#END OFFICER_YEONG",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE,,,,,,
+PFFalkeDefeated,PFFalkeDefeated,,"$player.PFFalkeDefeated = true",,,
 ,,,,,,
 # ADMIRAL_FALKE_FLEET GREETINGS,,,,,,
 ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactionId == ""eusan_nation""
@@ -1359,5 +1356,162 @@ The replika gives you a glowering look. You are not welcome by the looks of it."
 MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
 "#END MARLIS_EXIT",,,,,,
 "#END MARLIS",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY,,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_GREETING,,,,,,
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metGreatRev == false
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
+AddText """"Interesting. They send a traveller from outside the Nation. That means you are either lucky or dedicated. So, comrade, how can you help the Nation?"" """,,,"$player.accessGrantedGreatRev == false"
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == false","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
+AddText """"Interesting. They send me someone from outside the Nation. That means you are either lucky or dedicated. So, traveller, how can you help the Nation?"" """,,,"$player.accessGrantedGreatRev == false"
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$player.metGreatRev == false
+$faction.neutralToPlayer score:100","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
+AddText """"Someone from the outside. Dedicated enough to get by I see. Remember, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,"$player.accessGrantedGreatRev == false"
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$player.metGreatRev == false
+$faction.neutralToPlayer score:100","$player.metGreatRev = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
+AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
+AddText """"An outsider. How you managed to get by with such a reputation, will remain a mystery to me. Remember traveller, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,"$player.accessGrantedGreatRev == false"
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_great_revolutionary"" score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == true","ShowPersonVisual
+FireAll PopulateOptions","""Hello Comrade, how are you today.""
+OR
+""Heimat welcomes you, comrade.""
+OR
+""The Nation welcomes you, comrade.""
+OR
+""Welcome back, Comrade. How goes your travels?""
+OR
+""You should tell me more about your travels one day.""
+OR
+""Busy as always but you have my attention.""
+OR
+""Comrade, what brings you back to Heimat?""",,"$player.accessGrantedGreatRev ==true"
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$faction.id == ""eusan_nation""
+$id == ""eusan_nation_great_revolutionary"" score: 100
+$faction.friendlyToPlayer score:1000
+$player.metGreatRev == true","ShowPersonVisual
+FireAll PopulateOptions","""Hello traveller, how are you today.""
+OR
+""Traveller, you should consider joining the Nation. The benefits are...suitable for you.""
+OR
+""Weclome back, traveller.""
+OR
+""I see you have returned, traveller.""
+OR
+""Hmph. Back so soon I see. What can I help you with?""
+OR
+""Governing the Nation is exhausting so please tell me what you need.""
+OR
+""I knew you were going to call so I took the liberty of making some time. Speak.""",,"$player.accessGrantedGreatRev ==true"
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_great_revolutionary"" score: 100
+$player.metGreatRev == true
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Doing enough to scrape by, I see.""
+OR
+""I was told you were in the system. What do you want.""
+OR
+""Traveller, your standing with the Nation could use some improvement. Take it as an hint.""
+OR
+""This better be good.""
+OR
+""Your commission with the Nation was done out of kindness. Work to keep it.""
+OR
+""Remember, traveller, everytime you move a muscle, I know what action you may take.""
+OR
+""Make it quick, traveller, time is precious.""",,"$player.accessGrantedGreatRev ==true"
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$faction.id == ""eusan_nation""
+$id == ""eusan_nation_great_revolutionary"" score: 100
+$player.metGreatRev == true
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Traveller. Your actions worry me and the rest of the Nation. Perhaps its time to find a way to rectify that.""
+OR
+""You are wasting precious time. Speak.""
+OR
+""Again you come to me. What do you want?""
+OR
+""Well? I am busy.""
+OR
+""It would be helpful if you make yourself useful and work on helping the Nation.""
+OR
+""Make it quick you are taking up precious time.""",,"$player.accessGrantedGreatRev ==true"
+THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_great_revolutionary score: 100
+$faction.isHostile score:100","ShowPersonVisual","""Begone""
+OR
+""Tch...""
+OR
+There is no response.
+OR
+The communications link was refused.
+OR
+Communications link was not accepted.
+OR
+LINK REJECTED","cutCommLink:Cut the comm link",
+"#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_OPERATION1,,,,,,
+op1,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OPERATION1",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
+Chat1,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,PopulateOptions,"$id == eusan_nation_great_revolutionary score: 100",,,"greatRevolutionaryChat:Chat with the Great Revolutionary",
+THE_GREAT_REVOLUTIONARY_LISTCHATOPTIONS,DialogOptionSelected,"$option == greatRevolutionaryChat","FireAll PopulategreatRevolutionaryChat","""What do you wish to speak about?""
+OR
+""Speak""
+OR
+""Ask your questions.""
+OR
+""Talk.""
+OR
+""I can certainly talk more.""
+OR
+""What do you want to know?""
+OR
+""Returning I see.""",,
+THE_GREAT_REVOLUTIONARY_ESCAPE_OPTIONS,PopulategreatRevolutionaryChat,,"SetShortcut greatRevolutionaryChatEscape ""ESCAPE""",,"greatRevolutionaryChatEscape:""I got to go now...""",
+THE_GREAT_REVOLUTIONARY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryChatEscape","FireAll PopulateOptions","""I see...""
+OR
+""Good bye.""",,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_OP1,,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OP1",,,,,,
+"#END THE_GREAT_REVOLUTIONARY",,,,,,
 "#END EUSAN_NATION_NPC",,,,,,
 

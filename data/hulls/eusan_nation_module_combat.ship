@@ -1,0 +1,226 @@
+{
+  "hullName": "Module, Heavy Combat",
+  "hullId": "eusan_nation_module_combat",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/stations/eusan_nation_station_combat.png",
+  "style": "MIDLINE",
+  "height": 148,
+  "width": 412,
+  "center": [206, 91],
+  "collisionRadius": 271,
+  "shieldCenter": [-150, -0],
+  "shieldRadius": 302,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -15,
+    0
+  ],
+  "builtInMods": [
+    "supercomputer",
+    "eccm",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -8,
+      "locations": [-30, -88]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 8,
+      "locations": [-30, 88]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": -50,
+      "locations": [-36, -146]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": 50,
+      "locations": [-36, 146]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 0,
+      "locations": [7, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -8,
+      "locations": [8, -61]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 8,
+      "locations": [8, 61]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -5,
+      "locations": [-18, -33]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 5,
+      "locations": [-18, 33]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 0,
+      "locations": [36, -0]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 0,
+      "locations": [36, -25]
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": -0,
+      "locations": [36, 25]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -11,
+      "locations": [35, -55]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 11,
+      "locations": [35, 55]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -11,
+      "locations": [18, -104]
+    },
+    {
+      "id": "WS0016",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 11,
+      "locations": [18, 104]
+    },
+    {
+      "id": "WS0017",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -11,
+      "locations": [3, -89]
+    },
+    {
+      "id": "WS0018",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 11,
+      "locations": [3, 89]
+    },
+    {
+      "id": "WS0019",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -100,
+      "locations": [-74, -134]
+    },
+    {
+      "id": "WS0020",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 100,
+      "locations": [-74, 134]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -37, -38,
+    -69, -68,
+    -65, -88,
+    -77, -100,
+    -77, -119,
+    -89, -138,
+    -51, -193,
+    7, -166,
+    43, -57,
+    43, 57,
+    7, 166,
+    -51, 193,
+    -89, 138,
+    -77, 119,
+    -77, 100,
+    -65, 88,
+    -69, 68,
+    -37, 38
+  ]
+}

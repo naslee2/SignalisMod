@@ -1,7 +1,7 @@
 {
   "id": "eusan_nation_rogatina",
   "specClass": "projectile",
-  "projectileSpecId": "heavymauler_shot",
+  "projectileSpecId": "eusan_nation_rogatina_shot",
   "type": "BALLISTIC",
   "size": "MEDIUM",
   "turretSprite": "graphics/weapons/eusan_nation_heavy_turret_base.png",
