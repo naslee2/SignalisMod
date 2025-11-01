@@ -40,10 +40,10 @@
             "generic_aeon_facility":"graphics/icons/industry/light_industry.png"
         },
         "eusan_nation_people":{
-            "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
-            "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png",
-            "eusan_nation_great_revolutionary": "graphics/portraits/eusan_nation_theGreatRevolutionary_128.png",
-            "eusan_nation_the_daughter": "graphics/portraits/eusan_nation_theDaughter_128.png"
+            "eusan_nation_officer_yeong":"graphics/portraits/characters/eusan_nation_officer_yeong.png",
+            "eusan_nation_admiral_falke":"graphics/portraits/characters/eusan_nation_admiralFalke_128.png",
+            "eusan_nation_great_revolutionary": "graphics/portraits/characters/eusan_nation_theGreatRevolutionary_128.png",
+            "eusan_nation_the_daughter": "graphics/portraits/characters/eusan_nation_theDaughter_128.png"
         },
         "fx":{
             "trails_trail_clean":"graphics/trails/fx/trails_clean.png",

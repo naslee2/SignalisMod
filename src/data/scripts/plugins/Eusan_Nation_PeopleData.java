@@ -37,7 +37,7 @@ public class Eusan_Nation_PeopleData {
             officer_yeong.setImportance(PersonImportance.HIGH);
             officer_yeong.getName().setFirst(Eusan_Nation_PeopleStrings.ARIANE_YEONG_FIRSTNAME);
             officer_yeong.getName().setLast(Eusan_Nation_PeopleStrings.ARIANE_YEONG_LASTNAME);
-            officer_yeong.setPortraitSprite("graphics/portraits/eusan_nation_officer_yeong.png");
+            officer_yeong.setPortraitSprite("graphics/portraits/characters/eusan_nation_officer_yeong.png");
             officer_yeong.addTag(Tags.CONTACT_MILITARY);
             officer_yeong.setVoice(Voices.SOLDIER);
             market_heimat.getCommDirectory().addPerson(officer_yeong, 1);
@@ -55,7 +55,7 @@ public class Eusan_Nation_PeopleData {
             admiral_falke.setPostId(Ranks.POST_FLEET_COMMANDER);
             admiral_falke.getName().setFirst(Eusan_Nation_PeopleStrings.FALKE_FIRSTNAME);
             admiral_falke.getName().setLast(Eusan_Nation_PeopleStrings.ADMIRAL_FALKE_LASTNAME);
-            admiral_falke.setPortraitSprite("graphics/portraits/eusan_nation_admiralFalke_128.png");
+            admiral_falke.setPortraitSprite("graphics/portraits/characters/eusan_nation_admiralFalke_128.png");
             admiral_falke.setImportance(PersonImportance.VERY_HIGH);
             admiral_falke.setPersonality(Personalities.AGGRESSIVE);
             admiral_falke.getStats().setLevel(9);
@@ -82,7 +82,7 @@ public class Eusan_Nation_PeopleData {
             greatRevolutionary.setImportance(PersonImportance.VERY_HIGH);
             greatRevolutionary.addTag(Tags.CONTACT_MILITARY);
             greatRevolutionary.getName().setFirst(Eusan_Nation_PeopleStrings.GREAT_REVOLUTIONARY_FIRSTNAME);
-            greatRevolutionary.setPortraitSprite("graphics/portraits/eusan_nation_theGreatRevolutionary_128.png");
+            greatRevolutionary.setPortraitSprite("graphics/portraits/characters/eusan_nation_theGreatRevolutionary_128.png");
             greatRevolutionary.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
             market_heimat.setAdmin(greatRevolutionary);
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
@@ -101,7 +101,7 @@ public class Eusan_Nation_PeopleData {
             theDaughter.setImportance(PersonImportance.VERY_HIGH);
             theDaughter.addTag(Tags.CONTACT_UNDERWORLD);
             theDaughter.getName().setFirst(Eusan_Nation_PeopleStrings.THE_DAUGHTER_FIRSTNAME);
-            theDaughter.setPortraitSprite("graphics/portraits/eusan_nation_theDaughter_128.png");
+            theDaughter.setPortraitSprite("graphics/portraits/characters/eusan_nation_theDaughter_128.png");
             market_heimat.getCommDirectory().addPerson(theDaughter,1);
             market_heimat.getCommDirectory().getEntryForPerson(theDaughter).setHidden(false);
             market_heimat.addPerson(theDaughter);
@@ -163,7 +163,7 @@ public class Eusan_Nation_PeopleData {
             rotfront_marlis.getName().setFirst(Eusan_Nation_PeopleStrings.MARLIS_FIRST_NAME);
             rotfront_marlis.getName().setLast(Eusan_Nation_PeopleStrings.MARLIS_LAST_NAME);
             rotfront_marlis.setGender(Gender.FEMALE);
-            rotfront_marlis.setPortraitSprite("graphics/portraits/eusan_nation_marlis_128.png");
+            rotfront_marlis.setPortraitSprite("graphics/portraits/characters/eusan_nation_marlis_128.png");
             rotfront_marlis.setRankId("replika");
             rotfront_marlis.setPostId("bartender");
             rotfront_marlis.setVoice(Voices.BUSINESS);
@@ -185,7 +185,7 @@ public class Eusan_Nation_PeopleData {
             leng_aldr.setGender(Gender.MALE);
             leng_aldr.setRankId("replika");
             leng_aldr.setPostId("aldr");
-            leng_aldr.setPortraitSprite("graphics/portraits/eusan_nation_aldr_128.png");
+            leng_aldr.setPortraitSprite("graphics/portraits/characters/eusan_nation_aldr_128.png");
             leng_aldr.setVoice(Voices.OFFICIAL);
             leng_aldr.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 2);
             leng_aldr.isAICore();
