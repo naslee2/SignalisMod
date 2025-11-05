@@ -128,9 +128,9 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
 	@Override
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
-		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
-			addStabilityPostDemandSection(tooltip, hasDemand, mode);
-		}
+//		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
+//			addStabilityPostDemandSection(tooltip, hasDemand, mode);
+//		}
 
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
