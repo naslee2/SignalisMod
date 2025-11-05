@@ -22,7 +22,7 @@ public class Eusan_Nation_System {
 
     public void generate(SectorAPI sector){
         StarSystemAPI system = sector.createStarSystem("Alatyr");
-        system.getLocation().set(-33000, 34000);
+        system.getLocation().set(-31100, 28120);
         system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
     
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initStar( Unique starId, planet type from planets.json, radius, corona radius from star edge)
@@ -38,7 +38,7 @@ public class Eusan_Nation_System {
         //Setting stable locations setCircularOrbitPointingDown(location/star/planet, angle, orbit raidus/range, orbit period)
         relay_eusan.setCircularOrbitPointingDown(signalisStar, 40f, 4200f, 220f);
         loc2.setCircularOrbitPointingDown(signalisStar, 310f, 7000f, 235f);
-        loc3.setCircularOrbitPointingDown(signalisStar, 178f, 14600f, 921f); 
+        loc3.setCircularOrbitPointingDown(signalisStar, 178f, 16300f, 921f);
         
         //-BUYAN - Toxic World-
         PlanetAPI buyan = system.addPlanet("eusan_nation_buyan", signalisStar , "Buyan", "toxic", 30f, 170f, 2100f, 225f);
@@ -129,7 +129,7 @@ public class Eusan_Nation_System {
         system.addRingBand(vineta, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 740f, 305f);
 
         //Wrecked Station related to Vineta
-        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("eusan_nation_wrecked_station", "Abandoned Orbital Complex", "station_side02", "neutral");
+        CustomCampaignEntityAPI wrecked_station = system.addCustomEntity("eusan_nation_wrecked_station", "Abandoned Orbital Complex Six", "station_side02", "neutral");
         wrecked_station.setCircularOrbitPointingDown(vineta, 45f, 900f, 55f);
         wrecked_station.setInteractionImage("illustrations", "abandoned_station2");
         wrecked_station.setCustomDescriptionId("eusan_nation_wrecked_station");
@@ -234,7 +234,7 @@ public class Eusan_Nation_System {
         system.addRingBand(gas_giant1, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 1000f, 300f);
         
         //-GAS GIANT 2, PRETTY RINGS AND HEIMAT-
-        PlanetAPI gas_giant2 = system.addPlanet("eusan_nation_gas_giant2", signalisStar, "Saturnus", "gas_giant", 90f, 370f, 10500f, 1076f);
+        PlanetAPI gas_giant2 = system.addPlanet("eusan_nation_gas_giant2", signalisStar, "Saturnus", "gas_giant", 90f, 370f, 13200f, 1076f);
         gas_giant2.getSpec().setTexture(Global.getSettings().getSpriteName("planets","gas_giant2"));
         gas_giant2.getMarket().addCondition(Conditions.DENSE_ATMOSPHERE);
         gas_giant2.getMarket().addCondition(Conditions.VOLATILES_TRACE);
@@ -284,7 +284,7 @@ public class Eusan_Nation_System {
         system.addRingBand(gas_giant2, "misc", "rings_special0", 256f, 1, Color.white, 256f, 700f, 60f);
         
         //-LENG-
-        PlanetAPI leng = system.addPlanet("eusan_nation_leng", signalisStar, "Leng", "barren", 180, 80f, 12200f, 3050f);
+        PlanetAPI leng = system.addPlanet("eusan_nation_leng", signalisStar, "Leng", "barren", 180, 80f, 15100f, 3050f);
         ProcgenUsedNames.notifyUsed("Leng");
         leng.setFaction("eusan_nation");
         leng.setCustomDescriptionId("eusan_nation_leng_planet");
