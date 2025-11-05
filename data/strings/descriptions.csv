@@ -63,7 +63,7 @@ eusan_nation_dory,WEAPON,A specialized point defense system that fires high expl
 eusan_nation_pebble,WEAPON,Primary anti-shield weapon system. Fires 57mm in rapid fire mode to strip or damage shields of enemy warships.,,,,
 eusan_nation_pernach,WEAPON,An auto-cannon system designed for close range attacks. Fires 75mm shells  and carries a 220mm rocket launcher. During engagements it will fire 75mm shells at the target while periodically firing rockets.,,,,
 #MEDIUM_WEAPONS,,,,,,
-eusan_nation_wuqiong_double,WEAPON,"The current standard area point defense for Volksmarine ships. Fires 57mm blast rounds. Primarily designed to engage hostile missiles, incoming munitions and fighters.",,,,
+eusan_nation_wuqiong_double,WEAPON,"The current standard area point defense for Volksmarine ships. Fires 57mm blast rounds (Deals AOE damage.). Primarily designed to engage hostile missiles, incoming munitions and fighters.",,,,
 eusan_nation_kompakt,WEAPON,The current anti armor weapon for Volksmarine ships. Fires 127mm high explosive armor piercing shells. Often found on cruisers and destroyers as the primary anti-armor weaponry.,,,,
 eusan_nation_rogatina,WEAPON,A specialized anti-armor cannon for Volksmarine warships. It fires 203mm flechette anti-armor rounds. The rounds will separate almost immediately exiting the barrel of the gun and give a shotgun like effect spread.,,,,
 eusan_nation_tulip,WEAPON,The current anti-shield weapon for Volksmarine ships. Fires 127mm shield penetrator shells. Often found on cruisers and destroyers as the primary anti-shield weaponry.,,,,
