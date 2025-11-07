@@ -3,14 +3,14 @@
   "hullId": "eusan_nation_cantor",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 8,
   "fluxVents": 7,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
     "reinforcedhull",
-    "hardenedshieldemitter"
+    "missleracks"
   ],
   "weaponGroups": [
     {
