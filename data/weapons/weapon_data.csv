@@ -17,8 +17,8 @@ Jangchang ALRM launcher,eusan_nation_jangchang,1,,1900,4000,,400,,25,10,9,40,0.1
 #LARGE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Lightning Bolt Pattern 169,eusan_nation_lbhvel,3,,2250,1000,,800,500,40,10,22,,,,KINETIC,600,,0,3,1,,,,,,,1000,,,300,,,,"kinetic16, LR, eusan_nation_advanced_package",,Eusan Tech,,Anti Shield,,,,,,,,,,5.5
 Taean Type 60,eusan_nation_taean,2,,3200,950,,200,,20,10,18,,,,HIGH_EXPLOSIVE,180,,0,2,1,,3,12,3,12,,650,,,100,,,,"he17, eusan_nation_standard_package",,Eusan Tech,,Anti Armor,,,,,,,,,,7.25
-Mifeng SRM Launcher,eusan_nation_mifeng,1,,4400,1400,,60,40,5,30,18,400,,,ENERGY,0,,0,9,1,,3,3,0,0,,400,400,7,60,,,"ANTI_FTR, DO_NOT_AIM, DO_NOT_CONSERVE","utility18, missile15, eusan_nation_standard_package",,Eusan Tech,,Anti Small Craft,Fast,Excellent,,,,,,,,16.3
-Type 80 Kayak-KS,eusan_nation_kayak_ks,,,10000,2500,,700,,300,10,20,40,,,HIGH_EXPLOSIVE,0,,0,5,1,0.5,5,5,0,0,,400,200,10,600,,,"STRIKE, DO_NOT_AIM","strike12, eusan_nation_standard_package",,Eusan Tech,,Pressure,,,,,Split in two more maneuverable missile when closing in.,,,,,17
+Mifeng SRM Launcher,eusan_nation_mifeng,1,,4400,1400,,60,40,5,30,18,360,,,ENERGY,10,,0,9,1,,3,3,0,0,,400,400,7,60,,,"ANTI_FTR, PD, DO_NOT_AIM, DO_NOT_CONSERVE","utility18, missile15, eusan_nation_standard_package",,Eusan Tech,,Anti Small Craft,Fast,Excellent,,,,,,,,16.3
+Kayak-KS Type 80,eusan_nation_kayak_ks,,,10000,2500,,700,,300,10,20,40,,,HIGH_EXPLOSIVE,0,,0,5,1,0.5,5,5,0,0,,400,200,10,600,,,"STRIKE, DO_NOT_AIM","strike12, eusan_nation_standard_package",,Eusan Tech,,Pressure,,,,,Split in two more maneuverable missile when closing in.,,,,,17
 #BUILTIN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Type 71,eusan_nation_admiral_builtin1,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,700,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
 Type 71,eusan_nation_admiral_builtin2,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,700,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
