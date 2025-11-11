@@ -155,19 +155,19 @@ public class Eusan_Nation_PeopleData {
             rotfront_fleetAdmiral.setVoice(Voices.SOLDIER);
             importantPeople_rotfront.addPerson(rotfront_fleetAdmiral);
 
-            //Marlis
-            PersonAPI rotfront_marlis = Global.getFactory().createPerson();
-            rotfront_marlis.setId(Eusan_Nation_PeopleStrings.MARLIS);
-            rotfront_marlis.setFaction(EUSAN_NATION);
-            rotfront_marlis.setGender(Gender.FEMALE);
-            rotfront_marlis.getName().setFirst(Eusan_Nation_PeopleStrings.MARLIS_FIRST_NAME);
-            rotfront_marlis.getName().setLast(Eusan_Nation_PeopleStrings.MARLIS_LAST_NAME);
-            rotfront_marlis.setGender(Gender.FEMALE);
-            rotfront_marlis.setPortraitSprite("graphics/portraits/characters/eusan_nation_marlis_128.png");
-            rotfront_marlis.setRankId("replika");
-            rotfront_marlis.setPostId("bartender");
-            rotfront_marlis.setVoice(Voices.BUSINESS);
-            importantPeople_rotfront.addPerson(rotfront_marlis);
+            //Alyssa
+            PersonAPI rotfront_alyssa = Global.getFactory().createPerson();
+            rotfront_alyssa.setId(Eusan_Nation_PeopleStrings.ALYSSA);
+            rotfront_alyssa.setFaction(EUSAN_NATION);
+            rotfront_alyssa.setGender(Gender.FEMALE);
+            rotfront_alyssa.getName().setFirst(Eusan_Nation_PeopleStrings.ALYSSA_FIRST_NAME);
+            rotfront_alyssa.getName().setLast(Eusan_Nation_PeopleStrings.ALYSSA_LAST_NAME);
+            rotfront_alyssa.setGender(Gender.FEMALE);
+            rotfront_alyssa.setPortraitSprite("graphics/portraits/characters/eusan_nation_alyssa_128.png");
+            rotfront_alyssa.setRankId("replika");
+            rotfront_alyssa.setPostId("bartender");
+            rotfront_alyssa.setVoice(Voices.BUSINESS);
+            importantPeople_rotfront.addPerson(rotfront_alyssa);
         }
     }
 
