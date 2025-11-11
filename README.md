@@ -8,10 +8,12 @@ Requires LazyLib, and MagicLib. Nexerlin optional. Get them:
 - Nexerlin https://fractalsoftworks.com/forum/index.php?topic=9175.0
 # MOD INTEGRATIONS
 - Phillip Andrada Gas Station Manager (PAGSM)
+- United Aurora Federation
 - TriOS (Mod Manager)
 # CREDITS
-- Ship sprites, hull, weapons and ship data by Sikair.
-- Thanks to Kaysaar, WMGreywind, Sikair and Mayu for coding assistance.
+- Ship sprites, hull, weapons, and ship data by Sikair.
+- Thanks to Kaysaar, WMGreywind, Sikair, and Mayu for coding assistance.
+- Thanks to CY_Milkydromeda/Ryxsen1421, freelanceralpha1, rico_the_rat, and others for support and testing.
 - Thanks to Mallow / @AkulaAkura, Koil_52, and yyiek for the awesome art!
 - Thanks to @Th0usandw1nd for letting me use his Officer Yeong character concept.
 - Thanks to Koil_52, lebonelesssnek, C H E E K I B R E E K I and Venri for writing assistance
