@@ -11,6 +11,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
+import com.fs.starfarer.ui.P;
 
 import java.awt.Color;
 
@@ -101,8 +102,12 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
                 }
             }
             if(industry.getSpec().hasTag(Industries.REFINING)){
-                industry.getSupply(Commodities.METALS).getQuantity().modifyFlat("Eusan_Nation_Aeon_Facility", refining_metal_bonus+ aeonFacility_bonus, "AEON Facility");
-                industry.getSupply(Commodities.RARE_METALS).getQuantity().modifyFlat("Eusan_Nation_Aeon_Facility", refining_rare_metal_bonus+ aeonFacility_bonus, "AEON Facility");
+                if(industry.getSupply(Commodities.METALS).getQuantity().getModifiedValue() > 0){
+                    industry.getSupply(Commodities.METALS).getQuantity().modifyFlat("Eusan_Nation_Aeon_Facility", refining_metal_bonus+ aeonFacility_bonus, "AEON Facility");
+                }
+                if(industry.getSupply(Commodities.RARE_METALS).getQuantity().getModifiedValue() > 0){
+                    industry.getSupply(Commodities.RARE_METALS).getQuantity().modifyFlat("Eusan_Nation_Aeon_Facility", refining_rare_metal_bonus+ aeonFacility_bonus, "AEON Facility");
+                }
             }
         }
     }
@@ -116,9 +121,8 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
                 market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
             }
             if(industry.getSpec().hasTag(Industries.REFINING)){
-                market.getIndustry(Industries.MINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-                market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-
+                market.getIndustry(Industries.REFINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                market.getIndustry(Industries.REFINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
             }
         }
     }
@@ -225,7 +229,11 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
         //if(!market.getFactionId().equals("eusan_nation")) return false;
         if(market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
         if(!Global.getSector().getPlayerFaction().getId().equals("eusan_nation")) return false;
-        return market.hasIndustry(Industries.MINING); //checks if mining is there on the planet.
+
+        if(market.hasIndustry(Industries.REFINING) || market.hasIndustry(Industries.MINING)) {
+            return true;
+        }
+        return false;
 	}
 
     @Override
