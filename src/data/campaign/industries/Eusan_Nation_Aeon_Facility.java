@@ -7,7 +7,7 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
-import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -31,6 +31,8 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
     protected boolean aeonFacility_improve = false;
     protected float aeonFacility_bonus = 0.0f;
+    protected float aeonFacility_stability_penalty = -1.0f;
+    protected int aeonFacility_demand_increase = 0;
 
     @Override
     public boolean isHidden(){
@@ -45,15 +47,14 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     public void apply(){
         super.apply(true);
         int size = market.getSize();
+        int total_demand = size - 1;
 
-        demand(Commodities.SUPPLIES, size-1);
-		demand(Commodities.CREW, size-1);
-		demand(Commodities.HEAVY_MACHINERY, size-1);
+        demand(Commodities.SUPPLIES, total_demand + aeonFacility_demand_increase);
+		demand(Commodities.CREW, total_demand + aeonFacility_demand_increase);
+		demand(Commodities.HEAVY_MACHINERY, total_demand + aeonFacility_demand_increase);
 
 		supply(Commodities.ORGANS, size-2);
-        if(aeonFacility_improve){
-            aeonFacility_bonus = 1.0f;
-        }
+
         applyMiningModifications();
 
 		//Pair<String, Integer> deficitSupplies = getMaxDeficit(Commodities.SUPPLIES);
@@ -62,8 +63,7 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 		//applyDeficitToProduction(1, deficitCrew, Commodities.ORGANS);
 		//applyDeficitToProduction(1, deficitSupplies, Commodities.ORE, Commodities.ORGANICS);
 		applyDeficitToProduction(1, deficitCrew, Commodities.ORGANS);
-		
-		//modifyStabilityWithBaseMod();
+        modifyStabilityAeonFac();
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -74,11 +74,8 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     @Override
     public void unapply(){
         super.unapply();
-        //unmodifyStabilityWithBaseMod();
         unapplyMiningModifications();
-//        if(!aeonFacility_improve){
-//            unapplyMiningModifications();
-//        }
+        unmodifyStabilityAeonFac();
     }
 
     public void applyMiningModifications(){
@@ -126,6 +123,16 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
         }
     }
 
+    public void modifyStabilityAeonFac(){
+        if(aeonFacility_improve){
+            market.getStability().modifyFlat("Eusan_Nation_Aeon_Facility",aeonFacility_stability_penalty,"Aeon Facility Improvements");
+        }
+    }
+
+    public void unmodifyStabilityAeonFac(){
+        market.getStability().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+    }
+
 	public boolean matchesConditionReq(String ... conditions){
         for (String condition : conditions) {
             if(market.hasCondition(condition)) {
@@ -135,9 +142,9 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
         return false;
     }
 
-    public boolean producedThisCommodity(Industry ind,String commodity){
-        return ind.getSupply(commodity).getQuantity().getModifiedInt()>0;
-    }
+//    public boolean producedThisCommodity(Industry ind,String commodity){
+//        return ind.getSupply(commodity).getQuantity().getModifiedInt()>0;
+//    }
 
     protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {
 		return mode != IndustryTooltipMode.NORMAL || isFunctional();
@@ -184,11 +191,6 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 		
 	}
 
-    // @Override
-	// protected int getBaseStabilityMod() {
-	// 	return 1;
-	// }
-
     public String getNameForModifier() {
 		if (getSpec().getName().contains("HQ")) {
 			return getSpec().getName();
@@ -220,77 +222,67 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
     @Override
 	public boolean isAvailableToBuild() {
-		return false;
-	}
-	
-	public boolean showWhenUnavailable() {
-		return false;
+        //if(!market.getFactionId().equals("eusan_nation")) return false;
+        if(market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
+        if(!Global.getSector().getPlayerFaction().getId().equals("eusan_nation")) return false;
+        return market.hasIndustry(Industries.MINING); //checks if mining is there on the planet.
 	}
 
-//	@Override
-//	public boolean canImprove() { return false; }
+    @Override
+    public String getUnavailableReason() {
+        return "Requires Mining or Refining industry and Eusan Nation commission!";
+    }
+
+//    @Override
+//    public boolean canInstallAICores() {
+//        return false;
+//    }
 
     @Override
     protected boolean canImproveToIncreaseProduction() {
         return true;
     }
 
-//    @Override //override this code so it automatically plugs back into vanilla function addImprovedSection()
-//    public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
-//        float initPad = 0f;
-//        float opad = 10f;
-//        Color h = Misc.getHighlightColor();
-//        boolean addedSomething = false;
-//        if (canImproveToIncreaseProduction()) {
-//            String unit = "unit";
-//            if (getImproveProductionBonus() > 1) { //alex had this at != 1 which is hmmm
-//                unit = "units";
-//            }
-//            if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
-//                info.addPara("Production increased by %s " + unit + ".", initPad, Misc.getHighlightColor(),
-//                        "" + getImproveProductionBonus());
-//                for (Industry industry : market.getIndustries()){
-//                    if(industry.getSpec().hasTag(Industries.MINING)){
-//                        if(industry.getSupply(Commodities.ORE).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Metal Ore Bonus: %s" + unit, opad, h, "+" + (int) mining_ore_bonus);
-//                        }
-//                        if(industry.getSupply(Commodities.RARE_ORE).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Transplutonic Ore Bonus: %s" + unit + ".", opad, h, "+" + (int) mining_rareOre_bonus);
-//                        }
-//                        if(industry.getSupply(Commodities.ORGANICS).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Organics Bonus: %s" + unit + ".", opad, h, "+" + (int) mining_organics_bonus);
-//                        }
-//                        if(industry.getSupply(Commodities.VOLATILES).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Volatiles Bonus: %s" + unit + ".", opad, h, "+" + (int) mining_volatiles_bonus);
-//                        }
-//                    }
-//                    if(industry.getSpec().hasTag(Industries.REFINING)){
-//                        if(industry.getSupply(Commodities.METALS).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Metals Refining Bonus: %s" + unit + ".", opad, h, "+" + (int) refining_metal_bonus);
-//                        }
-//                        if(industry.getSupply(Commodities.RARE_METALS).getQuantity().getModifiedValue() > 0){
-//                            info.addPara("Transplutonics Refining Bonus: %s" + unit  + ".", opad, h, "+" + (int) refining_rare_metal_bonus );
-//                        }
-//                    }
-//                }
-//            } else {
-//                info.addPara("Increases production by %s " + unit + ".", initPad, Misc.getHighlightColor(),
-//                        "" + getImproveProductionBonus());
-//            }
-//            initPad = opad;
-//            addedSomething = true;
-//        }
-//
-//        if (mode != ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
-//            info.addPara("Each improvement made at a colony doubles the number of " +
-//                            "" + Misc.STORY + " points required to make an additional improvement.", initPad,
-//                    Misc.getStoryOptionColor(), Misc.STORY + " points");
-//            addedSomething = true;
-//        }
-//        if (!addedSomething) {
-//            info.addSpacer(-opad);
-//        }
-//    }
+    @Override //override this code so it automatically plugs back into vanilla function addImprovedSection()
+    public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+        float initPad = 0f;
+        float opad = 10f;
+        Color h = Misc.getHighlightColor();
+        boolean addedSomething = false;
+        if (canImproveToIncreaseProduction()) {
+            String unit = "unit";
+            if (getImproveProductionBonus() > 1) { //alex had this at != 1 which is hmmm
+                unit = "units";
+            }
+            if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+                info.addPara("Production increased by %s " + unit + ".", initPad, Misc.getHighlightColor(),
+                        "" + getImproveProductionBonus());
+                info.addPara("Stability decreased by %s ", opad, Misc.getNegativeHighlightColor(),
+                        "" + aeonFacility_stability_penalty);
+                info.addPara("Increases demand for all inputs by %s ", opad, Misc.getNegativeHighlightColor(),
+                        "" + aeonFacility_demand_increase);
+            } else {
+                info.addPara("Increases production by %s " + unit + ".", initPad, Misc.getHighlightColor(),
+                        "" + getImproveProductionBonus());
+                info.addPara("Stability decreased by %s ", opad, Misc.getNegativeHighlightColor(),
+                        "" + aeonFacility_stability_penalty);
+                info.addPara("Increases demand for all inputs by %s ", opad, Misc.getNegativeHighlightColor(),
+                        "" + aeonFacility_demand_increase);
+            }
+            initPad = opad;
+            addedSomething = true;
+        }
+
+        if (mode != ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+            info.addPara("Each improvement made at a colony doubles the number of " +
+                            "" + Misc.STORY + " points required to make an additional improvement.", initPad,
+                    Misc.getStoryOptionColor(), Misc.STORY + " points");
+            addedSomething = true;
+        }
+        if (!addedSomething) {
+            info.addSpacer(-opad);
+        }
+    }
 
     @Override
     protected void updateImprovementSupplyAndDemandModifiers() {
@@ -302,6 +294,11 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
         supplyBonus.modifyFlat(getModId(3), bonus, getImprovementsDescForModifiers());
         aeonFacility_improve = true;
+        if(aeonFacility_improve){
+            aeonFacility_bonus = 1.0f;
+            aeonFacility_stability_penalty = -2.0f;
+            aeonFacility_demand_increase = 1;
+        }
     }
 
 }
