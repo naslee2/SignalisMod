@@ -13,9 +13,12 @@
   "viewOffset": 0,
   "builtInMods": [
     "supercomputer",
-	"eccm",
+    "eccm",
     "reduced_explosion"
   ],
+  "builtInWeapons": {
+    "LOGIC": "eusan_nation_station_missile_glow_left"
+  },
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -97,6 +100,15 @@
       "arc": 110,
       "angle": 15,
       "locations": [21, 71]
+    },
+    {
+      "id": "LOGIC",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, -0]
     }
   ],
   "engineSlots": [],
