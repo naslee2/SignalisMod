@@ -49,6 +49,11 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
         super.apply(true);
         int size = market.getSize();
         int total_demand = size - 1;
+        if(aeonFacility_improve){
+            aeonFacility_bonus = 1.0f;
+            //aeonFacility_stability_penalty = -1.0f;
+            aeonFacility_demand_increase = 1;
+        }
 
         demand(Commodities.SUPPLIES, total_demand + aeonFacility_demand_increase);
 		demand(Commodities.CREW, total_demand + aeonFacility_demand_increase);
@@ -228,12 +233,14 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 	public boolean isAvailableToBuild() {
         //if(!market.getFactionId().equals("eusan_nation")) return false;
         if(market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
-        if(!Global.getSector().getPlayerFaction().getId().equals("eusan_nation")) return false;
 
-        if(market.hasIndustry(Industries.REFINING) || market.hasIndustry(Industries.MINING)) {
-            return true;
+        String faction = Global.getSector().getPlayerFaction().getId();
+        if(faction.equals("eusan_nation")) return false;
+
+        if(!market.hasIndustry(Industries.REFINING) || !market.hasIndustry(Industries.MINING)) {
+            return false;
         }
-        return false;
+        return true;
 	}
 
     @Override
@@ -268,14 +275,14 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
                 info.addPara("Stability decreased by %s ", opad, Misc.getNegativeHighlightColor(),
                         "" + aeonFacility_stability_penalty);
                 info.addPara("Increases demand for all inputs by %s ", opad, Misc.getNegativeHighlightColor(),
-                        "" + aeonFacility_demand_increase);
+                        "" + 1);
             } else {
                 info.addPara("Increases production by %s " + unit + ".", initPad, Misc.getHighlightColor(),
                         "" + getImproveProductionBonus());
                 info.addPara("Stability decreased by %s ", opad, Misc.getNegativeHighlightColor(),
                         "" + aeonFacility_stability_penalty);
                 info.addPara("Increases demand for all inputs by %s ", opad, Misc.getNegativeHighlightColor(),
-                        "" + aeonFacility_demand_increase);
+                        "" + 1);
             }
             initPad = opad;
             addedSomething = true;
@@ -302,11 +309,6 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
         supplyBonus.modifyFlat(getModId(3), bonus, getImprovementsDescForModifiers());
         aeonFacility_improve = true;
-        if(aeonFacility_improve){
-            aeonFacility_bonus = 1.0f;
-            aeonFacility_stability_penalty = -2.0f;
-            aeonFacility_demand_increase = 1;
-        }
     }
 
 }
