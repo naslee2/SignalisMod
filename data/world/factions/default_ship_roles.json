@@ -18,6 +18,7 @@
         "eusan_nation_iltis_escort": 8,
         "eusan_nation_lerche_standard":8,
         "eusan_nation_lerche_raider": 8,
+        "eusan_nation_lerche_strike": 8,
         "eusan_nation_tyrann_standard":8,
         "eusan_nation_tyrann_picket": 8,
         "eusan_nation_raubtier_standard":8,
@@ -38,6 +39,7 @@
     },
     "combatLarge":{
         "eusan_nation_comoros_standard":6,
+        "eusan_nation_comoros_escort":6,
         "eusan_nation_engollan_standard":6,
         "eusan_nation_engollan_fleet": 6,
         "eusan_nation_isolde_standard":1,
@@ -47,7 +49,9 @@
     "combatCapital":{
         "eusan_nation_revolution_standard":2,
         "eusan_nation_revolution_barrage": 2,
-        "eusan_nation_admiral_standard":1
+        "eusan_nation_admiral_standard":1,
+        "eusan_nation_admiral_ironclad":1,
+        "eusan_nation_admiral_assault":1
     },
     "crig":{},
     "utility":{

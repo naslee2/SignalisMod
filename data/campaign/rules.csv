@@ -1218,144 +1218,153 @@ OR
 "#END ADMIRAL_FALKE_CHAT_OPTIONS",,,,,,
 "#END ADMIRAL_FALKE",,,,,,
 ,,,,,,
-# MARLIS,,,,,,
+# ALYSSA,,,,,,
 ,,,,,,
-# MARLIS_GREETINGS,,,,,,
-MARLIS_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
-$market.id == ""rotfront_market""",,"You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small hand wave to come over...","marlis_bar:Have a chat with the Replika at the bar.",
-MARLIS_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+# ALYSSA_GREETINGS,,,,,,
+ALYSSA_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
+$market.id == ""rotfront_market""","SetOptionColor alyssa_bar highlight","You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small hand wave to come over...","alyssa_bar:Have a chat with the Replika at the bar.",
+ALYSSA_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$player.metMarlis == false
+$player.metAlyssa == false
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","$player.metMarlis = true
+$option == alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who's been helping us out recently! Tell you what, your first drink's on the house. Just a little thanks on behalf of our Nation.""
-FireAll PopulateMarlisBarOptions",,,"SaveCurrentVisual"
-MARLIS_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == false
+FireAll PopulateAlyssaBarOptions",,,"SaveCurrentVisual"
+ALYSSA_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == false
 $faction.friendlyToPlayer score:1000
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new face! And from the looks of it, not from around here either. Well that's fine. Just take a seat, and I'll be with you shortly!""
-FireAll PopulateMarlisBarOptions",,,
-MARLIS_INTRO_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
+FireAll PopulateAlyssaBarOptions",,,
+ALYSSA_INTRO_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.commissionFactionId == ""eusan_nation""
-$player.metMarlis == false
+$player.metAlyssa == false
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT"".
-FireAll PopulateMarlisBarOptions",,,
-MARLIS_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == false
+FireAll PopulateAlyssaBarOptions",,,
+ALYSSA_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == false
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT""
-FireAll PopulateMarlisBarOptions",,"barMarlis_sales:""What do you have?""
+FireAll PopulateAlyssaBarOptions",,"barAlyssa_sales:""What do you have?""
 ",
-MARLIS_GREETING_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+ALYSSA_GREETING_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$player.metMarlis == true
+$player.metAlyssa == true
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
+$option == alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
 OR
 ""Hello comrade, how do you do this fine day?""
 OR
 ""Welcome back, comrade. I hope you are well?""
 OR
 ""Fancy a drink today?""",,
-MARLIS_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == true
+ALYSSA_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == true
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
+$option == alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
 OR
 ""Greetings. You seem parched. Would you like a drink?""
 OR
 ""Ah a customer has come back. What will it be?""",,
-MARLIS_GREETING_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+ALYSSA_GREETING_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.commissionFactionId == ""eusan_nation""
-$player.metMarlis == true
+$player.metAlyssa == true
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""What do you wish to drink?""
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""What do you wish to drink?""
 OR
 ""How can I take your order?""",,
-MARLIS_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == true
+ALYSSA_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == true
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""You seem thirsty.""
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""You seem thirsty.""
 OR
 ""You are a long way from home. What can I get you?""
 OR
 ""You going to stand there and not order anything?""",,
-MARLIS_GREETING_HOSTILE,DialogOptionSelected,"$faction.id == ""eusan_nation""
+ALYSSA_GREETING_HOSTILE,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $faction.isHostile score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitMarlis_barHostile:Leave Marlis alone.",
-"#END MARLIS_GREETINGS",,,,,,
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitAlyssa_barHostile:Leave Alyssa alone.",
+"#END ALYSSA_GREETINGS",,,,,,
 ,,,,,,
-# MARLIS_BAR_SALES,,,,,,
-#MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
+# ALYSSA_BAR_SALES,,,,,,
+ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
+ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
+,,,,,,
+# ALYSSA_ENTER,,,,,,
+#ALYSSA_BAR_SALES_INTRO,PopulateAlyssaBarOptions,,,"""Would you like to see our selection""? Alyssa says. 
 
-She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barMarlis_cigs_intro:Browse the menu",
-#MARLIS_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barMarlis_cigs_intro2",,"You open the menu and begin browsing the items.","barMarlis_cigs_intro:Browse the menu",
-MARLIS_BAR_SALES_MENU,DialogOptionSelected,"$option == barMarlis_cigs_intro","FireAll PopulateMarlisBarSellOptions","You browse through the available items listed on the menu.",,
-MARLIS_BAR_SALES_CIGS_DESC,PopulateMarlisBarSellOptions,"$player.marlis_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barMarlis_cigs_desc:Buy one for 15 credits.",
-MARLIS_BAR_SALES_CIGS_DESC_WAIT,PopulateMarlisBarSellOptions,"$player.marlis_bar_cigSale == true","SetEnabled barMarlis_cigs_desc false
-SetTooltip barMarlis_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
-","Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barMarlis_cigs_desc:Buy one package of cigarette for 15 credits.",
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barMarlis_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro:Browse the menu",
+#ALYSSA_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barAlyssa_cigs_intro2",,"You open the menu and begin browsing the items.","barAlyssa_cigs_intro:Browse the menu",
+ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro","FireAll PopulateAlyssaBarOptions","You browse through the available items listed on the menu.",,
+"#END ALYSSA_ENTER",,,,,,
+,,,,,,
+# DRINKS_SALES,,,,,,
+"#END DRINKS_SALES",,,,,,
+,,,,,,
+# CIGS_SALES,,,,,,
+ALYSSA_BAR_SALES_CIGS_DESC,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one for 15 credits.",
+ALYSSA_BAR_SALES_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc false
+SetTooltip barAlyssa_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
+","Cigarettes, made by the Nation. Mass produced and comes in vvone and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one package of cigarette for 15 credits.",
+ALYSSA_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
 AddCredits -15
 AdjustRepActivePerson WELCOMING 1
-$player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
+$player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Here you go! Enjoy."" she says as she hands you the pack.","barMarlis_cigs_intro:Look at the other items for sale.",
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro:Look at the other items for sale.",
+ALYSSA_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
+ALYSSA_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
 AddCredits -50
-$player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
+$player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
-MARLIS_BAR_SALES_EXIT_OPTION,PopulateMarlisBarSellOptions,,,,"barMarlis_cigs_exit:Go back",
-MARLIS_BAR_SALES_EXIT,DialogOptionSelected,"$option == barMarlis_cigs_exit","FireAll PopulateMarlisBarOptions",,,
-"#END MARLIS_BAR_SALES",,,,,,
+ALYSSA_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
+"#END CIGS_SALES",,,,,,
+"#END ALYSSA_BAR_SALES",,,,,,
 ,,,,,,
-# MARLIS_EXIT,,,,,,
-MARLIS_EXIT,DialogOptionSelected,"$option == exitMarlis_bar","EndConversation DO_NOT_FIRE
+# ALYSSA_EXIT,,,,,,
+ALYSSA_EXIT,DialogOptionSelected,"$option == exitAlyssa_bar","EndConversation DO_NOT_FIRE
 RestoreSavedVisual
 BarCMD showOptions","""See you later!""
 OR
 ""Come back anytime""",,
-MARLIS_EXIT_HOSTILE,DialogOptionSelected,"$option == exitMarlis_barHostile","EndConversation DO_NOT_FIRE
+ALYSSA_EXIT_HOSTILE,DialogOptionSelected,"$option == exitAlyssa_barHostile","EndConversation DO_NOT_FIRE
 RestoreSavedVisual
 BarCMD showOptions","The replika is refusing to serve you. Perhaps its time to leave.
 OR
 The replika gives you a glowering look. You are not welcome by the looks of it.",,
-MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
-"#END MARLIS_EXIT",,,,,,
-"#END MARLIS",,,,,,
+ALYSSA_EXIT_OPTION,PopulateAlyssaBarOptions,,,,"exitAlyssa_bar:Exit the Bar",
+"#END ALYSSA_EXIT",,,,,,
+"#END ALYSSA",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY,,,,,,
 ,,,,,,
