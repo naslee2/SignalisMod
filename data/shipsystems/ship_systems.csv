@@ -1,3 +1,5 @@
 name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
 Interception mode,eusan_nation_pd_damper,1,,,,,,,2,0.05,0.25,3,0.25,0,,,,,,,,,TRUE,TRUE,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
+Autoforge Jets,eusan_nation_autoforge_jet,,,,,,,,,,1,5,1,8,,,,,,,,,,,,movement,graphics/icons/hullsys/maneuvering_jets.png
+Flare Launcher,eusan_nation_flare,,,,,,,,3,,0.1,,,5,,,,,,,,,,,,defensive,graphics/icons/hullsys/flare_launcher.png
 Bangpae Drones,eusan_nation_drone_station,,,,,,,,6,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/station_defense_drones_low.png
