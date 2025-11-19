@@ -12,6 +12,8 @@
     "invasionSupportFleetName":"Support Flotille",
     "defenceFleetName":"Defence Flottille",
 
+    "canInvade": true,
+
     "invasionFleetSizeMod":0.10,
 	"responseFleetSizeMod":0.55,
 	"invasionPointMult":0.30,
@@ -22,17 +24,23 @@
     "vengeanceFleetNamesSingle":["a Peacekeeper Squadron", "a Responder Flotille", "a Liberation Fleet"],
 
     "defenceStations":[
-        {"ids":["orbitalstation", "battlestation", "starfortress"],"weight":0.5}
+        {"ids":["orbitalstation", "eusan_nation_station2", "eusan_nation_station3"],"weight":0.5}
 
     ],
     "colonyExpeditionChance":1,
+    "maxColonyDistance": 10.0,
 
     "alignments":{
-        "technocratic":0.3,
-        "militarist":0.2,
-        "ideological": 1.0
+        "technocratic":0.6,
+        "militarist":1.0,
+        "ideological": 1.0,
+        "diplomatic": -0.1,
+        "corporate": -0.5,
+        "hierarchical":1.0
     },
     "diplomacyTraits":["stalwart", "likes_ai", "lowprofile", "selfrighteous", "law_and_order", "envious"],
+
+    "morality":"amoral",
 
     "freeMarket":false,
 
