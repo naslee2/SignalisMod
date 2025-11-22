@@ -11,12 +11,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
-import com.fs.starfarer.ui.P;
 
 import java.awt.Color;
 
-public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
+import org.apache.log4j.Logger;
 
+public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
+    static Logger logger = Global.getLogger(Eusan_Nation_Aeon_Facility.class);
 
 	protected String[] miningOreConditionsList = new String[] {Conditions.ORE_ABUNDANT, Conditions.ORE_MODERATE, Conditions.ORE_RICH, Conditions.ORE_SPARSE, Conditions.ORE_ULTRARICH};
 	protected String[] miningRareOreConditionsList = new String[] {Conditions.RARE_ORE_ABUNDANT, Conditions.RARE_ORE_MODERATE, Conditions.RARE_ORE_RICH, Conditions.RARE_ORE_SPARSE, Conditions.RARE_ORE_ULTRARICH};
@@ -231,16 +232,17 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
     @Override
 	public boolean isAvailableToBuild() {
-        //if(!market.getFactionId().equals("eusan_nation")) return false;
         if(market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
 
-        String faction = Global.getSector().getPlayerFaction().getId();
-        if(faction.equals("eusan_nation")) return false;
+        String faction = Misc.getCommissionFactionId();
+        //logger.info("Logger active: player faction is: " + faction);
+        if(!faction.equals("eusan_nation")) return false;
 
-        if(!market.hasIndustry(Industries.REFINING) || !market.hasIndustry(Industries.MINING)) {
-            return false;
-        }
-        return true;
+        if(!market.hasIndustry(Industries.REFINING) && !market.hasIndustry(Industries.MINING)) return false;
+        //if(market.hasIndustry(Industries.REFINING) || market.hasIndustry(Industries.MINING)) return true;
+            //logger.info("Logger active: Industry check is: " + (!market.hasIndustry(Industries.REFINING) || !market.hasIndustry(Industries.MINING)));
+        return market.hasIndustry(Industries.REFINING) || market.hasIndustry(Industries.MINING);
+
 	}
 
     @Override
