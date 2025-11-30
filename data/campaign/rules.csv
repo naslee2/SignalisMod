@@ -837,7 +837,7 @@ OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1"
 
 ""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
 
-""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:Continue",
+""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:End Conversation",
 OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_LENG",,,,,,
 ,,,,,,
@@ -846,7 +846,7 @@ OFFICER_YEONG_CHAT_SMOKING_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_
 OFFICER_YEONG_CHAT_SMOKING1,DialogOptionSelected,"$option == officeryeongChatSmokingOption",,"""Smoking?"" she queries. ""What about it?""","officeryeongChatSmoking1:""You know thats bad for you. It could kill you.""",
 OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"She seems both annoyed and amused by your comment. As if you have missed some sort of irony in you, a spacer, chastising someone for undertaking a dangerous activity.
 
-""Yes I smoke. So what...""","officeryeongChatSmoking2:Continue",
+""Yes I smoke. So what...""","officeryeongChatSmoking2:End Conversation",
 OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
 "#END OFFICER_YEONG_CHAT",,,,,,
@@ -1175,20 +1175,22 @@ ADMIRAL_FALKE_CHAT_VOLKSMARINE_3,DialogOptionSelected,"$option == admiralFalkeVo
 
 She gives you a small smile. 
 
-""I believe that is all for now. It is time for me to go.""","admiralFalkeVolksmarineOption3:Continue",
+""I believe that is all for now. It is time for me to go.""","admiralFalkeVolksmarineOption3:End Conversation",
 ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption3","FireAll PopulateAdmiralFalkeChatOptions",,,
 "#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption:Tell me about the Grand Fuel Fleet.",
 ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,"""The Grand Fuel Fleet?"" Admiral Falke responds. She puts a finger on her lips as if pondering her next words but it is clear she knows who you met.
 
 ""Ah yes. Them. If there was any military formation that is full of pomp and predatory instinct it would be the Grand Fuel Fleet of the Sindrian Fuel Company. Their commanding officer is rather vicious opponent should you ever try to oppose her.""","admiralFalkeGrandFuelFleet1:Continue",
 ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet1",,"""Then yet again, there is some truth to her reputation. For most people, she is the flame that draws the unfortunate moths to their doom.""
 
 ""The Grand Fuel Fleet itself is also not to be taken lightly. They consist of the most powerful warships assigned to the Sindrian Fuel Comany fleet. The Sindrians are not idle in their pursuit of fuel profits. They have spent years producing weapons that can make other powers like the Hegemony and Leauge pause.""","admiralFalkeGrandFuelFleet2:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""","admiralFalkeGrandFuelFleet3:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions","""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""",,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""
+
+""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""","admiralFalkeGrandFuelFleet3:End Conversation",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
 "#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
 "#END ADMIRAL_FALKE_CHAT",,,,,,
 ,,,,,,
@@ -1490,17 +1492,190 @@ OR
 LINK REJECTED","cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
 ,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryPerseanLeagueOption:Tell me about the Persean League.",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_1,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeagueOption",,"She gives you a stern look as if you asked her a question everyone knows the answer to. After a few seconds of silence, she begins to explain.
+
+""Persean League. A collection of idiots and selfish nations whose sole unifying factor is that there is a worse threat to their collective security. Our dealings with the League was less than favorable and our backing out led to them trying to destabilize us.""
+
+She makes a small huff. 
+
+""The League is not our friends nor are they our mortal enemies. We keep to ourselves, they keep to themselves.""","greatRevolutionaryPerseanLeague1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_2,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague1",,"""Our history with the Persean League go back long before the Nation. The Eusan Empire was eager to assert its independence but it cannot stand alone against bullies like the Hegemony. What do you do in sector politics when a big bully comes around? Find friends, gang up on them.""
+
+She pauses. You can see that the Great Revolutionary is digging deep into her experience and knowledge of Sector politics. 
+
+""Once the Nation defeated the Empire, the League treated us like we were late on our dues. Military and economic demands that the Empire apparently failed to keep up.""
+
+""Well they were fighting a war against us of course they cannot keep up. The League considered us like the Empire's successors in the club and treated us accordingly. Half-hearted offers of support, major demands that we step up our contributions.""
+","greatRevolutionaryPerseanLeague2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_3,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague2",,"""So after five years of continuous disagreements and increasing belligerence from Kazeron, we left. Or my predecessor left. Pulled the Nation out of the League.""
+
+She pursed her lips then continued.
+
+""We left the League 29 years ago. We had skirmishes, we had border intrusions, we had propaganda campaigns against us, we had infiltration. They even broadcast songs bidding us farewell while insinuating the Nation will return to the fold. As if...""
+
+""Then Askonia happens. Gave us room to breath. Opis's destruction forced the Perseans to look elsewhere. The Second AI War made them even less interested.""
+
+She sighs. This topic is a very personal one. 
+
+""I took power just after the Askonia Crisis. The League's actions left a very sour taste in the Nation. Did they apologize for all the incidents they visited on us? Doubt they ever will...""","greatRevolutionaryPerseanLeague3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_4,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague3",,"""In any case, the Persean League is busy playing nice to anyone not aligned with the Hegemony, Tri-Tachyon or any other major powers. It has been a tumultuous 29 years.""
+
+She stops and sighs. Looks like the topic has dug up really bad memories. Perhaps it is time to stop here.
+
+You give her your thanks for the information and end the topic.","greatRevolutionaryPerseanLeague4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryHegemonyOption:Tell me about the Hegemony.",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_1,DialogOptionSelected,"$option == greatRevolutionaryHegemonyOption",,"She gives you a quizzical look as if you asked her a question everyone knows the answer to. 
+
+""The Hegemony is what I like to call 'history that refuses to die'. They are a bunch of paranoid generals who liken themselves as great leaders under constant siege, holding the light of civilization against the darkness.""
+
+She gives a small huff of amusement. 
+
+""As if...""
+
+A small smile appears. You can tell she finds this notion to be ridiculous. 
+
+""In many cases they are much like us. Except...the military is subordinate to the civilian government, not like what the Hegemony has.""","greatRevolutionaryHegemony1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_2,DialogOptionSelected,"$option == greatRevolutionaryHegemony1",,"""The Nation has many past dealings with the Hegemony, mostly at the point of the gun. They are very twitchy when it comes to AI and more than once they complained about our Replika developments. They attempted to send inspection fleets or have their Luddic proxies cause problems.""
+
+""Of course these usually do not amount to much. The Luddics are swept up quickly or infiltrated hard before they can establish a network. The inspection fleets get turned away by the Perseans before they approach us.""
+
+She gives a small chuckle. Her explanation betrays confidence. Apparently she is content over the current state of the Hegemony's dilemma. 
+
+""The League is very wary of Hegemony military forces near their space so any attempt to send forces our way gets noticed very quickly.""","greatRevolutionaryHegemony2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_3,DialogOptionSelected,"$option == greatRevolutionaryHegemony2",,"""Ever since the Opis atrocity and the Second AI war, the Hegemony is on the back foot. Their military and government is strained. They have to contend with not only the League and Tri Tachyon but also the smaller states. We are lucky we have a large powerful neighbor blocking the Hegemony from going after us.""
+
+She stops and smiles again. Looks like the topic has brought up amusing memories. 
+
+""I believe that is it. Not much more on the topic."" she says. Looks like this conversation is done.
+
+You give her your thanks for the information and end the topic.","greatRevolutionaryHegemony3:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryHegemony3","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianFuelCompanyOption:Tell me about the Sindrian Fuel Company.",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_1,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompanyOption",,"She gives you an exasperated look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
+
+""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really should not exist but it does.""
+
+She crosses her arms and purses her lips. 
+
+""Just remember, despite our close ties, I do not have confidence that the Sindrian Fuel Company will be able to continue existing if current things continue the way they are.""","greatRevolutionarySindrianFuelCompany1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_2A,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany1
+$player.metMacario == false",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the SFC's stability. Nomially the head is...The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+You can tell from her face that saying Andrada's official company title took some effort not to induce a disgusted laugh from her.
+
+""However, information about the Sindrian Fuel Company's internal workings is opaque. Our intelligence services have not been able to get a good read on the current status of the government on Sindria lately. Something is going on and the Sindrians are very tight lipped.""
+
+She paused a bit.
+
+""I'm sure you will eventually cross paths with the SFC.""
+","greatRevolutionarySindrianFuelCompany2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_2B,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany1
+$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is...The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+You can tell from her face that saying Andrada's official company title took some effort not to induce a disgusted laugh from her.
+
+""Information about the SFC's internal workings is opaque. However, recent developments have allowed us to get a better picture on the current internal situation of the SFC.""
+
+""There are three camps. Lion's Guard commander and second-in-command to Andrada, led by Horacio Caden. Loyal to a degree. His fleet never ventures past Sindria's orbit. Limited intelligence and boastful. ""
+
+""Second, Oxana Hyder. Vice Executive Manager for the Board of Security and commander of the Askonia System Defense Armada. Has ties to the underworld. Also loyal.""
+
+""Third, Dolos Macario. He is the Executive Manager for the Board of Human Resources of the SFC.""
+
+She paused a bit.
+
+""I know you talked to Macario. He is a snake. Be careful of that one.""","greatRevolutionarySindrianFuelCompany2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_3,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany2",,"""Now consider this. The SFC is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
+
+""Outside of its major military capabilities and unique sets of fuel tanker derived warship designs, the SFC has been able to hold on due to its strategic position and vital exports.""
+
+She puts her right hand near her face and begins to rub her temples.
+
+The state is literally called, 'The Sindrian Fuel Company' as if it needed to spell it out. The SFC's exports of antimatter fuel, lobsters, and franchise operations are keeping it afloat.""","greatRevolutionarySindrianFuelCompany3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_4,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany3",,"""Ever since the Askonia Crisis, the SFC has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
+
+She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.
+","greatRevolutionarySindrianFuelCompany4:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+!eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianOption:Tell me about the Sindrian Diktat.",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_1,DialogOptionSelected,"$option == greatRevolutionarySindrianOption",,"She gives you a blank look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
+
+""The...Sindrian Diktat is a fortress of cardboard. It is...a very interesting place where it really should not exist but it does.""
+
+She crosses her arms and purses her lips. 
+
+""Just remember, despite our close ties, I do not have confidence that the Sindrian Diktat will be able to continue existing if current things continue the way they are.""","greatRevolutionarySindrian1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2A,DialogOptionSelected,"$option == greatRevolutionarySindrian1
+$player.metMacario == false",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+""However, information about the Diktat's internal workings is opaque. Our intelligence services have not been able to get a good read on the current status of the government on Sindria lately. Something is going on and the Sindrians are very tight lipped.""
+
+She paused a bit.
+
+""I'm sure you will eventually cross paths with the Diktat.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2B,DialogOptionSelected,"$option == greatRevolutionarySindrian1
+$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+""Information about the Diktat's internal workings is opaque. However, recent developments have allowed us to get a better picture on the current internal situation of the Diktat.""
+
+""There are three camps. Lion's Guard commander and second-in-command to Andrada, led by Horacio Caden. Loyal to a degree. Limited intelligence and boastful.""
+
+""Second, Oxana Hyder. Deputy Star Marshal of the Askonia System Defense Armada. Has ties to the underworld. Also loyal""
+
+""Third, Dolos Macario. He is the Chief High Inspector-General of the internal security of the Diktat.""
+
+She paused a bit.
+
+""I know you talked to Macario. He is a snake. Be careful of that one.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_3,DialogOptionSelected,"$option == greatRevolutionarySindrian2",,"""Now consider this. The Diktat is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
+
+""Outside of its major military capabilities and unique sets of warship designs, the Diktat has been able to hold on due to its strategic position and vital exports. I even heard someone within the Hegemony's officer corps is that they disparage it as a ''gas station with a fleet''. Amusing yes but it gets the point across. The Diktat's exports of antimatter fuel and luxury food items are keeping it afloat.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_4,DialogOptionSelected,"$option == greatRevolutionarySindrian3",,"""Ever since the Askonia Crisis, the Diktat has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
+
+She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.","greatRevolutionarySindrian4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrian4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryTriTachyonOption:Tell me about the Tri Tachyon Corporation.",
+"#END THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker WELCOMING",,,"greatRevolutionaryUAFOption:Tell me about the United Aurora Federation",
+"#END THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION",,,,,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+,,,,,,
 # THE_GREAT_REVOLUTIONARY_OPERATION1,,,,,,
-op1,,,,,,
+,,,,,,
+# op1,,,,,,
+"#END op1",,,,,,
 "#END THE_GREAT_REVOLUTIONARY_OPERATION1",,,,,,
 ,,,,,,
-# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
-Chat1,,,,,,
-"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+# THE_GREAT_REVOLUTIONARY_OPERATION 2,,,,,,
+,,,,,,
+# OP2,,,,,,
+"#END OP2",,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OPERATION 2",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,,,,,,
 THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,PopulateOptions,"$id == eusan_nation_great_revolutionary score: 100",,,"greatRevolutionaryChat:Chat with the Great Revolutionary",
-THE_GREAT_REVOLUTIONARY_LISTCHATOPTIONS,DialogOptionSelected,"$option == greatRevolutionaryChat","FireAll PopulategreatRevolutionaryChat","""What do you wish to speak about?""
+THE_GREAT_REVOLUTIONARY_LISTCHATOPTIONS,DialogOptionSelected,"$option == greatRevolutionaryChat","FireAll PopulateGreatRevolutionaryChatOptions","""What do you wish to speak about?""
 OR
 ""Speak""
 OR
@@ -1518,9 +1693,6 @@ THE_GREAT_REVOLUTIONARY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevo
 OR
 ""Good bye.""",,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS",,,,,,
-,,,,,,
-# THE_GREAT_REVOLUTIONARY_OP1,,,,,,
-"#END THE_GREAT_REVOLUTIONARY_OP1",,,,,,
 "#END THE_GREAT_REVOLUTIONARY",,,,,,
 "#END EUSAN_NATION_NPC",,,,,,
 
