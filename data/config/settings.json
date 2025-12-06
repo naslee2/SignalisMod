@@ -24,7 +24,8 @@
             "kitezh_market": "graphics/illustrations/kitezh_illustration.png",
             "buyan_market": "graphics/illustrations/buyan_illustration.png",
             "leng_market": "graphics/illustrations/leng_illustration.png",
-            "nation_bar": "graphics/illustrations/nation_bar.png"
+            "nation_bar": "graphics/illustrations/nation_bar.png",
+            "rotfront_bar": "graphics/illustrations/rotfront_bar.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"

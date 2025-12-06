@@ -42,7 +42,7 @@ $faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your las
 # RULESET_BAR_DESCRIPTION_START,,,,,,
 bardesc_eusanNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual nation_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the revelries or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few local civilians are here, and the ones present all appear to be officials, military or outside spacefarers of some kind.",,
 bardesc_rotfront,BarPrintDesc,"$faction.id== eusan_nation
-$market.id == ""rotfront_market""","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the revelries or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few local civilians are here, and the ones present all appear to be officials, military or outside spacefarers of some kind.",,
+$market.id == ""rotfront_market""","ShowImageVisual rotfront_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are a few Replikas but its is hard to discern if they are partaking in the revelries or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few local civilians are here, and the ones present all appear to be officials, military or outside spacefarers of some kind.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
@@ -164,8 +164,7 @@ The transmission leads you to an area by a large crater, no doubt the remains of
 As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.",,
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1:Use the code phrase",
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
-","SetTextHighlightColors ""221,0,0,255""
-SetTextHighlights ""I got a package to deliver, but the address is in Carcosa."" ""I am not sure how I can help, but I will try.""","I got a package to deliver, but the address is in Carcosa.
+","SetTextHighlights ""I got a package to deliver, but the address is in Carcosa."" ""I am not sure how I can help, but I will try.""","I got a package to deliver, but the address is in Carcosa.
 
 ""I am not sure how I can help, but I will try."" the man replies. He sizes you up before deciding you are worth trusting.
 
@@ -465,7 +464,8 @@ $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
+eusan_nation_personRelationChecker COOPERATIVE
+","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
 SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
@@ -478,7 +478,8 @@ $global.eusan_nation_penrose512_start == false
 eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false
-SetTextHighlights ""Admiral Falke"" ""Good evening, commander.""","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Good evening, commander.""","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
 
 Upon entering, you see why. Standing before you and Ariane, is Admiral Falke herself.
 
@@ -488,18 +489,22 @@ Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:Telepathy?
 officeryeongPenroseRecovery512_briefing0_2:Get out of my head.
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 1
+SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
 
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
 ""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1:Continue
 officeryeongPenroseRecovery512_briefing1_1:Why don't you just beam the mission into my head?",
-OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.""","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
 
 The blood drains from Ariane's face, who is probably also hearing Falke's words. She shoots a look pleading you to drop the stand off.
 
 Falke finally speaks. ""Ariane, brief them on the mission.""","officeryeongPenroseRecovery512_briefing1:Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3",,"Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.
+OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.""","Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.
 
 Falke glances at Ariane, waiting for her to say something.","officeryeongPenroseRecovery512_briefing1:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
@@ -510,7 +515,9 @@ OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeong
 She traces her finger across a star map, circling it around a star system marked in red.
 
 ""You are to go to this system and recover the source of the signal.""","officeryeongPenroseRecovery512_briefing2:""A simple recovery mission, yet you are here...""",
-OFFICER_YEONG_PENROSE512_BRIEFING2A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1_1","Call $global.eusan_nation_penrose512_ref updateData","Falke is visibly annoyed by the suggestion.
+OFFICER_YEONG_PENROSE512_BRIEFING2A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1_1","Call $global.eusan_nation_penrose512_ref updateData
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""It is not a toy, commander. Do not ask me to treat it like one again.""","Falke is visibly annoyed by the suggestion.
 
 It is not a toy, commander. Do not ask me to treat it like one again.
 
@@ -519,7 +526,8 @@ Ariane glares at you with a mixture of horror and surprise, having apparently he
 ""Lets just get on with the briefing, please.""","officeryeongPenroseRecovery512_briefing1:Continue
 officeryeongPenroseRecovery512_briefing2A_1:""I've read enough documents, Use your holovid mind powers.""",
 OFFICER_YEONG_PENROSE512_BRIEFING2B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2A_1","Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
-","You barely have time to take in Ariane's appalled expression before the onslaught begins.
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Built."" ""Launched."" ""Scrapped."" ""Mothballed."" ""Penrose distress signal."" ""512""","You barely have time to take in Ariane's appalled expression before the onslaught begins.
 
 A detailed list. Of something. Equipment? no, ships. Every Penrose. Built. Launched. Scrapped. All of them, before you.
 
