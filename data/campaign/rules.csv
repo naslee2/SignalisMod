@@ -1663,11 +1663,27 @@ THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_ESCAPE_RETURN,DialogOptionSelected,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,,,,,,
-THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryTriTachyonOption:Tell me about the Tri Tachyon Corporation.",
-THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_1,DialogOptionSelected,"$option == greatRevolutionaryTriTachyonOption",,,"greatRevolutionaryTriTachyon1:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_2,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon1",,,"greatRevolutionaryTriTachyon2:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_3,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon2",,,"greatRevolutionaryTriTachyon3:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_4,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon3",,,"greatRevolutionaryTriTachyon4:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryTriTachyonOption:Tell me about the Tri-Tachyon Corporation.",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_1,DialogOptionSelected,"$option == greatRevolutionaryTriTachyonOption",,"There was a pause. A small huff and she began to explain. 
+
+""Tri-Tachyon is uh...to say the least, a corporation with significant capture of multiple segments of economic, social and military power in the sector.""
+
+""Truth be told, we know a lot and we do not know much about them. Our own intelligence services have their hands full dealing with the constant penetration and intrusions into the Nation's computer systems.""","greatRevolutionaryTriTachyon1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_2,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon1",,"""From what my advisors tell me, they are the only group in this sector that managed to escape the Collaspe relatively unharmed. Lots of rumors that they planned the entire thing.""
+
+She puts her hand to her face and rubs her cheek as she contemplates her next words. 
+
+""Their dealings with the Empire is the reason why we have the Replika program. Or at least the early starts.""","greatRevolutionaryTriTachyon2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_3,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon2",,"""From our records, Tri-Tachyon and the Empire attempted a very small partnership in order to create Replikas. However they left after the first prototypes were created as they saw no further need to stay. The records indicate they had better solutions than what the Empire had envisioned.""
+
+""In theory they left, but we know they keep tabs on our Replika programs. It is a constant battle to keep secrets from prying eyes like Tri-Tachyon. They deploy spyware, they use AI propaganda against our citizen's minds, they bribe, they coerce, they steal information. They the ever persistent threat.""
+
+You see a very annoyed look on her face. Clearly Tri-Tachyon has proven to be a willy opponent in the espionage game.","greatRevolutionaryTriTachyon3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_4,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon3",,"""After the Second AI War the military threat from Tri-Tachyon has diminished but never fully went away. They evolved to become more insidious external threat. Their military is oriented towards the Hegemony but they never took their eyes off the Nation. Not one bit.""
+
+""Constant vigilance is what keeping them at bay.""
+
+The last sentence had an air of finality, indicating the topic has ended. You thank you for the information as its best not to press more on the topic.","greatRevolutionaryTriTachyon4:End Conversation",
 THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon4","FireAll PopulateGreatRevolutionaryChatOptions",,,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION",,,,,,
 ,,,,,,
