@@ -1504,6 +1504,31 @@ LINK REJECTED","cutCommLink:Cut the comm link",
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
 ,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,PopulateGreatRevolutionaryChatOptions,"$id == eusan_nation_great_revolutionary score: 100
+$player.askedGreatRevolutionaryForWork == false",,,"greatRevolutionaryQuestGiveOption:Ask the Great Revolutionary if she needs help.",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == greatRevolutionaryQuestGiveOption",,"""Help?"" she asked. 
+
+Her eyes dart around your face. There is a small pause and she opened her desk and pulled out a small tablet computer. She gives it a few taps and a series of words starts populating the screen.
+
+""We have work. Although we have our own people, we can always use the help.""","greatRevolutionaryQuestGive1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == greatRevolutionaryQuestGive1",,"""Now, $playerName. I won't torture you with details on your duties as you either know about them already or just impatient.""
+
+""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2a:Accept
+greatRevolutionaryQuestGive2b:Reconsider",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2a","AdjustRepActivePerson WELCOMING 1
+AddPotentialContact eusan_nation_great_revolutionary
+$player.askedGreatRevolutionaryForWork = true","You accept the offer to work for the Nation.
+
+At that, $heOrShe gives a small nod, ""Thank you, starfarer. I look forward to working with you.""","greatRevolutionaryQuestGiveEND:Leave",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2b",,"You tell the Great Revolutionary that you will think it over. 
+
+""Dissapointing..."" she says.
+
+""Well if you still want to work for me, you know where to find me."" ","greatRevolutionaryQuestGiveEND:Leave",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == greatRevolutionaryQuestGiveEND","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION",,,,,,
+,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,,,,,,
 THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryPerseanLeagueOption:Tell me about the Persean League.",
 THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_1,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeagueOption",,"She gives you a stern look as if you asked her a question everyone knows the answer to. After a few seconds of silence, she begins to explain.
@@ -1724,7 +1749,7 @@ OR
 ""What do you want to know?""
 OR
 ""Returning I see.""",,
-THE_GREAT_REVOLUTIONARY_ESCAPE_OPTIONS,PopulategreatRevolutionaryChat,,"SetShortcut greatRevolutionaryChatEscape ""ESCAPE""",,"greatRevolutionaryChatEscape:""I got to go now...""",
+THE_GREAT_REVOLUTIONARY_ESCAPE_OPTIONS,PopulateGreatRevolutionaryChatOptions,,"SetShortcut greatRevolutionaryChatEscape ""ESCAPE""",,"greatRevolutionaryChatEscape:""I got to go now...""",
 THE_GREAT_REVOLUTIONARY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryChatEscape","FireAll PopulateOptions","""I see...""
 OR
 ""Good bye.""",,
