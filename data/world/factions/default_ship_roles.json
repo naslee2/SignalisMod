@@ -63,23 +63,23 @@
         "eusan_nation_pelikan_standard": 5.0
     },
     "combatFreighterLarge":{
-        "eusan_nation_kanal_standard": 4.0
+        "eusan_nation_vilm_standard": 10.0
     },
     "freighterSmall":{
         "eusan_nation_pisagua_standard": 5.0,
         "eusan_nation_pelikan_standard": 5.0
     },
     "freighterMedium":{
-        "eusan_nation_riems_freighter_standard": 7.0
+        "eusan_nation_riems_freighter_standard": 10.0
     },
     "freighterLarge":{
-        "eusan_nation_vilm_standard": 4.0
+        "eusan_nation_vilm_standard": 10.0
     },
     "tankerSmall":{},
     "tankerMedium":{
-        "eusan_nation_riems_tanker_standard": 7.0
+        "eusan_nation_riems_tanker_standard": 10.0
     },
     "tankerLarge":{
-        "eusan_nation_kanal_standard": 4.0
+        "eusan_nation_kanal_standard": 10.0
     }
 }
