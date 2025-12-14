@@ -49,6 +49,7 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     public void onApplicationLoad() throws Exception{
         super.onApplicationLoad();
         Global.getSettings().loadFont("graphics/fonts/silver18.fnt");
+        Global.getSettings().loadFont("graphics/fonts/silver28.fnt");
     }
 
     @Override

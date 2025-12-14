@@ -490,16 +490,14 @@ Your mind is racing, wondering what she could be doing here. Your thoughts are p
 Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:Telepathy?
 officeryeongPenroseRecovery512_briefing0_2:Get out of my head.
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
-OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 1
-SetTextHighlightColors ""221, 0, 0, 225""
+OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
 
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
 ""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1:Continue
 officeryeongPenroseRecovery512_briefing1_1:Why don't you just beam the mission into my head?",
-OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1
-SetTextHighlightColors ""221, 0, 0, 225""
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.""","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
 
 The blood drains from Ariane's face, who is probably also hearing Falke's words. She shoots a look pleading you to drop the stand off.
@@ -540,7 +538,7 @@ A piercing wail, wiping your mind of those previous ideas. The noise resolves in
 512
 
 A ship that doesn't exist, on a mission that never began, has issued a distress signal.","officeryeongPenroseRecovery512_briefing2B:Steady yourself",
-OFFICER_YEONG_PENROSE512_BRIEFING2C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2B","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -5","You push yourself up off the wall you had unconsciously begun to lean against. Ariane, having dropped the briefing folder, steadies herself as well. She gives you an angry look before beginning to collect the scattered papers with unsteady hands.
+OFFICER_YEONG_PENROSE512_BRIEFING2C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2B",,"You push yourself up off the wall you had unconsciously begun to lean against. Ariane, having dropped the briefing folder, steadies herself as well. She gives you an angry look before beginning to collect the scattered papers with unsteady hands.
 
 ""I trust you understand now, Commander?"" Falke asks.","officeryeongPenroseRecovery512_briefing6:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"Admiral Falke takes a seat, and motions for you to do the same. Ariane holds up a sheet of paper, an inventory of ships and ship parts of the Penrose class, for her to narrate.
@@ -570,9 +568,11 @@ OR
 ""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
 OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:I accept the mission.",
 OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penrose512_start = true
+AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 5
 ShowPersonVisual
 AcceptMission
-FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
+FireAll PopulateOptions
+","""When you come back, prepare yourself for a long debrief...""",,
 "#END RECOVERY512_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY512,,,,,,
@@ -1518,7 +1518,7 @@ THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == great
 
 ""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2a:Accept
 greatRevolutionaryQuestGive2b:Reconsider",
-THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2a","AdjustRepActivePerson WELCOMING 1
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2a","AdjustRepActivePerson WELCOMING 5
 AddPotentialContact eusan_nation_great_revolutionary
 $player.askedGreatRevolutionaryForWork = true","You accept the offer to work for the Nation.
 
