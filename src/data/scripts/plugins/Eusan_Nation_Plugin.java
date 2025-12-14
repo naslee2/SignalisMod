@@ -2,12 +2,16 @@ package data.scripts.plugins;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.SettingsAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 
+import com.fs.starfarer.api.ui.Fonts;
 import data.scripts.systems.Eusan_Nation_System;
 import data.campaign.fleets.Eusan_Nation_PersonalFleetFalke;
 import exerelin.campaign.SectorManager;
+
+import java.awt.*;
 
 public class Eusan_Nation_Plugin extends BaseModPlugin {
     
@@ -44,6 +48,7 @@ public class Eusan_Nation_Plugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() throws Exception{
         super.onApplicationLoad();
+        Global.getSettings().loadFont("graphics/fonts/silver18.fnt");
     }
 
     @Override

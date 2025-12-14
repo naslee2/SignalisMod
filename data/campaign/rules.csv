@@ -150,10 +150,11 @@ FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission
 "#END REPO_BRIEFING",,,,,,
 ,,,,,,
 # MEETING_AGENT,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 10000
-$global.officeryeong_neuralrepositorystart == true","SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""
-ShowPersonVisual
-FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 100
+$global.officeryeong_neuralrepositorystart == true
+$global.eusan_nation_neuralrepo_completed == false","ShowPersonVisual
+FireAll PopulateAgentOptions
+SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
 
 After a few seconds, the line crackles with a response. The comms officer quickly decodes the message and hands you the result.
 
@@ -458,7 +459,8 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
+RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
@@ -600,7 +602,7 @@ OFFICER_YEONG_PENROSE512_HALLWAY,DialogOptionSelected,"$option == officeryeongPe
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
-$player.officeryeongPenrose512_poweron == true",,"The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+$player.officeryeongPenrose512_poweron == true",,,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
 SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
@@ -1642,7 +1644,7 @@ The state is literally called, 'The Sindrian Fuel Company' as if it needed to sp
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_4,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany3",,"""Ever since the Askonia Crisis, the SFC has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
 
 She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.
-","greatRevolutionarySindrianFuelCompany4:Continue",
+","greatRevolutionarySindrianFuelCompany4:End Conversation",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany4","FireAll PopulateGreatRevolutionaryChatOptions",,,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY",,,,,,
 ,,,,,,
@@ -1713,11 +1715,28 @@ THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_ESCAPE_RETURN,DialogOptionSelected,"$opt
 "#END THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,,,,,,
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker WELCOMING",,,"greatRevolutionaryUAFOption:Tell me about the United Aurora Federation",
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_1,DialogOptionSelected,"$option == greatRevolutionaryUAFOption",,,"greatRevolutionaryUAF1:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_2,DialogOptionSelected,"$option == greatRevolutionaryUAF1",,,"greatRevolutionaryUAF2:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_3,DialogOptionSelected,"$option == greatRevolutionaryUAF2",,,"greatRevolutionaryUAF3:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_4,DialogOptionSelected,"$option == greatRevolutionaryUAF3",,,"greatRevolutionaryUAF4:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker WELCOMING
+eusan_nation_hasModId UAF",,,"greatRevolutionaryUAFOption:Tell me about the United Aurora Federation",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_1,DialogOptionSelected,"$option == greatRevolutionaryUAFOption",,"""United Aurora Federation?"" she asked. 
+
+There was a short pause while she collected her thoughts. 
+
+""Yes there is a state called the United Aurora Federation. They mysteriously showed up in the sector a few years ago. Our intelligence agents have been unable to fully account how such a state like the UAF exists without anyone knowing, let alone allowed to become capable of amassing a large fleet without anyone knowing.""","greatRevolutionaryUAF1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_2,DialogOptionSelected,"$option == greatRevolutionaryUAF1",,"""Truth be told, our spies and agents have been rather unsuccessful in finding out good information outside of what is publicly known.""
+
+""If you know your sector history and interstellar maps, you will know that the sector has very few planets that are habitable. The UAF, by some miracle, has established themselves here on this planet in the galactic south direction of the sector. Far away from the core worlds""
+
+The Great Revolutionary shares a map of the sector on the screen. A series of stars with one of them labeled AOI. 
+
+""Long range reconnoissance by our military has determined this planet to be effectively a garden world by sector standards.""","greatRevolutionaryUAF2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_3,DialogOptionSelected,"$option == greatRevolutionaryUAF2",,"""Now the UAF has mostly kept to themselves, with exception of a few skirmishes with pirates and a couple, more serious events with the Hegemony and Tri-Tachyon."" she said. 
+
+""Our information points to a major conflict with Tri-Tachyon sometime in the past while the battles against the Hegemony are more recent. Our agents are attempting to get the data from both powers but all indications there were major shooting conflicts that somehow stayed away from the public's eye.""
+
+""The UAF, for all intents, managed to beat both back. Not an easy feat and certainly points to the UAF being capable of fighting the major players of the sector.""","greatRevolutionaryUAF3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_4,DialogOptionSelected,"$option == greatRevolutionaryUAF3",,"""To make matters worse, intelligence has discovered they have three large capital ships that dwarf any existing captial ship designs used by the Nation and those used by the Core planets. Keeping tabs on those three are using a tremendous amount of resources.""
+
+""On a final note, if you do find yourself fighting against the UAF for whatever reason, remember what I just told you. They can fight well.""","greatRevolutionaryUAF4:End Conversation",
 THE_GREAT_REVOLUTIONARY_CHAT_UAF_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryUAF4","FireAll PopulateGreatRevolutionaryChatOptions",,,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION",,,,,,
 "#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,

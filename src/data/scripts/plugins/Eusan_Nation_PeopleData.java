@@ -127,7 +127,9 @@ public class Eusan_Nation_PeopleData {
             special_agent.setImportance(PersonImportance.HIGH);
             special_agent.addTag(Tags.CONTACT_MILITARY);
             special_agent.setVoice(Voices.SOLDIER);
-            market_vineta.addPerson(special_agent); 
+            market_vineta.getCommDirectory().addPerson(special_agent,1);
+            market_vineta.getCommDirectory().getEntryForPerson(special_agent).setHidden(true);
+            market_vineta.addPerson(special_agent);
             importantPeople_vineta.addPerson(special_agent);
         }
     }
