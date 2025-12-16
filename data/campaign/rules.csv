@@ -593,11 +593,13 @@ OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongP
 The combat shuttles approach the wreckage from a low altitude, but find nothing out of the ordinary.
 
 ","officeryeongPenrose512Landing2:Begin recovery operations.",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2",,"As your team approaches the wreck, the crew begin to set up equipment for entry. Due to the cold environment, the work is slow at first but picks up pace as the base camp begins to take form. 
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2","ShowImageVisual 512_exterior","As your team approaches the wreck, the crew begin to set up equipment for entry. Due to the cold environment, the work is slow at first but picks up pace as the base camp begins to take form. 
 
 What seems to be an eternity, the crew reports its finished setting up and is beginning the entry to the ship.","officeryeongPenrose512enter_penrose1:Continue",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1",,"The recovery crew finds the airlock and surprisingly they are able to open it without use of external equipment. The recovery team leader reports they are able to enter the ship through the main airlock intact and the interior in satisfactory condition.","officeryeongPenrose512enter_penrose2:Enter the Ship",
-OFFICER_YEONG_PENROSE512_HALLWAY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","FireAll PopulateOfficerYeongPenrose512Explore","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1","ShowImageVisual 512_exterior","The recovery crew finds the airlock and surprisingly they are able to open it without use of external equipment. The recovery team leader reports they are able to enter the ship through the main airlock intact and the interior in satisfactory condition.","officeryeongPenrose512enter_penrose2:Enter the Ship",
+OFFICER_YEONG_PENROSE512_ENTRY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenrose512Explore
+","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
@@ -605,13 +607,13 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explo
 $player.officeryeongPenrose512_poweron == true",,,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","You and your crew enter the ship.",,
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a,PopulateOfficerYeongPenrose512ForwardSectionExplore,,,,"officeryeongPenrose512_forwardDecks_explore2a:Look around the cockpit.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
@@ -1379,6 +1381,47 @@ The replika gives you a glowering look. You are not welcome by the looks of it."
 ALYSSA_EXIT_OPTION,PopulateAlyssaBarOptions,,,,"exitAlyssa_bar:Exit the Bar",
 "#END ALYSSA_EXIT",,,,,,
 "#END ALYSSA",,,,,,
+,,,,,,
+# THE_DAUGHTER,,,,,,
+,,,,,,
+# THE_DAUGHTER_GREETING,,,,,,
+THE_DAUGHTER_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""",,,,
+THE_DAUGHTER_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,,,,,
+THE_DAUGHTER_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""",,,,
+THE_DAUGHTER_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,,,,,
+THE_DAUGHTER_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,,,,,
+THE_DAUGHTER_GREETING_FRIENDLY,PickGreeting,,,,,
+THE_DAUGHTER_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,,,,,
+THE_DAUGHTER_GREETING_NEUTRAL,PickGreeting,,,,,
+THE_DAUGHTER_GREETING_HOSTILE,PickGreeting,,,,,
+"#END THE_DAUGHTER_GREETING",,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT,,,,,,
+"#END THE_DAUGHTER_CHAT",,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT_OPTIONS,,,,,,
+THE_DAUGHTER_CHAT_OPTIONS,PopulateOptions,"$id == eusan_nation_the_daughter score: 100",,,"theDaughter:Chat with the Daughter",
+THE_DAUGHTER_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == theDaughter","FireAll PopulatetheDaughterChatOptions","""What else do you wish to know?""
+OR
+""I like having conversations.""
+OR
+""You like hearing my voice don't you.""
+OR
+""I most certainly can!""
+OR
+""Conversation! What should we speak about?""
+OR
+""Mmm hm. What do you need to know?""",,
+THE_DAUGHTER_CHAT_ESCAPE_OPTIONS,PopulatetheDaughterChatOptions,,"SetShortcut theDaughterChatEscape ""ESCAPE""",,"theDaughterChatEscape:""I got to go now...""",
+THE_DAUGHTER_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == theDaughterChatEscape","FireAll PopulateOptions","""You will be back. I am sure of it""
+OR
+""Good bye.""
+OR
+""Have fun wherever you go.""",,
+"#END THE_DAUGHTER_CHAT_OPTIONS",,,,,,
+"#END THE_DAUGHTER",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY,,,,,,
 ,,,,,,
