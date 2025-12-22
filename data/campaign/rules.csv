@@ -1430,7 +1430,17 @@ $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
 $faction.friendlyToPlayer score:100","ShowPersonVisual
-FireAll PopulateOptions",,,
+FireAll PopulateOptions","""Hello, how are you?""
+OR
+""My my, come back again?""
+OR
+""You are back! How wonderful. Perhaps things will be done today.""
+OR
+""Hi...how are you?""
+OR
+""Do you prefer large or small? Wait don't answer that...how are you today?""
+OR
+""Oh comrade, whenever I grace your communications channel, remember how much of an honor it is.""",,
 THE_DAUGHTER_GREETING_FRIENDLY,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metDaughter == true
@@ -1442,7 +1452,19 @@ $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
 $faction.neutralToPlayer score:100","ShowPersonVisual
-FireAll PopulateOptions",,,
+FireAll PopulateOptions","""Yes?""
+OR
+""What do you want?""
+OR
+""You come all this way to talk to me? Don't you have others to bother?""
+OR
+""Tell me, do you like wasting my time?""
+OR
+""You should consider this a great honor that I even answer your comms request.""
+OR
+""The Nation really hands out commissions out like candy I see.""
+OR
+""I really should stop answering your communications request...""",,
 THE_DAUGHTER_GREETING_NEUTRAL,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metDaughter == true
@@ -1458,10 +1480,14 @@ OR
 ""Stop talking to me! Leave!""
 OR
 ""Go away! Go away! BEGONE.""
-",,"OR
-There is no response
 OR
-The comm channel refuses to connect."
+There is no response.
+OR
+The communications link was refused.
+OR
+Communications link was not accepted.
+OR
+The comm channel refuses to connect.",,
 "#END THE_DAUGHTER_GREETING",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT,,,,,,
@@ -1612,9 +1638,7 @@ There is no response.
 OR
 The communications link was refused.
 OR
-Communications link was not accepted.
-OR
-LINK REJECTED","cutCommLink:Cut the comm link",
+Communications link was not accepted.","cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
