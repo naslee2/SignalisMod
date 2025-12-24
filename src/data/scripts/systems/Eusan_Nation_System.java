@@ -28,7 +28,7 @@ public class Eusan_Nation_System {
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initStar( Unique starId, planet type from planets.json, radius, corona radius from star edge)
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
 
-        system.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY,"music_campaign_alpha_site");
+        system.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY,"electrictrojan_system_ambient");
         
         //Stable Location 1, 2 and 3
         SectorEntityToken relay_eusan = system.addCustomEntity("signalisStar_loc1", "Comm Relay 3NO", "comm_relay", "eusan_nation"); //3NO means 3 Note Oddity Number Stations
