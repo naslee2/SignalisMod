@@ -22,3 +22,4 @@ Requires LazyLib, and MagicLib. Nexerlin optional. Get them:
 - Thanks to phi_zeta_iota and darkvion for letting me use/copy their flag concepts for the Nation and related states.
 - Terraformed Mars as Kitezh Planetary Textures by Daniel Michel aka Dizzy Crow. From OpenGameArt.org
 - Jupiter and Saturn Textures from https://www.solarsystemscope.com/
+- computer-humming-236384 by Soul_Serenity_Sounds from https://pixabay.com

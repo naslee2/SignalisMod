@@ -80,5 +80,9 @@
                 "randomStart": true
             }
         ]
-    }
+    },
+    #must be mono or one channel
+    "penrose_512_computersound":[
+        {"file": "sounds/sfx/computer-humming-236384.ogg","pitch": 1,"volume": 0.5},
+    ],
 }

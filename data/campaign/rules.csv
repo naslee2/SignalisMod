@@ -1413,13 +1413,18 @@ AddText ""A series of beeps and high pitched noises your communications request 
 AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
 AddText """"Ah, hello there. A traveller has come to speak to me. How does one like you come to visit our humble Nation?""""",,,
 THE_DAUGHTER_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$faction.id == ""eusan_nation""","$player.metDaughter = true
+$faction.id == ""eusan_nation""
+$id == eusan_nation_the_daughter score: 100
+$player.metDaughter == false","$player.metDaughter = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
 AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
 AddText """"Ah, hello there. An outsider has come to speak to me. How did you manage to come to this place? Is it because you wish to help?""""",,,
-THE_DAUGHTER_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""","$player.metDaughter = true
+THE_DAUGHTER_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_the_daughter score: 100
+$player.metDaughter == false","$player.metDaughter = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
@@ -1446,7 +1451,15 @@ $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
 $faction.friendlyToPlayer score:100","ShowPersonVisual
-FireAll PopulateOptions",,,
+FireAll PopulateOptions","""Ah your back. What can I do for you, traveller?""
+OR
+""Welcome back.""
+OR
+""Your back! How was your travels?""
+OR
+""Hello, traveller.""
+OR
+""Ah, you returned. What do you need from me?""",,
 THE_DAUGHTER_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metDaughter == true
@@ -1487,7 +1500,7 @@ The communications link was refused.
 OR
 Communications link was not accepted.
 OR
-The comm channel refuses to connect.",,
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_DAUGHTER_GREETING",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT,,,,,,
@@ -1638,7 +1651,9 @@ There is no response.
 OR
 The communications link was refused.
 OR
-Communications link was not accepted.","cutCommLink:Cut the comm link",
+Communications link was not accepted.
+OR
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT,,,,,,

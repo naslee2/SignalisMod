@@ -12,6 +12,7 @@ import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc.Token;
+import org.lwjgl.util.vector.Vector2f;
 
 import javax.tools.Tool;
 
@@ -64,6 +65,8 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
                 text.addPara("//////////////////////////////////////", 5f).setAlignment(Alignment.MID);
                 text.addPara(headerLine, 5f).setAlignment(Alignment.MID);
                 dialog.getTextPanel().addTooltip();
+
+                Global.getSoundPlayer().playSound("penrose_512_computersound", 1, 1, Global.getSoundPlayer().getListenerPos(), new Vector2f());
                 break;
             case "addSystemStatusLockdown":
                 TooltipMakerAPI text2b = dialog.getTextPanel().beginTooltip();
@@ -82,6 +85,8 @@ public class eusan_nation_penrose512Quest_rulecmd extends BaseCommandPlugin{
 
                 text2c.addPara("Your briefing packet mentioned about a security keycard for Penrose vessels. It would take too much time to decrypt the security system. Recovering the keycard would also unlock many of the Penrose-512's compartments.");
                 text2c.addPara("Lets hope it wasn't destroyed in the landing...");
+
+                Global.getSoundPlayer().playSound("penrose_512_computersound", 1, 1, Global.getSoundPlayer().getListenerPos(), new Vector2f());
                 break;
             default:
                 dialog.getTextPanel().addPara("Uh oh an error has occured!");
