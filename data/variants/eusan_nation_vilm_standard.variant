@@ -3,11 +3,13 @@
   "hullId": "eusan_nation_vilm",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 0,
+  "fluxCapacitors": 5,
+  "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "civgrade"
+  ],
   "weaponGroups": [
     {
       "autofire": false,
