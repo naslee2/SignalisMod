@@ -108,11 +108,15 @@ AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeon
 AddText """"Hello this is Officer Ariane Yeong speaking. What do you want?""""",,,
 OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
 $id == ""eusan_nation_officer_yeong"" score: 100
-",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
+",,"CONNECTION REFUSED
 OR
-COMMUNICATIONS TERMINATED. IF YOU BELIEVE THIS TO BE AN ERROR, PLEASE SEE CENTRAL AUTHORITY.
+There is no response.
 OR
-ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
+The communications link was refused.
+OR
+Communications link was not accepted.
+OR
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END OFFICER_YEONG_GREETING",,,,,,
 ,,,,,,
 # OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
@@ -1435,7 +1439,7 @@ $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
 $faction.friendlyToPlayer score:100","ShowPersonVisual
-FireAll PopulateOptions","""Hello, how are you?""
+FireAll PopulateOptions","""Hello Captain $playerName, how are you?""
 OR
 ""My my, come back again?""
 OR
@@ -1453,7 +1457,7 @@ $id == eusan_nation_the_daughter score: 100
 $faction.friendlyToPlayer score:100","ShowPersonVisual
 FireAll PopulateOptions","""Ah your back. What can I do for you, traveller?""
 OR
-""Welcome back.""
+""Welcome back, Captain $playerName.""
 OR
 ""Your back! How was your travels?""
 OR
@@ -1471,7 +1475,7 @@ OR
 OR
 ""You come all this way to talk to me? Don't you have others to bother?""
 OR
-""Tell me, do you like wasting my time?""
+""Tell me Captain $playerName, do you like wasting my time?""
 OR
 ""You should consider this a great honor that I even answer your comms request.""
 OR
@@ -1483,7 +1487,17 @@ $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
 $faction.neutralToPlayer score:100","ShowPersonVisual
-FireAll PopulateOptions",,,
+FireAll PopulateOptions","""You again.""
+OR
+""Remember, every move you make, I will hear of it.""
+OR
+""Yes? What is it? My time isn't unlimited for people like you.""
+OR
+""Back again? What is it?""
+OR
+""Hello there Captain $playerName...""
+OR
+""What do you want?""",,
 THE_DAUGHTER_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_the_daughter score: 100
 $faction.isHostile score:100","ShowPersonVisual","""Leave this place or I will call security to track you down and throw you into prison!""
@@ -1582,7 +1596,7 @@ OR
 OR
 ""The Nation welcomes you, comrade.""
 OR
-""Welcome back, Comrade. How goes your travels?""
+""Welcome back, Captain $playerName. How goes your travels?""
 OR
 ""You should tell me more about your travels one day.""
 OR
@@ -1594,7 +1608,7 @@ $faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
 $faction.friendlyToPlayer score:1000
 $player.metGreatRev == true","ShowPersonVisual
-FireAll PopulateOptions","""Hello traveller, how are you today.""
+FireAll PopulateOptions","""Hello Captain $playerName, how are you today.""
 OR
 ""Traveller, you should consider joining the Nation. The benefits are...suitable for you.""
 OR
@@ -1616,7 +1630,7 @@ FireAll PopulateOptions","""Doing enough to scrape by, I see.""
 OR
 ""I was told you were in the system. What do you want.""
 OR
-""Traveller, your standing with the Nation could use some improvement. Take it as an hint.""
+""Captain $playerName, your standing with the Nation could use some improvement. Take it as an hint.""
 OR
 ""This better be good.""
 OR
@@ -1640,7 +1654,9 @@ OR
 OR
 ""It would be helpful if you make yourself useful and work on helping the Nation.""
 OR
-""Make it quick you are taking up precious time.""",,"$player.accessGrantedGreatRev ==true"
+""Make it quick you are taking up precious time.""
+OR
+""Oh its you $playerName.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $faction.isHostile score:100","ShowPersonVisual","""Begone""
@@ -1666,7 +1682,7 @@ THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == great
 Her eyes dart around your face. There is a small pause and she opened her desk and pulled out a small tablet computer. She gives it a few taps and a series of words starts populating the screen.
 
 ""We have work. Although we have our own people, we can always use the help.""","greatRevolutionaryQuestGive1:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == greatRevolutionaryQuestGive1",,"""Now, $playerName. I won't torture you with details on your duties as you either know about them already or just impatient.""
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == greatRevolutionaryQuestGive1",,"""Now, Captain $playerName. I won't torture you with details on your duties as you either know about them already or just impatient.""
 
 ""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2a:Accept
 greatRevolutionaryQuestGive2b:Reconsider",
