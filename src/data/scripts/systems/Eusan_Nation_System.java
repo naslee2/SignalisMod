@@ -24,6 +24,7 @@ public class Eusan_Nation_System {
         StarSystemAPI system = sector.createStarSystem("Alatyr");
         system.getLocation().set(-13640, 8415);
         system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
+        float tarrif_rate = 0.15f;
     
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initStar( Unique starId, planet type from planets.json, radius, corona radius from star edge)
         system.addCorona(signalisStar, 250f, 5f, 2f, 2f); //addCorona(SectorEntityToken star, float extraRadius, float windBurnLevel, float flareProbability, float crLossMult)
@@ -72,6 +73,7 @@ public class Eusan_Nation_System {
         buyan_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         buyan_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         buyan_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        buyan_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(buyan_market, false);
 
         //System Gate
@@ -115,6 +117,7 @@ public class Eusan_Nation_System {
         vineta_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         vineta_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         vineta_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        vineta_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(vineta_market, false);
 
         PlanetAPI shattered_moon = system.addPlanet("eusan_nation_shattered_moon", vineta, "Shattered Moon", "barren", 270f, 90f, 750f, 51f);
@@ -177,6 +180,7 @@ public class Eusan_Nation_System {
         kitezh_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         kitezh_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         kitezh_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        kitezh_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(kitezh_market, false);
 
         //-AsteroidBelt- //starsector-core\graphics\planets
@@ -229,6 +233,7 @@ public class Eusan_Nation_System {
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         rotfront_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         rotfront_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        rotfront_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(rotfront_market, true);
 
         system.addRingBand(gas_giant1, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 1000f, 300f);
@@ -278,6 +283,7 @@ public class Eusan_Nation_System {
         heimat_market.addSubmarket(Submarkets.GENERIC_MILITARY);
         heimat_market.addSubmarket("eusan_nation_volksmarine_market");
         heimat_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        heimat_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(heimat_market, true);
 
         system.addRingBand(gas_giant2, "misc", "rings_special0", 256f, 0, Color.white, 256f, 500f, 60f);
@@ -315,6 +321,7 @@ public class Eusan_Nation_System {
         leng_market.addSubmarket(Submarkets.SUBMARKET_BLACK);
         leng_market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
         leng_market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+        leng_market.getTariff().setBaseValue(tarrif_rate);
         sector.getEconomy().addMarket(leng_market, true);
 
         cleanup(system); 
