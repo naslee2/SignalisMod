@@ -144,7 +144,7 @@ OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == office
 She hands you an envelope before you leave. ""A paper copy of the code phrase. All the less sensitive information has been uploaded to your fleet.""","officeryeongNeuralRepBriefing4:""Got it."" 
 ",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider:""I changed my mind.""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider:""I changed my mind...""",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOfficerYeongChatOptions","""Alright then. Come back to me when you are ready""
 or
 ""Ok sure. Let me know if you want to reconsider.""",,
@@ -246,7 +246,7 @@ Call $global.eusan_nation_penroseRecovery1_ref showMap ""Destination: $eusan_nat
 
 ""Go there, find the black box mission recorder, and lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3:Understood",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
 ShowPersonVisual
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know""
@@ -254,7 +254,7 @@ OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Ok sure. If you wish to think it through, go ahead. I'll be waiting here once you get yourself together.""",,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroseRecovery1_start = true
 ShowPersonVisual
 AcceptMission
@@ -363,14 +363,14 @@ Call $global.eusan_nation_penroseRecovery2_ref showMap ""Destination: $eusan_nat
 
 ""That is all. Burn bright."" She says the phrase more naturally this time, as if she had practiced it.","officeryeongPenroseRecovery2_briefing3:Time for me to go to work then...",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing3","FireAll PopulatePenroseRecovery2StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Reconsider","AbortMission
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Oke. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
 ShowPersonVisual
 AcceptMission
@@ -564,14 +564,14 @@ Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_pe
 
 ""The target is $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system. and we believe the signal to be from $eusan_nation_penrose512_planetName. Recover everything. The whole ship if you can. And please, record as much of the process as possible.""","officeryeongPenroseRecovery512_briefing6:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
-OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:I accept the mission.",
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penrose512_start = true
 AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 5
 ShowPersonVisual
@@ -858,7 +858,8 @@ OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1"
 ""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
 
 ""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:End Conversation",
-OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
+OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions
+ShowPersonVisual",,,
 "#END OFFICER_YEONG_CHAT_LENG",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_SMOKING,,,,,,
@@ -873,7 +874,8 @@ OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == office
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
 OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
-OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
+OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions
+ShowPersonVisual","""Sure. What do you want to discuss?""
 OR
 ""I can spare some time to talk for a bit. What do you want to talk about?""
 OR
@@ -1041,8 +1043,7 @@ $menuState = fleetConvMain 0
 FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Flotilla. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
-AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link","cutCommLink:Cut the comm link
-$menuState = fleetConvMain 0"
+AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link",
 ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
 $player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
@@ -1518,6 +1519,34 @@ The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_DAUGHTER_GREETING",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT,,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION,,,,,,
+THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION,PopulatetheDaughterChatOptions,"$id == eusan_nation_the_daughter score: 100
+$player.askedDaughterForWork == false",,,"theDaughterQuestGiveOption:Ask the Daughter if she needs help with anything.",
+THE_DAUGHTER_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == theDaughterQuestGiveOption",,"""Oh yes I do need help!""
+
+She moves closer to you, beaming with excitement. She gives you a small wink then moves back. She pulls a small, thick looking tablet device that looks like one of those Nation built knockoffs of the Tri-Pad. 
+
+""I need things done. Usually I don't keep a list, I let my assistants do that sort of thing. However I do have some reminders about certain events and situations that need resolving.""","theDaughterQuestGive1:Continue",
+THE_DAUGHTER_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == theDaughterQuestGive1",,"""Oh, $playerName. You must know that by helping me, you will get your hands dirty. So think long and hard on your answer.""
+
+She gives a wide grin and a look that can pierce hearts at you. 
+""Now choose.""","theDaughterQuestGive2a:Accept
+theDaughterQuestGive2b:Reconsider",
+THE_DAUGHTER_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == theDaughterQuestGive2a","AdjustRepActivePerson WELCOMING 5
+AddPotentialContact eusan_nation_the_daughter
+$player.askedDaughterForWork = true","You accept the offer to work for the Daughter.
+
+She gives you smile. A rather devious looking one.
+
+""I knew I can count on you. Remember, your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
+THE_DAUGHTER_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == theDaughterQuestGive2b",,"You tell her you will think it over.
+
+She tilts her head and gives you a slight smile. 
+
+""Of course you will. Your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
+THE_DAUGHTER_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == theDaughterQuestGiveEND","FireAll PopulatetheDaughterChatOptions",,,
+"#END THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION",,,,,,
 "#END THE_DAUGHTER_CHAT",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT_OPTIONS,,,,,,
@@ -1676,7 +1705,7 @@ The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,,,,,,
 THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,PopulateGreatRevolutionaryChatOptions,"$id == eusan_nation_great_revolutionary score: 100
-$player.askedGreatRevolutionaryForWork == false",,,"greatRevolutionaryQuestGiveOption:Ask the Great Revolutionary if she needs help.",
+$player.askedGreatRevolutionaryForWork == false",,,"greatRevolutionaryQuestGiveOption:Ask the Great Revolutionary if she needs jobs done.",
 THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == greatRevolutionaryQuestGiveOption",,"""Help?"" she asked. 
 
 Her eyes dart around your face. There is a small pause and she opened her desk and pulled out a small tablet computer. She gives it a few taps and a series of words starts populating the screen.
@@ -1896,13 +1925,13 @@ THE_GREAT_REVOLUTIONARY_CHAT_UAF_2,DialogOptionSelected,"$option == greatRevolut
 
 The Great Revolutionary shares a map of the sector on the screen. A series of stars with one of them labeled AOI. 
 
-""Long range reconnoissance by our military has determined this planet to be effectively a garden world by sector standards.""","greatRevolutionaryUAF2:Continue",
+""Long range reconnaissance by our military has determined this planet to be effectively a garden world by sector standards. What is interesting is that Domain-era maps do not show this world like someone omitted it or erased it. So its a mystery.""","greatRevolutionaryUAF2:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_UAF_3,DialogOptionSelected,"$option == greatRevolutionaryUAF2",,"""Now the UAF has mostly kept to themselves, with exception of a few skirmishes with pirates and a couple, more serious events with the Hegemony and Tri-Tachyon."" she said. 
 
 ""Our information points to a major conflict with Tri-Tachyon sometime in the past while the battles against the Hegemony are more recent. Our agents are attempting to get the data from both powers but all indications there were major shooting conflicts that somehow stayed away from the public's eye.""
 
-""The UAF, for all intents, managed to beat both back. Not an easy feat and certainly points to the UAF being capable of fighting the major players of the sector.""","greatRevolutionaryUAF3:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_UAF_4,DialogOptionSelected,"$option == greatRevolutionaryUAF3",,"""To make matters worse, intelligence has discovered they have three large capital ships that dwarf any existing captial ship designs used by the Nation and those used by the Core planets. Keeping tabs on those three are using a tremendous amount of resources.""
+""The UAF, for all intents, managed to beat both powers back. Not an easy feat and certainly points to the UAF being capable of fighting the major players of the sector.""","greatRevolutionaryUAF3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_4,DialogOptionSelected,"$option == greatRevolutionaryUAF3",,"""To make matters worse, intelligence has discovered they have three large capital ships that dwarf any existing capital ship designs used by the Nation and those used by the Core planets. Keeping tabs on those three are using a tremendous amount of resources.""
 
 ""On a final note, if you do find yourself fighting against the UAF for whatever reason, remember what I just told you. They can fight well.""","greatRevolutionaryUAF4:End Conversation",
 THE_GREAT_REVOLUTIONARY_CHAT_UAF_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryUAF4","FireAll PopulateGreatRevolutionaryChatOptions",,,
