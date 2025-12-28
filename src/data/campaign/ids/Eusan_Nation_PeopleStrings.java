@@ -22,9 +22,9 @@ public class Eusan_Nation_PeopleStrings {
 //    public final static String HEIMAT_KOLIBRI_LASTNAME = "KLBR-HC1-01";
 
     //ROTFRONT NPC
-    public final static String MARLIS = "eusan_nation_marlis";
-    public final static String MARLIS_FIRST_NAME = "Marlis";
-    public final static String MARLIS_LAST_NAME = "EULR-FV-R2652";
+    public final static String ALYSSA = "eusan_nation_alyssa";
+    public final static String ALYSSA_FIRST_NAME = "Alyssa";
+    public final static String ALYSSA_LAST_NAME = "EULR-FV-R2511";
     public final static String ROTFRONT_FLEETADMIRAL = "eusan_nation_rotfront_admiral";
 
     //LENG NPC

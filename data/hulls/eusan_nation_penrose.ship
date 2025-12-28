@@ -14,6 +14,7 @@
   "viewOffset": 0,
   "builtInMods": [
         "eusan_nation_engineering_design",
+        "surveying_equipment"
   ],
   "builtInWeapons": {
     "WS0001": "blinker_red",

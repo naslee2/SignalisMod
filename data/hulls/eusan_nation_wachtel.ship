@@ -14,8 +14,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_engineering_design",
-    "hiressensors",
-    "surveying_equipment"
+    "hiressensors"
   ],
   "weaponSlots": [
     {

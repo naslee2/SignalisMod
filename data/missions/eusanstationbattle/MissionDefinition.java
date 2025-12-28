@@ -17,9 +17,18 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 			ships.add(variant);
 		}
 	}
+    final static String selectStation(){
+        final String[] stations ={
+                "eusan_nation_station2_standard",
+                "eusan_nation_station3_standard"
+        };
+        String stationSelect = stations[(int) (Math.random() * (float) stations.length)];
+        return stationSelect;
+    }
 	
 	private void generateFleet(int maxFP, FleetSide side, List ships, MissionDefinitionAPI api) {
 		int currFP = 0;
+        String[] array = new String[2];
 		
 		if (side == FleetSide.PLAYER) {
 			String [] choices = {
@@ -37,7 +46,6 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 			api.addToFleet(side, flagship, FleetMemberType.SHIP, true);
 			currFP += api.getFleetPointCost(flagship);
 		}
-		
 		while (true) {
 			int index = (int)(Math.random() * ships.size());
 			String id = (String) ships.get(index);
@@ -139,7 +147,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// Set up the fleets
 		generateFleet(125 + (int)((float) Math.random() * 100), FleetSide.PLAYER, ships, api);
-        api.addToFleet(FleetSide.ENEMY, "eusan_nation_station3_standard", FleetMemberType.SHIP, false);
+        String stationSelection = selectStation();
+        api.addToFleet(FleetSide.ENEMY, stationSelection, FleetMemberType.SHIP, false);
 
 		// Set up the map.
 		float width = 24000f;

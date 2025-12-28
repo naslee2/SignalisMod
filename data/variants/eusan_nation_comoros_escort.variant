@@ -1,0 +1,68 @@
+{
+  "variantId": "eusan_nation_comoros_escort",
+  "hullId": "eusan_nation_comoros",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 25,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_kompakt",
+        "WS0002": "eusan_nation_kompakt"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "eusan_nation_galdae_medium",
+        "WS0011": "eusan_nation_galdae_medium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "eusan_nation_tulip",
+        "WS0004": "eusan_nation_tulip"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_dangpa",
+        "WS0006": "eusan_nation_dangpa",
+        "WS0007": "eusan_nation_dangpa",
+        "WS0008": "eusan_nation_dangpa",
+        "WS0009": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

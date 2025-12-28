@@ -1,13 +1,14 @@
 name,gender,usage,category
-Ai,f,f,eusan_nation_cn_names
+#Ai,f,f,eusan_nation_cn_names
 Bai,,l,eusan_nation_cn_names
 Cai,,l,eusan_nation_cn_names
 Cao,,l,eusan_nation_cn_names
 Chang,,l,eusan_nation_cn_names
-Chao,m,f,eusan_nation_cn_names
+#Chao,m,f,eusan_nation_cn_names
 Chen,,l,eusan_nation_cn_names
-Cheng,m,"f, l",eusan_nation_cn_names
-Chun,f,f,eusan_nation_cn_names
+#Cheng,m,"f, l",eusan_nation_cn_names
+Cheng,m,"l",eusan_nation_cn_names
+#Chun,f,f,eusan_nation_cn_names
 Cui,,l,eusan_nation_cn_names
 Dai,,l,eusan_nation_cn_names
 Deng,,l,eusan_nation_cn_names
@@ -16,28 +17,33 @@ Dong,,l,eusan_nation_cn_names
 Du,,l,eusan_nation_cn_names
 Duan,,l,eusan_nation_cn_names
 Fan,,l,eusan_nation_cn_names
-Fang,f,"f, l",eusan_nation_cn_names
+#Fang,f,"f, l",eusan_nation_cn_names
+Fang,f,"l",eusan_nation_cn_names
 Fen,f,f,eusan_nation_cn_names
 Feng,,l,eusan_nation_cn_names
-Fu,m,"f, l",eusan_nation_cn_names
+#Fu,m,"f, l",eusan_nation_cn_names
+Fu,m,"l",eusan_nation_cn_names
 Gao,,l,eusan_nation_cn_names
 Gong,,l,eusan_nation_cn_names
 Gu,,l,eusan_nation_cn_names
-Guo,m,"f, l",eusan_nation_cn_names
+#Guo,m,"f, l",eusan_nation_cn_names
+Guo,m,"l",eusan_nation_cn_names
 Han,,l,eusan_nation_cn_names
-Hao,m,"f, l",eusan_nation_cn_names
+#Hao,m,"l",eusan_nation_cn_names
+Hao,m,"l",eusan_nation_cn_names
 He,,l,eusan_nation_cn_names
 Hou,,l,eusan_nation_cn_names
 Hu,,l,eusan_nation_cn_names
-Hua,f,f,eusan_nation_cn_names
+#Hua,f,f,eusan_nation_cn_names
 Huang,,l,eusan_nation_cn_names
 Jia,,l,eusan_nation_cn_names
 Jiang,,l,eusan_nation_cn_names
 Jin,,l,eusan_nation_cn_names
-Jing,f,f,eusan_nation_cn_names
+#Jing,f,f,eusan_nation_cn_names
 Kong,,l,eusan_nation_cn_names
 Lai,,l,eusan_nation_cn_names
-Li,f,"f, l",eusan_nation_cn_names
+#Li,f,"f, l",eusan_nation_cn_names
+Li,f,"l",eusan_nation_cn_names
 Liang,,l,eusan_nation_cn_names
 Lin,,l,eusan_nation_cn_names
 Liu,,l,eusan_nation_cn_names
@@ -48,12 +54,12 @@ Ma,,l,eusan_nation_cn_names
 Mao,,l,eusan_nation_cn_names
 Mei,f,f,eusan_nation_cn_names
 Meng,,l,eusan_nation_cn_names
-Min,f,f,eusan_nation_cn_names
-Ming,m,f,eusan_nation_cn_names
+#Min,f,f,eusan_nation_cn_names
+#Ming,m,f,eusan_nation_cn_names
 Pan,,l,eusan_nation_cn_names
 Peng,,l,eusan_nation_cn_names
 Qian,,l,eusan_nation_cn_names
-Qiang,m,f,eusan_nation_cn_names
+#Qiang,m,f,eusan_nation_cn_names
 Qiao,,l,eusan_nation_cn_names
 Qin,,l,eusan_nation_cn_names
 Qiu,,l,eusan_nation_cn_names
@@ -70,18 +76,20 @@ Tang,,l,eusan_nation_cn_names
 Tian,,l,eusan_nation_cn_names
 Wan,,l,eusan_nation_cn_names
 Wang,,l,eusan_nation_cn_names
-Wei,m,"f, l",eusan_nation_cn_names
-Wen,m,"f, l",eusan_nation_cn_names
+#Wei,m,"f, l",eusan_nation_cn_names
+Wei,m,"l",eusan_nation_cn_names
+#Wen,m,"f, l",eusan_nation_cn_names
+Wen,m,"l",eusan_nation_cn_names
 Wu,,l,eusan_nation_cn_names
 Xia,,l,eusan_nation_cn_names
-Xiang,f,f,eusan_nation_cn_names
+#Xiang,f,f,eusan_nation_cn_names
 Xiao,,l,eusan_nation_cn_names
 Xie,,l,eusan_nation_cn_names
 Xiong,,l,eusan_nation_cn_names
-Xiu,f,f,eusan_nation_cn_names
+#Xiu,f,f,eusan_nation_cn_names
 Xu,,l,eusan_nation_cn_names
 Xue,,l,eusan_nation_cn_names
-Ya,f,f,eusan_nation_cn_names
+#Ya,f,f,eusan_nation_cn_names
 Yan,f,"f, l",eusan_nation_cn_names
 Yang,,l,eusan_nation_cn_names
 Yao,,l,eusan_nation_cn_names
@@ -118,7 +126,8 @@ Ngo,,l,eusan_nation_vn_names
 Nguyen,,l,eusan_nation_vn_names
 Pham,,l,eusan_nation_vn_names
 Phan,,l,eusan_nation_vn_names
-Phi,m,"f, l",eusan_nation_vn_names
+#Phi,m,"f, l",eusan_nation_vn_names
+Phi,m,"l",eusan_nation_vn_names
 Phong,,l,eusan_nation_vn_names
 Phu,,l,eusan_nation_vn_names
 Quan,,l,eusan_nation_vn_names
@@ -159,43 +168,42 @@ Yeong,,l,eusan_nation_kr_names
 Yoo,,l,eusan_nation_kr_names
 Yoon,,l,eusan_nation_kr_names
 Yun,,l,eusan_nation_kr_names
-Baek-hyun,m,f,eusan_nation_kr_names
-Byung-joon,m,f,eusan_nation_kr_names
-Do-hyun,m,f,eusan_nation_kr_names
-Seung-ho,m,f,eusan_nation_kr_names
-Hyun-woo,m,f,eusan_nation_kr_names
-Hyunbin,m,f,eusan_nation_kr_names
-Joon,m,f,eusan_nation_kr_names
-Ki-nam,m,f,eusan_nation_kr_names
-Min-ho,m,f,eusan_nation_kr_names
-Seo-joon,m,f,eusan_nation_kr_names
-Seok,m,f,eusan_nation_kr_names
-Jiseok,m,f,eusan_nation_kr_names
-Ji-woo,m,f,eusan_nation_kr_names
-Joo-hwan,m,f,eusan_nation_kr_names
-Jun-Ho,m,f,eusan_nation_kr_names
-Jun-seok,m,f,eusan_nation_kr_names
-Joon-tae,m,f,eusan_nation_kr_names
-Tae-hyun,m,f,eusan_nation_kr_names
-Tae-yong,m,f,eusan_nation_kr_names
-Young-hwan,m,f,eusan_nation_kr_names
-Tae-hyung,m,f,eusan_nation_kr_names
-Byeol,f,f,eusan_nation_kr_names
-Cho-Hee,f,f,eusan_nation_kr_names
-Da-Eun,f,f,eusan_nation_kr_names
+#Baek-hyun,m,f,eusan_nation_kr_names
+#Byung-joon,m,f,eusan_nation_kr_names
+#Do-hyun,m,f,eusan_nation_kr_names
+#Seung-ho,m,f,eusan_nation_kr_names
+#Hyun-woo,m,f,eusan_nation_kr_names
+#Hyunbin,m,f,eusan_nation_kr_names
+#Joon,m,f,eusan_nation_kr_names
+#Ki-nam,m,f,eusan_nation_kr_names
+#Min-ho,m,f,eusan_nation_kr_names
+#Seo-joon,m,f,eusan_nation_kr_names
+#Seok,m,f,eusan_nation_kr_names
+#Jiseok,m,f,eusan_nation_kr_names
+#Ji-woo,m,f,eusan_nation_kr_names
+#Joo-hwan,m,f,eusan_nation_kr_names
+#Jun-Ho,m,f,eusan_nation_kr_names
+#Jun-seok,m,f,eusan_nation_kr_names
+#Joon-tae,m,f,eusan_nation_kr_names
+#Tae-hyun,m,f,eusan_nation_kr_names
+#Tae-yong,m,f,eusan_nation_kr_names
+#Young-hwan,m,f,eusan_nation_kr_names
+#Tae-hyung,m,f,eusan_nation_kr_names
+#Byeol,f,f,eusan_nation_kr_names
+#Cho-Hee,f,f,eusan_nation_kr_names
+#Da-Eun,f,f,eusan_nation_kr_names
 Hana,f,f,eusan_nation_kr_names
 Haru,f,f,eusan_nation_kr_names
-Hee-Jin,f,f,eusan_nation_kr_names
-Hye-Jin,f,f,eusan_nation_kr_names
-Iseul,f,f,eusan_nation_kr_names
-Jang-Mi,f,f,eusan_nation_kr_names
-Ji-Hye,f,f,eusan_nation_kr_names
-Ji-yun,f,f,eusan_nation_kr_names
+#Hee-Jin,f,f,eusan_nation_kr_names
+#Hye-Jin,f,f,eusan_nation_kr_names
+#Iseul,f,f,eusan_nation_kr_names
+#Jang-Mi,f,f,eusan_nation_kr_names
+#Ji-Hye,f,f,eusan_nation_kr_names
+#Ji-yun,f,f,eusan_nation_kr_names
 Sena,f,f,eusan_nation_kr_names
-Seol,f,f,eusan_nation_kr_names
-So-Hee,f,f,eusan_nation_kr_names
-Ye-eun,f,f,eusan_nation_kr_names
-Ye-rin,f,f,eusan_nation_kr_names
-Yun-Seo,f,f,eusan_nation_kr_names
+#So-Hee,f,f,eusan_nation_kr_names
+#Ye-eun,f,f,eusan_nation_kr_names
+#Ye-rin,f,f,eusan_nation_kr_names
+#Yun-Seo,f,f,eusan_nation_kr_names
 Yuna,f,f,eusan_nation_kr_names
 

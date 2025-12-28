@@ -12,8 +12,9 @@
   "shieldRadius": 207.5,
   "viewOffset": 0,
   "builtInMods": [
-        "eusan_nation_engineering_design",
-      ],
+    "eusan_nation_engineering_design",
+    "civgrade"
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",

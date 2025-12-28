@@ -13,7 +13,7 @@
   "shieldRadius": 82,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
+    "eusan_nation_engineering_design"
   ],
   "weaponSlots": [
     {
@@ -41,7 +41,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [10, 20]
+      "locations": [8, 20]
     },
     {
       "id": "WS0004",
@@ -50,64 +50,64 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": -0,
-      "locations": [10, -20]
+      "locations": [8, -20]
     }
   ],
   "engineSlots": [
     {
       "location": [-28, 19],
-      "length": 44,
-      "width": 15,
+      "length": 41,
+      "width": 10,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 10,
       "style": "EUSAN"
     },
     {
       "location": [-28, -19],
-      "length": 44,
-      "width": 15,
+      "length": 41,
+      "width": 10,
       "angle": -180,
-      "contrailSize": 15,
+      "contrailSize": 10,
       "style": "EUSAN"
     },
     {
       "location": [-32, 30],
-      "length": 23,
-      "width": 9,
-      "angle": 162,
-      "contrailSize": 9,
+      "length": 22,
+      "width": 6,
+      "angle": 164,
+      "contrailSize": 6,
       "style": "EUSAN"
     },
     {
       "location": [-32, -30],
-      "length": 23,
-      "width": 9,
-      "angle": -162,
-      "contrailSize": 9,
+      "length": 22,
+      "width": 6,
+      "angle": -164,
+      "contrailSize": 6,
       "style": "EUSAN"
     },
     {
-      "location": [-30, 27],
-      "length": 32,
-      "width": 9,
-      "angle": -170,
-      "contrailSize": 9,
+      "location": [-30, 26],
+      "length": 34,
+      "width": 5,
+      "angle": -171.5,
+      "contrailSize": 5,
       "style": "EUSAN"
     },
     {
-      "location": [-30, -27],
-      "length": 32,
-      "width": 9,
-      "angle": 170,
-      "contrailSize": 9,
+      "location": [-30, -26],
+      "length": 34,
+      "width": 5,
+      "angle": 171.5,
+      "contrailSize": 5,
       "style": "EUSAN"
     },
     {
       "location": [-33, -0],
-      "length": 46,
-      "width": 14,
+      "length": 31,
+      "width": 12,
       "angle": 180,
-      "contrailSize": 14,
+      "contrailSize": 12,
       "style": "EUSAN"
     }
   ],

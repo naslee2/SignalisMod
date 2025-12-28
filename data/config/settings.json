@@ -23,7 +23,11 @@
             "vineta_market": "graphics/illustrations/vineta_illustration.png",
             "kitezh_market": "graphics/illustrations/kitezh_illustration.png",
             "buyan_market": "graphics/illustrations/buyan_illustration.png",
-            "leng_market": "graphics/illustrations/leng_illustration.png"
+            "leng_market": "graphics/illustrations/leng_illustration.png",
+            "nation_bar": "graphics/illustrations/nation_bar.png",
+            "rotfront_bar": "graphics/illustrations/rotfront_bar.png",
+            "512_exterior": "graphics/illustrations/512_exterior.png",
+            "512_polaroid": "graphics/illustrations/512_polaroid.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"
@@ -40,10 +44,10 @@
             "generic_aeon_facility":"graphics/icons/industry/light_industry.png"
         },
         "eusan_nation_people":{
-            "eusan_nation_officer_yeong":"graphics/portraits/eusan_nation_officer_yeong.png",
-            "eusan_nation_admiral_falke":"graphics/portraits/eusan_nation_admiralFalke_128.png",
-            "eusan_nation_great_revolutionary": "graphics/portraits/eusan_nation_theGreatRevolutionary_128.png",
-            "eusan_nation_the_daughter": "graphics/portraits/eusan_nation_theDaughter_128.png"
+            "eusan_nation_officer_yeong":"graphics/portraits/characters/eusan_nation_officer_yeong.png",
+            "eusan_nation_admiral_falke":"graphics/portraits/characters/eusan_nation_admiralFalke_128.png",
+            "eusan_nation_great_revolutionary": "graphics/portraits/characters/eusan_nation_theGreatRevolutionary_128.png",
+            "eusan_nation_the_daughter": "graphics/portraits/characters/eusan_nation_theDaughter_128.png"
         },
         "fx":{
             "trails_trail_clean":"graphics/trails/fx/trails_clean.png",
@@ -52,7 +56,10 @@
             "trails_trail_zappy":"graphics/trails/fx/trails_zappy.png",
             "trails_trail_contrail":"graphics/trails/fx/trails_contrail.png",
             "trails_trail_twin":"graphics/trails/fx/trails_twin.png",
-            "trails_trail_foggy":"graphics/trails/fx/trails_foggy.png"
+            "trails_trail_foggy":"graphics/trails/fx/trails_foggy.png",
+			"eusan_nation_lerche_heat":"graphics/ships/fx/eusan_nation_lerche_heat.png",
+			"eusan_nation_station_glow_left":"graphics/ships/fx/eusan_nation_station_missile_l_glow.png",
+			"eusan_nation_station_glow_right":"graphics/ships/fx/eusan_nation_station_missile_r_glow.png"
         }
     }
 }

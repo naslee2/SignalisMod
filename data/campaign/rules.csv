@@ -40,9 +40,9 @@ $faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your las
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
-bardesc_eusanNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
+bardesc_eusanNation,BarPrintDesc,"$faction.id== eusan_nation","ShowImageVisual nation_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the revelries or keeping watch over their human counterparts. The bar seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few local civilians are here, and the ones present all appear to be officials, military or outside spacefarers of some kind.",,
 bardesc_rotfront,BarPrintDesc,"$faction.id== eusan_nation
-$market.id == ""rotfront_market""","ShowImageVisual hegemony_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are several Replikas but its is hard to discern if they are partaking in the drink or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few members of the Nation or military members are here, and the ones present all appear to be officials of some kind.",,
+$market.id == ""rotfront_market""","ShowImageVisual rotfront_bar","The bar is crowded with large number of spacers taking a break from their long journey. Of course there are a few Replikas but its is hard to discern if they are partaking in the revelries or keeping watch over their human counterparts. One replika, an EULE unit, seems to be a bartender, seemingly busy cleaning glasses. The bar itself seems to be selling popular spirits from the sector but thankfully they seem to accept your standard credits as currency. Very few local civilians are here, and the ones present all appear to be officials, military or outside spacefarers of some kind.",,
 "#END RULESET_BAR_DESCRIPTION_START",,,,,,
 ,,,,,,
 # RULESET_FLEET_GREETING_START,,,,,,
@@ -79,7 +79,7 @@ AddText""As this mod is under a work in progress, new features will come online 
 # OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
-OFFICER_YEONG_GREETING,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_GREETING,PickGreeting,"$id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true","ShowPersonVisual
 FireAll PopulateOptions","""Hello there. What do you want?""
 OR
@@ -90,7 +90,8 @@ OR
 ""Calling me again? What do you want this time?""
 OR
 ""Well, well, well, if it isn't $playerName. What do you need this time?""",,
-OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$id ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == false","$player.metOfficerYeong = true
 ShowPersonVisual
 FireAll PopulateOptions
@@ -98,7 +99,7 @@ AddText ""A series of beeps and high pitched noises your communications request 
 AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
 AddText """"Hello this is Officer Ariane Yeong speaking. You do not show up as an commissioned officer with the Nation. What do you want?""""",,,
 OFFICER_YEONG_INTRO_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
-$id ==  ""eusan_nation_officer_yeong"" score: 100
+$id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == false","$player.metOfficerYeong = true
 ShowPersonVisual
 FireAll PopulateOptions
@@ -106,12 +107,16 @@ AddText ""A series of beeps and high pitched noises your communications request 
 AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
 AddText """"Hello this is Officer Ariane Yeong speaking. What do you want?""""",,,
 OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
-$id ==  ""eusan_nation_officer_yeong"" score: 100
-",,"YOUR COMMUNICATIONS REQUEST HAS BEEN REJECTED. YOUR ID HAS BEEN LOGGED. 
+$id == ""eusan_nation_officer_yeong"" score: 100
+",,"CONNECTION REFUSED
 OR
-COMMUNICATIONS TERMINATED. IF YOU BELIEVE THIS TO BE AN ERROR, PLEASE SEE CENTRAL AUTHORITY.
+There is no response.
 OR
-ATTENTION ENEMY OF THE NATION. YOUR ATTEMPT TO BYPASS SECURITY HAS BEEN LOGGED.",,
+The communications link was refused.
+OR
+Communications link was not accepted.
+OR
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END OFFICER_YEONG_GREETING",,,,,,
 ,,,,,,
 # OFFICER_YEONG_NEURALREPOSITORY_QUEST,,,,,,
@@ -139,7 +144,7 @@ OFFICER_YEONG_NEURALREPOSITORY_BRIEFING4,DialogOptionSelected,"$option == office
 She hands you an envelope before you leave. ""A paper copy of the code phrase. All the less sensitive information has been uploaded to your fleet.""","officeryeongNeuralRepBriefing4:""Got it."" 
 ",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_END,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing4","FireAll PopulateNeuralRepoMissionStartOptions",,,
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider:""I changed my mind.""",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDER_OPTION,PopulateNeuralRepoMissionStartOptions,,,,"officeryeongNeuralRepReconsider:""I changed my mind...""",
 OFFICER_YEONG_NEURALREPOSITORY_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongNeuralRepReconsider","FireAll PopulateOfficerYeongChatOptions","""Alright then. Come back to me when you are ready""
 or
 ""Ok sure. Let me know if you want to reconsider.""",,
@@ -150,10 +155,11 @@ FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission
 "#END REPO_BRIEFING",,,,,,
 ,,,,,,
 # MEETING_AGENT,,,,,,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 10000
-$global.officeryeong_neuralrepositorystart == true","SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""
-ShowPersonVisual
-FireAll PopulateAgentOptions","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 100
+$global.officeryeong_neuralrepositorystart == true
+$global.eusan_nation_neuralrepo_completed == false","ShowPersonVisual
+FireAll PopulateAgentOptions
+SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
 
 After a few seconds, the line crackles with a response. The comms officer quickly decodes the message and hands you the result.
 
@@ -164,7 +170,7 @@ The transmission leads you to an area by a large crater, no doubt the remains of
 As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.",,
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1:Use the code phrase",
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
-","SetTextHighlights ""data"" ""I am not sure how I can help, but I will try""","I got a package to deliver, but the address is in Carcosa.
+","SetTextHighlights ""I got a package to deliver, but the address is in Carcosa."" ""I am not sure how I can help, but I will try.""","I got a package to deliver, but the address is in Carcosa.
 
 ""I am not sure how I can help, but I will try."" the man replies. He sizes you up before deciding you are worth trusting.
 
@@ -240,7 +246,7 @@ Call $global.eusan_nation_penroseRecovery1_ref showMap ""Destination: $eusan_nat
 
 ""Go there, find the black box mission recorder, and lay the crew to rest.""","officeryeongPenroseRecovery1Briefing3:Understood",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Briefing3","FireAll PopulatePenroseRecovery1StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Reconsider","AbortMission
 ShowPersonVisual
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know""
@@ -248,7 +254,7 @@ OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Ok sure. If you wish to think it through, go ahead. I'll be waiting here once you get yourself together.""",,
-OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery1StartOptions,,,,"officeryeongPenroseRecovery1Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSERECOVERY1_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery1Accept","$global.officeryeong_penroseRecovery1_start = true
 ShowPersonVisual
 AcceptMission
@@ -281,7 +287,7 @@ OFFICER_YEONG_PENROSERECOVERY1_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$optio
 "#END RECOVERY",,,,,,
 ,,,,,,
 # RECOVERY_MISSION_END,,,,,,
-OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongChatOptions,"$id  ==  ""eusan_nation_officer_yeong"" score: 100
+OFFICER_YEONG_PENROSERECOVERY1_FINAL,PopulateOfficerYeongChatOptions,"$id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_penroseRecovery1_start == true
 $global.eusan_nation_penroseRecovery1_completed == false","SetOptionColor officeryeongPenroseRecovery1Final highlight",,"officeryeongPenroseRecovery1Final:Update Ariane on the status of your mission.",
@@ -357,14 +363,14 @@ Call $global.eusan_nation_penroseRecovery2_ref showMap ""Destination: $eusan_nat
 
 ""That is all. Burn bright."" She says the phrase more naturally this time, as if she had practiced it.","officeryeongPenroseRecovery2_briefing3:Time for me to go to work then...",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery2_briefing3","FireAll PopulatePenroseRecovery2StartOptions",,,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Reconsider","AbortMission
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Oke. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:I accept the mission.",
+OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery2StartOptions,,,,"officeryeongPenroseRecovery2Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSERECOVERY2_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Accept","$global.officeryeong_penroseRecovery2_start = true
 ShowPersonVisual
 AcceptMission
@@ -458,13 +464,15 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
+RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
+eusan_nation_personRelationChecker COOPERATIVE
+","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
 SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
@@ -476,28 +484,32 @@ $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
 eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
-BeginMission eusan_nation_penrose512Quest false","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
+BeginMission eusan_nation_penrose512Quest false
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Good evening, commander.""","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
 
-Upon entering, you see why. Standing before you and Ariane, is admiral Falke herself.
+Upon entering, you see why. Standing before you and Ariane, is Admiral Falke herself.
 
 Your mind is racing, wondering what she could be doing here. Your thoughts are pierced, one becoming louder, clearer than the others. It is not yours.
-
 
 Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:Telepathy?
 officeryeongPenroseRecovery512_briefing0_2:Get out of my head.
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
-OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 1","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
+OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
 
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
 ""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1:Continue
 officeryeongPenroseRecovery512_briefing1_1:Why don't you just beam the mission into my head?",
-OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -1","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
+OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.""","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
 
 The blood drains from Ariane's face, who is probably also hearing Falke's words. She shoots a look pleading you to drop the stand off.
 
 Falke finally speaks. ""Ariane, brief them on the mission.""","officeryeongPenroseRecovery512_briefing1:Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3",,"Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.
+OFFICER_YEONG_PENROSE512_BRIEFING1C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_3","SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.""","Your devotion is admirable. We have a task for you, requiring your fleet and skills. Ariane will brief you.
 
 Falke glances at Ariane, waiting for her to say something.","officeryeongPenroseRecovery512_briefing1:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
@@ -508,7 +520,9 @@ OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeong
 She traces her finger across a star map, circling it around a star system marked in red.
 
 ""You are to go to this system and recover the source of the signal.""","officeryeongPenroseRecovery512_briefing2:""A simple recovery mission, yet you are here...""",
-OFFICER_YEONG_PENROSE512_BRIEFING2A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1_1","Call $global.eusan_nation_penrose512_ref updateData","Falke is visibly annoyed by the suggestion.
+OFFICER_YEONG_PENROSE512_BRIEFING2A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1_1","Call $global.eusan_nation_penrose512_ref updateData
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""It is not a toy, commander. Do not ask me to treat it like one again.""","Falke is visibly annoyed by the suggestion.
 
 It is not a toy, commander. Do not ask me to treat it like one again.
 
@@ -517,7 +531,8 @@ Ariane glares at you with a mixture of horror and surprise, having apparently he
 ""Lets just get on with the briefing, please.""","officeryeongPenroseRecovery512_briefing1:Continue
 officeryeongPenroseRecovery512_briefing2A_1:""I've read enough documents, Use your holovid mind powers.""",
 OFFICER_YEONG_PENROSE512_BRIEFING2B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2A_1","Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
-","You barely have time to take in Ariane's appalled expression before the onslaught begins.
+SetTextHighlightColors ""221, 0, 0, 225""
+SetTextHighlights ""Built."" ""Launched."" ""Scrapped."" ""Mothballed."" ""Penrose distress signal."" ""512""","You barely have time to take in Ariane's appalled expression before the onslaught begins.
 
 A detailed list. Of something. Equipment? no, ships. Every Penrose. Built. Launched. Scrapped. All of them, before you.
 
@@ -528,7 +543,7 @@ A piercing wail, wiping your mind of those previous ideas. The noise resolves in
 512
 
 A ship that doesn't exist, on a mission that never began, has issued a distress signal.","officeryeongPenroseRecovery512_briefing2B:Steady yourself",
-OFFICER_YEONG_PENROSE512_BRIEFING2C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2B","AdjustRepPerson eusan_nation_admiral_falke SUSPICIOUS -5","You push yourself up off the wall you had unconsciously begun to lean against. Ariane, having dropped the briefing folder, steadies herself as well. She gives you an angry look before beginning to collect the scattered papers with unsteady hands.
+OFFICER_YEONG_PENROSE512_BRIEFING2C,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2B",,"You push yourself up off the wall you had unconsciously begun to lean against. Ariane, having dropped the briefing folder, steadies herself as well. She gives you an angry look before beginning to collect the scattered papers with unsteady hands.
 
 ""I trust you understand now, Commander?"" Falke asks.","officeryeongPenroseRecovery512_briefing6:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING3,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing2",,"Admiral Falke takes a seat, and motions for you to do the same. Ariane holds up a sheet of paper, an inventory of ships and ship parts of the Penrose class, for her to narrate.
@@ -549,18 +564,20 @@ Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_pe
 
 ""The target is $eusan_nation_penrose512_distanceLy light years away in the $eusan_nation_penrose512_systemName system. and we believe the signal to be from $eusan_nation_penrose512_planetName. Recover everything. The whole ship if you can. And please, record as much of the process as possible.""","officeryeongPenroseRecovery512_briefing6:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
-OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:I changed my mind...",
+OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
 OR
 ""Ok sure. If you wish to think it through, that is fine with me. Come back when you are ready.""",,
-OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:I accept the mission.",
+OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPT_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Accept:""I accept the mission.""",
 OFFICER_YEONG_PENROSE512_BRIEFING_ACCEPTED,DialogOptionSelected,"$option == officeryeongPenrose512Accept","$global.eusan_nation_penrose512_start = true
+AdjustRepPerson eusan_nation_admiral_falke FRIENDLY 5
 ShowPersonVisual
 AcceptMission
-FireAll PopulateOptions","""When you come back, prepare yourself for a long debrief...""",,
+FireAll PopulateOptions
+","""When you come back, prepare yourself for a long debrief...""",,
 "#END RECOVERY512_BRIEFING",,,,,,
 ,,,,,,
 # RECOVERY512,,,,,,
@@ -581,38 +598,41 @@ OFFICER_YEONG_PENROSE512_LANDING2,DialogOptionSelected,"$option == officeryeongP
 The combat shuttles approach the wreckage from a low altitude, but find nothing out of the ordinary.
 
 ","officeryeongPenrose512Landing2:Begin recovery operations.",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2",,"As your team approaches the wreck, the crew begin to set up equipment for entry. Due to the cold environment, the work is slow at first but picks up pace as the base camp begins to take form. 
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE1,DialogOptionSelected,"$option == officeryeongPenrose512Landing2","ShowImageVisual 512_exterior","As your team approaches the wreck, the crew begin to set up equipment for entry. Due to the cold environment, the work is slow at first but picks up pace as the base camp begins to take form. 
 
 What seems to be an eternity, the crew reports its finished setting up and is beginning the entry to the ship.","officeryeongPenrose512enter_penrose1:Continue",
-OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1",,"The recovery crew finds the airlock and surprisingly they are able to open it without use of external equipment. The recovery team leader reports they are able to enter the ship through the main airlock intact and the interior in satisfactory condition.","officeryeongPenrose512enter_penrose2:Enter the Ship",
-OFFICER_YEONG_PENROSE512_HALLWAY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","FireAll PopulateOfficerYeongPenrose512Explore","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
+OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose1","ShowImageVisual 512_exterior","The recovery crew finds the airlock and surprisingly they are able to open it without use of external equipment. The recovery team leader reports they are able to enter the ship through the main airlock intact and the interior in satisfactory condition.","officeryeongPenrose512enter_penrose2:Enter the Ship",
+OFFICER_YEONG_PENROSE512_ENTRY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","ShowDefaultVisual
+FireAll PopulateOfficerYeongPenrose512Explore
+","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
-$player.officeryeongPenrose512_poweron == true",,"The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+$player.officeryeongPenrose512_poweron == true",,,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","You and your crew enter the ship.",,
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a,PopulateOfficerYeongPenrose512ForwardSectionExplore,,,,"officeryeongPenrose512_forwardDecks_explore2a:Look around the cockpit.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
 $player.officeryeongPenrose512_foundphoto == false",,"Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","$player.officeryeongPenrose512_foundphoto = true
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid
+","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
+
+Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...","officeryeongPenrose512_forwardDecks_explore2aPhoto3:Examine the photo further...",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto3","$player.officeryeongPenrose512_foundphoto = true
 SetTextHighlights ""self-developing photo"" ""Perhaps it would be best if you memorize this combination.""
 SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if this may come in handy. Perhaps it would be best if you memorize this combination.""
-KaysaarKeypad initCode","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
-
-Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...
-
-You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
+KaysaarKeypad initCode
+ShowImageVisual 512_polaroid","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
 $player.officeryeongPenrose512_foundphoto == true",,"You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
@@ -626,7 +646,7 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND,DialogOpt
 $player.officeryeongPenrose512_distress_located == true",,"The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound:Continue",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound",,"The recovery crew has already swept this area. Nothing of note is left here save for the debris and damaged equipment.
 ","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the forward deck.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit",,"Leaving behind a skeleton crew, you exit the forward deck.","officeryeongPenrose512_forwardDecks_exit_option:Return to the staging area.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit","ShowDefaultVisual","Leaving behind a skeleton crew, you exit the forward deck.","officeryeongPenrose512_forwardDecks_exit_option:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_exit_option","FireAll PopulateOfficerYeongPenrose512Explore","You enter the hallway, your salvage crew having set up a small staging area here.",,
 "#END OFFICER_YEONG_PENROSE512_FORWARD_DECKS",,,,,,
 ,,,,,,
@@ -837,8 +857,9 @@ OFFICER_YEONG_CHAT_LENG2,DialogOptionSelected,"$option == officeryeongChatLeng1"
 
 ""Also being Leng, the place apparently has a reputation of dread. The rumors of that place housing AEON worksites. All hush-hush rumors of course, but the rumors are: that it's not a nice place to live, work, or have a family.""
 
-""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:Continue",
-OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions",,,
+""That is all I have about Leng for my clearance level.""","officeryeongChatLeng2:End Conversation",
+OFFICER_YEONG_CHAT_LENG_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatLeng2","FireAll PopulateOfficerYeongChatOptions
+ShowPersonVisual",,,
 "#END OFFICER_YEONG_CHAT_LENG",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_SMOKING,,,,,,
@@ -846,14 +867,15 @@ OFFICER_YEONG_CHAT_SMOKING_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_
 OFFICER_YEONG_CHAT_SMOKING1,DialogOptionSelected,"$option == officeryeongChatSmokingOption",,"""Smoking?"" she queries. ""What about it?""","officeryeongChatSmoking1:""You know thats bad for you. It could kill you.""",
 OFFICER_YEONG_CHAT_SMOKING2,DialogOptionSelected,"$option == officeryeongChatSmoking1",,"She seems both annoyed and amused by your comment. As if you have missed some sort of irony in you, a spacer, chastising someone for undertaking a dangerous activity.
 
-""Yes I smoke. So what...""","officeryeongChatSmoking2:Continue",
+""Yes I smoke. So what...""","officeryeongChatSmoking2:End Conversation",
 OFFICER_YEONG_CHAT_SMOKING_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongChatSmoking2","FireAll PopulateOfficerYeongChatOptions",,,
 "#END OFFICER_YEONG_CHAT_SMOKING",,,,,,
 "#END OFFICER_YEONG_CHAT",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_OPTIONS,,,,,,
 OFFICER_YEONG_OPTIONS_CHAT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100",,,"officeryeongChat:Chat with Officer Yeong",
-OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions","""Sure. What do you want to discuss?""
+OFFICER_YEONG_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == officeryeongChat","FireAll PopulateOfficerYeongChatOptions
+ShowPersonVisual","""Sure. What do you want to discuss?""
 OR
 ""I can spare some time to talk for a bit. What do you want to talk about?""
 OR
@@ -1021,9 +1043,9 @@ $menuState = fleetConvMain 0
 FireAll PopulateOptions
 AddText ""Your request for communications is granted and the screen begins to display a live video of a confidant looking woman with a faint smile on her lips.""
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Flotilla. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
-AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link","cutCommLink:Cut the comm link
-$menuState = fleetConvMain 0"
-ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == false
+AddText """"Why hello there, comrade. How can I help you? Just remember, were both officers of the Nation so its only natural to help one another.""""",,"cutCommLink:Cut the comm link",
+ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
+$player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
@@ -1046,7 +1068,8 @@ AddText ""Your request for communications is granted and the screen begins to di
 AddTextSmall ""Admiral Falke of the Eusan Nation. Commanding the Ever Victorious Fleet of the Heimat Defense Flotilla. She is unusual as she is not human but a Replika, a type of cybernetic organism built to serve the Nation. Commanding an entire fleet speaks volumes on the Nation's trust in her ability to lead. She is the defender of the Flame of Revolution. She is the torchbearer of the Nation. She is Falke."" highlight
 AddText ""Why hello there, Comrade. Intimidated? Do I intimidate you? I do hope so. Now behave yourself. I shall be watching.""
 ",,"cutCommLink:Cut the comm link",
-ADMIRAL_FALKE_INTRO_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == false
+ADMIRAL_FALKE_INTRO_NEUTRAL,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
+$player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
 $faction.neutralToPlayer score:100","$player.metAdmiralFalke = true
@@ -1079,7 +1102,8 @@ OR
 ""Back again, Comrade? My golden radiance is irresistible, yes, I know.""
 OR
 ""I see you, Comrade. Welcome.""",,
-ADMIRAL_FALKE_GREETING_FRIENDLY,OpenCommLink,"$player.metAdmiralFalke == true
+ADMIRAL_FALKE_GREETING_FRIENDLY,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
+$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
 $faction.friendlyToPlayer score:1000","$menuState = fleetConvMain 0
@@ -1118,7 +1142,8 @@ OR
 ""Oh my. Have you come to talk to me? I hope you have something interesting to say if you are this desperate to bother me.""
 OR
 ""The Empire was defeated long ago but our vigilance will never cease. I hope you understand that. Its only natural to be suspicious of misbehavior.""",,
-ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.metAdmiralFalke == true
+ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
+$player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
 $faction.neutralToPlayer score:1000","$menuState = fleetConvMain 0
@@ -1139,7 +1164,8 @@ OR
 ""Oh my. Have you come to talk to me? I hope you have something interesting to say if you are this desperate to bother me.""
 OR
 ""The Empire was defeated long ago but our vigilance will never cease. I hope you understand that. Its only natural to be suspicious of travellers, including you.""",,
-ADMIRAL_FALKE_GREETING_HOSTILE,OpenCommLink,"$id ==  eusan_nation_admiral_falke score: 100
+ADMIRAL_FALKE_GREETING_HOSTILE,OpenCommLink,"$player.commissionFactionId != ""eusan_nation""
+$id ==  eusan_nation_admiral_falke score: 100
 $faction.isHostile score:100
 $faction.id == ""eusan_nation""","$entity.ignorePlayerCommRequests = true 1
 $menuState = fleetConvMain 0","""Many have tried to cross me. None have survived. Come now, lets dance.""
@@ -1175,20 +1201,22 @@ ADMIRAL_FALKE_CHAT_VOLKSMARINE_3,DialogOptionSelected,"$option == admiralFalkeVo
 
 She gives you a small smile. 
 
-""I believe that is all for now. It is time for me to go.""","admiralFalkeVolksmarineOption3:Continue",
+""I believe that is all for now. It is time for me to go.""","admiralFalkeVolksmarineOption3:End Conversation",
 ADMIRAL_FALKE_CHAT_VOLKSMARINE_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeVolksmarineOption3","FireAll PopulateAdmiralFalkeChatOptions",,,
 "#END ADMIRAL_FALKE_CHAT_VOLKSMARINE",,,,,,
 ,,,,,,
 # ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET,,,,,,
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption: Tell me about the Grand Fuel Fleet.",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_OPTION,PopulateAdmiralFalkeChatOptions,"$player.metsfcyenni == true",,,"admiralFalkeGrandFuelFleetOption:Tell me about the Grand Fuel Fleet.",
 ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_1,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleetOption",,"""The Grand Fuel Fleet?"" Admiral Falke responds. She puts a finger on her lips as if pondering her next words but it is clear she knows who you met.
 
 ""Ah yes. Them. If there was any military formation that is full of pomp and predatory instinct it would be the Grand Fuel Fleet of the Sindrian Fuel Company. Their commanding officer is rather vicious opponent should you ever try to oppose her.""","admiralFalkeGrandFuelFleet1:Continue",
 ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_2,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet1",,"""Then yet again, there is some truth to her reputation. For most people, she is the flame that draws the unfortunate moths to their doom.""
 
 ""The Grand Fuel Fleet itself is also not to be taken lightly. They consist of the most powerful warships assigned to the Sindrian Fuel Comany fleet. The Sindrians are not idle in their pursuit of fuel profits. They have spent years producing weapons that can make other powers like the Hegemony and Leauge pause.""","admiralFalkeGrandFuelFleet2:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""","admiralFalkeGrandFuelFleet3:Continue",
-ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions","""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""",,
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_3,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet2",,"""Should you attempt unwise dealings with them, do try not to get burned. There is only so much you can do to stop such a person.""
+
+""In any case, the Grand Fuel Fleet is something to behold. Do tread lightly around them.""","admiralFalkeGrandFuelFleet3:End Conversation",
+ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET_ESCAPE_RETURN,DialogOptionSelected,"$option == admiralFalkeGrandFuelFleet3","FireAll PopulateAdmiralFalkeChatOptions",,,
 "#END ADMIRAL_FALKE_CHAT_GRAND_FUEL_FLEET",,,,,,
 "#END ADMIRAL_FALKE_CHAT",,,,,,
 ,,,,,,
@@ -1218,144 +1246,330 @@ OR
 "#END ADMIRAL_FALKE_CHAT_OPTIONS",,,,,,
 "#END ADMIRAL_FALKE",,,,,,
 ,,,,,,
-# MARLIS,,,,,,
+# ALYSSA,,,,,,
 ,,,,,,
-# MARLIS_GREETINGS,,,,,,
-MARLIS_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
-$market.id == ""rotfront_market""",,"You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small hand wave to come over...","marlis_bar:Have a chat with the Replika at the bar.",
-MARLIS_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+# ALYSSA_GREETINGS,,,,,,
+ALYSSA_BAR_OPTION,AddBarEvents,"$faction.id == ""eusan_nation""
+$market.id == ""rotfront_market""","SetOptionColor alyssa_bar highlight","You see a Replika busy cleaning some glasses behind the bar counter. You catch her eye and she gives you a small hand wave to come over...","alyssa_bar:Have a chat with the Replika at the bar.",
+ALYSSA_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$player.metMarlis == false
+$player.metAlyssa == false
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","$player.metMarlis = true
+$option == alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who's been helping us out recently! Tell you what, your first drink's on the house. Just a little thanks on behalf of our Nation.""
-FireAll PopulateMarlisBarOptions",,,"SaveCurrentVisual"
-MARLIS_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == false
+FireAll PopulateAlyssaBarOptions",,,"SaveCurrentVisual"
+ALYSSA_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == false
 $faction.friendlyToPlayer score:1000
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new face! And from the looks of it, not from around here either. Well that's fine. Just take a seat, and I'll be with you shortly!""
-FireAll PopulateMarlisBarOptions",,,
-MARLIS_INTRO_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
+FireAll PopulateAlyssaBarOptions",,,
+ALYSSA_INTRO_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.commissionFactionId == ""eusan_nation""
-$player.metMarlis == false
+$player.metAlyssa == false
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT"".
-FireAll PopulateMarlisBarOptions",,,
-MARLIS_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == false
+FireAll PopulateAlyssaBarOptions",,,
+ALYSSA_INTRO_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == false
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","$player.metMarlis = true
+$option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
+BeginConversation eusan_nation_alyssa false true
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
-AddTextSmall ""A simple bartender replika assigned to this bar. Marlis has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
+AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT""
-FireAll PopulateMarlisBarOptions",,"barMarlis_sales:""What do you have?""
+FireAll PopulateAlyssaBarOptions",,"barAlyssa_sales:""What do you have?""
 ",
-MARLIS_GREETING_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+ALYSSA_GREETING_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
-$player.metMarlis == true
+$player.metAlyssa == true
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
+$option == alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
 OR
 ""Hello comrade, how do you do this fine day?""
 OR
 ""Welcome back, comrade. I hope you are well?""
 OR
 ""Fancy a drink today?""",,
-MARLIS_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == true
+ALYSSA_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == true
 $faction.friendlyToPlayer score:1000
-$option == marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
+$option == alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
 OR
 ""Greetings. You seem parched. Would you like a drink?""
 OR
 ""Ah a customer has come back. What will it be?""",,
-MARLIS_GREETING_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
+ALYSSA_GREETING_NEUTRAL_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.commissionFactionId == ""eusan_nation""
-$player.metMarlis == true
+$player.metAlyssa == true
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""What do you wish to drink?""
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""What do you wish to drink?""
 OR
 ""How can I take your order?""",,
-MARLIS_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
-$player.metMarlis == true
+ALYSSA_GREETING_NEUTRAL,DialogOptionSelected,"$faction.id == ""eusan_nation""
+$player.metAlyssa == true
 $faction.neutralToPlayer score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true
-FireAll PopulateMarlisBarOptions","""You seem thirsty.""
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true
+FireAll PopulateAlyssaBarOptions","""You seem thirsty.""
 OR
 ""You are a long way from home. What can I get you?""
 OR
 ""You going to stand there and not order anything?""",,
-MARLIS_GREETING_HOSTILE,DialogOptionSelected,"$faction.id == ""eusan_nation""
+ALYSSA_GREETING_HOSTILE,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $faction.isHostile score:100
-$option ==  marlis_bar","SaveCurrentVisual
-BeginConversation eusan_nation_marlis false true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitMarlis_barHostile:Leave Marlis alone.",
-"#END MARLIS_GREETINGS",,,,,,
+$option ==  alyssa_bar","SaveCurrentVisual
+BeginConversation eusan_nation_alyssa false true","""It's you... Sorry, but I think it's best if you leave. I won't have trouble of any kind here.""","exitAlyssa_barHostile:Leave Alyssa alone.",
+"#END ALYSSA_GREETINGS",,,,,,
 ,,,,,,
-# MARLIS_BAR_SALES,,,,,,
-#MARLIS_BAR_SALES_INTRO,PopulateMarlisBarOptions,,,"""Would you like to see our selection""? Marlis says. 
+# ALYSSA_BAR_SALES,,,,,,
+ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
+ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
+,,,,,,
+# ALYSSA_ENTER,,,,,,
+#ALYSSA_BAR_SALES_INTRO,PopulateAlyssaBarOptions,,,"""Would you like to see our selection""? Alyssa says. 
 
-She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barMarlis_cigs_intro:Browse the menu",
-#MARLIS_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barMarlis_cigs_intro2",,"You open the menu and begin browsing the items.","barMarlis_cigs_intro:Browse the menu",
-MARLIS_BAR_SALES_MENU,DialogOptionSelected,"$option == barMarlis_cigs_intro","FireAll PopulateMarlisBarSellOptions","You browse through the available items listed on the menu.",,
-MARLIS_BAR_SALES_CIGS_DESC,PopulateMarlisBarSellOptions,"$player.marlis_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barMarlis_cigs_desc:Buy one for 15 credits.",
-MARLIS_BAR_SALES_CIGS_DESC_WAIT,PopulateMarlisBarSellOptions,"$player.marlis_bar_cigSale == true","SetEnabled barMarlis_cigs_desc false
-SetTooltip barMarlis_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
-","Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barMarlis_cigs_desc:Buy one package of cigarette for 15 credits.",
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barMarlis_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro:Browse the menu",
+#ALYSSA_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barAlyssa_cigs_intro2",,"You open the menu and begin browsing the items.","barAlyssa_cigs_intro:Browse the menu",
+ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro","FireAll PopulateAlyssaBarOptions","You browse through the available items listed on the menu.",,
+"#END ALYSSA_ENTER",,,,,,
+,,,,,,
+# DRINKS_SALES,,,,,,
+"#END DRINKS_SALES",,,,,,
+,,,,,,
+# CIGS_SALES,,,,,,
+ALYSSA_BAR_SALES_CIGS_DESC,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one for 15 credits.",
+ALYSSA_BAR_SALES_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc false
+SetTooltip barAlyssa_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
+","Cigarettes, made by the Nation. Mass produced and comes in vvone and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one package of cigarette for 15 credits.",
+ALYSSA_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
 AddCredits -15
 AdjustRepActivePerson WELCOMING 1
-$player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
+$player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Here you go! Enjoy."" she says as she hands you the pack.","barMarlis_cigs_intro:Look at the other items for sale.",
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descB",,,,
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barMarlis_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro:Look at the other items for sale.",
+ALYSSA_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
+ALYSSA_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
 AddCredits -50
-$player.marlis_bar_cigSale = true 1","Marlis reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
+$player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-NEW RULEMARLIS_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barMarlis_cigs_descC",,,,
-MARLIS_BAR_SALES_EXIT_OPTION,PopulateMarlisBarSellOptions,,,,"barMarlis_cigs_exit:Go back",
-MARLIS_BAR_SALES_EXIT,DialogOptionSelected,"$option == barMarlis_cigs_exit","FireAll PopulateMarlisBarOptions",,,
-"#END MARLIS_BAR_SALES",,,,,,
+ALYSSA_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
+"#END CIGS_SALES",,,,,,
+"#END ALYSSA_BAR_SALES",,,,,,
 ,,,,,,
-# MARLIS_EXIT,,,,,,
-MARLIS_EXIT,DialogOptionSelected,"$option == exitMarlis_bar","EndConversation DO_NOT_FIRE
+# ALYSSA_EXIT,,,,,,
+ALYSSA_EXIT,DialogOptionSelected,"$option == exitAlyssa_bar","EndConversation DO_NOT_FIRE
 RestoreSavedVisual
 BarCMD showOptions","""See you later!""
 OR
 ""Come back anytime""",,
-MARLIS_EXIT_HOSTILE,DialogOptionSelected,"$option == exitMarlis_barHostile","EndConversation DO_NOT_FIRE
+ALYSSA_EXIT_HOSTILE,DialogOptionSelected,"$option == exitAlyssa_barHostile","EndConversation DO_NOT_FIRE
 RestoreSavedVisual
 BarCMD showOptions","The replika is refusing to serve you. Perhaps its time to leave.
 OR
 The replika gives you a glowering look. You are not welcome by the looks of it.",,
-MARLIS_EXIT_OPTION,PopulateMarlisBarOptions,,,,"exitMarlis_bar:Exit the Bar",
-"#END MARLIS_EXIT",,,,,,
-"#END MARLIS",,,,,,
+ALYSSA_EXIT_OPTION,PopulateAlyssaBarOptions,,,,"exitAlyssa_bar:Exit the Bar",
+"#END ALYSSA_EXIT",,,,,,
+"#END ALYSSA",,,,,,
+,,,,,,
+# THE_DAUGHTER,,,,,,
+,,,,,,
+# THE_DAUGHTER_GREETING,,,,,,
+THE_DAUGHTER_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == false
+$id == eusan_nation_the_daughter score: 100
+$faction.friendlyToPlayer score:100","$player.metDaughter = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
+AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
+AddText """"Ah, hello there. A traveller has come to speak to me. How does one like you come to help our humble Nation""""",,,
+THE_DAUGHTER_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == false
+$id == eusan_nation_the_daughter score: 100
+$faction.friendlyToPlayer score:100","$player.metDaughter = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
+AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
+AddText """"Ah, hello there. A traveller has come to speak to me. How does one like you come to visit our humble Nation?""""",,,
+THE_DAUGHTER_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_the_daughter score: 100
+$player.metDaughter == false","$player.metDaughter = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
+AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
+AddText """"Ah, hello there. An outsider has come to speak to me. How did you manage to come to this place? Is it because you wish to help?""""",,,
+THE_DAUGHTER_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == eusan_nation_the_daughter score: 100
+$player.metDaughter == false","$player.metDaughter = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
+AddTextSmall ""The Daughter of the Great Revolutionary. The stories of how she gained her position at her mother's side in the Nation's government range from mildly plausible to outrageous. Whatever the rumors are, she is no doubt astute in the political games of the Nation's central government. Some may say she is the heir to the Great Revolutionary, others may say she waits in the shadows, biding her time when leadership falls upon her."" highlight
+AddText """"Ah, hello there. An outsider has come to speak to me. How did you manage to come to this place? Brave to seek me out.""""",,,
+THE_DAUGHTER_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == true
+$id == eusan_nation_the_daughter score: 100
+$faction.friendlyToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Hello Captain $playerName, how are you?""
+OR
+""My my, come back again?""
+OR
+""You are back! How wonderful. Perhaps things will be done today.""
+OR
+""Hi...how are you?""
+OR
+""Do you prefer large or small? Wait don't answer that...how are you today?""
+OR
+""Oh comrade, whenever I grace your communications channel, remember how much of an honor it is.""",,
+THE_DAUGHTER_GREETING_FRIENDLY,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == true
+$id == eusan_nation_the_daughter score: 100
+$faction.friendlyToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Ah your back. What can I do for you, traveller?""
+OR
+""Welcome back, Captain $playerName.""
+OR
+""Your back! How was your travels?""
+OR
+""Hello, traveller.""
+OR
+""Ah, you returned. What do you need from me?""",,
+THE_DAUGHTER_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == true
+$id == eusan_nation_the_daughter score: 100
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Yes?""
+OR
+""What do you want?""
+OR
+""You come all this way to talk to me? Don't you have others to bother?""
+OR
+""Tell me Captain $playerName, do you like wasting my time?""
+OR
+""You should consider this a great honor that I even answer your comms request.""
+OR
+""The Nation really hands out commissions out like candy I see.""
+OR
+""I really should stop answering your communications request...""",,
+THE_DAUGHTER_GREETING_NEUTRAL,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$player.metDaughter == true
+$id == eusan_nation_the_daughter score: 100
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""You again.""
+OR
+""Remember, every move you make, I will hear of it.""
+OR
+""Yes? What is it? My time isn't unlimited for people like you.""
+OR
+""Back again? What is it?""
+OR
+""Hello there Captain $playerName...""
+OR
+""What do you want?""",,
+THE_DAUGHTER_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
+$id == eusan_nation_the_daughter score: 100
+$faction.isHostile score:100","ShowPersonVisual","""Leave this place or I will call security to track you down and throw you into prison!""
+OR
+""What gives you the right to speak to me? Hmh? Shut up, shut up, GET OUT""
+OR
+""Stop talking to me! Leave!""
+OR
+""Go away! Go away! BEGONE.""
+OR
+There is no response.
+OR
+The communications link was refused.
+OR
+Communications link was not accepted.
+OR
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
+"#END THE_DAUGHTER_GREETING",,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT,,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION,,,,,,
+THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION,PopulatetheDaughterChatOptions,"$id == eusan_nation_the_daughter score: 100
+$player.askedDaughterForWork == false",,,"theDaughterQuestGiveOption:Ask the Daughter if she needs help with anything.",
+THE_DAUGHTER_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == theDaughterQuestGiveOption",,"""Oh yes I do need help!""
+
+She moves closer to you, beaming with excitement. She gives you a small wink then moves back. She pulls a small, thick looking tablet device that looks like one of those Nation built knockoffs of the Tri-Pad. 
+
+""I need things done. Usually I don't keep a list, I let my assistants do that sort of thing. However I do have some reminders about certain events and situations that need resolving.""","theDaughterQuestGive1:Continue",
+THE_DAUGHTER_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == theDaughterQuestGive1",,"""Oh, $playerName. You must know that by helping me, you will get your hands dirty. So think long and hard on your answer.""
+
+She gives a wide grin and a look that can pierce hearts at you. 
+""Now choose.""","theDaughterQuestGive2a:Accept
+theDaughterQuestGive2b:Reconsider",
+THE_DAUGHTER_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == theDaughterQuestGive2a","AdjustRepActivePerson WELCOMING 5
+AddPotentialContact eusan_nation_the_daughter
+$player.askedDaughterForWork = true","You accept the offer to work for the Daughter.
+
+She gives you smile. A rather devious looking one.
+
+""I knew I can count on you. Remember, your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
+THE_DAUGHTER_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == theDaughterQuestGive2b",,"You tell her you will think it over.
+
+She tilts her head and gives you a slight smile. 
+
+""Of course you will. Your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
+THE_DAUGHTER_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == theDaughterQuestGiveEND","FireAll PopulatetheDaughterChatOptions",,,
+"#END THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION",,,,,,
+"#END THE_DAUGHTER_CHAT",,,,,,
+,,,,,,
+# THE_DAUGHTER_CHAT_OPTIONS,,,,,,
+THE_DAUGHTER_CHAT_OPTIONS,PopulateOptions,"$id == eusan_nation_the_daughter score: 100",,,"theDaughter:Chat with the Daughter",
+THE_DAUGHTER_CHAT_LISTCHATOPTIONS,DialogOptionSelected,"$option == theDaughter","FireAll PopulatetheDaughterChatOptions","""What else do you wish to know?""
+OR
+""I like having conversations.""
+OR
+""You like hearing my voice don't you.""
+OR
+""I most certainly can!""
+OR
+""Conversation! What should we speak about?""
+OR
+""Mmm hm. What do you need to know?""",,
+THE_DAUGHTER_CHAT_ESCAPE_OPTIONS,PopulatetheDaughterChatOptions,,"SetShortcut theDaughterChatEscape ""ESCAPE""",,"theDaughterChatEscape:""I got to go now...""",
+THE_DAUGHTER_CHAT_ESCAPE_RETURN,DialogOptionSelected,"$option == theDaughterChatEscape","FireAll PopulateOptions","""You will be back. I am sure of it""
+OR
+""Good bye.""
+OR
+""Have fun wherever you go.""",,
+"#END THE_DAUGHTER_CHAT_OPTIONS",,,,,,
+"#END THE_DAUGHTER",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY,,,,,,
 ,,,,,,
@@ -1370,7 +1584,8 @@ FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
 AddText """"Interesting. They send a traveller from outside the Nation. That means you are either lucky or dedicated. So, comrade, how can you help the Nation?"" """,,,"$player.accessGrantedGreatRev == false"
-THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $faction.friendlyToPlayer score:1000
 $player.metGreatRev == false","$player.metGreatRev = true
@@ -1389,7 +1604,8 @@ FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
 AddTextSmall ""The Great Revolutionary, in her glory. You heard stories of the Nation's leader no doubt, how she succeeded the previous leader, how she steered the Nation rebuilding from a ruinous war. Of course, these stories are propaganda but one can't dismiss the political skill needed for her to rule for over twenty years. For an outsider, the honor of having an audience with the Great Revolutionary is rare and not given lightly. For she is the leader of the Nation, its flag bearer and the heir to Revolution."" highlight
 AddText """"Someone from the outside. Dedicated enough to get by I see. Remember, my patience is finite. Listen to my instructions and perhaps good things will happen.""""",,,"$player.accessGrantedGreatRev == false"
-THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$faction.id == ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $player.metGreatRev == false
 $faction.neutralToPlayer score:100","$player.metGreatRev = true
@@ -1409,18 +1625,19 @@ OR
 OR
 ""The Nation welcomes you, comrade.""
 OR
-""Welcome back, Comrade. How goes your travels?""
+""Welcome back, Captain $playerName. How goes your travels?""
 OR
 ""You should tell me more about your travels one day.""
 OR
 ""Busy as always but you have my attention.""
 OR
 ""Comrade, what brings you back to Heimat?""",,"$player.accessGrantedGreatRev ==true"
-THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$faction.id == ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
 $faction.friendlyToPlayer score:1000
 $player.metGreatRev == true","ShowPersonVisual
-FireAll PopulateOptions","""Hello traveller, how are you today.""
+FireAll PopulateOptions","""Hello Captain $playerName, how are you today.""
 OR
 ""Traveller, you should consider joining the Nation. The benefits are...suitable for you.""
 OR
@@ -1442,7 +1659,7 @@ FireAll PopulateOptions","""Doing enough to scrape by, I see.""
 OR
 ""I was told you were in the system. What do you want.""
 OR
-""Traveller, your standing with the Nation could use some improvement. Take it as an hint.""
+""Captain $playerName, your standing with the Nation could use some improvement. Take it as an hint.""
 OR
 ""This better be good.""
 OR
@@ -1451,7 +1668,8 @@ OR
 ""Remember, traveller, everytime you move a muscle, I know what action you may take.""
 OR
 ""Make it quick, traveller, time is precious.""",,"$player.accessGrantedGreatRev ==true"
-THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$faction.id == ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
 $player.metGreatRev == true
 $faction.neutralToPlayer score:100","ShowPersonVisual
@@ -1465,7 +1683,9 @@ OR
 OR
 ""It would be helpful if you make yourself useful and work on helping the Nation.""
 OR
-""Make it quick you are taking up precious time.""",,"$player.accessGrantedGreatRev ==true"
+""Make it quick you are taking up precious time.""
+OR
+""Oh its you $playerName.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
 $faction.isHostile score:100","ShowPersonVisual","""Begone""
@@ -1478,20 +1698,261 @@ The communications link was refused.
 OR
 Communications link was not accepted.
 OR
-LINK REJECTED","cutCommLink:Cut the comm link",
+The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
 ,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION,PopulateGreatRevolutionaryChatOptions,"$id == eusan_nation_great_revolutionary score: 100
+$player.askedGreatRevolutionaryForWork == false",,,"greatRevolutionaryQuestGiveOption:Ask the Great Revolutionary if she needs jobs done.",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == greatRevolutionaryQuestGiveOption",,"""Help?"" she asked. 
+
+Her eyes dart around your face. There is a small pause and she opened her desk and pulled out a small tablet computer. She gives it a few taps and a series of words starts populating the screen.
+
+""We have work. Although we have our own people, we can always use the help.""","greatRevolutionaryQuestGive1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == greatRevolutionaryQuestGive1",,"""Now, Captain $playerName. I won't torture you with details on your duties as you either know about them already or just impatient.""
+
+""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2a:Accept
+greatRevolutionaryQuestGive2b:Reconsider",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2a","AdjustRepActivePerson WELCOMING 5
+AddPotentialContact eusan_nation_great_revolutionary
+$player.askedGreatRevolutionaryForWork = true","You accept the offer to work for the Nation.
+
+At that, $heOrShe gives a small nod, ""Thank you, starfarer. I look forward to working with you.""","greatRevolutionaryQuestGiveEND:Leave",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2b",,"You tell the Great Revolutionary that you will think it over. 
+
+""Dissapointing..."" she says.
+
+""Well if you still want to work for me, you know where to find me."" ","greatRevolutionaryQuestGiveEND:Leave",
+THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == greatRevolutionaryQuestGiveEND","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryPerseanLeagueOption:Tell me about the Persean League.",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_1,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeagueOption",,"She gives you a stern look as if you asked her a question everyone knows the answer to. After a few seconds of silence, she begins to explain.
+
+""Persean League. A collection of idiots and selfish nations whose sole unifying factor is that there is a worse threat to their collective security. Our dealings with the League was less than favorable and our backing out led to them trying to destabilize us.""
+
+She makes a small huff. 
+
+""The League is not our friends nor are they our mortal enemies. We keep to ourselves, they keep to themselves.""","greatRevolutionaryPerseanLeague1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_2,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague1",,"""Our history with the Persean League go back long before the Nation. The Eusan Empire was eager to assert its independence but it cannot stand alone against bullies like the Hegemony. What do you do in sector politics when a big bully comes around? Find friends, gang up on them.""
+
+She pauses. You can see that the Great Revolutionary is digging deep into her experience and knowledge of Sector politics. 
+
+""Once the Nation defeated the Empire, the League treated us like we were late on our dues. Military and economic demands that the Empire apparently failed to keep up.""
+
+""Well they were fighting a war against us of course they cannot keep up. The League considered us like the Empire's successors in the club and treated us accordingly. Half-hearted offers of support, major demands that we step up our contributions.""
+","greatRevolutionaryPerseanLeague2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_3,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague2",,"""So after five years of continuous disagreements and increasing belligerence from Kazeron, we left. Or my predecessor left. Pulled the Nation out of the League.""
+
+She pursed her lips then continued.
+
+""We left the League 29 years ago. We had skirmishes, we had border intrusions, we had propaganda campaigns against us, we had infiltration. They even broadcast songs bidding us farewell while insinuating the Nation will return to the fold. As if...""
+
+""Then Askonia happens. Gave us room to breath. Opis's destruction forced the Perseans to look elsewhere. The Second AI War made them even less interested.""
+
+She sighs. This topic is a very personal one. 
+
+""I took power just after the Askonia Crisis. The League's actions left a very sour taste in the Nation. Did they apologize for all the incidents they visited on us? Doubt they ever will...""","greatRevolutionaryPerseanLeague3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_4,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague3",,"""In any case, the Persean League is busy playing nice to anyone not aligned with the Hegemony, Tri-Tachyon or any other major powers. It has been a tumultuous 29 years.""
+
+She stops and sighs. Looks like the topic has dug up really bad memories. Perhaps it is time to stop here.
+
+You give her your thanks for the information and end the topic.","greatRevolutionaryPerseanLeague4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryPerseanLeague4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_PERSEAN_LEAGUE_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryHegemonyOption:Tell me about the Hegemony.",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_1,DialogOptionSelected,"$option == greatRevolutionaryHegemonyOption",,"She gives you a quizzical look as if you asked her a question everyone knows the answer to. 
+
+""The Hegemony is what I like to call 'history that refuses to die'. They are a bunch of paranoid generals who liken themselves as great leaders under constant siege, holding the light of civilization against the darkness.""
+
+She gives a small huff of amusement. 
+
+""As if...""
+
+A small smile appears. You can tell she finds this notion to be ridiculous. 
+
+""In many cases they are much like us. Except...the military is subordinate to the civilian government, not like what the Hegemony has.""","greatRevolutionaryHegemony1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_2,DialogOptionSelected,"$option == greatRevolutionaryHegemony1",,"""The Nation has many past dealings with the Hegemony, mostly at the point of the gun. They are very twitchy when it comes to AI and more than once they complained about our Replika developments. They attempted to send inspection fleets or have their Luddic proxies cause problems.""
+
+""Of course these usually do not amount to much. The Luddics are swept up quickly or infiltrated before they can expand to uncontrollable levels. The inspection fleets get turned away by the Perseans before they approach us.""
+
+She gives a small chuckle. Apparently she is content over the current state of the Hegemony's dilemma. 
+
+""The League is very wary of Hegemony military forces near their space so any attempt to send forces our way gets noticed very quickly.""","greatRevolutionaryHegemony2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_3,DialogOptionSelected,"$option == greatRevolutionaryHegemony2",,"""Ever since the Opis atrocity and the Second AI war, the Hegemony is on the back foot. Their military and government is strained. They have to contend with not only the League and Tri Tachyon but also the smaller states. We are lucky we have a large powerful neighbor blocking the Hegemony from going after us.""
+
+She stops and smiles again. Looks like the topic has brought up amusing memories. 
+
+""I believe that is it. Not much more on the topic."" she says. Looks like this conversation is done.
+
+You give her your thanks for the information and end the topic.","greatRevolutionaryHegemony3:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryHegemony3","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_HEGEMONY_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianFuelCompanyOption:Tell me about the Sindrian Fuel Company.",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_1,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompanyOption",,"She gives you an exasperated look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
+
+""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really not exist but it does.""
+
+She crosses her arms and purses her lips. 
+
+""Just remember, despite our close ties, I do not have confidence that the Sindrian Fuel Company will be able to continue existing if current things continue the way they are.""","greatRevolutionarySindrianFuelCompany1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_2A,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany1
+$player.metMacario == false",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the SFC's stability. Nomially the head is...The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+You can tell from her face that saying Andrada's official company title took some effort not to induce a disgusted laugh from her.
+
+""However, information about the Sindrian Fuel Company's internal workings is opaque. Our intelligence services have not been able to get a good read on the current status of the government on Sindria lately. Something is going on and the Sindrians are very tight lipped.""
+
+She paused a bit.
+
+""I'm sure you will eventually cross paths with the SFC.""
+","greatRevolutionarySindrianFuelCompany2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_2B,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany1
+$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is...The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+You can tell from her face that saying Andrada's official company title took some effort not to induce a disgusted laugh from her.
+
+""Information about the SFC's internal workings is opaque. However, recent developments have allowed us to get a better picture on the current internal situation of the SFC.""
+
+""There are three camps. Lion's Guard commander and second-in-command to Andrada, led by Horacio Caden. Loyal to a degree. His fleet never ventures past Sindria's orbit. Limited intelligence and boastful. ""
+
+""Second, Oxana Hyder. Vice Executive Manager for the Board of Security and commander of the Askonia System Defense Armada. Has ties to the underworld. Also loyal.""
+
+""Third, Dolos Macario. He is the Executive Manager for the Board of Human Resources of the SFC.""
+
+She paused a bit.
+
+""I know you talked to Macario. He is a snake. Be careful of that one.""","greatRevolutionarySindrianFuelCompany2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_3,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany2",,"""Now consider this. The SFC is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
+
+""Outside of its major military capabilities and unique sets of fuel tanker derived warship designs, the SFC has been able to hold on due to its strategic position and vital exports.""
+
+She puts her right hand near her face and begins to rub her temples.
+
+The state is literally called, 'The Sindrian Fuel Company' as if it needed to spell it out. The SFC's exports of antimatter fuel, lobsters, and franchise operations are keeping it afloat.""","greatRevolutionarySindrianFuelCompany3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_4,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany3",,"""Ever since the Askonia Crisis, the SFC has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
+
+She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.
+","greatRevolutionarySindrianFuelCompany4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompany4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE
+!eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianOption:Tell me about the Sindrian Diktat.",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_1,DialogOptionSelected,"$option == greatRevolutionarySindrianOption",,"She gives you a blank look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
+
+""The...Sindrian Diktat is a fortress of cardboard. It is...a very interesting place where it should not exist but it does.""
+
+She crosses her arms and purses her lips. 
+
+""Just remember, despite our close ties, I do not have confidence that the Sindrian Diktat will be able to continue existing if current things continue the way they are.""","greatRevolutionarySindrian1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2A,DialogOptionSelected,"$option == greatRevolutionarySindrian1
+$player.metMacario == false",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+""However, information about the Diktat's internal workings is opaque. Our intelligence services have not been able to get a good read on the current status of the government on Sindria lately. Something is going on and the Sindrians are very tight lipped.""
+
+She paused a bit.
+
+""I'm sure you will eventually cross paths with the Diktat.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2B,DialogOptionSelected,"$option == greatRevolutionarySindrian1
+$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+
+""Information about the Diktat's internal workings is opaque. However, recent developments have allowed us to get a better picture on the current internal situation of the Diktat.""
+
+""There are three camps. Lion's Guard commander and second-in-command to Andrada, led by Horacio Caden. Loyal to a degree. Limited intelligence and boastful.""
+
+""Second, Oxana Hyder. Deputy Star Marshal of the Askonia System Defense Armada. Has ties to the underworld. Also loyal""
+
+""Third, Dolos Macario. He is the Chief High Inspector-General of the internal security of the Diktat.""
+
+She paused a bit.
+
+""I know you talked to Macario. He is a snake. Be careful of that one.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_3,DialogOptionSelected,"$option == greatRevolutionarySindrian2",,"""Now consider this. The Diktat is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
+
+""Outside of its major military capabilities and unique sets of warship designs, the Diktat has been able to hold on due to its strategic position and vital exports. I even heard someone within the Hegemony's officer corps is that they disparage it as a ''gas station with a fleet''. Amusing yes but it gets the point across. The Diktat's exports of antimatter fuel and luxury food items are keeping it afloat.""","greatRevolutionarySindrian2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_4,DialogOptionSelected,"$option == greatRevolutionarySindrian3",,"""Ever since the Askonia Crisis, the Diktat has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
+
+She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.","greatRevolutionarySindrian4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrian4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"greatRevolutionaryTriTachyonOption:Tell me about the Tri-Tachyon Corporation.",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_1,DialogOptionSelected,"$option == greatRevolutionaryTriTachyonOption",,"There was a pause. A small huff and she began to explain. 
+
+""Tri-Tachyon is uh...to say the least, a corporation with significant capture of multiple segments of economic, social and military power in the sector.""
+
+""Truth be told, we know a lot and we do not know much about them. Our own intelligence services have their hands full dealing with the constant penetration and intrusions into the Nation's computer systems.""","greatRevolutionaryTriTachyon1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_2,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon1",,"""From what my advisors tell me, they are the only group in this sector that managed to escape the Collaspe relatively unharmed. Lots of rumors that they planned the entire thing.""
+
+She puts her hand to her face and rubs her cheek as she contemplates her next words. 
+
+""Their dealings with the Empire is the reason why we have the Replika program. Or at least the early starts.""","greatRevolutionaryTriTachyon2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_3,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon2",,"""From our records, Tri-Tachyon and the Empire attempted a very small partnership in order to create Replikas. However they left after the first prototypes were created as they saw no further need to stay. The records indicate they had better solutions than what the Empire had envisioned.""
+
+""In theory they left, but we know they keep tabs on our Replika programs. It is a constant battle to keep secrets from prying eyes like Tri-Tachyon. They deploy spyware, they use AI propaganda against our citizen's minds, they bribe, they coerce, they steal information. They the ever persistent threat.""
+
+You see a very annoyed look on her face. Clearly Tri-Tachyon has proven to be a willy opponent in the espionage game.","greatRevolutionaryTriTachyon3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_4,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon3",,"""After the Second AI War the military threat from Tri-Tachyon has diminished but never fully went away. They evolved to become more insidious external threat. Their military is oriented towards the Hegemony but they never took their eyes off the Nation. Not one bit.""
+
+""Constant vigilance is what keeping them at bay.""
+
+The last sentence had an air of finality, indicating the topic has ended. You thank you for the information as its best not to press more on the topic.","greatRevolutionaryTriTachyon4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryTriTachyon4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_TRITACHYON_OPTION",,,,,,
+,,,,,,
+# THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,,,,,,
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION,PopulateGreatRevolutionaryChatOptions,"eusan_nation_personRelationChecker WELCOMING
+eusan_nation_hasModId UAF",,,"greatRevolutionaryUAFOption:Tell me about the United Aurora Federation",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_1,DialogOptionSelected,"$option == greatRevolutionaryUAFOption",,"""United Aurora Federation?"" she asked. 
+
+There was a short pause while she collected her thoughts. 
+
+""Yes there is a state called the United Aurora Federation. They mysteriously showed up in the sector a few years ago. Our intelligence agents have been unable to fully account how such a state like the UAF exists without anyone knowing, let alone allowed to become capable of amassing a large fleet without anyone knowing.""","greatRevolutionaryUAF1:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_2,DialogOptionSelected,"$option == greatRevolutionaryUAF1",,"""Truth be told, our spies and agents have been rather unsuccessful in finding out good information outside of what is publicly known.""
+
+""If you know your sector history and interstellar maps, you will know that the sector has very few planets that are habitable. The UAF, by some miracle, has established themselves here on this planet in the galactic south direction of the sector. Far away from the core worlds""
+
+The Great Revolutionary shares a map of the sector on the screen. A series of stars with one of them labeled AOI. 
+
+""Long range reconnaissance by our military has determined this planet to be effectively a garden world by sector standards. What is interesting is that Domain-era maps do not show this world like someone omitted it or erased it. So its a mystery.""","greatRevolutionaryUAF2:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_3,DialogOptionSelected,"$option == greatRevolutionaryUAF2",,"""Now the UAF has mostly kept to themselves, with exception of a few skirmishes with pirates and a couple, more serious events with the Hegemony and Tri-Tachyon."" she said. 
+
+""Our information points to a major conflict with Tri-Tachyon sometime in the past while the battles against the Hegemony are more recent. Our agents are attempting to get the data from both powers but all indications there were major shooting conflicts that somehow stayed away from the public's eye.""
+
+""The UAF, for all intents, managed to beat both powers back. Not an easy feat and certainly points to the UAF being capable of fighting the major players of the sector.""","greatRevolutionaryUAF3:Continue",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_4,DialogOptionSelected,"$option == greatRevolutionaryUAF3",,"""To make matters worse, intelligence has discovered they have three large capital ships that dwarf any existing capital ship designs used by the Nation and those used by the Core planets. Keeping tabs on those three are using a tremendous amount of resources.""
+
+""On a final note, if you do find yourself fighting against the UAF for whatever reason, remember what I just told you. They can fight well.""","greatRevolutionaryUAF4:End Conversation",
+THE_GREAT_REVOLUTIONARY_CHAT_UAF_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryUAF4","FireAll PopulateGreatRevolutionaryChatOptions",,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT_UAF_OPTION",,,,,,
+"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+,,,,,,
 # THE_GREAT_REVOLUTIONARY_OPERATION1,,,,,,
-op1,,,,,,
+,,,,,,
+# op1,,,,,,
+"#END op1",,,,,,
 "#END THE_GREAT_REVOLUTIONARY_OPERATION1",,,,,,
 ,,,,,,
-# THE_GREAT_REVOLUTIONARY_CHAT,,,,,,
-Chat1,,,,,,
-"#END THE_GREAT_REVOLUTIONARY_CHAT",,,,,,
+# THE_GREAT_REVOLUTIONARY_OPERATION 2,,,,,,
+,,,,,,
+# OP2,,,,,,
+"#END OP2",,,,,,
+"#END THE_GREAT_REVOLUTIONARY_OPERATION 2",,,,,,
 ,,,,,,
 # THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,,,,,,
 THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS,PopulateOptions,"$id == eusan_nation_great_revolutionary score: 100",,,"greatRevolutionaryChat:Chat with the Great Revolutionary",
-THE_GREAT_REVOLUTIONARY_LISTCHATOPTIONS,DialogOptionSelected,"$option == greatRevolutionaryChat","FireAll PopulategreatRevolutionaryChat","""What do you wish to speak about?""
+THE_GREAT_REVOLUTIONARY_LISTCHATOPTIONS,DialogOptionSelected,"$option == greatRevolutionaryChat","FireAll PopulateGreatRevolutionaryChatOptions","""What do you wish to speak about?""
 OR
 ""Speak""
 OR
@@ -1504,14 +1965,11 @@ OR
 ""What do you want to know?""
 OR
 ""Returning I see.""",,
-THE_GREAT_REVOLUTIONARY_ESCAPE_OPTIONS,PopulategreatRevolutionaryChat,,"SetShortcut greatRevolutionaryChatEscape ""ESCAPE""",,"greatRevolutionaryChatEscape:""I got to go now...""",
+THE_GREAT_REVOLUTIONARY_ESCAPE_OPTIONS,PopulateGreatRevolutionaryChatOptions,,"SetShortcut greatRevolutionaryChatEscape ""ESCAPE""",,"greatRevolutionaryChatEscape:""I got to go now...""",
 THE_GREAT_REVOLUTIONARY_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionaryChatEscape","FireAll PopulateOptions","""I see...""
 OR
 ""Good bye.""",,
 "#END THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS",,,,,,
-,,,,,,
-# THE_GREAT_REVOLUTIONARY_OP1,,,,,,
-"#END THE_GREAT_REVOLUTIONARY_OP1",,,,,,
 "#END THE_GREAT_REVOLUTIONARY",,,,,,
 "#END EUSAN_NATION_NPC",,,,,,
 

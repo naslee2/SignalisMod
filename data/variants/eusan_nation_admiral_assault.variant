@@ -1,0 +1,82 @@
+{
+  "variantId": "eusan_nation_admiral_assault",
+  "hullId": "eusan_nation_admiral",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 35,
+  "fluxVents": 40,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "heavyarmor",
+    "stabilizedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "eusan_nation_admiral_builtin2",
+        "WS0002": "eusan_nation_admiral_builtin1"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "pilum",
+        "WS0011": "pilum",
+        "WS0012": "pilum",
+        "WS0013": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "eusan_nation_pernach",
+        "WS0008": "eusan_nation_pernach",
+        "WS0014": "eusan_nation_pernach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "eusan_nation_kompakt",
+        "WS0004": "eusan_nation_tulip",
+        "WS0006": "eusan_nation_kompakt",
+        "WS0007": "eusan_nation_tulip",
+        "WS0009": "eusan_nation_kompakt"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "eusan_nation_dangpa",
+        "WS0016": "eusan_nation_dangpa",
+        "WS0018": "eusan_nation_dangpa",
+        "WS0019": "eusan_nation_dangpa",
+        "WS0020": "eusan_nation_dangpa",
+        "WS0022": "eusan_nation_dangpa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "eusan_nation_pebble",
+        "WS0021": "eusan_nation_pebble"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

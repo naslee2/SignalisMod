@@ -55,9 +55,10 @@ public class eusan_nation_neuralRepoQuest extends HubMissionWithSearch{
         setStageOnGlobalFlag(Stage.RETURN_INFO, "$eusan_nation_neuralrepo_returnInfo");
         setStageOnGlobalFlag(Stage.COMPLETED, "$eusan_nation_neuralrepo_completed");
 
-        //beginStageTrigger(Stage.MEET_AGENT);
+        beginStageTrigger(Stage.MEET_AGENT);
+        triggerUnhideCommListing(specialAgent);
         makeImportant(specialAgent, "$eusan_nation_neuralrepo_started", Stage.MEET_AGENT);
-        //endTrigger();
+        endTrigger();
         
         beginStageTrigger(Stage.RETURN_INFO);
         triggerHideCommListing(specialAgent);

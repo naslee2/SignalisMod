@@ -1,11 +1,51 @@
 {
     "music":{
-        "tsuyoshi_market_friendly":[
+        "tsuyoshi_drifting":[
             {
                 "source":"sounds/music",
                 "volume":0.4,
                 "files":[
                     "SigSector_Drifting_Debris_03.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "electrictrojan_system_ambient":[
+            {
+                "source":"sounds/music",
+                "volume":0.4,
+                "files":[
+                    "System_ambient_loop.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "electrictrojan_market_friendly":[
+            {
+                "source":"sounds/music",
+                "volume":0.4,
+                "files":[
+                    "Market_Ambient_Friendly.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "electrictrojan_market_neutral":[
+            {
+                "source":"sounds/music",
+                "volume":0.4,
+                "files":[
+                    "Market_Ambient_Neutral_loop.ogg"
+                ],
+                "randomStart": true
+            }
+        ],
+        "electrictrojan_encounter_3":[
+            {
+                "source":"sounds/music",
+                "volume":0.4,
+                "files":[
+                    "Encounter_3_loop.ogg"
                 ],
                 "randomStart": true
             }
@@ -40,5 +80,9 @@
                 "randomStart": true
             }
         ]
-    }
+    },
+    #must be mono or one channel
+    "penrose_512_computersound":[
+        {"file": "sounds/sfx/computer-humming-236384.ogg","pitch": 1,"volume": 0.5},
+    ],
 }
