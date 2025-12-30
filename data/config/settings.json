@@ -27,7 +27,9 @@
             "nation_bar": "graphics/illustrations/nation_bar.png",
             "rotfront_bar": "graphics/illustrations/rotfront_bar.png",
             "512_exterior": "graphics/illustrations/512_exterior.png",
-            "512_polaroid": "graphics/illustrations/512_polaroid.png"
+            "512_polaroid": "graphics/illustrations/512_polaroid.png",
+            "512_cockpit1": "graphics/illustrations/512_cockpit1.png",
+            "512_cockpit2": "graphics/illustrations/512_cockpit2.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"

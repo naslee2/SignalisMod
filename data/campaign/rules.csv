@@ -464,17 +464,16 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
-RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$player.metAdmiralFalke == true
+$player.metAdmiralFalke == false
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
 eusan_nation_personRelationChecker COOPERATIVE
 ","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
-SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
 RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
@@ -482,7 +481,7 @@ $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
+eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false
 SetTextHighlightColors ""221, 0, 0, 225""
@@ -492,8 +491,8 @@ Upon entering, you see why. Standing before you and Ariane, is Admiral Falke her
 
 Your mind is racing, wondering what she could be doing here. Your thoughts are pierced, one becoming louder, clearer than the others. It is not yours.
 
-Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:Telepathy?
-officeryeongPenroseRecovery512_briefing0_2:Get out of my head.
+Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:""Telepathy?""
+officeryeongPenroseRecovery512_briefing0_2:""Get out of my head.""
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
@@ -501,7 +500,7 @@ SetTextHighlights ""A crude term. How have you done so much work for us but neve
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
 ""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1:Continue
-officeryeongPenroseRecovery512_briefing1_1:Why don't you just beam the mission into my head?",
+officeryeongPenroseRecovery512_briefing1_1:""Why don't you just beam the mission into my head?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.""","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
 
@@ -622,8 +621,9 @@ SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","You and your crew enter the ship.",,
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a,PopulateOfficerYeongPenrose512ForwardSectionExplore,,,,"officeryeongPenrose512_forwardDecks_explore2a:Look around the cockpit.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == false",,"Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
+$player.officeryeongPenrose512_foundphoto == false","ShowImageVisual 512_cockpit1","Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","ShowImageVisual 512_cockpit1
+SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid
 ","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
 
@@ -634,8 +634,8 @@ SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if th
 KaysaarKeypad initCode
 ShowImageVisual 512_polaroid","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == true",,"You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cockpit2","You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound","ShowImageVisual 512_cockpit2","You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b,PopulateOfficerYeongPenrose512ForwardSectionExplore,"$player.officeryeongPenrose512_locatedDistress == false",,,"officeryeongPenrose512_forwardDecks_explore2b:Search for the distress beacon.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
 $player.officeryeongPenrose512_distress_located == false","SetTextHighlights ""distress beacon""","Your comms officer informs you that the distress signal's location has been more accurately triangulated, and it is likely somewhere in this room.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1:Search for the distress beacon controls.",
@@ -1258,6 +1258,7 @@ $faction.friendlyToPlayer score:1000
 $option == alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who's been helping us out recently! Tell you what, your first drink's on the house. Just a little thanks on behalf of our Nation.""
@@ -1268,6 +1269,7 @@ $faction.friendlyToPlayer score:1000
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new face! And from the looks of it, not from around here either. Well that's fine. Just take a seat, and I'll be with you shortly!""
@@ -1279,6 +1281,7 @@ $faction.neutralToPlayer score:100
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT"".
@@ -1289,6 +1292,7 @@ $faction.neutralToPlayer score:100
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT""
@@ -1344,39 +1348,44 @@ BeginConversation eusan_nation_alyssa false true","""It's you... Sorry, but I th
 "#END ALYSSA_GREETINGS",,,,,,
 ,,,,,,
 # ALYSSA_BAR_SALES,,,,,,
-ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
-ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
 ,,,,,,
 # ALYSSA_ENTER,,,,,,
-#ALYSSA_BAR_SALES_INTRO,PopulateAlyssaBarOptions,,,"""Would you like to see our selection""? Alyssa says. 
+ALYSSA_BAR_SALES_INTRO_OPTION,PopulateAlyssaBarOptions,"$player.metAlyssa == true",,,"barAlyssa_cigs_intro_option:Ask the bartender for the menu",
+ALYSSA_BAR_SALES_INTRO1,DialogOptionSelected,"$option == barAlyssa_cigs_intro_option",,"""Would you like to see our selection""? Alyssa says. 
 
-She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro:Browse the menu",
-#ALYSSA_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barAlyssa_cigs_intro2",,"You open the menu and begin browsing the items.","barAlyssa_cigs_intro:Browse the menu",
-ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro","FireAll PopulateAlyssaBarOptions","You browse through the available items listed on the menu.",,
+She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro1:Browse the menu",
+ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro1","FireAll PopulateAlyssaBarSellOptions","You browse through the available items listed on the menu.",,
 "#END ALYSSA_ENTER",,,,,,
 ,,,,,,
 # DRINKS_SALES,,,,,,
 "#END DRINKS_SALES",,,,,,
 ,,,,,,
-# CIGS_SALES,,,,,,
-ALYSSA_BAR_SALES_CIGS_DESC,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one for 15 credits.",
-ALYSSA_BAR_SALES_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc false
-SetTooltip barAlyssa_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
-","Cigarettes, made by the Nation. Mass produced and comes in vvone and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one package of cigarette for 15 credits.",
-ALYSSA_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+# NATION_CIGS_SALES,,,,,,
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.
+barAlyssa_cigs_desc2:Buy five cigarette packets for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc1 false
+SetTooltip barAlyssa_cigs_desc1 ""You recently bought cigarettes. Please wait for a day.""
+","Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.
+barAlyssa_cigs_desc2:Buy five cigarette packets for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc1","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+PlaySound ui_intel_something_posted
 AddCredits -15
-AdjustRepActivePerson WELCOMING 1
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro:Look at the other items for sale.",
-ALYSSA_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
-ALYSSA_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro1:Look at the other items for sale.",
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE1_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_desc2","AddRemoveCommodity eusan_nation_nationsmokes 5 true
 AddCredits -50
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-ALYSSA_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
-"#END CIGS_SALES",,,,,,
+""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.","barAlyssa_cigs_intro1:Look at the other items for sale.",
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
+"#END NATION_CIGS_SALES",,,,,,
+,,,,,,
+# ALYSSA_BAR_SALES_EXIT,,,,,,
+ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
+ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
+"#END ALYSSA_BAR_SALES_EXIT",,,,,,
 "#END ALYSSA_BAR_SALES",,,,,,
 ,,,,,,
 # ALYSSA_EXIT,,,,,,
@@ -1799,7 +1808,7 @@ THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_OPTION,PopulateGreatRevolutio
 eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianFuelCompanyOption:Tell me about the Sindrian Fuel Company.",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_1,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompanyOption",,"She gives you an exasperated look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
 
-""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really not exist but it does.""
+""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really should not exist but it does.""
 
 She crosses her arms and purses her lips. 
 
