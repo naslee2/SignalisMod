@@ -892,40 +892,6 @@ OR
 ""See you next time...""",,
 "#END OFFICER_YEONG_CHAT_OPTIONS",,,,,,
 ,,,,,,
-# OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
-OFFICER_YEONG_OPTIONS_COMPLIMENT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongComplementResult:Compliment Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_COMPLIMENT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongComplementResult false
-SetTooltip officeryeongComplementResult ""You recently done this. Wait for a few days.""",,"officeryeongComplementResult:Compliment Officer Yeong",
-OFFICER_YEONG_OPTIONS_INSULTS,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_INSULTS_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongInsultResult false
-SetTooltip officeryeongInsultResult ""You recently done this. Wait for a few days.""",,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_COMPLIMENT_RESULT,DialogOptionSelected,"$option == officeryeongComplementResult","AdjustRepActivePerson WELCOMING 1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""Flattery is nice.""
-OR
-""Thank you, but you're not my type.""
-OR
-""Why, thank you for the nice words. You just made my day slightly brighter than normal.""
-OR
-""Do you mean it?""",,
-OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""That is not nice...""
-OR
-""Aye, go away then...""
-OR
-""Uh-huh... right then...""
-OR
-""Insulting me right here, right now? Wow...""",,
-"#END OFFICER_YEONG_INSULT_COMPLIMENT",,,,,,
-,,,,,,
 # OFFICER_YEONG_GIFT,,,,,,
 OFFICER_YEONG_OPTIONS_GIFT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.officeryeonggiftgive == false",,,"officeryeongGiftOptions:Give Officer Yeong a Gift",
