@@ -1,0 +1,28 @@
+{
+  "events":[
+      {
+        "name":"Diplomatic Summit",
+        "stage":"eusan_nation_diplomatic_summit",
+        "random":true,
+        "minRepLevelToOccur":"neutral",
+        "minRepChange":0.05,
+        "maxRepChange":0.2,
+        "allowedFactions1":["eusan_nation"],
+        "allowedFactions2":["sindrian_diktat"],
+        "chance":0.2,
+        "desc":"The $theOtherFaction and the $faction have met $onOrAt $market to discuss relations. After a positive meeting, $theOtherFaction announces a deal to supply antimatter fuel to $TheFaction."
+      },
+      {
+        "name":"Collision in Space",
+        "stage":"eusan_nation_collision",
+        "random":false,
+        "minRepLevelToOccur":"suspicious",
+        "minRepChange":-0.5,
+        "maxRepChange":-0.3,
+        "allowedFactions1":["eusan_nation"],
+        "allowedFactions2":["hegemony","eis","tritachyon","persean","knights_of_ludd"],
+        "chance":0.1,
+        "desc":"$theOtherFaction has furiously accused $TheFaction of conducting unsafe maneuvers after warships from both sides came into close proximity. While $TheFaction claims the $theOtherFaction provoked them, reports indicate that injuries were sustained by crew on ships belonging to the $theOtherFaction."
+      }
+  ]
+}
