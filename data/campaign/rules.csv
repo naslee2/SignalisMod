@@ -668,6 +668,7 @@ OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officer
 OFFICER_YEONG_PENROSE512_ENTRY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenrose512Explore
 ","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
+OFFICER_YEONG_PENROSE512_HALLWAY,PopulateOfficerYeongPenrose512Explore,,"ShowImageVisual 512_hallway",,,"Shows hallway illustration"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
@@ -675,10 +676,12 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explo
 $player.officeryeongPenrose512_poweron == true",,,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""
+",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""
+",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
 SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
@@ -702,12 +705,13 @@ $player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cockpit2
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound","ShowImageVisual 512_cockpit2","You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b,PopulateOfficerYeongPenrose512ForwardSectionExplore,"$player.officeryeongPenrose512_locatedDistress == false",,,"officeryeongPenrose512_forwardDecks_explore2b:Search for the distress beacon.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
-$player.officeryeongPenrose512_distress_located == false","SetTextHighlights ""distress beacon""","Your comms officer informs you that the distress signal's location has been more accurately triangulated, and it is likely somewhere in this room.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1:Search for the distress beacon controls.",
+$player.officeryeongPenrose512_distress_located == false","SetTextHighlights ""distress beacon""
+ShowDefaultVisual","Your comms officer informs you that the distress signal's location has been more accurately triangulated, and it is likely somewhere in this room.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1:Search for the distress beacon controls.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1",,"Peeling back a panel, your salvors locate the distress beacon, defiantly transmitting in spite of the destroyed electronics surrounding it.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2:Shut down the beacon. ",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2","$player.officeryeongPenrose512_locatedDistress = true
 eusan_nation_penrose512Quest_rulecmd resumeMusic_512","You tune to the frequency with your suit's radio, confirming the beacon is still transmitting. After a few unsuccessful attempts to shut it down through more deft means, your salvage crew wrenches it out of its housing with a crowbar and silences it with a forceful strike.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the forward deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
-$player.officeryeongPenrose512_distress_located == true",,"The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound:Continue",
+$player.officeryeongPenrose512_distress_located == true","ShowDefaultVisual","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound:Continue",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound",,"The recovery crew has already swept this area. Nothing of note is left here save for the debris and damaged equipment.
 ","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the forward deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit","ShowDefaultVisual","Leaving behind a skeleton crew, you exit the forward deck.","officeryeongPenrose512_forwardDecks_exit_option:Return to the staging area.",
