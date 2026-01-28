@@ -549,7 +549,8 @@ eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenr
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false
 SetTextHighlightColors ""221, 0, 0, 225""
-SetTextHighlights ""Good evening, commander.""","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
+SetTextHighlights ""Good evening, commander.""
+ShowImageVisual 512_briefing","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
 
 Upon entering, you see why. Standing before you and Ariane, is Admiral Falke herself.
 
@@ -559,7 +560,8 @@ Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:""Telepath
 officeryeongPenroseRecovery512_briefing0_2:""Get out of my head.""
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","SetTextHighlightColors ""221, 0, 0, 225""
-SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
+SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""
+","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
 
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
@@ -576,7 +578,7 @@ SetTextHighlights ""Your devotion is admirable. We have a task for you, requirin
 
 Falke glances at Ariane, waiting for her to say something.","officeryeongPenroseRecovery512_briefing1:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
-",,"Ariane lays a folder on the desk, the redactions and notes on the documents are considerably more neat and professional than the ones for previous missions.
+","ShowImageVisual 512_briefing","Ariane lays a folder on the desk, the redactions and notes on the documents are considerably more neat and professional than the ones for previous missions.
 
 ""While you were away, the Rotfront Array detected a signal coming from deep space. Though it was heavily distorted, it is clearly another Penrose distress signal.""
 
@@ -620,7 +622,8 @@ OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeong
 OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""That is what we believe to be the case."" Falke stands up, and begins pacing around the room as she says this. ""And that is where you come in. Your fleet is well equipped and could investigate the signal, without requiring us to organize an expeditionary force of our own.""
 
 The lie is barely disguised. You are expendable, more so than the Nation's own fleets at least. So you will test the waters.","officeryeongPenroseRecovery512_briefing5:Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","ShowPersonVisual
+SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
 Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
 
 ","Falke motions to Ariane, perhaps speaking to her telepathically as well. Ariane snaps to attention and tells you the mission info.
@@ -629,6 +632,7 @@ Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_pe
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
+ShowPersonVisual
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
@@ -755,8 +759,10 @@ OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT_OPTION,DialogOptionSelected,"$option =
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","You finish searching the crew quarters, deciding to go elsewhere.",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks_explore2b:Enter the Reactor room.","Player finds a power grid controller"
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
-$player.officeryeongPenrose512_poweron == false",,"Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.","officeryeongPenrose512_aftDecks_explore2b_power1:Order your crew to stabilize the reactor.",
-OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1",,"You watch on your tri-pad as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
+$player.officeryeongPenrose512_poweron == false",,"Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.
+
+Once the salvors enter, the damage to the power systems can be fully seen. From the live feed, a bunch of pipe, wires and broken equipment lay all over the room. Nearby the control system readout's red screen flashes with error and warning notifications. ","officeryeongPenrose512_aftDecks_explore2b_power1:Order your crew to stabilize the reactor.",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1",,"You watch on your hand held screen as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERCHECK,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
 $player.officeryeongPenrose512_poweron == true",,"The parts of the ship that remain functional flicker on as the power comes online, and your exhausted crew seals the reactor room off.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power","$player.officeryeongPenrose512_poweron = true","You check the power readout given to you by the salvage crew, showing everything to be stable.","officeryeongPenrose512_aftDecks_explore2b_exit_option:Go back and search the rest of the deck in this area.",
@@ -804,7 +810,6 @@ The crewmember tries again. The red light flashes again.
 
 The crewmember gives you a defeated look. Unless you wish to breach the seal and risk the life of the pilot inside, you will need the code to the 9 digit pad to unlock.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
 
 The doors hiss and open, disappointingly, to an empty chamber. Not so much as a smudge can be spotted on the interior as the water drains from it.","officeryeongPenrose512_cryo_explore3:Continue",
@@ -818,6 +823,7 @@ You stand there in silence. Already the crew is whispering behind you that the s
 Your recovery team hasn't found any members of the crew. No pilot, no replika, no evidence the crew existed. Just remnants of one. Now the cryo chamber you find out, is empty. 
 
 With nothing left to see, you signal to your crew that its time to leave.","officeryeongPenrose512_cryo_explore4:Return to your fleet.",
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
 OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore4","FireAll PopulateOptions","You look over the salvage summary as the shuttle ascends. Nothing of particular note was recovered, save for the flight recorder data. Lazily flipping through photos of the operation, the red display panel catches your eye again, with the pilot's name on it. 
 
 A. Yeong. ",,
@@ -985,8 +991,7 @@ OR
 She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
 OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
 OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
+","FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
 
 ""Wait... what do you mean blue lobsters?""
 OR
@@ -1019,8 +1024,7 @@ OR
 She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""A plush lobster? I honestly don't know.""
+","FireAll PopulateOptions","""A plush lobster? I honestly don't know.""
 OR
 ""A toy? Can I even have something like that?...""
 OR
@@ -1052,8 +1056,7 @@ OR
 ",,
 OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
 OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""test""",,
+","FireAll PopulateOptions","""test""",,
 OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape:Reconsider giving a gift...",
 OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
 OR
