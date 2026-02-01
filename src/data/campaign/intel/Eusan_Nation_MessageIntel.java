@@ -22,7 +22,7 @@
 //           arianeMessage_neuroRepo_a.addLine(messageIntel_line1);
 //           Global.getSector().getIntelManager().addIntel(arianeMessage_neuroRepo_a);
 //
-//            //todo: override .createSmallDescription()
+////todo: override .createSmallDescription()
 //
 //        }
 //
