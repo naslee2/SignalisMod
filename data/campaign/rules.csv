@@ -989,7 +989,8 @@ OR
 ""Oh my, lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact, don't tell me. I don't want to know...""
 
 She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
-OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
+OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId PAGSM
+!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
 OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
 ","FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
 
@@ -1022,7 +1023,8 @@ OR
 ""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Fortunately, I have the means of keeping gifts... or sanitizing them. Thanks anyway.""
 
 She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId PAGSM
+!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
 ","FireAll PopulateOptions","""A plush lobster? I honestly don't know.""
 OR
@@ -1054,15 +1056,35 @@ OR
 ""This is really good. Thanks for the gift!""
 
 ",,
-OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
+OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId uaf
+!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
 OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
-","FireAll PopulateOptions","""test""",,
-OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape:Reconsider giving a gift...",
+","FireAll PopulateOptions","""Chocolava? What is that?""
+
+""A cake? With a liquid filling? From the edges of the sector? Interesting.""
+OR
+""I have never heard about such things. A pastry cake is not something I have the luxury to have or even get.""
+
+""Why?""",,
+OFFICER_YEONG_GIFT_CIGS_OFFER,PopulateofficeryeongGiftOptions,"PlayerHasCargo eusan_nation_nationsmokes",,,"officeryeongGiftNationCigs:Offer Officer Yeong a pack of cigarettes made by the Nation",
+OFFICER_YEONG_GIFT_CIGS_GIFTED,DialogOptionSelected,"$option == officeryeongGiftNationCigs","AddRemoveCommodity eusan_nation_nationsmokes -1 true
+AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 5
+FireAll PopulateOptions","""Ah. I was going to go out an buy a pack. Thank you very much. I appreciate what you done for me.""
+
+$personLastName takes the pack of cigarettes and places it on her table. Nearby the stack of papers you spy a small, well used lighter. Looks like a good move to help her out. 
+OR
+$personLastName looks at the package you are offering. Her expression softens and you can see faint indications of gratitude. 
+
+""Thank you very much. I know smoking isn't good for me but it helps me calm down.""",,
+OFFICER_YEONG_GIFT_CIGS_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo eusan_nation_nationsmokes",,,"officeryeongNationCigsAsk:Offer Officer Yeong a pack of cigarettes made by the Nation",
+OFFICER_YEONG_GIFT_CIGS_RESPONSE,DialogOptionSelected,,,,,
 OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
 OR
 ""Perhaps it'd be best if you did not.""
 OR
 ""Whatever...""",,
+OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape:Reconsider giving a gift...",
 "#END OFFICER_YEONG_GIFT",,,,,,
 "#END OFFICER_YEONG",,,,,,
 ,,,,,,
