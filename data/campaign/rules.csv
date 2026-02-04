@@ -1420,25 +1420,27 @@ ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro1","F
 "#END DRINKS_SALES",,,,,,
 ,,,,,,
 # NATION_CIGS_SALES,,,,,,
-ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.
-barAlyssa_cigs_desc2:Buy five cigarette packets for 15 credits.",
-ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc1 false
+ALYSSA_BAR_SALES_NATION_CIGS_DESC,PopulateAlyssaBarSellOptions,,,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ",,
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY1,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,,"barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY5,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,,"barAlyssa_cigs_desc2:Buy five cigarette packets for 55 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT1,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc1 false
 SetTooltip barAlyssa_cigs_desc1 ""You recently bought cigarettes. Please wait for a day.""
-","Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.
-barAlyssa_cigs_desc2:Buy five cigarette packets for 15 credits.",
+",,"barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT5,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc2 false
+SetTooltip barAlyssa_cigs_desc2 ""You recently bought cigarettes. Please wait for a day.""
+",,"barAlyssa_cigs_desc2:Buy five cigarette packets for 55 credits.",
 ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc1","AddRemoveCommodity eusan_nation_nationsmokes 1 true
 PlaySound ui_intel_something_posted
 AddCredits -15
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro1:Look at the other items for sale.",
-ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE1_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
 ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_desc2","AddRemoveCommodity eusan_nation_nationsmokes 5 true
-AddCredits -50
+PlaySound ui_intel_something_posted
+AddCredits -55
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
 ""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.","barAlyssa_cigs_intro1:Look at the other items for sale.",
-ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
 "#END NATION_CIGS_SALES",,,,,,
 ,,,,,,
 # ALYSSA_BAR_SALES_EXIT,,,,,,
