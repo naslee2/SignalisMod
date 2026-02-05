@@ -850,25 +850,27 @@ OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$opti
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1",,"She sets down the papers in a clump besides her desk, sitting down in the chair.
 
 ""Well? What did you find?""","officeryeongPenrose512Confirm2:Show her the salvage report.",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2",,"She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the red screen.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2",,"She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the final set of photos.
 
 ""Doesn't seem too out of the ordinary for a recovery op, apart from the empty cryo chamber. Was there anything else?""","officeryeongPenrose512Confirm3:""There is.""",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3",,"You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
 
-""Damaged. Photo is a consumer brand common on Rotfront. I used to develop these at a photo store.""
+""Damaged. Photo is a consumer brand common on Rotfront. I used to develop these at a photo store. No written words on the front or back.""
 
 ""I wonder who this woman is..."" Ariane says. She flips the photo to show you the woman. 
 
 A cheerful, smiling, brown haired woman in a Volksarmee uniform can be seen on the damaged photograph. Not the white haired girl on it originally.","officeryeongPenrose512Confirm4:Wait...what?",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4",,"""Is there something wrong, $playerName?"" she asks, seeing your confusion. She gives the picture another look, then puts the photo into a folder filled with papers.","officeryeongPenrose512Confirm5:""No, nothing is wrong.""",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4",,"""Is there something wrong, $playerName?"" she asks, seeing your visible confusion. She gives the picture another look, then puts the photo into a folder filled with papers. ","officeryeongPenrose512Confirm5:""No, nothing is wrong...""",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END6,DialogOptionSelected,"$option == officeryeongPenrose512Confirm5","$global.eusan_nation_penrose512_completed = true
 Call $global.eusan_nation_penrose512_ref updateStage
 AddStoryPoints 1
-FireAll PopulateOptions","""I see."" Ariane says. she takes a floppy disk you prepared with the salvage data and stuffs it into the computer.
+FireAll PopulateOptions","""I see."" Ariane says. she takes a storage device you prepared with the salvage data and inserts it into a slot in her computer.
 
-""This was the last job for you on the docket for now, thanks for your help."" She messes with something on the computer before turning back towards you.
+You feel like something is amiss. You clearly remember the photo had a silver haired woman in the damaged photo. Not a brown haired woman. You start to speak but Ariane cuts you off without looking up from her computer.
 
-""Falke should be here later to look this over. Remember: not a word about this mission leaves your fleet. Dismissed.""",,
+""This was the last job for you on the docket for now, thanks for your help."" She continues to type on the computer before turning back towards you.
+
+""Falke should be here later to look this over. Remember: not a word about this mission leaves your fleet. Dismissed."" ",,
 "#END RECOVERY512_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
 ,,,,,,
