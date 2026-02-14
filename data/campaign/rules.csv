@@ -695,7 +695,7 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelect
 $player.officeryeongPenrose512_foundphoto == false","ShowImageVisual 512_cockpit1","Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","ShowImageVisual 512_cockpit1
 SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid1
 ","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
 
 Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...","officeryeongPenrose512_forwardDecks_explore2aPhoto3:Examine the photo further...",
@@ -853,16 +853,17 @@ OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$opti
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2",,"She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the final set of photos.
 
 ""Doesn't seem too out of the ordinary for a recovery op, apart from the empty cryo chamber. Was there anything else?""","officeryeongPenrose512Confirm3:""There is.""",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3",,"You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3","ShowImageVisual 512_polaroid2","You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
 
 ""Damaged. Photo is a consumer brand common on Rotfront. I used to develop these at a photo store. No written words on the front or back.""
 
 ""I wonder who this woman is..."" Ariane says. She flips the photo to show you the woman. 
 
 A cheerful, smiling, brown haired woman in a Volksarmee uniform can be seen on the damaged photograph. Not the white haired girl on it originally.","officeryeongPenrose512Confirm4:Wait...what?",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4",,"""Is there something wrong, $playerName?"" she asks, seeing your visible confusion. She gives the picture another look, then puts the photo into a folder filled with papers. ","officeryeongPenrose512Confirm5:""No, nothing is wrong...""",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4","ShowImageVisual 512_polaroid2","""Is there something wrong, $playerName?"" she asks, seeing your visible confusion. She gives the picture another look, then puts the photo into a folder filled with papers. ","officeryeongPenrose512Confirm5:""No, nothing is wrong...""",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END6,DialogOptionSelected,"$option == officeryeongPenrose512Confirm5","$global.eusan_nation_penrose512_completed = true
 Call $global.eusan_nation_penrose512_ref updateStage
+ShowDefaultVisual
 AddStoryPoints 1
 FireAll PopulateOptions","""I see."" Ariane says. she takes a storage device you prepared with the salvage data and inserts it into a slot in her computer.
 

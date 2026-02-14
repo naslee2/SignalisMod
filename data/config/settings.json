@@ -28,7 +28,8 @@
             "rotfront_bar": "graphics/illustrations/rotfront_bar.png",
             "512_briefing": "graphics/illustrations/512_briefing.png",
             "512_exterior": "graphics/illustrations/512_exterior.png",
-            "512_polaroid": "graphics/illustrations/512_polaroid.png",
+            "512_polaroid1": "graphics/illustrations/512_polaroid.png",
+            "512_polaroid2": "graphics/illustrations/512_polaroid2.png",
             "512_cockpit1": "graphics/illustrations/512_cockpit1.png",
             "512_cockpit2": "graphics/illustrations/512_cockpit2.png",
             "512_hallway":  "graphics/illustrations/512_hallway.png"
