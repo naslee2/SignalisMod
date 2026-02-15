@@ -877,6 +877,35 @@ You feel like something is amiss. You clearly remember the photo had a silver ha
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
 ,,,,,,
+# OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION,,,,,,
+OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION,PopulateOfficerYeongChatOptions,"$id == ""eusan_nation_officer_yeong"" score: 100
+$player.askedArianeForWork == false",,,"OfficerYeongQuestGiveOption:Ask Ariane Yeong if she needs help with anything.",
+OFFICER_YEONG_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == OfficerYeongQuestGiveOption",,"""Help?"" she asks. 
+
+Without hesitation, Ariane picks up a clipboard that was covering a thick looking tablet device that looks suspiciously similar to a Tri-Pad. She flips though the paper pages and began to run her finger on the printed letters. 
+
+""Yes...actually I do. Here are a few items that need to be done. Once you give me your accedence and set up my contact, there will be a docket of work items you can help me with.""","OfficerYeongQuestGive1:Continue",
+OFFICER_YEONG_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == OfficerYeongQuestGive1",,"""Just remember, $playerName, I need your consent to begin working for me. Once I have it, then you can start working for me.""
+
+She flips a few more pages on the clipboard and checks off a line with a pen. 
+
+""So what say you?""","OfficerYeongQuestGive2a:Accept
+OfficerYeongQuestGive2b:Reconsider",
+OFFICER_YEONG_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == OfficerYeongQuestGive2a","AdjustRepActivePerson WELCOMING 5
+AddPotentialContact ""eusan_nation_officer_yeong""
+$player.askedArianeForWork == true","You accept to work for Ariane Yeong. 
+
+She gives you a slight, unsmiling nod.
+
+""Thank you. Now if you excuse me I got work to do.""","OfficerYeongQuestGiveEND:Leave",
+OFFICER_YEONG_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == OfficerYeongQuestGive2b",,"You tell her that you will think it over. 
+
+""I see. Well if you change your mind, please let me know. There is no shortage of work so please come back if you decide to help out.""
+
+She sets down the clipboard and you take it as a cue to leave or change the subject.","OfficerYeongQuestGiveEND:Leave",
+OFFICER_YEONG_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == OfficerYeongQuestGiveEND","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION",,,,,,
+,,,,,,
 # OFFICER_YEONG_CHAT_PENROSE,,,,,,
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM1,DialogOptionSelected,"$option == officeryeongChatPenroseProgramOption",,"""The Penrose Program? If you want to hear about that, it's going to be a long story but let me get down to the public facing summary: the Penrose is the Nation's deep space exploration program. That's it.""
