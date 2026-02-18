@@ -100,5 +100,6 @@ rotfront_bar,GALLERY,"Rotfront Bar","Living on Rotfront is a never ending story 
 512_cockpit1,GALLERY,"Penrose 512 Cockpit","""The ship is crashed in an icy landscape.""",,,,
 512_cockpit2,GALLERY,"Penrose 512 Cockpit","""Judging from the readout, there's no chance it'll never fly again...""",,,,
 512_hallway,GALLERY,"Penrose 512 Hallway","""I can't concentrate on anything. It's like there's this fog inside my head, and whenever I try to do anything, I just can't focus. I want to go outside, I want to breathe fresh air, I want to feel wind on my face and in my hair.""",,,,
+512_office,GALLERY,"Ariane's office","""Got out of Rotfront only to be end up in Heimat.""",,,,
 #PLANETS,,,,,,
 flooded_world,PLANET,"Rising sea levels have turned this otherwise habitable world into a flooded planet. The ecosystem will take time to recover from the sudden change of landscape on its own.",,,,,

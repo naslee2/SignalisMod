@@ -32,7 +32,8 @@
             "512_polaroid2": "graphics/illustrations/512_polaroid2.png",
             "512_cockpit1": "graphics/illustrations/512_cockpit1.png",
             "512_cockpit2": "graphics/illustrations/512_cockpit2.png",
-            "512_hallway":  "graphics/illustrations/512_hallway.png"
+            "512_hallway":  "graphics/illustrations/512_hallway.png",
+            "512_office":  "graphics/illustrations/512_office.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"

@@ -846,11 +846,11 @@ She shakes her head over your admission.
 
 ",,
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,PopulatePenrose512Options,"$global.eusan_nation_penrose512_recoveredData == true",,,"officeryeongPenrose512ConfirmOption:Tell her that you recovered the mission data recorder.",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenrose512ConfirmOption",,"For better or worse, Admiral Falke is nowhere to be found as you enter Ariane's office. She is busily shuffling through papers.","officeryeongPenrose512Confirm1:Continue",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1",,"She sets down the papers in a clump besides her desk, sitting down in the chair.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenrose512ConfirmOption","ShowImageVisual 512_office","For better or worse, Admiral Falke is nowhere to be found as you enter Ariane's office. She is busily shuffling through papers.","officeryeongPenrose512Confirm1:Continue",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1","ShowImageVisual 512_office","She sets down the papers in a clump besides her desk, sitting down in the chair.
 
 ""Well? What did you find?""","officeryeongPenrose512Confirm2:Show her the salvage report.",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2",,"She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the final set of photos.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2","ShowImageVisual 512_office","She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the final set of photos.
 
 ""Doesn't seem too out of the ordinary for a recovery op, apart from the empty cryo chamber. Was there anything else?""","officeryeongPenrose512Confirm3:""There is.""",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3","ShowImageVisual 512_polaroid2","You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
