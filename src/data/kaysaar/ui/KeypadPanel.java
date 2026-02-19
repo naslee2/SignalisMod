@@ -28,7 +28,7 @@ public class KeypadPanel implements CustomUIPanelPlugin {
     ArrayList<Integer> ints = new ArrayList<>();
     public static String keyMemToKey = "$homete_unique_key";
 
-    Logger logger = Global.getLogger(KeypadPanel.class);
+    //Logger logger = Global.getLogger(KeypadPanel.class);
 
     //width around 480 due to dialog limitations
     public KeypadPanel(InteractionDialogAPI dialog, float width, float height, boolean isItToShowCode) {
@@ -36,7 +36,7 @@ public class KeypadPanel implements CustomUIPanelPlugin {
         panel = Global.getSettings().createCustom(width, height, this);
         createUIForFirstTime();
         ints = (ArrayList<Integer>) Global.getSector().getMemory().get(keyMemToKey);
-        logger.info("Logger Active: UNORDERED PENROSE-512 CRYO KEYCODE IS: " + ints.toString());
+        //logger.info("Logger Active: UNORDERED PENROSE-512 CRYO KEYCODE IS: " + ints.toString());
         codeShowcaseMode = isItToShowCode;
     }
 
