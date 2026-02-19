@@ -703,7 +703,7 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSe
 SetTextHighlights ""self-developing photo"" ""Perhaps it would be best if you memorize this combination.""
 SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if this may come in handy. Perhaps it would be best if you memorize this combination.""
 KaysaarKeypad initCode
-ShowImageVisual 512_polaroid","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
+ShowImageVisual 512_polaroid1","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
 $player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cockpit2","You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound","ShowImageVisual 512_cockpit2","You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
@@ -893,7 +893,7 @@ She flips a few more pages on the clipboard and checks off a line with a pen.
 OfficerYeongQuestGive2b:Reconsider",
 OFFICER_YEONG_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == OfficerYeongQuestGive2a","AdjustRepActivePerson WELCOMING 5
 AddPotentialContact ""eusan_nation_officer_yeong""
-$player.askedArianeForWork == true","You accept to work for Ariane Yeong. 
+$player.askedArianeForWork = true","You accept to work for Ariane Yeong. 
 
 She gives you a slight, unsmiling nod.
 
