@@ -23,7 +23,7 @@ public class Eusan_Nation_System {
     public void generate(SectorAPI sector){
         StarSystemAPI system = sector.createStarSystem("Alatyr");
         system.getLocation().set(-13640, 8415);
-        system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
+        system.setBackgroundTextureFilename("graphics/backgrounds/alatyr_background.png");
         float tarrif_rate = 0.15f;
     
         PlanetAPI signalisStar = system.initStar("Die Sonne", "star_yellow", 650f, 450); //initStar( Unique starId, planet type from planets.json, radius, corona radius from star edge)

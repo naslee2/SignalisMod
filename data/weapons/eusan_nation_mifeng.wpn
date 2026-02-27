@@ -135,7 +135,7 @@
     60,
     75
   ],
-  "barrelMode": "LINKED",
+  "barrelMode": "ALTERNATING",
   "animationType": "SMOKE",
   "smokeSpec": {
     "particleSizeMin": 5,

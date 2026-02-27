@@ -211,12 +211,13 @@ public class Eusan_Nation_PeopleData {
         mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
         mary_cheng.setImportance(PersonImportance.MEDIUM);
         mary_cheng.setPersonality(Personalities.STEADY);
-        mary_cheng.getStats().setLevel(5);
+        mary_cheng.getStats().setLevel(7);
         mary_cheng.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
         mary_cheng.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 1);
         mary_cheng.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);
-        mary_cheng.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
+        mary_cheng.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);
         mary_cheng.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 1);
+        mary_cheng.getStats().setSkillLevel(Skills.NAVIGATION, 1);
         mary_cheng.setVoice(Voices.SOLDIER);
         importantPeople_miscOfficers.addPerson(mary_cheng);
     }

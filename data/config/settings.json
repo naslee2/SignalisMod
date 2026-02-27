@@ -26,8 +26,19 @@
             "leng_market": "graphics/illustrations/leng_illustration.png",
             "nation_bar": "graphics/illustrations/nation_bar.png",
             "rotfront_bar": "graphics/illustrations/rotfront_bar.png",
+            "512_briefing": "graphics/illustrations/512_briefing.png",
             "512_exterior": "graphics/illustrations/512_exterior.png",
-            "512_polaroid": "graphics/illustrations/512_polaroid.png"
+            "512_polaroid1": "graphics/illustrations/512_polaroid.png",
+            "512_polaroid2": "graphics/illustrations/512_polaroid2.png",
+            "512_cockpit1": "graphics/illustrations/512_cockpit1.png",
+            "512_cockpit2": "graphics/illustrations/512_cockpit2.png",
+            "512_hallway":  "graphics/illustrations/512_hallway.png",
+            "512_office":  "graphics/illustrations/512_office.png",
+            "512_reaktor":  "graphics/illustrations/512_reaktor.png",
+            "512_messhall":  "graphics/illustrations/512_messhall.png",
+            "512_crewquarters":  "graphics/illustrations/512_crewquarters.png",
+            "512_cryo1":  "graphics/illustrations/512_cryo1.png",
+            "512_cryo2":  "graphics/illustrations/512_cryo2.png"
         },
         "ui":{
             "keypad_bg":"graphics/ui/keypad.png"

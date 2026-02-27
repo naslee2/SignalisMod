@@ -79,42 +79,106 @@ AddText""As this mod is under a work in progress, new features will come online 
 # OFFICER_YEONG,,,,,,
 ,,,,,,
 # OFFICER_YEONG_GREETING,,,,,,
-OFFICER_YEONG_GREETING,PickGreeting,"$id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == true","ShowPersonVisual
+OFFICER_YEONG_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == false
+$faction.friendlyToPlayer score:100","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText """"Hello this is Officer Ariane Yeong speaking. What do you need?""""",,,
+OFFICER_YEONG_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == false
+$faction.friendlyToPlayer score:100","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText """"Hello this is Officer Ariane Yeong speaking. You do not show up as an commissioned officer with the Nation. What do you want?""""",,,
+OFFICER_YEONG_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == false
+$faction.neutralToPlayer score:100","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText """"Hello this is Officer Ariane Yeong speaking. What do you want from me?""""",,,
+OFFICER_YEONG_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == false
+$faction.neutralToPlayer score:100","$player.metOfficerYeong = true
+ShowPersonVisual
+FireAll PopulateOptions
+AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
+AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
+AddText """"Hello this is Officer Ariane Yeong speaking. You do not show up as an commissioned officer with the Nation. Why are you calling me?""""",,,
+OFFICER_YEONG_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
+$id == ""eusan_nation_officer_yeong"" score: 100
+$player.metOfficerYeong == true
+$faction.friendlyToPlayer score:100","ShowPersonVisual
 FireAll PopulateOptions","""Hello there. What do you want?""
 OR
 ""Welcome back, $playerName. What can I do for you?""
 OR
 ""Hello-hello. Got any smokes I can ask of you?""
 OR
-""Calling me again? What do you want this time?""
+""Hello again. You been making a name for yourself lately, haven't you?""
 OR
 ""Well, well, well, if it isn't $playerName. What do you need this time?""",,
-OFFICER_YEONG_INTRO_NOTCOMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+OFFICER_YEONG_GREETING_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == false","$player.metOfficerYeong = true
-ShowPersonVisual
-FireAll PopulateOptions
-AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
-AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
-AddText """"Hello this is Officer Ariane Yeong speaking. You do not show up as an commissioned officer with the Nation. What do you want?""""",,,
-OFFICER_YEONG_INTRO_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$player.metOfficerYeong == true
+$faction.friendlyToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""You're back. What do you want this time?""
+OR
+""Back again so soon.""
+OR
+""Yes, $playerName? I am busy so please tell me what you need quickly.""
+OR
+""Hello again. You wish to talk?""
+OR
+""Hello there. I was about to go out on a smoke break.""",,
+OFFICER_YEONG_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
-$player.metOfficerYeong == false","$player.metOfficerYeong = true
-ShowPersonVisual
-FireAll PopulateOptions
-AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of a rather young woman in a military uniform, silver hair and what appears to be a series of adhesive bandages her face.""
-AddTextSmall ""A well-read but tired military officer of the Nation, Ariane Yeong spent her formative years living under oppressive umbrella of the Nation in a remote facility. Her lofty goals and dreams have been crushed under the weight of bureaucracy. Now she is tired, haggard, and resigned to a life of working for the Nation's military intelligence services as an analyst."" highlight
-AddText """"Hello this is Officer Ariane Yeong speaking. What do you want?""""",,,
-OFFICER_YEONG_NEGATIVEREP,PickGreeting,"RepLTE ""eusan_nation"" HOSTILE
+$player.metOfficerYeong == true
+$faction.neutralToPlayer score:100",,"""Mmm. Your back. What do you need?""
+OR
+""Hello. Remember that you need to be careful.""
+OR
+""Ah it is you. I have been hearing things about you. The not good kinds.""
+OR
+""Hello there. The has been rumors about you lately just so you know. What do you need?""
+OR
+""Welcome back, traveller.""",,
+OFFICER_YEONG_GREETING_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+$faction.id == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
-",,"CONNECTION REFUSED
+$player.metOfficerYeong == true
+$faction.neutralToPlayer score:100",,"""What do you want?""
+OR
+""Hello...oh its you.""
+OR
+""Traveller, welcome.""
+OR
+""Communication channel open. Ah its you.""
+OR
+""Greetings from my dreary office, Captain $playerName.""",,
+OFFICER_YEONG_GREETING_HOSTILE,PickGreeting,"$faction.isHostile score:100
+$id == ""eusan_nation_officer_yeong"" score: 100",,"CONNECTION REFUSED
 OR
 There is no response.
 OR
 The communications link was refused.
-OR
-Communications link was not accepted.
 OR
 The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END OFFICER_YEONG_GREETING",,,,,,
@@ -464,17 +528,16 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
-RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$player.metAdmiralFalke == true
+$player.metAdmiralFalke == false
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
 eusan_nation_personRelationChecker COOPERATIVE
 ","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
-SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation in order to start this mission.""",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
 RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
@@ -482,26 +545,28 @@ $player.metOfficerYeong == true
 $player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:I have a new mission, you were specifically requested.",
+eusan_nation_personRelationChecker COOPERATIVE","SetOptionColor officeryeongPenroseRecovery512Start highlight",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_BRIEFING0,DialogOptionSelected,"$option == officeryeongPenroseRecovery512Start","ShowSecondPerson eusan_nation_admiral_falke
 BeginMission eusan_nation_penrose512Quest false
 SetTextHighlightColors ""221, 0, 0, 225""
-SetTextHighlights ""Good evening, commander.""","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
+SetTextHighlights ""Good evening, commander.""
+ShowImageVisual 512_briefing","Ariane's request was rather cryptic. Something important must be going on. Your shuttle makes its usual descent to the surface, but on your walk to her office you are stopped just outside of it. A man in some military uniform, its ranks and insignia foreign to the sector, stops you. He seems to think for a moment before nodding, and waving you inside.
 
 Upon entering, you see why. Standing before you and Ariane, is Admiral Falke herself.
 
 Your mind is racing, wondering what she could be doing here. Your thoughts are pierced, one becoming louder, clearer than the others. It is not yours.
 
-Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:Telepathy?
-officeryeongPenroseRecovery512_briefing0_2:Get out of my head.
+Good evening, commander.","officeryeongPenroseRecovery512_briefing0_1:""Telepathy?""
+officeryeongPenroseRecovery512_briefing0_2:""Get out of my head.""
 officeryeongPenroseRecovery512_briefing0_3:""How may I be of service to the Nation?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1A,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_1","SetTextHighlightColors ""221, 0, 0, 225""
-SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
+SetTextHighlights ""A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.""
+","A crude term. How have you done so much work for us but never encountered this before. Bioresonance is the proper term, and it is more than simple telepathy.
 
 She turns to Ariane, who is pale as a ghost and frozen still in her chair. Finally, she speaks.
 
 ""Ariane, explain to them why they are here.""","officeryeongPenroseRecovery512_briefing1:Continue
-officeryeongPenroseRecovery512_briefing1_1:Why don't you just beam the mission into my head?",
+officeryeongPenroseRecovery512_briefing1_1:""Why don't you just beam the mission into my head?""",
 OFFICER_YEONG_PENROSE512_BRIEFING1B,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing0_2","SetTextHighlightColors ""221, 0, 0, 225""
 SetTextHighlights ""There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.""","There is no need for such hostilities. You will not be harmed. If that was my intent, you would have been already.
 
@@ -513,7 +578,7 @@ SetTextHighlights ""Your devotion is admirable. We have a task for you, requirin
 
 Falke glances at Ariane, waiting for her to say something.","officeryeongPenroseRecovery512_briefing1:Continue",
 OFFICER_YEONG_PENROSE512_BRIEFING2,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing1
-",,"Ariane lays a folder on the desk, the redactions and notes on the documents are considerably more neat and professional than the ones for previous missions.
+","ShowImageVisual 512_briefing","Ariane lays a folder on the desk, the redactions and notes on the documents are considerably more neat and professional than the ones for previous missions.
 
 ""While you were away, the Rotfront Array detected a signal coming from deep space. Though it was heavily distorted, it is clearly another Penrose distress signal.""
 
@@ -557,7 +622,8 @@ OFFICER_YEONG_PENROSE512_BRIEFING4,DialogOptionSelected,"$option == officeryeong
 OFFICER_YEONG_PENROSE512_BRIEFING5,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing4","Call $global.eusan_nation_penrose512_ref updateData","""That is what we believe to be the case."" Falke stands up, and begins pacing around the room as she says this. ""And that is where you come in. Your fleet is well equipped and could investigate the signal, without requiring us to organize an expeditionary force of our own.""
 
 The lie is barely disguised. You are expendable, more so than the Nation's own fleets at least. So you will test the waters.","officeryeongPenroseRecovery512_briefing5:Continue",
-OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
+OFFICER_YEONG_PENROSE512_BRIEFING6,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing5","ShowPersonVisual
+SetTextHighlights $eusan_nation_penrose512_distanceLy $eusan_nation_penrose512_systemName $eusan_nation_penrose512_planetName
 Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_penrose512_planetName""
 
 ","Falke motions to Ariane, perhaps speaking to her telepathically as well. Ariane snaps to attention and tells you the mission info.
@@ -566,6 +632,7 @@ Call $global.eusan_nation_penrose512_ref showMap ""Destination: $eusan_nation_pe
 OFFICER_YEONG_PENROSE512_BRIEFING_END,DialogOptionSelected,"$option == officeryeongPenroseRecovery512_briefing6","FireAll PopulatePenroseRecovery512StartOptions",,,
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDER_OPTION,PopulatePenroseRecovery512StartOptions,,,,"officeryeongPenrose512Reconsider:""I changed my mind...""",
 OFFICER_YEONG_PENROSE512_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option == officeryeongPenrose512Reconsider","AbortMission
+ShowPersonVisual
 FireAll PopulateOfficerYeongChatOptions","""Shame. If you want to reconsider, let me know.""
 OR
 ""Take your time. Come back later if you want to proceed.""
@@ -605,6 +672,7 @@ OFFICER_YEONG_PENROSE512_ENTER_PENROSE2,DialogOptionSelected,"$option == officer
 OFFICER_YEONG_PENROSE512_ENTRY,DialogOptionSelected,"$option == officeryeongPenrose512enter_penrose2","ShowDefaultVisual
 FireAll PopulateOfficerYeongPenrose512Explore
 ","The sound of your breath is deafening within the vac suit, interrupted occasionally by chatter between the crew you brought along. Your helmet's beams cut through the dark, stagnant interior, and its visor displays your current location within the ship.",,"Player enters Penrose 512"
+OFFICER_YEONG_PENROSE512_HALLWAY,PopulateOfficerYeongPenrose512Explore,,"ShowImageVisual 512_hallway",,,"Shows hallway illustration"
 "#END OFFICER_YEONG_PENROSE512_TARGET_PLANET",,,,,,
 ,,,,,,
 # OFFICER_YEONG_PENROSE512_FORWARD_DECKS,,,,,,"Get picture with cryo code at back of pic"
@@ -612,19 +680,22 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START,PopulateOfficerYeongPenrose512Explo
 $player.officeryeongPenrose512_poweron == true",,,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
+SetTooltip officeryeongPenrose512_forwardDecks_start ""You need to find a keycard to enter the forward decks and the cockpit...""
+",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks","Player needs to find a keycard from the aft decks"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
-SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
+SetTooltip officeryeongPenrose512_forwardDecks_start ""The door's access panel seems to be flickering on and off...""
+",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
 $player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_forwardDecks_start false
 SetTooltip officeryeongPenrose512_forwardDecks_start ""The door bolts are active, holding the door shut. You will need to activate the power and look for a keycard to enter the forward decks and the cockpit....""",,"officeryeongPenrose512_forwardDecks_start:Enter the Forward Decks",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_start","FireAll PopulateOfficerYeongPenrose512ForwardSectionExplore","You and your crew enter the ship.",,
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a,PopulateOfficerYeongPenrose512ForwardSectionExplore,,,,"officeryeongPenrose512_forwardDecks_explore2a:Look around the cockpit.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == false",,"Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid
+$player.officeryeongPenrose512_foundphoto == false","ShowImageVisual 512_cockpit1","Wrenching the door open with some difficulty, your salvage crew wave you inside the intact flight deck. The cockpit is completely frosted over, but the seal has held and kept the instruments largely intact. They are unresponsive regardless.","officeryeongPenrose512_forwardDecks_explore2aPhoto1:Check out the photo stuck to an instrument panel.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto1","ShowImageVisual 512_cockpit1
+SetTextHighlights ""photograph""","Whilst trying to make sense of the instrument panels, you spot a damaged photo attached to it.","officeryeongPenrose512_forwardDecks_explore2aPhoto2:Pick up the damaged photo.",
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO3,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhoto2","ShowImageVisual 512_polaroid1
 ","You gently remove the photo from the panel, ensuring you don't damage it. It's a sort of self developing photo, displaying a woman and severely damaged. 
 
 Short-haired and silver haired. She seems happy and proud. Somehow you feel like you seen this person before...","officeryeongPenrose512_forwardDecks_explore2aPhoto3:Examine the photo further...",
@@ -632,18 +703,19 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_FOUND_PHOTO_EXIT,DialogOptionSe
 SetTextHighlights ""self-developing photo"" ""Perhaps it would be best if you memorize this combination.""
 SetTooltip officeryeongPenrose512_forwardDecks_explore2_exit ""You feel as if this may come in handy. Perhaps it would be best if you memorize this combination.""
 KaysaarKeypad initCode
-ShowImageVisual 512_polaroid","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
+ShowImageVisual 512_polaroid1","You flip the photo around to see if anything is written but only found a series of red squares under the word KRYO. You don't know what it means yet. Perhaps it would be best if you memorize this combination.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.","pick up the photo"
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2a
-$player.officeryeongPenrose512_foundphoto == true",,"You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
-OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound",,"You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cockpit2","You return to the flight deck. The recovery team has already verified that this area is safe and no structural issues have been found. Perhaps you missed something?","officeryeongPenrose512_forwardDecks_explore2aPhotofound:Continue","photo was already found"
+OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2a_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2aPhotofound","ShowImageVisual 512_cockpit2","You look at the cockpit and the instrument panel to see if you have missed anything. It took some time but whatever you were looking for, it may already have been recovered already.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the flight deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b,PopulateOfficerYeongPenrose512ForwardSectionExplore,"$player.officeryeongPenrose512_locatedDistress == false",,,"officeryeongPenrose512_forwardDecks_explore2b:Search for the distress beacon.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS1,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
-$player.officeryeongPenrose512_distress_located == false","SetTextHighlights ""distress beacon""","Your comms officer informs you that the distress signal's location has been more accurately triangulated, and it is likely somewhere in this room.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1:Search for the distress beacon controls.",
+$player.officeryeongPenrose512_distress_located == false","SetTextHighlights ""distress beacon""
+ShowDefaultVisual","Your comms officer informs you that the distress signal's location has been more accurately triangulated, and it is likely somewhere in this room.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1:Search for the distress beacon controls.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS2,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress1",,"Peeling back a panel, your salvors locate the distress beacon, defiantly transmitting in spite of the destroyed electronics surrounding it.","officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2:Shut down the beacon. ",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_LOCATED_DISTRESS_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_locatedDistress2","$player.officeryeongPenrose512_locatedDistress = true
 eusan_nation_penrose512Quest_rulecmd resumeMusic_512","You tune to the frequency with your suit's radio, confirming the beacon is still transmitting. After a few unsuccessful attempts to shut it down through more deft means, your salvage crew wrenches it out of its housing with a crowbar and silences it with a forceful strike.","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the forward deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b
-$player.officeryeongPenrose512_distress_located == true",,"The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound:Continue",
+$player.officeryeongPenrose512_distress_located == true","ShowDefaultVisual","The plans indicate this location to be the forward deck of the ship.","officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound:Continue",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXPLORE2b_DISTRESS_ALREADYFOUND_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2b_distress_alreadyfound",,"The recovery crew has already swept this area. Nothing of note is left here save for the debris and damaged equipment.
 ","officeryeongPenrose512_forwardDecks_explore2_exit:Leave the forward deck.",
 OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_forwardDecks_explore2_exit","ShowDefaultVisual","Leaving behind a skeleton crew, you exit the forward deck.","officeryeongPenrose512_forwardDecks_exit_option:Return to the staging area.",
@@ -653,22 +725,24 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == off
 # OFFICER_YEONG_PENROSE512_MIDDLE_SECTION,,,,,,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_START,PopulateOfficerYeongPenrose512Explore,,,,"officeryeongPenrose512_middleDecks_start:Enter the Middle decks",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION1,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_start","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You enter the mid section of the ship, navigating around busy salvors and their equipment as they strip and inspect the ship. A medic leans against a nearby wall, their fortunately unused equipment piled nearby.",,
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2a:View Map","Player finds a diagram of the ship"
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_VIEWMAP,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a",,"You were provided with detailed schematics of the vessel, further enhanced by your experience in salvaging the previous two. You bring them up on your tri-pad, observing the layout with the physical map your team salvaged from the area.","officeryeongPenrose512_middleDecks_explore2a_viewmap:Go back to the main hall.",
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a_viewmap
+#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2a:View Map","Player finds a diagram of the ship"
+#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_VIEWMAP,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a",,"You were provided with detailed schematics of the vessel, further enhanced by your experience in salvaging the previous two. You bring them up on your tri-pad, observing the layout with the physical map your team salvaged from the area.","officeryeongPenrose512_middleDecks_explore2a_viewmap:Go back to the main hall.",
+#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a_viewmap
 ","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You finish looking at the map and ship plans.",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2b:Enter the Mess Hall","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
-$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
+$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall"" ","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
 
 Seems like the power is off. Without power, there is nothing you can gleam here.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
+$player.officeryeongPenrose512_foundKeycard == false","ShowImageVisual 512_messhall
+eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == true",,"The keycard you found has granted you access to the screen, though it is struggling to display much. Familiar with the system by now, a technician manages to get the image to resolve.","officeryeongPenrose512_middleDecks_explore2b_systems1:Read the display",
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","eusan_nation_penrose512Quest_rulecmd addSystemStatusActive","The wireframe model of the ship spins slowly as text is printed across the screen. ","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.",
+$player.officeryeongPenrose512_foundKeycard == true","ShowImageVisual 512_messhall","The keycard you found has granted you access to the screen, though it is struggling to display much. Familiar with the system by now, a technician manages to get the image to resolve.","officeryeongPenrose512_middleDecks_explore2b_systems1:Read the display",
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","ShowImageVisual 512_messhall
+eusan_nation_penrose512Quest_rulecmd addSystemStatusActive","The wireframe model of the ship spins slowly as text is printed across the screen. ","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore",,,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT_OPTION,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,"As your team continues their work, you decide to leave the area.","officeryeongPenrose512_middlesection_exit:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middlesection_exit","FireAll PopulateOfficerYeongPenrose512Explore","You return to the hallway where your team has set up a temporary staging area.",,
@@ -679,18 +753,21 @@ OFFICER_YEONG_PENROSE512_AFT_DECKS_START,PopulateOfficerYeongPenrose512Explore,,
 OFFICER_YEONG_PENROSE512_AFT_DECKS1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_start","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","The aft decks of the Penrose are the most recent area to be accessed by your crew, and equipment is still being set up. ",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks2a:Head into the crew quarters",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a
-$player.officeryeongPenrose512_foundKeycard == false",,"The crew quarters are a mess, littered with miscellaneous items and debris, and several bags of trash. Many appear to have been broken open and sorted through.","officeryeongPenrose512_aftDecks2a_keycard1:Search the crew quarters.","pick up keycard to access forward decks"
-OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard1","SetTextHighlights ""security keycard""","After some time searching through the mess, a salvor triumphantly displays a keycard they have found.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
+$player.officeryeongPenrose512_foundKeycard == false","ShowImageVisual 512_crewquarters","The crew quarters are a mess, littered with miscellaneous items and debris, and several bags of trash. Many appear to have been broken open and sorted through.","officeryeongPenrose512_aftDecks2a_keycard1:Search the crew quarters.","pick up keycard to access forward decks"
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard1","ShowImageVisual 512_crewquarters
+SetTextHighlights ""security keycard""","After some time searching through the mess, a salvor triumphantly displays a keycard they have found.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARDFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a
-$player.officeryeongPenrose512_foundKeycard == true",,"Even more messy now that it has been sorted through, the crew quarters offer little of value.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
+$player.officeryeongPenrose512_foundKeycard == true","ShowImageVisual 512_crewquarters","Even more messy now that it has been sorted through, the crew quarters offer little of value.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard","$player.officeryeongPenrose512_foundKeycard = true","You perform one more cursory sweep of the room, finding nothing.","officeryeongPenrose512_aftDecks2a_exit_option:Go back and search the rest of the deck in this area.",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","You finish searching the crew quarters, deciding to go elsewhere.",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks_explore2b:Enter the Reactor room.","Player finds a power grid controller"
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
-$player.officeryeongPenrose512_poweron == false",,"Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.","officeryeongPenrose512_aftDecks_explore2b_power1:Order your crew to stabilize the reactor.",
-OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1",,"You watch on your tri-pad as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
+$player.officeryeongPenrose512_poweron == false","ShowImageVisual 512_reaktor","Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.
+
+Once the salvors enter, the damage to the power systems can be fully seen. From the live feed, a bunch of pipe, wires and broken equipment lay all over the room. Nearby the control system readout's red screen flashes with error and warning notifications. ","officeryeongPenrose512_aftDecks_explore2b_power1:Order your crew to stabilize the reactor.",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1","ShowImageVisual 512_reaktor","You watch on your hand held screen as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERCHECK,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
-$player.officeryeongPenrose512_poweron == true",,"The parts of the ship that remain functional flicker on as the power comes online, and your exhausted crew seals the reactor room off.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
+$player.officeryeongPenrose512_poweron == true","ShowImageVisual 512_reaktor","The parts of the ship that remain functional flicker on as the power comes online, and your exhausted crew seals the reactor room off.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power","$player.officeryeongPenrose512_poweron = true","You check the power readout given to you by the salvage crew, showing everything to be stable.","officeryeongPenrose512_aftDecks_explore2b_exit_option:Go back and search the rest of the deck in this area.",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","The reactor is stable and active. There is nothing else left to do here. ",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT_OPTION,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks_exit:Return to the staging area.",
@@ -716,19 +793,22 @@ $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose5
 SetTooltip officeryeongPenrose512_cryo_start ""Most debris have been removed and power has been restored but there is the issue of finding the access key for the door. Try looking for an access keycard to get through the door.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_start",,"The door to the emergency cryo bay is firmly jammed, and has to be cut open. Occasional beeps from the machinery are the only noises in the room.","officeryeongPenrose512_cryo_explore1:Inspect the cryo chamber.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
-$player.officeryeongPenrose512_foundphoto == true",,"The cryo bed itself is intact, like the one on your previous Penrose salvage mission. Could the pilot be alive in this one as well?
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cryo1","The cryo bed itself is intact, like the one on your previous Penrose salvage mission. Could the pilot be alive in this one as well?
 
 You locate the keypad on the sleeper, and flip over the photograph from the flight deck. The grids are the same size.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cryo1
+SetTextHighlights ""photo""
 SetEnabled officeryeongPenrose512_cryo_explore2a false
 KaysaarKeypad initUI","The keypad next to the cryo chamber is brightly lit. The 9 digit keypad strangely has no numbers on the keys. Only the correct code will open this chamber.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2a_hint:Check the photo for the code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","SetTextHighlights ""photo""
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","ShowImageVisual 512_cryo1
+SetTextHighlights ""photo""
 KaysaarKeypad initCode","You remember that photo of the silver haired woman you found and pull it out from your pocket. The woman in the photograph is still happily smiling. You flip the photo on its back and check the combination printed.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
+$player.officeryeongPenrose512_foundphoto == false","ShowImageVisual 512_cryo1
+SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""
 SetTextHighlights ""code""","A crewmember tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye. 
 
@@ -736,11 +816,12 @@ The crewmember tries again. The red light flashes again.
 
 The crewmember gives you a defeated look. Unless you wish to breach the seal and risk the life of the pilot inside, you will need the code to the 9 digit pad to unlock.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","ShowImageVisual 512_cryo2
+SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
 
 The doors hiss and open, disappointingly, to an empty chamber. Not so much as a smudge can be spotted on the interior as the water drains from it.","officeryeongPenrose512_cryo_explore3:Continue",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","eusan_nation_penrose512Quest_rulecmd resumeMusic_512
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","ShowImageVisual 512_cryo2
+eusan_nation_penrose512Quest_rulecmd resumeMusic_512
 $global.eusan_nation_penrose512_returnBlackbox = true
 $global.eusan_nation_penrose512_recoveredData = true
 Call $global.eusan_nation_penrose512_ref updateStage","The crew mutters over comms, confused and unnerved in equal parts. One salvor hesitantly swipes his hand along the interior of the chamber; nothing aside from beads of residual water is to be found.
@@ -750,9 +831,12 @@ You stand there in silence. Already the crew is whispering behind you that the s
 Your recovery team hasn't found any members of the crew. No pilot, no replika, no evidence the crew existed. Just remnants of one. Now the cryo chamber you find out, is empty. 
 
 With nothing left to see, you signal to your crew that its time to leave.","officeryeongPenrose512_cryo_explore4:Return to your fleet.",
-OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore4","FireAll PopulateOptions","You look over the salvage summary as the shuttle ascends. Nothing of particular note was recovered, save for the flight recorder data. Lazily flipping through photos of the operation, the red display panel catches your eye again, with the pilot's name on it. 
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore4","ShowDefaultVisual
+FireAll PopulateOptions
+SetTextHighlights ""A. Yeong.""","You look over the salvage summary as the shuttle ascends. Nothing of particular note was recovered, save for the flight recorder data. Lazily flipping through photos of the operation, the red display panel catches your eye again, with the pilot's name on it. 
 
-A. Yeong. ",,
+A. Yeong.",,
 "#END OFFICER_YEONG_PENROSE512_CRYO",,,,,,
 "#END RECOVERY512",,,,,,
 ,,,,,,
@@ -772,33 +856,65 @@ She shakes her head over your admission.
 
 ",,
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_OPTION,PopulatePenrose512Options,"$global.eusan_nation_penrose512_recoveredData == true",,,"officeryeongPenrose512ConfirmOption:Tell her that you recovered the mission data recorder.",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenrose512ConfirmOption",,"For better or worse, Admiral Falke is nowhere to be found as you enter Ariane's office. She is busily shuffling through papers.","officeryeongPenrose512Confirm1:Continue",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1",,"She sets down the papers in a clump besides her desk, sitting down in the chair.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END1,DialogOptionSelected,"$option == officeryeongPenrose512ConfirmOption","ShowImageVisual 512_office","For better or worse, Admiral Falke is nowhere to be found as you enter Ariane's office. She is busily shuffling through papers.","officeryeongPenrose512Confirm1:Continue",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END2,DialogOptionSelected,"$option == officeryeongPenrose512Confirm1","ShowImageVisual 512_office","She sets down the papers in a clump besides her desk, sitting down in the chair.
 
 ""Well? What did you find?""","officeryeongPenrose512Confirm2:Show her the salvage report.",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2",,"She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the red screen.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END3,DialogOptionSelected,"$option == officeryeongPenrose512Confirm2","ShowImageVisual 512_office","She takes the tri-pad from your hands, and begins intently reading the salvage report. When she is done, you take it back from her and begin showing her the photos. You stop before showing her the final set of photos.
 
 ""Doesn't seem too out of the ordinary for a recovery op, apart from the empty cryo chamber. Was there anything else?""","officeryeongPenrose512Confirm3:""There is.""",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3",,"You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END4,DialogOptionSelected,"$option == officeryeongPenrose512Confirm3","ShowImageVisual 512_polaroid2","You retrieve the damaged photograph from your pocket, the one from the flight deck, and hand it to her.
 
-""Damaged. Photo is a consumer brand common on Rotfront. I used to develop these at a photo store.""
+""Damaged. Photo is a consumer brand common on Rotfront. I used to develop these at a photo store. No written words on the front or back.""
 
 ""I wonder who this woman is..."" Ariane says. She flips the photo to show you the woman. 
 
 A cheerful, smiling, brown haired woman in a Volksarmee uniform can be seen on the damaged photograph. Not the white haired girl on it originally.","officeryeongPenrose512Confirm4:Wait...what?",
-OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4",,"""Is there something wrong, $playerName?"" she asks, seeing your confusion. She gives the picture another look, then puts the photo into a folder filled with papers.","officeryeongPenrose512Confirm5:""No, nothing is wrong.""",
+OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END5,DialogOptionSelected,"$option == officeryeongPenrose512Confirm4","ShowImageVisual 512_polaroid2","""Is there something wrong, $playerName?"" she asks, seeing your visible confusion. She gives the picture another look, then puts the photo into a folder filled with papers. ","officeryeongPenrose512Confirm5:""No, nothing is wrong...""",
 OFFICER_YEONG_PENROSERECOVERY512_CANCEL_CONFIRM_END6,DialogOptionSelected,"$option == officeryeongPenrose512Confirm5","$global.eusan_nation_penrose512_completed = true
 Call $global.eusan_nation_penrose512_ref updateStage
+ShowDefaultVisual
 AddStoryPoints 1
-FireAll PopulateOptions","""I see."" Ariane says. she takes a floppy disk you prepared with the salvage data and stuffs it into the computer.
+FireAll PopulateOptions","""I see."" Ariane says. she takes a storage device you prepared with the salvage data and inserts it into a slot in her computer.
 
-""This was the last job for you on the docket for now, thanks for your help."" She messes with something on the computer before turning back towards you.
+You feel like something is amiss. You clearly remember the photo had a silver haired woman in the damaged photo. Not a brown haired woman. You start to speak but Ariane cuts you off without looking up from her computer.
 
-""Falke should be here later to look this over. Remember: not a word about this mission leaves your fleet. Dismissed.""",,
+""This was the last job for you on the docket for now, thanks for your help."" She continues to type on the computer before turning back towards you.
+
+""Falke should be here later to look this over. Remember: not a word about this mission leaves your fleet. Dismissed."" ",,
 "#END RECOVERY512_MISSION_END",,,,,,
 "#END OFFICER_YEONG_PENROSE512_QUEST",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT,,,,,,
+,,,,,,
+# OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION,,,,,,
+OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION,PopulateOfficerYeongChatOptions,"$id == ""eusan_nation_officer_yeong"" score: 100
+$player.askedArianeForWork == false",,,"OfficerYeongQuestGiveOption:Ask Ariane Yeong if she needs help with anything.",
+OFFICER_YEONG_CHAT_QUEST_GIVE_1,DialogOptionSelected,"$option == OfficerYeongQuestGiveOption",,"""Help?"" she asks. 
+
+Without hesitation, Ariane picks up a clipboard that was covering a thick looking tablet device that looks suspiciously similar to a Tri-Pad. She flips though the paper pages and began to run her finger on the printed letters. 
+
+""Yes...actually I do. Here are a few items that need to be done. Once you give me your accedence and set up my contact, there will be a docket of work items you can help me with.""","OfficerYeongQuestGive1:Continue",
+OFFICER_YEONG_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == OfficerYeongQuestGive1",,"""Just remember, $playerName, I need your consent to begin working for me. Once I have it, then you can start working for me.""
+
+She flips a few more pages on the clipboard and checks off a line with a pen. 
+
+""So what say you?""","OfficerYeongQuestGive2a:Accept
+OfficerYeongQuestGive2b:Reconsider",
+OFFICER_YEONG_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == OfficerYeongQuestGive2a","AdjustRepActivePerson WELCOMING 5
+AddPotentialContact ""eusan_nation_officer_yeong""
+$player.askedArianeForWork = true","You accept to work for Ariane Yeong. 
+
+She gives you a slight, unsmiling nod.
+
+""Thank you. Now if you excuse me I got work to do.""","OfficerYeongQuestGiveEND:Leave",
+OFFICER_YEONG_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == OfficerYeongQuestGive2b",,"You tell her that you will think it over. 
+
+""I see. Well if you change your mind, please let me know. There is no shortage of work so please come back if you decide to help out.""
+
+She sets down the clipboard and you take it as a cue to leave or change the subject.","OfficerYeongQuestGiveEND:Leave",
+OFFICER_YEONG_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == OfficerYeongQuestGiveEND","FireAll PopulateOfficerYeongChatOptions",,,
+"#END OFFICER_YEONG_CHAT_QUEST_GIVE_OPTION",,,,,,
 ,,,,,,
 # OFFICER_YEONG_CHAT_PENROSE,,,,,,
 OFFICER_YEONG_CHAT_PENROSE_PROGRAM_OPTION,PopulateOfficerYeongChatOptions,"eusan_nation_personRelationChecker FAVORABLE",,,"officeryeongChatPenroseProgramOption:Tell me about the Penrose Program...",
@@ -892,40 +1008,6 @@ OR
 ""See you next time...""",,
 "#END OFFICER_YEONG_CHAT_OPTIONS",,,,,,
 ,,,,,,
-# OFFICER_YEONG_INSULT_COMPLIMENT,,,,,,
-OFFICER_YEONG_OPTIONS_COMPLIMENT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongComplementResult:Compliment Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_COMPLIMENT_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongComplementResult false
-SetTooltip officeryeongComplementResult ""You recently done this. Wait for a few days.""",,"officeryeongComplementResult:Compliment Officer Yeong",
-OFFICER_YEONG_OPTIONS_INSULTS,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == false",,,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_OPTIONS_INSULTS_WAIT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
-$player.officeryeongreptalk == true","SetEnabled officeryeongInsultResult false
-SetTooltip officeryeongInsultResult ""You recently done this. Wait for a few days.""",,"officeryeongInsultResult:Insult Officer Yeong
-",
-OFFICER_YEONG_COMPLIMENT_RESULT,DialogOptionSelected,"$option == officeryeongComplementResult","AdjustRepActivePerson WELCOMING 1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""Flattery is nice.""
-OR
-""Thank you, but you're not my type.""
-OR
-""Why, thank you for the nice words. You just made my day slightly brighter than normal.""
-OR
-""Do you mean it?""",,
-OFFICER_YEONG_INSULT_RESULT,DialogOptionSelected,"$option == officeryeongInsultResult","AdjustRepActivePerson SUSPICIOUS -1
-$player.officeryeongreptalk = true 3
-FireAll PopulateOptions","""That is not nice...""
-OR
-""Aye, go away then...""
-OR
-""Uh-huh... right then...""
-OR
-""Insulting me right here, right now? Wow...""",,
-"#END OFFICER_YEONG_INSULT_COMPLIMENT",,,,,,
-,,,,,,
 # OFFICER_YEONG_GIFT,,,,,,
 OFFICER_YEONG_OPTIONS_GIFT,PopulateOptions,"$id ==  ""eusan_nation_officer_yeong"" score: 100
 $player.officeryeonggiftgive == false",,,"officeryeongGiftOptions:Give Officer Yeong a Gift",
@@ -949,10 +1031,10 @@ OR
 ""Oh my, lobster? How did you get this? Did you swipe it from a shipment or bought it from a market? In fact, don't tell me. I don't want to know...""
 
 She takes the lobster off your hands. You swore you can see a faint smile as she takes the gift.",,
-OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
+OFFICER_YEONG_GIFT_LOBSTER_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId PAGSM
+!PlayerHasCargo lobster",,,"officeryeongGiftLobsterAsk:Ask Officer Yeong how she feels about Volturn Lobsters",
 OFFICER_YEONG_GIFT_LOBSTER_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
+","FireAll PopulateOptions","""Lobsters? I do not have time to get anything fancy for food, not that I can get them anyway. I've only eaten lobster once and it was for a special occasion. That was years ago.""
 
 ""Wait... what do you mean blue lobsters?""
 OR
@@ -983,10 +1065,10 @@ OR
 ""The laws of the Nation are pretty strict. I can't recieve gifts or they will be considered bribes."" $personLastName says. ""Fortunately, I have the means of keeping gifts... or sanitizing them. Thanks anyway.""
 
 She gives you a faint nod and she walks away with the plush. You swore you could have heard the disposal chute turn on...",,
-OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
+OFFICER_YEONG_GIFT_LOBSTERPLUSH_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId PAGSM
+!PlayerHasCargo sfcgift6",,,"officeryeongGiftLobsterPlushAsk:Ask Officer Yeong how she feels about a stuffed toy lobster",
 OFFICER_YEONG_GIFT_LOBSTERPLUSH_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftLobsterPlushAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""A plush lobster? I honestly don't know.""
+","FireAll PopulateOptions","""A plush lobster? I honestly don't know.""
 OR
 ""A toy? Can I even have something like that?...""
 OR
@@ -1016,16 +1098,35 @@ OR
 ""This is really good. Thanks for the gift!""
 
 ",,
-OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
+OFFICER_YEONG_GIFT_CHOCOLAVA_ASK,PopulateofficeryeongGiftOptions,"!eusan_nation_hasModId uaf
+!PlayerHasCargo uaf_bakery_choco_lava",,,"officeryeongGiftChocoLavaAsk:Ask Officer Yeong about chocolate lava cakes",
 OFFICER_YEONG_GIFT_CHOCOLAVA_RESPONSE,DialogOptionSelected,"$option == officeryeongGiftChocoLavaAsk
-","$player.officeryeonggiftgive = true 3
-FireAll PopulateOptions","""test""",,
-OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape:Reconsider giving a gift...",
+","FireAll PopulateOptions","""Chocolava? What is that?""
+
+""A cake? With a liquid filling? From the edges of the sector? Interesting.""
+OR
+""I have never heard about such things. A pastry cake is not something I have the luxury to have or even get.""
+
+""Why?""",,
+OFFICER_YEONG_GIFT_CIGS_OFFER,PopulateofficeryeongGiftOptions,"PlayerHasCargo eusan_nation_nationsmokes",,,"officeryeongGiftNationCigs:Offer Officer Yeong a pack of cigarettes made by the Nation",
+OFFICER_YEONG_GIFT_CIGS_GIFTED,DialogOptionSelected,"$option == officeryeongGiftNationCigs","AddRemoveCommodity eusan_nation_nationsmokes -1 true
+AdjustRepActivePerson WELCOMING 5
+$player.officeryeonggiftgive = true 5
+FireAll PopulateOptions","""Ah. I was going to go out an buy a pack. Thank you very much. I appreciate what you done for me.""
+
+$personLastName takes the pack of cigarettes and places it on her table. Nearby the stack of papers you spy a small, well used lighter. Looks like a good move to help her out. 
+OR
+$personLastName looks at the package you are offering. Her expression softens and you can see faint indications of gratitude. 
+
+""Thank you very much. I know smoking isn't good for me but it helps me calm down.""",,
+OFFICER_YEONG_GIFT_CIGS_ASK,PopulateofficeryeongGiftOptions,"!PlayerHasCargo eusan_nation_nationsmokes",,,"officeryeongNationCigsAsk:Offer Officer Yeong a pack of cigarettes made by the Nation",
+OFFICER_YEONG_GIFT_CIGS_RESPONSE,DialogOptionSelected,,,,,
 OFFICER_YEONG_GIFT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongGiftEscape","FireAll PopulateOptions","""Wait you were going to give me something?""
 OR
 ""Perhaps it'd be best if you did not.""
 OR
 ""Whatever...""",,
+OFFICER_YEONG_GIFT_ESCAPE_OPTION,PopulateofficeryeongGiftOptions,,,,"officeryeongGiftEscape:Reconsider giving a gift...",
 "#END OFFICER_YEONG_GIFT",,,,,,
 "#END OFFICER_YEONG",,,,,,
 ,,,,,,
@@ -1258,6 +1359,7 @@ $faction.friendlyToPlayer score:1000
 $option == alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who's been helping us out recently! Tell you what, your first drink's on the house. Just a little thanks on behalf of our Nation.""
@@ -1268,6 +1370,7 @@ $faction.friendlyToPlayer score:1000
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but she seems to be watching you with great interest.. She gives you a faint smile and beckons you to come to the bar.""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""A new face! And from the looks of it, not from around here either. Well that's fine. Just take a seat, and I'll be with you shortly!""
@@ -1279,6 +1382,7 @@ $faction.neutralToPlayer score:100
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT"".
@@ -1289,6 +1393,7 @@ $faction.neutralToPlayer score:100
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
+AdjustRepActivePerson WELCOMING 5
 AddText ""As you look around the bar, you begin to feel like someone is eyeing you. You turn around and see a replika at the bar. She is cleaning a glass with a cloth but seems to be watching you like a hawk. You feel like you may need to ask why she is watching you with such intensity""
 AddTextSmall ""A simple bartender replika assigned to this bar. Alyssa has spent years tending the bar and its patrons. No order too difficult, no conversation too boring. Her skills in drink mixing and conversations makes her a beacon of light around these parts. Especially in a place like Rotfront. "" highlight
 AddText ""PLACEHOLDER TEXT""
@@ -1344,39 +1449,46 @@ BeginConversation eusan_nation_alyssa false true","""It's you... Sorry, but I th
 "#END ALYSSA_GREETINGS",,,,,,
 ,,,,,,
 # ALYSSA_BAR_SALES,,,,,,
-ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
-ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
 ,,,,,,
 # ALYSSA_ENTER,,,,,,
-#ALYSSA_BAR_SALES_INTRO,PopulateAlyssaBarOptions,,,"""Would you like to see our selection""? Alyssa says. 
+ALYSSA_BAR_SALES_INTRO_OPTION,PopulateAlyssaBarOptions,"$player.metAlyssa == true",,,"barAlyssa_cigs_intro_option:Ask the bartender for the menu",
+ALYSSA_BAR_SALES_INTRO1,DialogOptionSelected,"$option == barAlyssa_cigs_intro_option",,"""Would you like to see our selection""? Alyssa says. 
 
-She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro:Browse the menu",
-#ALYSSA_BAR_SALES_INTRO2,DialogOptionSelected,"$option == barAlyssa_cigs_intro2",,"You open the menu and begin browsing the items.","barAlyssa_cigs_intro:Browse the menu",
-ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro","FireAll PopulateAlyssaBarOptions","You browse through the available items listed on the menu.",,
+She pulls up an old fashioned menu made with real paper, opens the cover to show you a list of things available for sale at her bar.","barAlyssa_cigs_intro1:Browse the menu",
+ALYSSA_BAR_SALES_MENU,DialogOptionSelected,"$option == barAlyssa_cigs_intro1","FireAll PopulateAlyssaBarSellOptions","You browse through the available items listed on the menu.",,
 "#END ALYSSA_ENTER",,,,,,
 ,,,,,,
 # DRINKS_SALES,,,,,,
 "#END DRINKS_SALES",,,,,,
 ,,,,,,
-# CIGS_SALES,,,,,,
-ALYSSA_BAR_SALES_CIGS_DESC,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one for 15 credits.",
-ALYSSA_BAR_SALES_CIGS_DESC_WAIT,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc false
-SetTooltip barAlyssa_cigs_desc ""You recently bought cigarettes. Please wait for a day.""
-","Cigarettes, made by the Nation. Mass produced and comes in vvone and only flavor - harsh and strong. ","barAlyssa_cigs_desc:Buy one package of cigarette for 15 credits.",
-ALYSSA_BAR_SALES_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+# NATION_CIGS_SALES,,,,,,
+ALYSSA_BAR_SALES_NATION_CIGS_DESC,PopulateAlyssaBarSellOptions,,,"Cigarettes, made by the Nation. Mass produced and comes in one and only flavor - harsh and strong. ",,
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY1,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,,"barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_READY5,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == false",,,"barAlyssa_cigs_desc2:Buy five cigarette packets for 55 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT1,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc1 false
+SetTooltip barAlyssa_cigs_desc1 ""You recently bought cigarettes. Please wait for a day.""
+",,"barAlyssa_cigs_desc1:Buy one cigarette packet for 15 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_DESC_WAIT5,PopulateAlyssaBarSellOptions,"$player.alyssa_bar_cigSale == true","SetEnabled barAlyssa_cigs_desc2 false
+SetTooltip barAlyssa_cigs_desc2 ""You recently bought cigarettes. Please wait for a day.""
+",,"barAlyssa_cigs_desc2:Buy five cigarette packets for 55 credits.",
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE1,DialogOptionSelected,"$option == barAlyssa_cigs_desc1","AddRemoveCommodity eusan_nation_nationsmokes 1 true
+PlaySound ui_intel_something_posted
 AddCredits -15
-AdjustRepActivePerson WELCOMING 1
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls out a pack of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro:Look at the other items for sale.",
-ALYSSA_BAR_SALES_CIGS_PURCHASE2_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descB",,,,
-ALYSSA_BAR_SALES_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_descC","AddRemoveCommodity eusan_nation_nationsmokes 5 true
-AddCredits -50
+""Here you go! Enjoy."" she says as she hands you the pack.","barAlyssa_cigs_intro1:Look at the other items for sale.",
+ALYSSA_BAR_SALES_NATION_CIGS_PURCHASE5,DialogOptionSelected,"$option == barAlyssa_cigs_desc2","AddRemoveCommodity eusan_nation_nationsmokes 5 true
+PlaySound ui_intel_something_posted
+AddCredits -55
 $player.alyssa_bar_cigSale = true 1","Alyssa reached under the table and pulls five packs of cigarettes. The packaging was simple yet elegant enough to pass for quality.
 
-""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.",,
-ALYSSA_BAR_SALES_CIGS_PURCHASE5_WAIT,DialogOptionSelected,"$option == barAlyssa_cigs_descC",,,,
-"#END CIGS_SALES",,,,,,
+""Oh my. Stocking up? No worries. Just remember not to smoke all at once."" she says as she hands you all five packs.","barAlyssa_cigs_intro1:Look at the other items for sale.",
+"#END NATION_CIGS_SALES",,,,,,
+,,,,,,
+# ALYSSA_BAR_SALES_EXIT,,,,,,
+ALYSSA_BAR_SALES_EXIT_OPTION,PopulateAlyssaBarSellOptions,,,,"barAlyssa_cigs_exit:Go back",
+ALYSSA_BAR_SALES_EXIT,DialogOptionSelected,"$option == barAlyssa_cigs_exit","FireAll PopulateAlyssaBarOptions",,,
+"#END ALYSSA_BAR_SALES_EXIT",,,,,,
 "#END ALYSSA_BAR_SALES",,,,,,
 ,,,,,,
 # ALYSSA_EXIT,,,,,,
@@ -1420,7 +1532,8 @@ AddText """"Ah, hello there. A traveller has come to speak to me. How does one l
 THE_DAUGHTER_INTRO_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_the_daughter score: 100
-$player.metDaughter == false","$player.metDaughter = true
+$player.metDaughter == false
+$faction.neutralToPlayer score:100","$player.metDaughter = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
@@ -1429,7 +1542,8 @@ AddText """"Ah, hello there. An outsider has come to speak to me. How did you ma
 THE_DAUGHTER_INTRO_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_the_daughter score: 100
-$player.metDaughter == false","$player.metDaughter = true
+$player.metDaughter == false
+$faction.neutralToPlayer score:100","$player.metDaughter = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of dark haired woman with a serene, almost calm demeanor. She gives a small, disarming smile while her eyes dart up and down at your face.""
@@ -1451,7 +1565,7 @@ OR
 ""Do you prefer large or small? Wait don't answer that...how are you today?""
 OR
 ""Oh comrade, whenever I grace your communications channel, remember how much of an honor it is.""",,
-THE_DAUGHTER_GREETING_FRIENDLY,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+THE_DAUGHTER_GREETING_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
@@ -1483,7 +1597,7 @@ OR
 ""The Nation really hands out commissions out like candy I see.""
 OR
 ""I really should stop answering your communications request...""",,
-THE_DAUGHTER_GREETING_NEUTRAL,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+THE_DAUGHTER_GREETING_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metDaughter == true
 $id == eusan_nation_the_daughter score: 100
@@ -1512,8 +1626,6 @@ OR
 There is no response.
 OR
 The communications link was refused.
-OR
-Communications link was not accepted.
 OR
 The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_DAUGHTER_GREETING",,,,,,
@@ -1578,7 +1690,7 @@ THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commis
 $faction.id == ""eusan_nation""
 $player.metGreatRev == false
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000","$player.metGreatRev = true
+$faction.friendlyToPlayer score:100","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
 AddText ""A series of beeps and high pitched noises your communications request is accepted. The communications terminal begins to show an image of stern looking woman. She quickly scans you with her eyes, darting up and down like a predator would towards prey.""
@@ -1632,7 +1744,7 @@ OR
 ""Busy as always but you have my attention.""
 OR
 ""Comrade, what brings you back to Heimat?""",,"$player.accessGrantedGreatRev ==true"
-THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
 $faction.friendlyToPlayer score:1000
@@ -1668,7 +1780,7 @@ OR
 ""Remember, traveller, everytime you move a muscle, I know what action you may take.""
 OR
 ""Make it quick, traveller, time is precious.""",,"$player.accessGrantedGreatRev ==true"
-THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
+THE_GREAT_REVOLUTIONARY_GREETING_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
 $player.metGreatRev == true
@@ -1688,15 +1800,11 @@ OR
 ""Oh its you $playerName.""",,"$player.accessGrantedGreatRev ==true"
 THE_GREAT_REVOLUTIONARY_GREETING_HOSTILE,PickGreeting,"$faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.isHostile score:100","ShowPersonVisual","""Begone""
-OR
-""Tch...""
+$faction.isHostile score:100","ShowPersonVisual","CONNECTION REFUSED
 OR
 There is no response.
 OR
 The communications link was refused.
-OR
-Communications link was not accepted.
 OR
 The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_GREAT_REVOLUTIONARY_GREETING",,,,,,
@@ -1799,7 +1907,7 @@ THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_OPTION,PopulateGreatRevolutio
 eusan_nation_hasModId PAGSM",,,"greatRevolutionarySindrianFuelCompanyOption:Tell me about the Sindrian Fuel Company.",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_FUEL_COMAPNY_1,DialogOptionSelected,"$option == greatRevolutionarySindrianFuelCompanyOption",,"She gives you an exasperated look as if you asked her a question that she really did not want to answer. However she sighed and began to talk.
 
-""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really not exist but it does.""
+""The Sindrian Fuel Company is a...place. It is a very interesting...place where it really should not exist but it does.""
 
 She crosses her arms and purses her lips. 
 

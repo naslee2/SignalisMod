@@ -1,0 +1,11 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/naslee/signalisMod/master/eusanNation.version",
+    "modName":"Eusan Nation",
+    "modThreadId":"34982",
+    "modVersion":
+    {
+        "major":0,
+        "minor":1,
+        "patch":"4a"
+    },
+}

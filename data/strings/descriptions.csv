@@ -17,7 +17,7 @@ eusan_nation_penrose,SHIP,"The Penrose is the Nation's premiere exploration scou
 
 The exploration mission is split into 3 Phases, with each phase being a set amount of time spent in transit. Phase 1 represents the initial transit to the outer edges of the star system. Phase 2 represent the active exploration phase and Phase 3 represents the extended duration exploration phase.
 
-Over the years, the Penrose Program has been heavily promoted by the Nation as a source of pride, being a peaceful exporation program launched during the war against the Empire. Outside observers have cynically noted the rather vainglorious nature of the program, duly stating that dozens of these craft are sent into the void to search for planets and new worlds but very few have discovered new worlds and none have every come back.",,,,
+Over the years, the Penrose Program has been heavily promoted by the Nation as a source of pride, being a peaceful exploration program launched during the war against the Empire. Outside observers have cynically noted the rather vainglorious nature of the program, duly stating that dozens of these craft are sent into the void to search for planets and new worlds but very few have discovered new worlds and none have every come back.",,,,
 eusan_nation_wachtel,SHIP,"The Wachtel is a simple sensor craft, often used by the Volksmarine as a patrol ship or a sensor scout for larger fleet formations. Their mere existence in combat makes them a juicy target for missiles or ships wanting an easy kill. Smart commanders will usually keep these ships behind the main contact line. Daredevil commanders or the ship's own crew might gamble on their relative weakness by pairing with a more powerful warship for protection",,,,
 eusan_nation_copthorne,SHIP,"Hostile encounters with other major power's fleets and their fighters led to the creation of a dedicated anti-fighter escort ship. The term escort ship is often an exaggeration as it is simply an upsized version of an existing bomber design with anti-air turrets attached. Given a more power sensor suite and battle management system allows this converted design to be major threat to fighter screens and massed missile attack. Copthornes are often found escorting larger ships as a picket craft, providing area defense for fleet formations.",,,,
 eusan_nation_pelikan,SHIP,"The current standard atmospheric capable cargo shuttle employed by the Nation including the Volksmarine and AEON. These cargo shuttles are workhorses, transporting cargo from one place to another. Sometimes an enterprising commander will try to use it for things outside of hauling cargo.",,,,
@@ -93,7 +93,18 @@ buyan_market,GALLERY,"Buyan, our Victory over the Empire","""Buyan burns. I can 
 leng_market,GALLERY,"Leng, Nation's Frontier","""As I walked through the maze of flesh, the memories keep flooding in. The pain, the sorrow, happiness, and love. I can no longer tell which are mine and which are hers, only that we are together now.""",,,,
 nation_bar,GALLERY,"Nation Bar","For those in the Nation, alcohol remains the best remedy to soothe the body and ease the pain from the realities of life. Both military and local workers spend their hard earned rationmarks under the banner of the Nation, under the watchful eye of the replika bartender.",,,,
 rotfront_bar,GALLERY,"Rotfront Bar","Living on Rotfront is a never ending story of wind, rain, cold, and grey walls of the apartment building. The only source of color are the banners and the bar serving drinks.",,,,
+512_briefing,GALLERY,"Important Briefing","A towering woman stands before you while a silver haired woman stands behind her desk. Clearly your success have been noted by the Nation.",,,,
 512_exterior,GALLERY,"Operation Penrose","""Remember, you will die having served your Nation by partaking in a glorious demonstration of our power.""",,,,
-512_polaroid,GALLERY,"The woman in the photo","""Have you seen this woman?""",,,,
+512_polaroid1,GALLERY,"The woman in the photo","""I am looking for this woman.""",,,,
+512_polaroid2,GALLERY,"The woman in the photo","""Have you seen her?""",,,,
+512_cockpit1,GALLERY,"Penrose 512 Cockpit","""The ship is crashed in an icy landscape.""",,,,
+512_cockpit2,GALLERY,"Penrose 512 Cockpit","""Judging from the readout, there's no chance it'll never fly again...""",,,,
+512_hallway,GALLERY,"Penrose 512 Hallway","""I can't concentrate on anything. It's like there's this fog inside my head, and whenever I try to do anything, I just can't focus. I want to go outside, I want to breathe fresh air, I want to feel wind on my face and in my hair.""",,,,
+512_office,GALLERY,"Ariane's office","""Got out of Rotfront only to end up in Heimat.""",,,,
+512_reaktor,GALLERY,"Penrose 512 Reaktor","""All onboard electronics on Penrose-style vessels are powered by the ship's primary power source, a five-cell Adjustable Sealed Autonomous Thermal Nuclear Power Plant (EVA-AKW). """,,,,
+512_messhall,GALLERY,"Penrose 512 Mess Hall","""Sometimes, I feel like this is our home now.""",,,,
+512_crewquarters,GALLERY,"Penrose 512 Crew Quarters","""I missed you, too.""",,,,
+512_cryo1,GALLERY,"Penrose 512 Cryo","""The Emergency Cryogenic Hibernation Unit. It's locked...""",,,,
+512_cryo2,GALLERY,"Penrose 512 Cryo","""It's empty...""",,,,
 #PLANETS,,,,,,
 flooded_world,PLANET,"Rising sea levels have turned this otherwise habitable world into a flooded planet. The ecosystem will take time to recover from the sudden change of landscape on its own.",,,,,

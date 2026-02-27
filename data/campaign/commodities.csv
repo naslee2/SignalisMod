@@ -1,4 +1,4 @@
 name,id,demand class,base price,export value,price variability,utility,origin,tags,stack size,cargo space,icon,sound id,sound id drop,order,economyTier,econUnitOrigUnused,econUnit,baseRaidDanger,eU * base value,iconWidthMult,plugin,desc
-Imperial Cigarette Packs,eusan_nation_imperialsmokes,luxury_goods,75,950,2,1,eusan_nation_buyan,luxury,100,1,graphics/icons/cargo/eusan_nation_ImperialSmokePackSMALL.png,ui_cargo_luxury,ui_cargo_luxury_drop,2,4,200,200,,45000,1,,,
-Nation Cigarette Packs,eusan_nation_nationsmokes,luxury_goods,15,600,3,1,eusan_nation_rotfront,luxury,100,1,graphics/icons/cargo/eusan_nation_NationCigaretteTinSMALL.png,ui_cargo_luxury,ui_cargo_luxury_drop,2,4,200,200,,35000,1,,,
+Imperial Cigarette Packs,eusan_nation_imperialsmokes,luxury_goods,55,950,2,1,eusan_nation_buyan,luxury,100,1,graphics/icons/cargo/eusan_nation_ImperialSmokePackSMALL.png,ui_cargo_luxury,ui_cargo_luxury_drop,2,4,200,200,,45000,1,,,
+Nation Cigarette Packs,eusan_nation_nationsmokes,luxury_goods,15,600,1,1,eusan_nation_rotfront,luxury,100,1,graphics/icons/cargo/eusan_nation_NationCigaretteTinSMALL.png,ui_cargo_luxury,ui_cargo_luxury_drop,2,4,200,200,,35000,1,,,
 ,,,,,,,,,,,,,,,,,,,,,,,
