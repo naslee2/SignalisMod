@@ -731,16 +731,18 @@ OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == 
 ","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You finish looking at the map and ship plans.",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2b:Enter the Mess Hall","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
-$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall""","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
+$player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall"" ","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
 
 Seems like the power is off. Without power, there is nothing you can gleam here.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is off. systems monitor is offline"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb_false,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == false","eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
+$player.officeryeongPenrose512_foundKeycard == false","ShowImageVisual 512_messhall
+eusan_nation_penrose512Quest_rulecmd addSystemStatusLockdown","You survey the mess hall, the power now on. A previously dead screen has lit up, but displays nothing. You are missing some form of access.","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.","power is on. systems monitor is online. keycard is not found (doors are locked on cryo and forward decks"
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb2,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_foundKeycard == true",,"The keycard you found has granted you access to the screen, though it is struggling to display much. Familiar with the system by now, a technician manages to get the image to resolve.","officeryeongPenrose512_middleDecks_explore2b_systems1:Read the display",
-OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","eusan_nation_penrose512Quest_rulecmd addSystemStatusActive","The wireframe model of the ship spins slowly as text is printed across the screen. ","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.",
+$player.officeryeongPenrose512_foundKeycard == true","ShowImageVisual 512_messhall","The keycard you found has granted you access to the screen, though it is struggling to display much. Familiar with the system by now, a technician manages to get the image to resolve.","officeryeongPenrose512_middleDecks_explore2b_systems1:Read the display",
+OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSb3,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems1","ShowImageVisual 512_messhall
+eusan_nation_penrose512Quest_rulecmd addSystemStatusActive","The wireframe model of the ship spins slowly as text is printed across the screen. ","officeryeongPenrose512_middleDecks_explore2b_systems:Go back to the main hall.",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b_systems","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore",,,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT_OPTION,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,"As your team continues their work, you decide to leave the area.","officeryeongPenrose512_middlesection_exit:Return to the staging area.",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middlesection_exit","FireAll PopulateOfficerYeongPenrose512Explore","You return to the hallway where your team has set up a temporary staging area.",,
@@ -751,20 +753,21 @@ OFFICER_YEONG_PENROSE512_AFT_DECKS_START,PopulateOfficerYeongPenrose512Explore,,
 OFFICER_YEONG_PENROSE512_AFT_DECKS1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_start","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","The aft decks of the Penrose are the most recent area to be accessed by your crew, and equipment is still being set up. ",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks2a:Head into the crew quarters",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a
-$player.officeryeongPenrose512_foundKeycard == false",,"The crew quarters are a mess, littered with miscellaneous items and debris, and several bags of trash. Many appear to have been broken open and sorted through.","officeryeongPenrose512_aftDecks2a_keycard1:Search the crew quarters.","pick up keycard to access forward decks"
-OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard1","SetTextHighlights ""security keycard""","After some time searching through the mess, a salvor triumphantly displays a keycard they have found.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
+$player.officeryeongPenrose512_foundKeycard == false","ShowImageVisual 512_crewquarters","The crew quarters are a mess, littered with miscellaneous items and debris, and several bags of trash. Many appear to have been broken open and sorted through.","officeryeongPenrose512_aftDecks2a_keycard1:Search the crew quarters.","pick up keycard to access forward decks"
+OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARD2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard1","ShowImageVisual 512_crewquarters
+SetTextHighlights ""security keycard""","After some time searching through the mess, a salvor triumphantly displays a keycard they have found.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_KEYCARDFOUND,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a
-$player.officeryeongPenrose512_foundKeycard == true",,"Even more messy now that it has been sorted through, the crew quarters offer little of value.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
+$player.officeryeongPenrose512_foundKeycard == true","ShowImageVisual 512_crewquarters","Even more messy now that it has been sorted through, the crew quarters offer little of value.","officeryeongPenrose512_aftDecks2a_keycard:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_keycard","$player.officeryeongPenrose512_foundKeycard = true","You perform one more cursory sweep of the room, finding nothing.","officeryeongPenrose512_aftDecks2a_exit_option:Go back and search the rest of the deck in this area.",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks2a_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","You finish searching the crew quarters, deciding to go elsewhere.",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks_explore2b:Enter the Reactor room.","Player finds a power grid controller"
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON1,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
-$player.officeryeongPenrose512_poweron == false",,"Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.
+$player.officeryeongPenrose512_poweron == false","ShowImageVisual 512_reaktor","Your crew is resistant to you entering the reactor room, and for good reason. Radiation leaks through openings to the room, and the previously idle medic is now passing out iodine pills, preparing your salvors to enter the room.
 
 Once the salvors enter, the damage to the power systems can be fully seen. From the live feed, a bunch of pipe, wires and broken equipment lay all over the room. Nearby the control system readout's red screen flashes with error and warning notifications. ","officeryeongPenrose512_aftDecks_explore2b_power1:Order your crew to stabilize the reactor.",
-OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1",,"You watch on your hand held screen as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
+OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERON2,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power1","ShowImageVisual 512_reaktor","You watch on your hand held screen as your crew gets to work on the reactor. It's an ancient, crude fission design, but not simpler for it. Multiple crew rotations are made during the process before the radiation is brought under control, and auxiliary power comes online.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_POWERCHECK,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b
-$player.officeryeongPenrose512_poweron == true",,"The parts of the ship that remain functional flicker on as the power comes online, and your exhausted crew seals the reactor room off.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
+$player.officeryeongPenrose512_poweron == true","ShowImageVisual 512_reaktor","The parts of the ship that remain functional flicker on as the power comes online, and your exhausted crew seals the reactor room off.","officeryeongPenrose512_aftDecks_explore2b_power:Continue",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT_OPTION,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_power","$player.officeryeongPenrose512_poweron = true","You check the power readout given to you by the salvage crew, showing everything to be stable.","officeryeongPenrose512_aftDecks_explore2b_exit_option:Go back and search the rest of the deck in this area.",
 OFFICER_YEONG_PENROSE512_AFT_DECKS2b_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_aftDecks_explore2b_exit_option","FireAll PopulateOfficerYeongPenrose512_aftDecks_explore","The reactor is stable and active. There is nothing else left to do here. ",,
 OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT_OPTION,PopulateOfficerYeongPenrose512_aftDecks_explore,,,,"officeryeongPenrose512_aftDecks_exit:Return to the staging area.",
@@ -790,19 +793,22 @@ $player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose5
 SetTooltip officeryeongPenrose512_cryo_start ""Most debris have been removed and power has been restored but there is the issue of finding the access key for the door. Try looking for an access keycard to get through the door.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_start",,"The door to the emergency cryo bay is firmly jammed, and has to be cut open. Occasional beeps from the machinery are the only noises in the room.","officeryeongPenrose512_cryo_explore1:Inspect the cryo chamber.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
-$player.officeryeongPenrose512_foundphoto == true",,"The cryo bed itself is intact, like the one on your previous Penrose salvage mission. Could the pilot be alive in this one as well?
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cryo1","The cryo bed itself is intact, like the one on your previous Penrose salvage mission. Could the pilot be alive in this one as well?
 
 You locate the keypad on the sleeper, and flip over the photograph from the flight deck. The grids are the same size.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == true","SetTextHighlights ""photo""
+$player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cryo1
+SetTextHighlights ""photo""
 SetEnabled officeryeongPenrose512_cryo_explore2a false
 KaysaarKeypad initUI","The keypad next to the cryo chamber is brightly lit. The 9 digit keypad strangely has no numbers on the keys. Only the correct code will open this chamber.","officeryeongPenrose512_cryo_explore2a:Enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2a_hint:Check the photo for the code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","SetTextHighlights ""photo""
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2a_hint,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a_hint","ShowImageVisual 512_cryo1
+SetTextHighlights ""photo""
 KaysaarKeypad initCode","You remember that photo of the silver haired woman you found and pull it out from your pocket. The woman in the photograph is still happily smiling. You flip the photo on its back and check the combination printed.","officeryeongPenrose512_cryo_explore2:Enter the code.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2b,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2
-$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_explore2 false
+$player.officeryeongPenrose512_foundphoto == false","ShowImageVisual 512_cryo1
+SetEnabled officeryeongPenrose512_cryo_explore2 false
 SetTooltip officeryeongPenrose512_cryo_explore2 ""The cryo sleeper is locked by a 9 digit keycode. You will need to find the code to open the cryo sleeper.""
 SetTextHighlights ""code""","A crewmember tried to unlock the cryo chamber but it is locked. A red flashing light next to a combination lock keypad catches your eye. 
 
@@ -810,10 +816,12 @@ The crewmember tries again. The red light flashes again.
 
 The crewmember gives you a defeated look. Unless you wish to breach the seal and risk the life of the pilot inside, you will need the code to the 9 digit pad to unlock.","officeryeongPenrose512_cryo_explore2a:Use the photo to enter the cryo chamber code.
 officeryeongPenrose512_cryo_explore2_exit:Return to the staging area.",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE3,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2a","ShowImageVisual 512_cryo2
+SetTextHighlights ""Nothing...???""","Your salvage crew is particularly cautious as the cryo chamber opens. The medic kneels beside you over their bag, sorting through a variety of emergency injection pens.
 
 The doors hiss and open, disappointingly, to an empty chamber. Not so much as a smudge can be spotted on the interior as the water drains from it.","officeryeongPenrose512_cryo_explore3:Continue",
-OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","eusan_nation_penrose512Quest_rulecmd resumeMusic_512
+OFFICER_YEONG_PENROSE512_CRYO_EXPLORE4,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore3","ShowImageVisual 512_cryo2
+eusan_nation_penrose512Quest_rulecmd resumeMusic_512
 $global.eusan_nation_penrose512_returnBlackbox = true
 $global.eusan_nation_penrose512_recoveredData = true
 Call $global.eusan_nation_penrose512_ref updateStage","The crew mutters over comms, confused and unnerved in equal parts. One salvor hesitantly swipes his hand along the interior of the chamber; nothing aside from beads of residual water is to be found.
@@ -824,9 +832,11 @@ Your recovery team hasn't found any members of the crew. No pilot, no replika, n
 
 With nothing left to see, you signal to your crew that its time to leave.","officeryeongPenrose512_cryo_explore4:Return to your fleet.",
 OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_STAGING,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore2_exit","FireAll PopulateOfficerYeongPenrose512Explore",,,
-OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore4","FireAll PopulateOptions","You look over the salvage summary as the shuttle ascends. Nothing of particular note was recovered, save for the flight recorder data. Lazily flipping through photos of the operation, the red display panel catches your eye again, with the pilot's name on it. 
+OFFICER_YEONG_PENROSE512_CRYO_EXIT_TO_FLEET,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore4","ShowDefaultVisual
+FireAll PopulateOptions
+SetTextHighlights ""A. Yeong.""","You look over the salvage summary as the shuttle ascends. Nothing of particular note was recovered, save for the flight recorder data. Lazily flipping through photos of the operation, the red display panel catches your eye again, with the pilot's name on it. 
 
-A. Yeong. ",,
+A. Yeong.",,
 "#END OFFICER_YEONG_PENROSE512_CRYO",,,,,,
 "#END RECOVERY512",,,,,,
 ,,,,,,
