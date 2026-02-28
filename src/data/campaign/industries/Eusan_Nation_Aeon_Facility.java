@@ -17,7 +17,7 @@ import java.awt.Color;
 import org.apache.log4j.Logger;
 
 public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
-    static Logger logger = Global.getLogger(Eusan_Nation_Aeon_Facility.class);
+    //static Logger logger = Global.getLogger(Eusan_Nation_Aeon_Facility.class);
 
 	protected String[] miningOreConditionsList = new String[] {Conditions.ORE_ABUNDANT, Conditions.ORE_MODERATE, Conditions.ORE_RICH, Conditions.ORE_SPARSE, Conditions.ORE_ULTRARICH};
 	protected String[] miningRareOreConditionsList = new String[] {Conditions.RARE_ORE_ABUNDANT, Conditions.RARE_ORE_MODERATE, Conditions.RARE_ORE_RICH, Conditions.RARE_ORE_SPARSE, Conditions.RARE_ORE_ULTRARICH};
@@ -236,6 +236,7 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
         String faction = Misc.getCommissionFactionId();
         //logger.info("Logger active: player faction is: " + faction);
+        if(faction == null) return false;
         if(!faction.equals("eusan_nation")) return false;
 
         if(!market.hasIndustry(Industries.REFINING) && !market.hasIndustry(Industries.MINING)) return false;
@@ -264,7 +265,7 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
         float initPad = 0f;
         float opad = 10f;
-        Color h = Misc.getHighlightColor();
+        //Color h = Misc.getHighlightColor();
         boolean addedSomething = false;
         if (canImproveToIncreaseProduction()) {
             String unit = "unit";
@@ -291,8 +292,7 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
         }
 
         if (mode != ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
-            info.addPara("Each improvement made at a colony doubles the number of " +
-                            "" + Misc.STORY + " points required to make an additional improvement.", initPad,
+            info.addPara("Each improvement made at a colony doubles the number of " + Misc.STORY + " points required to make an additional improvement.", initPad,
                     Misc.getStoryOptionColor(), Misc.STORY + " points");
             addedSomething = true;
         }
