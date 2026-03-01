@@ -528,16 +528,15 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$player.metAdmiralFalke == false
+$player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE
-","SetEnabled officeryeongPenroseRecovery512Start false
+eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
-SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned and Cooperative relations with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
 RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
@@ -1987,7 +1986,7 @@ She paused a bit.
 ""I know you talked to Macario. He is a snake. Be careful of that one.""","greatRevolutionarySindrian2:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_3,DialogOptionSelected,"$option == greatRevolutionarySindrian2",,"""Now consider this. The Diktat is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
 
-""Outside of its major military capabilities and unique sets of warship designs, the Diktat has been able to hold on due to its strategic position and vital exports. I even heard someone within the Hegemony's officer corps is that they disparage it as a ''gas station with a fleet''. Amusing yes but it gets the point across. The Diktat's exports of antimatter fuel and luxury food items are keeping it afloat.""","greatRevolutionarySindrian2:Continue",
+""Outside of its major military capabilities and unique sets of warship designs, the Diktat has been able to hold on due to its strategic position and vital exports. I even heard someone within the Hegemony's officer corps is that they disparage it as a ''gas station with a fleet''. Amusing yes but it gets the point across. The Diktat's exports of antimatter fuel and luxury food items are keeping it afloat.""","greatRevolutionarySindrian3:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_4,DialogOptionSelected,"$option == greatRevolutionarySindrian3",,"""Ever since the Askonia Crisis, the Diktat has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
 
 She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.","greatRevolutionarySindrian4:End Conversation",
