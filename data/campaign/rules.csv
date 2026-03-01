@@ -528,16 +528,15 @@ You give her a nod and pull out a communications device. You send off a message 
 # OFFICER_YEONG_PENROSE512_QUEST,,,,,,
 ,,,,,,
 # RECOVERY512_BRIEFING,,,,,,
-OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"RepGTE ""eusan_nation"" COOPERATIVE
+OFFICER_YEONG_PENROSE512_START_NOTCOMMD,PopulateOfficerYeongChatOptions,"$player.commissionFactionId != ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$player.metAdmiralFalke == false
+$player.metAdmiralFalke == true
 $global.eusan_nation_penroseRecovery2_completed == true
 $global.eusan_nation_penrose512_start == false
-eusan_nation_personRelationChecker COOPERATIVE
-","SetEnabled officeryeongPenroseRecovery512Start false
+eusan_nation_personRelationChecker COOPERATIVE","SetEnabled officeryeongPenroseRecovery512Start false
 SetOptionColor officeryeongPenroseRecovery512Start highlight
-SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
+SetTooltip officeryeongPenroseRecovery512Start ""You must be commissioned and Cooperative relations with the Eusan Nation and have met Admiral Falke to start this mission.""",,"officeryeongPenroseRecovery512Start:""I have a new mission, you were specifically requested.""",
 OFFICER_YEONG_PENROSE512_START,PopulateOfficerYeongChatOptions,"$player.commissionFactionId == ""eusan_nation""
 RepGTE ""eusan_nation"" COOPERATIVE
 $id == ""eusan_nation_officer_yeong"" score: 100
