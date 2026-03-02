@@ -20,8 +20,8 @@ Taean Type 60,eusan_nation_taean,2,,3200,950,,300,,20,10,18,,,,HIGH_EXPLOSIVE,22
 Mifeng SRM Launcher,eusan_nation_mifeng,1,,4400,1400,,60,40,5,30,18,360,,,ENERGY,10,,0,9,20,0.2,3,3,0,0,,400,400,7,60,,,"ANTI_FTR, PD, DO_NOT_AIM, DO_NOT_CONSERVE","utility18, missile15, eusan_nation_standard_package",,Eusan Tech,,Anti Small Craft,Fast,Excellent,,,,,,,,16.3
 Kayak-KS Type 80,eusan_nation_kayak_ks,2,,10000,2500,,700,,300,10,20,40,,,HIGH_EXPLOSIVE,0,,0,5,1,0.5,5,5,0,0,,400,200,10,600,,,"STRIKE, DO_NOT_AIM","strike12, eusan_nation_standard_package",,Eusan Tech,,Pressure,,,,,Split in two more maneuverable missile when closing in.,,,,,17
 #BUILTIN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Type 71,eusan_nation_admiral_builtin1,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,400,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
-Type 71,eusan_nation_admiral_builtin2,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,400,,0,8,1,,3,12,3,12,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
+Type 71,eusan_nation_admiral_builtin1,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,400,,0,8,1,,4,12,1,8,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
+Type 71,eusan_nation_admiral_builtin2,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,400,,0,8,1,,4,12,1,8,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
 Type 80 Kayak-L,eusan_nation_kayak,,,10000,2500,,700,,300,10,20,80,0.5,8,HIGH_EXPLOSIVE,0,,1,8,4,0.5,5,5,0,0,,400,200,10,600,,,"SYSTEM, DO_NOT_AIM",,,Eusan Tech,,Pressure,,,,,Split in two more maneuverable missile when closing in.,,,,,
 Type 30 Kayak-R,eusan_nation_kayak_R,,,10000,1500,,200,,10,15,20,600,0.5,30,HIGH_EXPLOSIVE,20,,0,0.2,1,,5,10,0.5,1,,400,100,5,60,,,SYSTEM,,,Eusan Tech,,Pressure,,,,,,,,,,
 Hybrid Chaingun,eusan_nation_hybrid_chaingun,,,10000,800,,30,,20,25,28,,,,KINETIC,20,,0,0.05,1,,0,5,0.25,5,,1200,,,20,,,SYSTEM,"kinetic19, remnant, rare_bp, hist1t, merc, ind",,Eusan Tech,,Pressure,,,,,"Every %s seconds of continuous fire, launches %s rocket, each dealing %s %s damage.",1.5 | 8 | 100 | HE,,,,8.5
