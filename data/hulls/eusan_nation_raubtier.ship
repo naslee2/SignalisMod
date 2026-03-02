@@ -8,11 +8,11 @@
   "width": 76,
   "center": [38, 45],
   "collisionRadius": 91.5,
-  "shieldCenter": [16, 0],
+  "shieldCenter": [13, -0],
   "shieldRadius": 73,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_imperial_hullplating",
+    "eusan_nation_imperial_hullplating"
   ],
   "weaponSlots": [
     {

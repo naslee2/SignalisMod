@@ -40,9 +40,9 @@ public class eusan_nation_chaingun_script implements OnFireEffectPlugin{
                 Vector2f rotatedOffset = offset; // copy for rotation
                 VectorUtils.rotate(rotatedOffset, projectile.getFacing());
 
-                Vector2f spawnPoint = new Vector2f(projectile.getLocation());
+                Vector2f spawn_point = new Vector2f(projectile.getLocation());
 
-                Vector2f.add(spawnPoint, rotatedOffset, spawnPoint);
+                Vector2f.add(spawn_point, rotatedOffset, spawn_point);
 
                 float random_offset = 3 - MathUtils.getRandomNumberInRange(0, 6); // -3 to 3
 
@@ -50,13 +50,20 @@ public class eusan_nation_chaingun_script implements OnFireEffectPlugin{
                     weapon.getShip(),
                     weapon,
                     WEAPON_ID,
-                    spawnPoint,
+                    spawn_point,
                     projectile.getFacing() + random_offset,
                     weapon.getShip().getVelocity()
                 );
 
-                //TODO play sound
-                engine.spawnMuzzleFlashOrSmoke(weapon.getShip(), spawnPoint, weapon_spec, 1);
+                Global.getSoundPlayer().playSound(
+                    "annihilator_fire", //annihilator for now
+                    1f,   // pitch
+                    1f,   // volume
+                    spawn_point,
+                    weapon.getShip().getVelocity()
+                );
+                
+                engine.spawnMuzzleFlashOrSmoke(weapon.getShip(), spawn_point, weapon_spec, 1);
             }
         }
 	}

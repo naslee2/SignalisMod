@@ -22,6 +22,8 @@ public class eusan_nation_pernach_script implements OnFireEffectPlugin{
         if(shot_counter >= 5){
             shot_counter = 0;
 
+            WeaponSpecAPI weapon_spec = Global.getSettings().getWeaponSpec(WEAPON_ID);
+            
             Vector2f rocket_offset = new Vector2f(-8,-8);
             VectorUtils.rotate(rocket_offset, projectile.getFacing());
 
@@ -39,7 +41,13 @@ public class eusan_nation_pernach_script implements OnFireEffectPlugin{
                 weapon.getShip().getVelocity()
             );
 
-            WeaponSpecAPI weapon_spec = Global.getSettings().getWeaponSpec(WEAPON_ID);
+            Global.getSoundPlayer().playSound(
+                "annihilator_fire", //annihilator for now
+                1f,   // pitch
+                1f,   // volume
+                spawn_point,
+                weapon.getShip().getVelocity()
+            );
 
             engine.spawnMuzzleFlashOrSmoke(weapon.getShip(), spawn_point, weapon_spec, 1);
 
