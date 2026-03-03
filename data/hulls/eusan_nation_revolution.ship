@@ -8,13 +8,13 @@
   "height": 432,
   "width": 192,
   "center": [96, 214],
-  "collisionRadius": 239,
+  "collisionRadius": 235,
   "shieldCenter": [0, -0],
-  "shieldRadius": 236.5,
+  "shieldRadius": 230,
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_engineering_design",
-    "eusan_nation_missile_assembly_compartment",
+    "eusan_nation_missile_assembly_compartment"
   ],
   "builtInWeapons": {
     "DECO1": "eusan_nation_revolution_deco1",
