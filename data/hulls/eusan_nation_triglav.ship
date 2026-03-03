@@ -7,12 +7,12 @@
   "height": 208,
   "width": 130,
   "center": [65, 89],
-  "collisionRadius": 143.5,
-  "shieldCenter": [15, 0],
-  "shieldRadius": 124.5,
+  "collisionRadius": 133,
+  "shieldCenter": [13, -0],
+  "shieldRadius": 116,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
+    "eusan_nation_engineering_design"
   ],
   "builtInWeapons": {
     "WS0001": "eusan_nation_hybrid_chaingun"

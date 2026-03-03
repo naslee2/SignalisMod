@@ -14,6 +14,7 @@
 	"coreColor":[255,200,200,180],	
 	"textureScrollSpeed":64.0,
 	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
 	"bulletSprite":"graphics/missiles/shell_large_yellow.png",
 	"onFireEffect":"data.scripts.weapons.eusan_nation_proj_speed_variable"	
 }

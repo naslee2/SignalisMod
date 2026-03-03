@@ -8,9 +8,9 @@
   "height": 184,
   "width": 104,
   "center": [52, 75],
-  "collisionRadius": 124,
-  "shieldCenter": [13, -0],
-  "shieldRadius": 109,
+  "collisionRadius": 120.5,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 106.5,
   "viewOffset": 0,
   "builtInMods": [
     "eusan_nation_engineering_design"
