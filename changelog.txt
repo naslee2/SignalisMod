@@ -1,3 +1,17 @@
+v0.1.4c
+- Rules.csv typo fixes. (Homete)
+- Fixed Falke fleet from wandering away because the assignment ends in 365 days after game start. (Homete)
+- Fixed shield too close to hull on some ship: Lerche "always_panic" hint (Sikair)
+- Sound added to hybrid rocket weapons (Sikair)
+- Pebble hail: 25->22 damage (Sikair)
+- Wuqiong: fire twice in a burst (Sikair)
+- Kompakt: higher rof but can run out of ammo (Sikair)
+- Rogatina: tighter spread on first two shots (Sikair)
+- Taean: 3x200->3x300 damage but fires slower (Sikair)
+- added a new shipsystem (not in use) (Sikair)
+- Changed triglav desc and flux buff (Sikair)
+- naval gun proj now pierce missile (Sikair)
+
 v0.1.4b
 -Null String fixes for Aeon Facility
 -Rules CSV fixes to avoid soft lockout and progression issues.
