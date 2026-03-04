@@ -1963,7 +1963,7 @@ She crosses her arms and purses her lips.
 
 ""Just remember, despite our close ties, I do not have confidence that the Sindrian Diktat will be able to continue existing if current things continue the way they are.""","greatRevolutionarySindrian1:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2A,DialogOptionSelected,"$option == greatRevolutionarySindrian1
-$player.metMacario == false",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+$player.metMacario == false",,"""The Sindrian Diktat is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Philip Andrada...but our intelligence services have not seen him for a while."" 
 
 ""However, information about the Diktat's internal workings is opaque. Our intelligence services have not been able to get a good read on the current status of the government on Sindria lately. Something is going on and the Sindrians are very tight lipped.""
 
@@ -1971,7 +1971,7 @@ She paused a bit.
 
 ""I'm sure you will eventually cross paths with the Diktat.""","greatRevolutionarySindrian2:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_2B,DialogOptionSelected,"$option == greatRevolutionarySindrian1
-$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Phillip Andrada...but our intelligence services have not seen him for a while."" 
+$player.metMacario == true",,"""The SFC is little more than 20 years old at this time. Time however is not on the SFC's side. Now I understand that there are rumblings about the Diktat's stability. Nomially the head is the Supreme Executor Philip Andrada...but our intelligence services have not seen him for a while."" 
 
 ""Information about the Diktat's internal workings is opaque. However, recent developments have allowed us to get a better picture on the current internal situation of the Diktat.""
 
@@ -1987,7 +1987,7 @@ She paused a bit.
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_3,DialogOptionSelected,"$option == greatRevolutionarySindrian2",,"""Now consider this. The Diktat is the only major power in the Persean Sector that is outwardly stable and isn't very active outside its borders. Not participating does not mean it is not playing of the sector political games. It very much is.""
 
 ""Outside of its major military capabilities and unique sets of warship designs, the Diktat has been able to hold on due to its strategic position and vital exports. I even heard someone within the Hegemony's officer corps is that they disparage it as a ''gas station with a fleet''. Amusing yes but it gets the point across. The Diktat's exports of antimatter fuel and luxury food items are keeping it afloat.""","greatRevolutionarySindrian3:Continue",
-THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_4,DialogOptionSelected,"$option == greatRevolutionarySindrian3",,"""Ever since the Askonia Crisis, the Diktat has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Phillip Andrada.""
+THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_4,DialogOptionSelected,"$option == greatRevolutionarySindrian3",,"""Ever since the Askonia Crisis, the Diktat has been operating on a state of permanent siege mode. I have tried multiple times to get the Sindrians to commit to a more robust alliance but lately I have been getting vague responses. I keep getting widely different answers. Whoever is calling the shots, clearly isn't the same person and certainly not Philip Andrada.""
 
 She stops. Clearly the entire situation has annoyed her far more than you expected. It may be a good idea to stop this conversation.","greatRevolutionarySindrian4:End Conversation",
 THE_GREAT_REVOLUTIONARY_CHAT_SINDRIAN_DIKTAT_ESCAPE_RETURN,DialogOptionSelected,"$option == greatRevolutionarySindrian4","FireAll PopulateGreatRevolutionaryChatOptions",,,

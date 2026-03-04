@@ -14,6 +14,7 @@ Requires LazyLib, and MagicLib. Nexerlin optional. Get them:
 - Ship sprites, hull, weapons, and ship data by Sikair.
 - Thanks to Mallow/@AkulaAkura, Koil_52, MirageComedy, Selkie, Neoysod, and Yyiek for the awesome art!
 - Thanks to Kaysaar, WMGreywind, Sikair, Crablobab, and Mayu for coding assistance.
+- Thanks to ElectricTrojan and Tsuyoshi for the music tracks.
 - Thanks to CY_Milkydromeda/Ryxsen1421, freelanceralpha1/Foster, rico_the_rat, and others for support and testing.
 - Thanks to @Th0usandw1nd for letting me use his Officer Yeong character concept.
 - Thanks to Koil_52, lebonelesssnek, C H E E K I B R E E K I and Venri for writing assistance

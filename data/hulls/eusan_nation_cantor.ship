@@ -8,12 +8,12 @@
   "height": 210,
   "width": 114,
   "center": [57, 88],
-  "collisionRadius": 133.5,
-  "shieldCenter": [17, 0],
-  "shieldRadius": 112,
+  "collisionRadius": 132.5,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 116.5,
   "viewOffset": 0,
   "builtInMods": [
-    "eusan_nation_engineering_design",
+    "eusan_nation_engineering_design"
   ],
   "weaponSlots": [
     {
