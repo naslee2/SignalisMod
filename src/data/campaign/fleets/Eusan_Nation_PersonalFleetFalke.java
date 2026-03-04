@@ -56,14 +56,16 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         m.triggerSetFleetOfficers( OfficerNum.MORE, OfficerQuality.UNUSUALLY_HIGH);
         m.triggerSetFleetCommander(getPerson());
         m.triggerSetFleetFaction(EUSAN_NATION);
-        //m.triggerSetPatrol();
+        m.triggerSetPatrol();
         m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, heimat_market);
         m.triggerFleetSetNoFactionInName();
         m.triggerFleetSetName("Ever Victorious Fleet");
         m.triggerSetFleetQuality(FleetQuality.SMOD_1);
-        //m.triggerFleetSetPatrolActionText("Patrolling");
+        m.triggerFleetSetPatrolActionText("Defending Heimat");
         m.triggerPatrolAllowTransponderOff();
-        //m.triggerOrderFleetPatrol(heimat.getStarSystem());
+        m.triggerOrderFleetPatrol(heimat_market.getPlanetEntity());
+        m.triggerFleetSetPatrolLeashRange(300.0f);
+        m.triggerMakeFleetIgnoreOtherFleets();
 
         CampaignFleetAPI falkeFleet = m.createFleet();
         FleetMemberAPI oldFlagship = falkeFleet.getFlagship();
@@ -81,7 +83,7 @@ public class Eusan_Nation_PersonalFleetFalke extends PersonalFleetScript {
         falkeFleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
         heimat_market.getContainingLocation().addEntity(falkeFleet);
         falkeFleet.setLocation(heimat_market.getPlanetEntity().getLocation().x, heimat_market.getPlanetEntity().getLocation().y);
-        falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, heimat_entity, 365);
+        //falkeFleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, heimat_entity, 37000);
         falkeFleet.setFacing(random.nextFloat() * 360f);
 
 
