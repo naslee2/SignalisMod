@@ -1,3 +1,6 @@
+v0.1.4d
+
+
 v0.1.4c
 - Rules.csv typo fixes. (Homete)
 - Fixed Falke fleet from wandering away because the assignment ends in 365 days after game start. (Homete)
