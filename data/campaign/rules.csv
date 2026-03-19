@@ -724,10 +724,6 @@ OFFICER_YEONG_PENROSE512_FORWARD_DECKS_EXIT,DialogOptionSelected,"$option == off
 # OFFICER_YEONG_PENROSE512_MIDDLE_SECTION,,,,,,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION_START,PopulateOfficerYeongPenrose512Explore,,,,"officeryeongPenrose512_middleDecks_start:Enter the Middle decks",
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION1,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_start","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You enter the mid section of the ship, navigating around busy salvors and their equipment as they strip and inspect the ship. A medic leans against a nearby wall, their fortunately unused equipment piled nearby.",,
-#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2a:View Map","Player finds a diagram of the ship"
-#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_VIEWMAP,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a",,"You were provided with detailed schematics of the vessel, further enhanced by your experience in salvaging the previous two. You bring them up on your tri-pad, observing the layout with the physical map your team salvaged from the area.","officeryeongPenrose512_middleDecks_explore2a_viewmap:Go back to the main hall.",
-#OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2a_EXIT,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2a_viewmap
-","FireAll PopulateOfficerYeongPenrose512MiddleSectionExplore","You finish looking at the map and ship plans.",,
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b,PopulateOfficerYeongPenrose512MiddleSectionExplore,,,,"officeryeongPenrose512_middleDecks_explore2b:Enter the Mess Hall","Player finds a dead replika and a keycard nearby."
 OFFICER_YEONG_PENROSE512_MIDDLE_SECTION2b_SYSTEMSa,DialogOptionSelected,"$option == officeryeongPenrose512_middleDecks_explore2b
 $player.officeryeongPenrose512_poweron == false","SetTextHighlights ""mess hall"" ","You step into the mess hall, though on such a small ship it served a variety of functions. Including, most importantly, a technical diagnostics area. 
@@ -1658,6 +1654,117 @@ She tilts her head and gives you a slight smile.
 ""Of course you will. Your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
 THE_DAUGHTER_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == theDaughterQuestGiveEND","FireAll PopulatetheDaughterChatOptions",,,
 "#END THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION",,,,,,
+,,,,,,
+# THE_DAUGHTER_LUDDIC_CHURCH,,,,,,
+THE_DAUGHTER_LUDDIC_CHURCH_OPTIONS,PopulatetheDaughterChatOptions,"eusan_nation_personRelationChecker FRIENDLY",,,"theDaughterLuddicChurchOption:Tell me about the Luddic Church.",
+THE_DAUGHTER_LUDDIC_CHURCH_1,DialogOptionSelected,"$option == theDaughterLuddicChurchOption",,"She gives you a smile as if you asked her something she really likes to talk about.
+
+""Ah the Luddic Church. The dominate religion of the Persean Sector. ''The masses cry out for salvation! Free us from technology and return to a better time!''""
+
+She gives a small giggle. The mocking tone towards the Luddic faith betrays a contemptuous reaction to the mere mention of Ludd.","theDaughterLuddicChurch1:Continue",
+THE_DAUGHTER_LUDDIC_CHURCH_2,DialogOptionSelected,"$option == theDaughterLuddicChurch1",,"""Luddics are as stupid as they are misguided. At least the ones who openly speak or preach their faith. For the ones who keep it hidden or are reserved about it, it speaks volumes how much those are far more intelligent than their vocal counterparts.""","theDaughterLuddicChurch2:Continue",
+THE_DAUGHTER_LUDDIC_CHURCH_3,DialogOptionSelected,"$option == theDaughterLuddicChurch2",,"""Regardless my dislike and mistrust of Luddics, there is a reason for me to respect the religion. Its large, it has a military force and the Church has a network of informants who may or may not report back to the Knights of Ludd. Worse, they may be reporting to the Luddic Path.""
+
+She smiles a bit. Deviously.
+
+""I like a good challenge with the Path.""","theDaughterLuddicChurch3:Continue",
+THE_DAUGHTER_LUDDIC_CHURCH_4,DialogOptionSelected,"$option == theDaughterLuddicChurch3",,"""The Church likes to portray itself as a legitimate religion. The way I see it, it is a cult slavishly devoted to the truth of one man and that truth is whatever the Church deems it to be. The most interesting thing about the religion is that they would send radicals and extremists to hunt down any historical documents that shows Ludd in the flesh. Very interesting isn't it? Its like they are hiding something.""
+
+The Daughter gives a small chuckle. 
+
+""A smart move. The myth of the man would certainly be deflated if they have portrayals of him as a regular human being. Or anything that shows him being normal. Has to be a prophet.""
+
+""Anyway, thats all I have on the subject. Not a whole bunch to say."" ","theDaughterLuddicChurch4:End Conversation",
+THE_DAUGHTER_LUDDIC_CHURCH_ESCAPE_RETURN,DialogOptionSelected,"$option == theDaughterLuddicChurch4","FireAll PopulatetheDaughterChatOptions",,,
+"#END THE_DAUGHTER_LUDDIC_CHURCH",,,,,,
+,,,,,,
+# THE_DAUGHTER_LUDDIC_PATH,,,,,,
+THE_DAUGHTER_LUDDIC_PATH_OPTIONS,PopulatetheDaughterChatOptions,"eusan_nation_personRelationChecker FRIENDLY",,,"theDaughterLuddicPathOption:Tell me about the Luddic Path.",
+THE_DAUGHTER_LUDDIC_PATH_1,DialogOptionSelected,"$option == theDaughterLuddicPathOption",,"She gives you a smile as if you asked her something she really likes to talk about.
+
+""Ah the Luddic Path. The violent offshoot of the dominate religion of the Persean Sector. Violence, death, destruction, the holy word of Ludd will cleanse the nonbelievers and crush the sinful!""
+
+She gives a small giggle. The mocking tone towards the Luddic faith betrays a contemptuous reaction to the mere mention of Ludd. For the Path, there is something more to her interest.","theDaughterLuddicPath1:Continue",
+THE_DAUGHTER_LUDDIC_PATH_2,DialogOptionSelected,"$option == theDaughterLuddicPath1","FireAll PopulateDaughterLuddicQuestions","""If you want to know my position, is that the Luddic Church is the single most powerful entity the Sector. The Hegemony, Tri-Tachyeon, the Persean League, pirates, and other independents all pale in comparison to the power of the Luddic faith.""
+
+She pauses and looks at your expression as if gauging your reaction.
+
+""Do you know what the Luddic Path is to the Nation?""",,
+THE_DAUGHTER_LUDDIC_PATH_3a,PopulateDaughterLuddicQuestions,"$player.answeredTheDaughter == false",,"
+","theDaughterLuddicPath3a:""They are a potential asset to the Nation""",
+THE_DAUGHTER_LUDDIC_PATH_3b,PopulateDaughterLuddicQuestions,"$player.answeredTheDaughter == false",,,"theDaughterLuddicPath3b:""They are a threat to the Nation""",
+THE_DAUGHTER_LUDDIC_PATH_3c,PopulateDaughterLuddicQuestions,"$player.answeredTheDaughter == false",,,"theDaughterLuddicPath3c:""I don't know.""",
+THE_DAUGHTER_LUDDIC_PATH_3_ANSWERED,PopulateDaughterLuddicQuestions,"$player.answeredTheDaughter == true",,,"theDaughterLuddicPath3answered:""An asset and a threat to the Nation.""",
+THE_DAUGHTER_LUDDIC_PATH_4a,DialogOptionSelected,"$option == theDaughterLuddicPath3a",,"""Excellent answer!""
+
+Her smile changes from warm to more devious. It is almost like she is going to enjoy what she is going to tell you.
+
+""Radicalization of the religious on certain planets is perhaps the easy part. Getting them to do our bidding without letting them know they are manipulated, somewhat difficult but once they realize it, they are too deep into their own hatred it makes no difference.""
+
+""For example, the Luddic faithful on a unspecified planet is presented with a series of targeted media or physical pamphlets, depending on how conservative the target population is. It plays into their fears, their insecurities, their desires, and makes them rethink about their own situation.""
+
+""Nostalgia for an age they never lived. Simplier times when technology wasn't a thing. For the faithful, it a dream, hope or something to strive for. Then they are presented with the obstacles. AI, Technology, consumerism, Tri-Tachyon, the Persean League, etc. Tangible enemies.""","theDaughterLuddicPath4a:Continue",
+THE_DAUGHTER_LUDDIC_PATH_4b,DialogOptionSelected,"$option == theDaughterLuddicPath3b",,"""A good answer."" she says. The Daughter nods her head in approval but you sense she was wanting something else in addition.
+
+""The Luddic Path is perhaps the most insidious threat to face the Nation. They have cells everywhere, even on our capitol planet of Heimat. You must wonder how, despite all of our border controls and Protektor Replikas roaming about, is why the Luddics keep being a gigantic threat to the Nation?""
+
+""The easy answer: sympathy. There are several citizens within the Nation that are sympathetic to the Luddic Church and some get radicalized enough to join the Luddic Path.""","theDaughterLuddicPath4b:Continue",
+THE_DAUGHTER_LUDDIC_PATH_4c,DialogOptionSelected,"$option == theDaughterLuddicPath3c",,"She frowns at you. Clearly not the answer she was looking for. 
+
+""Come on now. You can do better than that.""
+
+Based on her facial expression, she is somewhat disappointed. You clearly have not impressed her with your intelligence. 
+
+""You know what...let me explain...""","theDaughterLuddicPath4c:Continue",
+THE_DAUGHTER_LUDDIC_PATH_4_ANSWERED,DialogOptionSelected,"$option == theDaughterLuddicPath3answered
+$player.answeredTheDaughter == true",,"""Yes!"" she replies, snapping her fingers as if you made a well thought out answer.
+
+""They are both an asset and a threat. What can be useful one day can become a major threat. Such is the life of using proxies to export the revolution to those who cannot see the light.""
+
+""The Luddic Path, if we play our cards right, can become something we can control or manipulate. However, care must be taken or the Path may eventually see us as a threat that exceeds the usual enemies. The Luddic Path may be simpleminded in their violence but never underestimate the lengths they will go to strike their targets.""
+
+""They will try everything, from infiltration of the security services, to using stolen fuel tankers to ram space stations filled with civilians, chanting praises to Ludd.""","theDaughterLuddicPath4answered:Continue",
+THE_DAUGHTER_LUDDIC_PATH_5a,DialogOptionSelected,"$option == theDaughterLuddicPath4a","$player.answeredTheDaughter = true
+AdjustRepActivePerson WELCOMING 5","""Your rights have been trampled on? Blame the Hegemony! AI being intrusive? Blame Tri-Tachyon! The beacon of independence and self-determination being hypocrites? Blame the Persean League! All of this will be presented to the Luddics and continuously emphasized by our outreach. It makes those more willing to join the Path and the Path cares not how or why.""
+
+The Daughter makes a small giggle. 
+
+""The Luddic Path recruits those who have made the logical end run of their religious and political understanding. Those who reach that point, now sees violence as a means to an end. For the Nation, they now have a potential asset willing to enact violence."" 
+
+You can sense that you may have made a very positive impression on her.","theDaughterLuddicPath5:Continue",
+THE_DAUGHTER_LUDDIC_PATH_5b,DialogOptionSelected,"$option == theDaughterLuddicPath4b","$player.answeredTheDaughter = true
+AdjustRepActivePerson WELCOMING 2","""Once in a while you have these radical or extremists that decide to take things in their own hands. Lone actors, these are the most dangerous to defend as they are almost undetectable. Forturnatly our Replikas are able to discern those will ill intent to the merely discontented.""
+
+""A person handing out flyers in the middle of the university square? Not a threat...yet. A person hiding large qualities of chemicals and secretly meeting with an outsider...that is something to look into. We could just try to stamp out the entire religion but those actions create more radicalization.""
+
+You can sense that you may have made a positive impression on her.","theDaughterLuddicPath5:Continue",
+THE_DAUGHTER_LUDDIC_PATH_5c,DialogOptionSelected,"$option == theDaughterLuddicPath4c","$player.answeredTheDaughter = true
+AdjustRepActivePerson NEUTRAL -3","""You could have said ''Oh they are a threat'' or ''They are a potential asset''. Both of those questions would be correct.""
+
+She crosses her arms and gives you a piercing stare as she continues her monologue. 
+
+""Luddic Path are blinded by their hate, their disdain for technology, and their desires for an era that they never lived. For them the red lines have been crossed. My job is to direct those energies away from the Nation and use them to our needs. Sometimes it needs a nudge, other times it needs active nurturing to get them on the path."" 
+
+You can sense that you may have made a negative impression on her.","theDaughterLuddicPath5:Continue",
+THE_DAUGHTER_LUDDIC_PATH_5_ANSWERED,DialogOptionSelected,"$option == theDaughterLuddicPath4answered
+$player.answeredTheDaughter == true",,"""However this presents us an opportunity to rid ourselves of a problem and by extension, use the Luddic Path to our advantage.""
+
+""Sometimes the Luddic Path would attempt to attack us or conduct an large scale event right here on Heimat. Or any planet. What would happen is our Replika forces will sweep them up before things happen. Best case scenario we find ring leaders, surveil them and find how deep the network goes. The Luddic Path has cells in the Nation and they certainly do. Sleeper cells, undercover agents, or sympathizers. Natrually it is my job to ensure these get taken care of and eliminated. Most do, but sometimes its more beneficial to allow these cells to do their jobs""
+
+She stops for a moment and a creepy smile starts to form. 
+
+""Ah...I just remembered now. We once had a Path cell that was actively recruiting people on Vineta. We got the cell leadership but somehow the lower ranks and recruits still thought the cell was safe. We rushed to rebuild the network in our own terms. Codes, procedures, drops, all gleaned from a deep interrogation of the leaders.""
+
+""We let them run around for a good year and a half before we swept everyone up. You should have seen the looks on their stupid little faces.""","theDaughterLuddicPath5:Continue",
+THE_DAUGHTER_LUDDIC_PATH_6,DialogOptionSelected,"$option ==  theDaughterLuddicPath5",,"""Now you wondering, will this come back to haunt us in the future? It is certainly a possibility. However there is some benefits to us.""
+
+""Obviously my mother disagrees. More than once she intervened to stop a cell from initiating their grand plan. Private talks, some yelling and of course, Protektor operations against the Path cells in question. etc. The end result is a success story for the Nation, a threat neutralized, a Path cell eliminated and growing understanding that the Nation will protect its citizens! Success!""
+
+She throws her hands in the air as to emphasize the success part of her last sentence. A deep breath and exhale she puts her hands down. 
+
+""We all benefit in the end. Now I am sure I have spoken enough so its time to talk about something else.""","theDaughterLuddicPath6:End Conversation","""The Luddic Path has cells in the Nation and they certainly do. Sleeper cells, undercover agents, or sympathizers. Natrually it is my job to ensure these get taken care of and eliminated. Most do, but sometimes its more beneficial to allow these cells to do their jobs."""
+THE_DAUGHTER_LUDDIC_PATH_ESCAPE_RETURN,DialogOptionSelected,"$option == theDaughterLuddicPath6","FireAll PopulatetheDaughterChatOptions",,,
+"#END THE_DAUGHTER_LUDDIC_PATH",,,,,,
 "#END THE_DAUGHTER_CHAT",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT_OPTIONS,,,,,,
