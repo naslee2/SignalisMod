@@ -1,6 +1,5 @@
 package data.campaign.industries;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
@@ -225,14 +224,14 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 		return getMaxDeficit(Commodities.SUPPLIES, Commodities.HEAVY_MACHINERY, Commodities.HAND_WEAPONS);
 	}
 	
-	@Override
-	public String getCurrentImage() {
-		String marketName = market.getId();
-		if(marketName.equals("leng_market")){
-			return Global.getSettings().getSpriteName("industry","leng_aeon_facility");
-		}
-		return super.getCurrentImage();
-	}
+//	@Override
+//	public String getCurrentImage() {
+//		String marketName = market.getId();
+//		if(marketName.equals("leng_market")){
+//			return Global.getSettings().getSpriteName("industry","leng_aeon_facility");
+//		}
+//		return super.getCurrentImage();
+//	}
 
     public boolean isDemandLegal(CommodityOnMarketAPI com) {
 		return true;
