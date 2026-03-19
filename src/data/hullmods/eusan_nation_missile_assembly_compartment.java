@@ -31,11 +31,11 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 	String eusan_nation_missile_assembly_compartment6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText6");
 	String eusan_nation_missile_assembly_compartment7 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_missile_assembly_compartmentText7");
 
-    public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+    //public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         //stats.getMissileAmmoBonus().modifyMult(id, missile_ammo_bonus_large);
         //stats.getMissileAmmoRegenMult().modifyMult(id, missile_regen_bonus);
 		//stats.getMissileWeaponFluxCostMod().modifyMult(id, missile_flux_increase);
-	}
+	//}
 
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 		magicIncompatibleHullmodsChecker(ship);
@@ -45,17 +45,17 @@ public class eusan_nation_missile_assembly_compartment extends BaseHullMod{
 			//WeaponSpecAPI spec = weapon.getSpec();
 			//FluxTrackerAPI flux = ship.getFluxTracker();
 
-			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.LARGE)){
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.LARGE) && weapon.usesAmmo()){
 				int data = weapon.getMaxAmmo() * (int) missile_ammo_bonus_large;
 				weapon.setMaxAmmo(data);
 				weapon.setAmmo(data);
 			}
-			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.MEDIUM)){
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.MEDIUM) && weapon.usesAmmo()){
 				int data = weapon.getMaxAmmo() * (int) missile_ammo_bonus_medium;
 				weapon.setMaxAmmo(data);
 				weapon.setAmmo(data);
 			}
-			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.SMALL)){
+			if(weapon.getSlot().getWeaponType().equals(WeaponAPI.WeaponType.MISSILE) && weapon.getSlot().getSlotSize().equals(WeaponAPI.WeaponSize.SMALL) && weapon.usesAmmo()){
 				int data = weapon.getMaxAmmo() * (int) missile_ammo_bonus_small;
 				weapon.setMaxAmmo(data);
 				weapon.setAmmo(data);

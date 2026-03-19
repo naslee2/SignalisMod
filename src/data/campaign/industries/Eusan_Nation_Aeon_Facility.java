@@ -1,6 +1,5 @@
 package data.campaign.industries;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
@@ -13,8 +12,6 @@ import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
 import java.awt.Color;
-
-import org.apache.log4j.Logger;
 
 public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     //static Logger logger = Global.getLogger(Eusan_Nation_Aeon_Facility.class);
@@ -36,15 +33,17 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     protected float aeonFacility_stability_penalty = -1.0f;
     protected int aeonFacility_demand_increase = 0;
 
-    @Override
-    public boolean isHidden(){
-        return !market.getFactionId().equals("eusan_nation");
-    }
+    protected String playerFaction = Misc.getCommissionFactionId();
 
     @Override
-    public boolean isFunctional(){
-        return super.isFunctional() && market.getFactionId().equals("eusan_nation");
+    public boolean isHidden(){
+        return !playerFaction.equals("eusan_nation");
     }
+
+//    @Override
+//    public boolean isFunctional(){
+//        return super.isFunctional() && market.getFactionId().equals("eusan_nation");
+//    }
 
     public void apply(){
         super.apply(true);
@@ -88,7 +87,7 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     public void applyMiningModifications(){
         for (Industry industry : market.getIndustries()) {
             //logger.info("Logger Active: Industry is " + industry);
-            if(industry.getSpec().hasTag(Industries.MINING)){
+            if(industry.getMarket().getIndustries().contains(Industries.MINING)){
                 //logger.info("Logger Active: Mining tag is " + industry.getSpec().hasTag(Industries.MINING));
                 if(matchesConditionReq(miningOreConditionsList)){
                     //logger.info("Logger Active: Ore Condition found for " + industry);
@@ -121,14 +120,26 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
     public void unapplyMiningModifications(){
         for (Industry industry : market.getIndustries()) {
             if(industry.getSpec().hasTag(Industries.MINING)){
-                market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-                market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-                market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-                market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                if(industry.getSupply(Commodities.ORE) != null){
+                    market.getIndustry(Industries.MINING).getSupply(Commodities.ORE).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
+                if(industry.getSupply(Commodities.RARE_ORE) != null){
+                    market.getIndustry(Industries.MINING).getSupply(Commodities.RARE_ORE).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
+                if(industry.getSupply(Commodities.VOLATILES) != null){
+                    market.getIndustry(Industries.MINING).getSupply(Commodities.VOLATILES).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
+                if(industry.getSupply(Commodities.ORGANICS) != null){
+                    market.getIndustry(Industries.MINING).getSupply(Commodities.ORGANICS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
             }
             if(industry.getSpec().hasTag(Industries.REFINING)){
-                market.getIndustry(Industries.REFINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
-                market.getIndustry(Industries.REFINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                if(industry.getSupply(Commodities.METALS) != null){
+                    market.getIndustry(Industries.REFINING).getSupply(Commodities.METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
+                if(industry.getSupply(Commodities.RARE_METALS) != null){
+                    market.getIndustry(Industries.REFINING).getSupply(Commodities.RARE_METALS).getQuantity().unmodifyFlat("Eusan_Nation_Aeon_Facility");
+                }
             }
         }
     }
@@ -213,14 +224,14 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 		return getMaxDeficit(Commodities.SUPPLIES, Commodities.HEAVY_MACHINERY, Commodities.HAND_WEAPONS);
 	}
 	
-	@Override
-	public String getCurrentImage() {
-		String marketName = market.getId();
-		if(marketName.equals("leng_market")){
-			return Global.getSettings().getSpriteName("industry","leng_aeon_facility");
-		}
-		return super.getCurrentImage();
-	}
+//	@Override
+//	public String getCurrentImage() {
+//		String marketName = market.getId();
+//		if(marketName.equals("leng_market")){
+//			return Global.getSettings().getSpriteName("industry","leng_aeon_facility");
+//		}
+//		return super.getCurrentImage();
+//	}
 
     public boolean isDemandLegal(CommodityOnMarketAPI com) {
 		return true;
@@ -234,10 +245,9 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 	public boolean isAvailableToBuild() {
         if(market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
 
-        String faction = Misc.getCommissionFactionId();
-        //logger.info("Logger active: player faction is: " + faction);
-        if(faction == null) return false;
-        if(!faction.equals("eusan_nation")) return false;
+        //logger.info("Logger active: player playerFaction is: " + playerFaction);
+        if(playerFaction == null) return false;
+        if(!playerFaction.equals("eusan_nation")) return false;
 
         if(!market.hasIndustry(Industries.REFINING) && !market.hasIndustry(Industries.MINING)) return false;
         //if(market.hasIndustry(Industries.REFINING) || market.hasIndustry(Industries.MINING)) return true;

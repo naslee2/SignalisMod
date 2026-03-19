@@ -1,3 +1,11 @@
+v0.1.4d
+- Adding new Luddic path and Church topics to The Daughter.
+- Fixing structure not showing correct illustration for AEON Facility.
+- Adding industry/structure illustrations for AEON HQ, AEON Facility, Defense Coordination, Rotfront Hydroponics, and Rotfront Array.
+- Added two blueprint icons, Advanced and Standard.
+- Fixing issues with negative or 999999 ammo for missile weapons with infinite ammo like the Salamander.
+- Adding Null Checks and fixing AEON Facility issues. Ongoing work to AOTD proof it from errors.
+
 v0.1.4c
 - Rules.csv typo fixes. (Homete)
 - Fixed Falke fleet from wandering away because the assignment ends in 365 days after game start. (Homete)
