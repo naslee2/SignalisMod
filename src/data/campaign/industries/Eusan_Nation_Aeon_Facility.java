@@ -37,6 +37,9 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
     @Override
     public boolean isHidden(){
+        if(playerFaction == null){
+            return false;
+        }
         return !playerFaction.equals("eusan_nation");
     }
 
