@@ -1640,6 +1640,11 @@ THE_DAUGHTER_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == theDaughterQuest
 She gives a wide grin and a look that can pierce hearts at you. 
 ""Now choose.""","theDaughterQuestGive2a:Accept
 theDaughterQuestGive2b:Reconsider",
+THE_DAUGHTER_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == theDaughterQuestGive2b",,"You tell her you will think it over.
+
+She tilts her head and gives you a slight smile. 
+
+""Of course you will. Your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
 THE_DAUGHTER_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == theDaughterQuestGive2a","AdjustRepActivePerson WELCOMING 5
 AddPotentialContact eusan_nation_the_daughter
 $player.askedDaughterForWork = true","You accept the offer to work for the Daughter.
@@ -1647,11 +1652,6 @@ $player.askedDaughterForWork = true","You accept the offer to work for the Daugh
 She gives you smile. A rather devious looking one.
 
 ""I knew I can count on you. Remember, your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
-THE_DAUGHTER_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == theDaughterQuestGive2b",,"You tell her you will think it over.
-
-She tilts her head and gives you a slight smile. 
-
-""Of course you will. Your future in the Nation depends on me.""","theDaughterQuestGiveEND:Leave",
 THE_DAUGHTER_CHAT_QUEST_GIVE_EXIT,DialogOptionSelected,"$option == theDaughterQuestGiveEND","FireAll PopulatetheDaughterChatOptions",,,
 "#END THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION",,,,,,
 ,,,,,,
@@ -1749,7 +1749,7 @@ You can sense that you may have made a negative impression on her.","theDaughter
 THE_DAUGHTER_LUDDIC_PATH_5_ANSWERED,DialogOptionSelected,"$option == theDaughterLuddicPath4answered
 $player.answeredTheDaughter == true",,"""However this presents us an opportunity to rid ourselves of a problem and by extension, use the Luddic Path to our advantage.""
 
-""Sometimes the Luddic Path would attempt to attack us or conduct an large scale event right here on Heimat. Or any planet. What would happen is our Replika forces will sweep them up before things happen. Best case scenario we find ring leaders, surveil them and find how deep the network goes. The Luddic Path has cells in the Nation and they certainly do. Sleeper cells, undercover agents, or sympathizers. Natrually it is my job to ensure these get taken care of and eliminated. Most do, but sometimes its more beneficial to allow these cells to do their jobs""
+""Sometimes the Luddic Path would attempt to attack us or conduct an large scale event right here on Heimat. Or any planet. What would happen is our Replika forces will sweep them up before things happen. Best case scenario we find ring leaders, surveil them and find how deep the network goes. The Luddic Path has several cells in the Nation. Sleeper cells, undercover agents, or sympathizers. Naturally it is my job to ensure these get taken care of and eliminated. Most do, but sometimes its more beneficial to allow these cells to do their jobs""
 
 She stops for a moment and a creepy smile starts to form. 
 
