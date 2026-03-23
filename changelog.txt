@@ -1,3 +1,9 @@
+v0.1.4e
+- Temporary commenting out isHidden() and IsFunctional() on Eusan_Nation_Aeon_Facility.java due to issues related to the concept.
+- Adding weapon sounds to the Type 71 built-in, Dangpa, Dory, Galdae, Kompakt, Pebble Hail, Pernach, and Wuiquong.
+- Updating Vineta planet and cloud textures to be softer and less dark.
+- Small grammar changes in rules.csv
+
 v0.1.4d
 - Adding new Luddic path and Church topics to The Daughter.
 - Fixing structure not showing correct illustration for AEON Facility.

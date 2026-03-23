@@ -35,14 +35,20 @@ public class Eusan_Nation_Aeon_Facility extends BaseIndustry{
 
     protected String playerFaction = Misc.getCommissionFactionId();
 
-    @Override
-    public boolean isHidden(){
-        return !playerFaction.equals("eusan_nation");
-    }
+//    @Override
+//    public boolean isHidden(){
+//        if(playerFaction == null){
+//            return false;
+//        }
+//        return !playerFaction.equals("eusan_nation");
+//    }
 
 //    @Override
 //    public boolean isFunctional(){
-//        return super.isFunctional() && market.getFactionId().equals("eusan_nation");
+//        if(playerFaction == null){
+//            return false;
+//        }
+//        return super.isFunctional() && playerFaction.equals("eusan_nation");
 //    }
 
     public void apply(){

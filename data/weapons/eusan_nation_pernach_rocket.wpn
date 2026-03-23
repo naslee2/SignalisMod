@@ -42,5 +42,5 @@
 							 "blowbackLength":20.0,
 							 "blowbackSpread":6.0,
 							 "particleColor":[190,180,160,95]},
-	"fireSoundTwo":"annihilator_fire",
+	"fireSoundTwo":"pernarch_rocket",
 }
