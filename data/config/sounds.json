@@ -85,4 +85,38 @@
     "penrose_512_computersound":[
         {"file": "sounds/sfx/computer-humming-236384.ogg","pitch": 1,"volume": 0.5},
     ],
+    "galde":[
+        {"file": "sounds/weapons/eusan_nation_galde_rocket_launcher.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "pebble_hail":[
+        {"file": "sounds/weapons/eusan_nation_pebble_hail.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "pernarch_cannon":[
+        {"file": "sounds/weapons/eusan_nation_pernarch_cannon_S.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "pernarch_rocket":[
+        {"file": "sounds/weapons/eusan_nation_pernarch_rocket.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "type71_main_cannon":[
+        {"file": "sounds/weapons/eusan_nation_type71_main_cannon_L_Ver1.ogg","pitch": 1,"volume": 0.5},
+        {"file": "sounds/weapons/eusan_nation_type71_main_cannon_L_Ver2.ogg","pitch": 1,"volume": 0.5}
+    ],
+    "type71_reload":[
+        {"file": "sounds/weapons/eusan_nation_type71_reload_mono.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "kompakt":[
+        {"file": "sounds/weapons/eusan_nation_kompakt_cannon M.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "dory":[
+        {"file": "sounds/weapons/eusan_nation_dory.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "dangpa":[
+        {"file": "sounds/weapons/eusan_nation_dangpa_CIWS_s.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "wuiqong":[
+        {"file": "sounds/weapons/eusan_nation_wuiqong_flak_m.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "tulip":[
+        {"file": "sounds/weapons/eusan_nation_tulip_cannon_m.ogg","pitch": 1,"volume": 0.5},
+    ]
 }
