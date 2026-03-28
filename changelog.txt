@@ -3,6 +3,7 @@ v0.1.4e
 - Adding weapon sounds to the Type 71 built-in, Dangpa, Dory, Galdae, Kompakt, Pebble Hail, Pernach, and Wuiquong.
 - Updating Vineta planet and cloud textures to be softer and less dark.
 - Small grammar changes in rules.csv
+- Fixing an issue with Ariane's menu dialog because things got omitted.
 
 v0.1.4d
 - Adding new Luddic path and Church topics to The Daughter.
