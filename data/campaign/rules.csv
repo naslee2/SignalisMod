@@ -151,7 +151,8 @@ OFFICER_YEONG_GREETING_NEUTRAL_COMMISSIONED,PickGreeting,"$player.commissionFact
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$faction.neutralToPlayer score:100",,"""Mmm. Your back. What do you need?""
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""Mmm. Your back. What do you need?""
 OR
 ""Hello. Remember that you need to be careful.""
 OR
@@ -164,7 +165,8 @@ OFFICER_YEONG_GREETING_NEUTRAL_NOTCOMMISSIONED,PickGreeting,"$player.commissionF
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
-$faction.neutralToPlayer score:100",,"""What do you want?""
+$faction.neutralToPlayer score:100","ShowPersonVisual
+FireAll PopulateOptions","""What do you want?""
 OR
 ""Hello...oh its you.""
 OR
@@ -174,7 +176,7 @@ OR
 OR
 ""Greetings from my dreary office, Captain $playerName.""",,
 OFFICER_YEONG_GREETING_HOSTILE,PickGreeting,"$faction.isHostile score:100
-$id == ""eusan_nation_officer_yeong"" score: 100",,"CONNECTION REFUSED
+$id == ""eusan_nation_officer_yeong"" score: 100","ShowPersonVisual","CONNECTION REFUSED
 OR
 There is no response.
 OR
@@ -2186,4 +2188,11 @@ OR
 "#END THE_GREAT_REVOLUTIONARY_CHAT_OPTIONS",,,,,,
 "#END THE_GREAT_REVOLUTIONARY",,,,,,
 "#END EUSAN_NATION_NPC",,,,,,
+,,,,,,
+# SPECIALS,,,,,,
+,,,,,,
+# IMPERIAL_CIGS_ENCOUNTER,,,,,,
+NEW RULE,PopulateOptions,,,,,
+"#END IMPERIAL_CIGS_ENCOUNTER",,,,,,
+"#END SPECIALS",,,,,,
 
