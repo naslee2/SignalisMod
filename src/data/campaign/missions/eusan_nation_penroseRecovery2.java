@@ -116,7 +116,8 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set("$eusan_nation_hostilefleet", true);
-        target_fleet.getAI().addAssignment(FleetAssignment.PATROL_SYSTEM, target_starsystem.getCenter(), 200f, null);
+        target_fleet.getAI().addAssignment(FleetAssignment.INTERCEPT, target_starsystem.getCenter(), 3650f, null);
+
         target_fleet.addEventListener(this);
         target_starsystem.addEntity(target_fleet);
 
