@@ -2,6 +2,7 @@
     "masterVersionFile":"https://raw.githubusercontent.com/naslee2/SignalisMod/refs/heads/master/eusanNation.version",
     "modName":"Eusan Nation",
     "modThreadId":34982,
+    "changelogURL":"https://raw.githubusercontent.com/naslee2/SignalisMod/refs/heads/master/changelog.txt",
     "modVersion":
     {
         "major":0,
