@@ -97,6 +97,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         enemyFrigates = target_fleet.getNumFighters();
         
         target_fleet.setName("Deep Space Patrol Group 41");
+        target_fleet.setId("eusan_nation_hostilefleet");
         target_fleet.setNoFactionInName(false);
         target_fleet.setCommander(tritach_fleetcommander);
         target_fleet.getFlagship().setCaptain(tritach_fleetcommander);
@@ -115,7 +116,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, "$eusan_nation");
         target_fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, "$eusan_nation");
-        target_fleet.getMemoryWithoutUpdate().set("$eusan_nation_hostilefleet", true);
+        target_fleet.getMemoryWithoutUpdate().set("$eusan_nation_hostilefleet_memkey", true);
         target_fleet.getAI().addAssignment(FleetAssignment.INTERCEPT, target_starsystem.getCenter(), 3650f, null);
 
         target_fleet.addEventListener(this);
@@ -233,7 +234,7 @@ public class eusan_nation_penroseRecovery2 extends HubMissionWithSearch implemen
     public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason winner, Object battle) {
         if (isDone() || result != null) return;
 
-        if(fleet.getMemoryWithoutUpdate().contains("$eusan_nation_hostilefleet")){
+        if(fleet.getMemoryWithoutUpdate().contains("$eusan_nation_hostilefleet_memkey")){
             getPerson().getMemoryWithoutUpdate().set("$eusan_nation_penroseRecovery2_killFleet", true);
         }
     }
