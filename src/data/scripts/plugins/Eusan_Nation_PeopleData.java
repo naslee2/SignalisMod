@@ -86,7 +86,7 @@ public class Eusan_Nation_PeopleData {
             greatRevolutionary.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
             market_heimat.setAdmin(greatRevolutionary);
             market_heimat.getCommDirectory().addPerson(greatRevolutionary,0);
-            market_heimat.getCommDirectory().getEntryForPerson(greatRevolutionary).setHidden(false);;
+            market_heimat.getCommDirectory().getEntryForPerson(greatRevolutionary).setHidden(false);
             market_heimat.addPerson(greatRevolutionary);
             importantPeople_heimat.addPerson(greatRevolutionary);
 
@@ -208,7 +208,7 @@ public class Eusan_Nation_PeopleData {
         mary_cheng.setGender(Gender.FEMALE);
         mary_cheng.setRankId("gestaltOfficerLt");
         mary_cheng.setPostId("gestaltPenrosePilot");
-        mary_cheng.setPortraitSprite("graphics/portraits/eusan_nation_NoDataPortrait_2_128.png");
+        mary_cheng.setPortraitSprite("graphics/portraits/alts/eusan_nation_female_128_14_glitched.png");
         mary_cheng.setImportance(PersonImportance.MEDIUM);
         mary_cheng.setPersonality(Personalities.STEADY);
         mary_cheng.getStats().setLevel(7);
