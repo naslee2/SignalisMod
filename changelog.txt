@@ -1,8 +1,7 @@
 v0.1.4f
--
--
--
--
+- AEON Facility code rewritten by Kaysaar.
+- Adding 4 new portraits with 2 variants.
+- Delete obsolete portraits.
 
 v0.1.4e
 - Temporary commenting out isHidden() and IsFunctional() on Eusan_Nation_Aeon_Facility.java due to issues related to the concept.
