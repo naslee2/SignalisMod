@@ -1,3 +1,7 @@
+v0.1.4g
+- Fixing Issues with rules.csv regarding entry to 512 mission with more clear instructions and flags.
+- Fixing issues with fleet not intercepting player fleets. Changed back to patrol for now.
+
 v0.1.4f
 - AEON Facility code rewritten by Kaysaar.
 - Adding 4 new portraits with 2 variants.
