@@ -42,7 +42,7 @@ public class eusan_nation_pernach_script implements OnFireEffectPlugin{
             );
 
             Global.getSoundPlayer().playSound(
-                "annihilator_fire", //annihilator for now
+                "pernarch_rocket", //annihilator for now
                 1f,   // pitch
                 1f,   // volume
                 spawn_point,
