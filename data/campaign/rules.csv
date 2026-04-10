@@ -28,7 +28,7 @@ $faction.id == eusan_nation",,"Your name is known to some mid-level positions of
 relLevelFriendlySigNation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == eusan_nation",,"You are relatively well-known within $theFaction, whether in person or by reputation. Low level officials will sometimes try to lavish you with gifts so they can win your favor and hopefully help their careers by putting in a good word to their superiors.",,
 relLevelCooperativeSigNation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You will receive trade concessions, high-quality ships, and munitions. Your tales and aid are legendary, and your influence and connections are nigh limitless within the $faction.",,
+$faction.id == eusan_nation",,"You know some of the $faction leaders on a personal level. You will receive trade concessions, high-quality ships, and munitions. Your tales and aid are legendary, and your influence and connections are nigh limitless within $theFaction.",,
 relLevelSuspiciousSigNation,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == eusan_nation",,"$faction officials tend to view you with suspicion. Access to the port authority is granted only grudgingly, and you find yourself the subject of frequent investigations and harassment by Replika security units.",,
 relLevelInhospitableSigNation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
@@ -36,7 +36,7 @@ $faction.id == eusan_nation",,"No shoot-on-sight orders have been given but @fac
 relLevelHostileSigNation,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == eusan_nation",,"Your name is known to officials as a menace to society and top enemy of the people. $Faction commanders have authorization to engage your fleet on sight. However, there may still be a way for you to sneak into their markets to do some black-market trading. You might still recover good standing with $theFaction, but it's going to take some serious work or bribery to do so.",,
 relLevelVengefulSigNation,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of the $theFaction whose primary assignment is to hunt you down. For them, you are enemy number one, a scourge and something to be hated and destroyed.",,
+$faction.id == eusan_nation",,"A holo of your face and an IDENT-hash of your last known fleet position are both regular parts of security bulletins issued by Protektor forces. It's fairly certain there's a high-ranking $faction officer sent by top levels of $theFaction whose primary assignment is to hunt you down. For them, you are enemy number one, a scourge and something to be hated and destroyed.",,
 "#END RULESET_RELATIONSHIP_LEVEL_DESC_START",,,,,,
 ,,,,,,
 # RULESET_BAR_DESCRIPTION_START,,,,,,
@@ -193,8 +193,10 @@ $id == ""eusan_nation_officer_yeong"" score: 100
 $player.metOfficerYeong == true
 $global.officeryeong_neuralrepositorystart == false
 eusan_nation_personRelationChecker FAVORABLE","SetOptionColor officeryeongNeuralRepStart highlight",,"officeryeongNeuralRepStart:Inquire about more important jobs.",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart","SetTextHighlights ""Eusan Nation""","She swiftly scans her computer screen. ""There has been some departmental infighting recently, and we may have a use for an external mercenary like yourself.""","officeryeongNeuralRepBriefing0:Continue",
-OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive"" ""Ariane Yeong"" ""Officer Yeong"" ""Vineta""","""The name is Ariane Yeong"" she says, sliding a rather thin looking folder to you. The cover is littered with redactions and white-out, making a mess of the important text.
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING0,DialogOptionSelected,"$option == officeryeongNeuralRepStart","SetTextHighlights ""Eusan Nation""
+ShowImageVisual neural_repo_briefing","She swiftly scans her computer screen. ""There has been some departmental infighting recently, and we may have a use for an external mercenary like yourself.""","officeryeongNeuralRepBriefing0:Continue",
+OFFICER_YEONG_NEURALREPOSITORY_BRIEFING1,DialogOptionSelected,"$option == officeryeongNeuralRepBriefing0","SetTextHighlights ""Central Neural Archive"" ""Ariane Yeong"" ""Officer Yeong"" ""Vineta""
+","""The name is Ariane Yeong"" she says, sliding a rather thin looking folder to you. The cover is littered with redactions and white-out, making a mess of the important text.
 
 The inside is more accommodating to read, and contains several photos of a large building from various angles, or at least what's left of it; charred and twisted metal remains curve out of its split open husk at awkward angles.
 
@@ -1651,6 +1653,26 @@ OR
 The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_DAUGHTER_GREETING",,,,,,
 ,,,,,,
+# THE_DAUGHTER_OPERATION1,,,,,,
+,,,,,,
+# THE_DAUGHTER_OPERATION1_BRIEFING,,,,,,
+THE_DAUGHTER_OPERATION1_START,PopulatetheDaughterChatOptions,"$id == eusan_nation_the_daughter score: 100
+$player.metDaughter == true
+$global.theDaughter_operation1_start == false
+eusan_nation_personRelationChecker FAVORABLE",,,,
+THE_DAUGHTER_OPERATION1_BRIEFING0,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING1,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING2,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING3,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING4,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING_END,DialogOptionSelected,,"FireAll PopulateOperation1Options",,,
+THE_DAUGHTER_OPERATION1_BRIEFING_RECONSIDERED_OPTION,PopulateOperation1MissionsOptions,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING_RECONSIDERED,DialogOptionSelected,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING_ACCEPT_OPTION,PopulateOperation1MissionsOptions,,,,,
+THE_DAUGHTER_OPERATION1_BRIEFING_ACCEPTED,DialogOptionSelected,,,,,
+"#END THE_DAUGHTER_OPERATION1_BRIEFING",,,,,,
+"#END THE_DAUGHTER_OPERATION1",,,,,,
+,,,,,,
 # THE_DAUGHTER_CHAT,,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT_QUEST_GIVE_OPTION,,,,,,
@@ -2216,7 +2238,19 @@ OR
 # SPECIALS,,,,,,
 ,,,,,,
 # IMPERIAL_CIGS_ENCOUNTER,,,,,,
-NEW RULE,PopulateOptions,,,,,
+IMPERIAL_CIGS_ENCOUNTER_START,PopulateOptions,"$menuState == main
+$market.id == ""kitezh_market""
+$tradeMode != NONE
+$player.hasDoneImpCigsEncounter == false
+$global.daysSinceStart > 10
+","SetOptionColor imperialCigsEcounterStart highlight",,"imperialCigsEcounterStart:Check out the commotion at the cargo docks.",
+IMPERIAL_CIGS_ENCOUNTER1,DialogOptionSelected,"$option == imperialCigsEcounterStart",,,"imperialCigsEcounter1:Continue",
+IMPERIAL_CIGS_ENCOUNTER2,DialogOptionSelected,"$option == imperialCigsEcounter1",,,"imperialCigsEcounter2:Continue",
+IMPERIAL_CIGS_ENCOUNTER3,DialogOptionSelected,"$option == imperialCigsEcounter2",,,"imperialCigsEcounter3:Continue",
+IMPERIAL_CIGS_ENCOUNTER4,DialogOptionSelected,"$option == imperialCigsEcounter3","FireAll PopulateImperialCigEncounter",,,
+IMPERIAL_CIGS_ENCOUNTER_ESCAPE_RETURN,DialogOptionSelected,"$option == imperialCigsEcounterEnd","ShowDefaultVisual
+EndConversation",,,
+IMPERIAL_CIGS_ENCOUNTER_ESCAPE_OPTION,PopulateImperialCigEncounter,,"SetShortcut imperialCigsEcounterEnd ""ESCAPE""",,"imperialCigsEcounterEnd:Exit the Cargo docks.",
 "#END IMPERIAL_CIGS_ENCOUNTER",,,,,,
 "#END SPECIALS",,,,,,
 
