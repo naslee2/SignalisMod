@@ -24,9 +24,9 @@ Type 71,eusan_nation_admiral_builtin1,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOS
 Type 71,eusan_nation_admiral_builtin2,,,10000,1200,,800,,200,5,20,,,,HIGH_EXPLOSIVE,400,,0,8,1,,4,12,1,8,,700,,,400,,,SYSTEM,,,Eusan Tech,,Anti Armor,,,,,,,,,,
 Type 80 Kayak-L,eusan_nation_kayak,,,10000,2500,,700,,300,10,20,80,0.5,8,HIGH_EXPLOSIVE,0,,1,8,4,0.5,5,5,0,0,,400,200,10,600,,,"SYSTEM, DO_NOT_AIM",,,Eusan Tech,,Pressure,,,,,Split in two more maneuverable missile when closing in.,,,,,
 Type 30 Kayak-R,eusan_nation_kayak_R,,,10000,1500,,200,,10,15,20,600,0.5,30,HIGH_EXPLOSIVE,20,,0,0.2,1,,5,10,0.5,1,,400,100,5,60,,,SYSTEM,,,Eusan Tech,,Pressure,,,,,,,,,,
-Hybrid Chaingun,eusan_nation_hybrid_chaingun,,,10000,800,,30,,20,25,28,,,,KINETIC,20,,0,0.05,1,,0,5,0.25,5,,1200,,,20,,,SYSTEM,"kinetic19, remnant, rare_bp, hist1t, merc, ind",,Eusan Tech,,Pressure,,,,,"Every %s seconds of continuous fire, launches %s rocket, each dealing %s %s damage.",1.5 | 8 | 100 | HE,,,,8.5
+Hybrid Chaingun,eusan_nation_hybrid_chaingun,,,10000,800,,30,,20,25,28,,,,KINETIC,20,,0,0.05,1,,0,5,0.25,5,,1200,,,20,,,SYSTEM,,,Eusan Tech,,Pressure,,,,,"Every %s seconds of continuous fire, launches %s rocket, each dealing %s %s damage.",1.5 | 8 | 100 | HE,,,,8.5
 Isolde Autocannon,eusan_nation_isolde_builtin,,,10000,1000,,200,,30,14,,20,1,,HIGH_EXPLOSIVE,80,,0,0.33,1,,0,10,2,5,,1000,,,200,,,SYSTEM,,,Eusan Tech,,General,,,,,,,,,,
-Trevivian Missile Array,eusan_nation_trevivian_builtin,,,10000,1000,,120,20,5,30,18,66,2,11,FRAGMENTATION,0,,0,0.1,1,,0,0,0,0,,400,200,6,60,,,"ANTI_FTR, DO_NOT_AIM, SYSTEM","utility18, missile15, rare_bp, hist1t",,Eusan Tech,,Anti Small Craft,Fast,Excellent,,,,,,,,16.3
+Trevivian Missile Array,eusan_nation_trevivian_builtin,,,10000,1000,,120,20,5,30,18,66,2,11,FRAGMENTATION,0,,0,0.1,1,,0,0,0,0,,400,200,6,60,,,"ANTI_FTR, DO_NOT_AIM, SYSTEM",,,Eusan Tech,,Anti Small Craft,Fast,Excellent,,,,,,,,16.3
 #DECO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Isolde Weapon Cover,eusan_nation_isolde_deco,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,Eusan Tech,,,,,,,,,,,,
 Tremore Weapon Cover,eusan_nation_tremore_deco1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,Eusan Tech,,,,,,,,,,,,
