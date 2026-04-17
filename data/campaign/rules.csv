@@ -2244,13 +2244,17 @@ $tradeMode != NONE
 $player.hasDoneImpCigsEncounter == false
 $global.daysSinceStart > 10
 ","SetOptionColor imperialCigsEcounterStart highlight",,"imperialCigsEcounterStart:Check out the commotion at the cargo docks.",
-IMPERIAL_CIGS_ENCOUNTER1,DialogOptionSelected,"$option == imperialCigsEcounterStart",,,"imperialCigsEcounter1:Continue",
-IMPERIAL_CIGS_ENCOUNTER2,DialogOptionSelected,"$option == imperialCigsEcounter1",,,"imperialCigsEcounter2:Continue",
-IMPERIAL_CIGS_ENCOUNTER3,DialogOptionSelected,"$option == imperialCigsEcounter2",,,"imperialCigsEcounter3:Continue",
-IMPERIAL_CIGS_ENCOUNTER4,DialogOptionSelected,"$option == imperialCigsEcounter3","FireAll PopulateImperialCigEncounter",,,
+IMPERIAL_CIGS_ENCOUNTER1,DialogOptionSelected,"$option == imperialCigsEcounterStart","BeginConversation POST:portmaster","""Test1""","imperialCigsEcounter1:Continue",
+IMPERIAL_CIGS_ENCOUNTER2,DialogOptionSelected,"$option == imperialCigsEcounter1",,"""Test2""","imperialCigsEcounter2:Continue",
+IMPERIAL_CIGS_ENCOUNTER3,DialogOptionSelected,"$option == imperialCigsEcounter2",,"""Test3""","imperialCigsEcounter3a:""Let me think about it...""
+imperialCigsEcounter3b:""Why not...let me get the stack.""",
+IMPERIAL_CIGS_ENCOUNTER4a,DialogOptionSelected,"$option == imperialCigsEcounter3a","FireAll PopulateImperialCigEncounter","""Test4a""",,
+IMPERIAL_CIGS_ENCOUNTER4b,DialogOptionSelected,"$option == imperialCigsEcounter3b","$player.hasDoneImpCigsEncounter = true
+AddRemoveCommodity eusan_nation_nationsmokes 1000 true
+FireAll PopulateImperialCigEncounter","""Test4b""",,
 IMPERIAL_CIGS_ENCOUNTER_ESCAPE_RETURN,DialogOptionSelected,"$option == imperialCigsEcounterEnd","ShowDefaultVisual
 EndConversation",,,
-IMPERIAL_CIGS_ENCOUNTER_ESCAPE_OPTION,PopulateImperialCigEncounter,,"SetShortcut imperialCigsEcounterEnd ""ESCAPE""",,"imperialCigsEcounterEnd:Exit the Cargo docks.",
+IMPERIAL_CIGS_ENCOUNTER_ESCAPE_OPTION,PopulateImperialCigEncounter,,"SetShortcut imperialCigsEcounterEnd ""ESCAPE""","""You thank the Portmaster and begin to head for the exit.""","imperialCigsEcounterEnd:Exit the Cargo docks.",
 "#END IMPERIAL_CIGS_ENCOUNTER",,,,,,
 "#END SPECIALS",,,,,,
 
