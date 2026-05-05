@@ -800,20 +800,41 @@ OFFICER_YEONG_PENROSE512_AFT_DECKS_EXIT,DialogOptionSelected,"$option == officer
 # OFFICER_YEONG_PENROSE512_CRYO,,,,,,
 OFFICER_YEONG_PENROSE512_CRYO_STARTa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundphoto == true
 $player.officeryeongPenrose512_locatedDistress == false","SetTooltip officeryeongPenrose512_cryo_start ""Enter the cryo bay...""
 ",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_STARTb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
 $player.officeryeongPenrose512_poweron == true
-$player.officeryeongPenrose512_locatedDistress == true","SetTooltip officeryeongPenrose512_cryo_start ""Enter the cryo bay...""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
+$player.officeryeongPenrose512_locatedDistress == true
+$player.officeryeongPenrose512_foundphoto == true","SetTooltip officeryeongPenrose512_cryo_start ""Enter the cryo bay...""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDa,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
-$player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_cryo_start false
+$player.officeryeongPenrose512_poweron == false
+$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_start false
 SetTooltip officeryeongPenrose512_cryo_start ""You will have to wait until the salvage crew unblocks corridor full of debris. Perhaps you should search the rest of the ship first.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDb,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
-$player.officeryeongPenrose512_poweron == false","SetEnabled officeryeongPenrose512_cryo_start false
+$player.officeryeongPenrose512_poweron == false
+$player.officeryeongPenrose512_foundphoto == true","SetEnabled officeryeongPenrose512_cryo_start false
 SetTooltip officeryeongPenrose512_cryo_start ""Debris blocking the door has been cleared. Manual override to this door is wrecked but the engineering crew says the power conduits seem to be working. Perhaps try restoring power to the door to cycle it?""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDc,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
-$player.officeryeongPenrose512_poweron == true","SetEnabled officeryeongPenrose512_cryo_start false
+$player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundphoto == true","SetEnabled officeryeongPenrose512_cryo_start false
 SetTooltip officeryeongPenrose512_cryo_start ""Most debris have been removed and power has been restored but there is the issue of finding the access key for the door. Try looking for an access keycard to get through the door.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDd,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
+$player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_start false
+SetTooltip officeryeongPenrose512_cryo_start ""You feel like you are missing something. Perhaps you should go back to the flight deck to see if you are missing anything.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDe,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == true
+$player.officeryeongPenrose512_poweron == false
+$player.officeryeongPenrose512_foundphoto == false","SetEnabled officeryeongPenrose512_cryo_start false
+SetTooltip officeryeongPenrose512_cryo_start ""Manual override to this door is wrecked but the engineering crew says the power conduits seem to be working. Perhaps you should restore the power and go back to the flight deck to see if you missed something.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDf,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
+$player.officeryeongPenrose512_poweron == true
+$player.officeryeongPenrose512_foundphoto == true","SetEnabled officeryeongPenrose512_cryo_start false
+SetTooltip officeryeongPenrose512_cryo_start ""Most debris have been removed and power has been restored but there is the issue of finding the access key for the door. Try looking for an access keycard to get through the door.""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
+OFFICER_YEONG_PENROSE512_CRYO_START_BLOCKEDg,PopulateOfficerYeongPenrose512Explore,"$player.officeryeongPenrose512_foundKeycard == false
+$player.officeryeongPenrose512_poweron == false
+$player.officeryeongPenrose512_foundphoto == true","SetEnabled officeryeongPenrose512_cryo_start false
+SetTooltip officeryeongPenrose512_cryo_start ""Power is off but the conduits seems intact. Also the locks seem to be jammed shut. Maybe try looking for the keycard and turn the power on?""",,"officeryeongPenrose512_cryo_start:Enter the Emergency Cryo Bay",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE1,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_start",,"The door to the emergency cryo bay is firmly jammed, and has to be cut open. Occasional beeps from the machinery are the only noises in the room.","officeryeongPenrose512_cryo_explore1:Inspect the cryo chamber.",
 OFFICER_YEONG_PENROSE512_CRYO_EXPLORE2,DialogOptionSelected,"$option == officeryeongPenrose512_cryo_explore1
 $player.officeryeongPenrose512_foundphoto == true","ShowImageVisual 512_cryo1","The cryo bed itself is intact, like the one on your previous Penrose salvage mission. Could the pilot be alive in this one as well?
