@@ -1,3 +1,7 @@
+v0.1.5a
+- Fixing logic issues when entering Cryo in 512 mission and a few punctuation issues.
+- Adding color to designTypeColors in settings.json
+
 v0.1.4g
 - Fixing Issues with rules.csv regarding entry to 512 mission with more clear instructions and flags.
 - Fixing issues with fleet not intercepting player fleets. Changed back to patrol for now.
