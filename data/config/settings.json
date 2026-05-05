@@ -2,6 +2,9 @@
     "ruleCommandPackages":[
         "data.campaign.rulecmd"
     ],
+    "designTypeColors":{
+        "Eusan Nation":[124,36,30,255]
+    },
     "graphics":{
         "planets":{
             "gas_giant1":"graphics/planets/gas_giant1.png",
