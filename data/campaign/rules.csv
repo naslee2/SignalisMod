@@ -247,7 +247,7 @@ OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == offi
 $global.officeryeong_neuralrepositoryMetAgent = true
 Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, you cant shake a sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? And why would AEON put up so many obstacles?
 
-You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk3:Return to the ship",
+You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk3:Return to the ship.",
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship is uneventful, the disk secured in your hand.
 ",,
 "#END MEETING_AGENT",,,,,,
@@ -480,7 +480,7 @@ Call $global.eusan_nation_penroseRecovery2_ref updateStage","Your team stabilize
 
 She is largely incoherent, but through tears manages to get out a few sentences. ""Thank you so much, I knew they would send someone. The Nation wouldn't abandon me, but it was so long..."" She tries to shake your hand before she loses her composure completely, but the medics have already dragged her off for treatment.
 
-You recieve a report on her a few hours later: she is in bad shape, but she will make it. She has also requested to join your fleet, to which you give a noncommittal answer.","officeryeongPenroseRecovery2Option5:Lets go home..",
+You recieve a report on her a few hours later: she is in bad shape, but she will make it. She has also requested to join your fleet, to which you give a noncommittal answer.","officeryeongPenroseRecovery2Option5:""Lets go home...""",
 OFFICER_YEONG_PENROSERECOVERY2_PLANET_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongPenroseRecovery2Option5","FireAll PopulateOptions",,,
 "#END RECOVERY2",,,,,,
 ,,,,,,
