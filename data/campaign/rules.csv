@@ -943,8 +943,8 @@ OFFICER_YEONG_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == OfficerYeongQue
 
 She flips a few more pages on the clipboard and checks off a line with a pen. 
 
-""So what say you?""","OfficerYeongQuestGive2a:Accept
-OfficerYeongQuestGive2b:Reconsider",
+""So what say you?""","OfficerYeongQuestGive2b:Reconsider
+OfficerYeongQuestGive2a:Accept",
 OFFICER_YEONG_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == OfficerYeongQuestGive2a","AdjustRepActivePerson WELCOMING 5
 AddPotentialContact ""eusan_nation_officer_yeong""
 $player.askedArianeForWork = true","You accept to work for Ariane Yeong. 
@@ -1707,8 +1707,8 @@ She moves closer to you, beaming with excitement. She gives you a small wink the
 THE_DAUGHTER_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == theDaughterQuestGive1",,"""Oh, $playerName. You must know that by helping me, you will get your hands dirty. So think long and hard on your answer.""
 
 She gives a wide grin and a look that can pierce hearts at you. 
-""Now choose.""","theDaughterQuestGive2a:Accept
-theDaughterQuestGive2b:Reconsider",
+""Now choose.""","theDaughterQuestGive2b:Reconsider
+theDaughterQuestGive2a:Accept",
 THE_DAUGHTER_CHAT_QUEST_GIVE_END_REJECT,DialogOptionSelected,"$option == theDaughterQuestGive2b",,"You tell her you will think it over.
 
 She tilts her head and gives you a slight smile. 
@@ -1996,8 +1996,8 @@ Her eyes dart around your face. There is a small pause and she opened her desk a
 ""We have work. Although we have our own people, we can always use the help.""","greatRevolutionaryQuestGive1:Continue",
 THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_2,DialogOptionSelected,"$option == greatRevolutionaryQuestGive1",,"""Now, Captain $playerName. I won't torture you with details on your duties as you either know about them already or just impatient.""
 
-""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2a:Accept
-greatRevolutionaryQuestGive2b:Reconsider",
+""So what will it be? Will you help the Nation?""","greatRevolutionaryQuestGive2b:Reconsider
+greatRevolutionaryQuestGive2a:Accept",
 THE_GREAT_REVOLUTIONARY_CHAT_QUEST_GIVE_END_ACCEPT,DialogOptionSelected,"$option == greatRevolutionaryQuestGive2a","AdjustRepActivePerson WELCOMING 5
 AddPotentialContact eusan_nation_great_revolutionary
 $player.askedGreatRevolutionaryForWork = true","You accept the offer to work for the Nation.
