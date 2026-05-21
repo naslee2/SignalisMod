@@ -1,6 +1,9 @@
 v0.1.5a
 - Fixing logic issues when entering Cryo in 512 mission and a few punctuation issues.
-- Adding color to designTypeColors in settings.json
+- Adding color to designTypeColors in settings.json.
+- Adding a certain encounter regarding a type of cigarettes.
+- Adding Rotfront surface texture and hablight texture.
+- Adding neuro repo mission illustration and associated rules.csv refractor.
 
 v0.1.4g
 - Fixing Issues with rules.csv regarding entry to 512 mission with more clear instructions and flags.
@@ -15,7 +18,7 @@ v0.1.4e
 - Temporary commenting out isHidden() and IsFunctional() on Eusan_Nation_Aeon_Facility.java due to issues related to the concept.
 - Adding weapon sounds to the Type 71 built-in, Dangpa, Dory, Galdae, Kompakt, Pebble Hail, Pernach, and Wuiquong.
 - Updating Vineta planet and cloud textures to be softer and less dark.
-- Small grammar changes in rules.csv
+- Small grammar changes in rules.csv.
 - Fixing an issue with Ariane's menu dialog because things got omitted.
 
 v0.1.4d

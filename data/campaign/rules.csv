@@ -225,30 +225,29 @@ FireAll PopulateOptions","""Good. Now the fun begins. For accepting this mission
 # MEETING_AGENT,,,,,,
 OFFICER_YEONG_NEURALREPOSITORY_AGENT_GREETING,PickGreeting,"$id == ""eusan_nation_special_agent"" score: 100
 $global.officeryeong_neuralrepositorystart == true
-$global.eusan_nation_neuralrepo_completed == false","ShowPersonVisual
-FireAll PopulateAgentOptions
+$global.eusan_nation_neuralrepo_completed == false","FireAll PopulateAgentOptions
 SetTextHighlights ""Recovery Area 5. North Supply depot. Section 11.""","You take a shuttle down to the planet. Flipping through the channels, your comms officer locates the frequency and begins to broadcast the coded signal at the specified time. 
 
 After a few seconds, the line crackles with a response. The comms officer quickly decodes the message and hands you the result.
 
-""Recovery Area 5. North Supply depot. Section 11.""
+""Recovery Area 5. North Supply depot. Section 11.""",,
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1:Continue",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1","ShowImageVisual neural_repo_ruins","The transmission leads you to an area by a large crater, no doubt the remains of the neural repository. The facility was once used to store and manufacture the neural patterns used by replikas. Now, it is little more than a scar in the ground, surrounded by temporary buildings set up in the vicinity of the impressive scene of destruction.
 
-The transmission leads you to an area by a large crater, no doubt the remains of the neural repository. The facility was once used to store and manufacture the neural patterns used by replikas. Now, it is little more than a scar in the ground, surrounded by temporary buildings set up in the vicinity of the impressive scene of destruction.
-
-As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.",,
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK1,PopulateAgentOptions,,"ShowPersonVisual",,"officeryeongNeuralRepAgentTalk1:Use the code phrase",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK2,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk1
-","SetTextHighlights ""I got a package to deliver, but the address is in Carcosa."" ""I am not sure how I can help, but I will try.""","I got a package to deliver, but the address is in Carcosa.
+As you arrive at the meeting spot, you come across a man busy sorting supplies and miscellaneous equipment.","officeryeongNeuralRepAgentTalk2:Use the code phrase",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2
+","ShowPersonVisual
+SetTextHighlights ""I got a package to deliver, but the address is in Carcosa."" ""I am not sure how I can help, but I will try.""","I got a package to deliver, but the address is in Carcosa.
 
 ""I am not sure how I can help, but I will try."" the man replies. He sizes you up before deciding you are worth trusting.
 
-""You three characters here for the data, right?"" the man asks rhetorically. He rips open a spot on his jacket and slides a disk out of it. ""You aren't officially affiliated with us, so don't worry about being courteous with AEON. Don't expect them to be courteous to you either, though. You should leave.""","officeryeongNeuralRepAgentTalk2:Exit the area",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK3,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk2","$global.eusan_nation_neuralrepo_returnInfo = true
+""You three characters here for the data, right?"" the man asks rhetorically. He rips open a spot on his jacket and slides a disk out of it. ""You aren't officially affiliated with us, so don't worry about being courteous with AEON. Don't expect them to be courteous to you either, though. You should leave.""","officeryeongNeuralRepAgentTalk3:Exit the area",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_TALK4,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","$global.eusan_nation_neuralrepo_returnInfo = true
 $global.officeryeong_neuralrepositoryMetAgent = true
 Call $global.eusan_nation_neuralrepo_ref updateStage","Taking the box of data disks from the agent was easy enough. Although no problems were encountered, you cant shake a sense of unease in the back of your mind. Why would the Nation go through this trouble to get this data? And why would AEON put up so many obstacles?
 
-You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk3:Return to the ship.",
-OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk3","FireAll PopulateOptions","Your journey back to your flagship is uneventful, the disk secured in your hand.
+You quash the thought. If its that important, you'll know soon enough. Your shuttle gently lofts into the skies after you board it, the shimmering seas of Vineta fading into the distance.","officeryeongNeuralRepAgentTalk4:Return to the ship.",
+OFFICER_YEONG_NEURALREPOSITORY_AGENT_ESCAPE_RETURN,DialogOptionSelected,"$option == officeryeongNeuralRepAgentTalk4","FireAll PopulateOptions","Your journey back to your flagship is uneventful, the disk secured in your hand.
 ",,
 "#END MEETING_AGENT",,,,,,
 ,,,,,,
