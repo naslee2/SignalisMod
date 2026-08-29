@@ -1677,25 +1677,42 @@ OR
 The comm channel refuses to connect.","cutCommLink:Cut the comm link",
 "#END THE_DAUGHTER_GREETING",,,,,,
 ,,,,,,
-# THE_DAUGHTER_OPERATION1,,,,,,
+# THE_DAUGHTER_DISUNITEDFRONT,,,,,,
 ,,,,,,
-# THE_DAUGHTER_OPERATION1_BRIEFING,,,,,,
-THE_DAUGHTER_OPERATION1_START,PopulatetheDaughterChatOptions,"$id == eusan_nation_the_daughter score: 100
+# THE_DAUGHTER_DISUNITEDFRONT_BRIEFING,,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_START,PopulatetheDaughterChatOptions,"RepGTE ""eusan_nation"" FAVORABLE
+$id == eusan_nation_the_daughter score: 100
 $player.metDaughter == true
-$global.theDaughter_operation1_start == false
-eusan_nation_personRelationChecker FAVORABLE",,,,
-THE_DAUGHTER_OPERATION1_BRIEFING0,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING1,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING2,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING3,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING4,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING_END,DialogOptionSelected,,"FireAll PopulateOperation1Options",,,
-THE_DAUGHTER_OPERATION1_BRIEFING_RECONSIDERED_OPTION,PopulateOperation1MissionsOptions,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING_RECONSIDERED,DialogOptionSelected,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING_ACCEPT_OPTION,PopulateOperation1MissionsOptions,,,,,
-THE_DAUGHTER_OPERATION1_BRIEFING_ACCEPTED,DialogOptionSelected,,,,,
-"#END THE_DAUGHTER_OPERATION1_BRIEFING",,,,,,
-"#END THE_DAUGHTER_OPERATION1",,,,,,
+$global.theDaughter_disunitedfront_start == false
+eusan_nation_personRelationChecker FAVORABLE","SetOptionColor theDaughterDisunitedFrontStart highlight",,"theDaughterDisunitedFrontStart:Inquire about important jobs.",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING0,DialogOptionSelected,"$option == theDaughterDisunitedFrontStart","SetTextHighlights ""Eusan Nation""","There was no immediate reaction to your inquiry but a small pause. 
+
+""Oh my you're offering? How charitable...Perhaps it be better if you come down in person so we may speak face to face"" she says. 
+
+The comms link then turns off. You give a small look at your comms officer before another comms tech notifies you of a message from the port giving clearance for priority transport down Heimat.","theDaughterDisunitedFront1:Head to the surface.",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING1,DialogOptionSelected,"$option == theDaughterDisunitedFront1","SetTextHighlights """"Her""""","The location was a large brutal looking tower of concrete. Plain and unassuming, its only decoration was the sign that declared the building's number, 85. The two armed replikas stop you, giving you and your bodyguard up and down looks as they scan for visible threats. Once they are satisfied they wave you in where you are greeted by the lobby. 
+
+The lobby itself is minimalistic, plain straight edges with very little curves. The only decoration besides the chairs, small tables and the front desk is the giant symbol of the Nation, the Spyglass and Stars. You and your bodyguards move through the security gates where more armed guards give you a more thorough security check. 
+
+After the invasiveness ended, you are ushered past the security checkpoint. In front of you were two banks of staircases, a single hallway full of elevators, and ""Her"".
+
+""Welcome welcome, $playerName! I hope your not too annoyed by our security measures?""","theDaughterDisunitedFront2:""Not really...""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING2,DialogOptionSelected,"$option == theDaughterDisunitedFront2",,"""Good."" she says, turning around to head to the elevators. You wait for a few seconds before you realize it might be prudent to follow her. As you catch up, she presses a button and an elevator opens. Before she walks in, she stops, turns to you and points her finger to the bodyguards. 
+
+""Those two should wait. Better send them back to your ship. Its going to be long and I don't want to babysit unwanted guests."" she says. 
+
+You give a nod to the bodyguards who then turn away to the entrance. As you enter the elevator with her, you can see a glimpse of the bodyguards walking out. ","theDaughterDisunitedFront3:Continue",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING3,DialogOptionSelected,"$option == theDaughterDisunitedFront2",,,"theDaughterDisunitedFront3",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING4,DialogOptionSelected,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING5,DialogOptionSelected,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING6,DialogOptionSelected,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_END,DialogOptionSelected,,"FireAll PopulateOperation1Options",,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED_OPTION,PopulateOperation1MissionsOptions,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED,DialogOptionSelected,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPT_OPTION,PopulateOperation1MissionsOptions,,,,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPTED,DialogOptionSelected,,,,,
+"#END THE_DAUGHTER_DISUNITEDFRONT_BRIEFING",,,,,,
+"#END THE_DAUGHTER_DISUNITEDFRONT",,,,,,
 ,,,,,,
 # THE_DAUGHTER_CHAT,,,,,,
 ,,,,,,
