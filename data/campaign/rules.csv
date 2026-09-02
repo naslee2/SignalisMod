@@ -1689,28 +1689,37 @@ THE_DAUGHTER_DISUNITEDFRONT_BRIEFING0,DialogOptionSelected,"$option == theDaught
 
 ""Oh my you're offering? How charitable...Perhaps it be better if you come down in person so we may speak face to face"" she says. 
 
-The comms link then turns off. You give a small look at your comms officer before another comms tech notifies you of a message from the port giving clearance for priority transport down Heimat.","theDaughterDisunitedFront1:Head to the surface.",
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING1,DialogOptionSelected,"$option == theDaughterDisunitedFront1","SetTextHighlights """"Her""""","The location was a large brutal looking tower of concrete. Plain and unassuming, its only decoration was the sign that declared the building's number, 85. The two armed replikas stop you, giving you and your bodyguard up and down looks as they scan for visible threats. Once they are satisfied they wave you in where you are greeted by the lobby. 
+The comms link then turns off. You give a small look at your comms officer before another comms tech notifies you of a message from the port giving clearance for priority transport down Heimat.","theDaughterDisunitedFront0:Head to the surface.",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING1,DialogOptionSelected,"$option == theDaughterDisunitedFront0","SetTextHighlights """"Her""""","The location was a large brutal looking tower of concrete. Plain and unassuming, its only decoration was the sign that declared the building's number, 85. The two armed replikas stop you, giving you and your bodyguard up and down looks as they scan for visible threats. Once they are satisfied they wave you in where you are greeted by the lobby. 
 
 The lobby itself is minimalistic, plain straight edges with very little curves. The only decoration besides the chairs, small tables and the front desk is the giant symbol of the Nation, the Spyglass and Stars. You and your bodyguards move through the security gates where more armed guards give you a more thorough security check. 
 
 After the invasiveness ended, you are ushered past the security checkpoint. In front of you were two banks of staircases, a single hallway full of elevators, and ""Her"".
 
-""Welcome welcome, $playerName! I hope your not too annoyed by our security measures?""","theDaughterDisunitedFront2:""Not really...""",
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING2,DialogOptionSelected,"$option == theDaughterDisunitedFront2",,"""Good."" she says, turning around to head to the elevators. You wait for a few seconds before you realize it might be prudent to follow her. As you catch up, she presses a button and an elevator opens. Before she walks in, she stops, turns to you and points her finger to the bodyguards. 
+""Welcome welcome, $playerName! I hope your not too annoyed by our security measures?""","theDaughterDisunitedFront1:""Not really...""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING2,DialogOptionSelected,"$option == theDaughterDisunitedFront1",,"""Good."" she says, turning around to head to the elevators. You wait for a few seconds before you realize it might be prudent to follow her. As you catch up, she presses a button and an elevator opens. Before she walks in, she stops, turns to you and points her finger to the bodyguards. 
 
 ""Those two should wait. Better send them back to your ship. Its going to be long and I don't want to babysit unwanted guests."" she says. 
 
-You give a nod to the bodyguards who then turn away to the entrance. As you enter the elevator with her, you can see a glimpse of the bodyguards walking out. ","theDaughterDisunitedFront3:Continue",
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING3,DialogOptionSelected,"$option == theDaughterDisunitedFront2",,,"theDaughterDisunitedFront3",
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING4,DialogOptionSelected,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING5,DialogOptionSelected,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING6,DialogOptionSelected,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_END,DialogOptionSelected,,"FireAll PopulateOperation1Options",,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED_OPTION,PopulateOperation1MissionsOptions,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED,DialogOptionSelected,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPT_OPTION,PopulateOperation1MissionsOptions,,,,,
-THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPTED,DialogOptionSelected,,,,,
+You give a nod to the bodyguards who then turn away to the entrance. As you enter the elevator with her, you can see a glimpse of the bodyguards walking out. When the door closed, she pulled out a key, put it in a slot and pushed a button. With a lurch, the elevator began to move downward. ","theDaughterDisunitedFront2:Continue",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING3,DialogOptionSelected,"$option == theDaughterDisunitedFront2",,"The trip down the elevator was uneventful. She...the Daughter kept mostly to herself, humming a tune. When the elevator reached sublevel 22, she walked out like no one else was with her. As you kept pace you start to notice that the cameras are tracking your every move. Once inside her office, she sat down at her desk and gave you a devious smile at you.
+
+""You kept up with me. That is very good, means you are sharp, not dumb like most people in the Sector. Now I want you to listen closely on what I have to say."" she says. 
+
+""I need you to do an errand for me. Small and simple...""","theDaughterDisunitedFront3:Continue",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING4,DialogOptionSelected,"$option == theDaughterDisunitedFront3",,"""This man is currently living in Fikenhild."" she says, handing you a black and white photo. Its hard to make out features but you can definitely tell the man was armed and wore loose fitting clothing.
+
+""You will go to Fikenhild, hand him this small box."" she says, pointing to a small brown box sits on the table in front of you. 
+","theDaughterDisunitedFront4:""Who is this person?""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING5,DialogOptionSelected,"$option == theDaughterDisunitedFront4",,"""When he has opened the box and reviewed its contents, you are to follow his directions until you complete the one simple task he has given you."" she says.
+
+""If you must know, he is a cell leader for a Luddic Path group.""","theDaughterDisunitedFront5:""Understood.""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING6,DialogOptionSelected,"$option == theDaughterDisunitedFront5",,," theDaughterDisunitedFront6:""Understood""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_END,DialogOptionSelected,"$option == theDaughterDisunitedFront6","FireAll PopulateDisunitedFrontOptions",,,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED_OPTION,PopulateDisunitedFrontOptions,,,," theDaughterDisunitedFrontReconsider:""I changed my mind...""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_RECONSIDERED,DialogOptionSelected,"$option ==  theDaughterDisunitedFrontReconsider","FireAll PopulatetheDaughterChatOptions","""Test - Reconsider""",,
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPT_OPTION,PopulateDisunitedFrontOptions,,,," theDaughterDisunitedFrontAccept:""I accept the mission.""",
+THE_DAUGHTER_DISUNITEDFRONT_BRIEFING_ACCEPTED,DialogOptionSelected,"$option ==  theDaughterDisunitedFrontAccept","FireAll PopulateOptions","""Test - Accepted""",,
 "#END THE_DAUGHTER_DISUNITEDFRONT_BRIEFING",,,,,,
 "#END THE_DAUGHTER_DISUNITEDFRONT",,,,,,
 ,,,,,,
