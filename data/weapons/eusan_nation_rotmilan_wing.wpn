@@ -1,0 +1,34 @@
+{
+  "id": "eusan_nation_rotmilan_wing",
+  "specClass":"beam",
+  "type":"DECORATIVE",
+  "size":"SMALL",
+  "showDamageWhenDecorative":true,
+  "renderBelowAllWeapons":false,	
+  "turretSprite": "graphics/ships/decos/rotmilan_wings/eusan_nation_rotmilan_wing_base00.png",
+  "hardpointSprite": "graphics/ships/decos/rotmilan_wings/eusan_nation_rotmilan_wing_base00.png",
+  "turretOffsets": [
+    0,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "numFrames": 8,
+  "frameRate": 0,
+  "alwaysAnimate":"false",
+  "fringeColor":[255,255,255,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[255,255,255,255],
+	"width":1.0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":1.0,
+	"pixelsPerTexel":5.0,
+}
