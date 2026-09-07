@@ -1185,7 +1185,7 @@ ADMIRAL_FALKE_INTRO_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFactio
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == false
 $id ==  eusan_nation_admiral_falke score: 100
-$faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
+$faction.friendlyToPlayer score:300","$player.metAdmiralFalke = true
 ShowPersonVisual
 $menuState = fleetConvMain 0
 FireAll PopulateOptions
@@ -1196,7 +1196,7 @@ ADMIRAL_FALKE_INTRO_FRIENDLY,OpenCommLink,"$player.commissionFactionId != ""eusa
 $player.metAdmiralFalke == false
 $faction.id == ""eusan_nation""
 $id ==  eusan_nation_admiral_falke score: 100
-$faction.friendlyToPlayer score:1000","$player.metAdmiralFalke = true
+$faction.friendlyToPlayer score:300","$player.metAdmiralFalke = true
 ShowPersonVisual
 $menuState = fleetConvMain 0
 FireAll PopulateOptions
@@ -1232,7 +1232,7 @@ ADMIRAL_FALKE_GREETING_FRIENDLY_COMMISSIONED,OpenCommLink,"$player.commissionFac
 $faction.id == ""eusan_nation""
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
-$faction.friendlyToPlayer score:1000","$menuState = fleetConvMain 0
+$faction.friendlyToPlayer score:300","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Hello there, comrade. How are you today?""
 OR
 ""Working hard for the betterment of the Nation? I am.""
@@ -1254,7 +1254,7 @@ ADMIRAL_FALKE_GREETING_FRIENDLY,OpenCommLink,"$player.commissionFactionId != ""e
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
-$faction.friendlyToPlayer score:1000","$menuState = fleetConvMain 0
+$faction.friendlyToPlayer score:300","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Ah hello there, traveller. Have you come to witness my radiance?""
 OR
 ""Hello there, traveller. You are a long way from home.""
@@ -1272,7 +1272,7 @@ ADMIRAL_FALKE_GREETING_NEUTRAL_COMMISSIONED,OpenCommLink,"$player.commissionFact
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
-$faction.neutralToPlayer score:1000","$menuState = fleetConvMain 0
+$faction.neutralToPlayer score:300","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Greetings comrade. Make sure you behave.""
 OR
 ""Comrade, my time is limited, my patience is even more so.""
@@ -1294,7 +1294,7 @@ ADMIRAL_FALKE_GREETING_NEUTRAL,OpenCommLink,"$player.commissionFactionId != ""eu
 $player.metAdmiralFalke == true
 $id ==  eusan_nation_admiral_falke score: 100
 $faction.id == ""eusan_nation""
-$faction.neutralToPlayer score:1000","$menuState = fleetConvMain 0
+$faction.neutralToPlayer score:300","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Greetings traveller. You have entered the sovereign territory of the Nation. Make sure you behave.""
 OR
 ""Traveller, my time is limited, my patience is even more so. My fleet stands ready. Understand your place.""
@@ -1402,7 +1402,7 @@ $market.id == ""rotfront_market""","SetOptionColor alyssa_bar highlight","You se
 ALYSSA_INTRO_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAlyssa == false
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $option == alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
@@ -1413,7 +1413,7 @@ AddText ""A new customer! Say, you look familiar...Oh, you're that starfarer who
 FireAll PopulateAlyssaBarOptions",,,"SaveCurrentVisual"
 ALYSSA_INTRO_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.metAlyssa == false
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $option ==  alyssa_bar","$player.metAlyssa = true
 SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
@@ -1449,7 +1449,7 @@ FireAll PopulateAlyssaBarOptions",,"barAlyssa_sales:""What do you have?""
 ALYSSA_GREETING_FRIENDLY_COMMISSIONED,DialogOptionSelected,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $player.metAlyssa == true
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $option == alyssa_bar","SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
 FireAll PopulateAlyssaBarOptions","""Good to see you again, comrade! Now what can I get you? The regular? Or maybe something different today?""
@@ -1461,7 +1461,7 @@ OR
 ""Fancy a drink today?""",,
 ALYSSA_GREETING_FRIENDLY,DialogOptionSelected,"$faction.id == ""eusan_nation""
 $player.metAlyssa == true
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $option == alyssa_bar","SaveCurrentVisual
 BeginConversation eusan_nation_alyssa false true
 FireAll PopulateAlyssaBarOptions","""Welcome back, starfarer! I'll be with you in a bit, just make yourself comfortable.""
@@ -1903,7 +1903,7 @@ AddText """"Interesting. They send a traveller from outside the Nation. That mea
 THE_GREAT_REVOLUTIONARY_INTRO_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == eusan_nation_great_revolutionary score: 100
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $player.metGreatRev == false","$player.metGreatRev = true
 ShowPersonVisual
 FireAll PopulateOptions
@@ -1933,7 +1933,7 @@ AddText """"An outsider. How you managed to get by with such a reputation, will 
 THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_COMMISSIONED,PickGreeting,"$player.commissionFactionId == ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $player.metGreatRev == true","ShowPersonVisual
 FireAll PopulateOptions","""Hello Comrade, how are you today.""
 OR
@@ -1951,7 +1951,7 @@ OR
 THE_GREAT_REVOLUTIONARY_GREETING_FRIENDLY_NOTCOMMISSIONED,PickGreeting,"$player.commissionFactionId != ""eusan_nation""
 $faction.id == ""eusan_nation""
 $id == ""eusan_nation_great_revolutionary"" score: 100
-$faction.friendlyToPlayer score:1000
+$faction.friendlyToPlayer score:300
 $player.metGreatRev == true","ShowPersonVisual
 FireAll PopulateOptions","""Hello Captain $playerName, how are you today.""
 OR
