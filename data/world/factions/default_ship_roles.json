@@ -51,7 +51,8 @@
         "eusan_nation_revolution_barrage": 2,
         "eusan_nation_admiral_standard":1,
         "eusan_nation_admiral_ironclad":1,
-        "eusan_nation_admiral_assault":1
+        "eusan_nation_admiral_assault":1,
+        "eusan_nation_rotmilan_prototype":0
     },
     "crig":{},
     "utility":{
