@@ -4,10 +4,14 @@
   "displayName": "Prototype",
   "goalVariant": false,
   "fluxCapacitors": 47,
-  "fluxVents": 51,
+  "fluxVents": 50,
   "quality": 1,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "targetingunit",
+    "hardenedshieldemitter"
+  ],
   "weaponGroups": [
     {
       "autofire": false,
