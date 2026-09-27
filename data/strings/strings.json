@@ -42,7 +42,13 @@
         "eusan_Nation_Imperial_HullPlating3a": "Hull Combat Repair Rate Decrease: %s",
         "eusan_Nation_Imperial_HullPlating4a": "Maintenance Repair Rate Decrease: %s",
         "eusan_Nation_Imperial_HullPlating5a": "Its frankly advanced stuff. The Empire may have obtained materials and technology from the Sector and created armor plating that reduces the sensor detection range.",
-        "eusan_Nation_Imperial_HullPlating6a": "\u2014 Volksmarine Intelligence Officer"
+        "eusan_Nation_Imperial_HullPlating6a": "\u2014 Volksmarine Intelligence Officer",
+        "eusan_nation_bioresoance1": "KLBR EVF-23",
+        "eusan_nation_bioresoance2": "VERBINDUNGS PROTOKOLL 4.3.4",
+        "eusan_nation_bioresoance3": "BIORESONANZ-KONTROLLSTRUKTUR",
+        "eusan_nation_bioresoance4": "KONTAKT IDENTIFIZIEREN",
+        "eusan_nation_bioresoance5": "ZIELEINHEIT: ??????? (unable to translate)",
+        "eusan_nation_bioresoance6": "\u2014 Intercepted Transcript before it was cut off."
     }
 }
     

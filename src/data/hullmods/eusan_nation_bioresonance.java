@@ -43,6 +43,13 @@ public class eusan_nation_bioresonance extends BaseHullMod {
         this.buffed = new ArrayList<>();
     }
 
+    String eusan_nation_bioresoance1 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance1");
+    String eusan_nation_bioresoance2 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance2");
+    String eusan_nation_bioresoance3 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance3");
+    String eusan_nation_bioresoance4 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance4");
+    String eusan_nation_bioresoance5 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance5");
+    String eusan_nation_bioresoance6 = Global.getSettings().getString("eusan_nation_strings", "eusan_nation_bioresoance6");
+
     @Override
     public void advanceInCombat(ShipAPI ship, float amount) {
         final MutableShipStatsAPI stats = ship.getMutableStats();
@@ -137,27 +144,40 @@ public class eusan_nation_bioresonance extends BaseHullMod {
     @Override
     public void addPostDescriptionSection(final TooltipMakerAPI tooltip, final ShipAPI.HullSize hullSize, final ShipAPI ship, final float width, final boolean isForModSpec) {
         final Color green = new Color(55,245,65,255);
-        final float pad = 10f;
+        final Color flavor = new Color(110,110,110,255);
+        final float pad5 = 5.0f;
+        final float pad10 = 10.0f;
 
-        tooltip.addSectionHeading("Technical System Details", Alignment.MID, pad);
+        tooltip.addSectionHeading("Technical System Details", Alignment.MID, pad10);
         final TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/tactical/cr_tactical3.png", 40f);
         text.addPara("Bio-Resonance", 0f, Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), "Neuro Resonance");
         text.addPara("A Bio-Resonator system that activates during combat, it provides varying buffs to nearby friendly units within 3000su, the type of buff depends on the ship's captain personality.",
                 0f, Misc.getHighlightColor(),
                 new String[] {"3000su",
                         "personality"});
-        tooltip.addImageWithText(pad);
+        tooltip.addImageWithText(pad10);
 
-        tooltip.addPara("- Increases PD weapon damage by %s for Timid officers.", pad, Misc.getTextColor(), Misc.getTextColor(),
+        //Details section
+        tooltip.addPara("- Increases PD weapon damage by %s for Timid officers.", pad5, Misc.getTextColor(), Misc.getTextColor(),
                 Misc.getRoundedValue(10.0f) + "%", "Timid").setHighlightColors(green, Misc.getHighlightColor());
-        tooltip.addPara("- Increases weapon range by %s for Cautious officers.", pad, Misc.getTextColor(), Misc.getTextColor(),
+        tooltip.addPara("- Increases weapon range by %s for Cautious officers.", pad5, Misc.getTextColor(), Misc.getTextColor(),
                 Misc.getRoundedValue(100f)+"su", "Cautious").setHighlightColors(green, Misc.getHighlightColor());
-        tooltip.addPara("- Decreases damage taken by %s for Steady officers.", pad, Misc.getTextColor(), Misc.getTextColor(),
+        tooltip.addPara("- Decreases damage taken by %s for Steady officers.", pad5, Misc.getTextColor(), Misc.getTextColor(),
                 Misc.getRoundedValue(10.0f) + "%", "Steady").setHighlightColors(green, Misc.getHighlightColor());
-        tooltip.addPara("- Increases max top speed by %s for Aggressive officers.", pad, Misc.getTextColor(), Misc.getTextColor(),
+        tooltip.addPara("- Increases max top speed by %s for Aggressive officers.", pad5, Misc.getTextColor(), Misc.getTextColor(),
                 Misc.getRoundedValue(10.0f) + "%", "Aggressive").setHighlightColors(green, Misc.getHighlightColor());
-        tooltip.addPara("- Increases damage dealt by %s for Reckless officers.", pad, Misc.getTextColor(), Misc.getTextColor(),
+        tooltip.addPara("- Increases damage dealt by %s for Reckless officers.", pad5, Misc.getTextColor(), Misc.getTextColor(),
                 Misc.getRoundedValue(5.0f) + "%", "Reckless").setHighlightColors(green, Misc.getHighlightColor());
+
+        //Incompatibilities
+
+        //Quotes
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_bioresoance1 ).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_bioresoance2 ).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_bioresoance3 ).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_bioresoance4 ).italicize();
+        tooltip.addPara("%s", 6.0f, flavor, eusan_nation_bioresoance5 ).italicize();
+        tooltip.addPara("%s", 1.0f, flavor, eusan_nation_bioresoance6).setAlignment(Alignment.RMID);
     }
 
     // Buff handler
