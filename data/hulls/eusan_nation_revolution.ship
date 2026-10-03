@@ -15,7 +15,6 @@
   "builtInMods": [
     "eusan_nation_engineering_design",
     "eusan_nation_missile_assembly_compartment",
-    "eusan_nation_bioresonance"
   ],
   "builtInWeapons": {
     "DECO1": "eusan_nation_revolution_deco1",
