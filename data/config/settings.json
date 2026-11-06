@@ -3,7 +3,8 @@
         "data.campaign.rulecmd"
     ],
     "designTypeColors":{
-        "Eusan Nation":[124,36,30,255]
+        "Eusan Nation":[124,36,30,255],
+        "Eusan Tech":[130,40,30,255]
     },
     "graphics":{
         "planets":{

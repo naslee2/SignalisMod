@@ -2,6 +2,7 @@
   "id": "eusan_nation_mifeng",
   "specClass": "projectile",
   "projectileSpecId": "eusan_nation_mifeng_srm",
+  "everyFrameEffect": "data.scripts.weapons.eusan_nation_mifeng_onfire_script",
   "type": "MISSILE",
   "size": "LARGE",
   "displayArcRadius": 500,
