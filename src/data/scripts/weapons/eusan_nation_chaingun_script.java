@@ -56,7 +56,7 @@ public class eusan_nation_chaingun_script implements OnFireEffectPlugin{
                 );
 
                 Global.getSoundPlayer().playSound(
-                    "annihilator_fire", //annihilator for now
+                    "trigalv_launcher", //annihilator for now
                     1f,   // pitch
                     1f,   // volume
                     spawn_point,
