@@ -102,5 +102,5 @@
 	 "blowbackSpread":6.0,
 	 "particleColor":[190,180,160,95]},
   },
-  "fireSoundTwo": "hurricane_mirv_fire"
+  "fireSoundTwo": "trigalv_launcher"
 }

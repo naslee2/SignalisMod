@@ -81,65 +81,73 @@
             }
         ]
     },
-	
     #must be mono or one channel
     "penrose_512_computersound":[
         {"file": "sounds/sfx/computer-humming-236384.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "galde":[
         {"file": "sounds/weapons/eusan_nation_galde_rocket_launcher.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "pebble_hail":[
         {"file": "sounds/weapons/eusan_nation_pebble_hail.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "pernarch_cannon":[
         {"file": "sounds/weapons/eusan_nation_pernarch_cannon_S.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "pernarch_rocket":[
         {"file": "sounds/weapons/eusan_nation_pernarch_rocket.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "type71_main_cannon":[
         {"file": "sounds/weapons/eusan_nation_type71_main_cannon_L_Ver1.ogg","pitch": 1,"volume": 0.5},
         {"file": "sounds/weapons/eusan_nation_type71_main_cannon_L_Ver2.ogg","pitch": 1,"volume": 0.5}
     ],
-	
     "type71_reload":[
         {"file": "sounds/weapons/eusan_nation_type71_reload_mono.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "kompakt":[
         {"file": "sounds/weapons/eusan_nation_kompakt_cannon M.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "dory":[
         {"file": "sounds/weapons/eusan_nation_dory.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "dangpa":[
         {"file": "sounds/weapons/eusan_nation_dangpa_CIWS_s.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "wuiqong":[
         {"file": "sounds/weapons/eusan_nation_wuiqong_flak_m.ogg","pitch": 1,"volume": 0.5},
     ],
-	
     "tulip":[
-        {"file": "sounds/weapons/eusan_nation_tulip_cannon_m.ogg","pitch": 1,"volume": 0.5},
+        {"file": "sounds/weapons/eusan_nation_tulip_cannon_2.ogg","pitch": 1,"volume": 0.5},
     ],
-	
-	#Weapon Sound Effects
-    "eusan_nation_mifeng_impact":{
-        "sounds":[
-        {"file":"sounds/sfx_systems/mine_strike_explosion_01.ogg","pitch":1.5,"volume":0.37},
-        {"file":"sounds/sfx_systems/mine_strike_explosion_02.ogg","pitch":1.5,"volume":0.35},
-        {"file":"sounds/sfx_systems/mine_strike_explosion_03.ogg","pitch":1.5,"volume":0.35},
-        {"file":"sounds/sfx_systems/mine_strike_explosion_04.ogg","pitch":1.5,"volume":0.36},
-        ],
-    },
-
+    "isolde":[
+        {"file": "sounds/weapons/eusan_nation_isolde_autocannon.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "jangchang":[
+        {"file": "sounds/weapons/eusan_nation_jangchang.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "lightingbolt":[
+        {"file": "sounds/weapons/eusan_nation_lightingbolt.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "rogatina":[
+        {"file": "sounds/weapons/eusan_nation_rogatina.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "taean":[
+        {"file": "sounds/weapons/eusan_nation_taean.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "trigalv_mg":[
+        {"file": "sounds/weapons/eusan_nation_trigalv_mg.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "trigalv_launcher":[
+        {"file": "sounds/weapons/eusan_nation_trigalv_launcher.ogg","pitch": 1,"volume": 0.5},
+    ],
+    "eusan_nation_mifeng":[
+        {"file":"sounds/weapons/eusan_nation_mifeng1.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/weapons/eusan_nation_mifeng2.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/weapons/eusan_nation_mifeng3.ogg","pitch":1.0,"volume":0.5},
+    ],
+    "eusan_nation_trevivian_sounds":[
+        {"file":"sounds/weapons/eusan_nation_trevivian1.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/weapons/eusan_nation_trevivian2.ogg","pitch":1.0,"volume":0.5},
+        {"file":"sounds/weapons/eusan_nation_trevivian3.ogg","pitch":1.0,"volume":0.5},
+    ]
 }
