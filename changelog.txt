@@ -1,10 +1,18 @@
 v0.1.5a
+- Adding support for 0.98.5
 - Fixing logic issues when entering Cryo in 512 mission and a few punctuation issues.
 - Adding color to designTypeColors in settings.json.
 - Adding a certain encounter regarding a type of cigarettes.
 - Adding Rotfront surface texture and hablight texture.
-- Adding neuro repo mission illustration, 2nd briefing illustration, and associated rules.csv refractor.
+- Adding neuro repo mission illustration, 2nd briefing illustration.
 - Added Bioresonance hullmod.
+- Adding more sounds to weapons and script changes to point correctly to sound files.
+- Fixed the multiple option entries for RECOVERY512_BRIEFING.
+- Added tech/manufacturer color for Eusan Tech.
+- Remove Venture and Shepherd from Nex's mining fleet.
+- Gave Mifeng SRM Launcher its own AI.
+- Added new on-fire visuals for Mifeng SRM Launcher.
+- Added new on-hit effect for Mifeng SRM Launcher.
 
 v0.1.4g
 - Fixing Issues with rules.csv regarding entry to 512 mission with more clear instructions and flags.
